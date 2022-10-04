@@ -1,0 +1,107 @@
+{
+    "headerApk": {
+        "status": true,
+        "logo": "https://static.hokibagus.club/ziatogel/images/etc/ziatogel_profile.jpg",
+        "title": "APLIKASI ZIATOGEL",
+        "slogan": "Kini telah tersedia Aplikasi Android"
+    },
+    "banner": {
+        "status": true,
+        "data": [
+            {
+                "tittle": "Togel Online",
+                "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_allbonus.jpg"
+            },
+            {
+                "tittle": "Togel Online",
+                "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_tipebet.jpg"
+            },
+            {
+                "tittle": "Partai Togel",
+                "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_prosesdeposit.jpg"
+            }
+        ]
+    },
+    "btnAction": [
+        {
+            "status": true,
+            "name": "RTP Slot",
+            "link": "https://rtpslotzia.com/",
+            "class": "button-orange",
+            "style": null,
+            "target": null
+        },
+        {
+            "status": true,
+            "name": "Promo",
+            "link": "https://togelzia176.com/m/promotion.php",
+            "class": "button-yellow",
+            "style": null,
+            "target": null
+        },
+        {
+            "status": true,
+            "name": "Keluhan Member",
+            "link": "https://ziatogel.laporkeluhan.net/",
+            "class": "button-blue",
+            "style": null,
+            "target": "_blank"
+        },
+        {
+            "status": true,
+            "name": "Lain-Lain",
+            "link": "https://linklist.bio/ziatogel88",
+            "class": "button-red",
+            "style": null,
+            "target": null
+        }
+    ],
+    "iconSosmed": {
+        "deskripsi": "Klik icon sosmed di bawah ini untuk hubungi operator :",
+        "data": [
+            {
+                "status": true,
+                "name": "WHATSAPP ZIATOGEL",
+                "link": "https://api.whatsapp.com/send/?phone=6281376779265&text=Halo+bossku+saya+butuh+bantuan.",
+                "img": "https://static.hokibagus.club/ziatogel/images/contacts/ziatogel_contact_wa.png"
+            },{
+                "status": true,
+                "name": "Instagram ZIATOGEL",
+                "link": "https://www.instagram.com/ziatogel88/",
+                "img": "https://static.hokibagus.club/ziatogel/images/contacts/ziatogel_contact_instagram.png"
+            },{
+                "status": true,
+                "name": "Facebook ZIATOGEL",
+                "link": "https://www.facebook.com/ziatogel889",
+                "img": "https://static.hokibagus.club/ziatogel/images/contacts/ziatogel_contact_fb.png"
+            },{
+                "status": true,
+                "name": "Youtube ZIATOGEL",
+                "link": "https://www.youtube.com/channel/UCp3gfAsZlwBrTXGUSFlsIWA",
+                "img": "https://static.hokibagus.club/ziatogel/images/contacts/ziatogel_contact_yt.png"
+            }
+        ]
+    },
+    "promosi": {
+        "status": true,
+        "name":"Agen Togel Online Indonesia Resmi",
+        "link": "/register.php",
+        "img": "https://static.hokibagus.club/ziatogel/images/promo/ziatogel_promo_bonus.gif"
+    },
+    "beforeFooter": {
+        "status": true,
+        "title": "Situs Bandar Togel Online Resmi Terpercaya",
+        "deskripsi": "ZIATOGEL MERUPAKAN SITUS TOGEL TERPERCAYA DENGAN PASARAN TOGEL TERLENGKAP, LIVE GAMES TERPOPULER & PERMAINAN SLOT TERBAIK."
+    },
+    "footerProtection": {
+        "status": true,
+        "name": "DMCA.com Protection Status",
+        "link": "//www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018",
+        "img": "//images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018"
+    },
+    "modalPopup": {
+        "status": true,
+        "img": "https://static.hokibagus.club/ziatogel/images/popup/ziatogel_popup_bri.png",
+        "deskripsi": "Klik di mana saja untuk menutup"
+    }
+}
