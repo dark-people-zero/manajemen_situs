@@ -2,6 +2,8 @@
 
 @section('styles')
     <link href="{{asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/switcher/css/switcher.css')}}" rel="stylesheet" />
+    {{-- <link href="{{asset('assets/switcher/demo.css')}}" rel="stylesheet" /> --}}
 @endsection
 
 @section('content')
@@ -18,5 +20,6 @@
 @section('scripts')
     <!--Internal  Select2 js -->
     <script src="{{asset('assets/plugins/select2/js/select2.min.js')}}"></script>
+
     <script src="{{asset('assets/js/home.js')}}"></script>
 @endsection

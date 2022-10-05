@@ -34,34 +34,62 @@ $(".header-icon-svgs-prev").click(function() {
 $selecSitus.on("select2:select", function (e) {
     $frame = $("#iframe-preview");
     $defaultInfo = $("#defaultInfo");
+    $areaPengaturan = $("#areaPengaturan");
     $data = e.params.data;
     $device = $data.device;
     iconPrev($device);
     $frame.removeClass("iframe-preview--mobile");
-    if ($device.web.status) {
-        $frame.attr("src", $device.web.url);
+    $areaPengaturan.removeClass("show");
+    if ($device.desktop.status) {
+        $frame.attr("src", $device.desktop.url);
+        $areaPengaturan.addClass("show");
     } else if($device.mobile.status) {
         $frame.attr("src", $device.mobile.url).addClass("iframe-preview--mobile");
+        $areaPengaturan.addClass("show");
     } else {
         $frame.attr("src", "/underconstruction");
+        $areaPengaturan.removeClass("show");
     }
 
     function iconPrev(device) {
-        var web = $(".header-icon-svgs-prev.desktop");
-        var mob = $(".header-icon-svgs-prev.mobile");
+        var desktop = $(".header-icon-svgs-prev.desktop");
+        var mobile = $(".header-icon-svgs-prev.mobile");
+        var tabdesktop = $('a[href="#desktop"]');
+        var tabmobile = $('a[href="#mobile"]');
+        var tabpanedesktop = $('#desktop');
+        var tabpanemobile = $('#mobile');
 
-        web.attr("data-url", device.web.status ? device.web.url : "/underconstruction");
-        mob.attr("data-url", device.mobile.status ? device.mobile.url : "/underconstruction");
+        desktop.attr("data-url", device.desktop.status ? device.desktop.url : "/underconstruction");
+        mobile.attr("data-url", device.mobile.status ? device.mobile.url : "/underconstruction");
 
-        if (device.mobile.status) {
-            mob.addClass("active");
-            web.removeClass("active");
+        if (device.desktop.status) {
+            desktop.addClass("active");
+            mobile.removeClass("active");
+
+            // untuk tab
+            tabdesktop.addClass("active");
+            tabpanedesktop.addClass("active");
+            tabmobile.removeClass("active");
+            tabpanemobile.removeClass("active");
         }else{
-            mob.removeClass("active");
-            web.addClass("active");
+            desktop.removeClass("active");
+            mobile.addClass("active");
+
+            // untuk tab
+            tabdesktop.removeClass("active");
+            tabpanedesktop.removeClass("active");
+            tabmobile.addClass("active");
+            tabpanemobile.addClass("active");
         }
     }
 
     $defaultInfo.addClass("d-none");
     $frame.removeClass("d-none");
 });
+
+$('a[data-bs-toggle="tab"]').click(function() {
+    $type = $(this).attr("href").replace("#","");
+    console.log($type);
+    $(`.header-icon-svgs-prev.${$type}`).click();
+    $(".sidebar-right").addClass("sidebar-open");
+})

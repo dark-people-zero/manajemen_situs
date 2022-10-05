@@ -7,7 +7,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -21,7 +21,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -35,7 +35,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -49,7 +49,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -63,7 +63,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -77,7 +77,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -91,7 +91,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -105,7 +105,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -119,7 +119,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -133,7 +133,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -147,7 +147,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -161,7 +161,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -175,7 +175,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -189,7 +189,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -203,7 +203,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -217,7 +217,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -231,7 +231,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -245,7 +245,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -259,7 +259,7 @@
                 "status": false,
                 "url": ""
             },
-            "web": {
+            "desktop": {
                 "status": false,
                 "url": ""
             }
@@ -273,9 +273,9 @@
                 "status": true,
                 "url": "/zia_togel_mobile"
             },
-            "web": {
-                "status": false,
-                "url": ""
+            "desktop": {
+                "status": true,
+                "url": "/zia_togel_desktop"
             }
         }
     }

@@ -10,6 +10,7 @@
 		<title> Manajemen Situs SMB </title>
 
         @include('layouts.components.styles')
+        
 
 	</head>
 

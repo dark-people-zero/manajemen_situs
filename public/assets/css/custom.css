@@ -94,3 +94,29 @@ a.header-icon-svgs-prev.mobile.active::before {
 .swichermainleft .skin-body {
     padding: 0 10px;
 }
+
+
+.sidebar .nav.panel-tabs {
+    padding: 15px 10px !important;
+}
+
+#areaPengaturan {
+    display: none;
+}
+
+#areaPengaturan.show {
+    display: block;
+}
+
+#areaPengaturan .swichermainleft h4 {
+    font-size: 14px;
+    padding-bottom: 0;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ebfa;
+    background: #eaf3f147;
+    border-top: 1px solid #e9ebfa;
+    margin: 10px 0 !important;
+    text-transform: uppercase;
+}

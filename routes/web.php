@@ -36,7 +36,7 @@ Route::get('/data-situs', function (Request $request) {
 Route::get('/zia_togel_mobile', function () {
     return view('situs.zia_togel.mobile.index');
 });
-Route::get('/zia_togel_web', function () {
+Route::get('/zia_togel_desktop', function () {
     return view('situs.zia_togel.desktop.index');
 });
 
