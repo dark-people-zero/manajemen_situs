@@ -45,7 +45,7 @@
 
             @include('layouts.components.sidebar-right')
 
-            @include('layouts.components.modal')
+            {{-- @include('layouts.components.modal') --}}
 
             @yield('modal')
 		</div>

@@ -20,18 +20,18 @@
 							</div> --}}
 							<div class="main-header-center ms-4 d-block form-group">
                                 <div class="title">
-                                    Situs Toto Togel
+                                    Manajemen Situs SMB
                                 </div>
 							</div>
 						</div>
                         <div class="main-header-center justify-content-center">
                             <div class="d-flex" style="margin-right: 135px;">
-                                <a href="javascript:void(0);" class="header-icon-svgs-prev desktop" data-url="/zia_togel_web">
+                                <a href="javascript:void(0);" class="header-icon-svgs-prev desktop">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 24 24">
                                         <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z"/>
                                     </svg>
                                 </a>
-                                <a href="javascript:void(0);" class="header-icon-svgs-prev ms-3 mobile active" data-url="/zia_togel_mobile">
+                                <a href="javascript:void(0);" class="header-icon-svgs-prev ms-3 mobile">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-phone" viewBox="0 0 24 24">
                                         <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
                                         <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
