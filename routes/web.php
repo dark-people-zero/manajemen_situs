@@ -37,6 +37,6 @@ Route::get('/zia_togel_mobile', function () {
     return view('situs.zia_togel.mobile.index');
 });
 Route::get('/zia_togel_web', function () {
-    return view('situs.zia_togel.web.index');
+    return view('situs.zia_togel.desktop.index');
 });
 

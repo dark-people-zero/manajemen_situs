@@ -44,14 +44,14 @@
       href="https://ziatogel176.com/assets/img/auo/favicon.png') }}"
     />
 
-    <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/tingle.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/mobile/tingle.min.css') }}" />
     <link
-      href="{{ asset('situs/assets/zia_togel/style.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/style.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/style(1).css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/style(1).css') }}"
       rel="stylesheet"
       type="text/css"
     />
@@ -61,92 +61,92 @@
       }
     </style>
     <link
-      href="{{ asset('situs/assets/zia_togel/framework.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/framework.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/owl.carousel.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/owl.theme.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/owl.theme.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/swipebox.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/swipebox.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/colorbox.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/colorbox.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/zia_togel/li-scroller.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/li-scroller.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/jquery.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/jqueryui.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jqueryui.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/owl.carousel.min.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.min.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/jquery.swipebox.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.swipebox.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/jquery.colorbox.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.colorbox.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/snap.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/snap.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/contact.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/contact.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/custom.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/custom.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/framework.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/framework.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/framework.launcher.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/framework.launcher.js.download') }}"
     ></script>
     <script
       language="JavaScript"
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/jquery-cycle-all-pack.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery-cycle-all-pack.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/clipboard.min.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/clipboard.min.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/clipboard.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/clipboard.js.download') }}"
     ></script>
-    <script src="{{ asset('situs/assets/zia_togel/notif-widget.js.download') }}"></script>
+    <script src="{{ asset('situs/assets/zia_togel/mobile/notif-widget.js.download') }}"></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/zia_togel/sw.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
     ></script>
 
     <style type="text/css">
@@ -198,7 +198,7 @@
           <a class="smartb2" href="https://ziatogel176.com/m/index.php"
             ><img
               class="header-logo2"
-              src="{{ asset('situs/assets/zia_togel/logo.png') }}"
+              src="{{ asset('situs/assets/zia_togel/mobile/logo.png') }}"
               width="130"
           /></a>
           <div class="buttonlc space smartb3">
@@ -214,26 +214,13 @@
         <div class="content smartb4">
           <div class="container main no-bottom">
 
-              <!-- untuk corousel -->
-              <!-- <div class="owl-carousel owl-theme">
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-              </div> -->
-
-
-
             <div class="wrapper2">
               <!-- banner kecil -->
               <div class="note center">Silahkan login untuk mulai bermain</div>
               <div>
                 <script
                   type="text/javascript"
-                  src="{{ asset('situs/assets/zia_togel/vbulletin_md5.js.download') }}"
+                  src="{{ asset('situs/assets/zia_togel/mobile/vbulletin_md5.js.download') }}"
                 ></script>
                 <form
                   action="https://ziatogel176.com/m/index.php"
@@ -256,7 +243,7 @@
                   </div>
                   <div class="form-group">
                     <span class="showp" onclick="showpassword()">
-                        <img src="{{ asset('situs/assets/zia_togel/eye.png') }}" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/eye.png') }}" />
                       <p id="hideshow" style="font-size: 18px">&nbsp;Hide</p>
                     </span>
                     <input type="hidden" id="showhide" value="hide" />
@@ -370,7 +357,7 @@
 
 
 
-            <link href="{{ asset('situs/assets/zia_togel/login.css') }}" rel="stylesheet" />
+            <link href="{{ asset('situs/assets/zia_togel/mobile/login.css') }}" rel="stylesheet" />
 
             <div class="inner-wrap">
               <div class="panel-blue">
@@ -666,7 +653,7 @@
                       <div class="pool-name">24Dspin</div>
                       <div class="pool-date"></div>
                       <div class="pool-result">
-                        <img src="{{ asset('situs/assets/zia_togel/13.png') }}" width="22px" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/13.png') }}" width="22px" />
                       </div>
                     </div>
                     <div class="results">
@@ -674,7 +661,7 @@
                       <div class="pool-date"></div>
                       <div class="pool-result">
                         <img
-                          src="{{ asset('situs/assets/zia_togel/dice5.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice5.png') }}"
                           style="height: 26px; width: 25px"
                         />
                       </div>
@@ -695,7 +682,7 @@
                       <div class="pool-name">Roulette</div>
                       <div class="pool-date"></div>
                       <div class="pool-result">
-                        <img src="{{ asset('situs/assets/zia_togel/03.png') }}" width="22px" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/03.png') }}" width="22px" />
                       </div>
                     </div>
                     <div class="results">
@@ -704,13 +691,13 @@
                       <div class="pool-result">
                         <img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/zia_togel/dice1.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice1.png') }}"
                         /><img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/zia_togel/dice3.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice3.png') }}"
                         /><img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/zia_togel/dice6.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice6.png') }}"
                         />
                       </div>
                     </div>
@@ -718,52 +705,52 @@
                 </div>
                 <div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/bca.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bca.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/bni.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bni.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/bri.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bri.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/bsi.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bsi.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/cimb.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/cimb.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/dana.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/dana.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/danamon.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/danamon.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/gopay.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/gopay.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/linkaja.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/linkaja.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/nofound.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/nofound.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/maybank.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/maybank.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/ovo.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/ovo.webp') }}" />
                   </div>
                 </div>
               </div>
@@ -778,7 +765,7 @@
           <div class="row" style="display: flex">
             <div class="col-6 col-sm-6">
               <img
-                src="{{ asset('situs/assets/zia_togel/idnplay_w.png') }}"
+                src="{{ asset('situs/assets/zia_togel/mobile/idnplay_w.png') }}"
                 style="
                   overflow: inherit !important;
                   width: 100%;
@@ -789,7 +776,7 @@
             </div>
             <div class="col-6 col-sm-6">
               <img
-                src="{{ asset('situs/assets/zia_togel/pagcorlogo2.png') }}"
+                src="{{ asset('situs/assets/zia_togel/mobile/pagcorlogo2.png') }}"
                 style="overflow: inherit !important; width: 100%; padding: 10px"
               />
             </div>
@@ -806,17 +793,17 @@
 
       <script
         type="text/javascript"
-        src="{{ asset('situs/assets/zia_togel/_footer.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/_footer.js.download') }}"
       ></script>
       <script
-        src="{{ asset('situs/assets/zia_togel/moment.min.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/moment.min.js.download') }}"
         type="text/javascript"
       ></script>
-      <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/_footer.css') }}" />
+      <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/mobile/_footer.css') }}" />
       <!-- START SMART BANNER -->
       <script
         type="text/javascript"
-        src="{{ asset('situs/assets/zia_togel/sw.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
       ></script>
     </div>
     <div id="cboxOverlay" style="display: none"></div>
