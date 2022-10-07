@@ -1,4 +1,5 @@
 var config = null;
+var idActive = null
 
 $selecSitus = $(".select2-situs");
 $selecSitus.select2({
@@ -91,16 +92,45 @@ $selecSitus.on("select2:select", function (e) {
     $.getJSON(`/situs/config/${$data.id}.json`,
         function (data, textStatus, jqXHR) {
             config = data;
+            idActive = $data.id;
+            setValue(config, idActive);
         }
-    ).fail((e) => {
-        config = null;
-    });
+    ).fail(() => config = null)
 });
 
 $('a[data-bs-toggle="tab"]').click(function() {
     $type = $(this).attr("href").replace("#","");
-    console.log($type);
     $(`.header-icon-svgs-prev.${$type}`).click();
     $(".sidebar-right").addClass("sidebar-open");
+})
+
+function setValue(data, type) {
+    var desktop = data.desktop;
+    var mobil = data.mobile;
+
+    // set untuk desktop
+    setDekstop(data.desktop);
+}
+
+function setDekstop(data) {
+    var togglePromosi = $('#formDesktop input[name="promosi"]');
+    if (data.promosi) {
+        togglePromosi.prop('checked', data.promosi.status);
+
+        // set input
+        $('#formDesktop input[name="namaPromosi"]').val(data.promosi.name);
+        $('#formDesktop input[name="urlPromosi"]').val(data.promosi.link);
+        $("#previewImagePromosi img").attr("src", data.promosi.img);
+        $("#previewImagePromosi").removeClass("d-none");
+        var target = togglePromosi.closest(".custom-switch").attr("href");
+        $(target).collapse("show");
+
+
+    }
+}
+
+$("#formDesktop").submit(function(e) {
+    e.preventDefault();
+    console.log("ada masuk");
 })
 

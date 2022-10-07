@@ -1,25 +1,3 @@
-var int = setInterval(() => {
-    var target = document.getElementById("modal-trigger");
-    if (target) {
-        target.remove();
-        document.querySelector("body").classList.add("loader-active");
-        // $("#loader").delay(500).fadeIn(300);
-        // $(".mask").delay(800).fadeIn(300);
-        setTimeout(() => {
-            document.getElementById("loader").style.display = "block";
-            setTimeout(() => {
-                document.querySelector(".mask").style.display = "block";
-            }, 300);
-        }, 1700);
-        clearInterval(int)
-    }
-}, 500);
-
-// var intLoader = setInterval(() => {
-//     document.getElementById("loader").style.display = "block";
-//     document.querySelector(".mask").style.display = "block";
-// }, 100);
-
 (function () {
     "use strict";
     window.dataLayer = window.dataLayer || [];
@@ -55,26 +33,33 @@ var int = setInterval(() => {
 })();
 
 const func = {
-    assets: {
-        css: () => {
-            $("<link/>", {
-                rel: "stylesheet",
-                type: "text/css",
-                href: "/situs/css/zia_togel.css"
-            }).appendTo("head");
-        },
-        js: () => {
-
-        }
-    },
     desktop: {
-        modalPopup: (data) => {
-            var mdl = $("#myModal");
-            mdl.find(".modal-body").append($(`
-                <p class="deskripsi" data-dismiss="modal">${data.deskripsi}</p>
-            `));
-            mdl.find(".modal-body a img").attr("src", data.img);
-            mdl.modal("show");
+        promosi: (data) => {
+            $(`
+                <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
+                    <img src="${data.img}">
+                </a>
+            `).insertBefore($("#latest-results"));
+        },
+        linkAlter: (data) => {
+            console.log(data);
+            var list = $(`
+                <div class="linkalte-container">
+                    <img src="${data.img}" class="linkalte-btn">
+                    <ul class="linkalte-body"></ul>
+                </div>
+            `);
+
+            data.listLink.forEach(e => {
+                list.find("ul").append($(`
+                    <li>
+                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </li>
+                `));
+            });
+
+            $('body').append(list);
+
         }
     },
     mobile: {
@@ -206,8 +191,6 @@ const func = {
         } else {
             $('body').addClass('smbitClass-desktop');
         }
-        func.assets.css();
-        func.assets.js();
 
         $.getJSON("/situs/config/zia_togel.json",
             function (data, textStatus, jqXHR) {
@@ -245,19 +228,12 @@ const func = {
                             if (data.mobile.modalPopup.status) func.mobile.modalPopup(data.mobile.modalPopup);
                         }
                     }else{
-                        $(".mask").hide();
-                        $("#loader").hide();
-                        var desktop = data.desktop;
-                        if (desktop.modalPopup) {
-                            if (desktop.modalPopup.status) func.desktop.modalPopup(desktop.modalPopup);
+                        if (data.desktop) {
+                            if (data.desktop.promosi.status) func.desktop.promosi(data.desktop.promosi);
                         }
 
-                        if (desktop.banner) {
-                            if (desktop.banner.status) {
-                                console.log("ada banner");
-                            }else{
-                                $("#slider").children().remove();
-                            }
+                        if (data.desktop.linkAlter) {
+                            if (data.desktop.linkAlter.status) func.desktop.linkAlter(data.desktop.linkAlter);
                         }
                     }
 
@@ -269,3 +245,14 @@ const func = {
 
     }
 };
+
+// menambahkan info pada modal
+setTimeout(() => {
+    var mdlBody = document.querySelector(".modal-body");
+    var p = document.createElement("p");
+    p.setAttribute("aria-label", "Close");
+    p.setAttribute("aria-hidden", "true");
+    p.classList.add("deskripsi")
+    p.textContent = "Klik di mana saja untuk menutup";
+    mdlBody.appendChild(p);
+}, 5);

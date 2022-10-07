@@ -1,32 +1,21 @@
 {
     "desktop": {
-        "modalPopup": {
-            "status": true,
-            "img": "https://static.hokibagus.club/ziatogel/images/popup/ziatogel_popup_bri.png",
-            "deskripsi": "Klik di mana saja untuk menutup"
-        },
-        "banner": {
-            "status": false,
-            "data": [
-                {
-                    "tittle": "Togel Online",
-                    "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_allbonus.jpg"
-                },
-                {
-                    "tittle": "Togel Online",
-                    "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_tipebet.jpg"
-                },
-                {
-                    "tittle": "Partai Togel",
-                    "img": "https://static.hokibagus.club/ziatogel/images/slider/ziatogel_slidermobile_prosesdeposit.jpg"
-                }
-            ]
-        },
         "promosi": {
             "status": true,
             "name":"Agen Togel Online Indonesia Resmi",
             "link": "/register.php",
             "img": "https://static.hokibagus.club/ziatogel/images/promo/ziatogel_promo_bonus.gif"
+        },
+        "linkAlter": {
+            "status": true,
+            "img": "https://static.hokibagus.club/ziatogel/images/etc/ziatogel_linkalternatif.png",
+            "listLink": [
+                "https://linkr.bio/ziatogel",
+                "https://rebrand.ly/ziatogel",
+                "https://ziatogel176.com",
+                "https://ziatogel176.com",
+                "https://ziatogel176.com"
+            ]
         }
     },
     "mobile": {

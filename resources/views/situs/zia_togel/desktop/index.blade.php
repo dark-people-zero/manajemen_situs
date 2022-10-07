@@ -112,8 +112,7 @@
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 
     <!-- ini manggil script dari cloud disini -->
-    <script src="{{ asset('situs/assets/zia_togel/desktop/assets/js/jquery.js')}}"></script>
-    <script src="{{ asset('situs/assets/zia_togel/desktop/assets/js/vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
     <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
     <button style="display:none;" type="button" id="modal-trigger" class="btn btn-primary" data-toggle="modal"

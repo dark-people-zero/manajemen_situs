@@ -352,6 +352,7 @@
 
 
             <!-- ini manggil script dari cloud disini -->
+            <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
             <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
 
