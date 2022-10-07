@@ -1,4 +1,4 @@
-body.smbitClass {
+body.smbitClass-mobile {
     // Untuk header atas
     .page-content {
         .smartb1 #smart_banner {
@@ -214,8 +214,53 @@ body.smbitClass {
     }
 }
 
+body.smbitClass-desktop {
+    .modal {
+        .modal-dialog {
+            .modal-content {
+                background: transparent;
+                box-shadow: none;
+                border: none;
+
+                .modal-header {
+                    border: none;
+                    .close {
+                        opacity: 1;
+                        font-size: 25px;
+                        color: #fff;
+                    }
+                }
+
+                .modal-body {
+                    .deskripsi {
+                        color: white;
+                        background-color: rgb(188, 156, 8);
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        margin-top: 10px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-backdrop {
+        opacity: .9;
+    }
+
+    // &.loader-active {
+    //     .mask,
+    //     #loader {
+    //         display: block !important;
+    //     }
+    // }
+}
+
 @media screen and (max-width: 415px) {
-    body.smbitClass {
+    body.smbitClass-mobile {
         .page-content {
             .content {
                 .container {

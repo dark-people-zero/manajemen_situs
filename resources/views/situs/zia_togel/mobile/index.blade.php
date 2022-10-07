@@ -352,7 +352,7 @@
 
 
             <!-- ini manggil script dari cloud disini -->
-            <script src="{{ asset('situs/js/script-smbit.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
 
 

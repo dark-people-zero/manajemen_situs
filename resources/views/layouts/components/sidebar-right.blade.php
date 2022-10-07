@@ -47,10 +47,9 @@
                                             <div class="switch_section">
                                                 <div class="switch-toggle d-flex mt-2">
                                                     <span class="me-auto">LTR</span>
-                                                    <label class="custom-switch form-switch mb-0  p-0">
+                                                    <label class="custom-switch form-switch mb-0  p-0 cursor-pointer">
                                                         <input type="checkbox" name="custom-switch-radio" class="custom-switch-input">
-                                                        <span class="custom-switch-indicator custom-switch-indicator-xl"></span>
-                                                        <span class="custom-switch-description">Toggle example</span>
+                                                        <span class="custom-switch-indicator custom-switch-indicator"></span>
                                                     </label>
                                                 </div>
                                                 <div class="switch-toggle d-flex mt-2">

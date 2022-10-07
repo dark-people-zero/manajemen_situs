@@ -67,6 +67,7 @@
             }
         }
     </script>
+
 </head>
 
 <body>
@@ -109,6 +110,11 @@
     </script>
     <noscript><a href="https://www.livechatinc.com/chat-with/13772640/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+
+    <!-- ini manggil script dari cloud disini -->
+    <script src="{{ asset('situs/assets/zia_togel/desktop/assets/js/jquery.js')}}"></script>
+    <script src="{{ asset('situs/assets/zia_togel/desktop/assets/js/vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
     <button style="display:none;" type="button" id="modal-trigger" class="btn btn-primary" data-toggle="modal"
         data-target="#myModal">Large modal</button>
@@ -175,7 +181,7 @@
                                     placeholder="Password" id="navbar_password" tabindex="2"
                                     name="entered_password" autocomplete=off>
                             </div>
-                            <button type="submit" class="btn btn-theme login" name="submitlogin" value="1"
+                            <button type="button" class="btn btn-theme login" name="submitlogin" value="1"
                                 style="margin-right: -26px;">LOGIN</button>
                             <input name="vb_login_md5password" type="hidden">
                             <input name="vb_login_md5password_utf" type="hidden">
@@ -433,9 +439,7 @@
                 </div> <!-- BEGIN SLIDER -->
                 <div class="col-sm-9 blog-posts">
                     <div id="slider" class="slider">
-
                         <div class="owl-carousel owl-theme">
-
                             <div class="item">
                                 <img src="{{ asset('situs/assets/zia_togel/desktop/images/ziatogel_sliderweb_allbonus.jpg') }}" width="840px" height="482" />
                             </div>

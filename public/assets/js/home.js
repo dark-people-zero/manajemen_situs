@@ -1,3 +1,5 @@
+var config = null;
+
 $selecSitus = $(".select2-situs");
 $selecSitus.select2({
     dropdownParent: $('.sidebar'),
@@ -85,6 +87,14 @@ $selecSitus.on("select2:select", function (e) {
 
     $defaultInfo.addClass("d-none");
     $frame.removeClass("d-none");
+
+    $.getJSON(`/situs/config/${$data.id}.json`,
+        function (data, textStatus, jqXHR) {
+            config = data;
+        }
+    ).fail((e) => {
+        config = null;
+    });
 });
 
 $('a[data-bs-toggle="tab"]').click(function() {
@@ -93,3 +103,4 @@ $('a[data-bs-toggle="tab"]').click(function() {
     $(`.header-icon-svgs-prev.${$type}`).click();
     $(".sidebar-right").addClass("sidebar-open");
 })
+

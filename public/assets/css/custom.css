@@ -120,3 +120,7 @@ a.header-icon-svgs-prev.mobile.active::before {
     margin: 10px 0 !important;
     text-transform: uppercase;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
