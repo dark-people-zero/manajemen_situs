@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Http\Controllers\HomeController;
-use App\Http\Livewire\Pages\Home;
+use App\Http\Livewire\Home;
+use App\Http\Livewire\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,11 @@ use App\Http\Livewire\Pages\Home;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-// Route::get('/', [HomeController::class, 'index']);
 Route::get('/', Home::class);
+Route::get('/home', User::class);
+
 Route::get('/underconstruction', function () {
     return view('pages.underconstruction');
 });
@@ -41,4 +44,3 @@ Route::get('/zia_togel_mobile', function () {
 Route::get('/zia_togel_desktop', function () {
     return view('situs.zia_togel.desktop.index');
 });
-

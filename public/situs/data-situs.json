@@ -271,11 +271,17 @@
         "device": {
             "mobile": {
                 "status": true,
-                "url": "/zia_togel_mobile"
+                "url": {
+                    "dev": "/zia_togel_mobile",
+                    "prod": "https://ziatogel176.com/m/"
+                }
             },
             "desktop": {
                 "status": true,
-                "url": "/zia_togel_desktop"
+                "url": {
+                    "dev": "/zia_togel_desktop",
+                    "prod": "https://ziatogel176.com"
+                }
             }
         }
     }

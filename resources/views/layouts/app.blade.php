@@ -10,8 +10,6 @@
 		<title> Manajemen Situs SMB </title>
 
         @include('layouts.components.styles')
-
-        @livewireStyles
 	</head>
 
 	<body class="ltr main-body app sidebar-mini fixed-layout layout-fullwidth ltr sidebar-gone closed-menu sidenav-toggled">
@@ -24,25 +22,18 @@
 
 		<!-- Page -->
 		<div class="page">
-
-			<div>
-
+			{{-- <div>
                 @include('layouts.components.app-header')
-
 			</div>
-
-			<!-- main-content -->
 			<div class="main-content app-content">
-
-				<!-- container -->
 				<div class="main-container container-fluid p-0">
 
                     @yield('content')
 
 				</div>
-				<!-- Container closed -->
-			</div>
-			<!-- main-content closed -->
+			</div> --}}
+
+            @yield('content')
 
             {{-- @include('layouts.components.sidebar-right') --}}
 
@@ -53,6 +44,6 @@
 		<!-- End Page -->
 
         @include('layouts.components.scripts')
-        
+
     </body>
 </html>

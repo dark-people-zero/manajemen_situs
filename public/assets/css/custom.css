@@ -100,14 +100,6 @@ a.header-icon-svgs-prev.mobile.active::before {
     padding: 15px 10px !important;
 }
 
-#areaPengaturan {
-    display: none;
-}
-
-#areaPengaturan.show {
-    display: block;
-}
-
 #areaPengaturan .swichermainleft h4 {
     font-size: 14px;
     padding-bottom: 0;
