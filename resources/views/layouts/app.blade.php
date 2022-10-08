@@ -10,8 +10,8 @@
 		<title> Manajemen Situs SMB </title>
 
         @include('layouts.components.styles')
-        
 
+        @livewireStyles
 	</head>
 
 	<body class="ltr main-body app sidebar-mini fixed-layout layout-fullwidth ltr sidebar-gone closed-menu sidenav-toggled">
@@ -44,7 +44,7 @@
 			</div>
 			<!-- main-content closed -->
 
-            @include('layouts.components.sidebar-right')
+            {{-- @include('layouts.components.sidebar-right') --}}
 
             {{-- @include('layouts.components.modal') --}}
 
@@ -53,6 +53,6 @@
 		<!-- End Page -->
 
         @include('layouts.components.scripts')
-
+        
     </body>
 </html>

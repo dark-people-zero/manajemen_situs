@@ -32,6 +32,7 @@
 		<script src="{{asset('assets/plugins/sidebar/sidebar-custom.js')}}"></script>
 
         @yield('scripts')
+        @livewireScripts
 
 		<!-- EVA-ICONS JS -->
 		<script src="{{asset('assets/plugins/eva-icons/eva-icons.min.js')}}"></script>

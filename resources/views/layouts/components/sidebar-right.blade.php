@@ -42,7 +42,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active " id="desktop">
                         <form id="formDesktop" enctype="multipart/form-data">
-                            <div class="swichermainleft text-center">
+                            <div class="swichermainleft text-center" id="promosiArea">
                                 <h4 class="d-flex justify-content-between" >
                                     PROMOSI
                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-promosi" role="button" aria-expanded="false" aria-controls="coll-promosi">
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swichermainleft text-center">
+                            <div class="swichermainleft text-center" id="linkAlterArea">
                                 <h4 class="d-flex justify-content-between">
                                     LINK ALTERNATIF
                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-link-alter" role="button" aria-expanded="false" aria-controls="desktop">
@@ -84,10 +84,13 @@
                                             <label class="form-label mt-0 text-start">Image</label>
                                             <input class="form-control" type="file" name="imageAlter">
                                         </div>
+                                        <div id="previewImageLinkAlter" class="mt-2 d-none">
+                                            <img src="#" style="max-height: 200px;">
+                                        </div>
 
                                         <div class="main-form-group mt-2">
                                             <label class="form-label mt-0 text-start">URL</label>
-                                            <textarea class="form-control" placeholder="Masukan URL Promosi" name="urlAlter"></textarea>
+                                            <textarea class="form-control" onchange="this.style.height = this.scrollHeight + 'px';" placeholder="Masukan URL Promosi" name="urlAlter"></textarea>
                                         </div>
                                         <div class="text-start">
                                             <small class="text-warning fw-bold">Info: untuk memisahkan link silahkan beri tanda '|' tanpa tanda kutip.</small>
@@ -96,7 +99,7 @@
                                 </div>
                             </div>
 
-                            <div class="w-100 mx-2">
+                            <div class="w-100 px-2 mb-3">
                                 <button type="submit" class="btn btn-primary-light w-100 mt-2">Simpan</button>
                             </div>
                         </form>
