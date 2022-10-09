@@ -116,3 +116,18 @@ a.header-icon-svgs-prev.mobile.active::before {
 .cursor-pointer {
     cursor: pointer;
 }
+
+
+.SelectBox .placeholder {
+    background: transparent;
+    color: #99a6b7;
+}
+
+.SumoSelect>.CaptionCont>span.placeholder {
+    color: #99a6b7;
+}
+
+.dark-theme .SelectBox .search-txt {
+    color: #e1e6f1;
+    background: transparent;
+}

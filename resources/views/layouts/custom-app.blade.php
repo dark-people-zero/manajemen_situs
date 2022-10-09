@@ -10,9 +10,9 @@
 		<title> Login </title>
 
 		@include('layouts.components.custom-styles')
-        
+
     </head>
-	<body class="ltr error-page1">
+	<body class="ltr error-page1 dark-theme">
 
 		@yield('class')
 

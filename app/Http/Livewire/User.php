@@ -3,18 +3,25 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 use App\Models\User as Muser;
 
 class User extends Component
 {
-    public $data;
+    use WithPagination;
+
+    public $search = '';
 
     public function render()
     {
-        $data = Muser::paginate(10);
-        dd($data);
-        $this->data = $data;
+        $search = $this->search;
+        $data = Muser::when($search, function($e) use($search){
+            $e->where('name', 'like', '%'.$search.'%')
+              ->orWhere('username', 'like', '%'.$search.'%');
+        })->paginate(10);
 
-        return view('livewire.user')->extends('layouts.app2');
+        return view('livewire.user',[
+            "data" => $data
+        ])->extends('layouts.app2');
     }
 }

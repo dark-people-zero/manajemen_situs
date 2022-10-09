@@ -1,3 +1,9 @@
+@section('styles')
+    <!--Internal Sumoselect css-->
+    <link rel="stylesheet" href="{{asset('assets/plugins/sumoselect/sumoselect.css')}}">
+
+@endsection
+
 <div>
     <div class="card mt-3 card-success">
         <div class="card-header pb-0">
@@ -6,13 +12,14 @@
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <input class="form-control form-control-sm" placeholder="Search..." type="search">
+                    <input class="form-control form-control-sm" placeholder="Search..." type="search" wire:model="search" >
                 </div>
                 <div>
-                    <a href="javascript:void(0);" class="btn btn-primary btn-sm">Add Data</a>
+                    <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formUser">Add Data</a>
                 </div>
             </div>
-            <div class="mt-4">
+            <div class="mt-4 position-relative">
+                <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="search"></div>
                 <table class="table table-bordered dataTable border-primary">
                     <thead>
                         <tr>
@@ -24,21 +31,23 @@
                     </thead>
                     <tbody>
                         @if ($data->count() > 0)
-                            <tr>
-                                <td>Admin</td>
-                                <td>admin</td>
-                                <td>
-                                    <span class="badge badge-primary">All Access</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="javascript:void(0);" class="text-info me-2">
-                                        <i class="fe fe-edit"></i>
-                                    </a>
-                                    <a href="javascript:void(0);" class="text-danger">
-                                        <i class="fe fe-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                            @foreach ($data as $item)
+                                <tr>
+                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->username}}</td>
+                                    <td>
+                                        <span class="badge badge-primary">All Access</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="javascript:void(0);" class="text-info me-2">
+                                            <i class="fe fe-edit"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="text-danger">
+                                            <i class="fe fe-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         @else
                             <tr>
                                 <td>No matching records found</td>
@@ -47,34 +56,24 @@
                     </tbody>
                 </table>
             </div>
-            <div class="mt-4 d-flex justify-content-between align-items-center">
-                <div>
-                    <span>Showing 1 to 10 of 57 entries</span>
-                </div>
-                <div>
-                    <ul class="pagination pagination-sm pagination-primary mg-sm-b-0">
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0);">
-                                <i class="icon ion-ios-arrow-back"></i>
-                            </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="javascript:void(0);">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0);">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0);">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0);">
-                                <i class="icon ion-ios-arrow-forward"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            {{ $data->links('vendor.pagination.bootstrap-5') }}
         </div>
-      </div>
+    </div>
 </div>
+
+@section('scripts')
+    <!--Internal Sumoselect js-->
+    <script src="{{asset('assets/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
+
+    <script>
+        $(".SlectBox").SumoSelect({
+            csvDispCount: 3,
+            selectAll: !0,
+            search: !0,
+            searchText: "Enter here.",
+            okCancelInMulti: !0,
+            captionFormatAllSelected: "Yeah, OK, so everything.",
+        })
+    </script>
+
+@endsection
