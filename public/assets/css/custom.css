@@ -189,4 +189,38 @@ a.header-icon-svgs-prev.mobile.active::before {
     margin-left: 4px;
 }
 
+.SumoSelect-group .SumoSelect>.CaptionCont {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.SumoSelect-group .SumoSelect-group-action {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #cdd4e2;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dark-theme .SumoSelect-group .SumoSelect-group-action {
+    border-color: #e1e6f11a;
+}
+
+.SumoSelect-group .SumoSelect-group-action i:first-child {
+    display: block;
+}
+
+.SumoSelect-group .SumoSelect-group-action i:last-child {
+    display: none;
+}
+
+.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"] i:first-child {
+    display: none;
+}
+
+.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"] i:last-child {
+    display: block;
+}
+
 

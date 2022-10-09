@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\User as Muser;
+use App\Models\Situs as Msitus;
 
 class User extends Component
 {
@@ -20,8 +21,11 @@ class User extends Component
               ->orWhere('username', 'like', '%'.$search.'%');
         })->paginate(10);
 
+        $situs = Msitus::get();
+
         return view('livewire.user',[
-            "data" => $data
+            "data" => $data,
+            "situs" => $situs
         ])->extends('layouts.app2');
     }
 }
