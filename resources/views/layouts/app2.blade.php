@@ -57,5 +57,7 @@
 
         @include('layouts.components.scripts')
 
+        @include('layouts.components.toast-notification')
+
     </body>
 </html>

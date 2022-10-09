@@ -131,3 +131,62 @@ a.header-icon-svgs-prev.mobile.active::before {
     color: #e1e6f1;
     background: transparent;
 }
+
+
+.dark-theme .swal2-container .swal2-modal {
+    background: #2a2e3f;
+}
+
+.dark-theme .swal2-container .swal2-modal .swal2-title {
+    color: #fff;
+}
+
+.dark-theme .swal2-container .swal2-modal .swal2-html-container {
+    color: #99a6b7;
+}
+
+.dark-theme .swal2-container .swal2-modal .swal2-icon.swal2-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.dark-theme .swal2-container .swal2-modal .swal2-icon.swal2-error {
+    color: #ff473d;
+    border-color: #ff473d;
+}
+
+.dark-theme .swal2-container .swal2-modal .swal2-icon.swal2-info {
+    color: #39bfeb;
+    border-color: #39bfeb;
+}
+
+.swal2-container .swal2-modal .swal2-icon.swal2-success .swal2-success-ring {
+    border: .25em solid #03c8954d;
+}
+
+.swal2-container .swal2-modal .swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #03c895;
+}
+
+#toastContainer {
+    z-index: 99999999;
+    overflow: hidden;
+}
+
+#toastContainer .toast{
+    transition: 1s;
+    transform: translate(400px);
+    display: block !important;
+}
+
+#toastContainer .toast.show {
+    transform: translateX(0);
+}
+
+.pagination li span.page-link {
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+

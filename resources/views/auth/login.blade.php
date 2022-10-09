@@ -30,7 +30,7 @@
                                                 @csrf
                                                 <div class="form-group">
                                                     <label>Username</label>
-                                                    <input class="form-control @error('username') is-invalid @enderror" placeholder="Enter your username" type="text" name="username" value="{{ old('username') }}" autofocus>
+                                                    <input class="form-control @error('username') is-invalid @enderror" placeholder="Enter your username" type="text" name="username" value="{{ old('username') }}" autofocus required>
 
                                                         @error('username')
                                                             <span class="invalid-feedback" role="alert">
@@ -40,7 +40,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Password</label>
-                                                    <input class="form-control @error('password') is-invalid @enderror" placeholder="Enter your password" type="password" name="password" autocomplete="current-password">
+                                                    <input class="form-control @error('password') is-invalid @enderror" placeholder="Enter your password" type="password" name="password" autocomplete="current-password" required>
 
                                                     @error('password')
                                                         <span class="invalid-feedback" role="alert">
