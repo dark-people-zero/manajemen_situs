@@ -12,6 +12,12 @@ class User extends Component
     use WithPagination;
 
     public $search = '';
+    protected $listeners = ['removeAccessSite'];
+
+    public $dataAccessSite = [
+        "no1",
+        "no2"
+    ];
 
     public function render()
     {
@@ -27,5 +33,18 @@ class User extends Component
             "data" => $data,
             "situs" => $situs
         ])->extends('layouts.app2');
+    }
+
+    public function removeAccessSite($index)
+    {
+        if (($key = array_search($index, $this->dataAccessSite)) !== false) {
+            unset($this->dataAccessSite[$key]);
+        }
+    }
+
+    public function addAccessSite()
+    {
+        $count = count($this->dataAccessSite)+1;
+        array_push($this->dataAccessSite,"no$count");
     }
 }

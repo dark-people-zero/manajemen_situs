@@ -207,20 +207,34 @@ a.header-icon-svgs-prev.mobile.active::before {
     border-color: #e1e6f11a;
 }
 
-.SumoSelect-group .SumoSelect-group-action i:first-child {
+.SumoSelect-group .SumoSelect-group-action.hideshow i:first-child {
     display: block;
 }
 
-.SumoSelect-group .SumoSelect-group-action i:last-child {
+.SumoSelect-group .SumoSelect-group-action.hideshow i:last-child {
     display: none;
 }
 
-.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"] i:first-child {
+.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"].hideshow i:first-child {
     display: none;
 }
 
-.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"] i:last-child {
+.SumoSelect-group .SumoSelect-group-action[aria-expanded="true"].hideshow i:last-child {
     display: block;
 }
 
+.SumoSelect-group.collase-show .SumoSelect .CaptionCont {
+    border-bottom-left-radius: 0 !important;
+}
 
+.SumoSelect-group .SumoSelect-group-action:not(:last-child) {
+    border-radius: 0 !important;
+}
+
+.SumoSelect-group.collase-show .SumoSelect-group-action:last-child {
+    border-bottom-right-radius: 0;
+}
+
+.collapse.show table.table-bordered {
+    border-top: 0 !important;
+}

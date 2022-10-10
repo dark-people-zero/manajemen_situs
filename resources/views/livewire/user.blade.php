@@ -61,7 +61,7 @@
     </div>
 
     <!-- Form User Modal -->
-    <div class="modal fade" id="formUser" tabindex="-1" role="dialog"  aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="formUser" tabindex="-1" role="dialog"  aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" wire:ignore.self>
         <div class="modal-dialog modal-dialog-right" role="document">
             <div class="modal-content chat border-0">
                 <div class="modal-header border-bottom">
@@ -74,11 +74,11 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name" wire:model="name">
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                            <input type="text" class="form-control" id="username" placeholder="Enter Username" wire:model="username">
                         </div>
                         <div class="form-group">
                             <label>Akses Menu</label>
@@ -197,29 +197,14 @@
                         <div class="form-group">
                             <label class="d-flex align-items-center">
                                 <span class="me-2">Access Site</span>
-                                <span class="badge badge-primary">
+                                <span class="badge badge-primary" wire:click="addAccessSite">
                                     <i class="fa fa-plus"></i>
                                 </span>
                             </label>
                         </div>
-                        <div class="form-group">
-                            <div class="d-flex SumoSelect-group">
-                                <select class="form-control SlectBox" placeholder="Please select one site.">
-                                    @foreach ($situs as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                    <option disabled selected ></option>
-                                </select>
-                                <button class="btn br-ts-0 br-bs-0 SumoSelect-group-action" type="button" data-bs-toggle="collapse" href="#collSite-0">
-                                    <i class="fe fe-eye"></i>
-                                    <i class="fe fe-eye-off"></i>
-                                </button>
-
-                            </div>
-                        </div>
-                        <div class="collapse" id="collSite-0">
-                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                        </div>
+                        @foreach ($dataAccessSite as $i => $item)
+                            <livewire:access-site :index="$item" :wire:key="$i">
+                        @endforeach
                     </form>
                 </div>
             </div>
@@ -240,6 +225,19 @@
             okCancelInMulti: !0,
             captionFormatAllSelected: "Yeah, OK, so everything.",
         })
+
+
+        var collapseAll = document.querySelectorAll('.collapse');
+        for (let i = 0; i < collapseAll.length; i++) {
+            const element = collapseAll[i];
+            element.addEventListener('show.bs.collapse', function (e) {
+                var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').addClass('collase-show');
+            })
+
+            element.addEventListener('hide.bs.collapse', function (e) {
+                var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').removeClass('collase-show');
+            })
+        }
     </script>
 
 @endsection
