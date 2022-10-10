@@ -4,17 +4,17 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Situs as Msitus;
+use App\Models\fitur;
 
 class AccessSite extends Component
 {
     public $index;
-    public $name, $username;
 
     public function render()
     {
-        $situs = Msitus::get();
         return view('livewire.access-site',[
-            "situs" => $situs
+            "situs" => Msitus::get(),
+            "fitur" => fitur::get()
         ]);
     }
 }

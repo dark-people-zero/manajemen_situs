@@ -70,15 +70,15 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="modalFormUser">
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name" wire:model="name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name" wire:model="name" value="{{$name}}">
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter Username" wire:model="username">
+                            <input type="text" class="form-control" id="username" placeholder="Enter Username" wire:model="username" value="{{$username}}">
                         </div>
                         <div class="form-group">
                             <label>Akses Menu</label>
@@ -89,7 +89,7 @@
                                         <th>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-create">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-create" wire:model="all_c" {{$all_c ? 'checked' : ''}}>
                                                     <label for="all-create" class="custom-control-label mt-1">C</label>
                                                 </div>
                                             </div>
@@ -97,7 +97,7 @@
                                         <th>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-read">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-read" wire:model="all_r" {{$all_r ? 'checked' : ''}}>
                                                     <label for="all-read" class="custom-control-label mt-1">R</label>
                                                 </div>
                                             </div>
@@ -105,7 +105,7 @@
                                         <th>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-update">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-update" wire:model="all_u" {{$all_u ? 'checked' : ''}}>
                                                     <label for="all-update" class="custom-control-label mt-1">U</label>
                                                 </div>
                                             </div>
@@ -113,7 +113,7 @@
                                         <th>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-delete">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-delete" wire:model="all_d" {{$all_d ? 'checked' : ''}}>
                                                     <label for="all-delete" class="custom-control-label mt-1">D</label>
                                                 </div>
                                             </div>
@@ -126,7 +126,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-create">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-create" wire:model="user_c" {{$user_c ? 'checked' : ''}}>
                                                     <label for="checkbox-user-create" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-read">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-read" wire:model="user_r" {{$user_r ? 'checked' : ''}}>
                                                     <label for="checkbox-user-read" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -142,7 +142,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-update">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-update" wire:model="user_u" {{$user_u ? 'checked' : ''}}>
                                                     <label for="checkbox-user-update" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -150,7 +150,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-delete">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-delete" wire:model="user_d" {{$user_d ? 'checked' : ''}}>
                                                     <label for="checkbox-user-delete" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -161,7 +161,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-create">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-create" wire:model="situs_c" {{$situs_c ? 'checked' : ''}}>
                                                     <label for="checkbox-situs-create" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -169,7 +169,7 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-read">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-read" wire:model="situs_r" {{$situs_r ? 'checked' : ''}}>
                                                     <label for="checkbox-situs-read" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -177,15 +177,16 @@
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-update">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-update" wire:model="situs_u" {{$situs_u ? 'checked' : ''}}>
                                                     <label for="checkbox-situs-update" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
                                         </td>
+
                                         <td>
                                             <div class="checkbox">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-delete">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-delete" wire:model="situs_d" {{$situs_d ? 'checked' : ''}}>
                                                     <label for="checkbox-situs-delete" class="custom-control-label mt-1"></label>
                                                 </div>
                                             </div>
@@ -207,6 +208,9 @@
                         @endforeach
                     </form>
                 </div>
+                <div class="modal-header border-top">
+                    <a href="#" class="btn btn-primary">Simpan</a>
+                </div>
             </div>
         </div>
     </div>
@@ -217,25 +221,59 @@
     <script src="{{asset('assets/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
 
     <script>
-        $(".SlectBox").SumoSelect({
-            csvDispCount: 3,
-            selectAll: !0,
-            search: !0,
-            searchText: "Enter here.",
-            okCancelInMulti: !0,
-            captionFormatAllSelected: "Yeah, OK, so everything.",
+        var ps = new PerfectScrollbar('#modalFormUser', {
+            useBothWheelAxes:true,
+            suppressScrollX:true,
+        });
+        document.addEventListener('livewire:load', function () {
+            runScriptAccessSite();
+
+            document.addEventListener("access:site", e => runScriptAccessSite());
         })
 
+        function runScriptAccessSite() {
+            ps.update();
+            $(".SlectBox").SumoSelect({
+                csvDispCount: 3,
+                selectAll: !0,
+                search: !0,
+                searchText: "Enter here.",
+                okCancelInMulti: !0,
+                captionFormatAllSelected: "Yeah, OK, so everything.",
+            }).on('sumo:closed', function(sumo) {
+                var target =  $(sumo.target);
+                var index = target.data("index");
+                @this.addAccessSiteVal(index,'site',target.val());
+            });
 
-        var collapseAll = document.querySelectorAll('.collapse');
-        for (let i = 0; i < collapseAll.length; i++) {
-            const element = collapseAll[i];
-            element.addEventListener('show.bs.collapse', function (e) {
-                var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').addClass('collase-show');
-            })
 
-            element.addEventListener('hide.bs.collapse', function (e) {
-                var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').removeClass('collase-show');
+            var collapseAll = document.querySelectorAll('.collapse');
+            for (let i = 0; i < collapseAll.length; i++) {
+                const element = collapseAll[i];
+                element.addEventListener('show.bs.collapse', function (e) {
+                    var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').addClass('collase-show');
+                })
+
+                element.addEventListener('hide.bs.collapse', function (e) {
+                    var tr = $(`[href="#${e.target.id}"]`).closest('.SumoSelect-group').removeClass('collase-show');
+                })
+            }
+
+            $('.checkFitur').change(function() {
+                var id = $(this).data("id"),
+                    type = $(this).data("type"),
+                    index = $(this).data("index");
+
+                var target = $(this).closest('tr');
+                var data = {
+                    [id]: {
+                        id: id,
+                        desktop: target.find('input[data-type="desktop"]').prop("checked"),
+                        mobile: target.find('input[data-type="mobile"]').prop("checked")
+                    }
+                };
+
+                @this.addAccessSiteVal(index,'fitur',data);
             })
         }
     </script>

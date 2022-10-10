@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('akses_fitur', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->integer('id_role');
+            $table->bigInteger('id_akses_situs');
+            $table->bigInteger('id_fitur');
+            $table->boolean('desktop')->nullable();
+            $table->boolean('mobile')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('akses_fitur');
     }
 };

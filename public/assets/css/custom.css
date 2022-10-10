@@ -238,3 +238,8 @@ a.header-icon-svgs-prev.mobile.active::before {
 .collapse.show table.table-bordered {
     border-top: 0 !important;
 }
+
+#modalFormUser {
+    max-height: calc(100vh - 185px);
+    overflow: hidden;
+}

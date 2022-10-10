@@ -1,7 +1,7 @@
 <div class="mt-2">
     <div class="form-group mb-0">
         <div class="d-flex SumoSelect-group">
-            <select class="form-control SlectBox" placeholder="Please select one site.">
+            <select class="form-control SlectBox" placeholder="Please select one site." data-index="{{$index}}">
                 @foreach ($situs as $item)
                     <option value="{{$item->id}}">{{$item->name}}</option>
                 @endforeach
@@ -29,41 +29,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        Popup APK
-                    </td>
-                    <td class="text-center">
-                        <div class="checkbox">
-                            <div class="custom-checkbox custom-control">
-                                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-delete">
-                                <label for="checkbox-situs-delete" class="custom-control-label mt-1"></label>
+                @foreach ($fitur as $i => $item)
+                    <tr>
+                        <td>{{$item->name}}</td>
+                        <td class="text-center">
+                            <div class="checkbox">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" data-id="{{$item->id}}" data-type="desktop" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-desktop">
+                                    <label for="checkbox-{{$index}}-{{$i}}-desktop" class="custom-control-label mt-1"></label>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div class="checkbox">
-                            <div class="custom-checkbox custom-control">
-                                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-delete">
-                                <label for="checkbox-situs-delete" class="custom-control-label mt-1"></label>
+                        </td>
+                        <td class="text-center">
+                            <div class="checkbox">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" data-id="{{$item->id}}" data-type="mobile" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-mobile">
+                                    <label for="checkbox-{{$index}}-{{$i}}-mobile" class="custom-control-label mt-1"></label>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
 </div>
-
-@section('scripts')
-    <script>
-        $(".SlectBox").SumoSelect({
-            csvDispCount: 3,
-            selectAll: !0,
-            search: !0,
-            searchText: "Enter here.",
-            okCancelInMulti: !0,
-            captionFormatAllSelected: "Yeah, OK, so everything.",
-        })
-    </script>
-@endsection

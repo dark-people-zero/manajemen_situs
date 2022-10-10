@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('situs', function (Blueprint $table) {
+        Schema::create('role', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->boolean('status_desktop')->default(false);
-            $table->boolean('status_mobile')->default(false);
-            $table->string('url_desktop_dev')->nullable();
-            $table->string('url_desktop_prod')->nullable();
-            $table->string('url_mobile_dev')->nullable();
-            $table->string('url_mobile_prod')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('situs');
+        Schema::dropIfExists('role');
     }
 };

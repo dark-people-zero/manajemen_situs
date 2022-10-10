@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('akses_menu', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->integer('id_role');
+            $table->bigInteger('id_user');
+            $table->string("name");
+            $table->boolean('C')->nullable();
+            $table->boolean('R')->nullable();
+            $table->boolean('U')->nullable();
+            $table->boolean('D')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('akses_menu');
     }
 };

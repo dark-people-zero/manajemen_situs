@@ -89,8 +89,8 @@ class Situs extends Component
                 'status_desktop' => $this->d_status,
                 'status_mobile' => $this->m_status,
                 'url_desktop_dev' => $this->url_d_desktop,
-                'url_desktop_prod' => $this->url_d_mobile,
-                'url_mobile_dev' => $this->url_p_desktop,
+                'url_desktop_prod' => $this->url_p_desktop,
+                'url_mobile_dev' => $this->url_d_mobile,
                 'url_mobile_prod' => $this->url_p_mobile
             ];
             $type = 'success';
