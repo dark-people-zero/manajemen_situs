@@ -257,17 +257,26 @@
                         var index = target.data("index");
                         var countChild = target.find('option').not(':last-child');
 
-                        var selected = $(".SlectBox").not(`[data-index="${index}"]`).filter(e => {
-                            console.log(e);
-                            console.log(e.value);
-                            return e.value != undefined;
-                        });
-                        console.log(selected);
-                        // for (let i = 0; i < x.length; i++) {
-                        //     for (let ii = 0; ii < countChild; ii++) {
-                        //         x[i].sumo.enableItem(ii);
-                        //     }
-                        // }
+                        var key = @this.dataAccessSite;
+                        var selected = @this.accessSite;
+                        key = key.filter(e => selected[e] !== undefined);
+
+                        var target = $(".SlectBox");
+                        for (let i = 0; i < target.length; i++) {
+                            const element = target[i];
+
+                            // untuk enamble dulu
+                            for (let ii = 0; ii < element.children.length; ii++) {
+                                element.sumo.enableItem(ii);
+                            }
+
+                            // baru disable
+                            key.forEach(e => {
+                                if (parseInt(element.value) != selected[e].site ) {
+                                    element.sumo.disableItem(selected[e].site - 1);
+                                }
+                            });
+                        }
                     })
                 }
             }
