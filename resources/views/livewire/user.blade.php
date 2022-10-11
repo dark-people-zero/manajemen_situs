@@ -233,18 +233,44 @@
 
         function runScriptAccessSite() {
             ps.update();
-            $(".SlectBox").SumoSelect({
-                csvDispCount: 3,
-                selectAll: !0,
-                search: !0,
-                searchText: "Enter here.",
-                okCancelInMulti: !0,
-                captionFormatAllSelected: "Yeah, OK, so everything.",
-            }).on('sumo:closed', function(sumo) {
-                var target =  $(sumo.target);
-                var index = target.data("index");
-                @this.addAccessSiteVal(index,'site',target.val());
-            });
+            for (let i = 0; i < $(".SlectBox").length; i++) {
+                const element = $($(".SlectBox")[i]);
+                if (!element.hasClass('SumoUnder')) {
+
+                    element.SumoSelect({
+                        csvDispCount: 3,
+                        selectAll: !0,
+                        search: !0,
+                        searchText: "Enter here.",
+                        okCancelInMulti: !0,
+                        captionFormatAllSelected: "Yeah, OK, so everything.",
+                    });
+
+                    element.on('sumo:closed', function(sumo) {
+                        var target =  $(sumo.target);
+                        var index = target.data("index");
+                        @this.addAccessSiteVal(index,'site',target.val());
+                    });
+
+                    element.on("sumo:opening", function(sumo) {
+                        var target =  $(sumo.target);
+                        var index = target.data("index");
+                        var countChild = target.find('option').not(':last-child');
+
+                        var selected = $(".SlectBox").not(`[data-index="${index}"]`).filter(e => {
+                            console.log(e);
+                            console.log(e.value);
+                            return e.value != undefined;
+                        });
+                        console.log(selected);
+                        // for (let i = 0; i < x.length; i++) {
+                        //     for (let ii = 0; ii < countChild; ii++) {
+                        //         x[i].sumo.enableItem(ii);
+                        //     }
+                        // }
+                    })
+                }
+            }
 
 
             var collapseAll = document.querySelectorAll('.collapse');

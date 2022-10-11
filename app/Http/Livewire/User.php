@@ -21,8 +21,7 @@ class User extends Component
     public $accessSite = [];
 
     public $dataAccessSite = [
-        "no1",
-        "no2"
+        "no1"
     ];
 
     public function render()
