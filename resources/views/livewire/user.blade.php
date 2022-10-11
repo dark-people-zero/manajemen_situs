@@ -198,7 +198,7 @@
                         <div class="form-group">
                             <label class="d-flex align-items-center">
                                 <span class="me-2">Access Site</span>
-                                <span class="badge badge-primary" wire:click="addAccessSite">
+                                <span class="badge badge-primary cursor-pointer" wire:click="addAccessSite">
                                     <i class="fa fa-plus"></i>
                                 </span>
                             </label>
