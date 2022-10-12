@@ -243,3 +243,12 @@ a.header-icon-svgs-prev.mobile.active::before {
     max-height: calc(100vh - 185px);
     overflow: hidden;
 }
+
+select#role:invalid {
+    color: #99a6b7;
+    opacity: .5;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .81568rem;
+}

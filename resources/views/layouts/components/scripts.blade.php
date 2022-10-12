@@ -31,6 +31,8 @@
 		<script src="{{asset('assets/plugins/sidebar/sidebar.js')}}"></script>
 		<script src="{{asset('assets/plugins/sidebar/sidebar-custom.js')}}"></script>
 
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         @yield('scripts')
         @livewireScripts
 

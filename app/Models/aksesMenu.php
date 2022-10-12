@@ -12,9 +12,6 @@ class aksesMenu extends Model
     protected $fillable = [
         'id_user',
         'name',
-        'C',
-        'R',
-        'U',
-        'D',
+        'status',
     ];
 }

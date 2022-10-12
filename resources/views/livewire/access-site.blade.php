@@ -5,7 +5,7 @@
                 @foreach ($situs as $item)
                     <option value="{{$item->id}}">{{$item->name}}</option>
                 @endforeach
-                <option disabled selected ></option>
+                <option disabled selected aria-placeholder></option>
             </select>
             <button class="btn br-ts-0 br-bs-0 SumoSelect-group-action hideshow" type="button" data-bs-toggle="collapse" href="#collSite-{{$index}}">
                 <i class="fe fe-eye"></i>
@@ -24,8 +24,22 @@
             <thead>
                 <tr>
                     <th>Fitur</th>
-                    <th class="text-center">Desktop</th>
-                    <th class="text-center">Mobile</th>
+                    <th class="text-center">
+                        <div class="checkbox">
+                            <div class="custom-checkbox custom-control">
+                                <input type="checkbox" data-type="desktop" class="custom-control-input checkFiturAll" id="checkboxAll-{{$index}}-desktop">
+                                <label for="checkboxAll-{{$index}}-desktop" class="custom-control-label mt-1">Desktop</label>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="text-center">
+                        <div class="checkbox">
+                            <div class="custom-checkbox custom-control">
+                                <input type="checkbox" data-type="mobile" class="custom-control-input checkFiturAll" id="checkboxAll-{{$index}}-mobile">
+                                <label for="checkboxAll-{{$index}}-mobile" class="custom-control-label mt-1">Mobile</label>
+                            </div>
+                        </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>

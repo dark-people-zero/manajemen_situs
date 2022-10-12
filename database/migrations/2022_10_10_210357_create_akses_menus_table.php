@@ -17,10 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_user');
             $table->string("name");
-            $table->boolean('C')->nullable();
-            $table->boolean('R')->nullable();
-            $table->boolean('U')->nullable();
-            $table->boolean('D')->nullable();
+            $table->boolean('status');
             $table->timestamps();
         });
     }

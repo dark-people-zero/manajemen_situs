@@ -66,7 +66,7 @@
             <div class="modal-content chat border-0">
                 <div class="modal-header border-bottom">
                     <h6 class="modal-title">Form add users</h6>
-                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button" wire:click="resetForm">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -74,143 +74,99 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name" wire:model="name" value="{{$name}}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter Name" wire:model="name" value="{{$name}}">
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter Username" wire:model="username" value="{{$username}}">
-                        </div>
-                        <div class="form-group">
-                            <label>Akses Menu</label>
-                            <table class="table table-bordered dataTable border-primary">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th class="text-start">Accees Menu</th>
-                                        <th>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-create" wire:model="all_c" {{$all_c ? 'checked' : ''}}>
-                                                    <label for="all-create" class="custom-control-label mt-1">C</label>
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-read" wire:model="all_r" {{$all_r ? 'checked' : ''}}>
-                                                    <label for="all-read" class="custom-control-label mt-1">R</label>
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-update" wire:model="all_u" {{$all_u ? 'checked' : ''}}>
-                                                    <label for="all-update" class="custom-control-label mt-1">U</label>
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="all-delete" wire:model="all_d" {{$all_d ? 'checked' : ''}}>
-                                                    <label for="all-delete" class="custom-control-label mt-1">D</label>
-                                                </div>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="text-center">
-                                        <td class="text-start">User</td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-create" wire:model="user_c" {{$user_c ? 'checked' : ''}}>
-                                                    <label for="checkbox-user-create" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-read" wire:model="user_r" {{$user_r ? 'checked' : ''}}>
-                                                    <label for="checkbox-user-read" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-update" wire:model="user_u" {{$user_u ? 'checked' : ''}}>
-                                                    <label for="checkbox-user-update" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-user-delete" wire:model="user_d" {{$user_d ? 'checked' : ''}}>
-                                                    <label for="checkbox-user-delete" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td class="text-start">Situs</td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-create" wire:model="situs_c" {{$situs_c ? 'checked' : ''}}>
-                                                    <label for="checkbox-situs-create" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-read" wire:model="situs_r" {{$situs_r ? 'checked' : ''}}>
-                                                    <label for="checkbox-situs-read" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-update" wire:model="situs_u" {{$situs_u ? 'checked' : ''}}>
-                                                    <label for="checkbox-situs-update" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-situs-delete" wire:model="situs_d" {{$situs_d ? 'checked' : ''}}>
-                                                    <label for="checkbox-situs-delete" class="custom-control-label mt-1"></label>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="form-group">
-                            <label class="d-flex align-items-center">
-                                <span class="me-2">Access Site</span>
-                                <span class="badge badge-primary cursor-pointer" wire:click="addAccessSite">
-                                    <i class="fa fa-plus"></i>
+                            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Enter Username" wire:model="username" value="{{$username}}">
+                            @error('username')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
                                 </span>
-                            </label>
+                            @enderror
                         </div>
-                        @foreach ($dataAccessSite as $i => $item)
-                            <livewire:access-site :index="$item" :wire:key="$i">
-                        @endforeach
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <div wire:ignore>
+                                <select class="form-control @error('role') is-invalid @enderror" id="role" placeholder="Please select one role">
+                                    @foreach ($roleAll as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                    <option selected="" value=""></option>
+                                </select>
+                            </div>
+                            @error('role')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div id="aksesMenuAndSite" wire:ignore.self>
+                            <div class="form-group">
+                                <label>
+                                    Menu Access
+                                </label>
+                                @error('aksesMenu')
+                                    <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                <div class="d-flex">
+                                    <div class="checkbox me-2">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="userSelect" wire:model="userSelect" {{$userSelect ? 'checked' : ''}}>
+                                            <label for="userSelect" class="custom-control-label">User</label>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox me-2">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="siteSelect" wire:model="siteSelect" {{$siteSelect ? 'checked' : ''}}>
+                                            <label for="siteSelect" class="custom-control-label">Site</label>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox me-2">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="siteDataSelect" wire:model="siteDataSelect" {{$siteDataSelect ? 'checked' : ''}}>
+                                            <label for="siteDataSelect" class="custom-control-label">Site Data</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="d-flex align-items-center">
+                                    <span class="me-2">Site Access</span>
+                                    <span class="badge badge-primary cursor-pointer" wire:click="addAccessSite">
+                                        <i class="fa fa-plus"></i>
+                                    </span>
+                                </label>
+                                @error('aksesSite')
+                                    <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            @foreach ($dataAccessSite as $i => $item)
+                                <livewire:access-site :index="$item" :wire:key="$i">
+
+                                @error($item)
+                                    <span class="invalid-feedback d-block mt-0 my-2" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            @endforeach
+                        </div>
                     </form>
                 </div>
                 <div class="modal-header border-top">
-                    <a href="#" class="btn btn-primary">Simpan</a>
+                    <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
                 </div>
+
+                <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="saveData"></div>
             </div>
         </div>
     </div>
@@ -225,10 +181,28 @@
             useBothWheelAxes:true,
             suppressScrollX:true,
         });
+
         document.addEventListener('livewire:load', function () {
             runScriptAccessSite();
 
             document.addEventListener("access:site", e => runScriptAccessSite());
+
+            $("#role").SumoSelect({
+                csvDispCount: 3,
+                selectAll: !0,
+                search: !0,
+                searchText: "Enter here.",
+                okCancelInMulti: !0,
+                captionFormatAllSelected: "Yeah, OK, so everything.",
+            });
+            $("#role").on('sumo:closed', function(sumo) {
+                @this.role = $(sumo.target).val();
+                if ($(sumo.target).val() == 1) {
+                    $("#aksesMenuAndSite").hide();
+                }else{
+                    $("#aksesMenuAndSite").show();
+                }
+            });
         })
 
         function runScriptAccessSite() {
@@ -257,30 +231,26 @@
                         var index = target.data("index");
                         var countChild = target.find('option').not(':last-child');
 
-                        var key = @this.dataAccessSite;
-                        var selected = @this.accessSite;
-                        key = key.filter(e => selected[e] !== undefined);
-
                         var target = $(".SlectBox");
+
+                        var ind = [];
                         for (let i = 0; i < target.length; i++) {
                             const element = target[i];
+                            var seIndex = element.selectedIndex;
+                            var opt = element.children[seIndex];
 
-                            // untuk enamble dulu
-                            for (let ii = 0; ii < element.children.length; ii++) {
-                                element.sumo.enableItem(ii);
-                            }
-
-                            // baru disable
-                            key.forEach(e => {
-                                if (parseInt(element.value) != selected[e].site ) {
-                                    element.sumo.disableItem(selected[e].site - 1);
-                                }
-                            });
+                            if (opt.getAttribute("value") != "") ind.push(element.selectedIndex);
                         }
+                        ind = [...new Set(ind)];
+
+                        for (let i = 0; i < countChild.length; i++) sumo.target.sumo.enableItem(i);
+
+                        ind.forEach(e => {
+                            if(sumo.target.selectedIndex != e) sumo.target.sumo.disableItem(e);
+                        });
                     })
                 }
             }
-
 
             var collapseAll = document.querySelectorAll('.collapse');
             for (let i = 0; i < collapseAll.length; i++) {
@@ -310,7 +280,16 @@
 
                 @this.addAccessSiteVal(index,'fitur',data);
             })
+
+            $('.checkFiturAll').change(function() {
+                var type = $(this).data('type');
+                $(`.checkFitur[data-type="${type}"]`).prop("checked", $(this).prop("checked")).trigger('change');
+            })
         }
+
+        document.addEventListener("modalClose", e => {
+            $("#formUser").modal("hide");
+        });
     </script>
 
 @endsection

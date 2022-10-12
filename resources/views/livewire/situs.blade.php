@@ -185,7 +185,7 @@
 @section('scripts')
     <!--Internal Sumoselect js-->
     <script src="{{asset('assets/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         $(".SlectBox").SumoSelect({
             csvDispCount: 3,
@@ -199,23 +199,6 @@
         document.addEventListener('livewire:load', function () {
             document.getElementById('formSiteData').addEventListener('hidden.bs.modal', event => {
                 @this.closeModal = false;
-            })
-        })
-
-        document.addEventListener("swal:confirm", e => {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!',
-                allowOutsideClick: false
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.livewire.emit('deleteData', e.detail.id);
-                }
             })
         })
     </script>
