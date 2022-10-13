@@ -16,7 +16,6 @@
                     <i class="fe fe-trash-2 text-danger"></i>
                 </button>
             @endif
-
         </div>
     </div>
     <div class="collapse" id="collSite-{{$index}}">
@@ -44,12 +43,23 @@
             </thead>
             <tbody>
                 @foreach ($fitur as $i => $item)
+                @php
+                    $checkDesktop = false;
+                    $checkMobile = false;
+                    if ($data != null) {
+                        $f = isset($data["fitur"][$item->id]) ? $data["fitur"][$item->id] : null;
+                        if ($f != null) {
+                            $checkDesktop = $f["desktop"];
+                            $checkMobile = $f["mobile"];
+                        }
+                    }
+                @endphp
                     <tr>
                         <td>{{$item->name}}</td>
                         <td class="text-center">
                             <div class="checkbox">
                                 <div class="custom-checkbox custom-control">
-                                    <input type="checkbox" data-id="{{$item->id}}" data-type="desktop" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-desktop">
+                                    <input type="checkbox" data-id="{{$item->id}}" data-type="desktop" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-desktop" {{$checkDesktop ? 'checked' : '' }}>
                                     <label for="checkbox-{{$index}}-{{$i}}-desktop" class="custom-control-label mt-1"></label>
                                 </div>
                             </div>
@@ -57,7 +67,7 @@
                         <td class="text-center">
                             <div class="checkbox">
                                 <div class="custom-checkbox custom-control">
-                                    <input type="checkbox" data-id="{{$item->id}}" data-type="mobile" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-mobile">
+                                    <input type="checkbox" data-id="{{$item->id}}" data-type="mobile" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-mobile" {{$checkMobile ? 'checked' : '' }}>
                                     <label for="checkbox-{{$index}}-{{$i}}-mobile" class="custom-control-label mt-1"></label>
                                 </div>
                             </div>

@@ -4,6 +4,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\User as Muser;
 use App\Models\Situs as Msitus;
 use App\Models\role as Mrole;
@@ -17,16 +19,14 @@ class User extends Component
     use WithPagination;
 
     public $search = '';
-    protected $listeners = ['removeAccessSite'];
-    public $name, $username, $role;
+    protected $listeners = ['removeAccessSite', 'deleteData'];
+    public $name, $username, $role, $idUser, $methodUpdate = false;
 
     public $userSelect = false, $siteSelect = false, $siteDataSelect = false;
 
     public $accessSite = [];
 
-    public $dataAccessSite = [
-        "no1"
-    ];
+    public $dataAccessSite = [];
 
     public function render()
     {
@@ -45,18 +45,20 @@ class User extends Component
 
     public function updated($propertyName)
     {
-        $this->validate([
-            'name' => 'required',
-            'username' => 'required',
-            'role' => 'required'
-        ]);
+        if (in_array($propertyName,['name','username','role'])) {
+            $this->validate([
+                'name' => 'required',
+                'username' => 'required',
+                'role' => 'required'
+            ]);
+        }
     }
 
     public function removeAccessSite($index)
     {
         if (($key = array_search($index, $this->dataAccessSite)) !== false) {
             unset($this->dataAccessSite[$key]);
-            unset($this->accessSite[$key]);
+            unset($this->accessSite[$index]);
         }
     }
 
@@ -71,7 +73,11 @@ class User extends Component
     {
         if ($type == "fitur") {
             $i = array_keys($val)[0];
-            $this->accessSite[$index][$type][$i] = $val[$i];
+            if (!$val[$i]['desktop'] && !$val[$i]['mobile']) {
+                unset($this->accessSite[$index][$type][$i]);
+            }else{
+                $this->accessSite[$index][$type][$i] = $val[$i];
+            }
         }else{
             $this->accessSite[$index][$type] = $val;
         }
@@ -95,58 +101,136 @@ class User extends Component
             DB::beginTransaction();
             try {
                 $msg = "Data added successfully. Password default <u>smbit001122</u>";
+                $type = "success";
 
-                $user = new Muser;
-                $user->name = $this->name;
-                $user->username = $this->username;
-                $user->password = Hash::make('smbit001122');
-                $user->id_role = $this->role;
-                $user->save();
+                if ($this->methodUpdate) {
+                    $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
+                        $e->with([
+                            'situs',
+                            'aksesFitur' => function($e) {
+                                $e->with('fitur');
+                            }
+                        ]);
+                    }])->where("id", $this->idUser)->first();
 
-                MaksesMenu::insert([
-                    [
-                        'id_user' => $user->id,
-                        'name' => 'User',
-                        'status' => $this->userSelect,
-                        'created_at' => now(),
-                        'updated_at' => now(),
-                    ],[
-                        'id_user' => $user->id,
-                        'name' => 'Site',
-                        'status' => $this->siteSelect,
-                        'created_at' => now(),
-                        'updated_at' => now(),
-                    ],[
-                        'id_user' => $user->id,
-                        'name' => 'Site Data',
-                        'status' => $this->siteDataSelect,
-                        'created_at' => now(),
-                        'updated_at' => now(),
-                    ]
-                ]);
+                    $user->name = $this->name;
+                    $user->username = $this->username;
+                    $user->id_role = $this->role;
+                    $user->save();
 
-                foreach ($this->accessSite as $i => $v) {
-                    $situs = new MaksesSitus;
-                    $situs->id_user = $user->id;
-                    $situs->id_situs = $v['site'];
-                    $situs->save();
+                    if ($this->role != 1) {
+                        foreach ($user->aksesMenu as $val) {
+                            if (strtolower($val->name) == "user") MaksesMenu::where("id", $val->id)->update([
+                                'status' => $this->userSelect,
+                            ]);
 
-                    foreach ($v['fitur'] as $item) {
-                        $fitur = new MaksesFitur;
-                        $fitur->id_akses_situs = $situs->id;
-                        $fitur->id_fitur = $item['id'];
-                        $fitur->desktop = $item['desktop'];
-                        $fitur->mobile = $item['mobile'];
-                        $fitur->save();
+                            if (strtolower($val->name) == "site") MaksesMenu::where("id", $val->id)->update([
+                                'status' => $this->siteSelect,
+                            ]);
+
+                            if (strtolower($val->name) == "site data") MaksesMenu::where("id", $val->id)->update([
+                                'status' => $this->siteDataSelect,
+                            ]);
+                        }
+
+                        // remove data lama
+                        $idSitus = $user->aksesSitus->pluck("id");
+                        MaksesSitus::destroy($idSitus);
+
+                        $idFitur = $user->aksesSitus->map(function($e) {
+                            return $e->aksesFitur->pluck("id");
+                        })->collapse();
+                        MaksesFitur::destroy($idFitur);
+
+                        //input data baru
+                        foreach ($this->accessSite as $i => $v) {
+                            $situs = new MaksesSitus;
+                            $situs->id_user = $user->id;
+                            $situs->id_situs = $v['site'];
+                            $situs->save();
+
+                            foreach ($v['fitur'] as $item) {
+                                $fitur = new MaksesFitur;
+                                $fitur->id_akses_situs = $situs->id;
+                                $fitur->id_fitur = $item['id'];
+                                $fitur->desktop = $item['desktop'];
+                                $fitur->mobile = $item['mobile'];
+                                $fitur->save();
+                            }
+                        }
                     }
+
+                    $msg = "Data update successfully.";
+                    $type = "info";
+
+                }else{
+                    $user = new Muser;
+                    $user->name = $this->name;
+                    $user->username = $this->username;
+                    $user->password = Hash::make('smbit001122');
+                    $user->id_role = $this->role;
+                    $user->save();
+
+                    if ($this->role != 1) {
+
+                        $menu = [
+                            [
+                                'id_user' => $user->id,
+                                'name' => 'User',
+                                'status' => $this->userSelect,
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                            ],[
+                                'id_user' => $user->id,
+                                'name' => 'Site',
+                                'status' => $this->siteSelect,
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                            ],[
+                                'id_user' => $user->id,
+                                'name' => 'Site Data',
+                                'status' => $this->siteDataSelect,
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                            ]
+                        ];
+                        if ($this->role == 3) $menu = [
+                            [
+                                'id_user' => $user->id,
+                                'name' => 'Site',
+                                'status' => $this->siteSelect,
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                            ]
+                        ];
+                        MaksesMenu::insert($menu);
+
+                        foreach ($this->accessSite as $i => $v) {
+                            $situs = new MaksesSitus;
+                            $situs->id_user = $user->id;
+                            $situs->id_situs = $v['site'];
+                            $situs->save();
+
+                            foreach ($v['fitur'] as $item) {
+                                $fitur = new MaksesFitur;
+                                $fitur->id_akses_situs = $situs->id;
+                                $fitur->id_fitur = $item['id'];
+                                $fitur->desktop = $item['desktop'];
+                                $fitur->mobile = $item['mobile'];
+                                $fitur->save();
+                            }
+                        }
+                    }
+
                 }
+
 
                 DB::commit();
                 $this->resetForm();
 
                 $this->dispatchBrowserEvent("modalClose");
 
-                $this->dispatchBrowserEvent("toast:success", [
+                $this->dispatchBrowserEvent("toast:$type", [
                     "message" => $msg
                 ]);
             } catch (\Throwable $th) {
@@ -175,6 +259,13 @@ class User extends Component
                         if (count($site[$v]['fitur']) == 0) {
                             $this->addError($v, 'Please select a feature');
                             $error = true;
+                        }else {
+                            foreach ($site[$v]['fitur'] as $val) {
+                                if (!$val['desktop'] && !$val['mobile']) {
+                                    $this->addError($v, 'Please select a feature');
+                                    $error = true;
+                                }
+                            }
                         }
                     }else{
                         $this->addError($v, 'Please select a feature');
@@ -206,7 +297,103 @@ class User extends Component
             'siteDataSelect',
             'accessSite',
             'dataAccessSite',
+            'methodUpdate',
         ]);
+
+        $this->dispatchBrowserEvent("sumo:role", [
+            "type" => "reset"
+        ]);
+    }
+
+    public function setUpdate($id)
+    {
+        $this->resetForm();
+
+        $this->methodUpdate = true;
+        $this->idUser = $id;
+        $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
+            $e->with([
+                'situs',
+                'aksesFitur' => function($e) {
+                    $e->with('fitur');
+                }
+            ]);
+        }])->where("id", $id)->first();
+
+        $this->name = $user->name;
+        $this->username = $user->username;
+        $this->role = $user->id_role;
+        $this->dispatchBrowserEvent("sumo:role", [
+            "type" => "set",
+            "val" => $user->id_role
+        ]);
+
+        if ($user->id_role != 1) {
+            foreach ($user->aksesMenu as $item) {
+                if (strtolower($item->name) == "user" && $item->status) $this->userSelect = $item->status;
+                if (strtolower($item->name) == "site" && $item->status) $this->siteSelect = $item->status;
+                if (strtolower($item->name) == "site data" && $item->status) $this->siteDataSelect = $item->status;
+            }
+
+            // untuk akses situs
+            if ($user->aksesSitus->count() > 0) $this->dataAccessSite = [];
+            foreach ($user->aksesSitus as $i => $item) {
+                $i = "no".($i+1);
+                $this->addAccessSiteVal($i,"site", $item->id_situs);
+                foreach ($item->aksesFitur as $val) {
+                    $this->addAccessSiteVal($i,"fitur", [
+                        $val->id_fitur => [
+                            "id" => $val->id_fitur,
+                            "desktop" => $val->desktop,
+                            "mobile" => $val->mobile,
+                            "idExisting" => $val->id
+                        ]
+                    ]);
+                }
+
+                $this->addAccessSite();
+
+            }
+
+            $this->dispatchBrowserEvent("sumo:site", [
+                "data" => $this->accessSite,
+                "index" => $this->dataAccessSite
+            ]);
+        }
+    }
+
+    public function deleteConfirm($id)
+    {
+        $this->dispatchBrowserEvent("swal:confirm", [
+            "id" => $id
+        ]);
+    }
+
+    public function deleteData($id)
+    {
+        $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
+            $e->with([
+                'situs',
+                'aksesFitur' => function($e) {
+                    $e->with('fitur');
+                }
+            ]);
+        }])->where("id", $id)->first();
+
+        $menuAkses = $user->aksesMenu->pluck("id");
+        $aksesSitus = $user->aksesSitus->pluck("id");
+        $aksesFitur = $user->aksesSitus->map(function($e) {
+            return $e->aksesFitur->pluck("id");
+        })->collapse();
+        MaksesMenu::destroy($menuAkses);
+        MaksesSitus::destroy($aksesSitus);
+        MaksesFitur::destroy($aksesFitur);
+
+        $user->delete();
+        $this->dispatchBrowserEvent("toast:info", [
+            "message" => "Data deleted successfully"
+        ]);
+
     }
 
 

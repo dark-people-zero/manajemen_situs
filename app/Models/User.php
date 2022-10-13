@@ -32,4 +32,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+
+    public function aksesMenu()
+    {
+        return $this->hasMany(aksesMenu::class, 'id_user', 'id');
+    }
+
+    public function aksesSitus()
+    {
+        return $this->hasMany(aksesSitus::class, 'id_user', 'id');
+    }
 }

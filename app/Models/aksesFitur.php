@@ -15,4 +15,9 @@ class aksesFitur extends Model
         'desktop',
         'mobile',
     ];
+
+    public function fitur()
+    {
+        return $this->hasOne(fitur::class, 'id', 'id_fitur');
+    }
 }

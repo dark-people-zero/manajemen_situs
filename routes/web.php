@@ -20,9 +20,11 @@ use App\Http\Livewire\Situs;
 */
 Auth::routes();
 
-Route::get('/', Home::class);
-Route::get('/home', User::class);
-Route::get('/data-situs', Situs::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', Home::class);
+    Route::get('/home', User::class);
+    Route::get('/data-situs', Situs::class);
+});
 
 Route::get('/underconstruction', function () {
     return view('pages.underconstruction');

@@ -76,6 +76,24 @@
                     }
                 })
             })
+
+            $(document).ready(function() {
+                changeImg();
+                $('.layout-setting').click(function() {
+                    changeImg();
+                })
+            });
+
+            function changeImg() {
+                var target = $('.profile-user'),
+                    nama = target.data("name"),
+                    img = $('.img-profile');
+                if ($('body').hasClass('dark-theme')) {
+                    img.attr("src", `https://ui-avatars.com/api/?name=${nama}&bold=true&background=cdcbcb&color=2b2d3e`);
+                }else{
+                    img.attr("src", `https://ui-avatars.com/api/?name=${nama}&bold=true&background=00cbb4&color=fff`);
+                }
+            }
         </script>
 
     </body>
