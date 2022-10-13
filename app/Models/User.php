@@ -33,6 +33,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function role()
+    {
+        return $this->hasOne(role::class, 'id', 'id_role');
+    }
+
     public function aksesMenu()
     {
         return $this->hasMany(aksesMenu::class, 'id_user', 'id');

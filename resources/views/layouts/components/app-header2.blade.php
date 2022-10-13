@@ -72,8 +72,8 @@
                                             <img alt="" src="https://ui-avatars.com/api/?name={{Auth::user()->name}}&bold=true" class="img-profile">
                                         </div>
                                         <div class="ms-3 my-auto">
-                                            <h6 class="tx-15 font-weight-semibold mb-0">Teri Dactyl</h6>
-                                            <span class="dropdown-title-text subtext op-6  tx-12">Super Admin</span>
+                                            <h6 class="tx-15 font-weight-semibold mb-0">{{Auth::user()->name}}</h6>
+                                            <span class="dropdown-title-text subtext op-6  tx-12">{{Auth::user()->role->name}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,9 @@
                                 <a class="dropdown-item" href="{{url('mail-read')}}"><i class="far fa-envelope "></i>Inbox</a>
                                 <a class="dropdown-item" href="{{url('mail')}}"><i class="far fa-comment-dots"></i>Messages</a> --}}
                                 <a class="dropdown-item" href="{{url('mail-settings')}}"><i class="far fa-sun"></i>  Change Password</a>
-                                <a class="dropdown-item" href="{{url('signup')}}"><i class="far fa-arrow-alt-circle-left"></i> Sign Out</a>
+                                <a class="dropdown-item" href="javascript:void(0);" onclick="$('#formLogout').submit()">
+                                    <i class="far fa-arrow-alt-circle-left"></i> Sign Out
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -93,3 +95,5 @@
     </div>
 </div>
 <!-- /main-header -->
+
+<form action="/logout" method="post" id="formLogout">@csrf</form>

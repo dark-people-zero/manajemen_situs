@@ -25,7 +25,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Username</th>
-                            <th>Access</th>
+                            <th>Access Site</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -36,15 +36,33 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->username}}</td>
                                     <td>
-                                        <span class="badge badge-primary">All Access</span>
+                                        @if ($item->id_role == 1)
+                                            <span class="badge badge-primary">All Access</span>
+                                        @else
+                                            @foreach ($item->aksesSitus as $val)
+                                                <span class="badge badge-primary">{{$val->situs->name}}</span>
+                                            @endforeach
+                                        @endif
                                     </td>
                                     <td class="text-center">
-                                        <a href="javascript:void(0);" class="text-info me-2" wire:click="setUpdate({{$item->id}})" data-bs-toggle="modal" data-bs-target="#formUser">
-                                            <i class="fe fe-edit"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="text-danger" wire:click="deleteConfirm({{$item->id}})">
-                                            <i class="fe fe-trash"></i>
-                                        </a>
+                                        @php
+                                            $edit = true;
+                                            $hapus = true;
+                                            if (in_array($item->id_role, [1,2]) && Auth::user()->id_role != 1) {
+                                                $edit = false;
+                                                $hapus = false;
+                                            }
+                                        @endphp
+                                        @if ($edit)
+                                            <a href="javascript:void(0);" class="text-info me-2" wire:click="setUpdate({{$item->id}})" data-bs-toggle="modal" data-bs-target="#formUser">
+                                                <i class="fe fe-edit"></i>
+                                            </a>
+                                        @endif
+                                        @if ($hapus)
+                                            <a href="javascript:void(0);" class="text-danger" wire:click="deleteConfirm({{$item->id}})">
+                                                <i class="fe fe-trash"></i>
+                                            </a>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
@@ -95,7 +113,9 @@
                             <div wire:ignore>
                                 <select class="form-control @error('role') is-invalid @enderror" id="role" placeholder="Please select one role">
                                     @foreach ($roleAll as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @if (!in_array($item->id, [1,2]) && Auth::user()->id_role == 2 || Auth::user()->id_role == 1)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @endif
                                     @endforeach
                                     <option selected disabled="disabled"></option>
                                 </select>

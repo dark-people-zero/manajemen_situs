@@ -54,12 +54,31 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect()->intended('home');
+            $active = auth()->user()->aksesMenu->where('status', true)->first();
+            if ($active) {
+                $url = '/';
+                if (strtolower($active->name) == 'user') $url = '/user';
+                if (strtolower($active->name) == 'site') $url = '/';
+                if (strtolower($active->name) == 'site data') $url = '/data-situs';
+                return redirect($url);
+            }else{
+                return redirect('/permision');
+            }
         }
 
         return back()->withErrors([
             "error" => "The provided credentials do not match our records."
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

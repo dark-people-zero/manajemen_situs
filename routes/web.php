@@ -20,9 +20,9 @@ use App\Http\Livewire\Situs;
 */
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','user-role'])->group(function () {
     Route::get('/', Home::class);
-    Route::get('/home', User::class);
+    Route::get('/user', User::class);
     Route::get('/data-situs', Situs::class);
 });
 
@@ -47,4 +47,11 @@ Route::get('/zia_togel_mobile', function () {
 });
 Route::get('/zia_togel_desktop', function () {
     return view('situs.zia_togel.desktop.index');
+});
+
+Route::get('/permision', function () {
+    $active = auth()->user()->aksesMenu->where('status', true)->first();
+    return view('pages.permision', [
+        "data" => $active
+    ]);
 });
