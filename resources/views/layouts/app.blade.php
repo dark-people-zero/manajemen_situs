@@ -12,7 +12,7 @@
         @include('layouts.components.styles')
 	</head>
 
-	<body class="ltr main-body app sidebar-mini fixed-layout layout-fullwidth ltr sidebar-gone closed-menu sidenav-toggled">
+	<body class="ltr main-body app sidebar-mini fixed-layout layout-fullwidth ltr sidebar-gone closed-menu sidenav-toggled dark-theme">
 
 		<!-- Loader -->
 		<div id="global-loader">
