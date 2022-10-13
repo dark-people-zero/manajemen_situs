@@ -81,7 +81,9 @@
                                 <a class="dropdown-item" href="{{url('chat')}}"><i class="far fa-smile"></i> chat</a>
                                 <a class="dropdown-item" href="{{url('mail-read')}}"><i class="far fa-envelope "></i>Inbox</a>
                                 <a class="dropdown-item" href="{{url('mail')}}"><i class="far fa-comment-dots"></i>Messages</a> --}}
-                                <a class="dropdown-item" href="{{url('mail-settings')}}"><i class="far fa-sun"></i>  Change Password</a>
+                                <a class="dropdown-item" href="password/reset/{{Str::random(20)}}">
+                                    <i class="far fa-sun"></i>  Change Password
+                                </a>
                                 <a class="dropdown-item" href="javascript:void(0);" onclick="$('#formLogout').submit()">
                                     <i class="far fa-arrow-alt-circle-left"></i> Sign Out
                                 </a>

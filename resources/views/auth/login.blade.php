@@ -25,6 +25,16 @@
                                                 </button>
                                             </div>
                                         @enderror
+                                        @if (session('info'))
+
+                                            <div class="alert alert-info mg-b-0 alert-dismissible fade show mb-3" role="alert">
+                                                <span style="margin-right: 10px">{{session('info')}}</span>
+                                                <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        {{-- {{$info ? $info : ''}} --}}
                                         <div class="panel panel-primary">
                                             <form method="POST" action="{{ route('login') }}">
                                                 @csrf
