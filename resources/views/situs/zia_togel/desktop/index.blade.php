@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
-
-<!-- Mirrored from ziatogel168.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2022 13:11:50 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
 <head>
-    <!-- BASICS -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>Situs Bandar Togel Online Resmi Terpercaya</title>
-    <meta name="description"
-        content="ZIATOGEL merupakan Situs Bandar Online terpercaya yang menyediakan Pasaran Togel Terlengkap, berbagai LiveGames Terpopuler & Permainan Slot terbaik.Hanya dengan minimal deposit sebesar  Rp.10.000,- *GABUNG SEKARANG JUGA DAN NIKMATI SENSASI PERMAINANNYA." />
+    <meta name="description" content="ZIATOGEL merupakan Situs Bandar Online terpercaya yang menyediakan Pasaran Togel Terlengkap, berbagai LiveGames Terpopuler & Permainan Slot terbaik.Hanya dengan minimal deposit sebesar  Rp.10.000,- *GABUNG SEKARANG JUGA DAN NIKMATI SENSASI PERMAINANNYA." />
     <meta name="google-site-verification" content="yuKfc6xCJz144iNRfZlWawqEDos2p8bYLjV6oP5dj3M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="{{ asset('situs/assets/zia_togel/desktop/assets/img/auo/favicona7ff.png?v=1664975510')}}" />
@@ -108,26 +99,28 @@
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
         }(window, document, [].slice))
     </script>
-    <noscript><a href="https://www.livechatinc.com/chat-with/13772640/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+    <noscript>
+        <a href="https://www.livechatinc.com/chat-with/13772640/" rel="nofollow">Chat with us</a>
+        , powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+    </noscript>
 
     <!-- ini manggil script dari cloud disini -->
     <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
     <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
-    <button style="display:none;" type="button" id="modal-trigger" class="btn btn-primary" data-toggle="modal"
-        data-target="#myModal">Large modal</button>
+    <button style="display:none;" type="button" id="modal-trigger" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Large modal</button>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog mdlcenter" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-
-                    <a href='#' target="event"><img src='{{ asset('situs/assets/zia_togel/desktop/images/ziatogel_popup_bri.png') }}' width="600"
-                            height="350" class="imgads"></a>
+                    <a href='#' target="event">
+                        <img src='{{ asset('situs/assets/zia_togel/desktop/images/ziatogel_popup_bri.png') }}' width="600" height="350" class="imgads">
+                    </a>
                 </div>
             </div>
         </div>
@@ -137,23 +130,16 @@
     </div>
     <!--/Preloader -->
     <div style="position: absolute; float: right; z-index: 999999; right: 12%;top: 0;">
-        <a href="#"
-            onclick="window.open('https://form.6mbr.com/?webname=ziatogel168.net&amp;lang=id','kritik_saran', 'width=600, height=1000');">
+        <a href="#" onclick="window.open('https://form.6mbr.com/?webname=ziatogel168.net&amp;lang=id','kritik_saran', 'width=600, height=1000');">
             <img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/feedback2.png')}}" width="115px;">
         </a>
     </div>
     <!-- BEGIN NAVBAR -->
-    <div class="navbar navbar-fixed-top" role="navigation"
-        data-0="z-index: 98 !important;line-height:80px; height:80px;-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);"
-        data-300="z-index: 98 !important;line-height:40px; height:40px;-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);"
-        style='z-index: 9999 !important;'>
-
+    <div class="navbar navbar-fixed-top" role="navigation" data-0="z-index: 98 !important;line-height:80px; height:80px;-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" data-300="z-index: 98 !important;line-height:40px; height:40px;-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);" style='z-index: 9999 !important;'>
         <div class="container">
-
             <!-- Branding -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="#" data-0="margin-top: 6px;background-size: 210px 63px;"
-                    data-300="margin-top: 6px;background-size: 143px 43px;"></a>
+                <a class="navbar-brand" href="#" data-0="margin-top: 6px;background-size: 210px 63px;" data-300="margin-top: 6px;background-size: 143px 43px;"></a>
                 <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <a href="#">
                         <i class="fa fa-lock"></i>
@@ -165,23 +151,15 @@
             <div class="navbar-collapse collapse" data-0="margin-top: 0px;" data-300="margin-top: 0px;">
                 <div class="row">
                     <div class="col-sm-7" style="text-align:right;width: 62.333333%;margin-left:190px;">
-                        <form action='#' METHOD="post"
-                            onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+                        <form action='#' METHOD="post" onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
                             <script type="text/javascript" src="{{ asset('situs/assets/zia_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-                            <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;"
-                                style="text-align:right;">
-                                <input style="width:188px;margin-left:208px;" type="text" class="form-control"
-                                    placeholder="Username" id="navbar_username" name="entered_login" tabindex="1"
-                                    autocomplete=off onkeypress="proteksi()">
+                            <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;" style="text-align:right;">
+                                <input style="width:188px;margin-left:208px;" type="text" class="form-control" placeholder="Username" id="navbar_username" name="entered_login" tabindex="1" autocomplete=off onkeypress="proteksi()">
                             </div>
-                            <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;"
-                                style="text-align:right;">
-                                <input style="width:188px;margin-left:307px;" type="password" class="form-control"
-                                    placeholder="Password" id="navbar_password" tabindex="2"
-                                    name="entered_password" autocomplete=off>
+                            <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;" style="text-align:right;">
+                                <input style="width:188px;margin-left:307px;" type="password" class="form-control" placeholder="Password" id="navbar_password" tabindex="2" name="entered_password" autocomplete=off>
                             </div>
-                            <button type="button" class="btn btn-theme login" name="submitlogin" value="1"
-                                style="margin-right: -26px;">LOGIN</button>
+                            <button type="button" class="btn btn-theme login" name="submitlogin" value="1" style="margin-right: -26px;">LOGIN</button>
                             <input name="vb_login_md5password" type="hidden">
                             <input name="vb_login_md5password_utf" type="hidden">
                             <input type="hidden" name="submitlogin" value="1" />
@@ -199,15 +177,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 text-center news-head">
-                    <h5><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;Info Terkini:</h5>
+                    <h5>
+                        <i class="fa fa-bullhorn"></i>
+                        &nbsp;&nbsp;Info Terkini:
+                    </h5>
                 </div>
                 <div class="col-sm-9 news-body">
                     <ul id="liscroll" style="margin:0px;">
-                        <li><a href="javascript:void(0);" style="margin:0px;">
-                                <qwe class="run-text-depan"><b>Selamat datang di ziatogel.com - Agen togel online
-                                        terbaik saat ini -
-                                        Selamat bergabung dan semoga beruntung.<b></qwe>
-                            </a></li>
+                        <li>
+                            <a href="javascript:void(0);" style="margin:0px;">
+                                <qwe class="run-text-depan">
+                                    <b>Selamat datang di ziatogel.com - Agen togel online terbaik saat ini - Selamat bergabung dan semoga beruntung.<b>
+                                </qwe>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -251,18 +234,19 @@
                         <li><a href="#"><i class="fa fa-window-restore"></i>&nbsp;Promosi</a></li>
                     </ul>
                     <div class="sidebar-button" align="center">
-                        <a class="btn btn-theme"
-                            href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daftar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a class="btn btn-theme" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daftar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                     </div>
                     <!-- END NAV -->
                     <div class="results">
                         <h4><i class="fa fa-calendar"></i>&nbsp;&nbsp;Hasil Terakhir</h4>
                         <div class="btn-group custom-navigations circle-navigations with-heading no-top-margin">
                             <span>&nbsp;&nbsp;05 Oktober 2022</span>
-                            <a href="javascript:void(0);" class="btn prev prevControl"><i
-                                    class="fa fa-angle-up"></i></a>
-                            <a href="javascript:void(0);" class="btn next nextControl"><i
-                                    class="fa fa-angle-down"></i></a>
+                            <a href="javascript:void(0);" class="btn prev prevControl">
+                                <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="btn next nextControl">
+                                <i class="fa fa-angle-down"></i>
+                            </a>
                         </div>
                         <div class="vertical-slider">
                             <div class="cycle-slideshow" data-cycle-fx="scrollVert" data-cycle-timeout="3000"
@@ -624,15 +608,15 @@
 
                     <div class="owl-carousel owl-theme bankscroll">
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bca"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bca.png')}}" alt="Bank Central Asia"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bca.png')}}" alt="Bank Central Asia"
                                 width="78px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bni"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bni.png')}}" alt="Bank BNI"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bni.png')}}" alt="Bank BNI"
                                 width="80px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bri"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bri.png')}}" alt="Bank BRI"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/bri.png')}}" alt="Bank BRI"
                                 width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
@@ -640,15 +624,15 @@
                                 height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online cimb"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/cimb-2.png')}}" alt="Bank CIMB NIAGA"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/cimb-2.png')}}" alt="Bank CIMB NIAGA"
                                 width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online dana"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/dana.png')}}" alt="DANA"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/dana.png')}}" alt="DANA"
                                 width="89px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online danamon"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/danamon.png')}}" alt="Bank DANAMON"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/danamon.png')}}" alt="Bank DANAMON"
                                 width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
@@ -660,12 +644,12 @@
                                 height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online mandiri"></div>
+                            <div class="online"></div>
                             <img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/nofound.html')}}" alt="Bank Mandiri"
                                 width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online maybank"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/maybank.png')}}"
+                            <div class="online"></div><img src="{{ asset('situs/assets/zia_togel/desktop/assets/img/maybank.png')}}"
                                 alt="Maybank Indonesia" width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">

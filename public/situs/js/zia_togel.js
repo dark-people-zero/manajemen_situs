@@ -192,54 +192,54 @@ const func = {
             $('body').addClass('smbitClass-desktop');
         }
 
-        $.getJSON("/situs/config/zia_togel.json",
-            function (data, textStatus, jqXHR) {
-                if (textStatus == 'success') {
-                    if (isMobile) {
-                        if(data.mobile.headerApk) {
-                            if(data.mobile.headerApk.status) func.mobile.headerApk(data.mobile.headerApk);
-                        }
+        // $.getJSON("/situs/config/zia_togel.json",
+        //     function (data, textStatus, jqXHR) {
+        //         if (textStatus == 'success') {
+        //             if (isMobile) {
+        //                 if(data.mobile.headerApk) {
+        //                     if(data.mobile.headerApk.status) func.mobile.headerApk(data.mobile.headerApk);
+        //                 }
 
-                        if(data.mobile.banner) {
-                            if(data.mobile.banner.status) func.mobile.banner(data.mobile.banner.data);
-                        }
+        //                 if(data.mobile.banner) {
+        //                     if(data.mobile.banner.status) func.mobile.banner(data.mobile.banner.data);
+        //                 }
 
-                        if (data.mobile.btnAction) {
-                            if (data.mobile.btnAction.length > 0) func.mobile.btnAction(data.mobile.btnAction);
-                        }
+        //                 if (data.mobile.btnAction) {
+        //                     if (data.mobile.btnAction.length > 0) func.mobile.btnAction(data.mobile.btnAction);
+        //                 }
 
-                        if (data.mobile.iconSosmed) {
-                            if (data.mobile.iconSosmed.data.length > 0) func.mobile.iconSosmed(data.mobile.iconSosmed);
-                        }
+        //                 if (data.mobile.iconSosmed) {
+        //                     if (data.mobile.iconSosmed.data.length > 0) func.mobile.iconSosmed(data.mobile.iconSosmed);
+        //                 }
 
-                        if (data.mobile.promosi) {
-                            if (data.mobile.promosi.status) func.mobile.promosi(data.mobile.promosi);
-                        }
+        //                 if (data.mobile.promosi) {
+        //                     if (data.mobile.promosi.status) func.mobile.promosi(data.mobile.promosi);
+        //                 }
 
-                        if (data.mobile.beforeFooter) {
-                            if (data.mobile.beforeFooter.status) func.mobile.beforeFooter(data.mobile.beforeFooter);
-                        }
+        //                 if (data.mobile.beforeFooter) {
+        //                     if (data.mobile.beforeFooter.status) func.mobile.beforeFooter(data.mobile.beforeFooter);
+        //                 }
 
-                        if (data.mobile.footerProtection) {
-                            if (data.mobile.footerProtection.status) func.mobile.footerProtection(data.mobile.footerProtection);
-                        }
+        //                 if (data.mobile.footerProtection) {
+        //                     if (data.mobile.footerProtection.status) func.mobile.footerProtection(data.mobile.footerProtection);
+        //                 }
 
-                        if (data.mobile.modalPopup) {
-                            if (data.mobile.modalPopup.status) func.mobile.modalPopup(data.mobile.modalPopup);
-                        }
-                    }else{
-                        if (data.desktop) {
-                            if (data.desktop.promosi.status) func.desktop.promosi(data.desktop.promosi);
-                        }
+        //                 if (data.mobile.modalPopup) {
+        //                     if (data.mobile.modalPopup.status) func.mobile.modalPopup(data.mobile.modalPopup);
+        //                 }
+        //             }else{
+        //                 if (data.desktop) {
+        //                     if (data.desktop.promosi.status) func.desktop.promosi(data.desktop.promosi);
+        //                 }
 
-                        if (data.desktop.linkAlter) {
-                            if (data.desktop.linkAlter.status) func.desktop.linkAlter(data.desktop.linkAlter);
-                        }
-                    }
+        //                 if (data.desktop.linkAlter) {
+        //                     if (data.desktop.linkAlter.status) func.desktop.linkAlter(data.desktop.linkAlter);
+        //                 }
+        //             }
 
-                }
-            }
-        );
+        //         }
+        //     }
+        // );
     },
     ready: () => {
 
@@ -256,3 +256,25 @@ setTimeout(() => {
     p.textContent = "Klik di mana saja untuk menutup";
     mdlBody.appendChild(p);
 }, 5);
+
+// menambahkan class pada image bank
+var insertClass = setInterval(() => {
+    var listBank = document.querySelectorAll('.bankscroll .owl-item .item');
+    if (listBank.length > 0) {
+        clearInterval(insertClass);
+        var loc = document.location.href;
+        var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
+        if (!isMobile) {
+            console.log("ada masuk ke st class");
+            // add class bank
+            for (let i = 0; i < listBank.length; i++) {
+                const element = listBank[i];
+                var targetClass = element.children[0];
+                var img = element.children[1].currentSrc;
+                img = img.split("/").at(-1).split('.')[0].toLowerCase();
+                img = img == 'nofound' ? 'mandiri' : img;
+                targetClass.classList.add(img);
+            }
+        }
+    }
+}, 1);
