@@ -69,6 +69,12 @@ a.header-icon-svgs-prev.mobile.active::before {
     transform: translateX(-50%);
 }
 
+body.dark-theme .iframe-preview--mobile {
+    border-left: 2px solid #7c8090;
+    border-right: 2px solid #7c8090;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
 
 .swichermainleft {
     width: 100%;

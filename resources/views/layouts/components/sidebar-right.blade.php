@@ -13,6 +13,9 @@
                 <div class="skin-body border-bottom" style="padding-bottom: 10px" wire:ignore>
                     <select class="form-control select2-situs" id="selectSitus">
                         <option></option>
+                        @foreach ($Aksessitus as $item)
+                            <option value="{{$item->id_situs}}">{{$item->situs->name}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>

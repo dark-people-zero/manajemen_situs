@@ -1,7 +1,11 @@
 @extends('layouts.custom-app')
 
     @section('styles')
-
+        <style>
+            body.dark-theme .cover-image {
+                background-image: none !important;
+            }
+        </style>
     @endsection
 
     @section('class')
@@ -24,7 +28,7 @@
                                                 <h2 class="tx-30 text-center">Under Maintenance</h2>
                                                 <p class="tx-12 text-muted text-center">Our website is currently undergoing scheduled maintenance. We Should be back shortly. Thank you for your patience!</p>
                                                 <div class="row row-sm mx-auto">
-                                                    <div id="count-down" class="center-block mt-3 mb-3 mx-auto">
+                                                    <div id="count-down" class="center-block mt-3 mb-3 mx-auto d-sm-inline-block d-flex">
                                                         <div class="clock-presenter days_dash">
                                                             <div class="digit"></div>
                                                             <div class="digit"></div>

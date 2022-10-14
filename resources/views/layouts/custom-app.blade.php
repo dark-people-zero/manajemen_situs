@@ -23,7 +23,7 @@
             <!-- /Loader -->
 
 
-            <div class="square-box">
+            <div class="square-box square-box-iframe">
                 <div></div>
                 <div></div>
                 <div></div>
