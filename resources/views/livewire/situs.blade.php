@@ -21,18 +21,15 @@
             <div class="mt-4 position-relative">
                 <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="search, previousPage, gotoPage, nextPage"></div>
                 <div class="table-responsive">
-                    <table class="table table-bordered dataTable border-primary text-nowrap">
+                    <table class="table table-bordered dataTable border-primary">
                         <thead>
                             <tr>
                                 <th rowspan="2" class="align-middle text-center">Site Name</th>
                                 <th colspan="2" class="text-center">Status</th>
-                                <th colspan="2" class="text-center">URL Development</th>
-                                <th colspan="2" class="text-center">URL Production</th>
+                                <th colspan="2" class="text-center">Fitur</th>
                                 <th rowspan="2" class="text-center align-middle">Action</th>
                             </tr>
                             <tr class="text-center">
-                                <th>Desktop</th>
-                                <th>Mobile</th>
                                 <th>Desktop</th>
                                 <th>Mobile</th>
                                 <th>Desktop</th>
@@ -42,6 +39,10 @@
                         <tbody>
                             @if ($data->count() > 0)
                                 @foreach ($data as $item)
+                                    @php
+                                        $fDesktop = $item->fiturSitus->where('type','desktop')->pluck('fitur.name');
+                                        $fMobile = $item->fiturSitus->where('type','mobile')->pluck('fitur.name');
+                                    @endphp
                                     <tr>
                                         <td>{{$item->name}}</td>
                                         <td class="text-center">
@@ -51,16 +52,14 @@
                                             <span class="badge badge-{{$item->status_mobile ? 'primary' : 'danger'}}">{{$item->status_mobile ? 'Active' : 'Not Active'}}</span>
                                         </td>
                                         <td>
-                                            <a href="{{$item->url_desktop_dev}}" target="_blank">{{$item->url_desktop_dev}}</a>
+                                            @foreach ($fDesktop as $val)
+                                                <span class="badge badge-success">{{$val}}</span>
+                                            @endforeach
                                         </td>
                                         <td>
-                                            <a href="{{$item->url_mobile_dev}}" target="_blank">{{$item->url_mobile_dev}}</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{$item->url_desktop_prod}}" target="_blank">{{$item->url_desktop_prod}}</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{$item->url_mobile_prod}}" target="_blank">{{$item->url_mobile_prod}}</a>
+                                            @foreach ($fMobile as $val)
+                                                <span class="badge badge-success">{{$val}}</span>
+                                            @endforeach
                                         </td>
                                         <td class="text-center">
                                             <a href="javascript:void(0);" class="text-info me-2" data-bs-toggle="modal" data-bs-target="#formSiteData" wire:click="shodModal(false,{{$item->id}})">
@@ -166,6 +165,38 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label>Fitur Desktop</label>
+                            <div wire:ignore>
+                                <select class="form-control SlectBox @error('fiturDesktop') is-invalid @enderror" id="fiturDesktop" placeholder="Please select one fitur" multiple>
+                                    @foreach ($dataFitur as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('fiturDesktop')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Fitur Mobile</label>
+                            <div wire:ignore>
+                                <select class="form-control SlectBox @error('fiturMobile') is-invalid @enderror" id="fiturMobile" placeholder="Please select one fitur" multiple>
+                                    @foreach ($dataFitur as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('fiturMobile')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
                         <button class="btn btn-outline-primary w-100" type="submit">Save</button>
                     </form>
                 </div>
@@ -197,10 +228,33 @@
         })
 
         document.addEventListener('livewire:load', function () {
+            $("#fiturDesktop").on('sumo:closed', function(sumo) {
+                @this.fiturDesktop = $(sumo.target).val();
+            });
+
+            $("#fiturMobile").on('sumo:closed', function(sumo) {
+                @this.fiturMobile = $(sumo.target).val();
+            });
+
             document.getElementById('formSiteData').addEventListener('hidden.bs.modal', event => {
                 @this.closeModal = false;
             })
         })
+
+        document.addEventListener('sumo:reset', event => {
+            $('#fiturDesktop')[0].sumo.unSelectAll();
+            $('#fiturMobile')[0].sumo.unSelectAll();
+        });
+        document.addEventListener('sumo:select', event => {
+            var data = event.detail;
+
+            data.desktop.forEach(e => {
+                $("#fiturDesktop")[0].sumo.selectItem(`${e}`);
+            });
+            data.mobile.forEach(e => {
+                $("#fiturMobile")[0].sumo.selectItem(`${e}`);
+            });
+        });
     </script>
 
 @endsection

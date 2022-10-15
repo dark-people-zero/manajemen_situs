@@ -265,7 +265,6 @@ var insertClass = setInterval(() => {
         var loc = document.location.href;
         var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
         if (!isMobile) {
-            console.log("ada masuk ke st class");
             // add class bank
             for (let i = 0; i < listBank.length; i++) {
                 const element = listBank[i];

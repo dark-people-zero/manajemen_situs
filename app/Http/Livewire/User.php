@@ -80,6 +80,17 @@ class User extends Component
             }
         }else{
             $this->accessSite[$index][$type] = $val;
+            $data = Msitus::with(['fiturSitus.fitur'])->find($val);
+            $existing = [];
+            if ($this->idUser) {
+                $existing = MaksesSitus::with(['aksesFitur'])->where("id_user", $this->idUser)->where("id_situs", $val)->first();
+            }
+
+            $this->dispatchBrowserEvent("collapse:fitur", [
+                "index" => $index,
+                "data" => $data,
+                "existing" => $existing
+            ]);
         }
     }
 
@@ -394,6 +405,12 @@ class User extends Component
             "message" => "Data deleted successfully"
         ]);
 
+    }
+
+    public function getDataFitur($id)
+    {
+        $data = Msitus::find($id);
+        return $data;
     }
 
 

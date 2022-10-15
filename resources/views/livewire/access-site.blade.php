@@ -1,4 +1,4 @@
-<div class="mt-2">
+<div class="mt-2 classSite">
     <div class="form-group mb-0">
         <div class="d-flex SumoSelect-group">
             <select class="form-control SlectBox" placeholder="Please select one site." data-index="{{$index}}">
@@ -18,7 +18,7 @@
             @endif
         </div>
     </div>
-    <div class="collapse" id="collSite-{{$index}}">
+    <div class="collapse position-relative" id="collSite-{{$index}}">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -42,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($fitur as $i => $item)
+                {{-- @foreach ($fitur as $i => $item)
                 @php
                     $checkDesktop = false;
                     $checkMobile = false;
@@ -73,8 +73,12 @@
                             </div>
                         </td>
                     </tr>
-                @endforeach
+                @endforeach --}}
+                <tr class="dataFiturNull">
+                    <td colspan="3" class="text-center">Feature is not available on this site. Please try changing to another site.</td>
+                </tr>
             </tbody>
         </table>
+        <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center loading t-0" style="background: #97939314; display: none"></div>
     </div>
 </div>

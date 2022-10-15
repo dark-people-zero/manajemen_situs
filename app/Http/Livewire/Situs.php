@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Situs as Msitus;
+use App\Models\fitur as Mfitur;
+use App\Models\fiturSitus;
 use DB;
 
 class Situs extends Component
@@ -19,6 +21,8 @@ class Situs extends Component
 
     public $name, $d_status = false, $m_status = false, $url_d_desktop, $url_d_mobile, $url_p_desktop, $url_p_mobile;
 
+    public $fiturDesktop = [], $fiturMobile = [];
+
     public function render()
     {
         $search = $this->search;
@@ -31,7 +35,8 @@ class Situs extends Component
         })->orderBy('id', 'desc')->paginate(10);
 
         return view('livewire.situs', [
-            "data" => $data
+            "data" => $data,
+            "dataFitur" => Mfitur::get()
         ])->extends('layouts.app2');
     }
 
@@ -51,6 +56,9 @@ class Situs extends Component
             $rules['url_p_mobile'] = 'required';
         }
 
+        if (count($this->fiturDesktop) == 0) $rules['fiturDesktop'] = 'required';
+        if (count($this->fiturMobile) == 0) $rules['fiturMobile'] = 'required';
+
         return $rules;
     }
 
@@ -66,7 +74,7 @@ class Situs extends Component
             $this->resetForm();
         }else{
             $this->idUpdate = $id;
-            $data = Msitus::find($id);
+            $data = Msitus::with(['fiturSitus'])->find($id);
 
             $this->name = $data->name;
             $this->d_status = $data->status_desktop;
@@ -75,6 +83,14 @@ class Situs extends Component
             $this->url_d_mobile = $data->url_desktop_prod;
             $this->url_p_desktop = $data->url_mobile_dev;
             $this->url_p_mobile = $data->url_mobile_prod;
+
+            $this->fiturDesktop = $data->fiturSitus->where('type','desktop')->pluck('id_fitur');
+            $this->fiturMobile = $data->fiturSitus->where('type','mobile')->pluck('id_fitur');
+
+            $this->dispatchBrowserEvent("sumo:select",[
+                "desktop" => $this->fiturDesktop,
+                "mobile" => $this->fiturMobile
+            ]);
         }
     }
 
@@ -97,11 +113,56 @@ class Situs extends Component
             $msg = "Data added successfully.";
 
             if ($this->idUpdate != null) {
-                Msitus::where('id', $this->idUpdate)->update($filed);
+                Msitus::with(['fiturSitus'])->where('id', $this->idUpdate)->update($filed);
+
+                fiturSitus::where('id_situs', $this->idUpdate)->delete();
+
+                $fiturDesktop = collect($this->fiturDesktop)->map(function($e) {
+                    return [
+                        "id_situs" => $this->idUpdate,
+                        "id_fitur" => $e,
+                        "type" => "desktop",
+                        "created_at" => now(),
+                        "updated_at" => now()
+                    ];
+                })->toArray();
+                $fiturMobile = collect($this->fiturMobile)->map(function($e) {
+                    return [
+                        "id_situs" => $this->idUpdate,
+                        "id_fitur" => $e,
+                        "type" => "mobile",
+                        "created_at" => now(),
+                        "updated_at" => now()
+                    ];
+                })->toArray();
+                fiturSitus::insert($fiturDesktop);
+                fiturSitus::insert($fiturMobile);
+
                 $msg = "Data changed successfully.";
                 $type = 'info';
             }else{
-                Msitus::create($filed);
+                $situs = Msitus::create($filed);
+                $fiturDesktop = collect($this->fiturDesktop)->map(function($e) use($situs) {
+                    return [
+                        "id_situs" => $situs->id,
+                        "id_fitur" => $e,
+                        "type" => "desktop",
+                        "created_at" => now(),
+                        "updated_at" => now()
+                    ];
+                })->toArray();
+                $fiturMobile = collect($this->fiturMobile)->map(function($e) use($situs) {
+                    return [
+                        "id_situs" => $situs->id,
+                        "id_fitur" => $e,
+                        "type" => "mobile",
+                        "created_at" => now(),
+                        "updated_at" => now()
+                    ];
+                })->toArray();
+
+                fiturSitus::insert($fiturDesktop);
+                fiturSitus::insert($fiturMobile);
             }
             DB::commit();
 
@@ -128,8 +189,11 @@ class Situs extends Component
             'url_d_desktop',
             'url_d_mobile',
             'url_p_desktop',
-            'url_p_mobile'
+            'url_p_mobile',
+            'fiturDesktop',
+            'fiturMobile',
         ]);
+        $this->dispatchBrowserEvent("sumo:reset");
     }
 
     public function deleteConfirm($id)

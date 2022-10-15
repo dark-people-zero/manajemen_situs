@@ -220,18 +220,80 @@
             });
             $("#role").on('sumo:closed', function(sumo) {
                 @this.role = $(sumo.target).val();
-                // if ($(sumo.target).val() == 1) {
-                //     $("#aksesMenuAndSite").hide();
-                // }else{
-                //     $("#aksesMenuAndSite").show();
-                //     if ($(sumo.target).val() == 3) {
-                //         $("#userSelect").closest('.checkbox').hide();
-                //         $("#siteDataSelect").closest('.checkbox').hide();
-                //     }else{
-                //         $("#userSelect").closest('.checkbox').show();
-                //         $("#siteDataSelect").closest('.checkbox').show();
-                //     }
-                // }
+            });
+
+            document.addEventListener("collapse:fitur", e => {
+                var data = e.detail.data;
+                var index = e.detail.index;
+                var existing = e.detail.existing;
+                var target = $(`#collSite-${index}`);
+                target.find('.loading').removeClass('d-flex');
+
+                target.find('tbody').children().not('.dataFiturNull').remove();
+                if (data.fitur_situs.length > 0) {
+                    console.log(data.fitur_situs);
+
+                    target.find('.dataFiturNull').hide();
+                    data.fitur_situs.forEach((val, i) => {
+                        var mobile = false,
+                            desktop = false;
+                        if (existing) {
+                            if (existing.akses_fitur.length > 0) {
+                                var x = existing.akses_fitur;
+                                var found = x.find(element => element.id_fitur == val.id_fitur);
+                                if (found) {
+                                    mobile = found.mobile;
+                                    desktop = found.desktop;
+                                }
+                            }
+                        }
+                        var html = $(`
+                            <tr>
+                                <td>${val.fitur.name}</td>
+                                <td class="text-center">
+                                    <div class="checkbox">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-id="${val.id_fitur}" data-type="desktop" data-index="${index}" class="custom-control-input checkFitur" id="checkbox-${index}-${i}-desktop" ${desktop ? 'checked' : '' }>
+                                            <label for="checkbox-${index}-${i}-desktop" class="custom-control-label mt-1"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="checkbox">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" data-id="${val.id_fitur}" data-type="mobile" data-index="${index}" class="custom-control-input checkFitur" id="checkbox-${index}-${i}-mobile" ${mobile ? 'checked' : '' }>
+                                            <label for="checkbox-${index}-${i}-mobile" class="custom-control-label mt-1"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        `);
+
+                        html.find('.checkFiturAll').change(function() {
+                            var id = $(this).attr("data-id"),
+                                type = $(this).attr("data-type"),
+                                index = $(this).attr("data-index");
+
+                            var target = $(this).closest('tr');
+                            var data = {
+                                [id]: {
+                                    id: id,
+                                    desktop: target.find('input[data-type="desktop"]').prop("checked"),
+                                    mobile: target.find('input[data-type="mobile"]').prop("checked")
+                                }
+                            };
+
+                            @this.addAccessSiteVal(index,'fitur',data);
+                        });
+
+                        target.find('tbody').append(html);
+                    });
+                }else{
+                    target.find('.dataFiturNull').show();
+                }
+
+                console.log(e.detail);
+
             });
         })
 
@@ -254,6 +316,7 @@
                         var target =  $(sumo.target);
                         var index = target.data("index");
                         @this.addAccessSiteVal(index,'site',target.val());
+                        target.closest('.classSite').find('.loading').addClass('d-flex');
                     });
 
                     element.on("sumo:opening", function(sumo) {
@@ -294,27 +357,28 @@
                 })
             }
 
-            $('.checkFitur').change(function() {
-                var id = $(this).data("id"),
-                    type = $(this).data("type"),
-                    index = $(this).data("index");
+            // $('.checkFitur').change(function() {
+            //     var id = $(this).data("id"),
+            //         type = $(this).data("type"),
+            //         index = $(this).data("index");
 
-                var target = $(this).closest('tr');
-                var data = {
-                    [id]: {
-                        id: id,
-                        desktop: target.find('input[data-type="desktop"]').prop("checked"),
-                        mobile: target.find('input[data-type="mobile"]').prop("checked")
-                    }
-                };
+            //     var target = $(this).closest('tr');
+            //     var data = {
+            //         [id]: {
+            //             id: id,
+            //             desktop: target.find('input[data-type="desktop"]').prop("checked"),
+            //             mobile: target.find('input[data-type="mobile"]').prop("checked")
+            //         }
+            //     };
 
-                @this.addAccessSiteVal(index,'fitur',data);
-            })
+            //     @this.addAccessSiteVal(index,'fitur',data);
+            // })
 
             $('.checkFiturAll').change(function() {
                 var type = $(this).data('type');
-                $(`.checkFitur[data-type="${type}"]`).prop("checked", $(this).prop("checked")).trigger('change');
+                $(this).closest('table').find(`.checkFitur[data-type="${type}"]`).prop("checked", $(this).prop("checked")).trigger('change');
             })
+
         }
 
         document.addEventListener("modalClose", e => {

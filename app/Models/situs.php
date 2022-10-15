@@ -19,4 +19,9 @@ class situs extends Model
         'url_mobile_prod'
     ];
 
+    public function fiturSitus()
+    {
+        return $this->hasMany(fiturSitus::class, 'id_situs', 'id');
+    }
+
 }
