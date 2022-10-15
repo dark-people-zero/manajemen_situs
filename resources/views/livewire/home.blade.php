@@ -3,7 +3,7 @@
     <link href="{{asset('assets/switcher/css/switcher.css')}}" rel="stylesheet" />
 @endsection
 
-<div>
+<div id="content-home">
     <div>
         @include('layouts.components.app-header')
     </div>
@@ -32,23 +32,5 @@
 @section('scripts')
     <!--Internal  Select2 js -->
     <script src="{{asset('assets/plugins/select2/js/select2.min.js')}}"></script>
-
-    <script>
-        var selecSitus = $(".select2-situs");
-        selecSitus.select2({
-            dropdownParent: $('.sidebar'),
-            placeholder: "Choose one",
-        });
-
-        document.addEventListener('livewire:load', function () {
-            selecSitus.on("select2:select", function (e) {
-                @this.idSitus = e.params.data.id;
-            });
-
-        })
-
-        $('.layout-setting').click(function() {
-            $("#iframe-preview").contents().find('body').toggleClass('dark-theme');
-        })
-    </script>
+    <script src="{{ asset('assets/js-pages/page-home.js') }}"></script>
 @endsection

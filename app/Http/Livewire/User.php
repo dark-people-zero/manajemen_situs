@@ -12,6 +12,7 @@ use App\Models\role as Mrole;
 use App\Models\aksesMenu as MaksesMenu;
 use App\Models\aksesSitus as MaksesSitus;
 use App\Models\aksesFitur as MaksesFitur;
+use App\Models\fitur;
 use DB;
 
 class User extends Component
@@ -28,8 +29,11 @@ class User extends Component
 
     public $dataAccessSite = [];
 
+    public $fitur;
+
     public function render()
     {
+        $this->fitur = fitur::get()->toArray();
         $search = $this->search;
         $data = Muser::when($search, function($e) use($search){
             $e->where('name', 'like', '%'.$search.'%')
@@ -81,7 +85,7 @@ class User extends Component
         }else{
             $this->accessSite[$index][$type] = $val;
             $data = Msitus::with(['fiturSitus.fitur'])->find($val);
-            $existing = [];
+            $existing = null;
             if ($this->idUser) {
                 $existing = MaksesSitus::with(['aksesFitur'])->where("id_user", $this->idUser)->where("id_situs", $val)->first();
             }
@@ -89,6 +93,7 @@ class User extends Component
             $this->dispatchBrowserEvent("collapse:fitur", [
                 "index" => $index,
                 "data" => $data,
+                "fitur" => $this->fitur,
                 "existing" => $existing
             ]);
         }
@@ -303,12 +308,13 @@ class User extends Component
             'name',
             'username',
             'role',
+            'methodUpdate',
+            "idUser",
             'userSelect',
             'siteSelect',
             'siteDataSelect',
             'accessSite',
             'dataAccessSite',
-            'methodUpdate',
         ]);
 
         $this->dispatchBrowserEvent("sumo:role", [

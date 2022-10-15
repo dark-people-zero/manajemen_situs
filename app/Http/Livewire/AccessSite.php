@@ -14,8 +14,7 @@ class AccessSite extends Component
     {
         // if($this->data != null)dd($this->data);
         return view('livewire.access-site',[
-            "situs" => Msitus::get(),
-            "fitur" => fitur::get()
+            "situs" => Msitus::get()
         ]);
     }
 }
