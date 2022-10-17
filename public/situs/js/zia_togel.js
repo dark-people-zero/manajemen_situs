@@ -258,22 +258,75 @@ setTimeout(() => {
 }, 5);
 
 // menambahkan class pada image bank
-var insertClass = setInterval(() => {
-    var listBank = document.querySelectorAll('.bankscroll .owl-item .item');
-    if (listBank.length > 0) {
-        clearInterval(insertClass);
-        var loc = document.location.href;
-        var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
-        if (!isMobile) {
-            // add class bank
-            for (let i = 0; i < listBank.length; i++) {
-                const element = listBank[i];
-                var targetClass = element.children[0];
-                var img = element.children[1].currentSrc;
-                img = img.split("/").at(-1).split('.')[0].toLowerCase();
-                img = img == 'nofound' ? 'mandiri' : img;
-                targetClass.classList.add(img);
+// var insertClass = setInterval(() => {
+//     var listBank = document.querySelectorAll('.bankscroll .owl-item .item');
+//     if (listBank.length > 0) {
+//         clearInterval(insertClass);
+//         var loc = document.location.href;
+//         var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
+//         if (!isMobile) {
+//             // add class bank
+//             for (let i = 0; i < listBank.length; i++) {
+//                 const element = listBank[i];
+//                 var targetClass = element.children[0];
+//                 var img = element.children[1].currentSrc;
+//                 img = img.split("/").at(-1).split('.')[0].toLowerCase();
+//                 img = img == 'nofound' ? 'mandiri' : img;
+//                 targetClass.classList.add(img);
+//             }
+//         }
+//     }
+// }, 1);
+
+
+var replaceCorouselBank = setInterval(() => {
+    var targetReplace = document.querySelector('.bankscroll');
+    var listImg = document.querySelectorAll('.bankscroll .owl-item .item img');
+    var urutan = [
+        'BCA',
+        'MANDIRI',
+        'BRI',
+        'BNI',
+        'DANAMON',
+        'CIMB',
+        'OVO',
+        'GOPAY',
+        'DANA',
+        'LINKAJA',
+        'BSI',
+        'MAYBANK',
+    ];
+
+    if (listImg.length > 0) {
+        clearInterval(replaceCorouselBank);
+        var div = document.createElement("div");
+        div.classList.add("bankscroll");
+
+        urutan.forEach(urut => {
+            urut = urut.toLocaleLowerCase();
+            for (let i = 0; i < listImg.length; i++) {
+                const element = listImg[i];
+                const img = element.getAttribute("src").split("/").at(-1);
+                if (img.toLocaleLowerCase().indexOf(urut) > -1) {
+                    var x = element.closest('.item');
+                    x.children[0].classList.add(urut);
+                    div.appendChild(x);
+                }else{
+                    if (urut == 'mandiri') {
+                        var urut2 = 'nofound';
+                        if (img.toLocaleLowerCase().indexOf(urut2) > -1) {
+                            var x = element.closest('.item');
+                            x.children[0].classList.add(urut);
+                            div.appendChild(x);
+                        }
+                    }
+                }
             }
-        }
+        });
+
+        $(div).owlCarousel({ autoPlay: 5000, items: 5, itemsDesktop: false });
+
+        targetReplace.parentNode.insertBefore(div, targetReplace);
+        targetReplace.remove();
     }
 }, 1);

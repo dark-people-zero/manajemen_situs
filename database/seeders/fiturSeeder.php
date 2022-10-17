@@ -61,6 +61,11 @@ class fiturSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Barcode QRIS',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

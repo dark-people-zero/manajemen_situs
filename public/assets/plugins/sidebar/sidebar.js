@@ -114,7 +114,10 @@
 
   $('html').on('click.bs.sidebar.autohide', function(event){
     var $this = $(event.target);
+    var notClose = $('.sidebar-right').attr("data-sidebar-notclose");
     var isButtonOrSidebar = $this.is('.sidebar, [data-bs-toggle="sidebar-right"]') || $this.parents('.sidebar, [data-bs-toggle="sidebar-right"]').length;
+    if (notClose && !isButtonOrSidebar) isButtonOrSidebar = $this.is(notClose) || $this.parents(notClose).length;
+
     if (isButtonOrSidebar) {
       return;
     } else {
