@@ -250,7 +250,10 @@ class Home extends Component
         if ($this->toogle_buttonaction_desktop) {
             foreach ($this->data_buttonaction_desktop as $i => $val) {
                 $validate["data_buttonaction_desktop.$i.name"] = "required";
-                $validate["data_buttonaction_desktop.$i.link"] = "required|url";
+                $validate["data_buttonaction_desktop.$i.link"] = [
+                    "required",
+                    "url"
+                ];
 
                 $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -493,7 +496,10 @@ class Home extends Component
         if ($this->toogle_buttonaction_desktop) {
             foreach ($this->data_buttonaction_desktop as $i => $val) {
                 $validate["data_buttonaction_desktop.$i.name"] = "required";
-                $validate["data_buttonaction_desktop.$i.link"] = "required|url";
+                $validate["data_buttonaction_desktop.$i.link"] = [
+                    "required",
+                    "url"
+                ];
 
                 $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
