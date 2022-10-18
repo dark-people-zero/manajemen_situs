@@ -14,6 +14,7 @@ class fiturSitus extends Model
         'id_fitur',
         'type',
         'status',
+        'data'
     ];
 
     public function fitur()
