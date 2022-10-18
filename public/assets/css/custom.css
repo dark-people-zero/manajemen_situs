@@ -490,3 +490,26 @@ select.form-control.SumoUnder[multiple] {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+.qris .clr-field {
+    width: 100%;
+    cursor: pointer;
+}
+
+.qris .clr-field button,
+.qris .clr-field input {
+    cursor: pointer;
+}
+
+.btn-sample {
+    text-align: center;
+    padding: 0.5rem 0.78rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: aller;
+    font-size: 20px;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+}

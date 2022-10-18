@@ -8,7 +8,7 @@ selecSitus.select2({
 
 document.addEventListener('livewire:load', function () {
     selecSitus.on("select2:select", function (e) {
-        window.livewire.find(lvUser).idSitus = e.params.data.id;
+        window.livewire.find(lvUser).changeSelectSitus(e.params.data.id);
     });
 })
 
@@ -86,6 +86,25 @@ document.addEventListener('livewire:update', function (e) {
           '#d56062'
         ]
     });
+
+    Coloris({
+        el: '.coloris-barcode',
+        theme: 'polaroid',
+        parent: '.sidebar',
+        themeMode: 'dark',
+        selectInput: true,
+        focusInput: true,
+        swatches: [
+          '#067bc2',
+          '#84bcda',
+          '#80e377',
+          '#ecc30b',
+          '#f37748',
+          '#d56062'
+        ]
+    });
+
+    for (let i = 0; i < $(".resize").length; i++) resize($(".resize")[i]);
 })
 
 function editorMirror(target) {
@@ -205,6 +224,12 @@ function sampleButton(self) {
     var target = $(self).attr('target');
 
     if (href != '') window.open(href+'?target='+target,'_blank');
+}
+
+function resize(self) {
+    var height = self.scrollHeight > 200 ? 200 : self.scrollHeight;
+    $(self).css('height', 'auto');
+    $(self).css('height', height+'px');
 }
 
 

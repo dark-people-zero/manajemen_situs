@@ -120,10 +120,11 @@ class Situs extends Component
                 // ini setting untuk desktop
                 $idFiturDesktop = $dataSitus->fiturSitus->where("type", "desktop")->pluck("id_fitur");
                 $idDel = $idFiturDesktop->filter(function($e) {
-                    return !in_array($e,(array)$this->fiturDesktop);
+                    $x = collect($this->fiturDesktop)->map(function($e) {
+                        return (int)$e;
+                    })->toArray();
+                    return !in_array($e,$x);
                 })->values()->toArray();
-
-                // dd($idDel);
 
                 $idNew = collect($this->fiturDesktop)->filter(function($e) use($idFiturDesktop) {
                     return !in_array($e,$idFiturDesktop->toArray());
@@ -137,14 +138,17 @@ class Situs extends Component
                     ];
                 })->toArray();
 
-                if (count($idDel) > 0) fiturSitus::where('id_situs', $this->idUpdate)->whereIn("id_fitur", $idDel)->delete();
-                if (count($idNew) > 0) fiturSitus::where('id_situs', $this->idUpdate)->whereIn("id_fitur", $idDel)->delete();
+                if (count($idDel) > 0) fiturSitus::where('id_situs', $this->idUpdate)->where("type", "desktop")->whereIn("id_fitur", $idDel)->delete();
+                if (count($idNew) > 0) fiturSitus::insert($idNew);
 
 
                 // ini setting untuk mobile
                 $idFiturMobile = $dataSitus->fiturSitus->where("type", "mobile")->pluck("id_fitur");
                 $idDel = $idFiturMobile->filter(function($e) {
-                    return !in_array($e,(array)$this->fiturMobile);
+                    $x = collect($this->fiturMobile)->map(function($e) {
+                        return (int)$e;
+                    })->toArray();
+                    return !in_array($e,$x);
                 })->values()->toArray();
                 $idNew = collect($this->fiturMobile)->filter(function($e) use($idFiturMobile) {
                     return !in_array($e,$idFiturMobile->toArray());
@@ -158,7 +162,7 @@ class Situs extends Component
                     ];
                 })->toArray();
 
-                if (count($idDel) > 0) fiturSitus::where('id_situs', $idDel)->delete();
+                if (count($idDel) > 0) fiturSitus::where('id_situs', $this->idUpdate)->where("type", "mobile")->whereIn("id_fitur", $idDel)->delete();
                 if (count($idNew) > 0) fiturSitus::insert($idNew);
 
                 $msg = "Data changed successfully.";

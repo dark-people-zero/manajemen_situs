@@ -19,6 +19,7 @@ return new class extends Migration
             $table->bigInteger('id_fitur');
             $table->enum('type', ['desktop', 'mobile']);
             $table->boolean('status')->default(false);
+            $table->json("data")->default(null);
             $table->timestamps();
         });
     }

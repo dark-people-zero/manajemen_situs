@@ -66,6 +66,11 @@ class fiturSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Sort List Bank',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
