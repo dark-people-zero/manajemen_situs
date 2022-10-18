@@ -113,11 +113,21 @@ class Situs extends Component
             $msg = "Data added successfully.";
 
             if ($this->idUpdate != null) {
-                Msitus::with(['fiturSitus'])->where('id', $this->idUpdate)->update($filed);
+                $dataSitus = Msitus::with(['fiturSitus'])->where('id', $this->idUpdate)->first();
+                $dataSitus->update($filed);
 
-                fiturSitus::where('id_situs', $this->idUpdate)->delete();
 
-                $fiturDesktop = collect($this->fiturDesktop)->map(function($e) {
+                // ini setting untuk desktop
+                $idFiturDesktop = $dataSitus->fiturSitus->where("type", "desktop")->pluck("id_fitur");
+                $idDel = $idFiturDesktop->filter(function($e) {
+                    return !in_array($e,(array)$this->fiturDesktop);
+                })->values()->toArray();
+
+                // dd($idDel);
+
+                $idNew = collect($this->fiturDesktop)->filter(function($e) use($idFiturDesktop) {
+                    return !in_array($e,$idFiturDesktop->toArray());
+                })->map(function($e){
                     return [
                         "id_situs" => $this->idUpdate,
                         "id_fitur" => $e,
@@ -126,7 +136,19 @@ class Situs extends Component
                         "updated_at" => now()
                     ];
                 })->toArray();
-                $fiturMobile = collect($this->fiturMobile)->map(function($e) {
+
+                if (count($idDel) > 0) fiturSitus::where('id_situs', $this->idUpdate)->whereIn("id_fitur", $idDel)->delete();
+                if (count($idNew) > 0) fiturSitus::where('id_situs', $this->idUpdate)->whereIn("id_fitur", $idDel)->delete();
+
+
+                // ini setting untuk mobile
+                $idFiturMobile = $dataSitus->fiturSitus->where("type", "mobile")->pluck("id_fitur");
+                $idDel = $idFiturMobile->filter(function($e) {
+                    return !in_array($e,(array)$this->fiturMobile);
+                })->values()->toArray();
+                $idNew = collect($this->fiturMobile)->filter(function($e) use($idFiturMobile) {
+                    return !in_array($e,$idFiturMobile->toArray());
+                })->map(function($e){
                     return [
                         "id_situs" => $this->idUpdate,
                         "id_fitur" => $e,
@@ -135,8 +157,9 @@ class Situs extends Component
                         "updated_at" => now()
                     ];
                 })->toArray();
-                fiturSitus::insert($fiturDesktop);
-                fiturSitus::insert($fiturMobile);
+
+                if (count($idDel) > 0) fiturSitus::where('id_situs', $idDel)->delete();
+                if (count($idNew) > 0) fiturSitus::insert($idNew);
 
                 $msg = "Data changed successfully.";
                 $type = 'info';
