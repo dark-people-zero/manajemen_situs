@@ -198,6 +198,35 @@ const func = {
         }
     },
     mobile: {
+        modal: (data) => {
+            if (data) {
+                var mdl = $(`
+                    <div id="smb-mobile-popup">
+                        <div class="modal-mobile">
+                        <div class="modal-container-mobile">
+                            <div class="body">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">x</span>
+                                    </button>
+                                </div>
+                                <a href="" target="event">
+                                    <img src="${data.file}" class="popup-img">
+                                </a>
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                `)
+
+                mdl.find(".btn-close").click(function() {
+                    mdl.remove();
+                })
+
+                $('body').append(mdl);
+            }
+        },
         headerApk: (data) => {
             $("#content").addClass("apk-download");
             var banner = $(`
@@ -206,7 +235,7 @@ const func = {
                     <div class="header-container">
                         <div class="banner-info">
                             <div class="app_icon">
-                                <img src="${data.logo}" alt="App Icon">
+                                <img src="${data.file}" alt="App Icon">
                             </div>
                             <div class="app_info">
                                 <div class="app_title">${data.title}</div>
@@ -226,9 +255,9 @@ const func = {
             $("#content .page-header").prepend(banner);
             $("#content .page-header .app-container").remove();
         },
-        banner: (data) => {
+        headerCorousel: (data) => {
             data = data.map((e) => {
-                return `<div> <img src="${e.img}" alt="${e.tittle}"></div>`;
+                return `<div> <img src="${e}"></div>`;
             })
             var owl = $(`<div class="owl-carousel owl-theme">${data.join('')}</div>`);
             owl.owlCarousel({
@@ -239,9 +268,10 @@ const func = {
         },
         btnAction: (data) => {
             data = data.filter((e) => e.status).map((e) => {
-                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" ${e.style != null ? 'style="'+e.style+'"' : ''} ${e.target != null ? 'target="'+e.target+'"' : ''}>${e.name}</a>`;
-            });
-            $(data.join('')).insertAfter(".button-green");
+                var shadow = e.shadow ? 'inset 0 -4px 0 '+e.shadow+';' : '';
+                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" style="${shadow}${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
+            }).join('');
+            $(data).insertAfter(".button-green");
         },
         iconSosmed: (data) => {
             var icon = data.data.filter((e) => e.status).map((e) => {
@@ -289,33 +319,6 @@ const func = {
 
             $('.footer').append(footer);
         },
-        modalPopup: (data) => {
-            var mdl = $(`
-                <div id="smb-mobile-popup">
-                    <div class="modal-mobile">
-                    <div class="modal-container-mobile">
-                        <div class="body">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">x</span>
-                                </button>
-                            </div>
-                            <a href="" target="event">
-                                <img src="${data.img}" class="popup-img">
-                            </a>
-                            <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            `)
-
-            mdl.find(".btn-close").click(function() {
-                mdl.remove();
-            })
-
-            $('body').append(mdl);
-        },
     },
     load: () => {
         var loc = document.location.href;
@@ -359,6 +362,24 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         console.log("ini mobile");
+                        if (response.fitur_situs.mobile) {
+                            var length = response.fitur_situs.mobile.length;
+                            response.fitur_situs.mobile.forEach((el, i) => {
+                                if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
+
+                                if (el.id_fitur == 2 && el.status) func.mobile.headerApk(el.data);
+
+                                if (el.id_fitur == 3 && el.status) func.mobile.headerCorousel(el.data);
+
+                                if (el.id_fitur == 4 && el.status) func.mobile.btnAction(el.data);
+
+
+                                // untuk hide loading
+                                if ((i+1) == length) $("#loadingCustom").hide();
+                            });
+                        }else{
+                            $("#loadingCustom").hide();
+                        }
                     }else{
                         $("#loadingCustom").hide();
                     }
