@@ -24,4 +24,13 @@ class situs extends Model
         return $this->hasMany(fiturSitus::class, 'id_situs', 'id');
     }
 
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'fiturSitus',
+    ];
+
 }

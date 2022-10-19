@@ -1,3 +1,7 @@
+body {
+    padding-right: 0 !important;
+}
+
 body.smbitClass-mobile {
     // Untuk header atas
     .page-content {
@@ -214,42 +218,40 @@ body.smbitClass-mobile {
     }
 }
 
-body.modal-open {
-    .modal {
-        .modal-dialog {
-            .modal-content {
-                background: transparent;
-                box-shadow: none;
+.modal {
+    .modal-dialog {
+        .modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+
+            .modal-header {
                 border: none;
-
-                .modal-header {
-                    border: none;
-                    .close {
-                        opacity: 1;
-                        font-size: 25px;
-                        color: #fff;
-                    }
+                .close {
+                    opacity: 1;
+                    font-size: 25px;
+                    color: #fff;
                 }
+            }
 
-                .modal-body {
-                    .deskripsi {
-                        color: white;
-                        background-color: rgb(188, 156, 8);
-                        margin-left: 0px;
-                        margin-right: 0px;
-                        margin-top: 10px;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        text-align: center;
-                    }
+            .modal-body {
+                .deskripsi {
+                    color: white;
+                    background-color: rgb(188, 156, 8);
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-align: center;
                 }
             }
         }
     }
+}
 
-    .modal-backdrop {
-        opacity: .9;
-    }
+.modal-backdrop {
+    opacity: .9;
 }
 
 body.smbitClass-desktop {
@@ -585,6 +587,64 @@ body.smbitClass-desktop {
         }
     }
 
+    .headerApk {
+        padding: 10px;
+        background: #302e2e;
+        display: flex;
+        align-items: center;
+
+        .btn-close {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+
+            .banner-info {
+                display: flex;
+                align-items: center;
+
+                .app_icon {
+                    margin-right: 10px;
+
+                    img {
+                        max-width: 43px;
+                    }
+                }
+
+                .app_info {
+                    .app_title {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #ffee27;
+                        text-transform: uppercase;
+                    }
+
+                    .app_slogan {
+                        font-size: 11px;
+                        color: #FFF;
+                        letter-spacing: 0px;
+                    }
+                }
+            }
+
+            .download_button {
+                .btn {
+                    font-size: 12px;
+                    padding: 8px 8px;
+                    border: 1px solid;
+                    color: #ffee27;
+                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 415px) {
@@ -604,5 +664,16 @@ body.smbitClass-desktop {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog-centered {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: auto auto;
     }
 }

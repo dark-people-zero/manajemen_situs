@@ -152,7 +152,7 @@ li {
 }
 
 ol > li:last-child, ul > li:last-child {
-    margin-bottom:0px;	
+    margin-bottom:0px;
 }
 
 /*//////////////////////////////////////*/
@@ -250,23 +250,23 @@ a{
 	line-height: 0px;
 }
 
-.float-left{	 
+.float-left{
 	float:left;
 	margin-right:10px;
 	margin-bottom:10px;
 }
 
-.float-right{	
+.float-right{
 	float:right;
 	margin-left:5px;
 }
 
 
-.right-text{	 
+.right-text{
 	text-align:right;
 }
 
-.left-text{	  
+.left-text{
 	text-align:left;
 }
 
@@ -329,7 +329,7 @@ a{
 	right:0;
 	bottom:0;
 	background-color:#000000;
-	z-index:999999; 
+	z-index:999999;
 }
 
 #status {
@@ -338,9 +338,9 @@ a{
 	width:250px;
 	height:250px;
 	position:absolute;
-	left:50%; 
-	top:50%; 
-	background-image:url(../../img/status.gif);
+	left:50%;
+	top:50%;
+	background-image:url(status.gif);
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:-125px 0 0 -125px;
@@ -375,7 +375,7 @@ a{
 .one-third{
 	width:28%;
 	float:left;
-	margin-right:8%;	
+	margin-right:8%;
 }
 
 .one-half{
@@ -385,26 +385,26 @@ a{
 }
 
 @media (max-width:760px){
-	
+
 .hide-if-mobile{
 	display:none;
 }
 
 }
 
-@media (min-width:760px) { 
+@media (min-width:760px) {
 	.one-third-responsive{
 		width:28%;
 		float:left;
-		margin-right:8%;	
+		margin-right:8%;
 	}
-	
+
 	.one-half-responsive{
 		width:48%;
 		float:left;
 		margin-right:4%;
 	}
-	
+
 	.hide-if-responsive{
 		display:none;
 	}
@@ -418,7 +418,7 @@ a{
 .text-highlight{
 	color:#FFFFFF;
 	padding:5px;
-	margin-right:3px;	
+	margin-right:3px;
 }
 
 .highlight-turqoise{	 background-color:#16a085;	}
@@ -458,7 +458,7 @@ a{
 }
 
 .button-icon:hover{
-	opacity:0.8;	
+	opacity:0.8;
 }
 
 .button-big-icon:hover{
@@ -580,7 +580,7 @@ a{
 	text-align:left;
 	background-position:8px 8px;
 	background-repeat:no-repeat;
-	background-size:23px 23px;	
+	background-size:23px 23px;
 }
 
 
@@ -589,13 +589,13 @@ a{
 	color:#FFFFFF;
 	padding:8px 15px;
 	padding-left:35px;
-	display:inline-block;	
+	display:inline-block;
 	margin-bottom:2px;
 	margin-left:2px;
 	text-align:left;
 	background-position:8px 7px;
 	background-repeat:no-repeat;
-	background-size:20px 20px;	
+	background-size:20px 20px;
 }
 
 
@@ -725,7 +725,7 @@ a{
 	padding-right:10px;
 	padding-top:8px;
 	padding-bottom:8px;
-}	
+}
 
 
 /*////////////////*/
@@ -734,7 +734,7 @@ a{
 
 .icon-list li{
 	list-style:none;
-	padding-left:30px;	
+	padding-left:30px;
 	background-repeat:no-repeat;
 	background-size:18px 18px;
 	margin-bottom:10px;
@@ -1024,7 +1024,7 @@ table tr:hover td{
 	padding-top:5px;
 	padding-bottom:5px;
 	border-radius:10px;
-	background-color:#FFFFFF;	
+	background-color:#FFFFFF;
 	border:solid 1px #cacaca;
 }
 
@@ -1034,7 +1034,7 @@ table tr:hover td{
 	font-size:10px;
 	font-style:normal;
 	padding-left:5px;
-	color:#000000;	
+	color:#000000;
 	text-shadow:0px 1px 0px #FFFFFF;
 }
 
@@ -1049,7 +1049,7 @@ table tr:hover td{
 	padding-top:5px;
 	padding-bottom:5px;
 	border-radius:10px;
-	background-color:#FFFFFF;	
+	background-color:#FFFFFF;
 	border:solid 1px #cacaca;
 }
 
@@ -1059,7 +1059,7 @@ table tr:hover td{
 	font-size:10px;
 	font-style:normal;
 	padding-right:5px;
-	color:#000000;	
+	color:#000000;
 	text-shadow:0px 1px 0px #FFFFFF;
 }
 
@@ -1104,7 +1104,7 @@ table tr:hover td{
 
 .quote-style-two strong{
 	text-align:left;
-	font-style:italic;	
+	font-style:italic;
 	display:block;
 }
 
@@ -1120,7 +1120,7 @@ table tr:hover td{
 
 .quote-style-three strong{
 	text-align:right;
-	font-style:italic;	
+	font-style:italic;
 	display:block;
 }
 
@@ -1301,22 +1301,22 @@ table tr:hover td{
 
 .red-notification{
 	background-color:#c0392b;
-	color:#FFFFFF;	
+	color:#FFFFFF;
 }
 
 .green-notification{
 	background-color:#27ae60;
-	color:#FFFFFF;	
+	color:#FFFFFF;
 }
 
 .yellow-notification{
 	background-color:#f39c12;
-	color:#FFFFFF;	
+	color:#FFFFFF;
 }
 
 .blue-notification{
 	background-color:#2980b9;
-	color:#FFFFFF;	
+	color:#FFFFFF;
 }
 
 .big-notification{
@@ -1356,7 +1356,7 @@ table tr:hover td{
 }
 
 .big-notification p{
-	padding:10px;	
+	padding:10px;
 	padding-top:0px;
 	margin-bottom:0px;
 }
@@ -1747,7 +1747,7 @@ table tr:hover td{
 }
 
 .contactNameField{
-	padding-bottom:5px;	
+	padding-bottom:5px;
 	font-size:13px;
 }
 
@@ -1783,7 +1783,7 @@ table tr:hover td{
 }
 
 .contactField{
-	min-width:100%;	
+	min-width:100%;
 	display:block;
 	box-sizing:border-box;
 }
@@ -1849,7 +1849,7 @@ table tr:hover td{
 
 .maps-container{
 	display:block!important;
-	padding-bottom:0px;	
+	padding-bottom:0px;
 	box-sizing:border-box;
 	max-height:150px;
 	overflow:hidden;
@@ -1940,7 +1940,7 @@ table tr:hover td{
 }
 
 .recent-post p em{
-	font-style:normal;	
+	font-style:normal;
 	color:#666;
 }
 

@@ -105,6 +105,8 @@
     </noscript>
 
     <!-- ini manggil script dari cloud disini -->
+    <div id="loadingCustom" style=" position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999999; background-image: url(http://127.0.0.1:8000/situs/assets/zia_togel/loading.gif); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    </div>
     <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
     <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
@@ -173,6 +175,7 @@
     <div id="breadcrumbs" class="breadcrumbs">
         <div class="container"></div>
     </div>
+
     <div>
         <div class="container">
             <div class="row">

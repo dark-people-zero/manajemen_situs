@@ -14,9 +14,11 @@
                 <div>
                     <input class="form-control form-control-sm" placeholder="Search..." type="search" wire:model="search" >
                 </div>
-                <div>
-                    <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formSiteData" wire:click="shodModal(true)">Add Data</a>
-                </div>
+                @if (auth()->user()->id_role == 1)
+                    <div>
+                        <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formSiteData" wire:click="shodModal(true)">Add Data</a>
+                    </div>
+                @endif
             </div>
             <div class="mt-4 position-relative">
                 <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="search, previousPage, gotoPage, nextPage"></div>
@@ -65,9 +67,11 @@
                                             <a href="javascript:void(0);" class="text-info me-2" data-bs-toggle="modal" data-bs-target="#formSiteData" wire:click="shodModal(false,{{$item->id}})">
                                                 <i class="fe fe-edit"></i>
                                             </a>
-                                            <a href="javascript:void(0);" class="text-danger delete" wire:click="deleteConfirm({{$item->id}})">
-                                                <i class="fe fe-trash"></i>
-                                            </a>
+                                            @if (auth()->user()->id_role == 1)
+                                                <a href="javascript:void(0);" class="text-danger delete" wire:click="deleteConfirm({{$item->id}})">
+                                                    <i class="fe fe-trash"></i>
+                                                </a>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

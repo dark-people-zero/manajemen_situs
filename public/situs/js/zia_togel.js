@@ -1,3 +1,5 @@
+var baseUrl = "http://127.0.0.1:8000/";
+
 (function () {
     "use strict";
     window.dataLayer = window.dataLayer || [];
@@ -7,6 +9,15 @@
     gtag("js", new Date());
 
     gtag("config", "G-XRK7N3620T");
+
+    // untuk hapus modal default
+    var clrModal = setInterval(() => {
+        var x = document.getElementById("modal-trigger");
+        if (x) {
+            clearInterval(clrModal);
+            x.remove();
+        }
+    }, 1);
 
     window.addEventListener("load", function() {
         func.load();
@@ -34,6 +45,130 @@
 
 const func = {
     desktop: {
+        modal: (data) => {
+            var template = $(`
+                <div class="modal fade" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="${data.file}" width="600" height="350" class="imgads">
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            $("body").append(template);
+            template.modal("show");
+        },
+        headerApk: (data) => {
+            var template = $(`
+                <div class="headerApk container">
+                    <span class="btn-close">
+                        <i class="fa fa-times"></i>
+                    </span>
+                    <div class="header-container">
+                        <div class="banner-info">
+                            <div class="app_icon">
+                                <img src="${data.file}" alt="App Icon">
+                            </div>
+                            <div class="app_info">
+                                <div class="app_title">${data.title}</div>
+                                <div class="app_slogan">${data.slogan}</div>
+                            </div>
+                        </div>
+                        <div class="download_button">
+                            <a href="https://bit.ly/ApkZia" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            template.find(".btn-close").click(() => template.remove());
+
+            template.insertAfter("#breadcrumbs");
+        },
+        headerCorousel: (data) => {
+            var isPause, tick, percentTime, time = 7;
+            var target = $("#slider");
+            target.children().remove();
+
+            data = data.map(e => {
+                return `
+                    <div class="item">
+                        <img src="${e}" width="840px" height="482" />
+                    </div>
+                `;
+            });
+            var template = $(`<div class="owl-carousel owl-theme">${data}</div>`);
+
+            template.owlCarousel({
+                singleItem: true,
+                stopOnHover: true,
+                transitionStyle: "fade",
+                addClassActive: true,
+                afterMove: function(e) {
+                    clearTimeout(tick);
+                    startAnimation();
+                    sliderAnimations();
+                },
+                afterInit: function(e) {
+                    var bar = $(`
+                        <div id="progressBar">
+                            <div id="bar"></div>
+                        </div>
+                    `);
+                    e.append(bar);
+                    startAnimation();
+                    sliderAnimations();
+                },
+                startDragging: () => isPause = true,
+            });
+
+            function startAnimation() {
+                percentTime = 0;
+                isPause = false;
+                tick = setInterval(() => {
+                    if (isPause === false) {
+                        percentTime += 1 / time;
+                        $("#bar").css({ width: percentTime + "%" });
+                        if (percentTime >= 100) {
+                            template.trigger("owl.next");
+                        }
+                    }
+                }, 10);
+            }
+
+            function sliderAnimations() {
+                target.find(".owl-item").not("active").find(".caption").each(function () {
+                    $(this).removeClass("animated" + " " + $(this).data("animation"));
+                });
+                target.find(".owl-item.active .caption").each(function () {
+                    var caption = $(this);
+                    window.setTimeout(() => {
+                        caption.addClass("animated" + " " + caption.data("animation"));
+                    }, caption.data("delay"));
+                });
+            }
+
+            template.on("mouseover", () => isPause = true);
+            template.on("mouseout", () => isPause = false);
+            target.append(template);
+            target.find('.navigation .next').click(() => template.trigger("owl.next"));
+            target.find('.navigation .prev').click(() => template.trigger("owl.prev"));
+
+        },
+
+
+
+
+
         promosi: (data) => {
             $(`
                 <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
@@ -192,6 +327,48 @@ const func = {
             $('body').addClass('smbitClass-desktop');
         }
 
+        $.ajax({
+            type: "get",
+            url: baseUrl+"config/19",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+                if (response) {
+                    if (response.status_desktop && !isMobile) {
+                        console.log("ini desktop");
+                        if (response.fitur_situs.desktop) {
+                            var length = response.fitur_situs.desktop.length;
+                            response.fitur_situs.desktop.forEach((el, i) => {
+                                if (el.id == 1) {
+                                    if (el.status) {
+                                        func.desktop.modal(el.data);
+                                    }else{
+                                        $("#myModal").modal("show");
+                                    }
+                                }
+
+                                if (el.id == 2 && el.status) func.desktop.headerApk(el.data);
+
+                                if (el.id == 3 && el.status) func.desktop.headerCorousel(el.data);
+
+                                // untuk hide loading
+                                if ((i+1) == length) $("#loadingCustom").hide();
+                            });
+                        }else{
+                            $("#loadingCustom").hide();
+                        }
+                    }else if(response.status_mobile && isMobile){
+                        console.log("ini mobile");
+                    }else{
+                        $("#loadingCustom").hide();
+                    }
+                }else{
+                    $("#loadingCustom").hide();
+                }
+
+            }
+        });
+
         // $.getJSON("/situs/config/zia_togel.json",
         //     function (data, textStatus, jqXHR) {
         //         if (textStatus == 'success') {
@@ -247,14 +424,17 @@ const func = {
 };
 
 // menambahkan info pada modal
+
 setTimeout(() => {
     var mdlBody = document.querySelector(".modal-body");
-    var p = document.createElement("p");
-    p.setAttribute("aria-label", "Close");
-    p.setAttribute("aria-hidden", "true");
-    p.classList.add("deskripsi")
-    p.textContent = "Klik di mana saja untuk menutup";
-    mdlBody.appendChild(p);
+    if (mdlBody) {
+        var p = document.createElement("p");
+        p.setAttribute("aria-label", "Close");
+        p.setAttribute("aria-hidden", "true");
+        p.classList.add("deskripsi")
+        p.textContent = "Klik di mana saja untuk menutup";
+        mdlBody.appendChild(p);
+    }
 }, 5);
 
 // menambahkan class pada image bank
