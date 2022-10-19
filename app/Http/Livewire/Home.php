@@ -65,7 +65,7 @@ class Home extends Component
     public $name_promosi_desktop, $link_promosi_desktop, $image_promosi_desktop, $name_promosi_mobile, $link_promosi_mobile, $image_promosi_mobile;
 
     // untuk before footer desktop dan mobile
-    public $title_beforePromosi_desktop, $deskripsi_beforeFooter_desktop, $title_beforePromosi_mobile, $deskripsi_beforeFooter_mobile;
+    public $title_beforeFooter_desktop, $deskripsi_beforeFooter_desktop, $title_beforeFooter_mobile, $deskripsi_beforeFooter_mobile;
 
     // untuk footer protection desktop dan mobile
     public $name_footerProtection_desktop, $link_footerProtection_desktop, $image_footerProtection_desktop, $name_footerProtection_mobile, $link_footerProtection_mobile, $image_footerProtection_mobile;
@@ -87,9 +87,18 @@ class Home extends Component
     public function render()
     {
         // dd(collect([
-        //     "file" => "https://static.hokibagus.club/ziatogel/images/popup/ziatogel_popup_bri.png",
-        //     "title" => "aplikasi ziatogel",
-        //     "slogan" => "Klik di mana saja untuk menutup"
+        //     'BCA',
+        //     'MANDIRI',
+        //     'BRI',
+        //     'BNI',
+        //     'DANAMON',
+        //     'CIMB',
+        //     'OVO',
+        //     'GOPAY',
+        //     'DANA',
+        //     'LINKAJA',
+        //     'BSI',
+        //     'MAYBANK',
         // ])->toJson());
         return view('livewire.home')->extends('layouts.app');
     }
@@ -98,6 +107,7 @@ class Home extends Component
     {
         if ($index != null) {
             if ($target == "file_headercorousel_desktop") unset($this->file_headercorousel_desktop[(int)$index]);
+            if ($target == "file_headercorousel_mobile") unset($this->file_headercorousel_mobile[(int)$index]);
         }else{
             $this->reset($target);
         }
@@ -108,12 +118,12 @@ class Home extends Component
         $data = [];
         if ($target == "file_headercorousel_desktop") {
             $data = collect($this->file_headercorousel_desktop)->map(function($e) {
-                return $e->temporaryUrl();
+                return gettype($e) == "string" ? $e : $e->temporaryUrl();
             });
         }
         if ($target == "file_headercorousel_mobile") {
             $data = collect($this->file_headercorousel_mobile)->map(function($e) {
-                return $e->temporaryUrl();
+                return gettype($e) == "string" ? $e : $e->temporaryUrl();
             });
         }
 
@@ -139,7 +149,10 @@ class Home extends Component
 
         if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
-
+        $errors = $this->getErrorBag();
+        $this->dispatchBrowserEvent("testing",[
+            "desktop" => $errors
+        ]);
 
     }
 
@@ -185,6 +198,9 @@ class Home extends Component
         $validate = [];
         $message = [];
         $attribute = [];
+
+        $this->resetErrorBag();
+        $this->resetValidation();
 
         // untuk popup modal desktop dan mobile
         if ($this->toogle_popupmodal_desktop) {
@@ -269,13 +285,16 @@ class Home extends Component
                     $message["file_headercorousel_desktop.$i.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
                 }
             }
+
         }
         if ($this->toogle_headercorousel_mobile) {
-            $validate["file_headercorousel_mobile.*"] = 'image|max:20480';
             foreach ($this->file_headercorousel_mobile as $i => $file) {
-                $orgName = $file->getClientOriginalName();
-                $message["file_headercorousel_mobile.$i.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["file_headercorousel_mobile.$i.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($file) != "string") {
+                    $validate["file_headercorousel_mobile.$i"] = 'image|max:20480';
+                    $orgName = $file->getClientOriginalName();
+                    $message["file_headercorousel_mobile.$i.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["file_headercorousel_mobile.$i.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
@@ -310,7 +329,7 @@ class Home extends Component
             foreach ($this->data_iconsosmed_desktop as $i => $val) {
                 $validate["data_iconsosmed_desktop.$i.name"] = "required";
                 $validate["data_iconsosmed_desktop.$i.link"] = "required|url";
-                $validate["data_iconsosmed_desktop.$i.image"] = "required|image|max:20480";
+                $validate["data_iconsosmed_desktop.$i.image"] = "required";
 
                 $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -318,10 +337,13 @@ class Home extends Component
                 $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
 
                 if ($val["image"]) {
-                    $file = $val["image"];
-                    $orgName = $file->getClientOriginalName();
-                    $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    if (gettype($val["image"]) != "string") {
+                        $validate["data_iconsosmed_desktop.$i.image"] = "image|max:20480";
+                        $file = $val["image"];
+                        $orgName = $file->getClientOriginalName();
+                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    }
                 }
             }
         }
@@ -330,7 +352,7 @@ class Home extends Component
             foreach ($this->data_iconsosmed_mobile as $i => $val) {
                 $validate["data_iconsosmed_mobile.$i.name"] = "required";
                 $validate["data_iconsosmed_mobile.$i.link"] = "required|url";
-                $validate["data_iconsosmed_mobile.$i.image"] = "required|image|max:20480";
+                $validate["data_iconsosmed_mobile.$i.image"] = "required";
 
                 $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -338,10 +360,13 @@ class Home extends Component
                 $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
 
                 if ($val["image"]) {
-                    $file = $val["image"];
-                    $orgName = $file->getClientOriginalName();
-                    $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    if (gettype($val["image"]) != "string") {
+                        $validate["data_iconsosmed_mobile.$i.image"] = "image|max:20480";
+                        $file = $val["image"];
+                        $orgName = $file->getClientOriginalName();
+                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    }
                 }
             }
         }
@@ -350,7 +375,7 @@ class Home extends Component
         if ($this->toogle_promosi_desktop) {
             $validate["name_promosi_desktop"] = "required";
             $validate["link_promosi_desktop"] = "required|url";
-            $validate["image_promosi_desktop"] = "required|image|max:20480";
+            $validate["image_promosi_desktop"] = "required";
 
             $message["name_promosi_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["link_promosi_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -358,17 +383,20 @@ class Home extends Component
             $message["image_promosi_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_promosi_desktop) {
-                $file = $this->image_promosi_desktop;
-                $orgName = $file->getClientOriginalName();
-                $message["image_promosi_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_promosi_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_promosi_desktop) != "string") {
+                    $validate["image_promosi_desktop"] = "image|max:20480";
+                    $file = $this->image_promosi_desktop;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_promosi_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_promosi_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
         if ($this->toogle_promosi_mobile) {
             $validate["name_promosi_mobile"] = "required";
             $validate["link_promosi_mobile"] = "required|url";
-            $validate["image_promosi_mobile"] = "required|image|max:20480";
+            $validate["image_promosi_mobile"] = "required";
 
             $message["name_promosi_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["link_promosi_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -376,26 +404,29 @@ class Home extends Component
             $message["image_promosi_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_promosi_mobile) {
-                $file = $this->image_promosi_mobile;
-                $orgName = $file->getClientOriginalName();
-                $message["image_promosi_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_promosi_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_promosi_mobile) != "string") {
+                    $validate["image_promosi_mobile"] = "image|max:20480";
+                    $file = $this->image_promosi_mobile;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_promosi_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_promosi_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
         // untuk before footer desktop dan mobile
         if ($this->toogle_beforefooter_desktop) {
-            $validate["title_beforePromosi_desktop"] = "required";
+            $validate["title_beforeFooter_desktop"] = "required";
             $validate["deskripsi_beforeFooter_desktop"] = "required";
 
-            $message["title_beforePromosi_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
+            $message["title_beforeFooter_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["deskripsi_beforeFooter_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
         }
         if ($this->toogle_beforefooter_mobile) {
-            $validate["title_beforePromosi_mobile"] = "required";
+            $validate["title_beforeFooter_mobile"] = "required";
             $validate["deskripsi_beforeFooter_mobile"] = "required";
 
-            $message["title_beforePromosi_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
+            $message["title_beforeFooter_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["deskripsi_beforeFooter_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
         }
 
@@ -403,7 +434,7 @@ class Home extends Component
         if ($this->toogle_footerprotection_desktop) {
             $validate["name_footerProtection_desktop"] = "required";
             $validate["link_footerProtection_desktop"] = "required|url";
-            $validate["image_footerProtection_desktop"] = "required|image|max:20480";
+            $validate["image_footerProtection_desktop"] = "required";
 
             $message["name_footerProtection_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["link_footerProtection_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -411,16 +442,19 @@ class Home extends Component
             $message["image_footerProtection_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
 
             if ($this->image_footerProtection_desktop) {
-                $file = $this->image_footerProtection_desktop;
-                $orgName = $file->getClientOriginalName();
-                $message["image_footerProtection_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_footerProtection_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_footerProtection_desktop) != "string") {
+                    $validate["image_footerProtection_desktop"] = "image|max:20480";
+                    $file = $this->image_footerProtection_desktop;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_footerProtection_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_footerProtection_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
         if ($this->toogle_footerprotection_mobile) {
             $validate["name_footerProtection_mobile"] = "required";
             $validate["link_footerProtection_mobile"] = "required|url";
-            $validate["image_footerProtection_mobile"] = "required|image|max:20480";
+            $validate["image_footerProtection_mobile"] = "required";
 
             $message["name_footerProtection_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
             $message["link_footerProtection_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -428,71 +462,86 @@ class Home extends Component
             $message["image_footerProtection_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
 
             if ($this->image_footerProtection_mobile) {
-                $file = $this->image_footerProtection_mobile;
-                $orgName = $file->getClientOriginalName();
-                $message["image_footerProtection_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_footerProtection_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_footerProtection_mobile) != "string") {
+                    $validate["image_footerProtection_mobile"] = "image|max:20480";
+                    $file = $this->image_footerProtection_mobile;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_footerProtection_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_footerProtection_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
-        // untuk footer protection desktop dan mobile
+        // untuk link laternatif desktop dan mobile
         if ($this->toogle_linkAlternatif_desktop) {
             $validate["listLink_linkAlternatif_desktop"] = "required";
-            $validate["image_linkAlternatif_desktop"] = "required|image|max:20480";
+            $validate["image_linkAlternatif_desktop"] = "required";
 
             $message["listLink_linkAlternatif_desktop.required"] = str_replace(":attribute","list link", trans("validation.required"));
             $message["image_linkAlternatif_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_linkAlternatif_desktop) {
-                $file = $this->image_linkAlternatif_desktop;
-                $orgName = $file->getClientOriginalName();
-                $message["image_linkAlternatif_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_linkAlternatif_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_linkAlternatif_desktop) != "string") {
+                    $validate["image_linkAlternatif_desktop"] = "image|max:20480";
+                    $file = $this->image_linkAlternatif_desktop;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_linkAlternatif_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_linkAlternatif_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
         if ($this->toogle_linkAlternatif_mobile) {
             $validate["listLink_linkAlternatif_mobile"] = "required";
-            $validate["image_linkAlternatif_mobile"] = "required|image|max:20480";
+            $validate["image_linkAlternatif_mobile"] = "required";
 
             $message["listLink_linkAlternatif_mobile.required"] = str_replace(":attribute","list link", trans("validation.required"));
             $message["image_linkAlternatif_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_linkAlternatif_mobile) {
-                $file = $this->image_linkAlternatif_mobile;
-                $orgName = $file->getClientOriginalName();
-                $message["image_linkAlternatif_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_linkAlternatif_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_linkAlternatif_mobile) != "string") {
+                    $validate["image_linkAlternatif_mobile"] = "image|max:20480";
+                    $file = $this->image_linkAlternatif_mobile;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_linkAlternatif_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_linkAlternatif_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
         // untuk barcode qris desktop dan mobile
         if ($this->toogle_barcodeqris_desktop) {
             $validate["name_barcodeqris_desktop"] = "required";
-            $validate["image_barcodeqris_desktop"] = "required|image|max:20480";
+            $validate["image_barcodeqris_desktop"] = "required";
 
             $message["name_barcodeqris_desktop.required"] = str_replace(":attribute","list link", trans("validation.required"));
             $message["image_barcodeqris_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_barcodeqris_desktop) {
-                $file = $this->image_barcodeqris_desktop;
-                $orgName = $file->getClientOriginalName();
-                $message["image_barcodeqris_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_barcodeqris_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_barcodeqris_desktop) != "string") {
+                    $validate["image_barcodeqris_desktop"] = "image|max:20480";
+                    $file = $this->image_barcodeqris_desktop;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_barcodeqris_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_barcodeqris_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
         if ($this->toogle_barcodeqris_mobile) {
             $validate["name_barcodeqris_mobile"] = "required";
-            $validate["image_barcodeqris_mobile"] = "required|image|max:20480";
+            $validate["image_barcodeqris_mobile"] = "required";
 
             $message["name_barcodeqris_mobile.required"] = str_replace(":attribute","list link", trans("validation.required"));
             $message["image_barcodeqris_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
 
             if ($this->image_barcodeqris_mobile) {
-                $file = $this->image_barcodeqris_mobile;
-                $orgName = $file->getClientOriginalName();
-                $message["image_barcodeqris_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["image_barcodeqris_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                if (gettype($this->image_barcodeqris_mobile) != "string") {
+                    $validate["image_barcodeqris_mobile"] = "image|max:20480";
+                    $file = $this->image_barcodeqris_mobile;
+                    $orgName = $file->getClientOriginalName();
+                    $message["image_barcodeqris_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                    $message["image_barcodeqris_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                }
             }
         }
 
@@ -563,6 +612,80 @@ class Home extends Component
                         $this->slogan_headerapk_desktop = $data["slogan"];
                     }
                 }
+
+                if ($item->id_fitur == 3) {
+                    $this->toogle_headercorousel_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->file_headercorousel_desktop = $data;
+                }
+
+                if ($item->id_fitur == 4) {
+                    $this->toogle_buttonaction_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->data_buttonaction_desktop = $data;
+                }
+
+                if ($item->id_fitur == 5) {
+                    $this->toogle_iconsosmed_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->data_iconsosmed_desktop = $data;
+                }
+
+                if ($item->id_fitur == 6) {
+                    $this->toogle_promosi_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_promosi_desktop = $data["name"];
+                        $this->link_promosi_desktop = $data["link"];
+                        $this->image_promosi_desktop = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 7) {
+                    $this->toogle_beforefooter_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->title_beforeFooter_desktop = $data["title"];
+                        $this->deskripsi_beforeFooter_desktop = $data["deskripsi"];
+                    }
+                }
+
+                if ($item->id_fitur == 8) {
+                    $this->toogle_footerprotection_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_footerProtection_desktop = $data["name"];
+                        $this->link_footerProtection_desktop = $data["link"];
+                        $this->image_footerProtection_desktop = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 9) {
+                    $this->toogle_linkAlternatif_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->listLink_linkAlternatif_desktop = implode("--", $data["listLink"]);
+                        $this->image_linkAlternatif_desktop = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 10) {
+                    $this->toogle_barcodeqris_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_barcodeqris_desktop = $data['name'];
+                        $this->bg_barcodeqris_desktop = $data['background'];
+                        $this->color_barcodeqris_desktop = $data['color'];
+                        $this->shadow_barcodeqris_desktop = $data['shadow'];
+                        $this->image_barcodeqris_desktop = $data['image'];
+                    }
+                }
+
+                if ($item->id_fitur == 11) {
+                    $this->toogle_sortlistbank_desktop = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->list_sortlistbank_desktop = implode("--", $data);
+                }
             }
         }
 
@@ -585,6 +708,80 @@ class Home extends Component
                         $this->title_headerapk_mobile = $data["title"];
                         $this->slogan_headerapk_mobile = $data["slogan"];
                     }
+                }
+
+                if ($item->id_fitur == 3) {
+                    $this->toogle_headercorousel_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->file_headercorousel_mobile = $data;
+                }
+
+                if ($item->id_fitur == 4) {
+                    $this->toogle_buttonaction_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->data_buttonaction_mobile = $data;
+                }
+
+                if ($item->id_fitur == 5) {
+                    $this->toogle_iconsosmed_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->data_iconsosmed_mobile = $data;
+                }
+
+                if ($item->id_fitur == 6) {
+                    $this->toogle_promosi_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_promosi_mobile = $data["name"];
+                        $this->link_promosi_mobile = $data["link"];
+                        $this->image_promosi_mobile = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 7) {
+                    $this->toogle_beforefooter_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->title_beforeFooter_mobile = $data["title"];
+                        $this->deskripsi_beforeFooter_mobile = $data["deskripsi"];
+                    }
+                }
+
+                if ($item->id_fitur == 8) {
+                    $this->toogle_footerprotection_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_footerProtection_mobile = $data["name"];
+                        $this->link_footerProtection_mobile = $data["link"];
+                        $this->image_footerProtection_mobile = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 9) {
+                    $this->toogle_linkAlternatif_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->listLink_linkAlternatif_mobile = implode("--", $data["listLink"]);
+                        $this->image_linkAlternatif_mobile = $data["image"];
+                    }
+                }
+
+                if ($item->id_fitur == 10) {
+                    $this->toogle_barcodeqris_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) {
+                        $this->name_barcodeqris_mobile = $data['name'];
+                        $this->bg_barcodeqris_mobile = $data['background'];
+                        $this->color_barcodeqris_mobile = $data['color'];
+                        $this->shadow_barcodeqris_mobile = $data['shadow'];
+                        $this->image_barcodeqris_mobile = $data['image'];
+                    }
+                }
+
+                if ($item->id_fitur == 11) {
+                    $this->toogle_sortlistbank_mobile = $item->status;
+                    $data = json_decode($item->data, true);
+                    if ($data) $this->list_sortlistbank_mobile = implode("--", $data);
                 }
             }
         }
@@ -631,7 +828,7 @@ class Home extends Component
             foreach ($this->data_iconsosmed_desktop as $i => $val) {
                 $validate["data_iconsosmed_desktop.$i.name"] = "required";
                 $validate["data_iconsosmed_desktop.$i.link"] = "required|url";
-                $validate["data_iconsosmed_desktop.$i.image"] = "required|image|max:20480";
+                $validate["data_iconsosmed_desktop.$i.image"] = "required";
 
                 $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -639,10 +836,13 @@ class Home extends Component
                 $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
 
                 if ($val["image"]) {
-                    $file = $val["image"];
-                    $orgName = $file->getClientOriginalName();
-                    $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    if (gettype($val["image"]) != "string") {
+                        $validate["data_iconsosmed_desktop.$i.image"] = "image|max:20480";
+                        $file = $val["image"];
+                        $orgName = $file->getClientOriginalName();
+                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    }
                 }
             }
         }
@@ -651,7 +851,7 @@ class Home extends Component
             foreach ($this->data_iconsosmed_mobile as $i => $val) {
                 $validate["data_iconsosmed_mobile.$i.name"] = "required";
                 $validate["data_iconsosmed_mobile.$i.link"] = "required|url";
-                $validate["data_iconsosmed_mobile.$i.image"] = "required|image|max:20480";
+                $validate["data_iconsosmed_mobile.$i.image"] = "required";
 
                 $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
                 $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
@@ -659,15 +859,19 @@ class Home extends Component
                 $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
 
                 if ($val["image"]) {
-                    $file = $val["image"];
-                    $orgName = $file->getClientOriginalName();
-                    $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    if (gettype($val["image"]) != "string") {
+                        $validate["data_iconsosmed_mobile.$i.image"] = "image|max:20480";
+                        $file = $val["image"];
+                        $orgName = $file->getClientOriginalName();
+                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    }
                 }
             }
         }
 
-        $this->validate($validate, $message, $attribute);
+        if (count($validate) > 0) $this->validate($validate, $message, $attribute);
+
         $this->dispatchBrowserEvent("closeModalSosmed",[
             "desktop" => $desktop
         ]);
@@ -748,7 +952,7 @@ class Home extends Component
             }
         }
 
-        $this->validate($validate, $message, $attribute);
+        if (count($validate) > 0) $this->validate($validate, $message, $attribute);
         $this->dispatchBrowserEvent("closeModalBtnAction",[
             "desktop" => $desktop
         ]);
@@ -766,114 +970,402 @@ class Home extends Component
         $validate = $this->validationFiled();
         if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
-        // ini untuk desktop
-        foreach ($this->dataFiturDesktop as $val) {
-            $dir = "public/images/".strtolower($this->dataSitus->name);
-            if ($val->id_fitur == 1) {
-                $dir = $dir."/popup modal";
-                $img = $this->file_popupmodal_desktop;
-                if (gettype($img) != "string") {
-                    $ext = $img->getClientOriginalExtension();
-                    $name = now()->format('Ymd-His');
-                    $img = $this->file_popupmodal_desktop->storePubliclyAs($dir, "$name.$ext");
-                    $img = url(Storage::url($img));
+        if ($this->toogle_headercorousel_desktop && count($this->file_headercorousel_desktop) == 0) $this->addError('file_headercorousel_desktop', str_replace(":attribute","file header corousel", trans("validation.required")));
+
+        if ($this->toogle_headercorousel_mobile && count($this->file_headercorousel_mobile) == 0) $this->addError('file_headercorousel_mobile', str_replace(":attribute","file header corousel", trans("validation.required")));
+
+        if ($this->toogle_buttonaction_desktop && count($this->data_buttonaction_desktop) == 0) $this->addError('data_buttonaction_desktop', str_replace(":attribute","file button action", trans("validation.required")));
+
+        if ($this->toogle_buttonaction_mobile && count($this->data_buttonaction_mobile) == 0) $this->addError('data_buttonaction_mobile', str_replace(":attribute","file button action", trans("validation.required")));
+
+        if ($this->toogle_iconsosmed_desktop && count($this->data_iconsosmed_desktop) == 0) $this->addError('data_iconsosmed_desktop', str_replace(":attribute","file icon sosmed", trans("validation.required")));
+
+        if ($this->toogle_iconsosmed_mobile && count($this->data_iconsosmed_mobile) == 0) $this->addError('data_iconsosmed_mobile', str_replace(":attribute","file icon sosmed", trans("validation.required")));
+
+        $errors = $this->getErrorBag();
+
+        if (count($errors) == 0) {
+            // ini untuk desktop
+            foreach ($this->dataFiturDesktop as $val) {
+                $dir = "public/images/".strtolower($this->dataSitus->name);
+                if ($val->id_fitur == 1) {
+                    $dir = $dir."/popup modal";
+                    $img = $this->file_popupmodal_desktop;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->file_popupmodal_desktop->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "file" => $img,
+                        "deskripsi" => $this->deskripsi_popupmodal_desktop,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_popupmodal_desktop,
+                        "data" => $data
+                    ]);
                 }
-                $data = collect([
-                    "file" => $img,
-                    "deskripsi" => $this->deskripsi_popupmodal_desktop,
-                ])->toJson();
-                fiturSitus::find($val->id)->update([
-                    "status" => $this->toogle_popupmodal_desktop,
-                    "data" => $data
-                ]);
+
+                if ($val->id_fitur == 2) {
+                    $dir = $dir."/header apk";
+                    $img = $this->file_headerapk_desktop;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->file_headerapk_desktop->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "file" => $img,
+                        "title" => $this->title_headerapk_desktop,
+                        "slogan" => $this->slogan_headerapk_desktop,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_headerapk_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 3) {
+                    $dir = $dir."/header corousel";
+                    $img = [];
+
+                    foreach ($this->file_headercorousel_desktop as $i => $file) {
+                        if (gettype($file) != "string") {
+                            $ext = $file->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-desktop-$i";
+                            $file = $file->storePubliclyAs($dir, "$name.$ext");
+                            array_push($img, url(Storage::url($file)));
+                        }else{
+                            array_push($img, $file);
+                        }
+                    }
+                    $data = collect($img)->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_headercorousel_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 4) {
+                    $data = collect($this->data_buttonaction_desktop)->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_buttonaction_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 5) {
+                    $data = collect($this->data_iconsosmed_desktop)->map(function($e) {
+                        $dir = "public/images/".strtolower($this->dataSitus->name);
+                        $dir = $dir."/icon sosmed";
+                        $img = $e['image'];
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-desktop";
+                            $img = $img->storePubliclyAs($dir, "$name.$ext");
+                            $e['image'] = url(Storage::url($img));
+                        }
+                        return $e;
+                    })->values()->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_iconsosmed_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 6) {
+                    $dir = $dir."/promosi";
+                    $img = $this->image_promosi_desktop;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->image_promosi_desktop->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_promosi_desktop,
+                        "link" => $this->link_promosi_desktop,
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_promosi_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 7) {
+                    $data = collect([
+                        "title" => $this->title_beforeFooter_desktop,
+                        "deskripsi" => $this->deskripsi_beforeFooter_desktop,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_beforefooter_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 8) {
+                    $dir = $dir."/footer protection";
+                    $img = $this->image_footerProtection_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_footerProtection_mobile,
+                        "link" => $this->link_footerProtection_mobile,
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_footerprotection_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 9) {
+                    $dir = $dir."/link alternatif";
+                    $img = $this->image_linkAlternatif_desktop;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->image_linkAlternatif_desktop->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "listLink" => explode("--", $this->listLink_linkAlternatif_desktop),
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_linkAlternatif_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 10) {
+                    $dir = $dir."/barcode qris";
+                    $img = $this->image_barcodeqris_desktop;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-desktop";
+                        $img = $this->image_barcodeqris_desktop->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_barcodeqris_desktop,
+                        "background" => $this->bg_barcodeqris_desktop,
+                        "color" => $this->color_barcodeqris_desktop,
+                        "shadow" => $this->shadow_barcodeqris_desktop,
+                        "image" => $img,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_barcodeqris_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 11) {
+                    $data = collect(explode("--", $this->list_sortlistbank_desktop))->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_sortlistbank_desktop,
+                        "data" => $data
+                    ]);
+                }
             }
 
-            if ($val->id_fitur == 2) {
-                $dir = $dir."/header apk";
-                $img = $this->file_headerapk_desktop;
-                if (gettype($img) != "string") {
-                    $ext = $img->getClientOriginalExtension();
-                    $name = now()->format('Ymd-His');
-                    $img = $this->file_headerapk_desktop->storePubliclyAs($dir, "$name.$ext");
-                    $img = url(Storage::url($img));
+            // ini untuk mobile
+            foreach ($this->dataFiturMobile as $val) {
+                $dir = "public/images/".strtolower($this->dataSitus->name);
+                if ($val->id_fitur == 1) {
+                    $dir = $dir."/popup modal";
+                    $img = $this->file_popupmodal_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->file_popupmodal_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "file" => $img,
+                        "deskripsi" => $this->deskripsi_popupmodal_mobile,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_popupmodal_mobile,
+                        "data" => $data
+                    ]);
                 }
-                $data = collect([
-                    "file" => $img,
-                    "title" => $this->title_headerapk_desktop,
-                    "slogan" => $this->slogan_headerapk_desktop,
-                ])->toJson();
-                fiturSitus::find($val->id)->update([
-                    "status" => $this->toogle_headerapk_desktop,
-                    "data" => $data
-                ]);
+
+                if ($val->id_fitur == 2) {
+                    $dir = $dir."/header apk";
+                    $img = $this->file_headerapk_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->file_headerapk_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "file" => $img,
+                        "title" => $this->title_headerapk_mobile,
+                        "slogan" => $this->slogan_headerapk_mobile,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_headerapk_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 3) {
+                    $dir = $dir."/header corousel";
+                    $img = [];
+                    foreach ($this->file_headercorousel_mobile as $i => $file) {
+                        if (gettype($file) != "string") {
+                            $ext = $file->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile-$i";
+                            $file = $file->storePubliclyAs($dir, "$name.$ext");
+                            array_push($img, url(Storage::url($file)));
+                        }else{
+                            array_push($img, $file);
+                        }
+                    }
+                    $data = collect($img)->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_headercorousel_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 4) {
+                    $data = collect($this->data_buttonaction_mobile)->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_iconsosmed_desktop,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 5) {
+                    $data = collect($this->data_iconsosmed_mobile)->map(function($e) {
+                        $dir = "public/images/".strtolower($this->dataSitus->name);
+                        $dir = $dir."/icon sosmed";
+                        $img = $e['image'];
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $img->storePubliclyAs($dir, "$name.$ext");
+                            $e['image'] = url(Storage::url($img));
+                        }
+                        return $e;
+                    })->values()->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_iconsosmed_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 6) {
+                    $dir = $dir."/promosi";
+                    $img = $this->image_promosi_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->image_promosi_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_promosi_mobile,
+                        "link" => $this->link_promosi_mobile,
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_promosi_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 7) {
+                    $data = collect([
+                        "title" => $this->title_beforeFooter_mobile,
+                        "deskripsi" => $this->deskripsi_beforeFooter_mobile,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_beforefooter_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 8) {
+                    $dir = $dir."/footer protection";
+                    $img = $this->image_footerProtection_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_footerProtection_mobile,
+                        "link" => $this->link_footerProtection_mobile,
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_footerprotection_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 9) {
+                    $dir = $dir."/link alternatif";
+                    $img = $this->image_linkAlternatif_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->image_linkAlternatif_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "listLink" => explode("--", $this->listLink_linkAlternatif_mobile),
+                        "image" => $img
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_linkAlternatif_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 10) {
+                    $dir = $dir."/barcode qris";
+                    $img = $this->image_barcodeqris_mobile;
+                    if (gettype($img) != "string") {
+                        $ext = $img->getClientOriginalExtension();
+                        $name = now()->format('Ymd-His')."-mobile";
+                        $img = $this->image_barcodeqris_mobile->storePubliclyAs($dir, "$name.$ext");
+                        $img = url(Storage::url($img));
+                    }
+                    $data = collect([
+                        "name" => $this->name_barcodeqris_mobile,
+                        "background" => $this->bg_barcodeqris_mobile,
+                        "color" => $this->color_barcodeqris_mobile,
+                        "shadow" => $this->shadow_barcodeqris_mobile,
+                        "image" => $img,
+                    ])->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_barcodeqris_mobile,
+                        "data" => $data
+                    ]);
+                }
+
+                if ($val->id_fitur == 11) {
+                    $data = collect(explode("--", $this->list_sortlistbank_mobile))->toJson();
+                    fiturSitus::find($val->id)->update([
+                        "status" => $this->toogle_sortlistbank_mobile,
+                        "data" => $data
+                    ]);
+                }
             }
         }
 
-        // ini untuk mobile
-        foreach ($this->dataFiturMobile as $val) {
-            $dir = "public/images/".strtolower($this->dataSitus->name);
-            if ($val->id_fitur == 1) {
-                $dir = $dir."/popup modal";
-                $img = $this->file_popupmodal_mobile;
-                if (gettype($img) != "string") {
-                    $ext = $img->getClientOriginalExtension();
-                    $name = now()->format('Ymd-His');
-                    $img = $this->file_popupmodal_mobile->storePubliclyAs($dir, "$name.$ext");
-                    $img = url(Storage::url($img));
-                }
-                $data = collect([
-                    "file" => $img,
-                    "deskripsi" => $this->deskripsi_popupmodal_mobile,
-                ])->toJson();
-                fiturSitus::find($val->id)->update([
-                    "status" => $this->toogle_popupmodal_mobile,
-                    "data" => $data
-                ]);
-            }
-
-            if ($val->id_fitur == 2) {
-                $dir = $dir."/header apk";
-                $img = $this->file_headerapk_mobile;
-                if (gettype($img) != "string") {
-                    $ext = $img->getClientOriginalExtension();
-                    $name = now()->format('Ymd-His');
-                    $img = $this->file_headerapk_mobile->storePubliclyAs($dir, "$name.$ext");
-                    $img = url(Storage::url($img));
-                }
-                $data = collect([
-                    "file" => $img,
-                    "title" => $this->title_headerapk_mobile,
-                    "slogan" => $this->slogan_headerapk_mobile,
-                ])->toJson();
-                fiturSitus::find($val->id)->update([
-                    "status" => $this->toogle_headerapk_mobile,
-                    "data" => $data
-                ]);
-            }
-        }
-        // dataFiturDesktop
-        // dataFiturMobile
-        // toogle_popupmodal_desktop
-        // toogle_headerapk_desktop
-        // toogle_headercorousel_desktop
-        // toogle_buttonaction_desktop
-        // toogle_iconsosmed_desktop
-        // toogle_promosi_desktop
-        // toogle_beforefooter_desktop
-        // toogle_footerprotection_desktop
-        // toogle_linkAlternatif_desktop
-        // toogle_barcodeqris_desktop
-        // toogle_sortlistbank_desktop
-        // toogle_popupmodal_mobile
-        // toogle_headerapk_mobile
-        // toogle_headercorousel_mobile
-        // toogle_buttonaction_mobile
-        // toogle_iconsosmed_mobile
-        // toogle_promosi_mobile
-        // toogle_beforefooter_mobile
-        // toogle_footerprotection_mobile
-        // toogle_linkAlternatif_mobile
-        // toogle_barcodeqris_mobile
-        // toogle_sortlistbank_mobile
     }
 }

@@ -202,6 +202,11 @@
                                                                     <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`"></div>
                                                                 </div>
                                                             </div>
+                                                            @error('file_headercorousel_desktop')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
                                                             @error('file_headercorousel_desktop.*')
                                                                 @foreach ($errors->get("file_headercorousel_desktop.*") as $msg)
                                                                     @foreach ($msg as $item)
@@ -268,6 +273,12 @@
                                                                 Belum ada data. silahkan klik <i class="fa fa-plus cursor-pointer" wire:click="showFormBtnAction(true)"></i> untuk menambahkan.
                                                             </span>
                                                         @endif
+
+                                                        @error('data_buttonaction_desktop')
+                                                            <span class="invalid-feedback d-block text-start" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -292,6 +303,11 @@
                                                                 Belum ada data. silahkan klik <i class="fa fa-plus cursor-pointer" wire:click="showFormSosmed(true)"></i> untuk menambahkan.
                                                             @endif
                                                         </span>
+                                                        @error('data_iconsosmed_desktop')
+                                                            <span class="invalid-feedback d-block text-start" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,8 +368,12 @@
                                                             @enderror
                                                             @if ($image_promosi_desktop && !$errors->has('image_promosi_desktop'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_promosi_desktop->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_promosi_desktop')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_promosi_desktop) == "string")
+                                                                        <img src="{{ $image_promosi_desktop }}">
+                                                                    @else
+                                                                        <img src="{{ $image_promosi_desktop->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_promosi_desktop')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -380,9 +400,9 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Title</label>
-                                                                <input class="form-control" placeholder="Masukan Title" type="text" wire:model="title_beforePromosi_desktop">
+                                                                <input class="form-control" placeholder="Masukan Title" type="text" wire:model="title_beforeFooter_desktop">
                                                             </div>
-                                                            @error('title_beforePromosi_desktop')
+                                                            @error('title_beforeFooter_desktop')
                                                                 <span class="invalid-feedback d-block text-start" role="alert">
                                                                     <strong>{{ $message }}</strong>
                                                                 </span>
@@ -461,8 +481,12 @@
                                                             @enderror
                                                             @if ($image_footerProtection_desktop && !$errors->has('image_footerProtection_desktop'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_footerProtection_desktop->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_footerProtection_desktop')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_footerProtection_desktop) == "string")
+                                                                        <img src="{{ $image_footerProtection_desktop }}">
+                                                                    @else
+                                                                        <img src="{{ $image_footerProtection_desktop->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_footerProtection_desktop')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -506,8 +530,12 @@
                                                             @enderror
                                                             @if ($image_linkAlternatif_desktop && !$errors->has('image_linkAlternatif_desktop'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_linkAlternatif_desktop->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_linkAlternatif_desktop')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_linkAlternatif_desktop) == "string")
+                                                                        <img src="{{ $image_linkAlternatif_desktop }}">
+                                                                    @else
+                                                                        <img src="{{ $image_linkAlternatif_desktop->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_linkAlternatif_desktop')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -605,7 +633,11 @@
                                                             @enderror
                                                             @if ($image_barcodeqris_desktop && !$errors->has('image_barcodeqris_desktop'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_barcodeqris_desktop->temporaryUrl() }}">
+                                                                    @if (gettype($image_barcodeqris_desktop) == "string")
+                                                                        <img src="{{ $image_barcodeqris_desktop }}">
+                                                                    @else
+                                                                        <img src="{{ $image_barcodeqris_desktop->temporaryUrl() }}">
+                                                                    @endif
                                                                     <div class="removePreviewImage" wire:click="removeImage('image_barcodeqris_desktop')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
@@ -811,6 +843,11 @@
                                                                     <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`"></div>
                                                                 </div>
                                                             </div>
+                                                            @error('file_headercorousel_mobile')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
                                                             @error('file_temp_headercorousel_mobile.*')
                                                                 @foreach ($errors->get("file_temp_headercorousel_mobile.*") as $msg)
                                                                     @foreach ($msg as $item)
@@ -826,8 +863,12 @@
                                                                     @foreach ($file_headercorousel_mobile as $i => $file)
                                                                         @if ($n <= 3)
                                                                             <div class="mt-2 previewImg">
-                                                                                <img src="{{ $file->temporaryUrl() }}">
-                                                                                <div class="removePreviewImage" wire:click="removeImage('file_headercorousel_mobile', '{{$i}}')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                                @if (gettype($file) == "string")
+                                                                                    <img src="{{ $file }}">
+                                                                                @else
+                                                                                    <img src="{{ $file->temporaryUrl() }}">
+                                                                                @endif
+                                                                                <div class="removePreviewImage" wire:click="removeImage('file_headercorousel_mobile', '{{$i}}')">
                                                                                     <i class="fe fe-x"></i>
                                                                                 </div>
                                                                             </div>
@@ -872,6 +913,11 @@
                                                             Belum ada data. silahkan klik <i class="fa fa-plus cursor-pointer" wire:click="showFormBtnAction(false)"></i> untuk menambahkan.
                                                         </span>
                                                     @endif
+                                                    @error('data_buttonaction_mobile')
+                                                        <span class="invalid-feedback d-block text-start" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         @endif
@@ -895,6 +941,11 @@
                                                                 Belum ada data. silahkan klik <i class="fa fa-plus cursor-pointer" wire:click="showFormSosmed(false)"></i> untuk menambahkan.
                                                             @endif
                                                         </span>
+                                                        @error('data_iconsosmed_mobile')
+                                                            <span class="invalid-feedback d-block text-start" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -955,8 +1006,12 @@
                                                             @enderror
                                                             @if ($image_promosi_mobile && !$errors->has('image_promosi_mobile'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_promosi_mobile->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_promosi_mobile')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_promosi_mobile) == "string")
+                                                                        <img src="{{ $image_promosi_mobile }}">
+                                                                    @else
+                                                                        <img src="{{ $image_promosi_mobile->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_promosi_mobile')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -983,9 +1038,9 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Title</label>
-                                                                <input class="form-control" placeholder="Masukan Title" type="text" wire:model="title_beforePromosi_mobile">
+                                                                <input class="form-control" placeholder="Masukan Title" type="text" wire:model="title_beforeFooter_mobile">
                                                             </div>
-                                                            @error('title_beforePromosi_mobile')
+                                                            @error('title_beforeFooter_mobile')
                                                                 <span class="invalid-feedback d-block text-start" role="alert">
                                                                     <strong>{{ $message }}</strong>
                                                                 </span>
@@ -1064,8 +1119,12 @@
                                                             @enderror
                                                             @if ($image_footerProtection_mobile && !$errors->has('image_footerProtection_mobile'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_footerProtection_mobile->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_footerProtection_mobile')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_footerProtection_mobile) == "string")
+                                                                        <img src="{{ $image_footerProtection_mobile }}">
+                                                                    @else
+                                                                        <img src="{{ $image_footerProtection_mobile->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_footerProtection_mobile')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -1109,8 +1168,12 @@
                                                             @enderror
                                                             @if ($image_linkAlternatif_mobile && !$errors->has('image_linkAlternatif_mobile'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_linkAlternatif_mobile->temporaryUrl() }}">
-                                                                    <div class="removePreviewImage" wire:click="removeImage('image_linkAlternatif_mobile')" onclick="$(this).closest('.switch_section').find('input').val('')">
+                                                                    @if (gettype($image_linkAlternatif_mobile) == "string")
+                                                                        <img src="{{ $image_linkAlternatif_mobile }}">
+                                                                    @else
+                                                                        <img src="{{ $image_linkAlternatif_mobile->temporaryUrl() }}">
+                                                                    @endif
+                                                                    <div class="removePreviewImage" wire:click="removeImage('image_linkAlternatif_mobile')" >
                                                                         <i class="fe fe-x"></i>
                                                                     </div>
                                                                 </div>
@@ -1208,7 +1271,11 @@
                                                             @enderror
                                                             @if ($image_barcodeqris_mobile && !$errors->has('image_barcodeqris_mobile'))
                                                                 <div class="mt-2 previewImg">
-                                                                    <img src="{{ $image_barcodeqris_mobile->temporaryUrl() }}">
+                                                                    @if (gettype($image_barcodeqris_mobile) == "string")
+                                                                        <img src="{{ $image_barcodeqris_mobile }}">
+                                                                    @else
+                                                                        <img src="{{ $image_barcodeqris_mobile->temporaryUrl() }}">
+                                                                    @endif
                                                                     <div class="removePreviewImage" wire:click="removeImage('image_barcodeqris_mobile')">
                                                                         <i class="fe fe-x"></i>
                                                                     </div>

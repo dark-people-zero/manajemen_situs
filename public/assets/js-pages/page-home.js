@@ -41,10 +41,6 @@ document.addEventListener('showModalMore', function (e) {
     $("#previewIMageModal").modal("show");
 });
 
-document.addEventListener('testing', function (e) {
-    console.log(e.detail);
-});
-
 function changeCheckbox(self) {
     var type = $(self).data('type'),
         target = $(self).data('target');
@@ -107,80 +103,6 @@ document.addEventListener('livewire:update', function (e) {
     for (let i = 0; i < $(".resize").length; i++) resize($(".resize")[i]);
 })
 
-function editorMirror(target) {
-    var saveTarget = target.getAttribute("data-target");
-    var optionCodeMirrorBtnActionDesktop = {
-        theme: "yonce",
-        height: "auto",
-        viewportMargin: Infinity,
-        mode: {
-            name: "javascript",
-            json: true,
-            statementIndent: 2
-        },
-        lineNumbers: true,
-        lineWrapping: true,
-        indentWithTabs: false,
-        tabSize: 2,
-        autoCloseTags: true,
-        autoCloseBrackets: true,
-        foldGutter: true,
-        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-        value: "asasas"
-    };
-    var editor = CodeMirror.fromTextArea(target, optionCodeMirrorBtnActionDesktop);
-
-    var panel = $(`
-        <div class="panel">
-            <span>Masukkan pengaturan disini.</span>
-            <div>
-                <a href="javascript:void(0)" class="fullsceen">
-                    <i class="fa fa-expand"></i>
-                </a>
-                <a href="javascript:void(0)" class="minimize">
-                    <i class="fa fa-compress"></i>
-                </a>
-            </div>
-        </div>
-    `);
-
-    panel.find(".fullsceen").click(function() {
-        if (!document.fullscreenElement) {
-            $(this).closest('.panel').parent()[0]?.requestFullscreen()
-            editor.setOption("fullScreen", !editor.getOption("fullScreen"));
-            $(this).closest('.panel').addClass("fullScreen-panel");
-        }
-    });
-
-    panel.find(".minimize").click(function() {
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
-            if (editor.getOption("fullScreen")) editor.setOption("fullScreen", false);
-            $(this).closest('.panel').removeClass("fullScreen-panel");
-
-        }
-    });
-
-    editor.addPanel(panel[0], {
-        position: "top",
-        stable: true
-    });
-
-    editor.on("change", function(ed,a) {
-        const val = ed.doc.getValue();
-        window.livewire.find(lvUser)[saveTarget] = val;
-    });
-
-    setTimeout(() => {
-        panel.parent()[0].addEventListener("fullscreenchange", function(e) {
-            if (!document.fullscreenElement) {
-                if (editor.getOption("fullScreen")) editor.setOption("fullScreen", false);
-                $(e.target).find('.panel').removeClass("fullScreen-panel");
-            }
-        })
-    }, 1000);
-}
-
 document.addEventListener("showModalSosmed", function(e) {
     var desktop = e.detail.desktop;
     if(desktop) {
@@ -197,8 +119,6 @@ document.addEventListener("closeModalSosmed", function(e) {
     }else{
         $("#formAddSosmedMobile").modal("hide");
     }
-
-    console.log(e.detail);
 });
 
 document.addEventListener("showModalBtnAction", function(e) {
@@ -231,6 +151,10 @@ function resize(self) {
     $(self).css('height', 'auto');
     $(self).css('height', height+'px');
 }
+
+document.addEventListener('testing', function (e) {
+    console.log(e.detail);
+});
 
 
 

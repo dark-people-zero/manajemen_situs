@@ -1,26 +1,7 @@
 @section('styles')
     <link href="{{asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/switcher/css/switcher.css')}}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('assets/plugins/codemirror-5.65.9/lib/codemirror.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/codemirror-5.65.9/theme/yonce.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/foldgutter.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/codemirror-5.65.9/addon/display/fullscreen.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/coloris/coloris.min.css') }}">
-
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/lib/codemirror.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/mode/javascript/javascript.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/edit/closetag.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/edit/closebrackets.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/edit/trailingspace.js') }}"></script>
-
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/brace-fold.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/comment-fold.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/foldcode.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/foldgutter.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/indent-fold.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/fold/markdown-fold.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/display/panel.js') }}"></script>
-    <script src="{{ asset('assets/plugins/codemirror-5.65.9/addon/display/fullscreen.js') }}"></script>
 @endsection
 
 <div id="content-home">
