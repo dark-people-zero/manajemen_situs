@@ -274,14 +274,15 @@ const func = {
             $(data).insertAfter(".button-green");
         },
         iconSosmed: (data) => {
-            var icon = data.data.filter((e) => e.status).map((e) => {
+            var icon = data.filter((e) => e.status).map((e) => {
                 return `<a href="${e.link}" target="_blank">
-                            <img src="${e.img}" alt="${e.name}">
+                            <img src="${e.image}" alt="${e.name}">
                         </a>`;
             })
+
             var sos = $(`
                 <div class="icon-sosmed">
-                    <p class="deskripsi">${data.deskripsi}</p>
+                    <p class="deskripsi">Klik icon sosmed di bawah ini untuk hubungi operator :</p>
                     <div class="icon">${icon.join('')}</div>
                 </div>
             `)
@@ -291,7 +292,7 @@ const func = {
         promosi: (data) => {
             var pro = $(`
                 <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
-                    <img src="${data.img}">
+                    <img src="${data.image}">
                 </a>
             `);
             pro.insertBefore($('.inner-wrap'))
@@ -311,7 +312,7 @@ const func = {
                 <div class="wrapper">
                     <div class="center-text">
                     <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
-                        <img alt="${data.name}" src="${data.img}" style="margin: 0 auto;">
+                        <img alt="${data.name}" src="${data.image}" style="margin: 0 auto;">
                     </a>
                     </div>
                 </div>
@@ -319,6 +320,8 @@ const func = {
 
             $('.footer').append(footer);
         },
+
+
     },
     load: () => {
         var loc = document.location.href;
@@ -372,6 +375,16 @@ const func = {
                                 if (el.id_fitur == 3 && el.status) func.mobile.headerCorousel(el.data);
 
                                 if (el.id_fitur == 4 && el.status) func.mobile.btnAction(el.data);
+
+                                if (el.id_fitur == 5 && el.status) func.mobile.iconSosmed(el.data);
+
+                                if (el.id_fitur == 6 && el.status) func.mobile.promosi(el.data);
+
+                                if (el.id_fitur == 7 && el.status) func.mobile.beforeFooter(el.data);
+
+                                if (el.id_fitur == 8 && el.status) func.mobile.footerProtection(el.data);
+
+
 
 
                                 // untuk hide loading
