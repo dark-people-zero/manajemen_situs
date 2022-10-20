@@ -237,7 +237,7 @@
                         <li><a href="#"><i class="fa fa-window-restore"></i>&nbsp;Promosi</a></li>
                     </ul>
                     <div class="sidebar-button" align="center">
-                        <a class="btn btn-theme" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daftar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a class="btn btn-theme" href="#">Daftar</a>
                     </div>
                     <!-- END NAV -->
                     <div class="results">
@@ -438,6 +438,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- LATEST RESULTS -->
                     <div id="latest-results" class="margin-top-15">
 
@@ -582,6 +583,8 @@
                                     src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0')}}"></div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

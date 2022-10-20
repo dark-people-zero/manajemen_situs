@@ -1121,7 +1121,7 @@ class Home extends Component
                         "image" => $img
                     ])->toJson();
                     fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_footerprotection_mobile,
+                        "status" => $this->toogle_footerprotection_desktop,
                         "data" => $data
                     ]);
                 }

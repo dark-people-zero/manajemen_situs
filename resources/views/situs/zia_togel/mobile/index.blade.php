@@ -352,8 +352,27 @@
 
 
             <!-- ini manggil script dari cloud disini -->
-            <div id="loadingCustom" style=" position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999999; background-image: url(http://127.0.0.1:8000/situs/assets/zia_togel/loading.gif); background-repeat: no-repeat; background-position: center; background-size: cover;">
-            </div>
+            <style>
+                #loadingCustom {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 999999;
+                    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/b6e0b072897469.5bf6e79950d23.gif');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                @media (min-width: 576px) {
+                    /* yg besar diisni */
+                    #loadingCustom {
+                        background-image: url("https://gifimage.net/wp-content/uploads/2017/09/animasi-loading-bergerak-gif-2.gif") !important;
+                    }
+                }
+            </style>
+            <div id="loadingCustom"></div>
             <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
             <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 

@@ -105,11 +105,10 @@ const func = {
                         <img src="${e}" width="840px" height="482" />
                     </div>
                 `;
-            });
+            }).join("");
             var template = $(`<div class="owl-carousel owl-theme">${data}</div>`);
 
             template.owlCarousel({
-                singleItem: true,
                 stopOnHover: true,
                 transitionStyle: "fade",
                 addClassActive: true,
@@ -164,37 +163,128 @@ const func = {
             target.find('.navigation .prev').click(() => template.trigger("owl.prev"));
 
         },
+        btnAction: (data) => {
+            data = data.filter(e => e.status).map(e => {
+                return `<a class="btn btn-custom ${e.class}" href="${e.link}" style="${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
+            }).join("");
 
-
-
-
-
-        promosi: (data) => {
-            $(`
-                <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
-                    <img src="${data.img}">
-                </a>
-            `).insertBefore($("#latest-results"));
+            $(".sidebar-button").append($(data));
         },
-        linkAlter: (data) => {
-            console.log(data);
-            var list = $(`
-                <div class="linkalte-container">
-                    <img src="${data.img}" class="linkalte-btn">
-                    <ul class="linkalte-body"></ul>
+        iconSosmed: (data) => {
+            var icon = data.filter(e => e.status).map(e => {
+                return `
+                    <div class="icon-item">
+                        <a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>
+                    </div>
+                `;
+            }).join("");
+
+            var template = $(`
+                <div class="icon-sosmed">
+                    <div class="icon-info">Klik icon sosmed di bawah ini untuk hubungi operator :</div>
+                    <div class="icon-container">${icon}</div>
                 </div>
             `);
 
-            data.listLink.forEach(e => {
-                list.find("ul").append($(`
+            $(".blog-posts").append(template);
+        },
+        promosi: (data) => {
+            $(`
+                <div class="promosi">
+                    <a href="${data.link}" target="_blank" title="${data.name}">
+                        <img src="${data.image}" alt="${data.name}">
+                    </a>
+                </div>
+            `).insertBefore($("#latest-results"));
+        },
+        beforeFooter: (data) => {
+            var template = $(`
+                <div class="before-footer container">
+                    <h2>${data.deskripsi}</h2>
+                </div>
+            `);
+
+            $("#footer .footer-main").prepend(template);
+        },
+        footerProtection: (data) => {
+            var template = $(`
+                <div class="container footer-protection">
+                    <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
+                        <img alt="${data.name}" src="${data.image}">
+                    </a>
+                </div>
+            `);
+
+            $("#footer .footer-main .footer-bottom").append(template);
+        },
+        linkAlter: (data) => {
+            var listLink = data.listLink.map(e => {
+                return `
                     <li>
                         <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
                     </li>
-                `));
-            });
+                `;
+            }).join("")
 
-            $('body').append(list);
+            var template = $(`
+                <div class="linkalte-container">
+                    <img src="${data.image}" class="linkalte-btn">
+                    <ul class="linkalte-body">${listLink}</ul>
+                </div>
+            `);
 
+            $('body').append(template);
+
+        },
+        barcodeQris: (data) => {
+
+            var btn = $(`<a class="btn btn-custom btn-success text-uppercase" href="javascript:void(0);">${data.name}</a>`);
+            if (data.background) btn.css("background", data.bbackground);
+            if (data.color) btn.css("color", data.bcolor);
+
+            var mdl = $(`
+                <div class="modal fade" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="${data.image}" width="600" height="350" class="imgads">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            btn.click(() => mdl.modal("show"));
+
+            btn.insertAfter(".sidebar-button .btn-theme");
+            $('body').append(mdl);
+        },
+        sortBank: (data) => {
+            var targetReplace = $('.bankscroll');
+            var listImg = $('.bankscroll .owl-item .item');
+            if (listImg.length > 0) {
+                for (let i = 0; i < listImg.length; i++) {
+                    var element = $(listImg[i]);
+                    var img = element.find("img").attr("src").split("/").at(-1).split(".")[0];
+                    if(img == "nofound") img = "mandiri";
+                    if(img == "cimb-2") img = "cimb";
+
+                    img = img.toUpperCase();
+                    index = data.findIndex(e => e == img);
+                    if (index > -1) {
+                        element.find("div").addClass(img.toLocaleLowerCase());
+                        data[index] = element[0].outerHTML;
+                    }
+
+                }
+                data = data.filter(e => e.search('item') > 0);
+                var newItem = $(`<div class="bankscroll">${data.join("")}</div>`);
+                newItem.owlCarousel({ autoPlay: 5000, items: 5, itemsDesktop: false });
+                newItem.insertBefore(targetReplace);
+                targetReplace.remove();
+            }
         }
     },
     mobile: {
@@ -261,8 +351,10 @@ const func = {
             })
             var owl = $(`<div class="owl-carousel owl-theme">${data.join('')}</div>`);
             owl.owlCarousel({
+                transitionStyle: "fade",
+                addClassActive: true,
                 loop: true,
-                margin: 10,
+                autoPlay: 3000,
             })
             $('#content .container').prepend(owl);
         },
@@ -320,6 +412,79 @@ const func = {
 
             $('.footer').append(footer);
         },
+        linkAlter: (data) => {
+            var listLink = data.listLink.map(e => {
+                return `
+                    <li>
+                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </li>
+                `;
+            }).join("")
+
+            var template = $(`
+                <div class="linkalte-container">
+                    <img src="${data.image}" class="linkalte-btn">
+                    <ul class="linkalte-body">${listLink}</ul>
+                </div>
+            `);
+
+            $('body').append(template);
+
+        },
+        barcodeQris: (data) => {
+            var btn = $(`
+                <div class="btnqris">
+                    <a class="buttons button-blue text-uppercase" href="javascript:void(0);">${data.name}</a>
+                </div>
+            `);
+            if (data.background) btn.css("background", data.bbackground);
+            if (data.color) btn.css("color", data.bcolor);
+
+            var mdl = $(`
+                <div class="modal fade" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="${data.image}" width="600" height="350" class="imgads">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            mdl.click(function(e) {
+                var x = $(e.target).closest('.modal-content');
+                if (x.length == 0) mdl.removeClass('show');
+            });
+
+            btn.click(() => mdl.addClass("show"));
+
+            $(".wrapper2").prepend(btn);
+            $('body').append(mdl);
+        },
+        sortBank: (data) => {
+            var targetReplace = $('#slider-hasil');
+            var listImg = $('.bank');
+            if (listImg.length > 0) {
+                for (let i = 0; i < listImg.length; i++) {
+                    var element = $(listImg[i]);
+                    var img = element.children()[1].getAttribute("src").split("/").at(-1).split(".")[0];
+                    if(img == "nofound") img = "mandiri";
+                    if(img == "cimb-2") img = "cimb";
+
+                    img = img.toUpperCase();
+                    index = data.findIndex(e => e == img);
+                    if (index > -1) {
+                        data[index] = element[0].outerHTML;
+                    }
+
+                }
+                data = data.filter(e => e.search('bank') > 0);
+                var newItem = $(`<div class="listNewBank">${data.join("")}</div>`);
+                newItem.insertAfter(targetReplace);
+                listImg.parent().remove();
+            }
+        }
 
 
     },
@@ -338,14 +503,12 @@ const func = {
             url: baseUrl+"config/19",
             dataType: "json",
             success: function (response) {
-                console.log(response);
                 if (response) {
                     if (response.status_desktop && !isMobile) {
-                        console.log("ini desktop");
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {
-                                if (el.id == 1) {
+                                if (el.id_fitur == 1) {
                                     if (el.status) {
                                         func.desktop.modal(el.data);
                                     }else{
@@ -353,9 +516,25 @@ const func = {
                                     }
                                 }
 
-                                if (el.id == 2 && el.status) func.desktop.headerApk(el.data);
+                                if (el.id_fitur == 2 && el.status) func.desktop.headerApk(el.data);
 
-                                if (el.id == 3 && el.status) func.desktop.headerCorousel(el.data);
+                                if (el.id_fitur == 3 && el.status) func.desktop.headerCorousel(el.data);
+
+                                if (el.id_fitur == 4 && el.status) func.desktop.btnAction(el.data);
+
+                                if (el.id_fitur == 5 && el.status) func.desktop.iconSosmed(el.data);
+
+                                if (el.id_fitur == 6 && el.status) func.desktop.promosi(el.data);
+
+                                if (el.id_fitur == 7 && el.status) func.desktop.beforeFooter(el.data);
+
+                                if (el.id_fitur == 8 && el.status) func.desktop.footerProtection(el.data);
+
+                                if (el.id_fitur == 9 && el.status) func.desktop.linkAlter(el.data);
+
+                                if (el.id_fitur == 10 && el.status) func.desktop.barcodeQris(el.data);
+
+                                if (el.id_fitur == 11 && el.status) func.desktop.sortBank(el.data);
 
                                 // untuk hide loading
                                 if ((i+1) == length) $("#loadingCustom").hide();
@@ -364,7 +543,6 @@ const func = {
                             $("#loadingCustom").hide();
                         }
                     }else if(response.status_mobile && isMobile){
-                        console.log("ini mobile");
                         if (response.fitur_situs.mobile) {
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
@@ -384,6 +562,12 @@ const func = {
 
                                 if (el.id_fitur == 8 && el.status) func.mobile.footerProtection(el.data);
 
+                                if (el.id_fitur == 9 && el.status) func.mobile.linkAlter(el.data);
+
+                                if (el.id_fitur == 10 && el.status) func.mobile.barcodeQris(el.data);
+
+                                if (el.id_fitur == 11 && el.status) func.mobile.sortBank(el.data);
+
 
 
 
@@ -402,55 +586,6 @@ const func = {
 
             }
         });
-
-        // $.getJSON("/situs/config/zia_togel.json",
-        //     function (data, textStatus, jqXHR) {
-        //         if (textStatus == 'success') {
-        //             if (isMobile) {
-        //                 if(data.mobile.headerApk) {
-        //                     if(data.mobile.headerApk.status) func.mobile.headerApk(data.mobile.headerApk);
-        //                 }
-
-        //                 if(data.mobile.banner) {
-        //                     if(data.mobile.banner.status) func.mobile.banner(data.mobile.banner.data);
-        //                 }
-
-        //                 if (data.mobile.btnAction) {
-        //                     if (data.mobile.btnAction.length > 0) func.mobile.btnAction(data.mobile.btnAction);
-        //                 }
-
-        //                 if (data.mobile.iconSosmed) {
-        //                     if (data.mobile.iconSosmed.data.length > 0) func.mobile.iconSosmed(data.mobile.iconSosmed);
-        //                 }
-
-        //                 if (data.mobile.promosi) {
-        //                     if (data.mobile.promosi.status) func.mobile.promosi(data.mobile.promosi);
-        //                 }
-
-        //                 if (data.mobile.beforeFooter) {
-        //                     if (data.mobile.beforeFooter.status) func.mobile.beforeFooter(data.mobile.beforeFooter);
-        //                 }
-
-        //                 if (data.mobile.footerProtection) {
-        //                     if (data.mobile.footerProtection.status) func.mobile.footerProtection(data.mobile.footerProtection);
-        //                 }
-
-        //                 if (data.mobile.modalPopup) {
-        //                     if (data.mobile.modalPopup.status) func.mobile.modalPopup(data.mobile.modalPopup);
-        //                 }
-        //             }else{
-        //                 if (data.desktop) {
-        //                     if (data.desktop.promosi.status) func.desktop.promosi(data.desktop.promosi);
-        //                 }
-
-        //                 if (data.desktop.linkAlter) {
-        //                     if (data.desktop.linkAlter.status) func.desktop.linkAlter(data.desktop.linkAlter);
-        //                 }
-        //             }
-
-        //         }
-        //     }
-        // );
     },
     ready: () => {
 
@@ -472,75 +607,22 @@ setTimeout(() => {
 }, 5);
 
 // menambahkan class pada image bank
-// var insertClass = setInterval(() => {
-//     var listBank = document.querySelectorAll('.bankscroll .owl-item .item');
-//     if (listBank.length > 0) {
-//         clearInterval(insertClass);
-//         var loc = document.location.href;
-//         var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
-//         if (!isMobile) {
-//             // add class bank
-//             for (let i = 0; i < listBank.length; i++) {
-//                 const element = listBank[i];
-//                 var targetClass = element.children[0];
-//                 var img = element.children[1].currentSrc;
-//                 img = img.split("/").at(-1).split('.')[0].toLowerCase();
-//                 img = img == 'nofound' ? 'mandiri' : img;
-//                 targetClass.classList.add(img);
-//             }
-//         }
-//     }
-// }, 1);
-
-
-var replaceCorouselBank = setInterval(() => {
-    var targetReplace = document.querySelector('.bankscroll');
-    var listImg = document.querySelectorAll('.bankscroll .owl-item .item img');
-    var urutan = [
-        'BCA',
-        'MANDIRI',
-        'BRI',
-        'BNI',
-        'DANAMON',
-        'CIMB',
-        'OVO',
-        'GOPAY',
-        'DANA',
-        'LINKAJA',
-        'BSI',
-        'MAYBANK',
-    ];
-
-    if (listImg.length > 0) {
-        clearInterval(replaceCorouselBank);
-        var div = document.createElement("div");
-        div.classList.add("bankscroll");
-
-        urutan.forEach(urut => {
-            urut = urut.toLocaleLowerCase();
-            for (let i = 0; i < listImg.length; i++) {
-                const element = listImg[i];
-                const img = element.getAttribute("src").split("/").at(-1);
-                if (img.toLocaleLowerCase().indexOf(urut) > -1) {
-                    var x = element.closest('.item');
-                    x.children[0].classList.add(urut);
-                    div.appendChild(x);
-                }else{
-                    if (urut == 'mandiri') {
-                        var urut2 = 'nofound';
-                        if (img.toLocaleLowerCase().indexOf(urut2) > -1) {
-                            var x = element.closest('.item');
-                            x.children[0].classList.add(urut);
-                            div.appendChild(x);
-                        }
-                    }
-                }
+var insertClass = setInterval(() => {
+    var listBank = document.querySelectorAll('.bankscroll .owl-item .item img');
+    if (listBank.length > 0) {
+        clearInterval(insertClass);
+        var loc = document.location.href;
+        var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : false);
+        if (!isMobile) {
+            // add class bank
+            for (let i = 0; i < listBank.length; i++) {
+                const element = listBank[i];
+                var targetClass = element.closest('.item').children[0];
+                var img = element.getAttribute('src');
+                img = img.split("/").at(-1).split('.')[0].toLowerCase();
+                img = img == 'nofound' ? 'mandiri' : img;
+                if(img) targetClass.classList.add(img);
             }
-        });
-
-        $(div).owlCarousel({ autoPlay: 5000, items: 5, itemsDesktop: false });
-
-        targetReplace.parentNode.insertBefore(div, targetReplace);
-        targetReplace.remove();
+        }
     }
 }, 1);

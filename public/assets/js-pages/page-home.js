@@ -44,6 +44,8 @@ document.addEventListener('showModalMore', function (e) {
 function changeCheckbox(self) {
     var type = $(self).data('type'),
         target = $(self).data('target');
+        console.log(`toogle_${target}_${type}`);
+        console.log($(self).prop("checked"));
     window.livewire.find(lvUser)[`toogle_${target}_${type}`] = $(self).prop("checked");
 }
 
