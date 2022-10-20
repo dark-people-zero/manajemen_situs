@@ -1,6 +1,6 @@
 <!-- Sidebar-right-->
 <div class="sidebar sidebar-right sidebar-animate" wire:ignore.self data-sidebar-notclose=".clr-picker, #previewIMageModal, .removePreviewImage, .modal">
-    <div class="panel panel-primary card mb-0 box-shadow">
+    <div class="panel panel-primary card mb-0 box-shadow p-0">
         <div class="tab-menu-heading card-img-top-1 border-0 p-3">
             <div class="card-title mb-0">Pengaturan</div>
             <div class="card-options ms-auto">
@@ -255,7 +255,7 @@
                                                         <span class="custom-switch-indicator custom-switch-indicator"></span>
                                                     </label>
                                                 </h4>
-                                                <div class="skin-body collapse p-0 {{$toogle_buttonaction_desktop ? 'show' : ''}}" id="coll-buttonaction">
+                                                <div class="skin-body collapse px-2 {{$toogle_buttonaction_desktop ? 'show' : ''}}" id="coll-buttonaction">
                                                     <div class="switch_section">
                                                         @if (count($data_buttonaction_desktop) > 0)
                                                             <span class="text-center-w-100">
@@ -896,7 +896,7 @@
                                                         <span class="custom-switch-indicator custom-switch-indicator"></span>
                                                     </label>
                                                 </h4>
-                                                <div class="skin-body collapse {{$toogle_buttonaction_mobile ? 'show' : ''}}" id="coll-buttonaction-mobile">
+                                                <div class="skin-body px-2 collapse {{$toogle_buttonaction_mobile ? 'show' : ''}}" id="coll-buttonaction-mobile">
                                                     @if (count($data_buttonaction_mobile) > 0)
                                                         <span class="text-center-w-100">
                                                             Ada {{count($data_buttonaction_mobile)}} data. Klik <i class="fa fa-eye cursor-pointer" wire:click="showFormBtnAction(false)"></i> untuk melihat data.
@@ -1327,7 +1327,7 @@
                     </div>
 
                     @if (count($dataFiturDesktop) > 0 && $prevActive == "desktop" || count($dataFiturMobile) > 0 && $prevActive == "mobile")
-                        <div class="w-100 px-2 mb-2 mt-4 border-top">
+                        <div class="w-100 px-2 mb-2 border-top">
                             <button type="button" wire:click="saveData" class="btn btn-primary-light w-100 mt-3">Simpan</button>
                         </div>
                     @endif

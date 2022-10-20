@@ -124,6 +124,11 @@ body.dark-theme .iframe-preview--mobile {
     text-transform: uppercase;
 }
 
+#areaPengaturan .tab-content {
+    max-height: calc(100vh - 295px);
+    overflow: scroll;
+}
+
 .dark-theme #areaPengaturan .swichermainleft h4 {
     border-bottom: 1px solid #404353;
     background: #383d52;

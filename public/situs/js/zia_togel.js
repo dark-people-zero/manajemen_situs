@@ -109,6 +109,7 @@ const func = {
             var template = $(`<div class="owl-carousel owl-theme">${data}</div>`);
 
             template.owlCarousel({
+                singleItem: true,
                 stopOnHover: true,
                 transitionStyle: "fade",
                 addClassActive: true,
