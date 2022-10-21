@@ -41,6 +41,10 @@ Route::get('zia_togel/m', function () {
     return view('situs.zia_togel.mobile.index');
 });
 
+Route::get('dingdong_togel', function () {
+    return view('situs.dingdong_togel.desktop.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [
