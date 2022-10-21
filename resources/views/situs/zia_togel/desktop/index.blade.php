@@ -113,7 +113,7 @@
             right: 0;
             bottom: 0;
             z-index: 999999;
-            background-image: url('/situs/assets/zia_togel/zia-loading.gif');
+            background-image: url('/situs/assets/zia_togel/zia-loading-mobile.gif');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
