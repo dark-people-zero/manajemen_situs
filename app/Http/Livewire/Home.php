@@ -91,20 +91,6 @@ class Home extends Component
 
     public function render()
     {
-        // dd(collect([
-        //     'BCA',
-        //     'MANDIRI',
-        //     'BRI',
-        //     'BNI',
-        //     'DANAMON',
-        //     'CIMB',
-        //     'OVO',
-        //     'GOPAY',
-        //     'DANA',
-        //     'LINKAJA',
-        //     'BSI',
-        //     'MAYBANK',
-        // ])->toJson());
         return view('livewire.home')->extends('layouts.app');
     }
 
