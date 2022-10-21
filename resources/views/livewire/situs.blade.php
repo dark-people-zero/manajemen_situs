@@ -1,3 +1,5 @@
+@section('title', 'Site Data')
+
 @section('styles')
     <!--Internal Sumoselect css-->
     <link rel="stylesheet" href="{{asset('assets/plugins/sumoselect/sumoselect.css')}}">
