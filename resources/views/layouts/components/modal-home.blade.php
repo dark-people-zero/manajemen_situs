@@ -89,7 +89,7 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control shadowColor" placeholder="Shadow Color Button" wire:model="data_buttonaction_desktop.{{$i}}.shadow" value="{{$item['shadow']}}">
+                                    <input type="text" class="form-control coloris shadowColor" placeholder="Shadow Color Button" wire:model="data_buttonaction_desktop.{{$i}}.shadow" value="{{$item['shadow']}}">
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" wire:model="data_buttonaction_desktop.{{$i}}.class">
@@ -171,7 +171,7 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control shadowColor" placeholder="Shadow Color Button" wire:model="data_buttonaction_mobile.{{$i}}.shadow" value="{{$item['shadow']}}">
+                                    <input type="text" class="form-control coloris shadowColor" placeholder="Shadow Color Button" wire:model="data_buttonaction_mobile.{{$i}}.shadow" value="{{$item['shadow']}}">
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" wire:model="data_buttonaction_mobile.{{$i}}.class">

@@ -601,7 +601,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Background</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Background" type="text" wire:model="bg_barcodeqris_desktop" value="{{$bg_barcodeqris_desktop}}" readonly>
+                                                                <input class="form-control coloris coloris-barcode" placeholder="Masukan Background" type="text" wire:model="bg_barcodeqris_desktop" value="{{$bg_barcodeqris_desktop}}" readonly>
                                                             </div>
                                                         </div>
 
@@ -609,7 +609,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Color</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Color" type="text" wire:model="color_barcodeqris_desktop" value="{{$color_barcodeqris_desktop}}" readonly>
+                                                                <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" type="text" wire:model="color_barcodeqris_desktop" value="{{$color_barcodeqris_desktop}}" readonly>
                                                             </div>
                                                         </div>
 
@@ -617,7 +617,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Shadow</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Shadow" type="text" wire:model="shadow_barcodeqris_desktop" value="{{$shadow_barcodeqris_desktop}}" readonly>
+                                                                <input class="form-control coloris coloris-barcode" placeholder="Masukan Shadow" type="text" wire:model="shadow_barcodeqris_desktop" value="{{$shadow_barcodeqris_desktop}}" readonly>
                                                             </div>
                                                         </div>
 

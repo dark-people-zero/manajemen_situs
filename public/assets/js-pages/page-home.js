@@ -67,9 +67,9 @@ $(document).ready(function() {
 
 document.addEventListener('livewire:update', function (e) {
     Coloris({
-        el: '.shadowColor',
+        el: '.coloris',
         theme: 'polaroid',
-        parent: '.modalActionBtn',
+        // parent: '.modalActionBtn',
         themeMode: 'dark',
         selectInput: true,
         focusInput: true,
@@ -83,22 +83,8 @@ document.addEventListener('livewire:update', function (e) {
         ]
     });
 
-    Coloris({
-        el: '.coloris-barcode',
-        theme: 'polaroid',
-        parent: '.sidebar',
-        themeMode: 'dark',
-        selectInput: true,
-        focusInput: true,
-        swatches: [
-          '#067bc2',
-          '#84bcda',
-          '#80e377',
-          '#ecc30b',
-          '#f37748',
-          '#d56062'
-        ]
-    });
+    Coloris.setInstance('.coloris-barcode', { parent: '.sidebar' });
+    Coloris.setInstance('.shadowColor', { parent: '.modalActionBtn' });
 
     for (let i = 0; i < $(".resize").length; i++) resize($(".resize")[i]);
 })
