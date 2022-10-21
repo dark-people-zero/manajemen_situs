@@ -35,9 +35,12 @@ class User extends Component
     {
         $this->fitur = fitur::get()->toArray();
         $search = $this->search;
+        $role = auth()->user()->id_role;
         $data = Muser::when($search, function($e) use($search){
             $e->where('name', 'like', '%'.$search.'%')
               ->orWhere('username', 'like', '%'.$search.'%');
+        })->when($role, function($e) use($role) {
+            if ($role == 2) $e->whereNotIn("id_role", [1,2])->orWhere("id", auth()->user()->id);
         })->paginate(10);
 
         return view('livewire.user',[
