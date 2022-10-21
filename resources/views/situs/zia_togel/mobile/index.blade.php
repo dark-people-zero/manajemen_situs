@@ -360,7 +360,7 @@
                     right: 0;
                     bottom: 0;
                     z-index: 999999;
-                    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/b6e0b072897469.5bf6e79950d23.gif');
+                    background-image: url('/situs/assets/zia_togel/zia-loading.gif');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -368,7 +368,7 @@
                 @media (min-width: 576px) {
                     /* yg besar diisni */
                     #loadingCustom {
-                        background-image: url("https://gifimage.net/wp-content/uploads/2017/09/animasi-loading-bergerak-gif-2.gif") !important;
+                        background-image: url("/situs/assets/zia_togel/zia-loading.gif") !important;
                     }
                 }
             </style>
