@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<head>
 
-    <!-- BASICS -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- BASICS -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Fiatogel | Bandar Togel Online Indonesia Terbaik</title>
-    <meta name="keywords"
-        content="Bandar Togel Online Indonesia, Togel Online Indonesia Terbaik, Bandar Togel Online Terbaik, Bandar Togel Indonesia Terbaik" />
-    <meta name="description"
-        content="FIATOGEL.COM adalah bandar togel online indonesia terbaik yang menyediakan permainan togel online paling bersaing seperti singapura, hongkong, sydney, dan permainan livegames seperti roulette, sicbo, baccarat dan masih banyak lagi. Bagi anda para pecinta permainan togel online terbaik maka kami adalah pilihan terbaik untuk anda. Customer service online 24 jam nonstop dengan pelayanan terbaik." />
+<title>Agen Togel Online Indonesia Resmi</title>
+<meta name="keywords"
+    content="Agen Togel Online Indonesia, Togel Online Indonesia Resmi, Agen Togel Indonesia Resmi, Agen Togel Online Resmi" />
+<meta name="description"
+    content="Yoktogel adalah Agen Togel Online Indonesia Resmi yang menyediakan permainan togel online dan live casino online terpopuler. Pasaran togel online yang diundi secara langsung seperti Hongkong, Singapura, Sydney, Totomacau dan permainan casino online populer seperti Sicbo, Baccarat, Roulette dan masih banyak lagi. Sistem Deposit dan Withdraw tercepat dan aman yang didukung oleh bank terbesar di Indonesia. Customer service ramah dan terbaik siap melayani segala kendala anda selama 24 jam Nonstop." />
 
-    <meta name="google-site-verification" content="SQtK2LFUxhkcA08I2tFBe6CvkEmovn_kzwXqxE79A04" />
+<meta name="google-site-verification" content="391MhZ0_nnhfG0DLItkWodt_KZzdQmGEMcqO3SdZrGk" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-THHEVP3BL2');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/ico"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/img/akw/favicon7c4b.png?v=1666375341') }}" />
+
+<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
+    rel="stylesheet">
+<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/animate/animate.css') }}">
+
+<link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap-checkbox.css') }}">
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/ribbons/3d-corner-ribbons.css') }}">
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/text-rotator/css/simpletextrotator.css') }}">
+<link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/fonts.css') }}">
+
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/css/owl.carouselca71.css?id=889') }}">
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/css/owl.theme.css') }}">
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/css/owl.transitions.css') }}">
+
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/nivo-lightbox/css/nivo-lightbox.css') }}">
+<link rel="stylesheet"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css') }}"
+    type="text/css" />
+<!-- ADDITIONAL CSS -->
+<link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">
+<link rel="stylesheet" type="text/css"
+    href="{{ asset('situs/assets/yok_togel/desktop/assets/css/game_compressed_ic7c4b.css?v=1666375341') }}">
+<!-- CUSTOM STYLE -->
+<link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/akw/akw27c4b.css?v=1666375341') }}">
+
+<style type="text/css">
+    .imgads {
+        width: 100%;
+    }
+
+    .mdlcenter {
+        margin-top: 12%;
+    }
+
+    .breadcrumbs2 {
+        padding: 30px 0;
+        color: white;
+    }
+</style>
+
+<script type="text/javascript">
+    function proteksi() {
+        if ((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 8 || event.charCode == 9 || event
+            .charCode == 95 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event
+                .charCode <= 122)) {
+            event.returnValue = true;
+        } else {
+            event.returnValue = false;
         }
-        gtag('js', new Date());
-
-        gtag('config', 'G-PNDV8CWY5Q');
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/img/ajk/faviconaf0b.png?v=1666351410') }}" />
-
-    <link href="{{ asset('situs/assets/fia_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
-        rel="stylesheet">
-    <link href="{{ asset('situs/assets/fia_togel/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('situs/assets/fia_togel/desktop/assets/css/vendor/animate/animate.css') }}">
-
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/css/vendor/bootstrap-checkbox.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/css/vendor/ribbons/3d-corner-ribbons.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/text-rotator/css/simpletextrotator.css') }}">
-    <link rel="stylesheet" href="{{ asset('situs/assets/fia_togel/desktop/assets/css/fonts.css') }}">
-
-    <!-- Important Owl stylesheet -->
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/owl-carousel/css/owl.carouselca71.css?id=889') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/owl-carousel/css/owl.theme.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/owl-carousel/css/owl.transitions.css') }}">
-
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/nivo-lightbox/css/nivo-lightbox.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css') }}"
-        type="text/css" />
-    <!-- ADDITIONAL CSS -->
-    <link rel="stylesheet" href="{{ asset('situs/assets/fia_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/css/game_compressed_icaf0b.css?v=1666351410') }}">
-    <!-- CUSTOM STYLE -->
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/fia_togel/desktop/assets/css/ajk/ajk2af0b.css?v=1666351410') }}">
-
-    <style type="text/css">
-        .imgads {
-            width: 100%;
-        }
-
-        .mdlcenter {
-            margin-top: 12%;
-        }
-
-        .breadcrumbs2 {
-            padding: 30px 0;
-            color: white;
-        }
-    </style>
-
-    <script type="text/javascript">
-        function proteksi() {
-            if ((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 8 || event.charCode == 9 || event
-                .charCode == 95 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event
-                    .charCode <= 122)) {
-                event.returnValue = true;
-            } else {
-                event.returnValue = false;
-            }
-        }
-    </script>
+    }
+</script>
 </head>
 
 <body>
-    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
         window.__lc = window.__lc || {};
-        window.__lc.license = 13378854;;
+        window.__lc.license = 13379388;;
         (function(n, t, c) {
             function i(n) {
                 return e._h ? e._h.apply(null, n) : e._q.push(n)
@@ -125,32 +123,34 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/fia_togel/desktop/assets/tracking.js", t.head.appendChild(n)
+                        "situs/assets/yok_togel/desktop/assets/tracking.js", t
+                        .head.appendChild(n)
                 }
             };
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
         }(window, document, [].slice))
     </script>
-    <noscript><a href="https://www.livechatinc.com/chat-with/13378854/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js') }}">
+    <noscript><a href="https://www.livechat.com/chat-with/13379388/" rel="nofollow">Chat with us</a>, powered by <a
+            href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+    <!-- End of LiveChat code -->
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-frame.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js') }}">
+    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-spa.js') }}">
     </script>
 
-    <!-- disni masukin script kita -->
+    <!-- disini masukkin scrip kita -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2"></script>
     <div class="mask">
         <div id="loader"></div>
     </div>
     <!--/Preloader -->
     <div style="position: absolute; float: right; z-index: 999999; right: 12%;top: 0;">
         <a href="#"
-            onclick="window.open('https://form.6mbr.com/?webname=fiatogel176.com&amp;lang=id','kritik_saran', 'width=600, height=1000');">
-            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/feedback2.png') }}" width="115px;">
+            onclick="window.open('https://form.6mbr.com/?webname=yoktogel176.net&amp;lang=id','kritik_saran', 'width=600, height=1000');">
+            <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/feedback2.png') }}" width="115px;">
         </a>
     </div>
     <!-- BEGIN NAVBAR -->
@@ -178,7 +178,7 @@
                     <div class="col-sm-7" style="text-align:right;width: 62.333333%;margin-left:190px;">
                         <form action='#' METHOD="post"
                             onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
-                            <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
+                            <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
                             <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;"
                                 style="text-align:right;">
                                 <input style="width:188px;margin-left:208px;" type="text" class="form-control"
@@ -191,7 +191,7 @@
                                     placeholder="Password" id="navbar_password" tabindex="2"
                                     name="entered_password" autocomplete=off>
                             </div>
-                            <button type="button" class="btn btn-theme login" name="submitlogin" value="1"
+                            <button type="submit" class="btn btn-theme login" name="submitlogin" value="1"
                                 style="margin-right: -26px;">LOGIN</button>
                             <input name="vb_login_md5password" type="hidden">
                             <input name="vb_login_md5password_utf" type="hidden">
@@ -215,9 +215,9 @@
                 <div class="col-sm-9 news-body">
                     <ul id="liscroll" style="margin:0px;">
                         <li><a href="javascript:void(0);" style="margin:0px;">
-                                <qwe class="run-text-depan">SELAMAT DATANG DI FIATOGEL ! RASAKAN JP PAUS HANYA BERSAMA
-                                    KAMI - BANDAR
-                                    TOGEL TERBAIK ! SALAM JP FIATOGEL -</qwe>
+                                <qwe class="run-text-depan"><b>Selamat datang di YOKTOGEL.COM - Agen togel online
+                                        terbaik saat ini -
+                                        Selamat bergabung dan semoga beruntung.<b> </qwe>
                             </a></li>
                     </ul>
                 </div>
@@ -256,7 +256,8 @@
                         <li><a href="javascript:void(0);"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Cara
                                 Bermain</a></li>
                         <li><a href="javascript:void(0);"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;History
-                                Nomor</a></li>
+                                Nomor</a>
+                        </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Buku Mimpi</a>
                         </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-users"></i>&nbsp;&nbsp;Referral</a></li>
@@ -273,7 +274,7 @@
                     <div class="results">
                         <h4><i class="fa fa-calendar"></i>&nbsp;&nbsp;Hasil Terakhir</h4>
                         <div class="btn-group custom-navigations circle-navigations with-heading no-top-margin">
-                            <span>&nbsp;&nbsp;21 Oktober 2022</span>
+                            <span>&nbsp;&nbsp;22 Oktober 2022</span>
                             <a href="javascript:void(0);" class="btn prev prevControl"><i
                                     class="fa fa-angle-up"></i></a>
                             <a href="javascript:void(0);" class="btn next nextControl"><i
@@ -284,62 +285,62 @@
                                 data-cycle-slides="> div" data-cycle-prev=".prevControl"
                                 data-cycle-next=".nextControl" style="position: relative; overflow: hidden;">
                                 <div style="width:100%">
-                                    <div class="results-detail"><span class="results-pool">BULLSEYE</span><span
-                                            class="results-number">0909</span></div>
-                                    <div class="results-detail"><span class="results-pool">CALIFORNIA</span><span
-                                            class="results-number">5593</span></div>
-                                    <div class="results-detail"><span class="results-pool">CAMBODIA</span><span
-                                            class="results-number">6294</span></div>
-                                    <div class="results-detail"><span class="results-pool">CAROLINAEVE</span><span
-                                            class="results-number">3447</span></div>
-                                </div>
-                                <div style="width:100%">
-                                    <div class="results-detail"><span class="results-pool">CHINA</span><span
-                                            class="results-number">2920</span></div>
-                                    <div class="results-detail"><span class="results-pool">FLORIDAEVE</span><span
-                                            class="results-number">7780</span></div>
-                                    <div class="results-detail"><span class="results-pool">FLORIDAMID</span><span
-                                            class="results-number">2218</span></div>
-                                    <div class="results-detail"><span class="results-pool">HONGKONG</span><span
-                                            class="results-number">7820</span></div>
-                                </div>
-                                <div style="width:100%">
-                                    <div class="results-detail"><span class="results-pool">MAGNUM4D</span><span
-                                            class="results-number">0680</span></div>
-                                    <div class="results-detail"><span class="results-pool">NEVADA</span><span
-                                            class="results-number">6865</span></div>
-                                    <div class="results-detail"><span class="results-pool">NEWYORKEVE</span><span
-                                            class="results-number">5288</span></div>
-                                    <div class="results-detail"><span class="results-pool">NEWYORKMID</span><span
-                                            class="results-number">2972</span></div>
-                                </div>
-                                <div style="width:100%">
-                                    <div class="results-detail"><span class="results-pool">OREGON300</span><span
-                                            class="results-number">3037</span></div>
-                                    <div class="results-detail"><span class="results-pool">OREGON600</span><span
-                                            class="results-number">2160</span></div>
-                                    <div class="results-detail"><span class="results-pool">OREGON900</span><span
-                                            class="results-number">3370</span></div>
-                                    <div class="results-detail"><span class="results-pool">OREGON1200</span><span
-                                            class="results-number">8369</span></div>
-                                </div>
-                                <div style="width:100%">
-                                    <div class="results-detail"><span class="results-pool">PCSO</span><span
-                                            class="results-number">3843</span></div>
+                                    <div class="results-detail"><span class="results-pool">TAIWAN</span><span
+                                            class="results-number">2288</span></div>
                                     <div class="results-detail"><span class="results-pool">SINGAPORE</span><span
                                             class="results-number">8036</span></div>
                                     <div class="results-detail"><span class="results-pool">SYDNEY</span><span
                                             class="results-number">5309</span></div>
-                                    <div class="results-detail"><span class="results-pool">TAIWAN</span><span
-                                            class="results-number">8564</span></div>
+                                    <div class="results-detail"><span class="results-pool">HONGKONG</span><span
+                                            class="results-number">0565</span></div>
                                 </div>
                                 <div style="width:100%">
+                                    <div class="results-detail"><span class="results-pool">BULLSEYE</span><span
+                                            class="results-number">0909</span></div>
+                                    <div class="results-detail"><span class="results-pool">CALIFORNIA</span><span
+                                            class="results-number">5593</span></div>
                                     <div class="results-detail"><span class="results-pool">CAROLINADAY</span><span
                                             class="results-number">7924</span></div>
+                                    <div class="results-detail"><span class="results-pool">CAROLINAEVE</span><span
+                                            class="results-number">3447</span></div>
+                                </div>
+                                <div style="width:100%">
+                                    <div class="results-detail"><span class="results-pool">FLORIDAEVE</span><span
+                                            class="results-number">7780</span></div>
+                                    <div class="results-detail"><span class="results-pool">FLORIDAMID</span><span
+                                            class="results-number">9430</span></div>
+                                    <div class="results-detail"><span class="results-pool">MAGNUM4D</span><span
+                                            class="results-number">0680</span></div>
+                                    <div class="results-detail"><span class="results-pool">NEVADA</span><span
+                                            class="results-number">6659</span></div>
+                                </div>
+                                <div style="width:100%">
+                                    <div class="results-detail"><span class="results-pool">NEWYORKEVE</span><span
+                                            class="results-number">5288</span></div>
+                                    <div class="results-detail"><span class="results-pool">NEWYORKMID</span><span
+                                            class="results-number">2972</span></div>
+                                    <div class="results-detail"><span class="results-pool">OREGON03</span><span
+                                            class="results-number">3037</span></div>
+                                    <div class="results-detail"><span class="results-pool">OREGON06</span><span
+                                            class="results-number">2160</span></div>
+                                </div>
+                                <div style="width:100%">
+                                    <div class="results-detail"><span class="results-pool">OREGON09</span><span
+                                            class="results-number">3370</span></div>
+                                    <div class="results-detail"><span class="results-pool">OREGON12</span><span
+                                            class="results-number">8369</span></div>
+                                    <div class="results-detail"><span class="results-pool">PCSO</span><span
+                                            class="results-number">9775</span></div>
                                     <div class="results-detail"><span class="results-pool">KENTUCKYEVE</span><span
                                             class="results-number">9797</span></div>
+                                </div>
+                                <div style="width:100%">
                                     <div class="results-detail"><span class="results-pool">KENTUCKYMID</span><span
-                                            class="results-number">1236</span></div>
+                                            class="results-number">6188</span></div>
+                                    <div class="results-detail"><span class="results-pool">CAMBODIA</span><span
+                                            class="results-number">6294</span></div>
+                                    <div class="results-detail"><span class="results-pool">CHINA</span><span
+                                            class="results-number">2920</span></div>
                                     <div class="results-detail"><span class="results-pool">JEPANG</span><span
                                             class="results-number">1671</span></div>
                                 </div>
@@ -349,15 +350,15 @@
                                     <div class="results-detail"><span class="results-pool">POIPET15</span><span
                                             class="results-number">7142</span></div>
                                     <div class="results-detail"><span class="results-pool">POIPET19</span><span
-                                            class="results-number">5961</span></div>
+                                            class="results-number">2465</span></div>
                                     <div class="results-detail"><span class="results-pool">POIPET22</span><span
-                                            class="results-number">6479</span></div>
+                                            class="results-number">6510</span></div>
                                 </div>
                                 <div style="width:100%">
                                     <div class="results-detail"><span class="results-pool">BRUNEI 14</span><span
                                             class="results-number">3118</span></div>
                                     <div class="results-detail"><span class="results-pool">BRUNEI 21</span><span
-                                            class="results-number">8601</span></div>
+                                            class="results-number">2830</span></div>
                                     <div class="results-detail"><span class="results-pool">BRUNEI 02</span><span
                                             class="results-number">2819</span></div>
                                     <div class="results-detail"><span class="results-pool">CHELSEA 11</span><span
@@ -367,9 +368,9 @@
                                     <div class="results-detail"><span class="results-pool">CHELSEA 15</span><span
                                             class="results-number">0258</span></div>
                                     <div class="results-detail"><span class="results-pool">CHELSEA 19</span><span
-                                            class="results-number">7358</span></div>
+                                            class="results-number">7717</span></div>
                                     <div class="results-detail"><span class="results-pool">CHELSEA 21</span><span
-                                            class="results-number">1029</span></div>
+                                            class="results-number">8270</span></div>
                                     <div class="results-detail"><span class="results-pool">HUAHIN 0100</span><span
                                             class="results-number">9744</span></div>
                                 </div>
@@ -377,7 +378,7 @@
                                     <div class="results-detail"><span class="results-pool">HUAHIN 1630</span><span
                                             class="results-number">0970</span></div>
                                     <div class="results-detail"><span class="results-pool">HUAHIN 2100</span><span
-                                            class="results-number">4296</span></div>
+                                            class="results-number">2738</span></div>
                                     <div class="results-detail"><span class="results-pool">BANGKOK 0930</span><span
                                             class="results-number">5102</span></div>
                                     <div class="results-detail"><span class="results-pool">BANGKOK 0130</span><span
@@ -386,30 +387,30 @@
                                 <div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">24Dspin</span><span class='results-number'>
-                                            <div class='d2412-ic' style='background-position:-120px 0px;'></div>
+                                            <div class='d2412-ic' style='background-position:-40px -20px;'></div>
                                         </span></div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">Dice 6</span><span class="results-number">
-                                            <div class='dicesd-ic' style='background-position:-80px 0px;'></div>
+                                            <div class='dicesd-ic' style='background-position:-0px 0px;'></div>
                                         </span></div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">Toto
-                                            Macau</span><span class="results-number">6541</span></div>
+                                            Macau</span><span class="results-number">8409</span></div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">24D</span><span class='results-number'>
-                                            <div class='d2412-ic' style='background-position:-120px -20px;'></div>
+                                            <div class='d2412-ic' style='background-position:-140px -20px;'></div>
                                         </span></div>
                                 </div>
                                 <div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">Roulette</span><span class='results-number'>
-                                            <div class='rl-ic' style="background-position:-400px 0px"></div>
+                                            <div class='rl-ic' style="background-position:-450px 0px"></div>
                                         </span></div>
                                     <div class="results-detail"><span class="results-pool"
                                             style="margin-right:35px;">Sicbo[Dice]</span><span class="results-number">
+                                            <div class='dicesd-ic' style='background-position:-0px 0px;'></div>
                                             <div class='dicesd-ic' style='background-position:-20px 0px;'></div>
-                                            <div class='dicesd-ic' style='background-position:-20px 0px;'></div>
-                                            <div class='dicesd-ic' style='background-position:-80px 0px;'></div>
+                                            <div class='dicesd-ic' style='background-position:-60px 0px;'></div>
                                         </span></div>
                                 </div>
                             </div>
@@ -421,20 +422,16 @@
                     <div class="results">
                         <h4><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Berita Terakhir</h4>
                         <div class="news-detail">
-                            <div class="latest-news"><a href="latest_newsbc82.html?id=3497"><span
-                                        style="color:#73c1ff"><b>Jadwal Bank
-                                            Dan Maintenance - FIATOGEL</b></span></a><br><span
-                                    class="dates">2022-10-04 23:28:59</span></div>
-                            <div class="latest-news"><a href="latest_news3bb0.html?id=3498"><span
-                                        style="color:#73c1ff"><b>Jadwal Buka
-                                            Dan Tutup Pasaran Togel Lengkap</b></span></a><br><span
-                                    class="dates">2022-09-24 20:04:23</span>
+                            <div class="latest-news"><a href="latest_news63bc.html?id=3628"><span
+                                        style="color:#ffb400">HASIL KELUARAN
+                                        TOGEL</span></a><br><span class="dates">2022-09-24 17:59:48</span></div>
+                            <div class="latest-news"><a href="latest_news1076.html?id=3629"><span
+                                        style="color:#ffb400">JADWAL BANK
+                                        DAN MAINTENANCE</span></a><br><span class="dates">2022-10-04 23:33:46</span>
                             </div>
-                            <div class="latest-news"><a href="latest_news3f73.html?id=3499"><span
-                                        style="color:#73c1ff"><b>Cara Pasang
-                                            Togel Online Di FIATOGEL- FAQ</b></span></a><br><span
-                                    class="dates">2022-07-19 21:41:06</span>
-                            </div>
+                            <div class="latest-news"><a href="latest_news5201.html?id=3630"><span
+                                        style="color:#ffb400">JADWAL PASARAN
+                                        TOGEL</span></a><br><span class="dates">2022-09-24 19:51:48</span></div>
                         </div>
                     </div>
                 </div> <!-- BEGIN SLIDER -->
@@ -444,15 +441,15 @@
                         <div class="owl-carousel owl-theme">
 
                             <div class="item">
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/images/slider/fiatogel_sliderweb_specialupdate.jpg') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/images/slider/yoktogel_sliderweb_nominalunik2.jpg') }}"
                                     width="840px" height="482" />
                             </div>
                             <div class="item">
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/images/slider/fiatogel_sliderweb_allbonusevent.jpg') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/images/slider/yoktogel_sliderweb_tipebet2.jpg') }}"
                                     width="840px" height="482" />
                             </div>
                             <div class="item">
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/images/slider/fiatogel_sliderweb_info2.jpg') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/images/slider/yoktogel_sliderweb_allbonus2.jpg') }}"
                                     width="840px" height="482" />
                             </div>
                         </div>
@@ -462,196 +459,228 @@
 
                         <div class="owl-carousel owl-theme gameicon">
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
+                                    width='210px' height='210px'>
+                            </div>
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}">
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}">
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}">
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
+                                    src="{{ asset('situs/assets/yok_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
                             </div>
                         </div>
                     </div>
@@ -684,64 +713,64 @@
 
                     <div class="owl-carousel owl-theme bankscroll">
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bca"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/bca.png') }}"
+                            <div class="online bca"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/bca.png') }}"
                                 alt="Bank Central Asia" width="78px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bni"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/bni.png') }}"
-                                alt="Bank BNI" width="80px" height="24px">
+                            <div class="online bni"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/bni.png') }}" alt="Bank BNI"
+                                width="80px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online bri"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/bri.png') }}"
-                                alt="Bank BRI" width="85px" height="21px">
+                            <div class="trouble bri"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/bri.png') }}" alt="Bank BRI"
+                                width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online cimb"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/cimb-2.png') }}"
+                            <div class="trouble cimb"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/cimb-2.png') }}"
                                 alt="Bank CIMB NIAGA" width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online danamon"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/danamon.png') }}"
-                                alt="Bank DANAMON" width="85px" height="21px">
-                        </div>
-                        <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/GoPay.png') }}"
-                                alt="GOPAY" width=86px height=22px>
-                        </div>
-                        <div class="item bank" data-animation="fadeIn">
-                            <div class="online mandiri"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/nofound.html') }}"
-                                alt="Bank Mandiri" width="86px" height="25px">
-                        </div>
-                        <div class="item bank" data-animation="fadeIn">
-                            <div class="online maybank"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/maybank.png') }}"
-                                alt="Maybank Indonesia" width=86px height=25px>
-                        </div>
-                        <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/ovo.png') }}"
-                                alt="OVO" width=86px height=22px>
-                        </div>
-                        <div class="item bank" data-animation="fadeIn">
-                            <div class="online dana"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/dana.png') }}"
+                            <div class="online dana"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/dana.png') }}"
                                 alt="DANA" width="89px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/linkaja.png') }}"
+                            <div class="online danamon"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/danamon.png') }}"
+                                alt="Bank DANAMON" width="85px" height="21px">
+                        </div>
+                        <div class="item bank" data-animation="fadeIn">
+                            <div class="online"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/GoPay.png') }}"
+                                alt="GOPAY" width=86px height=22px>
+                        </div>
+                        <div class="item bank" data-animation="fadeIn">
+                            <div class="offline mandiri"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/nofound.html') }}"
+                                alt="Bank Mandiri" width="86px" height="25px">
+                        </div>
+                        <div class="item bank" data-animation="fadeIn">
+                            <div class="online maybank"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/maybank.png') }}"
+                                alt="Maybank Indonesia" width=86px height=25px>
+                        </div>
+                        <div class="item bank" data-animation="fadeIn">
+                            <div class="online"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/ovo.png') }}" alt="OVO"
+                                width=86px height=22px>
+                        </div>
+                        <div class="item bank" data-animation="fadeIn">
+                            <div class="online"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/linkaja.png') }}"
                                 alt="LINKAJA" width=86px height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/BSI.png') }}"
-                                alt="BSI" width=86px height=22px>
+                            <div class="online"></div><img
+                                src="{{ asset('situs/assets/yok_togel/desktop/assets/img/BSI.png') }}" alt="BSI"
+                                width=86px height=22px>
                         </div>
                     </div>
                     <div>
@@ -765,28 +794,27 @@
         </div>
     </section>
     <!-- END BANK -->
-    <footer id="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row" style="display: flex;">
-                        <div class="col-3 col-sm-3"></div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/idnplay_w.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
-                        </div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/pagcorlogo2.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;">
-                        </div>
-                        <div class="col-3 col-sm-3"></div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="row" style="display: flex;">
+                    <div class="col-3 col-sm-3"></div>
+                    <div class="col-3 col-sm-3">
+                        <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/idnplay_w.png') }}"
+                            style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                     </div>
-                    <div class="col-md-12 copyright">
-                        &copy; Copyright 2014 - 2022 <a href="#">fiatogel176.com</a>. All Rights Reserved.
+                    <div class="col-3 col-sm-3">
+                        <img src="{{ asset('situs/assets/yok_togel/desktop/assets/img/pagcorlogo2.png') }}"
+                            style="overflow: inherit !important;width: 100%;padding: 10px;">
                     </div>
+                    <div class="col-3 col-sm-3"></div>
+                </div>
+                <div class="col-md-12 copyright">
+                    &copy; Copyright 2014 - 2022 <a href="#">yoktogel176.net</a>. All Rights Reserved.
                 </div>
             </div>
         </div>
+    </div>
     </footer>
     <div class="scroll-top">
         <a href="#">
@@ -796,7 +824,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/fia_togel/desktop/assets/fonts/Muli.ttf);
+            src: url(situs/assets/yok_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
@@ -860,74 +888,73 @@
             margin: 0 10px 0 0;
         }
     </style>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}">
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}">
     </script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/jquery.js') }}"></script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/skrollr/skrollr.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/skrollr/skrollr.min.js') }}"></script>
     <script
-        src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
+        src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
     </script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
     </script>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
-    <!-- <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-      <script src=" {{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
+    {{-- <!-- <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js"></') }}script> --> --}}
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
     </script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
-  </script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}">
-  </script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/jquery.cycle2.min.js') }}"></script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/jquery.fixedheadertable.min.js') }}"></script>
-  <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/stylec619.js?v=1.0') }}"></script>
-  <script>
-      (function($) {
-          "use strict";
-          $.fn.cycle.transitions.scrollVert = {
-              before: function(opts, curr, next, fwd) {
-                  opts.API.stackSlides(opts, curr, next, fwd);
-                  var height = opts.container.css('overflow', 'hidden').height();
-                  opts.cssBefore = {
-                      top: fwd ? height : -height,
-                      left: 0,
-                      opacity: 1,
-                      display: 'block',
-                      visibility: 'visible'
-                  };
-                  opts.animIn = {
-                      top: 0
-                  };
-                  opts.animOut = {
-                      top: fwd ? -height : height
-                  };
-              }
-          };
-      })(jQuery);
-  </script>
-  <script language="JavaScript">
-      function OpenInNewTab(url) {
-          var win = window.open('register.html', '_blank');
-          win.focus();
-      }
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.cycle2.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.fixedheadertable.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/stylec619.js?v=1.0') }}"></script>
+    <script>
+        (function($) {
+            "use strict";
+            $.fn.cycle.transitions.scrollVert = {
+                before: function(opts, curr, next, fwd) {
+                    opts.API.stackSlides(opts, curr, next, fwd);
+                    var height = opts.container.css('overflow', 'hidden').height();
+                    opts.cssBefore = {
+                        top: fwd ? height : -height,
+                        left: 0,
+                        opacity: 1,
+                        display: 'block',
+                        visibility: 'visible'
+                    };
+                    opts.animIn = {
+                        top: 0
+                    };
+                    opts.animOut = {
+                        top: fwd ? -height : height
+                    };
+                }
+            };
+        })(jQuery);
+    </script>
+    <script language="JavaScript">
+        function OpenInNewTab(url) {
+            var win = window.open('register.html', '_blank');
+            win.focus();
+        }
 
-      function target_popup(url, w, h, windowName) {
-          var left = (screen.width / 2) - (w / 2);
-          var top = (screen.height / 2) - (h / 2);
-          newwindow = window.open(url, windowName, 'height=' + h + ',width=' + w + ',top=' + top + ',left=' + left);
-          if (window.focus) {
-              newwindow.focus()
-          }
-          return false;
-      }
-  </script>
-  <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
-  </script> -->
-    <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
+        function target_popup(url, w, h, windowName) {
+            var left = (screen.width / 2) - (w / 2);
+            var top = (screen.height / 2) - (h / 2);
+            newwindow = window.open(url, windowName, 'height=' + h + ',width=' + w + ',top=' + top + ',left=' + left);
+            if (window.focus) {
+                newwindow.focus()
+            }
+            return false;
+        }
+    </script>
+    <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
+    </script> -->
+    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
 </body>
 
-<!-- Mirrored from fiatogel176.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Oct 2022 11:24:34 GMT -->
+<!-- Mirrored from yoktogel176.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Oct 2022 18:02:44 GMT -->
 
 </html>

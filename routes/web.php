@@ -20,7 +20,7 @@ use App\Http\Livewire\Situs;
 */
 Auth::routes();
 
-Route::middleware(['auth','user-role'])->group(function () {
+Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/', Home::class);
     Route::get('/user', User::class);
     Route::get('/data-situs', Situs::class);
@@ -47,6 +47,10 @@ Route::get('dingdong_togel', function () {
 
 Route::get('fia_togel', function () {
     return view('situs.fia_togel.desktop.index');
+});
+
+Route::get('yok_togel', function () {
+    return view('situs.yok_togel.desktop.index');
 });
 
 Route::get('geng_togel', function () {
