@@ -42,38 +42,6 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($fitur as $i => $item)
-                @php
-                    $checkDesktop = false;
-                    $checkMobile = false;
-                    if ($data != null) {
-                        $f = isset($data["fitur"][$item->id]) ? $data["fitur"][$item->id] : null;
-                        if ($f != null) {
-                            $checkDesktop = $f["desktop"];
-                            $checkMobile = $f["mobile"];
-                        }
-                    }
-                @endphp
-                    <tr>
-                        <td>{{$item->name}}</td>
-                        <td class="text-center">
-                            <div class="checkbox">
-                                <div class="custom-checkbox custom-control">
-                                    <input type="checkbox" data-id="{{$item->id}}" data-type="desktop" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-desktop" {{$checkDesktop ? 'checked' : '' }}>
-                                    <label for="checkbox-{{$index}}-{{$i}}-desktop" class="custom-control-label mt-1"></label>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center">
-                            <div class="checkbox">
-                                <div class="custom-checkbox custom-control">
-                                    <input type="checkbox" data-id="{{$item->id}}" data-type="mobile" data-index="{{$index}}" class="custom-control-input checkFitur" id="checkbox-{{$index}}-{{$i}}-mobile" {{$checkMobile ? 'checked' : '' }}>
-                                    <label for="checkbox-{{$index}}-{{$i}}-mobile" class="custom-control-label mt-1"></label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                @endforeach --}}
                 <tr class="dataFiturNull">
                     <td colspan="3" class="text-center">Feature is not available on this site. Please try changing to another site.</td>
                 </tr>

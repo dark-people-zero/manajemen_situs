@@ -90,6 +90,8 @@ class User extends Component
                 $existing = MaksesSitus::with(['aksesFitur'])->where("id_user", $this->idUser)->where("id_situs", $val)->first();
             }
 
+            if ($data) $data->fitur_situs = $data->fiturSitus;
+
             $this->dispatchBrowserEvent("collapse:fitur", [
                 "index" => $index,
                 "data" => $data,

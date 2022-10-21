@@ -13,9 +13,15 @@
                 <div class="skin-body border-bottom" style="padding-bottom: 10px" wire:ignore>
                     <select class="form-control select2-situs" id="selectSitus">
                         <option></option>
-                        @foreach ($Aksessitus as $item)
-                            <option value="{{$item->id}}">{{$item->situs->name}}</option>
-                        @endforeach
+                        @if (auth()->user()->id_role == 1)
+                            @foreach ($Aksessitus as $item)
+                                <option value="{{$item->id}}">{{$item->name}}</option>
+                            @endforeach
+                        @else
+                            @foreach ($Aksessitus as $item)
+                                <option value="{{$item->id}}">{{$item->situs->name}}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
             </div>

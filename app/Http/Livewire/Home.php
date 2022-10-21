@@ -81,7 +81,12 @@ class Home extends Component
 
     public function mount()
     {
-        $this->Aksessitus = aksesSitus::with(['situs'])->where('id_user', auth()->user()->id)->get();
+        $role = auth()->user()->id_role;
+        if ($role == 1) {
+            $this->Aksessitus = situs::get();
+        }else{
+            $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get();
+        }
     }
 
     public function render()
@@ -159,37 +164,80 @@ class Home extends Component
     public function changeSelectSitus($id)
     {
         $stat = env("APP_STAT");
-        $dataSitus = $this->Aksessitus->where("id", $id)->first();
-        if ($dataSitus) {
-            $situs = $dataSitus->situs;
-            $this->dataSitus = $situs;
-            if ($situs->status_desktop) {
-                $this->prevActive = 'desktop';
-                $this->urlActive = $situs["url_desktop_$stat"];
-                $this->statPengaturan = true;
-            }else if ($situs->status_mobile) {
-                $this->prevActive = 'mobile';
-                $this->urlActive = $situs["url_mobile_$stat"];
-                $this->statPengaturan = true;
-            }else{
-                $this->prevActive = 'desktop';
-                $this->urlActive = '/underconstruction';
-                $this->statPengaturan = false;
-            }
+        $role = auth()->user()->id_role;
+        if ($role == 1) {
+            $situs = $this->Aksessitus->where("id", $id)->first();
 
-            // untuk set data fitur
-            if ($situs->status_desktop) {
-                $this->dataFiturDesktop = $situs->fiturSitus->where("type", "desktop");
-            }else {
-                $this->reset("dataFiturDesktop");
-            }
-            if ($situs->status_mobile) {
-                $this->dataFiturMobile = $situs->fiturSitus->where("type", "mobile");
-            }else {
-                $this->reset("dataFiturMobile");
-            }
+            if ($situs) {
+                $this->dataSitus = $situs;
 
-            $this->setValue();
+                if ($situs->status_desktop) {
+                    $this->prevActive = 'desktop';
+                    $this->urlActive = $situs["url_desktop_$stat"];
+                    $this->statPengaturan = true;
+                }else if ($situs->status_mobile) {
+                    $this->prevActive = 'mobile';
+                    $this->urlActive = $situs["url_mobile_$stat"];
+                    $this->statPengaturan = true;
+                }else{
+                    $this->prevActive = 'desktop';
+                    $this->urlActive = '/underconstruction';
+                    $this->statPengaturan = false;
+                }
+
+                // untuk set data fitur
+                if ($situs->status_desktop) {
+                    $this->dataFiturDesktop = $situs->fiturSitus->where("type", "desktop");
+                }else {
+                    $this->reset("dataFiturDesktop");
+                }
+                if ($situs->status_mobile) {
+                    $this->dataFiturMobile = $situs->fiturSitus->where("type", "mobile");
+                }else {
+                    $this->reset("dataFiturMobile");
+                }
+
+                $this->setValue();
+            }
+        }else{
+            $dataSitus = $this->Aksessitus->where("id", $id)->first();
+
+            if ($dataSitus) {
+                $situs = $dataSitus->situs;
+                $this->dataSitus = $situs;
+
+                $aksesFitur = $dataSitus->aksesFitur;
+                $desktop = $aksesFitur->where("desktop", true)->pluck("id_fitur");
+                $mobile = $aksesFitur->where("mobile", true)->pluck("id_fitur");
+
+                if ($situs->status_desktop && $desktop->count() > 0) {
+                    $this->prevActive = 'desktop';
+                    $this->urlActive = $situs["url_desktop_$stat"];
+                    $this->statPengaturan = true;
+                }else if ($situs->status_mobile && $mobile->count() > 0) {
+                    $this->prevActive = 'mobile';
+                    $this->urlActive = $situs["url_mobile_$stat"];
+                    $this->statPengaturan = true;
+                }else{
+                    $this->prevActive = 'desktop';
+                    $this->urlActive = '/underconstruction';
+                    $this->statPengaturan = false;
+                }
+
+                // untuk set data fitur
+                if ($situs->status_desktop && $desktop->count() > 0) {
+                    $this->dataFiturDesktop = $situs->fiturSitus->where("type", "desktop")->whereIn("id_fitur", $desktop);
+                }else {
+                    $this->reset("dataFiturDesktop");
+                }
+                if ($situs->status_mobile && $mobile->count() > 0) {
+                    $this->dataFiturMobile = $situs->fiturSitus->where("type", "mobile")->whereIn("id_fitur", $mobile);
+                }else {
+                    $this->reset("dataFiturMobile");
+                }
+
+                $this->setValue();
+            }
         }
     }
 
@@ -1365,6 +1413,8 @@ class Home extends Component
                     ]);
                 }
             }
+
+            $this->dispatchBrowserEvent("iframe:reload");
         }
 
     }

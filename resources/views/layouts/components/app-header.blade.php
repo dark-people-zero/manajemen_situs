@@ -70,16 +70,32 @@
                                 </div>
                             </div>
                         </div>
-                        @if ($user->id_role == 1 || $mnUser->status)
-                            <a class="dropdown-item" href="/user">
-                                <i class="fa fa-users"></i>Users
-                            </a>
+                        @if ($mnUser)
+                            @if ($mnUser->status)
+                                <a class="dropdown-item" href="/user">
+                                    <i class="fa fa-users"></i>Users
+                                </a>
+                            @endif
+                        @else
+                            @if ($user->id_role == 1)
+                                <a class="dropdown-item" href="/user">
+                                    <i class="fa fa-users"></i>Users
+                                </a>
+                            @endif
                         @endif
 
-                        @if ($user->id_role == 1 || $mnSiteData->status)
-                            <a class="dropdown-item" href="/data-situs">
-                                <i class="fab fa-chrome"></i>Site Data
-                            </a>
+                        @if ($mnSiteData)
+                            @if ($mnSiteData->status)
+                                <a class="dropdown-item" href="/data-situs">
+                                    <i class="fab fa-chrome"></i>Site Data
+                                </a>
+                            @endif
+                        @else
+                            @if ($user->id_role == 1)
+                                <a class="dropdown-item" href="/data-situs">
+                                    <i class="fab fa-chrome"></i>Site Data
+                                </a>
+                            @endif
                         @endif
 
                         <a class="dropdown-item" href="password/reset/{{Str::random(20)}}">
