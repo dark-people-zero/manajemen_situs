@@ -57,6 +57,10 @@ Route::get('geng_togel', function () {
     return view('situs.geng_togel.desktop.index');
 });
 
+Route::get('indra_togel/m', function () {
+    return view('situs.indra_togel.mobile.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [
