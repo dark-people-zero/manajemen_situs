@@ -37,7 +37,7 @@ class configController extends Controller
         //     echo $exception->getMessage();
         // }
 
-        $process = Process::fromShellCommandline('cd ' . env('AUTO_PULL_DIR') . ' && git pull');
+        $process = New Process(["sh ".env("AUTO_PULL_DIR")]);
         try {
             $process->mustRun();
 
