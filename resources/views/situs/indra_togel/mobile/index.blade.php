@@ -10,8 +10,8 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="indratogel176 Mobile">
 	<meta http-equiv="msthemecompatible" content="no">
-	        <link rel="icon" type="image/png" href="../assets/img/aei/favicon.png" />
-			<link rel="shortcut icon" type="image/png" href="../assets/img/aei/favicon.png" />
+	        <link rel="icon" type="image/png" href="{{ asset('situs/assets/indra_togel/mobile/favicon.png') }}" />
+			<link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/indra_togel/mobile/favicon.png') }}" />
 	
 	<link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/tingle.min.css') }}">
 <link href="{{ asset('situs/assets/indra_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
@@ -114,7 +114,7 @@
                     <input id="navbar_password" type="password" tabindex="2" name="entered_password" class="contactField requiredField center" value="" placeholder="Password" onblur="if(this.value == '') { this.value='Password'}" onfocus="if (this.value == 'Password') {this.value=''}" required />
                   </div>
                   <div>
-                    <a href="https://ziatogel176.com/m/forget-password.php" class="note right underline">Lupa password?</a>
+                    <a href="https://indratogel176.com/m/forget-password.php" class="note right underline">Lupa password?</a>
                     
                       <a href="https://indratogel176.com/lite/index.php" class="note left underline">Lite Mode</a>
                     
@@ -126,7 +126,7 @@
                   <input name="vb_login_md5password_utf" type="hidden">
                 </form>
                 <div class="buttonjoin">
-                  <a href="https://ziatogel176.com/m/register.php" class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
+                  <a href="https://indratogel176.com/m/register.php" class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
                 </div>
                               </div>
             </div>
@@ -282,11 +282,7 @@
 
 <script src='{{ asset('situs/assets/indra_togel/mobile/jquery.min.js') }}' type='text/javascript'>
 </script>
-
-
-
-
-      </script><SCRIPT LANGUAGE="JavaScript">
+<script type='text/javascript'>
 function checkData() {
     var f1 = document.forms[0];
     var wm = "\n\r\n";
@@ -308,7 +304,7 @@ function checkData() {
     }
     else return true;
 }
-</SCRIPT>
+</script>
 <link href="{{ asset('situs/assets/indra_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">

@@ -50,12 +50,20 @@ Route::get('fia_togel', function () {
     return view('situs.fia_togel.desktop.index');
 });
 
+Route::get('fia_togel/m', function () {
+    return view('situs.fia_togel.mobile.index');
+});
+
 Route::get('yok_togel', function () {
     return view('situs.yok_togel.desktop.index');
 });
 
 Route::get('geng_togel', function () {
     return view('situs.geng_togel.desktop.index');
+});
+
+Route::get('maria_togel/m', function () {
+    return view('situs.maria_togel.mobile.index');
 });
 
 Route::get('indra_togel/m', function () {
