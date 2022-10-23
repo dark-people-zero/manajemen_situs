@@ -37,15 +37,18 @@ class configController extends Controller
         //     echo $exception->getMessage();
         // }
 
-        $process = New Process(["sh ".env("AUTO_PULL_DIR")]);
-        try {
-            $process->mustRun();
+        // $process = New Process(["sh ".env("AUTO_PULL_DIR")]);
+        // try {
+        //     $process->mustRun();
 
-            echo $process->getOutput();
-        } catch (ProcessFailedException $exception) {
-            return [
-                "message" => $exception->getMessage(),
-            ];
-        }
+        //     echo $process->getOutput();
+        // } catch (ProcessFailedException $exception) {
+        //     return [
+        //         "message" => $exception->getMessage(),
+        //     ];
+        // }
+
+        $output = shell_exec('git pull');
+        echo "<pre>$output</pre>";
     }
 }
