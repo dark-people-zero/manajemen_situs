@@ -43,10 +43,8 @@ class configController extends Controller
 
             echo $process->getOutput();
         } catch (ProcessFailedException $exception) {
-            dd($exception);
             return [
                 "message" => $exception->getMessage(),
-                "add" => $exception
             ];
         }
     }
