@@ -74,6 +74,14 @@ Route::get('togel_on/m', function () {
     return view('situs.togel_on.mobile.index');
 });
 
+Route::get('situs_toto/m', function () {
+    return view('situs.situs_toto.mobile.index');
+});
+
+Route::get('pwvip4d/m', function () {
+    return view('situs.pwvip4d.mobile.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [

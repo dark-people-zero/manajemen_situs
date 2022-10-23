@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<!-- saved from url=(0027)https://udintogel176.com/m/ -->
+<!-- saved from url=(0014)about:internet -->
 <html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Udintogel | Bandar Togel Online Terbaik</title>
-
+    <title>PWVIP4D.COM | Bandar Togel Online Aman Terpercaya</title>
+    <meta name="keywords"
+        content="Bandar Togel Online Terpercaya, Bandar Togel Online Aman, Bandar Togel Aman Terpercaya, Togel Online Aman Terpercaya">
     <meta name="description"
-        content="Udintogel adalah bandar togel online terbesar di Indonesia, dilengkapi dengan permainan terlengkap dan pasaran terpopuler seperti Singapura, Hongkong, Sydney, Cambodia dan masih banyak lagi.">
+        content="PWVIP4D.COM adalah bandar togel online aman terpercaya dengan menghadirkan permainan Togel Online Hongkong, Toto Macau, Singapura, Sydney, Nevada, Cambodia dan masih banyak lagi. Kami juga menyediakan permainan Live Casino Online populer seperti Sicbo, Roulette, Baccarat, 12D, 24D dan masih banyak lagi. Sistem keamanan yang canggih melindungi privasi dan keamanan akun anda. Customer service yang ramah dan siap membantu semua keluhan anda selama 24 jam nonstop.">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="udintogel176 Mobile">
+    <meta name="apple-mobile-web-app-title" content="pwvip4d176 Mobile">
     <meta http-equiv="msthemecompatible" content="no">
-    <link rel="icon" type="image/png" href="https://udintogel176.com/assets/img/abd/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://udintogel176.com/assets/img/abd/favicon.png">
+    <link rel="icon" type="image/png" href="https://pwvip4d176.com//assets/img/ale/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://pwvip4d176.com//assets/img/ale/favicon.png">
 
-    <link rel="stylesheet" href="{{ asset('situs/assets/udin_togel/mobile/tingle.min.css') }}">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('situs/assets/pwvip4d/mobile/tingle.min.css') }}">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
     <style type="text/css">
         .footer {
             z-index: 1;
         }
     </style>
-    <link href="{{ asset('situs/assets/udin_togel/mobile/framework.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/udin_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/socket.io.min.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jquery.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jqueryui.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/owl.carousel.min.js.download') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jquery.swipebox.js.download') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jquery.colorbox.js.download') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/snap.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/contact.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/custom.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/framework.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/framework.launcher.js.download') }}">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/framework.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/pwvip4d/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/socket.io.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jqueryui.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/owl.carousel.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.swipebox.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.colorbox.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/snap.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/contact.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/custom.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/framework.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/framework.launcher.js.download') }}">
     </script>
     <script language="JavaScript" type="text/javascript"
-        src="{{ asset('situs/assets/udin_togel/mobile/jquery-cycle-all-pack.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/clipboard.min.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/clipboard.js.download') }}"></script>
-    <script src="{{ asset('situs/assets/udin_togel/mobile/notif-widget.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/sw.js.download') }}"></script>
+        src="{{ asset('situs/assets/pwvip4d/mobile/jquery-cycle-all-pack.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/clipboard.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/clipboard.js.download') }}"></script>
+    <script src="{{ asset('situs/assets/pwvip4d/mobile/notif-widget.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/sw.js.download') }}"></script>
 
     <style type="text/css">
         .btnlink {
@@ -101,10 +99,10 @@
         <div id="content" class="page-content" data-snap-ignore="true">
             <div class="page-header smartb1">
                 <div class="app-container"></div>
-                <a class="smartb2" href="https://udintogel176.com/m/index.php"><img class="header-logo2"
-                        src="{{ asset('situs/assets/udin_togel/mobile/logo.png') }}" width="130"></a>
+                <a class="smartb2" href="https://pwvip4d176.com//m/index.php"><img class="header-logo2"
+                        src="{{ asset('situs/assets/pwvip4d/mobile/logo.png') }}" width="130"></a>
                 <div class="buttonlc space smartb3">
-                    <a href="https://direct.lc.chat/13377180/" class="buttonWrap buttonlc2 button-orange"
+                    <a href="https://direct.lc.chat/13378884/" class="buttonWrap buttonlc2 button-orange"
                         _blank="">Live Chat</a>
                 </div>
             </div>
@@ -115,20 +113,19 @@
                         <!-- banner kecil -->
                         <div class="note center">Silahkan login untuk mulai bermain</div>
                         <div>
-                            <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/vbulletin_md5.js.download') }}"></script>
-                            <form action="https://udintogel176.com/m/index.php" method="post"
+                            <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/vbulletin_md5.js.download') }}"></script>
+                            <form action="https://pwvip4d176.com//m/index.php" method="post"
                                 onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
                                 <div class="form-group">
                                     <input id="navbar_username" name="entered_login" tabindex="1"
                                         class="contactField requiredField center" type="text" value=""
-                                        placeholder="Username"
-                                        onblur="if(this.value == '';) { this.value='Username';}"
+                                        placeholder="Username" onblur="if(this.value == '';) { this.value='Username';}"
                                         onfocus="if (this.value == 'Username';) {this.value='';}" required="">
                                 </div>
                                 <div class="form-group">
                                     <span class="showp" onclick="showpassword()"><img
-                                            src="{{ asset('situs/assets/udin_togel/mobile/eye.png') }}">
+                                            src="{{ asset('situs/assets/pwvip4d/mobile/eye.png') }}">
                                         <p id="hideshow" style="font-size: 18px;">&nbsp; Show</p>
                                     </span>
                                     <input type="hidden" id="showhide" value="show">
@@ -139,10 +136,10 @@
                                         onfocus="if (this.value == 'Password';) {this.value='';}" required="">
                                 </div>
                                 <div>
-                                    <a href="https://udintogel176.com/m/forget-password.php"
+                                    <a href="https://pwvip4d176.com//m/forget-password.php"
                                         class="note right underline">Lupa password?</a>
 
-                                    <a href="https://udintogel176.com/lite/index.php" class="note left underline">Lite
+                                    <a href="https://pwvip4d176.com/lite/index.php" class="note left underline">Lite
                                         Mode</a>
 
                                     <div class="buttonjoin">
@@ -155,7 +152,7 @@
                                 <input name="vb_login_md5password_utf" type="hidden">
                             </form>
                             <div class="buttonjoin">
-                                <a href="https://udintogel176.com/m/register.php"
+                                <a href="https://pwvip4d176.com//m/register.php"
                                     class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
                             </div>
                         </div>
@@ -213,7 +210,7 @@
                             } else return true;
                         }
                     </script>
-                    <link href="{{ asset('situs/assets/udin_togel/mobile/login.css') }}" rel="stylesheet">
+                    <link href="{{ asset('situs/assets/pwvip4d/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
                             <h3 class="dib"> Hasil Terakhir </h3>
@@ -361,6 +358,12 @@
                                     </div>
 
                                     <div class="results">
+                                        <div class="pool-name">JAPAN</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">3686</div>
+                                    </div>
+
+                                    <div class="results">
                                         <div class="pool-name">KENTUCKYEVE</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">2360</div>
@@ -370,12 +373,6 @@
                                         <div class="pool-name">KENTUCKYMID</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">9090</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">JEPANG</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">3686</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -483,14 +480,14 @@
                                         <div class="pool-name">24Dspin</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/udin_togel/mobile/17.png') }}"
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/02.png') }}"
                                                 width="22px"></div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">Dice 6</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/udin_togel/mobile/dice3.png') }}"
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice4.png') }}"
                                                 style="height:26px;width:25px;"></div>
                                     </div>
                                     <div class="results">
@@ -501,7 +498,7 @@
                                     <div class="results">
                                         <div class="pool-name">24D</div>
                                         <div class="pool-date"></div>
-                                        <div class="pool-result">24</div>
+                                        <div class="pool-result">13</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -509,70 +506,66 @@
                                         <div class="pool-name">Roulette</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/udin_togel/mobile/36.png') }}"
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/24.png') }}"
                                                 width="22px"></div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">Sicbo[Dice]</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/udin_togel/mobile/dice1.png') }}"><img
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice1.png') }}"><img
                                                 style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/udin_togel/mobile/dice3.png') }}"><img
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice2.png') }}"><img
                                                 style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/udin_togel/mobile/dice6.png') }}"></div>
+                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice5.png') }}"></div>
                                     </div>
                                 </div>
                             </div>
                             <div>
 
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/bca.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bca.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/bni.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bni.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/bri.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bri.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/cimb.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/cimb.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/yellow-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/danamon.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/dana.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/danamon.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/maybank.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/gopay.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/ovo.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/nofound.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/gopay.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/ovo.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/dana.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/linkaja.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/linkaja.webp') }}">
-                                </div>
-                                <div class="bank">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/bsi.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bsi.webp') }}">
                                 </div>
                             </div>
                         </div>
@@ -587,29 +580,29 @@
                 </script>
                 <div class="row" style="display: flex;">
                     <div class="col-6 col-sm-6">
-                        <img src="{{ asset('situs/assets/udin_togel/mobile/idnplay_w.png') }}"
+                        <img src="{{ asset('situs/assets/pwvip4d/mobile/idnplay_w.png') }}"
                             style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                     </div>
                     <div class="col-6 col-sm-6">
-                        <img src="{{ asset('situs/assets/udin_togel/mobile/pagcorlogo2.png') }}"
+                        <img src="{{ asset('situs/assets/pwvip4d/mobile/pagcorlogo2.png') }}"
                             style="overflow: inherit !important;width: 100%;padding: 10px;">
                     </div>
                 </div>
                 <div class="footer">
                     <div class="wrapper">
-                        <div class="center-text">© 2014 - 2022 udintogel176. All Rights Reserved | 18+</div>
+                        <div class="center-text">© 2014 - 2022 pwvip4d176. All Rights Reserved | 18+</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/_footer.js.download') }}"></script>
-        <script src="{{ asset('situs/assets/udin_togel/mobile/moment.min.js.download') }}" type="text/javascript"></script>
-        <link rel="stylesheet" href="{{ asset('situs/assets/udin_togel/mobile/_footer.css') }}">
+        <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/_footer.js.download') }}"></script>
+        <script src="{{ asset('situs/assets/pwvip4d/mobile/moment.min.js.download') }}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{{ asset('situs/assets/pwvip4d/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
-        <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/sw.js.download') }}"></script>
+        <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/sw.js.download') }}"></script>
         <script>
-            protocol('udintogel176.com', 'vemaa', 'mobile')
+            protocol('pwvip4d176.com', 'vpgaa', 'mobile')
         </script>
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
