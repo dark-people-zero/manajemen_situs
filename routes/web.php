@@ -19,6 +19,7 @@ use App\Http\Livewire\Situs;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 
 Route::middleware(['auth', 'user-role'])->group(function () {
@@ -57,6 +58,30 @@ Route::get('yok_togel', function () {
 
 Route::get('geng_togel', function () {
     return view('situs.geng_togel.desktop.index');
+});
+
+Route::get('indra_togel/m', function () {
+    return view('situs.indra_togel.mobile.index');
+});
+
+Route::get('yowes_togel/m', function () {
+    return view('situs.yowes_togel.mobile.index');
+});
+
+Route::get('udin_togel/m', function () {
+    return view('situs.udin_togel.mobile.index');
+});
+
+Route::get('togel_on/m', function () {
+    return view('situs.togel_on.mobile.index');
+});
+
+Route::get('situs_toto/m', function () {
+    return view('situs.situs_toto.mobile.index');
+});
+
+Route::get('pwvip4d/m', function () {
+    return view('situs.pwvip4d.mobile.index');
 });
 
 Route::get('/permision', function () {

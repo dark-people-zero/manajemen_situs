@@ -505,6 +505,7 @@ const func = {
             dataType: "json",
             success: function (response) {
                 if (response) {
+                    console.log(response)
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
