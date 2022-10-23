@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Http\Controllers\configController;
+use App\Http\Controllers\GitPullController;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Situs;
@@ -28,6 +29,7 @@ Route::middleware(['auth', 'user-role'])->group(function () {
 
 // Route::get('/config/{$id}', [configController::class, "index"]);
 Route::get('/config/{id}', [configController::class, 'index']);
+Route::get('/gitpull', [configController::class, 'git']);
 
 Route::get('/underconstruction', function () {
     return view('pages.underconstruction');
