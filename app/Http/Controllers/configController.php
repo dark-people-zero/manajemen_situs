@@ -48,6 +48,7 @@ class configController extends Controller
         //     ];
         // }
 
+
         $output = shell_exec('git pull');
         echo "<pre>$output</pre>";
     }
