@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0026)https://indratogel176.com/m/ -->
+<!-- saved from url=(0026)https://ziatogel176.com/m/ -->
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -31,27 +31,27 @@
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="indratogel176 Mobile" />
+    <meta name="apple-mobile-web-app-title" content="ziatogel176 Mobile" />
     <meta http-equiv="msthemecompatible" content="no" />
     <link
       rel="icon"
       type="image/png"
-      href="https://indratogel176.com/assets/img/auo/favicon.png') }}"
+      href="https://ziatogel176.com/assets/img/auo/favicon.png') }}"
     />
     <link
       rel="shortcut icon"
       type="image/png"
-      href="https://indratogel176.com/assets/img/auo/favicon.png') }}"
+      href="https://ziatogel176.com/assets/img/auo/favicon.png') }}"
     />
 
-    <link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/tingle.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/mobile/tingle.min.css') }}" />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/style.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/style.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/style(1).css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/style(1).css') }}"
       rel="stylesheet"
       type="text/css"
     />
@@ -61,92 +61,92 @@
       }
     </style>
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/framework.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/framework.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/owl.theme.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/owl.theme.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/swipebox.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/swipebox.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/colorbox.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/colorbox.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="{{ asset('situs/assets/indra_togel/mobile/li-scroller.css') }}"
+      href="{{ asset('situs/assets/zia_togel/mobile/li-scroller.css') }}"
       rel="stylesheet"
       type="text/css"
     />
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/jquery.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/jqueryui.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jqueryui.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.min.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.min.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/jquery.swipebox.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.swipebox.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/jquery.colorbox.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery.colorbox.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/snap.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/snap.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/contact.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/contact.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/custom.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/custom.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/framework.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/framework.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/framework.launcher.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/framework.launcher.js.download') }}"
     ></script>
     <script
       language="JavaScript"
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/jquery-cycle-all-pack.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/jquery-cycle-all-pack.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/clipboard.min.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/clipboard.min.js.download') }}"
     ></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/clipboard.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/clipboard.js.download') }}"
     ></script>
-    <script src="{{ asset('situs/assets/indra_togel/mobile/notif-widget.js.download') }}"></script>
+    <script src="{{ asset('situs/assets/zia_togel/mobile/notif-widget.js.download') }}"></script>
     <script
       type="text/javascript"
-      src="{{ asset('situs/assets/indra_togel/mobile/sw.js.download') }}"
+      src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
     ></script>
 
     <style type="text/css">
@@ -195,10 +195,10 @@
       <div id="content" class="page-content" data-snap-ignore="true">
         <div class="page-header smartb1">
           <div class="app-container"></div>
-          <a class="smartb2" href="https://indratogel176.com/m/index.php"
+          <a class="smartb2" href="https://ziatogel176.com/m/index.php"
             ><img
               class="header-logo2"
-              src="{{ asset('situs/assets/indra_togel/mobile/logo.png') }}"
+              src="{{ asset('situs/assets/zia_togel/mobile/logo.png') }}"
               width="130"
           /></a>
           <div class="buttonlc space smartb3">
@@ -220,10 +220,10 @@
               <div>
                 <script
                   type="text/javascript"
-                  src="{{ asset('situs/assets/indra_togel/mobile/vbulletin_md5.js.download') }}"
+                  src="{{ asset('situs/assets/zia_togel/mobile/vbulletin_md5.js.download') }}"
                 ></script>
                 <form
-                  action="https://indratogel176.com/m/index.php"
+                  action="https://ziatogel176.com/m/index.php"
                   method="post"
                   onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)"
                 >
@@ -243,7 +243,7 @@
                   </div>
                   <div class="form-group">
                     <span class="showp" onclick="showpassword()">
-                        <img src="{{ asset('situs/assets/indra_togel/mobile/eye.png') }}" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/eye.png') }}" />
                       <p id="hideshow" style="font-size: 18px">&nbsp;Hide</p>
                     </span>
                     <input type="hidden" id="showhide" value="hide" />
@@ -262,13 +262,13 @@
                   </div>
                   <div>
                     <a
-                      href="https://indratogel176.com/m/forget-password.php"
+                      href="https://ziatogel176.com/m/forget-password.php"
                       class="note right underline"
                       >Lupa password?</a
                     >
 
                     <a
-                      href="https://indratogel176.com/lite/index.php"
+                      href="https://ziatogel176.com/lite/index.php"
                       class="note left underline"
                       >Lite Mode</a
                     >
@@ -289,7 +289,7 @@
                 </form>
                 <div class="buttonjoin">
                   <a
-                    href="https://indratogel176.com/m/register.php"
+                    href="https://ziatogel176.com/m/register.php"
                     class="buttonWrap buttong button-green contactSubmitButton"
                     >Daftar</a
                   >
@@ -360,7 +360,7 @@
                     right: 0;
                     bottom: 0;
                     z-index: 999999;
-                    background-image: url('/situs/assets/indra_togel/zia-loading-mobile.gif');
+                    background-image: url('/situs/assets/zia_togel/zia-loading-mobile.gif');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -368,18 +368,18 @@
                 @media (min-width: 576px) {
                     /* yg besar diisni */
                     #loadingCustom {
-                        background-image: url("/situs/assets/indra_togel/zia-loading.gif") !important;
+                        background-image: url("/situs/assets/zia_togel/zia-loading.gif") !important;
                     }
                 }
             </style>
             <div id="loadingCustom"></div>
-            <link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
-            <script src="{{ asset('situs/js/indra_togel.js') }}" type="text/javascript"></script>
+            <link rel="stylesheet" href="{{ asset('situs/css/zia_togel.css') }}" type="text/css">
+            <script src="{{ asset('situs/js/zia_togel.js') }}" type="text/javascript"></script>
 
 
 
 
-            <link href="{{ asset('situs/assets/indra_togel/mobile/login.css') }}" rel="stylesheet" />
+            <link href="{{ asset('situs/assets/zia_togel/mobile/login.css') }}" rel="stylesheet" />
 
             <div class="inner-wrap">
               <div class="panel-blue">
@@ -675,7 +675,7 @@
                       <div class="pool-name">24Dspin</div>
                       <div class="pool-date"></div>
                       <div class="pool-result">
-                        <img src="{{ asset('situs/assets/indra_togel/mobile/13.png') }}" width="22px" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/13.png') }}" width="22px" />
                       </div>
                     </div>
                     <div class="results">
@@ -683,7 +683,7 @@
                       <div class="pool-date"></div>
                       <div class="pool-result">
                         <img
-                          src="{{ asset('situs/assets/indra_togel/mobile/dice5.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice5.png') }}"
                           style="height: 26px; width: 25px"
                         />
                       </div>
@@ -704,7 +704,7 @@
                       <div class="pool-name">Roulette</div>
                       <div class="pool-date"></div>
                       <div class="pool-result">
-                        <img src="{{ asset('situs/assets/indra_togel/mobile/03.png') }}" width="22px" />
+                        <img src="{{ asset('situs/assets/zia_togel/mobile/03.png') }}" width="22px" />
                       </div>
                     </div>
                     <div class="results">
@@ -713,13 +713,13 @@
                       <div class="pool-result">
                         <img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/indra_togel/mobile/dice1.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice1.png') }}"
                         /><img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice3.png') }}"
                         /><img
                           style="width: 20px; margin: 6px 1px"
-                          src="{{ asset('situs/assets/indra_togel/mobile/dice6.png') }}"
+                          src="{{ asset('situs/assets/zia_togel/mobile/dice6.png') }}"
                         />
                       </div>
                     </div>
@@ -727,52 +727,52 @@
                 </div>
                 <div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/bca.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bca.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/bni.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bni.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/bri.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bri.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/bsi.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/bsi.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/cimb.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/cimb.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/dana.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/dana.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/danamon.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/danamon.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/gopay.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/gopay.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/linkaja.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/linkaja.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/nofound.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/nofound.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/maybank.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/maybank.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-                    <img src="{{ asset('situs/assets/indra_togel/mobile/ovo.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/ovo.webp') }}" />
                   </div>
                 </div>
               </div>
@@ -787,7 +787,7 @@
           <div class="row" style="display: flex">
             <div class="col-6 col-sm-6">
               <img
-                src="{{ asset('situs/assets/indra_togel/mobile/idnplay_w.png') }}"
+                src="{{ asset('situs/assets/zia_togel/mobile/idnplay_w.png') }}"
                 style="
                   overflow: inherit !important;
                   width: 100%;
@@ -798,7 +798,7 @@
             </div>
             <div class="col-6 col-sm-6">
               <img
-                src="{{ asset('situs/assets/indra_togel/mobile/pagcorlogo2.png') }}"
+                src="{{ asset('situs/assets/zia_togel/mobile/pagcorlogo2.png') }}"
                 style="overflow: inherit !important; width: 100%; padding: 10px"
               />
             </div>
@@ -806,7 +806,7 @@
           <div class="footer">
             <div class="wrapper">
               <div class="center-text">
-                © 2014 - 2022 indratogel176. All Rights Reserved | 18+
+                © 2014 - 2022 ziatogel176. All Rights Reserved | 18+
               </div>
             </div>
           </div>
@@ -815,17 +815,17 @@
 
       <script
         type="text/javascript"
-        src="{{ asset('situs/assets/indra_togel/mobile/_footer.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/_footer.js.download') }}"
       ></script>
       <script
-        src="{{ asset('situs/assets/indra_togel/mobile/moment.min.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/moment.min.js.download') }}"
         type="text/javascript"
       ></script>
-      <link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/_footer.css') }}" />
+      <link rel="stylesheet" href="{{ asset('situs/assets/zia_togel/mobile/_footer.css') }}" />
       <!-- START SMART BANNER -->
       <script
         type="text/javascript"
-        src="{{ asset('situs/assets/indra_togel/mobile/sw.js.download') }}"
+        src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
       ></script>
     </div>
     <div id="cboxOverlay" style="display: none"></div>
