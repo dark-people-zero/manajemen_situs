@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Situs as Msitus;
+use App\Models\situs as Msitus;
 use App\Models\fitur;
 
 class AccessSite extends Component

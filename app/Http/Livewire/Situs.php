@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Situs as Msitus;
+use App\Models\situs as Msitus;
 use App\Models\fitur as Mfitur;
 use App\Models\fiturSitus;
 use DB;

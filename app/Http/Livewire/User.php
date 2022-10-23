@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User as Muser;
-use App\Models\Situs as Msitus;
+use App\Models\situs as Msitus;
 use App\Models\role as Mrole;
 use App\Models\aksesMenu as MaksesMenu;
 use App\Models\aksesSitus as MaksesSitus;
