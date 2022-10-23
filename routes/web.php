@@ -66,6 +66,14 @@ Route::get('yowes_togel/m', function () {
     return view('situs.yowes_togel.mobile.index');
 });
 
+Route::get('udin_togel/m', function () {
+    return view('situs.udin_togel.mobile.index');
+});
+
+Route::get('togel_on/m', function () {
+    return view('situs.togel_on.mobile.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [
