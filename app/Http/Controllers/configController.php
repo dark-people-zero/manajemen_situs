@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Http\Request;
 use App\Models\situs;
 
@@ -26,30 +24,17 @@ class configController extends Controller
 
     public function git()
     {
-        // dd("ada");
-        // $process = new Process(['C:\Program Files\Git\cmd\git', 'pull']);
-
-        // try {
-        //     $process->mustRun();
-
-        //     echo $process->getOutput();
-        // } catch (ProcessFailedException $exception) {
-        //     echo $exception->getMessage();
-        // }
-
-        // $process = New Process(["sh ".env("AUTO_PULL_DIR")]);
-        // try {
-        //     $process->mustRun();
-
-        //     echo $process->getOutput();
-        // } catch (ProcessFailedException $exception) {
-        //     return [
-        //         "message" => $exception->getMessage(),
-        //     ];
-        // }
-
-
-        $output = shell_exec('git pull');
-        echo "<pre>$output</pre>";
+        $win = env("AUTO_PULL_WINDOWS");
+        if ($win) {
+            $output = shell_exec('git pull 2>&1');
+        }else{
+            $output = shell_exec('sudo git pull 2>&1');
+        }
+        if (str_contains(strtolower($output), 'already')) {
+            return redirect()->back()->with('gitsuccess', 'Data di server sudah di update.');
+        }else{
+            dd($output);
+            return redirect()->back()->with('giterror', $output);
+        }
     }
 }

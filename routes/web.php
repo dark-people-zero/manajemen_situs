@@ -26,11 +26,11 @@ Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/', Home::class);
     Route::get('/user', User::class);
     Route::get('/data-situs', Situs::class);
+    Route::get('/gitpull', [configController::class, 'git']);
 });
 
 // Route::get('/config/{$id}', [configController::class, "index"]);
 Route::get('/config/{id}', [configController::class, 'index']);
-Route::get('/gitpull', [configController::class, 'git']);
 
 Route::get('/underconstruction', function () {
     return view('pages.underconstruction');

@@ -24,13 +24,11 @@ class UserRole
         $mnSite = $menu->where('name', 'Site')->first();
         $mnSiteData = $menu->where('name', 'Site Data')->first();
 
+        $site = ['/','user','data-situs', 'gitpull'];
+
         if ($role != 1) {
             if ($active) {
-                if (
-                    $request->path() == '/' && $mnSite->status ||
-                    $request->path() == 'user' && $mnUser->status ||
-                    $request->path() == 'data-situs' && $mnSiteData->status
-                ) {
+                if (in_array($request->path(), $site)) {
                     return $next($request);
                 }else{
                     return redirect('/permision');

@@ -96,5 +96,26 @@
             }
         </script>
 
+        @if (\Session::has('gitsuccess'))
+            <script>
+                Swal.fire(
+                    'Success',
+                    "{{Session::get('gitsuccess')}}",
+                    'success'
+                )
+            </script>
+        @endif
+
+        @if (\Session::has('giterror'))
+            <script>
+                Swal.fire(
+                    'Error',
+                    "{{Session::get('giterror')}}",
+                    'error'
+                )
+            </script>
+        @endif
+
+
     </body>
 </html>
