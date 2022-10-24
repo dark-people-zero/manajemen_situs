@@ -84,7 +84,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="https://bit.ly/ApkZia" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -259,6 +259,10 @@ const func = {
 
             btn.click(() => mdl.modal("show"));
 
+            mdl.click(function(e) {
+                if ($(e.target).closest('.modal-content').length == 0) mdl.modal("hide");
+            });
+
             btn.insertAfter(".sidebar-button .btn-theme");
             $('body').append(mdl);
         },
@@ -334,7 +338,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="https://bit.ly/ApkZia" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -367,7 +371,7 @@ const func = {
             $(data).insertAfter(".button-green");
         },
         iconSosmed: (data) => {
-            var icon = data.filter((e) => e.status).map((e) => {
+            var icon = data.data.filter((e) => e.status).map((e) => {
                 return `<a href="${e.link}" target="_blank">
                             <img src="${e.image}" alt="${e.name}">
                         </a>`;
@@ -375,7 +379,7 @@ const func = {
 
             var sos = $(`
                 <div class="icon-sosmed">
-                    <p class="deskripsi">Klik icon sosmed di bawah ini untuk hubungi operator :</p>
+                    <p class="deskripsi">${data.ket}</p>
                     <div class="icon">${icon.join('')}</div>
                 </div>
             `)
@@ -446,7 +450,7 @@ const func = {
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <img src="${data.image}" width="600" height="350" class="imgads">
+                                <img src="${data.image}" class="imgads">
                             </div>
                         </div>
                     </div>
@@ -505,7 +509,6 @@ const func = {
             dataType: "json",
             success: function (response) {
                 if (response) {
-                    console.log(response)
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;

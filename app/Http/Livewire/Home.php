@@ -50,7 +50,7 @@ class Home extends Component
     public $file_popupmodal_desktop, $deskripsi_popupmodal_desktop, $file_popupmodal_mobile, $deskripsi_popupmodal_mobile;
 
     // untuk header APk desktop dan mobile
-    public $file_headerapk_desktop, $title_headerapk_desktop, $slogan_headerapk_desktop, $file_headerapk_mobile, $title_headerapk_mobile, $slogan_headerapk_mobile;
+    public $file_headerapk_desktop, $title_headerapk_desktop, $slogan_headerapk_desktop, $url_headerapk_desktop, $file_headerapk_mobile, $title_headerapk_mobile, $slogan_headerapk_mobile, $url_headerapk_mobile;
 
     // untuk header corousel desktop dan mobile
     public $file_headercorousel_desktop = [], $file_headercorousel_mobile = [];
@@ -275,10 +275,12 @@ class Home extends Component
             $validate["file_headerapk_desktop"] = 'required';
             $validate["title_headerapk_desktop"] = 'required';
             $validate["slogan_headerapk_desktop"] = 'required';
+            $validate["url_headerapk_desktop"] = 'required';
 
             $message["title_headerapk_desktop.required"] = str_replace(":attribute", "title", trans("validation.required"));
             $message["slogan_headerapk_desktop.required"] = str_replace(":attribute", "slogan", trans("validation.required"));
             $message["file_headerapk_desktop.required"] = str_replace(":attribute", "image", trans("validation.required"));
+            $message["url_headerapk_desktop.required"] = str_replace(":attribute", "title", trans("validation.required"));
 
             if ($this->file_headerapk_desktop) {
                 if (gettype($this->file_headerapk_desktop) != "string") {
@@ -294,10 +296,12 @@ class Home extends Component
             $validate["file_headerapk_mobile"] = 'required';
             $validate["title_headerapk_mobile"] = 'required';
             $validate["slogan_headerapk_mobile"] = 'required';
+            $validate["url_headerapk_mobile"] = 'required';
 
             $message["file_headerapk_mobile.required"] = str_replace(":attribute", "title", trans("validation.required"));
             $message["title_headerapk_mobile.required"] = str_replace(":attribute", "slogan", trans("validation.required"));
             $message["slogan_headerapk_mobile.required"] = str_replace(":attribute", "image", trans("validation.required"));
+            $message["url_headerapk_mobile.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->file_headerapk_mobile) {
                 if (gettype($this->file_headerapk_mobile) != "string") {
@@ -650,6 +654,7 @@ class Home extends Component
                         $this->file_headerapk_desktop = $data["file"];
                         $this->title_headerapk_desktop = $data["title"];
                         $this->slogan_headerapk_desktop = $data["slogan"];
+                        $this->url_headerapk_desktop = $data["url"];
                     }
                 }
 
@@ -670,6 +675,7 @@ class Home extends Component
                     $data = json_decode($item->data, true);
                     if ($data) {
                         $this->data_iconsosmed_desktop = $data['data'];
+
                         $this->ket_iconsosmed_desktop = $data['ket'];
                     }
                 }
@@ -750,6 +756,7 @@ class Home extends Component
                         $this->file_headerapk_mobile = $data["file"];
                         $this->title_headerapk_mobile = $data["title"];
                         $this->slogan_headerapk_mobile = $data["slogan"];
+                        $this->url_headerapk_mobile = $data["url"];
                     }
                 }
 
@@ -1014,7 +1021,6 @@ class Home extends Component
 
     public function saveData()
     {
-        dd("ok");
         $validate = $this->validationFiled();
         if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
@@ -1025,13 +1031,11 @@ class Home extends Component
         if ($this->toogle_buttonaction_desktop && count($this->data_buttonaction_desktop) == 0) $this->addError('data_buttonaction_desktop', str_replace(":attribute","file button action", trans("validation.required")));
 
         if ($this->toogle_buttonaction_mobile && count($this->data_buttonaction_mobile) == 0) $this->addError('data_buttonaction_mobile', str_replace(":attribute","file button action", trans("validation.required")));
-
         if ($this->toogle_iconsosmed_desktop && count($this->data_iconsosmed_desktop) == 0) $this->addError('data_iconsosmed_desktop', str_replace(":attribute","file icon sosmed", trans("validation.required")));
 
         if ($this->toogle_iconsosmed_mobile && count($this->data_iconsosmed_mobile) == 0) $this->addError('data_iconsosmed_mobile', str_replace(":attribute","file icon sosmed", trans("validation.required")));
 
         $errors = $this->getErrorBag();
-
 
         if (count($errors) == 0) {
             try {
@@ -1067,6 +1071,7 @@ class Home extends Component
                             "file" => $img,
                             "title" => $this->title_headerapk_desktop,
                             "slogan" => $this->slogan_headerapk_desktop,
+                            "url" => $this->url_headerapk_desktop
                         ])->toJson();
                         fiturSitus::find($val->id)->update([
                             "status" => $this->toogle_headerapk_desktop,
@@ -1102,24 +1107,15 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 5) {
-                        dd($this->data_iconsosmed_desktop);
-                        $data = collect($this->data_iconsosmed_desktop)->map(function($e) {
-                            $dir = "public/images/".strtolower($this->dataSitus->name);
+                        $data = collect($this->data_iconsosmed_desktop)->map(function($e) use($dir) {
                             $dir = $dir."/icon sosmed";
                             $img = $e['image'];
                             if (gettype($img) != "string") {
                                 $store = $this->uploadFiles($dir, $img);
-                                dd($store);
-                                if ($store['status']) {
-                                    $e['image'] = $store['url'];
-                                }else{
-                                    dd($store);
-                                    throw new Exception($store['message'], 1);
-
-                                }
+                                if ($store['status']) $e['image'] = $store['url'];
                             }
                             return $e;
-                        })->values()->toJson();
+                        })->values();
                         $data = collect([
                             "ket" => $this->ket_iconsosmed_desktop,
                             "data" => $data
@@ -1161,7 +1157,7 @@ class Home extends Component
 
                     if ($val->id_fitur == 8) {
                         $dir = $dir."/footer protection";
-                        $img = $this->image_footerProtection_mobile;
+                        $img = $this->image_footerProtection_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
                             if ($store['status']) $img = $store['url'];
@@ -1225,15 +1221,13 @@ class Home extends Component
 
                 // ini untuk mobile
                 foreach ($this->dataFiturMobile as $val) {
-                    $dir = "public/images/".strtolower($this->dataSitus->name);
+                    $dir = "situs/".strtolower($this->dataSitus->name)."/mobile";
                     if ($val->id_fitur == 1) {
                         $dir = $dir."/popup modal";
                         $img = $this->file_popupmodal_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->file_popupmodal_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "file" => $img,
@@ -1249,15 +1243,14 @@ class Home extends Component
                         $dir = $dir."/header apk";
                         $img = $this->file_headerapk_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->file_headerapk_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "file" => $img,
                             "title" => $this->title_headerapk_mobile,
                             "slogan" => $this->slogan_headerapk_mobile,
+                            "url" => $this->url_headerapk_mobile,
                         ])->toJson();
                         fiturSitus::find($val->id)->update([
                             "status" => $this->toogle_headerapk_mobile,
@@ -1270,10 +1263,8 @@ class Home extends Component
                         $img = [];
                         foreach ($this->file_headercorousel_mobile as $i => $file) {
                             if (gettype($file) != "string") {
-                                $ext = $file->getClientOriginalExtension();
-                                $name = now()->format('Ymd-His')."-mobile-$i";
-                                $file = $file->storePubliclyAs($dir, "$name.$ext");
-                                array_push($img, url(Storage::url($file)));
+                                $store = $this->uploadFiles($dir, $file);
+                                if ($store['status']) array_push($img, $store['url']);
                             }else{
                                 array_push($img, $file);
                             }
@@ -1288,27 +1279,24 @@ class Home extends Component
                     if ($val->id_fitur == 4) {
                         $data = collect($this->data_buttonaction_mobile)->toJson();
                         fiturSitus::find($val->id)->update([
-                            "status" => $this->toogle_iconsosmed_desktop,
+                            "status" => $this->toogle_buttonaction_mobile,
                             "data" => $data
                         ]);
                     }
 
                     if ($val->id_fitur == 5) {
-                        $data = collect($this->data_iconsosmed_mobile)->map(function($e) {
-                            $dir = "public/images/".strtolower($this->dataSitus->name);
+                        $data = collect($this->data_iconsosmed_mobile)->map(function($e)  use($dir) {
                             $dir = $dir."/icon sosmed";
                             $img = $e['image'];
                             if (gettype($img) != "string") {
-                                $ext = $img->getClientOriginalExtension();
-                                $name = now()->format('Ymd-His')."-mobile";
-                                $img = $img->storePubliclyAs($dir, "$name.$ext");
-                                $e['image'] = url(Storage::url($img));
+                                $store = $this->uploadFiles($dir, $img);
+                                if ($store['status']) $e['image'] = $store['url'];
                             }
                             return $e;
-                        })->values()->toJson();
+                        })->values();
 
                         $data = collect([
-                            "ket" => $this->ket_iconsosmed_desktop,
+                            "ket" => $this->ket_iconsosmed_mobile,
                             "data" => $data
                         ])->toJson();
 
@@ -1322,10 +1310,8 @@ class Home extends Component
                         $dir = $dir."/promosi";
                         $img = $this->image_promosi_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->image_promosi_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "name" => $this->name_promosi_mobile,
@@ -1353,10 +1339,8 @@ class Home extends Component
                         $dir = $dir."/footer protection";
                         $img = $this->image_footerProtection_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "name" => $this->name_footerProtection_mobile,
@@ -1373,10 +1357,8 @@ class Home extends Component
                         $dir = $dir."/link alternatif";
                         $img = $this->image_linkAlternatif_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->image_linkAlternatif_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "listLink" => explode("--", $this->listLink_linkAlternatif_mobile),
@@ -1392,10 +1374,8 @@ class Home extends Component
                         $dir = $dir."/barcode qris";
                         $img = $this->image_barcodeqris_mobile;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile";
-                            $img = $this->image_barcodeqris_mobile->storePubliclyAs($dir, "$name.$ext");
-                            $img = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
                             "name" => $this->name_barcodeqris_mobile,

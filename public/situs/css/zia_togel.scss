@@ -243,6 +243,7 @@ body.smbitClass-mobile {
 
             li{
                 width: 100%;
+                list-style: none;
                 &:not(:last-child) {
                     border-bottom: 1px solid #adadad;
                 }
@@ -280,7 +281,71 @@ body.smbitClass-mobile {
         gap: 4px;
     }
 
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
 
+        &.show {
+            display: block;
+
+            .modal-dialog {
+                -webkit-transform: translate3d(0,0,0);
+                -o-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+            }
+
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
+        }
+
+        &.fade {
+            .modal-dialog {
+                -webkit-transition: -webkit-transform .3s ease-out;
+                -o-transition: -o-transform .3s ease-out;
+                transition: transform .3s ease-out;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            outline: 0;
+            background: rgba(0,0,0,0);
+            box-shadow: none;
+            border: none;
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 15px;
+
+            .imgads {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .fade {
+            opacity: 0;
+            -webkit-transition: opacity .15s linear;
+            -o-transition: opacity .15s linear;
+            transition: opacity .15s linear;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .modal {
@@ -318,6 +383,7 @@ body.smbitClass-mobile {
         display: flex;
         align-items: center;
         min-height: calc(100% - 1rem);
+        justify-content: center;
     }
 }
 
@@ -892,6 +958,15 @@ body.smbitClass-desktop {
             .footer-protection {
                 text-align: center;
                 margin-top: 20px;
+            }
+        }
+    }
+
+    .modal {
+        .modal-body {
+            .imgads {
+                height: 100%;
+                width: 100%;
             }
         }
     }

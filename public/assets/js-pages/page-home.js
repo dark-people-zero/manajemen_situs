@@ -63,6 +63,12 @@ $(document).ready(function() {
             suppressScrollX: true
         });
     }
+
+    if ($('#formAddbtnActionMobile .form-sosmed-container').length > 0) {
+        new PerfectScrollbar('#formAddbtnActionMobile .form-sosmed-container', {
+            suppressScrollX: true
+        });
+    }
 });
 
 document.addEventListener('livewire:update', function (e) {

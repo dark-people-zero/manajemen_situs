@@ -5,7 +5,7 @@
 @endsection
 
 <div id="content-home">
-    <div>
+    <div style="margin-bottom: 32px;">
         @include('layouts.components.app-header')
     </div>
     <div class="main-content app-content">

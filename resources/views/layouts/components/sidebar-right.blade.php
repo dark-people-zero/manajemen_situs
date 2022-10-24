@@ -180,6 +180,19 @@
                                                                 </span>
                                                             @enderror
                                                         </div>
+
+                                                        {{-- untuk url header apk --}}
+                                                        <div>
+                                                            <div class="main-form-group mt-2">
+                                                                <label class="form-label mt-0 text-start">URL Download</label>
+                                                                <input type="text" class="form-control" wire:model="url_headerapk_desktop" placeholder="Masukan URL Download">
+                                                            </div>
+                                                            @error('url_headerapk_desktop')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -833,6 +846,19 @@
                                                                 </span>
                                                             @enderror
                                                         </div>
+
+                                                        {{-- untuk url header apk --}}
+                                                        <div>
+                                                            <div class="main-form-group mt-2">
+                                                                <label class="form-label mt-0 text-start">URL Download</label>
+                                                                <input type="text" class="form-control" wire:model="url_headerapk_mobile" placeholder="Masukan URL Download">
+                                                            </div>
+                                                            @error('url_headerapk_mobile')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1264,7 +1290,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Background</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Background" type="text" wire:model="bg_barcodeqris_mobile" value="{{$bg_barcodeqris_mobile}}" readonly>
+                                                                <input class="form-control coloris-barcode coloris" placeholder="Masukan Background" type="text" wire:model="bg_barcodeqris_mobile" value="{{$bg_barcodeqris_mobile}}" readonly>
                                                             </div>
                                                         </div>
 
@@ -1272,7 +1298,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Color</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Color" type="text" wire:model="color_barcodeqris_mobile" value="{{$color_barcodeqris_mobile}}" readonly>
+                                                                <input class="form-control coloris-barcode coloris" placeholder="Masukan Color" type="text" wire:model="color_barcodeqris_mobile" value="{{$color_barcodeqris_mobile}}" readonly>
                                                             </div>
                                                         </div>
 
@@ -1280,7 +1306,7 @@
                                                         <div>
                                                             <div class="main-form-group mt-2">
                                                                 <label class="form-label mt-0 text-start">Shadow</label>
-                                                                <input class="form-control coloris-barcode" placeholder="Masukan Shadow" type="text" wire:model="shadow_barcodeqris_mobile" value="{{$shadow_barcodeqris_mobile}}" readonly>
+                                                                <input class="form-control coloris-barcode coloris" placeholder="Masukan Shadow" type="text" wire:model="shadow_barcodeqris_mobile" value="{{$shadow_barcodeqris_mobile}}" readonly>
                                                             </div>
                                                         </div>
 
