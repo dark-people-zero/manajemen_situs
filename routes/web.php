@@ -128,6 +128,22 @@ Route::get('nanas_toto/m', function () {
     return view('situs.nanas_toto.mobile.index');
 });
 
+Route::get('joni_togel/m', function () {
+    return view('situs.joni_togel.mobile.index');
+});
+
+Route::get('dana_toto/m', function () {
+    return view('situs.dana_toto.mobile.index');
+});
+
+Route::get('luna_togel/m', function () {
+    return view('situs.luna_togel.mobile.index');
+});
+
+Route::get('dingdong_togel/m', function () {
+    return view('situs.dingdong_togel.mobile.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [
