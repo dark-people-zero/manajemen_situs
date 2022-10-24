@@ -4,52 +4,70 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>PWVIP4D.COM | Bandar Togel Online Aman Terpercaya</title>
-    <meta name="keywords"
-        content="Bandar Togel Online Terpercaya, Bandar Togel Online Aman, Bandar Togel Aman Terpercaya, Togel Online Aman Terpercaya">
+    <title>Nanas Toto adalah Situs Bandar Togel Online Resmi Terpercaya</title>
+
     <meta name="description"
-        content="PWVIP4D.COM adalah bandar togel online aman terpercaya dengan menghadirkan permainan Togel Online Hongkong, Toto Macau, Singapura, Sydney, Nevada, Cambodia dan masih banyak lagi. Kami juga menyediakan permainan Live Casino Online populer seperti Sicbo, Roulette, Baccarat, 12D, 24D dan masih banyak lagi. Sistem keamanan yang canggih melindungi privasi dan keamanan akun anda. Customer service yang ramah dan siap membantu semua keluhan anda selama 24 jam nonstop.">
+        content="NANASTOTO merupakan Situs Bandar Online terpercaya yang menyediakan Pasaran Togel Terlengkap, berbagai LiveGames Terpopuler &amp; Permainan Slot terbaik.Hanya dengan minimal deposit sebesar  Rp.10.000,- *GABUNG SEKARANG JUGA DAN NIKMATI SENSASI PERMAINANNYA.">
+
+    <style>
+        body {
+            color: #fffeb3 !important;
+            background-color: #000 !important;
+        }
+
+        .row h1 {
+            color: #fffeba !important;
+        }
+
+        .logop {
+            margin-top: 1% !important;
+        }
+    </style>
+
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="pwvip4d176 Mobile">
+    <meta name="apple-mobile-web-app-title" content="xn--nnastoto-8ya Mobile">
     <meta http-equiv="msthemecompatible" content="no">
-    <link rel="icon" type="image/png" href="https://pwvip4d176.com//assets/img/ale/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://pwvip4d176.com//assets/img/ale/favicon.png">
+    <link rel="icon" type="image/png" href="https://xn--nnastoto-8ya.com/assets/img/bao/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://xn--nnastoto-8ya.com/assets/img/bao/favicon.png">
 
-    <link rel="stylesheet" href="{{ asset('situs/assets/pwvip4d/mobile/tingle.min.css') }}">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/style.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('situs/assets/nanas_toto/mobile/tingle.min.css') }}">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
     <style type="text/css">
         .footer {
             z-index: 1;
         }
     </style>
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/framework.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('situs/assets/pwvip4d/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/socket.io.min.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jqueryui.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/owl.carousel.min.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.swipebox.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.colorbox.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/snap.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/contact.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/custom.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/framework.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/framework.launcher.js.download') }}">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/framework.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('situs/assets/nanas_toto/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/socket.io.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jquery.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jqueryui.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/owl.carousel.min.js.download') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jquery.swipebox.js.download') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jquery.colorbox.js.download') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/snap.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/contact.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/custom.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/framework.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/framework.launcher.js.download') }}">
     </script>
     <script language="JavaScript" type="text/javascript"
-        src="{{ asset('situs/assets/pwvip4d/mobile/jquery-cycle-all-pack.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/clipboard.min.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/clipboard.js.download') }}"></script>
-    <script src="{{ asset('situs/assets/pwvip4d/mobile/notif-widget.js.download') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/sw.js.download') }}"></script>
+        src="{{ asset('situs/assets/nanas_toto/mobile/jquery-cycle-all-pack.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/clipboard.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/clipboard.js.download') }}"></script>
+    <script src="{{ asset('situs/assets/nanas_toto/mobile/notif-widget.js.download') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/sw.js.download') }}"></script>
 
     <style type="text/css">
         .btnlink {
@@ -99,10 +117,10 @@
         <div id="content" class="page-content" data-snap-ignore="true">
             <div class="page-header smartb1">
                 <div class="app-container"></div>
-                <a class="smartb2" href="https://pwvip4d176.com//m/index.php"><img class="header-logo2"
-                        src="{{ asset('situs/assets/pwvip4d/mobile/logo.png') }}" width="130"></a>
+                <a class="smartb2" href="https://xn--nnastoto-8ya.com/m/index.php"><img class="header-logo2"
+                        src="{{ asset('situs/assets/nanas_toto/mobile/logo.png') }}" width="130"></a>
                 <div class="buttonlc space smartb3">
-                    <a href="https://direct.lc.chat/13378884/" class="buttonWrap buttonlc2 button-orange"
+                    <a href="https://direct.lc.chat/14231931/" class="buttonWrap buttonlc2 button-orange"
                         _blank="">Live Chat</a>
                 </div>
             </div>
@@ -113,35 +131,37 @@
                         <!-- banner kecil -->
                         <div class="note center">Silahkan login untuk mulai bermain</div>
                         <div>
-                            <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/vbulletin_md5.js.download') }}"></script>
-                            <form action="https://pwvip4d176.com//m/index.php" method="post"
+                            <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/vbulletin_md5.js.download') }}"></script>
+                            <form action="https://xn--nnastoto-8ya.com/m/index.php" method="post"
                                 onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
                                 <div class="form-group">
                                     <input id="navbar_username" name="entered_login" tabindex="1"
                                         class="contactField requiredField center" type="text" value=""
                                         placeholder="Username"
-                                        onblur="if(this.value == '';) { this.value='Username';}"
-                                        onfocus="if (this.value == 'Username';) {this.value='';}" required="">
+                                        onblur="if(this.value == &#39;&#39;) { this.value=&#39;Username&#39;}"
+                                        onfocus="if (this.value == &#39;Username&#39;) {this.value=&#39;&#39;}"
+                                        required="">
                                 </div>
                                 <div class="form-group">
                                     <span class="showp" onclick="showpassword()"><img
-                                            src="{{ asset('situs/assets/pwvip4d/mobile/eye.png') }}">
+                                            src="{{ asset('situs/assets/nanas_toto/mobile/eye.png') }}">
                                         <p id="hideshow" style="font-size: 18px;">&nbsp; Show</p>
                                     </span>
                                     <input type="hidden" id="showhide" value="show">
                                     <input id="navbar_password" type="password" tabindex="2" name="entered_password"
                                         class="contactField requiredField center" value=""
                                         placeholder="Password"
-                                        onblur="if(this.value == '';) { this.value='Password';}"
-                                        onfocus="if (this.value == 'Password';) {this.value='';}" required="">
+                                        onblur="if(this.value == &#39;&#39;) { this.value=&#39;Password&#39;}"
+                                        onfocus="if (this.value == &#39;Password&#39;) {this.value=&#39;&#39;}"
+                                        required="">
                                 </div>
                                 <div>
-                                    <a href="https://pwvip4d176.com//m/forget-password.php"
+                                    <a href="https://xn--nnastoto-8ya.com/m/forget-password.php"
                                         class="note right underline">Lupa password?</a>
 
-                                    <a href="https://pwvip4d176.com/lite/index.php" class="note left underline">Lite
-                                        Mode</a>
+                                    <a href="https://xn--nnastoto-8ya.com/lite/index.php"
+                                        class="note left underline">Lite Mode</a>
 
                                     <div class="buttonjoin">
                                         <input type="SUBMIT" name="Submit"
@@ -153,7 +173,7 @@
                                 <input name="vb_login_md5password_utf" type="hidden">
                             </form>
                             <div class="buttonjoin">
-                                <a href="https://pwvip4d176.com//m/register.php"
+                                <a href="https://xn--nnastoto-8ya.com/m/register.php"
                                     class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
                             </div>
                         </div>
@@ -211,12 +231,12 @@
                             } else return true;
                         }
                     </script>
-                    <link href="{{ asset('situs/assets/pwvip4d/mobile/login.css') }}" rel="stylesheet">
+                    <link href="{{ asset('situs/assets/nanas_toto/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
                             <h3 class="dib"> Hasil Terakhir </h3>
                             <div style="display:flex;float:right;">
-                                <span style="color:white;margin-right:20px;">&nbsp;&nbsp;04-10-2022</span>
+                                <span style="color:white;margin-right:20px;">&nbsp;&nbsp;05-10-2022</span>
                                 <a id="slider-hasil-left" href="javascript:void(0);" class="btn prev prevControl"><i
                                         style="border:2px solid;border-radius:50%;font-size:18px;padding:2px 7px;margin-right:5px;"
                                         class="fa fa-angle-up"></i></a>
@@ -228,77 +248,27 @@
                             <div id="slider-hasil">
                                 <div class="slider">
                                     <div class="results">
-                                        <div class="pool-name">BULLSEYE</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9368</div>
+                                        <div class="pool-name">KENTUCKYMID</div>
+                                        <div class="pool-date">2022-10-05</div>
+                                        <div class="pool-result">7603</div>
                                     </div>
 
                                     <div class="results">
-                                        <div class="pool-name">CHINA</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9794</div>
+                                        <div class="pool-name">FLORIDAMID</div>
+                                        <div class="pool-date">2022-10-05</div>
+                                        <div class="pool-result">6746</div>
                                     </div>
 
                                     <div class="results">
-                                        <div class="pool-name">TAIWAN</div>
+                                        <div class="pool-name">NEWYORKMID</div>
                                         <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">1727</div>
+                                        <div class="pool-result">9121</div>
                                     </div>
 
                                     <div class="results">
                                         <div class="pool-name">CAROLINADAY</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">9797</div>
-                                    </div>
-                                </div>
-                                <div class="slider">
-                                    <div class="results">
-                                        <div class="pool-name">PCSO</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">2012</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">SYDNEY</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">0837</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">SINGAPORE</div>
-                                        <div class="pool-date">2022-10-03</div>
-                                        <div class="pool-result">6284</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">NEVADA</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">2079</div>
-                                    </div>
-                                </div>
-                                <div class="slider">
-                                    <div class="results">
-                                        <div class="pool-name">HONGKONG</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">5880</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">CAMBODIA</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">3207</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">MAGNUM4D</div>
-                                        <div class="pool-date">2022-10-02</div>
-                                        <div class="pool-result">1419</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">FLORIDAMID</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">5582</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -315,19 +285,6 @@
                                     </div>
 
                                     <div class="results">
-                                        <div class="pool-name">OREGON09</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9568</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">OREGON12</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9963</div>
-                                    </div>
-                                </div>
-                                <div class="slider">
-                                    <div class="results">
                                         <div class="pool-name">CALIFORNIA</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">0441</div>
@@ -338,30 +295,18 @@
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">1030</div>
                                     </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">CAROLINAEVE</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">3337</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">NEWYORKMID</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9121</div>
-                                    </div>
                                 </div>
                                 <div class="slider">
+                                    <div class="results">
+                                        <div class="pool-name">OREGON09</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">9568</div>
+                                    </div>
+
                                     <div class="results">
                                         <div class="pool-name">NEWYORKEVE</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">1052</div>
-                                    </div>
-
-                                    <div class="results">
-                                        <div class="pool-name">JAPAN</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">3686</div>
                                     </div>
 
                                     <div class="results">
@@ -371,16 +316,41 @@
                                     </div>
 
                                     <div class="results">
-                                        <div class="pool-name">KENTUCKYMID</div>
+                                        <div class="pool-name">CAROLINAEVE</div>
                                         <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">9090</div>
+                                        <div class="pool-result">3337</div>
                                     </div>
                                 </div>
                                 <div class="slider">
                                     <div class="results">
+                                        <div class="pool-name">CAMBODIA</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">3207</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">OREGON12</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">9963</div>
+                                    </div>
+
+                                    <div class="results">
                                         <div class="pool-name">POIPET12</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">3349</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">BULLSEYE</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">9368</div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="results">
+                                        <div class="pool-name">SYDNEY</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">0837</div>
                                     </div>
 
                                     <div class="results">
@@ -390,15 +360,65 @@
                                     </div>
 
                                     <div class="results">
+                                        <div class="pool-name">CHINA</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">9794</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">JEPANG</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">3686</div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="results">
+                                        <div class="pool-name">SINGAPORE</div>
+                                        <div class="pool-date">2022-10-03</div>
+                                        <div class="pool-result">6284</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">MAGNUM4D</div>
+                                        <div class="pool-date">2022-10-02</div>
+                                        <div class="pool-result">1419</div>
+                                    </div>
+
+                                    <div class="results">
                                         <div class="pool-name">POIPET19</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">1508</div>
                                     </div>
 
                                     <div class="results">
+                                        <div class="pool-name">PCSO</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">2012</div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="results">
+                                        <div class="pool-name">TAIWAN</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">1727</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">NEVADA</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">2079</div>
+                                    </div>
+
+                                    <div class="results">
                                         <div class="pool-name">POIPET22</div>
                                         <div class="pool-date">2022-10-04</div>
                                         <div class="pool-result">5911</div>
+                                    </div>
+
+                                    <div class="results">
+                                        <div class="pool-name">HONGKONG</div>
+                                        <div class="pool-date">2022-10-04</div>
+                                        <div class="pool-result">5880</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -447,8 +467,8 @@
 
                                     <div class="results">
                                         <div class="pool-name">HUAHIN 0100</div>
-                                        <div class="pool-date">2022-10-04</div>
-                                        <div class="pool-result">6590</div>
+                                        <div class="pool-date">2022-10-05</div>
+                                        <div class="pool-result">0331</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -481,25 +501,25 @@
                                         <div class="pool-name">24Dspin</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/02.png') }}"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/01.png') }}"
                                                 width="22px"></div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">Dice 6</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice4.png') }}"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/dice1.png') }}"
                                                 style="height:26px;width:25px;"></div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">Toto Macau</div>
                                         <div class="pool-date"></div>
-                                        <div class="pool-result">9039</div>
+                                        <div class="pool-result">2504</div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">24D</div>
                                         <div class="pool-date"></div>
-                                        <div class="pool-result">13</div>
+                                        <div class="pool-result">21</div>
                                     </div>
                                 </div>
                                 <div class="slider">
@@ -507,66 +527,66 @@
                                         <div class="pool-name">Roulette</div>
                                         <div class="pool-date"></div>
                                         <div class="pool-result"><img
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/24.png') }}"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/15.png') }}"
                                                 width="22px"></div>
                                     </div>
                                     <div class="results">
                                         <div class="pool-name">Sicbo[Dice]</div>
                                         <div class="pool-date"></div>
-                                        <div class="pool-result"><img style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice1.png') }}"><img
-                                                style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice2.png') }}"><img
-                                                style="width:20px;margin: 6px 1px;"
-                                                src="{{ asset('situs/assets/pwvip4d/mobile/dice5.png') }}"></div>
+                                        <div class="pool-result"><img style="margin: 6px 1px;"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/dice2.png') }}"><img
+                                                style="margin: 6px 1px;"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/dice2.png') }}"><img
+                                                style="margin: 6px 1px;"
+                                                src="{{ asset('situs/assets/nanas_toto/mobile/dice3.png') }}"></div>
                                     </div>
                                 </div>
                             </div>
                             <div>
 
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bca.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/bca.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bni.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/bni.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bri.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/yellow-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/bri.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/cimb.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/red-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/bsi.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/dana.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/cimb.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/danamon.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/dana.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/gopay.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/danamon.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/gopay.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/ovo.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/linkaja.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/linkaja.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/red-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/nofound.webp') }}">
                                 </div>
                                 <div class="bank">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/bsi.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/ovo.webp') }}">
                                 </div>
                             </div>
                         </div>
@@ -581,29 +601,29 @@
                 </script>
                 <div class="row" style="display: flex;">
                     <div class="col-6 col-sm-6">
-                        <img src="{{ asset('situs/assets/pwvip4d/mobile/idnplay_w.png') }}"
+                        <img src="{{ asset('situs/assets/nanas_toto/mobile/idnplay_w.png') }}"
                             style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                     </div>
                     <div class="col-6 col-sm-6">
-                        <img src="{{ asset('situs/assets/pwvip4d/mobile/pagcorlogo2.png') }}"
+                        <img src="{{ asset('situs/assets/nanas_toto/mobile/pagcorlogo2.png') }}"
                             style="overflow: inherit !important;width: 100%;padding: 10px;">
                     </div>
                 </div>
                 <div class="footer">
                     <div class="wrapper">
-                        <div class="center-text">© 2014 - 2022 pwvip4d176. All Rights Reserved | 18+</div>
+                        <div class="center-text">© 2014 - 2022 xn--nnastoto-8ya. All Rights Reserved | 18+</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/_footer.js.download') }}"></script>
-        <script src="{{ asset('situs/assets/pwvip4d/mobile/moment.min.js.download') }}" type="text/javascript"></script>
-        <link rel="stylesheet" href="{{ asset('situs/assets/pwvip4d/mobile/_footer.css') }}">
+        <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/_footer.js.download') }}"></script>
+        <script src="{{ asset('situs/assets/nanas_toto/mobile/moment.min.js.download') }}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{{ asset('situs/assets/nanas_toto/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
-        <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/sw.js.download') }}"></script>
+        <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/sw.js.download') }}"></script>
         <script>
-            protocol('pwvip4d176.com', 'vpgaa', 'mobile')
+            protocol('xn--nnastoto-8ya.com', 'kcoaa', 'mobile')
         </script>
     </div>
     <div id="cboxOverlay" style="display: none;"></div>

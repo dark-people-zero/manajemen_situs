@@ -92,6 +92,26 @@ Route::get('pwvip4d/m', function () {
     return view('situs.pwvip4d.mobile.index');
 });
 
+Route::get('pro_togel/m', function () {
+    return view('situs.pro_togel.mobile.index');
+});
+
+Route::get('patih_toto/m', function () {
+    return view('situs.patih_toto.mobile.index');
+});
+
+Route::get('partai_togel/m', function () {
+    return view('situs.partai_togel.mobile.index');
+});
+
+Route::get('oppa_toto/m', function () {
+    return view('situs.oppa_toto.mobile.index');
+});
+
+Route::get('nanas_toto/m', function () {
+    return view('situs.nanas_toto.mobile.index');
+});
+
 Route::get('/permision', function () {
     $active = auth()->user()->aksesMenu->where('status', true)->first();
     return view('pages.permision', [
