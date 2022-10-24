@@ -1,4 +1,4 @@
-@charset "utf-8";@font-face{font-family:aller;src:url(../Aller_Rg.woff2);}
+@charset "utf-8";@font-face{font-family:aller;src:url(Aller_Rg.woff2);}
 body{background-color:#2b2b2b;font-family:aller;}
 .overlay{pointer-events:none;position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.6);z-index:9999;}
 .all-elements{overflow-x:hidden;}
@@ -14,10 +14,10 @@ body{background-color:#2b2b2b;font-family:aller;}
 .sidebar-shortcuts{background-color:#1e1e1e;height:50px;border-bottom:solid 1px #2a2a2a;}
 .sidebar-shortcuts a{opacity:0.8;}
 .sidebar-shortcuts a:hover{background-color:rgba(255,255,255,0.1);}
-.shortcut-call{background-image:url(../../img/ui/shortcut_phone.png);background-position:16px 11px;background-repeat:no-repeat;background-size:25px 25px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
-.shortcut-facebook{background-image:url(../../img/ui/shortcut_facebook.png);background-position:16px 11px;background-repeat:no-repeat;background-size:27px 27px;left:52px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
-.shortcut-twitter{background-image:url(../../img/ui/shortcut_twitter.png);background-position:17px 11px;background-repeat:no-repeat;background-size:25px 25px;left:105px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
-.shortcut-search{background-image:url(../../img/ui/shortcut_magnifier.png);background-position:16px 12px;background-repeat:no-repeat;background-size:27px 27px;left:160px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
+.shortcut-call{background-image:url(../../img/ui/shortcut_phone.html);background-position:16px 11px;background-repeat:no-repeat;background-size:25px 25px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
+.shortcut-facebook{background-image:url(../../img/ui/shortcut_facebook.html);background-position:16px 11px;background-repeat:no-repeat;background-size:27px 27px;left:52px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
+.shortcut-twitter{background-image:url(../../img/ui/shortcut_twitter.html);background-position:17px 11px;background-repeat:no-repeat;background-size:25px 25px;left:105px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
+.shortcut-search{background-image:url(../../img/ui/shortcut_magnifier.html);background-position:16px 12px;background-repeat:no-repeat;background-size:27px 27px;left:160px;width:58px;height:50px;position:absolute;border-right:solid 1px rgba(0,0,0,0.2);border-bottom:solid 1px rgba(0,0,0,0.2);}
 .shortcut-close{background-image:url(../../img/ui/shortcut_close.png);background-position:17px 12px;background-repeat:no-repeat;background-size:25px 25px;left:215px;top:0px;width:58px;height:50px;position:absolute;border-left:solid 1px rgba(0,0,0,0.2);border-right:solid 1px rgba(0,0,0,0.2);}
 .sidebar-breadcrumb{border-top:solid 1px rgba(255,255,255,0.05);background-color:#1e1e1e;color:#9a9a9a;font-size:10px;padding-top:5px;padding-bottom:5px;padding-left:20px;}
 .sidebar-decoration{height:2px;background-color:rgba(0,0,0,0.15);border-bottom:solid 1px rgba(255,255,255,0.07);}
@@ -62,10 +62,10 @@ body{background-color:#2b2b2b;font-family:aller;}
 .support-icon{background-image:url(../../img/ui/dt-bantuan.png)}
 .envelope-icon{background-image:url(../../img/ui/envelope.png);}
 /*.contact-icon-big {	background: url('../img/contacts-big.png') no-repeat;width: 50px;height: 50px;display: inline-block;vertical-align: middle;}*/
-.info-update{background-image:url(../../img/ui/notification-blue.png);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
-.notification-update{background-image:url(../../img/ui/notification-yellow.png);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
-.warning-update{background-image:url(../../img/ui/notification-red.png);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
-.tick-update{background-image:url(../../img/ui/notification-green.png);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
+.info-update{background-image:url(../../img/ui/notification-blue.html);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
+.notification-update{background-image:url(../../img/ui/notification-yellow.html);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
+.warning-update{background-image:url(../../img/ui/notification-red.html);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
+.tick-update{background-image:url(../../img/ui/notification-green.html);background-size:42px 42px;background-position:20px 0px;background-repeat:no-repeat;height:50px;padding-left:80px;}
 .page-update{margin-top:15px;margin-bottom:10px;}
 .page-update strong{color:rgba(255,255,255,0.6);display:block;}
 .page-update em{color:rgba(255,255,255,0.4);display:block;font-size:10px;font-style:normal;}
@@ -73,12 +73,12 @@ body{background-color:#2b2b2b;font-family:aller;}
 .active-update-icon{background-image:url(../../img/ui/nav-dropup.png)!important;}
 .page-update-text{color:rgba(255,255,255,0.5);font-size:12px;width:220px;margin-left:auto;margin-right:auto;}
 .page-update-text{display:none;}
-.page-header{background:#000000a;height:70px;width:100%;position:fixed;z-index:999999;border-bottom:1px solid #818285;top:0;}
+.page-header{background:#000;height:70px;width:100%;position:fixed;z-index:999999;border-bottom:1px solid #818285;top:0;}
 .page-header-clear{height:70px;}
 .header-logo{
 	width:210px;
 	height:63px;
-	margin-left:23px;
+	margin-left:58px;
 	margin-top:-67px;
 }
 .header-logo2{
@@ -99,7 +99,7 @@ body{background-color:#2b2b2b;font-family:aller;}
 .deploy-sidebar:hover{background-color:rgba(255,255,255,0.1);}
 .deploy-sidebar2{background-image:url(../../img/ui/deploy-nav2.png);background-repeat:no-repeat;background-position:20px 24px;background-size:28px 19px;height:70px;width:70px;float:right;margin-top:-51px;z-index:51;}
 .deploy-sidebar2:hover{background-color:rgba(255,255,255,0.1);}
-.deploy-login{background-image:url(../../img/ui/deploy-login2.png);background-size:36px 24px;background-repeat:no-repeat;background-position:19px 22px;height:70px;width:70px;float:right;margin-top:-51px;z-index:50;}
+.deploy-login{background-image:url(../../img/ui/deploy-login2.html);background-size:36px 24px;background-repeat:no-repeat;background-position:19px 22px;height:70px;width:70px;float:right;margin-top:-51px;z-index:50;}
 .deploy-login:hover{background-color:rgba(255,255,255,0.1);}
 .deploy-logout{background-image:url(../../img/ui/deploy-logout2.png);background-size:30px 24px;background-repeat:no-repeat;background-position:0 28px;height:70px;width:38px;float:right;margin-top:-60px;z-index:50;}
 .deploy-logout:hover{background-color:rgba(255,255,255,0.1);}
@@ -124,11 +124,11 @@ body{background-color:#2b2b2b;font-family:aller;}
 .thumb-right strong{color:#fff;display:inline-block;padding-top:5px;padding-bottom:5px;font-size:13px;}
 .thumb-right em{font-style:normal;}
 .customer-slider div a img{width:40px;margin-left:auto;margin-right:auto;}
-.facebook-box{background-image:url(../../img/ui/facebook.png);background-size:26px 23px;background-repeat:no-repeat;background-position:10px 10px;background-color:#3b5998;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
+.facebook-box{background-image:url(../../img/ui/facebook.html);background-size:26px 23px;background-repeat:no-repeat;background-position:10px 10px;background-color:#3b5998;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
 .social-box em{position:absolute;height:40px;width:1px;background-color:#FFFFFF;margin-left:-15px;}
 .social-box:hover{opacity:0.9;}
-.twitter-box{background-image:url(../../img/ui/twitter.png);background-size:20px 17px;background-repeat:no-repeat;background-position:12px 13px;background-color:#4099ff;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
-.google-box{background-image:url(../../img/ui/google.png);background-size:20px 17px;background-repeat:no-repeat;background-position:12px 13px;background-color:#d34836;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
+.twitter-box{background-image:url(../../img/ui/twitter.html);background-size:20px 17px;background-repeat:no-repeat;background-position:12px 13px;background-color:#4099ff;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
+.google-box{background-image:url(../../img/ui/google.html);background-size:20px 17px;background-repeat:no-repeat;background-position:12px 13px;background-color:#d34836;height:40px;line-height:40px;color:#FFFFFF;padding-left:60px;margin-bottom:20px;}
 .jackpot{background:#131313;padding:20px;text-align:center;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;border-radius:8px;}
 .jackpot-text{font-family:aller;font-size:35px;color:#ffbf27;height:35px;padding:10px 0;}
 .jackpot-global{font-family:aller;font-size:67px;color:#ffffff;height:60px;padding-top:20px;}
@@ -155,11 +155,11 @@ hr{margin-top:-3px;margin-bottom:10px;border:0;border-top:1px solid rgba(255, 25
 @media (min-width:760px){.wide-image{max-height:150px;}
 .wide-item-titles{top:55px;margin-bottom:-45px;}
 }
-.contact-call{padding-top:5px;color:#666;padding-left:30px;background-image:url(../../img/ui/contact_phone.png);background-position:0px 5px;background-repeat:no-repeat;background-size:18px 18px;height:30px;display:block;}
-.contact-text{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_message.png);background-position:0px 2px;background-repeat:no-repeat;background-size:18px 18px;height:20px;display:block;margin-bottom:2px;}
-.contact-mail{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_mail.png);background-position:3px 3px;background-repeat:no-repeat;background-size:14px 14px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
-.contact-facebook{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_facebook.png);background-position:0px 0px;background-repeat:no-repeat;background-size:20px 20px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
-.contact-twitter{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_twitter.png);background-position:0px 0px;background-repeat:no-repeat;background-size:20px 20px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
+.contact-call{padding-top:5px;color:#666;padding-left:30px;background-image:url(../../img/ui/contact_phone.html);background-position:0px 5px;background-repeat:no-repeat;background-size:18px 18px;height:30px;display:block;}
+.contact-text{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_message.html);background-position:0px 2px;background-repeat:no-repeat;background-size:18px 18px;height:20px;display:block;margin-bottom:2px;}
+.contact-mail{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_mail.html);background-position:3px 3px;background-repeat:no-repeat;background-size:14px 14px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
+.contact-facebook{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_facebook.html);background-position:0px 0px;background-repeat:no-repeat;background-size:20px 20px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
+.contact-twitter{color:#666;margin-bottom:5px;padding-left:30px;background-image:url(../../img/ui/contact_twitter.html);background-position:0px 0px;background-repeat:no-repeat;background-size:20px 20px;height:20px;display:block;margin-top:5px;margin-bottom:2px;}
 .web-title{padding-top:5px;font-size:60px;color:#741868;}
 .page{font-size:20px;margin-bottom:10px;font-weight:800;color:#338aa6;letter-spacing:0.5px;}
 .page-title{font-size:50px;color:#fff;letter-spacing:1px;}
