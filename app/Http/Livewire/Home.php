@@ -9,6 +9,7 @@ use App\Models\situs;
 use App\Models\fiturSitus;
 use Illuminate\Support\Facades\Storage;
 use File;
+use DB;
 
 class Home extends Component
 {
@@ -59,7 +60,7 @@ class Home extends Component
     public $data_buttonaction_desktop = [], $data_buttonaction_mobile = [];
 
     // untuk icon sosmed desktop dan mobile
-    public $data_iconsosmed_desktop = [], $data_iconsosmed_mobile = [];
+    public $data_iconsosmed_desktop = [], $ket_iconsosmed_desktop, $data_iconsosmed_mobile = [], $ket_iconsosmed_mobile;
 
     // untuk promosi desktop dan mobile
     public $name_promosi_desktop, $link_promosi_desktop, $image_promosi_desktop, $name_promosi_mobile, $link_promosi_mobile, $image_promosi_mobile;
@@ -360,6 +361,9 @@ class Home extends Component
 
         // untuk icon sosmed mobile dan desktop
         if ($this->toogle_iconsosmed_desktop) {
+            $validate["ket_iconsosmed_desktop"] = "required";
+            $message["ket_iconsosmed_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
+
             foreach ($this->data_iconsosmed_desktop as $i => $val) {
                 $validate["data_iconsosmed_desktop.$i.name"] = "required";
                 $validate["data_iconsosmed_desktop.$i.link"] = "required|url";
@@ -383,6 +387,8 @@ class Home extends Component
         }
 
         if ($this->toogle_iconsosmed_mobile) {
+            $validate["ket_iconsosmed_mobile"] = "required";
+            $message["ket_iconsosmed_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
             foreach ($this->data_iconsosmed_mobile as $i => $val) {
                 $validate["data_iconsosmed_mobile.$i.name"] = "required";
                 $validate["data_iconsosmed_mobile.$i.link"] = "required|url";
@@ -662,7 +668,10 @@ class Home extends Component
                 if ($item->id_fitur == 5) {
                     $this->toogle_iconsosmed_desktop = $item->status;
                     $data = json_decode($item->data, true);
-                    if ($data) $this->data_iconsosmed_desktop = $data;
+                    if ($data) {
+                        $this->data_iconsosmed_desktop = $data['data'];
+                        $this->ket_iconsosmed_desktop = $data['ket'];
+                    }
                 }
 
                 if ($item->id_fitur == 6) {
@@ -759,7 +768,11 @@ class Home extends Component
                 if ($item->id_fitur == 5) {
                     $this->toogle_iconsosmed_mobile = $item->status;
                     $data = json_decode($item->data, true);
-                    if ($data) $this->data_iconsosmed_mobile = $data;
+
+                    if ($data) {
+                        $this->data_iconsosmed_mobile = $data['data'];
+                        $this->ket_iconsosmed_mobile = $data['ket'];
+                    }
                 }
 
                 if ($item->id_fitur == 6) {
@@ -1001,6 +1014,7 @@ class Home extends Component
 
     public function saveData()
     {
+        dd("ok");
         $validate = $this->validationFiled();
         if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
@@ -1018,390 +1032,423 @@ class Home extends Component
 
         $errors = $this->getErrorBag();
 
+
         if (count($errors) == 0) {
-            // ini untuk desktop
-            foreach ($this->dataFiturDesktop as $val) {
-                $dir = "public/images/".strtolower($this->dataSitus->name);
-                if ($val->id_fitur == 1) {
-                    $dir = $dir."/popup modal";
-                    $img = $this->file_popupmodal_desktop;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->file_popupmodal_desktop->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "file" => $img,
-                        "deskripsi" => $this->deskripsi_popupmodal_desktop,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_popupmodal_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 2) {
-                    $dir = $dir."/header apk";
-                    $img = $this->file_headerapk_desktop;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->file_headerapk_desktop->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "file" => $img,
-                        "title" => $this->title_headerapk_desktop,
-                        "slogan" => $this->slogan_headerapk_desktop,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_headerapk_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 3) {
-                    $dir = $dir."/header corousel";
-                    $img = [];
-
-                    foreach ($this->file_headercorousel_desktop as $i => $file) {
-                        if (gettype($file) != "string") {
-                            $ext = $file->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-desktop-$i";
-                            $file = $file->storePubliclyAs($dir, "$name.$ext");
-                            array_push($img, url(Storage::url($file)));
-                        }else{
-                            array_push($img, $file);
-                        }
-                    }
-                    $data = collect($img)->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_headercorousel_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 4) {
-                    $data = collect($this->data_buttonaction_desktop)->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_buttonaction_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 5) {
-                    $data = collect($this->data_iconsosmed_desktop)->map(function($e) {
-                        $dir = "public/images/".strtolower($this->dataSitus->name);
-                        $dir = $dir."/icon sosmed";
-                        $img = $e['image'];
+            try {
+                DB::beginTransaction();
+                // ini untuk desktop
+                foreach ($this->dataFiturDesktop as $val) {
+                    $dir = "situs/".strtolower($this->dataSitus->name)."/desktop";
+                    if ($val->id_fitur == 1) {
+                        $dir = $dir."/popup modal";
+                        $img = $this->file_popupmodal_desktop;
                         if (gettype($img) != "string") {
-                            $ext = $img->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-desktop";
-                            $img = $img->storePubliclyAs($dir, "$name.$ext");
-                            $e['image'] = url(Storage::url($img));
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
-                        return $e;
-                    })->values()->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_iconsosmed_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 6) {
-                    $dir = $dir."/promosi";
-                    $img = $this->image_promosi_desktop;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->image_promosi_desktop->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
+                        $data = collect([
+                            "file" => $img,
+                            "deskripsi" => $this->deskripsi_popupmodal_desktop,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_popupmodal_desktop,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect([
-                        "name" => $this->name_promosi_desktop,
-                        "link" => $this->link_promosi_desktop,
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_promosi_desktop,
-                        "data" => $data
-                    ]);
-                }
 
-                if ($val->id_fitur == 7) {
-                    $data = collect([
-                        "title" => $this->title_beforeFooter_desktop,
-                        "deskripsi" => $this->deskripsi_beforeFooter_desktop,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_beforefooter_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 8) {
-                    $dir = $dir."/footer protection";
-                    $img = $this->image_footerProtection_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "name" => $this->name_footerProtection_mobile,
-                        "link" => $this->link_footerProtection_mobile,
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_footerprotection_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 9) {
-                    $dir = $dir."/link alternatif";
-                    $img = $this->image_linkAlternatif_desktop;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->image_linkAlternatif_desktop->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "listLink" => explode("--", $this->listLink_linkAlternatif_desktop),
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_linkAlternatif_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 10) {
-                    $dir = $dir."/barcode qris";
-                    $img = $this->image_barcodeqris_desktop;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-desktop";
-                        $img = $this->image_barcodeqris_desktop->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "name" => $this->name_barcodeqris_desktop,
-                        "background" => $this->bg_barcodeqris_desktop,
-                        "color" => $this->color_barcodeqris_desktop,
-                        "shadow" => $this->shadow_barcodeqris_desktop,
-                        "image" => $img,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_barcodeqris_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 11) {
-                    $data = collect(explode("--", $this->list_sortlistbank_desktop))->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_sortlistbank_desktop,
-                        "data" => $data
-                    ]);
-                }
-            }
-
-            // ini untuk mobile
-            foreach ($this->dataFiturMobile as $val) {
-                $dir = "public/images/".strtolower($this->dataSitus->name);
-                if ($val->id_fitur == 1) {
-                    $dir = $dir."/popup modal";
-                    $img = $this->file_popupmodal_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->file_popupmodal_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "file" => $img,
-                        "deskripsi" => $this->deskripsi_popupmodal_mobile,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_popupmodal_mobile,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 2) {
-                    $dir = $dir."/header apk";
-                    $img = $this->file_headerapk_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->file_headerapk_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
-                    }
-                    $data = collect([
-                        "file" => $img,
-                        "title" => $this->title_headerapk_mobile,
-                        "slogan" => $this->slogan_headerapk_mobile,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_headerapk_mobile,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 3) {
-                    $dir = $dir."/header corousel";
-                    $img = [];
-                    foreach ($this->file_headercorousel_mobile as $i => $file) {
-                        if (gettype($file) != "string") {
-                            $ext = $file->getClientOriginalExtension();
-                            $name = now()->format('Ymd-His')."-mobile-$i";
-                            $file = $file->storePubliclyAs($dir, "$name.$ext");
-                            array_push($img, url(Storage::url($file)));
-                        }else{
-                            array_push($img, $file);
+                    if ($val->id_fitur == 2) {
+                        $dir = $dir."/header apk";
+                        $img = $this->file_headerapk_desktop;
+                        if (gettype($img) != "string") {
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
                         }
+                        $data = collect([
+                            "file" => $img,
+                            "title" => $this->title_headerapk_desktop,
+                            "slogan" => $this->slogan_headerapk_desktop,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_headerapk_desktop,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect($img)->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_headercorousel_mobile,
-                        "data" => $data
-                    ]);
+
+                    if ($val->id_fitur == 3) {
+                        $dir = $dir."/header corousel";
+                        $img = [];
+
+                        foreach ($this->file_headercorousel_desktop as $i => $file) {
+                            if (gettype($file) != "string") {
+                                $store = $this->uploadFiles($dir, $file);
+                                if ($store['status']) array_push($img, $store['url']);
+                            }else{
+                                array_push($img, $file);
+                            }
+                        }
+                        $data = collect($img)->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_headercorousel_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 4) {
+                        $data = collect($this->data_buttonaction_desktop)->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_buttonaction_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 5) {
+                        dd($this->data_iconsosmed_desktop);
+                        $data = collect($this->data_iconsosmed_desktop)->map(function($e) {
+                            $dir = "public/images/".strtolower($this->dataSitus->name);
+                            $dir = $dir."/icon sosmed";
+                            $img = $e['image'];
+                            if (gettype($img) != "string") {
+                                $store = $this->uploadFiles($dir, $img);
+                                dd($store);
+                                if ($store['status']) {
+                                    $e['image'] = $store['url'];
+                                }else{
+                                    dd($store);
+                                    throw new Exception($store['message'], 1);
+
+                                }
+                            }
+                            return $e;
+                        })->values()->toJson();
+                        $data = collect([
+                            "ket" => $this->ket_iconsosmed_desktop,
+                            "data" => $data
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_iconsosmed_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 6) {
+                        $dir = $dir."/promosi";
+                        $img = $this->image_promosi_desktop;
+                        if (gettype($img) != "string") {
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
+                        }
+                        $data = collect([
+                            "name" => $this->name_promosi_desktop,
+                            "link" => $this->link_promosi_desktop,
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_promosi_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 7) {
+                        $data = collect([
+                            "title" => $this->title_beforeFooter_desktop,
+                            "deskripsi" => $this->deskripsi_beforeFooter_desktop,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_beforefooter_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 8) {
+                        $dir = $dir."/footer protection";
+                        $img = $this->image_footerProtection_mobile;
+                        if (gettype($img) != "string") {
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
+                        }
+                        $data = collect([
+                            "name" => $this->name_footerProtection_mobile,
+                            "link" => $this->link_footerProtection_mobile,
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_footerprotection_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 9) {
+                        $dir = $dir."/link alternatif";
+                        $img = $this->image_linkAlternatif_desktop;
+                        if (gettype($img) != "string") {
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
+                        }
+                        $data = collect([
+                            "listLink" => explode("--", $this->listLink_linkAlternatif_desktop),
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_linkAlternatif_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 10) {
+                        $dir = $dir."/barcode qris";
+                        $img = $this->image_barcodeqris_desktop;
+                        if (gettype($img) != "string") {
+                            $store = $this->uploadFiles($dir, $img);
+                            if ($store['status']) $img = $store['url'];
+                        }
+                        $data = collect([
+                            "name" => $this->name_barcodeqris_desktop,
+                            "background" => $this->bg_barcodeqris_desktop,
+                            "color" => $this->color_barcodeqris_desktop,
+                            "shadow" => $this->shadow_barcodeqris_desktop,
+                            "image" => $img,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_barcodeqris_desktop,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 11) {
+                        $data = collect(explode("--", $this->list_sortlistbank_desktop))->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_sortlistbank_desktop,
+                            "data" => $data
+                        ]);
+                    }
                 }
 
-                if ($val->id_fitur == 4) {
-                    $data = collect($this->data_buttonaction_mobile)->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_iconsosmed_desktop,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 5) {
-                    $data = collect($this->data_iconsosmed_mobile)->map(function($e) {
-                        $dir = "public/images/".strtolower($this->dataSitus->name);
-                        $dir = $dir."/icon sosmed";
-                        $img = $e['image'];
+                // ini untuk mobile
+                foreach ($this->dataFiturMobile as $val) {
+                    $dir = "public/images/".strtolower($this->dataSitus->name);
+                    if ($val->id_fitur == 1) {
+                        $dir = $dir."/popup modal";
+                        $img = $this->file_popupmodal_mobile;
                         if (gettype($img) != "string") {
                             $ext = $img->getClientOriginalExtension();
                             $name = now()->format('Ymd-His')."-mobile";
-                            $img = $img->storePubliclyAs($dir, "$name.$ext");
-                            $e['image'] = url(Storage::url($img));
+                            $img = $this->file_popupmodal_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
                         }
-                        return $e;
-                    })->values()->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_iconsosmed_mobile,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 6) {
-                    $dir = $dir."/promosi";
-                    $img = $this->image_promosi_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->image_promosi_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
+                        $data = collect([
+                            "file" => $img,
+                            "deskripsi" => $this->deskripsi_popupmodal_mobile,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_popupmodal_mobile,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect([
-                        "name" => $this->name_promosi_mobile,
-                        "link" => $this->link_promosi_mobile,
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_promosi_mobile,
-                        "data" => $data
-                    ]);
-                }
 
-                if ($val->id_fitur == 7) {
-                    $data = collect([
-                        "title" => $this->title_beforeFooter_mobile,
-                        "deskripsi" => $this->deskripsi_beforeFooter_mobile,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_beforefooter_mobile,
-                        "data" => $data
-                    ]);
-                }
-
-                if ($val->id_fitur == 8) {
-                    $dir = $dir."/footer protection";
-                    $img = $this->image_footerProtection_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
+                    if ($val->id_fitur == 2) {
+                        $dir = $dir."/header apk";
+                        $img = $this->file_headerapk_mobile;
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $this->file_headerapk_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
+                        }
+                        $data = collect([
+                            "file" => $img,
+                            "title" => $this->title_headerapk_mobile,
+                            "slogan" => $this->slogan_headerapk_mobile,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_headerapk_mobile,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect([
-                        "name" => $this->name_footerProtection_mobile,
-                        "link" => $this->link_footerProtection_mobile,
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_footerprotection_mobile,
-                        "data" => $data
-                    ]);
-                }
 
-                if ($val->id_fitur == 9) {
-                    $dir = $dir."/link alternatif";
-                    $img = $this->image_linkAlternatif_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->image_linkAlternatif_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
+                    if ($val->id_fitur == 3) {
+                        $dir = $dir."/header corousel";
+                        $img = [];
+                        foreach ($this->file_headercorousel_mobile as $i => $file) {
+                            if (gettype($file) != "string") {
+                                $ext = $file->getClientOriginalExtension();
+                                $name = now()->format('Ymd-His')."-mobile-$i";
+                                $file = $file->storePubliclyAs($dir, "$name.$ext");
+                                array_push($img, url(Storage::url($file)));
+                            }else{
+                                array_push($img, $file);
+                            }
+                        }
+                        $data = collect($img)->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_headercorousel_mobile,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect([
-                        "listLink" => explode("--", $this->listLink_linkAlternatif_mobile),
-                        "image" => $img
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_linkAlternatif_mobile,
-                        "data" => $data
-                    ]);
-                }
 
-                if ($val->id_fitur == 10) {
-                    $dir = $dir."/barcode qris";
-                    $img = $this->image_barcodeqris_mobile;
-                    if (gettype($img) != "string") {
-                        $ext = $img->getClientOriginalExtension();
-                        $name = now()->format('Ymd-His')."-mobile";
-                        $img = $this->image_barcodeqris_mobile->storePubliclyAs($dir, "$name.$ext");
-                        $img = url(Storage::url($img));
+                    if ($val->id_fitur == 4) {
+                        $data = collect($this->data_buttonaction_mobile)->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_iconsosmed_desktop,
+                            "data" => $data
+                        ]);
                     }
-                    $data = collect([
-                        "name" => $this->name_barcodeqris_mobile,
-                        "background" => $this->bg_barcodeqris_mobile,
-                        "color" => $this->color_barcodeqris_mobile,
-                        "shadow" => $this->shadow_barcodeqris_mobile,
-                        "image" => $img,
-                    ])->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_barcodeqris_mobile,
-                        "data" => $data
-                    ]);
+
+                    if ($val->id_fitur == 5) {
+                        $data = collect($this->data_iconsosmed_mobile)->map(function($e) {
+                            $dir = "public/images/".strtolower($this->dataSitus->name);
+                            $dir = $dir."/icon sosmed";
+                            $img = $e['image'];
+                            if (gettype($img) != "string") {
+                                $ext = $img->getClientOriginalExtension();
+                                $name = now()->format('Ymd-His')."-mobile";
+                                $img = $img->storePubliclyAs($dir, "$name.$ext");
+                                $e['image'] = url(Storage::url($img));
+                            }
+                            return $e;
+                        })->values()->toJson();
+
+                        $data = collect([
+                            "ket" => $this->ket_iconsosmed_desktop,
+                            "data" => $data
+                        ])->toJson();
+
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_iconsosmed_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 6) {
+                        $dir = $dir."/promosi";
+                        $img = $this->image_promosi_mobile;
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $this->image_promosi_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
+                        }
+                        $data = collect([
+                            "name" => $this->name_promosi_mobile,
+                            "link" => $this->link_promosi_mobile,
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_promosi_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 7) {
+                        $data = collect([
+                            "title" => $this->title_beforeFooter_mobile,
+                            "deskripsi" => $this->deskripsi_beforeFooter_mobile,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_beforefooter_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 8) {
+                        $dir = $dir."/footer protection";
+                        $img = $this->image_footerProtection_mobile;
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $this->image_footerProtection_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
+                        }
+                        $data = collect([
+                            "name" => $this->name_footerProtection_mobile,
+                            "link" => $this->link_footerProtection_mobile,
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_footerprotection_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 9) {
+                        $dir = $dir."/link alternatif";
+                        $img = $this->image_linkAlternatif_mobile;
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $this->image_linkAlternatif_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
+                        }
+                        $data = collect([
+                            "listLink" => explode("--", $this->listLink_linkAlternatif_mobile),
+                            "image" => $img
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_linkAlternatif_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 10) {
+                        $dir = $dir."/barcode qris";
+                        $img = $this->image_barcodeqris_mobile;
+                        if (gettype($img) != "string") {
+                            $ext = $img->getClientOriginalExtension();
+                            $name = now()->format('Ymd-His')."-mobile";
+                            $img = $this->image_barcodeqris_mobile->storePubliclyAs($dir, "$name.$ext");
+                            $img = url(Storage::url($img));
+                        }
+                        $data = collect([
+                            "name" => $this->name_barcodeqris_mobile,
+                            "background" => $this->bg_barcodeqris_mobile,
+                            "color" => $this->color_barcodeqris_mobile,
+                            "shadow" => $this->shadow_barcodeqris_mobile,
+                            "image" => $img,
+                        ])->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_barcodeqris_mobile,
+                            "data" => $data
+                        ]);
+                    }
+
+                    if ($val->id_fitur == 11) {
+                        $data = collect(explode("--", $this->list_sortlistbank_mobile))->toJson();
+                        fiturSitus::find($val->id)->update([
+                            "status" => $this->toogle_sortlistbank_mobile,
+                            "data" => $data
+                        ]);
+                    }
                 }
 
-                if ($val->id_fitur == 11) {
-                    $data = collect(explode("--", $this->list_sortlistbank_mobile))->toJson();
-                    fiturSitus::find($val->id)->update([
-                        "status" => $this->toogle_sortlistbank_mobile,
-                        "data" => $data
-                    ]);
-                }
+                DB::commit();
+                $this->dispatchBrowserEvent("iframe:reload");
+
+            } catch (\Throwable $th) {
+                DB::rollback();
+                $this->dispatchBrowserEvent("toast:error", [
+                    "message" => $th->getMessage()
+                ]);
             }
-
-            $this->dispatchBrowserEvent("iframe:reload");
         }
 
+    }
+
+    public function uploadFiles($path, $file)
+    {
+        try {
+            // $ext = $file->getClientOriginalExtension();
+            $name = $file->getClientOriginalName();
+            $filePath = Storage::disk('spaces')->putFileAs($path, $file, $name, 'public');
+            return [
+                "status" => true,
+                "url" => env('DO_SPACES_PUBLIC').$filePath
+            ];
+        } catch (Exception $exception) {
+            // return response()->json(['message' => $exception->getMessage()], 409);
+
+            return [
+                "status" => false,
+                "message" => $exception->getMessage()
+            ];
+        }
     }
 }

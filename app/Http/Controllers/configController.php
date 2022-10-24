@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\situs;
+use Storage;
 
 class configController extends Controller
 {
@@ -36,5 +37,11 @@ class configController extends Controller
             dd($output);
             return redirect()->back()->with('giterror', $output);
         }
+    }
+
+    public function testing()
+    {
+        // $img = Storage::disk('spaces')->putFile('danatoto/images/banks/', "danatoto_offline_bca.gif", 'public');
+        return $img;
     }
 }

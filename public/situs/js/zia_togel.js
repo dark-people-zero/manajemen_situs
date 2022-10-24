@@ -172,7 +172,7 @@ const func = {
             $(".sidebar-button").append($(data));
         },
         iconSosmed: (data) => {
-            var icon = data.filter(e => e.status).map(e => {
+            var icon = data.data.filter(e => e.status).map(e => {
                 return `
                     <div class="icon-item">
                         <a href="${e.link}" target="_blank">
@@ -184,7 +184,7 @@ const func = {
 
             var template = $(`
                 <div class="icon-sosmed">
-                    <div class="icon-info">Klik icon sosmed di bawah ini untuk hubungi operator :</div>
+                    <div class="icon-info">${data.ket}</div>
                     <div class="icon-container">${icon}</div>
                 </div>
             `);

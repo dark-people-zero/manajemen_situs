@@ -302,6 +302,18 @@
                                                 </h4>
                                                 <div class="skin-body collapse {{$toogle_iconsosmed_desktop ? 'show' : ''}}" id="coll-iconsosmed">
                                                     <div class="switch_section">
+                                                        {{-- untuk Keterangan icon sosmed--}}
+                                                        <div>
+                                                            <div class="main-form-group mt-2">
+                                                                <label class="form-label mt-0 text-start">Keterangan</label>
+                                                                <input class="form-control" placeholder="Masukan Keterangan" type="text" wire:model="ket_iconsosmed_desktop">
+                                                            </div>
+                                                            @error('ket_iconsosmed_desktop')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
                                                         <span class="text-center-w-100">
                                                             @if (count($data_iconsosmed_desktop) > 0)
                                                                 Ada {{count($data_iconsosmed_desktop)}} data. Klik <i class="fa fa-eye cursor-pointer" wire:click="showFormSosmed(true)"></i> untuk melihat data.
@@ -940,6 +952,19 @@
                                                 </h4>
                                                 <div class="skin-body collapse {{$toogle_iconsosmed_mobile ? 'show' : ''}}" id="coll-iconsosmed-mobile">
                                                     <div class="switch_section">
+                                                        {{-- untuk Keterangan icon sosmed--}}
+                                                        <div>
+                                                            <div class="main-form-group mt-2">
+                                                                <label class="form-label mt-0 text-start">Keterangan</label>
+                                                                <input class="form-control" placeholder="Masukan Keterangan" type="text" wire:model="ket_iconsosmed_mobile">
+                                                            </div>
+                                                            @error('ket_iconsosmed_mobile')
+                                                                <span class="invalid-feedback d-block text-start" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+
                                                         <span class="text-center-w-100">
                                                             @if (count($data_iconsosmed_mobile) > 0)
                                                                 Ada {{count($data_iconsosmed_mobile)}} data. Klik <i class="fa fa-eye cursor-pointer" wire:click="showFormSosmed(false)"></i> untuk melihat data.
