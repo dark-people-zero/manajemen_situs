@@ -60,8 +60,33 @@ Route::get('yok_togel', function () {
     return view('situs.yok_togel.desktop.index');
 });
 
+Route::get('yok_togel/m', function () {
+    return view('situs.yok_togel.mobile.index');
+});
+
 Route::get('geng_togel', function () {
     return view('situs.geng_togel.desktop.index');
+});
+
+Route::get('geng_togel/m', function () {
+    return view('situs.geng_togel.mobile.index');
+});
+
+Route::get('gol_togel/m', function () {
+    return view('situs.gol_togel.mobile.index');
+});
+
+Route::get('home_togel/m', function () {
+    return view('situs.home_togel.mobile.index');
+});
+
+
+Route::get('togel_up/m', function () {
+    return view('situs.togel_up.mobile.index');
+});
+
+Route::get('line_togel/m', function () {
+    return view('situs.line_togel.mobile.index');
 });
 
 Route::get('maria_togel/m', function () {
@@ -90,6 +115,42 @@ Route::get('situs_toto/m', function () {
 
 Route::get('pwvip4d/m', function () {
     return view('situs.pwvip4d.mobile.index');
+});
+
+Route::get('pro_togel/m', function () {
+    return view('situs.pro_togel.mobile.index');
+});
+
+Route::get('patih_toto/m', function () {
+    return view('situs.patih_toto.mobile.index');
+});
+
+Route::get('partai_togel/m', function () {
+    return view('situs.partai_togel.mobile.index');
+});
+
+Route::get('oppa_toto/m', function () {
+    return view('situs.oppa_toto.mobile.index');
+});
+
+Route::get('nanas_toto/m', function () {
+    return view('situs.nanas_toto.mobile.index');
+});
+
+Route::get('joni_togel/m', function () {
+    return view('situs.joni_togel.mobile.index');
+});
+
+Route::get('dana_toto/m', function () {
+    return view('situs.dana_toto.mobile.index');
+});
+
+Route::get('luna_togel/m', function () {
+    return view('situs.luna_togel.mobile.index');
+});
+
+Route::get('dingdong_togel/m', function () {
+    return view('situs.dingdong_togel.mobile.index');
 });
 
 Route::get('/permision', function () {

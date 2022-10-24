@@ -120,7 +120,8 @@
                                 <div class="form-group">
                                     <input id="navbar_username" name="entered_login" tabindex="1"
                                         class="contactField requiredField center" type="text" value=""
-                                        placeholder="Username" onblur="if(this.value == '';) { this.value='Username';}"
+                                        placeholder="Username"
+                                        onblur="if(this.value == '';) { this.value='Username';}"
                                         onfocus="if (this.value == 'Username';) {this.value='';}" required="">
                                 </div>
                                 <div class="form-group">

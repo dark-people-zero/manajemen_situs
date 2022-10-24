@@ -1,0 +1,78 @@
+.dib{
+        display: inline-block;
+    }
+    .cwhite{
+        color: white;
+    }
+    .online{
+            float: right;
+            margin-top: 3px;
+            margin-right: 7px;
+            background-color: black;
+            border-radius: 15px;
+            width: 55px;
+            margin-left: 10px; 
+            color:#89e745;
+      }
+    .offline{
+        float: right;
+        margin-top: 3px;
+        margin-right: 7px;
+        background-color: black;
+        border-radius: 15px;
+        width: 55px;
+        margin-left: 10px;
+        color:#ff0000;
+    }
+    .gangguan{
+        float: right;
+        margin-top: 3px;
+        margin-right: 7px;
+        background-color: black;
+        border-radius: 15px;
+        width: 55px;
+        margin-left: 10px;
+        color:#f7f014;
+      }
+      @media screen and (max-width: 360px) {
+          .kecil {
+            width:69px !important;
+            margin-left:3px !important;
+          }
+          .bank{
+            margin :3px !important;
+          }
+      }
+      @media screen and (min-width: 375px) and (max-width: 399px) {
+          .bank{
+            padding :2px !important;
+          }
+      }
+      @media screen and (max-width: 320px) {
+          .kecil {
+            width:60px !important;
+            margin-left:3px !important;
+          }
+          .bank{
+            margin :3px !important;
+          }
+      }
+      @media screen and (min-width: 768px) {
+          .bank{
+            width:49% !important;
+            padding:0 !important;
+            margin:3px !important; 
+          }
+      }
+      @media screen and (min-width: 400px) {
+          .online{
+            width:45% !important;
+            margin-right: 3px !important;
+          }
+          .offline{
+            width:45% !important;
+          }
+          .gangguan{
+            width:45% !important;
+          }
+      }
