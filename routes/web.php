@@ -80,6 +80,15 @@ Route::get('home_togel/m', function () {
     return view('situs.home_togel.mobile.index');
 });
 
+
+Route::get('togel_up/m', function () {
+    return view('situs.togel_up.mobile.index');
+});
+
+Route::get('line_togel/m', function () {
+    return view('situs.line_togel.mobile.index');
+});
+
 Route::get('maria_togel/m', function () {
     return view('situs.maria_togel.mobile.index');
 });
