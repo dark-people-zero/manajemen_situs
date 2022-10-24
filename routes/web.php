@@ -60,8 +60,24 @@ Route::get('yok_togel', function () {
     return view('situs.yok_togel.desktop.index');
 });
 
+Route::get('yok_togel/m', function () {
+    return view('situs.yok_togel.mobile.index');
+});
+
 Route::get('geng_togel', function () {
     return view('situs.geng_togel.desktop.index');
+});
+
+Route::get('geng_togel/m', function () {
+    return view('situs.geng_togel.mobile.index');
+});
+
+Route::get('gol_togel/m', function () {
+    return view('situs.gol_togel.mobile.index');
+});
+
+Route::get('home_togel/m', function () {
+    return view('situs.home_togel.mobile.index');
 });
 
 Route::get('maria_togel/m', function () {
