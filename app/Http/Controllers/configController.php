@@ -39,9 +39,19 @@ class configController extends Controller
         }
     }
 
-    public function testing()
+    public function situs($name, $type)
     {
-        // $img = Storage::disk('spaces')->putFile('danatoto/images/banks/', "danatoto_offline_bca.gif", 'public');
-        return $img;
+        if (in_array($type, ["desktop", "mobile", "m"])) {
+            if ($type == "mobile") return redirect("situs/$name/m");
+            if ($type == "m") $type = "mobile";
+            $target = "situs.$name.$type.index";
+            if (view()->exists($target)){
+                return view($target);
+            }else{
+                return view("pages.error404");
+            }
+        }else{
+            return view("pages.error404");
+        }
     }
 }
