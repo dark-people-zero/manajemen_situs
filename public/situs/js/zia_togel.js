@@ -1,5 +1,3 @@
-var baseUrl = "http://127.0.0.1:8000/";
-
 (function () {
     "use strict";
     window.dataLayer = window.dataLayer || [];
@@ -505,7 +503,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: baseUrl+"config/19",
+            url: "/config/19",
             dataType: "json",
             success: function (response) {
                 if (response) {

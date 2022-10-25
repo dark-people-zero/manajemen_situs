@@ -92,7 +92,7 @@
                 },
                 init: function() {
                     var n = t.createElement("script");
-                    n.async = !0, n.type = "text/javascript", n.src = "situs/assets/zia_togel/desktop/assets/js/tracking.js", t.head
+                    n.async = !0, n.type = "text/javascript", n.src = "/situs/assets/zia_togel/desktop/assets/js/tracking.js", t.head
                         .appendChild(n)
                 }
             };
