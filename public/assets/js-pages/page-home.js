@@ -146,10 +146,6 @@ function resize(self) {
 
 document.addEventListener('iframe:reload', () => document.getElementById("iframe-preview").contentWindow.location.reload());
 
-document.addEventListener('testing', function (e) {
-    console.log(e.detail);
-});
-
 
 
 

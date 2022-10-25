@@ -142,9 +142,6 @@ class Home extends Component
         if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
         $errors = $this->getErrorBag();
-        $this->dispatchBrowserEvent("testing",[
-            "desktop" => $errors
-        ]);
 
     }
 
