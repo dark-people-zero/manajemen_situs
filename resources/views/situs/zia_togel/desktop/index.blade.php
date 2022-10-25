@@ -735,7 +735,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/zia_togel/desktop/assets/fonts/Muli.ttf);
+            src: url(/situs/assets/zia_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,

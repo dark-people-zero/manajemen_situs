@@ -727,51 +727,51 @@
                 </div>
                 <div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/bca.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/bni.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/bri.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/bsi.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/cimb.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/dana.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/danamon.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/gopay.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/linkaja.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/nofound.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/maybank.webp') }}" />
                   </div>
                   <div class="bank">
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.GIF') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
                     <img src="{{ asset('situs/assets/zia_togel/mobile/ovo.webp') }}" />
                   </div>
                 </div>
