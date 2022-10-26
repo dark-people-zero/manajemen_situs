@@ -85,7 +85,7 @@ class Home extends Component
         $role = auth()->user()->id_role;
         if ($role == 1) {
             $this->Aksessitus = situs::get();
-        }else{
+        } else {
             $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get();
         }
     }
@@ -100,7 +100,7 @@ class Home extends Component
         if ($index != null) {
             if ($target == "file_headercorousel_desktop") unset($this->file_headercorousel_desktop[(int)$index]);
             if ($target == "file_headercorousel_mobile") unset($this->file_headercorousel_mobile[(int)$index]);
-        }else{
+        } else {
             $this->reset($target);
         }
     }
@@ -109,12 +109,12 @@ class Home extends Component
     {
         $data = [];
         if ($target == "file_headercorousel_desktop") {
-            $data = collect($this->file_headercorousel_desktop)->map(function($e) {
+            $data = collect($this->file_headercorousel_desktop)->map(function ($e) {
                 return gettype($e) == "string" ? $e : $e->temporaryUrl();
             });
         }
         if ($target == "file_headercorousel_mobile") {
-            $data = collect($this->file_headercorousel_mobile)->map(function($e) {
+            $data = collect($this->file_headercorousel_mobile)->map(function ($e) {
                 return gettype($e) == "string" ? $e : $e->temporaryUrl();
             });
         }
@@ -139,10 +139,9 @@ class Home extends Component
             $this->reset("file_temp_headercorousel_mobile");
         }
 
-        if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
+        if (count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
         $errors = $this->getErrorBag();
-
     }
 
     public function changeSelectSitus($id)
@@ -159,11 +158,11 @@ class Home extends Component
                     $this->prevActive = 'desktop';
                     $this->urlActive = $situs["url_desktop_$stat"];
                     $this->statPengaturan = true;
-                }else if ($situs->status_mobile) {
+                } else if ($situs->status_mobile) {
                     $this->prevActive = 'mobile';
                     $this->urlActive = $situs["url_mobile_$stat"];
                     $this->statPengaturan = true;
-                }else{
+                } else {
                     $this->prevActive = 'desktop';
                     $this->urlActive = '/underconstruction';
                     $this->statPengaturan = false;
@@ -172,18 +171,18 @@ class Home extends Component
                 // untuk set data fitur
                 if ($situs->status_desktop) {
                     $this->dataFiturDesktop = $situs->fiturSitus->where("type", "desktop");
-                }else {
+                } else {
                     $this->reset("dataFiturDesktop");
                 }
                 if ($situs->status_mobile) {
                     $this->dataFiturMobile = $situs->fiturSitus->where("type", "mobile");
-                }else {
+                } else {
                     $this->reset("dataFiturMobile");
                 }
 
                 $this->setValue();
             }
-        }else{
+        } else {
             $dataSitus = $this->Aksessitus->where("id", $id)->first();
 
             if ($dataSitus) {
@@ -198,11 +197,11 @@ class Home extends Component
                     $this->prevActive = 'desktop';
                     $this->urlActive = $situs["url_desktop_$stat"];
                     $this->statPengaturan = true;
-                }else if ($situs->status_mobile && $mobile->count() > 0) {
+                } else if ($situs->status_mobile && $mobile->count() > 0) {
                     $this->prevActive = 'mobile';
                     $this->urlActive = $situs["url_mobile_$stat"];
                     $this->statPengaturan = true;
-                }else{
+                } else {
                     $this->prevActive = 'desktop';
                     $this->urlActive = '/underconstruction';
                     $this->statPengaturan = false;
@@ -211,12 +210,12 @@ class Home extends Component
                 // untuk set data fitur
                 if ($situs->status_desktop && $desktop->count() > 0) {
                     $this->dataFiturDesktop = $situs->fiturSitus->where("type", "desktop")->whereIn("id_fitur", $desktop);
-                }else {
+                } else {
                     $this->reset("dataFiturDesktop");
                 }
                 if ($situs->status_mobile && $mobile->count() > 0) {
                     $this->dataFiturMobile = $situs->fiturSitus->where("type", "mobile")->whereIn("id_fitur", $mobile);
-                }else {
+                } else {
                     $this->reset("dataFiturMobile");
                 }
 
@@ -246,10 +245,9 @@ class Home extends Component
                 $validate["file_popupmodal_desktop"] = 'image|max:20480'; // 20MB max
                 $file = $this->file_popupmodal_desktop;
                 $orgName = $file->getClientOriginalName();
-                $message["file_popupmodal_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["file_popupmodal_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                $message["file_popupmodal_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                $message["file_popupmodal_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
             }
-
         }
         if ($this->toogle_popupmodal_mobile) {
             $validate["file_popupmodal_mobile"] = 'required';
@@ -262,8 +260,8 @@ class Home extends Component
                 $validate["file_popupmodal_mobile"] = 'image|max:20480'; // 20MB max
                 $file = $this->file_popupmodal_mobile;
                 $orgName = $file->getClientOriginalName();
-                $message["file_popupmodal_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                $message["file_popupmodal_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                $message["file_popupmodal_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                $message["file_popupmodal_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
             }
         }
 
@@ -284,8 +282,8 @@ class Home extends Component
                     $validate["file_headerapk_desktop"] = 'image|max:3072'; // 3MB max
                     $file = $this->file_headerapk_desktop;
                     $orgName = $file->getClientOriginalName();
-                    $message["file_headerapk_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["file_headerapk_desktop.max"] = str_replace(":max", "3072", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["file_headerapk_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["file_headerapk_desktop.max"] = str_replace(":max", "3072", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -305,8 +303,8 @@ class Home extends Component
                     $validate["file_headerapk_mobile"] = 'image|max:3072'; // 3MB max
                     $file = $this->file_headerapk_mobile;
                     $orgName = $file->getClientOriginalName();
-                    $message["file_headerapk_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["file_headerapk_mobile.max"] = str_replace(":max", "3072", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["file_headerapk_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["file_headerapk_mobile.max"] = str_replace(":max", "3072", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -317,19 +315,18 @@ class Home extends Component
                 if (gettype($file) != "string") {
                     $validate["file_headercorousel_desktop.$i"] = 'image|max:20480';
                     $orgName = $file->getClientOriginalName();
-                    $message["file_headercorousel_desktop.$i.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["file_headercorousel_desktop.$i.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["file_headercorousel_desktop.$i.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["file_headercorousel_desktop.$i.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
-
         }
         if ($this->toogle_headercorousel_mobile) {
             foreach ($this->file_headercorousel_mobile as $i => $file) {
                 if (gettype($file) != "string") {
                     $validate["file_headercorousel_mobile.$i"] = 'image|max:20480';
                     $orgName = $file->getClientOriginalName();
-                    $message["file_headercorousel_mobile.$i.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["file_headercorousel_mobile.$i.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["file_headercorousel_mobile.$i.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["file_headercorousel_mobile.$i.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -343,9 +340,9 @@ class Home extends Component
                     "url"
                 ];
 
-                $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_buttonaction_desktop.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
+                $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_buttonaction_desktop.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
             }
         }
 
@@ -354,34 +351,34 @@ class Home extends Component
                 $validate["data_buttonaction_mobile.$i.name"] = "required";
                 $validate["data_buttonaction_mobile.$i.link"] = "required|url";
 
-                $message["data_buttonaction_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_buttonaction_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_buttonaction_mobile.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
+                $message["data_buttonaction_mobile.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_buttonaction_mobile.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_buttonaction_mobile.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
             }
         }
 
         // untuk icon sosmed mobile dan desktop
         if ($this->toogle_iconsosmed_desktop) {
             $validate["ket_iconsosmed_desktop"] = "required";
-            $message["ket_iconsosmed_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
+            $message["ket_iconsosmed_desktop.required"] = str_replace(":attribute", "name", trans("validation.required"));
 
             foreach ($this->data_iconsosmed_desktop as $i => $val) {
                 $validate["data_iconsosmed_desktop.$i.name"] = "required";
                 $validate["data_iconsosmed_desktop.$i.link"] = "required|url";
                 $validate["data_iconsosmed_desktop.$i.image"] = "required";
 
-                $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_iconsosmed_desktop.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
-                $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
+                $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
                 if ($val["image"]) {
                     if (gettype($val["image"]) != "string") {
                         $validate["data_iconsosmed_desktop.$i.image"] = "image|max:20480";
                         $file = $val["image"];
                         $orgName = $file->getClientOriginalName();
-                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                     }
                 }
             }
@@ -389,24 +386,24 @@ class Home extends Component
 
         if ($this->toogle_iconsosmed_mobile) {
             $validate["ket_iconsosmed_mobile"] = "required";
-            $message["ket_iconsosmed_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
+            $message["ket_iconsosmed_mobile.required"] = str_replace(":attribute", "name", trans("validation.required"));
             foreach ($this->data_iconsosmed_mobile as $i => $val) {
                 $validate["data_iconsosmed_mobile.$i.name"] = "required";
                 $validate["data_iconsosmed_mobile.$i.link"] = "required|url";
                 $validate["data_iconsosmed_mobile.$i.image"] = "required";
 
-                $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_iconsosmed_mobile.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
-                $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
+                $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
                 if ($val["image"]) {
                     if (gettype($val["image"]) != "string") {
                         $validate["data_iconsosmed_mobile.$i.image"] = "image|max:20480";
                         $file = $val["image"];
                         $orgName = $file->getClientOriginalName();
-                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                     }
                 }
             }
@@ -418,18 +415,18 @@ class Home extends Component
             $validate["link_promosi_desktop"] = "required|url";
             $validate["image_promosi_desktop"] = "required";
 
-            $message["name_promosi_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["link_promosi_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
-            $message["link_promosi_desktop.url"] = str_replace(":attribute","link", trans("validation.url"));
-            $message["image_promosi_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["name_promosi_desktop.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["link_promosi_desktop.required"] = str_replace(":attribute", "link", trans("validation.required"));
+            $message["link_promosi_desktop.url"] = str_replace(":attribute", "link", trans("validation.url"));
+            $message["image_promosi_desktop.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_promosi_desktop) {
                 if (gettype($this->image_promosi_desktop) != "string") {
                     $validate["image_promosi_desktop"] = "image|max:20480";
                     $file = $this->image_promosi_desktop;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_promosi_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_promosi_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_promosi_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_promosi_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -439,18 +436,18 @@ class Home extends Component
             $validate["link_promosi_mobile"] = "required|url";
             $validate["image_promosi_mobile"] = "required";
 
-            $message["name_promosi_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["link_promosi_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
-            $message["link_promosi_mobile.url"] = str_replace(":attribute","link", trans("validation.url"));
-            $message["image_promosi_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["name_promosi_mobile.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["link_promosi_mobile.required"] = str_replace(":attribute", "link", trans("validation.required"));
+            $message["link_promosi_mobile.url"] = str_replace(":attribute", "link", trans("validation.url"));
+            $message["image_promosi_mobile.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_promosi_mobile) {
                 if (gettype($this->image_promosi_mobile) != "string") {
                     $validate["image_promosi_mobile"] = "image|max:20480";
                     $file = $this->image_promosi_mobile;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_promosi_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_promosi_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_promosi_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_promosi_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -460,15 +457,15 @@ class Home extends Component
             $validate["title_beforeFooter_desktop"] = "required";
             $validate["deskripsi_beforeFooter_desktop"] = "required";
 
-            $message["title_beforeFooter_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["deskripsi_beforeFooter_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
+            $message["title_beforeFooter_desktop.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["deskripsi_beforeFooter_desktop.required"] = str_replace(":attribute", "link", trans("validation.required"));
         }
         if ($this->toogle_beforefooter_mobile) {
             $validate["title_beforeFooter_mobile"] = "required";
             $validate["deskripsi_beforeFooter_mobile"] = "required";
 
-            $message["title_beforeFooter_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["deskripsi_beforeFooter_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
+            $message["title_beforeFooter_mobile.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["deskripsi_beforeFooter_mobile.required"] = str_replace(":attribute", "link", trans("validation.required"));
         }
 
         // untuk footer protection desktop dan mobile
@@ -477,18 +474,18 @@ class Home extends Component
             $validate["link_footerProtection_desktop"] = "required|url";
             $validate["image_footerProtection_desktop"] = "required";
 
-            $message["name_footerProtection_desktop.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["link_footerProtection_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
-            $message["link_footerProtection_desktop.url"] = str_replace(":attribute","link", trans("validation.url"));
-            $message["image_footerProtection_desktop.required"] = str_replace(":attribute","link", trans("validation.required"));
+            $message["name_footerProtection_desktop.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["link_footerProtection_desktop.required"] = str_replace(":attribute", "link", trans("validation.required"));
+            $message["link_footerProtection_desktop.url"] = str_replace(":attribute", "link", trans("validation.url"));
+            $message["image_footerProtection_desktop.required"] = str_replace(":attribute", "link", trans("validation.required"));
 
             if ($this->image_footerProtection_desktop) {
                 if (gettype($this->image_footerProtection_desktop) != "string") {
                     $validate["image_footerProtection_desktop"] = "image|max:20480";
                     $file = $this->image_footerProtection_desktop;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_footerProtection_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_footerProtection_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_footerProtection_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_footerProtection_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -497,18 +494,18 @@ class Home extends Component
             $validate["link_footerProtection_mobile"] = "required|url";
             $validate["image_footerProtection_mobile"] = "required";
 
-            $message["name_footerProtection_mobile.required"] = str_replace(":attribute","name", trans("validation.required"));
-            $message["link_footerProtection_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
-            $message["link_footerProtection_mobile.url"] = str_replace(":attribute","link", trans("validation.url"));
-            $message["image_footerProtection_mobile.required"] = str_replace(":attribute","link", trans("validation.required"));
+            $message["name_footerProtection_mobile.required"] = str_replace(":attribute", "name", trans("validation.required"));
+            $message["link_footerProtection_mobile.required"] = str_replace(":attribute", "link", trans("validation.required"));
+            $message["link_footerProtection_mobile.url"] = str_replace(":attribute", "link", trans("validation.url"));
+            $message["image_footerProtection_mobile.required"] = str_replace(":attribute", "link", trans("validation.required"));
 
             if ($this->image_footerProtection_mobile) {
                 if (gettype($this->image_footerProtection_mobile) != "string") {
                     $validate["image_footerProtection_mobile"] = "image|max:20480";
                     $file = $this->image_footerProtection_mobile;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_footerProtection_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_footerProtection_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_footerProtection_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_footerProtection_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -518,16 +515,16 @@ class Home extends Component
             $validate["listLink_linkAlternatif_desktop"] = "required";
             $validate["image_linkAlternatif_desktop"] = "required";
 
-            $message["listLink_linkAlternatif_desktop.required"] = str_replace(":attribute","list link", trans("validation.required"));
-            $message["image_linkAlternatif_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["listLink_linkAlternatif_desktop.required"] = str_replace(":attribute", "list link", trans("validation.required"));
+            $message["image_linkAlternatif_desktop.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_linkAlternatif_desktop) {
                 if (gettype($this->image_linkAlternatif_desktop) != "string") {
                     $validate["image_linkAlternatif_desktop"] = "image|max:20480";
                     $file = $this->image_linkAlternatif_desktop;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_linkAlternatif_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_linkAlternatif_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_linkAlternatif_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_linkAlternatif_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -535,16 +532,16 @@ class Home extends Component
             $validate["listLink_linkAlternatif_mobile"] = "required";
             $validate["image_linkAlternatif_mobile"] = "required";
 
-            $message["listLink_linkAlternatif_mobile.required"] = str_replace(":attribute","list link", trans("validation.required"));
-            $message["image_linkAlternatif_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["listLink_linkAlternatif_mobile.required"] = str_replace(":attribute", "list link", trans("validation.required"));
+            $message["image_linkAlternatif_mobile.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_linkAlternatif_mobile) {
                 if (gettype($this->image_linkAlternatif_mobile) != "string") {
                     $validate["image_linkAlternatif_mobile"] = "image|max:20480";
                     $file = $this->image_linkAlternatif_mobile;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_linkAlternatif_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_linkAlternatif_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_linkAlternatif_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_linkAlternatif_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -554,16 +551,16 @@ class Home extends Component
             $validate["name_barcodeqris_desktop"] = "required";
             $validate["image_barcodeqris_desktop"] = "required";
 
-            $message["name_barcodeqris_desktop.required"] = str_replace(":attribute","list link", trans("validation.required"));
-            $message["image_barcodeqris_desktop.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["name_barcodeqris_desktop.required"] = str_replace(":attribute", "list link", trans("validation.required"));
+            $message["image_barcodeqris_desktop.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_barcodeqris_desktop) {
                 if (gettype($this->image_barcodeqris_desktop) != "string") {
                     $validate["image_barcodeqris_desktop"] = "image|max:20480";
                     $file = $this->image_barcodeqris_desktop;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_barcodeqris_desktop.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_barcodeqris_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_barcodeqris_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_barcodeqris_desktop.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -572,16 +569,16 @@ class Home extends Component
             $validate["name_barcodeqris_mobile"] = "required";
             $validate["image_barcodeqris_mobile"] = "required";
 
-            $message["name_barcodeqris_mobile.required"] = str_replace(":attribute","list link", trans("validation.required"));
-            $message["image_barcodeqris_mobile.required"] = str_replace(":attribute","image", trans("validation.required"));
+            $message["name_barcodeqris_mobile.required"] = str_replace(":attribute", "list link", trans("validation.required"));
+            $message["image_barcodeqris_mobile.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
             if ($this->image_barcodeqris_mobile) {
                 if (gettype($this->image_barcodeqris_mobile) != "string") {
                     $validate["image_barcodeqris_mobile"] = "image|max:20480";
                     $file = $this->image_barcodeqris_mobile;
                     $orgName = $file->getClientOriginalName();
-                    $message["image_barcodeqris_mobile.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                    $message["image_barcodeqris_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                    $message["image_barcodeqris_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                    $message["image_barcodeqris_mobile.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -589,12 +586,12 @@ class Home extends Component
         // untuk sort list bank dektop dan mobile
         if ($this->toogle_sortlistbank_desktop) {
             $validate["list_sortlistbank_desktop"] = "required";
-            $message["list_sortlistbank_desktop.required"] = str_replace(":attribute","list bank", trans("validation.required"));
+            $message["list_sortlistbank_desktop.required"] = str_replace(":attribute", "list bank", trans("validation.required"));
         }
 
         if ($this->toogle_sortlistbank_mobile) {
             $validate["list_sortlistbank_mobile"] = "required";
-            $message["list_sortlistbank_mobile.required"] = str_replace(":attribute","list bank", trans("validation.required"));
+            $message["list_sortlistbank_mobile.required"] = str_replace(":attribute", "list bank", trans("validation.required"));
         }
 
 
@@ -614,15 +611,15 @@ class Home extends Component
             if ($desktop && $situs->status_desktop) {
                 $this->prevActive = 'desktop';
                 $this->urlActive = $situs["url_desktop_$stat"];
-            }else if ($desktop && !$situs->status_desktop) {
+            } else if ($desktop && !$situs->status_desktop) {
                 $this->prevActive = 'desktop';
                 $this->urlActive = '/underconstruction';
             }
 
-            if(!$desktop && $situs->status_mobile) {
+            if (!$desktop && $situs->status_mobile) {
                 $this->prevActive = 'mobile';
                 $this->urlActive = $situs["url_mobile_$stat"];
-            }else if (!$desktop && !$situs->status_mobile) {
+            } else if (!$desktop && !$situs->status_mobile) {
                 $this->prevActive = 'mobile';
                 $this->urlActive = '/underconstruction';
             }
@@ -843,7 +840,7 @@ class Home extends Component
         if ($desktop && count($this->data_iconsosmed_desktop) == 0) $this->addFormIconSosmed(true);
         if (!$desktop && count($this->data_iconsosmed_mobile) == 0) $this->addFormIconSosmed(false);
 
-        $this->dispatchBrowserEvent("showModalSosmed",[
+        $this->dispatchBrowserEvent("showModalSosmed", [
             "desktop" => $desktop
         ]);
     }
@@ -881,18 +878,18 @@ class Home extends Component
                 $validate["data_iconsosmed_desktop.$i.link"] = "required|url";
                 $validate["data_iconsosmed_desktop.$i.image"] = "required";
 
-                $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_iconsosmed_desktop.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
-                $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_iconsosmed_desktop.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
+                $message["data_iconsosmed_desktop.$i.image.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
                 if ($val["image"]) {
                     if (gettype($val["image"]) != "string") {
                         $validate["data_iconsosmed_desktop.$i.image"] = "image|max:20480";
                         $file = $val["image"];
                         $orgName = $file->getClientOriginalName();
-                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                        $message["data_iconsosmed_desktop.$i.image.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_desktop.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                     }
                 }
             }
@@ -904,18 +901,18 @@ class Home extends Component
                 $validate["data_iconsosmed_mobile.$i.link"] = "required|url";
                 $validate["data_iconsosmed_mobile.$i.image"] = "required";
 
-                $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_iconsosmed_mobile.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
-                $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute","image", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_iconsosmed_mobile.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
+                $message["data_iconsosmed_mobile.$i.image.required"] = str_replace(":attribute", "image", trans("validation.required"));
 
                 if ($val["image"]) {
                     if (gettype($val["image"]) != "string") {
                         $validate["data_iconsosmed_mobile.$i.image"] = "image|max:20480";
                         $file = $val["image"];
                         $orgName = $file->getClientOriginalName();
-                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute","file $orgName", trans("validation.image"));
-                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute","file $orgName", trans("validation.max.file")));
+                        $message["data_iconsosmed_mobile.$i.image.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
+                        $message["data_iconsosmed_mobile.$i.image.max"] = str_replace(":max", "20480", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                     }
                 }
             }
@@ -923,7 +920,7 @@ class Home extends Component
 
         if (count($validate) > 0) $this->validate($validate, $message, $attribute);
 
-        $this->dispatchBrowserEvent("closeModalSosmed",[
+        $this->dispatchBrowserEvent("closeModalSosmed", [
             "desktop" => $desktop
         ]);
     }
@@ -940,7 +937,7 @@ class Home extends Component
         if ($desktop && count($this->data_buttonaction_desktop) == 0) $this->addFormBtnAction(true);
         if (!$desktop && count($this->data_buttonaction_mobile) == 0) $this->addFormBtnAction(false);
 
-        $this->dispatchBrowserEvent("showModalBtnAction",[
+        $this->dispatchBrowserEvent("showModalBtnAction", [
             "desktop" => $desktop
         ]);
     }
@@ -987,9 +984,9 @@ class Home extends Component
                     "url"
                 ];
 
-                $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
-                $message["data_buttonaction_desktop.$i.link.url"] = str_replace(":attribute","link", trans("validation.url"));
+                $message["data_buttonaction_desktop.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_buttonaction_desktop.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
+                $message["data_buttonaction_desktop.$i.link.url"] = str_replace(":attribute", "link", trans("validation.url"));
             }
         }
 
@@ -998,13 +995,13 @@ class Home extends Component
                 $validate["data_buttonaction_mobile.$i.name"] = "required";
                 $validate["data_buttonaction_mobile.$i.link"] = "required";
 
-                $message["data_buttonaction_mobile.$i.name.required"] = str_replace(":attribute","name", trans("validation.required"));
-                $message["data_buttonaction_mobile.$i.link.required"] = str_replace(":attribute","link", trans("validation.required"));
+                $message["data_buttonaction_mobile.$i.name.required"] = str_replace(":attribute", "name", trans("validation.required"));
+                $message["data_buttonaction_mobile.$i.link.required"] = str_replace(":attribute", "link", trans("validation.required"));
             }
         }
 
         if (count($validate) > 0) $this->validate($validate, $message, $attribute);
-        $this->dispatchBrowserEvent("closeModalBtnAction",[
+        $this->dispatchBrowserEvent("closeModalBtnAction", [
             "desktop" => $desktop
         ]);
     }
@@ -1019,18 +1016,18 @@ class Home extends Component
     public function saveData()
     {
         $validate = $this->validationFiled();
-        if(count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
+        if (count($validate['validate']) > 0) $this->validate($validate['validate'], $validate['message'], $validate['attribute']);
 
-        if ($this->toogle_headercorousel_desktop && count($this->file_headercorousel_desktop) == 0) $this->addError('file_headercorousel_desktop', str_replace(":attribute","file header corousel", trans("validation.required")));
+        if ($this->toogle_headercorousel_desktop && count($this->file_headercorousel_desktop) == 0) $this->addError('file_headercorousel_desktop', str_replace(":attribute", "file header corousel", trans("validation.required")));
 
-        if ($this->toogle_headercorousel_mobile && count($this->file_headercorousel_mobile) == 0) $this->addError('file_headercorousel_mobile', str_replace(":attribute","file header corousel", trans("validation.required")));
+        if ($this->toogle_headercorousel_mobile && count($this->file_headercorousel_mobile) == 0) $this->addError('file_headercorousel_mobile', str_replace(":attribute", "file header corousel", trans("validation.required")));
 
-        if ($this->toogle_buttonaction_desktop && count($this->data_buttonaction_desktop) == 0) $this->addError('data_buttonaction_desktop', str_replace(":attribute","file button action", trans("validation.required")));
+        if ($this->toogle_buttonaction_desktop && count($this->data_buttonaction_desktop) == 0) $this->addError('data_buttonaction_desktop', str_replace(":attribute", "file button action", trans("validation.required")));
 
-        if ($this->toogle_buttonaction_mobile && count($this->data_buttonaction_mobile) == 0) $this->addError('data_buttonaction_mobile', str_replace(":attribute","file button action", trans("validation.required")));
-        if ($this->toogle_iconsosmed_desktop && count($this->data_iconsosmed_desktop) == 0) $this->addError('data_iconsosmed_desktop', str_replace(":attribute","file icon sosmed", trans("validation.required")));
+        if ($this->toogle_buttonaction_mobile && count($this->data_buttonaction_mobile) == 0) $this->addError('data_buttonaction_mobile', str_replace(":attribute", "file button action", trans("validation.required")));
+        if ($this->toogle_iconsosmed_desktop && count($this->data_iconsosmed_desktop) == 0) $this->addError('data_iconsosmed_desktop', str_replace(":attribute", "file icon sosmed", trans("validation.required")));
 
-        if ($this->toogle_iconsosmed_mobile && count($this->data_iconsosmed_mobile) == 0) $this->addError('data_iconsosmed_mobile', str_replace(":attribute","file icon sosmed", trans("validation.required")));
+        if ($this->toogle_iconsosmed_mobile && count($this->data_iconsosmed_mobile) == 0) $this->addError('data_iconsosmed_mobile', str_replace(":attribute", "file icon sosmed", trans("validation.required")));
 
         $errors = $this->getErrorBag();
 
@@ -1039,9 +1036,9 @@ class Home extends Component
                 DB::beginTransaction();
                 // ini untuk desktop
                 foreach ($this->dataFiturDesktop as $val) {
-                    $dir = "situs/".strtolower($this->dataSitus->name)."/desktop";
+                    $dir = "situs/" . strtolower($this->dataSitus->name) . "/desktop";
                     if ($val->id_fitur == 1) {
-                        $dir = $dir."/popup modal";
+                        $dir = $dir . "/popup modal";
                         $img = $this->file_popupmodal_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1058,7 +1055,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 2) {
-                        $dir = $dir."/header apk";
+                        $dir = $dir . "/header apk";
                         $img = $this->file_headerapk_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1077,14 +1074,14 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 3) {
-                        $dir = $dir."/header corousel";
+                        $dir = $dir . "/header corousel";
                         $img = [];
 
                         foreach ($this->file_headercorousel_desktop as $i => $file) {
                             if (gettype($file) != "string") {
                                 $store = $this->uploadFiles($dir, $file);
                                 if ($store['status']) array_push($img, $store['url']);
-                            }else{
+                            } else {
                                 array_push($img, $file);
                             }
                         }
@@ -1104,8 +1101,8 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 5) {
-                        $data = collect($this->data_iconsosmed_desktop)->map(function($e) use($dir) {
-                            $dir = $dir."/icon sosmed";
+                        $data = collect($this->data_iconsosmed_desktop)->map(function ($e) use ($dir) {
+                            $dir = $dir . "/icon sosmed";
                             $img = $e['image'];
                             if (gettype($img) != "string") {
                                 $store = $this->uploadFiles($dir, $img);
@@ -1124,7 +1121,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 6) {
-                        $dir = $dir."/promosi";
+                        $dir = $dir . "/promosi";
                         $img = $this->image_promosi_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1153,7 +1150,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 8) {
-                        $dir = $dir."/footer protection";
+                        $dir = $dir . "/footer protection";
                         $img = $this->image_footerProtection_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1171,7 +1168,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 9) {
-                        $dir = $dir."/link alternatif";
+                        $dir = $dir . "/link alternatif";
                         $img = $this->image_linkAlternatif_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1188,7 +1185,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 10) {
-                        $dir = $dir."/barcode qris";
+                        $dir = $dir . "/barcode qris";
                         $img = $this->image_barcodeqris_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1218,9 +1215,9 @@ class Home extends Component
 
                 // ini untuk mobile
                 foreach ($this->dataFiturMobile as $val) {
-                    $dir = "situs/".strtolower($this->dataSitus->name)."/mobile";
+                    $dir = "situs/" . strtolower($this->dataSitus->name) . "/mobile";
                     if ($val->id_fitur == 1) {
-                        $dir = $dir."/popup modal";
+                        $dir = $dir . "/popup modal";
                         $img = $this->file_popupmodal_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1237,7 +1234,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 2) {
-                        $dir = $dir."/header apk";
+                        $dir = $dir . "/header apk";
                         $img = $this->file_headerapk_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1256,13 +1253,13 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 3) {
-                        $dir = $dir."/header corousel";
+                        $dir = $dir . "/header corousel";
                         $img = [];
                         foreach ($this->file_headercorousel_mobile as $i => $file) {
                             if (gettype($file) != "string") {
                                 $store = $this->uploadFiles($dir, $file);
                                 if ($store['status']) array_push($img, $store['url']);
-                            }else{
+                            } else {
                                 array_push($img, $file);
                             }
                         }
@@ -1282,8 +1279,8 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 5) {
-                        $data = collect($this->data_iconsosmed_mobile)->map(function($e)  use($dir) {
-                            $dir = $dir."/icon sosmed";
+                        $data = collect($this->data_iconsosmed_mobile)->map(function ($e)  use ($dir) {
+                            $dir = $dir . "/icon sosmed";
                             $img = $e['image'];
                             if (gettype($img) != "string") {
                                 $store = $this->uploadFiles($dir, $img);
@@ -1304,7 +1301,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 6) {
-                        $dir = $dir."/promosi";
+                        $dir = $dir . "/promosi";
                         $img = $this->image_promosi_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1333,7 +1330,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 8) {
-                        $dir = $dir."/footer protection";
+                        $dir = $dir . "/footer protection";
                         $img = $this->image_footerProtection_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1351,7 +1348,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 9) {
-                        $dir = $dir."/link alternatif";
+                        $dir = $dir . "/link alternatif";
                         $img = $this->image_linkAlternatif_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1368,7 +1365,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 10) {
-                        $dir = $dir."/barcode qris";
+                        $dir = $dir . "/barcode qris";
                         $img = $this->image_barcodeqris_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1398,7 +1395,6 @@ class Home extends Component
 
                 DB::commit();
                 $this->dispatchBrowserEvent("iframe:reload");
-
             } catch (\Throwable $th) {
                 DB::rollback();
                 $this->dispatchBrowserEvent("toast:error", [
@@ -1406,19 +1402,25 @@ class Home extends Component
                 ]);
             }
         }
-
     }
 
     public function uploadFiles($path, $file)
     {
         try {
-            // $ext = $file->getClientOriginalExtension();
-            $name = $file->getClientOriginalName();
-            $filePath = Storage::disk('spaces')->putFileAs($path, $file, $name, 'public');
-            return [
-                "status" => true,
-                "url" => env('DO_SPACES_PUBLIC').$filePath
-            ];
+            if ($file && gettype($file) != "string") {
+                // $ext = $file->getClientOriginalExtension();
+                $name = $file->getClientOriginalName();
+                $filePath = Storage::disk('spaces')->putFileAs($path, $file, $name, 'public');
+                return [
+                    "status" => true,
+                    "url" => env('DO_SPACES_PUBLIC') . $filePath
+                ];
+            } else {
+                return [
+                    "status" => true,
+                    "url" => ""
+                ];
+            }
         } catch (Exception $exception) {
             // return response()->json(['message' => $exception->getMessage()], 409);
 
