@@ -15,8 +15,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="tgloppa Mobile">
     <meta http-equiv="msthemecompatible" content="no">
-    <link rel="icon" type="image/png" href="https://tgloppa.com/assets/img/akx/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://tgloppa.com/assets/img/akx/favicon.png">
+    <link rel="icon" type="image/png" href="{{ asset('situs/assets/oppa_toto/mobile/favicon.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/oppa_toto/mobile/favicon.png') }}">
 
     <link rel="stylesheet" href="{{ asset('situs/assets/oppa_toto/mobile/tingle.min.css') }}">
     <link href="{{ asset('situs/assets/oppa_toto/mobile/style.css') }}" rel="stylesheet" type="text/css">
@@ -214,6 +214,8 @@
                             } else return true;
                         }
                     </script>
+                    <link rel="stylesheet" href="{{ asset('situs/css/oppa_toto.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/oppa_toto.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/oppa_toto/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
@@ -609,9 +611,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/oppa_toto/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('tgloppa.com', 'voyaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

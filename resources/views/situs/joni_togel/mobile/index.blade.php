@@ -330,7 +330,7 @@
                              height: auto;
                          }
                      </style>
-                     <SCRIPT LANGUAGE="JavaScript">
+                     <script type="text/javascript">
                          function checkData() {
                              var f1 = document.forms[0];
                              var wm = "\n\r\n";
@@ -351,7 +351,9 @@
                                  return false;
                              } else return true;
                          }
-                     </SCRIPT>
+                     </script>
+                     <link rel="stylesheet" href="{{ asset('situs/css/joni_togel.css') }}" type="text/css">
+                     <script src="{{ asset('situs/js/joni_togel.js') }}" type="text/javascript"></script>
                      <link href="{{ asset('situs/assets/joni_togel/mobile/login.css') }}" rel="stylesheet">
                      <div class="inner-wrap">
                          <div class="panel-blue">

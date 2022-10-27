@@ -28,92 +28,92 @@
 	}
 </style>
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/framework.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/framework.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/owl.carousel.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/owl.theme.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/owl.theme.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/swipebox.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/swipebox.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/colorbox.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/colorbox.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <link
-href="{{ asset('situs/assets/zia_togel/mobile/li-scroller.css') }}"
+href="{{ asset('situs/assets/fia_togel/mobile/li-scroller.css') }}"
 rel="stylesheet"
 type="text/css"
 />
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/jquery.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jqueryui.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/jqueryui.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.min.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/owl.carousel.min.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.swipebox.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/jquery.swipebox.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.colorbox.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/jquery.colorbox.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/snap.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/snap.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/contact.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/contact.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/custom.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/custom.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/framework.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/framework.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/framework.launcher.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/framework.launcher.js.download') }}"
 ></script>
 <script
 language="JavaScript"
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery-cycle-all-pack.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/jquery-cycle-all-pack.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/clipboard.min.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/clipboard.min.js.download') }}"
 ></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/clipboard.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/clipboard.js.download') }}"
 ></script>
-<script src="{{ asset('situs/assets/zia_togel/mobile/notif-widget.js.download') }}"></script>
+<script src="{{ asset('situs/assets/fia_togel/mobile/notif-widget.js.download') }}"></script>
 <script
 type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
+src="{{ asset('situs/assets/fia_togel/mobile/sw.js.download') }}"
 ></script>
 	
 </head>
@@ -352,7 +352,9 @@ function checkData() {
     }
     else return true;
 }
-</SCRIPT>
+</script>
+<link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/fia_togel.js') }}" type="text/javascript"></script>
 <link href="{{ asset('situs/assets/fia_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">

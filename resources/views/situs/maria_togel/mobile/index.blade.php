@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-<!-- Mirrored from mariatogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Oct 2022 13:18:07 GMT -->
+<!-- Mirrored from mariatogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 07:40:43 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<title>Situs Bandar Togel Online Resmi Terpercaya</title>
@@ -27,107 +27,41 @@ body {
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="mariatogel176 Mobile">
 	<meta http-equiv="msthemecompatible" content="no">
-	        <link rel="icon" type="image/png" href="{{ asset('situs/assets/maria_togel/mobile/favicon.png') }}" />
-			<link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/maria_togel/mobile/favicon.png') }}" />
-		
-	
-	<!-- <a href='h' target="event"></a> -->
-	<link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/mobile/tingle.min.css') }}">
-<link href="{{ asset('situs/assets/maria_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/maria_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
-<style type="text/css"> 
-	.footer {
-		z-index: 1;
-	}
-</style>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/framework.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/owl.theme.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/swipebox.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/colorbox.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<link
-href="{{ asset('situs/assets/zia_togel/mobile/li-scroller.css') }}"
-rel="stylesheet"
-type="text/css"
-/>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jqueryui.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/owl.carousel.min.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.swipebox.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery.colorbox.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/snap.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/contact.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/custom.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/framework.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/framework.launcher.js.download') }}"
-></script>
-<script
-language="JavaScript"
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/jquery-cycle-all-pack.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/clipboard.min.js.download') }}"
-></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/clipboard.js.download') }}"
-></script>
-<script src="{{ asset('situs/assets/zia_togel/mobile/notif-widget.js.download') }}"></script>
-<script
-type="text/javascript"
-src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
-></script>
+  <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/mobile/tingle.min.css') }}">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      .footer {
+          z-index: 1;
+      }
+  </style>
+  <link href="{{ asset('situs/assets/maria_togel/mobile/framework.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('situs/assets/maria_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
+  {{-- <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/socket.io.min.js.download') }}"></script> --}}
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/jquery.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/jqueryui.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/owl.carousel.min.js.download') }}">
+  </script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/jquery.swipebox.js.download') }}">
+  </script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/jquery.colorbox.js.download') }}">
+  </script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/snap.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/contact.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/custom.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/framework.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/framework.launcher.js.download') }}">
+  </script>
+  <script language="JavaScript" type="text/javascript"
+      src="{{ asset('situs/assets/maria_togel/mobile/jquery-cycle-all-pack.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/clipboard.min.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/clipboard.js.download') }}"></script>
+  <script src="{{ asset('situs/assets/maria_togel/mobile/notif-widget.js.download') }}"></script>
+  <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/sw.js.download') }}"></script>
 	
 </head>
   <style type="text/css">
@@ -184,14 +118,14 @@ src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
               <!-- banner kecil -->
                             <div class="note center">Silahkan login untuk mulai bermain</div>
               <div>
-                <script type="text/javascript" src="tgsecure/vbulletin_md5.js"></script>
+                <script type="text/javascript" src="{ asset('situs/assets/maria_togel/mobile/vbulletin_md5.js.download') }}"></script>
                 <form action="https://mariatogel176.com/m/index.php" METHOD="post" onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
                   <div class="form-group">
                     <input id="navbar_username" name="entered_login" tabindex="1" id="user_id" name="user_id" class="contactField requiredField center" type="text" value="" placeholder="Username" onblur="if(this.value == '') { this.value='Username'}" onfocus="if (this.value == 'Username') {this.value=''}" required />
                   </div>
                   <div class="form-group">
-                    <span class="showp" onclick="showpassword()"><img src="{{ asset('situs/assets/maria_togel/mobile/eye.png') }}">
+                    <span class="showp" onclick="showpassword()"><img src="{{  asset('situs/assets/maria_togel/mobile/eye.png')  }}">
                       <p id="hideshow" style="font-size: 18px;">&nbsp Show</p>
                     </span>
                     <input type="hidden" id="showhide" value="show">
@@ -210,7 +144,7 @@ src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
                   <input name="vb_login_md5password_utf" type="hidden">
                 </form>
                 <div class="buttonjoin">
-                  <a href="https://mariatogel176.com/m/register.php" class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
+                  <a href="https://mariatogel176.com/m/register.html" class="buttonWrap buttong button-green contactSubmitButton">Daftar</a>
                 </div>
                               </div>
             </div>
@@ -245,11 +179,14 @@ src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
                 }
               }
             </script>
-          {{-- <script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-frame.js"></script>
-<script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-spa.js"></script> --}}
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-G91HRC62B7');
+</script>
 
 <style>
 #close_button {
@@ -358,7 +295,13 @@ src="{{ asset('situs/assets/zia_togel/mobile/sw.js.download') }}"
 </style>
 
 
-<script src="{{ asset('situs/assets/maria_togel/mobile/jquery.min.js') }}"></script>
+
+{{-- <script src='../../ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' type='text/javascript'> --}}
+</script>
+
+
+
+<!-- <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script> -->
 <script type='text/javascript'>
 function checkData() {
     var f1 = document.forms[0];
@@ -382,12 +325,14 @@ function checkData() {
     else return true;
 }
 </script>
-<link href="{{ asset('situs/assets/maria_togel/mobile/login.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('situs/css/maria_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/maria_togel.js') }}" type="text/javascript"></script>
+                    <link href="{{ asset('situs/assets/maria_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">
         <h3 class="dib">   Hasil Terakhir </h3>
     <div style="display:flex;float:right;">
-    <span style="color:white;margin-right:20px;">&nbsp;&nbsp;23-10-2022</span>
+    <span style="color:white;margin-right:20px;">&nbsp;&nbsp;27-10-2022</span>
     <a id="slider-hasil-left" href="javascript:void(0);" class="btn prev prevControl"><i style="border:2px solid;border-radius:50%;font-size:18px;padding:2px 7px;margin-right:5px;" class="fa fa-angle-up"></i></a>
     <a id="slider-hasil-right" href="javascript:void(0);" class="btn next nextControl"><i style="border:2px solid;border-radius:50%;font-size:18px;padding:2px 7px;" class="fa fa-angle-down"></i></a>
 </div>
@@ -395,325 +340,352 @@ function checkData() {
 <div id='slider-hasil'><div class="slider">
                 <div class="results">
                   <div class="pool-name">KENTUCKY MID</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">1681</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">8916</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">FLORIDA MID</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">0081</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">6898</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">NEW YORK MID</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">8786</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">8647</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">OREGON03</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">7119</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">1214</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">OREGON06</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">1236</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">9234</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CALIFORNIA</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">8679</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">9585</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">FLORIDA EVE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">6494</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">3545</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">OREGON09</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">6855</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">9670</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">NEW YORK EVE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">2415</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">3812</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">KENTUCKY EVE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">0675</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">3355</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CAROLINA EVE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">6032</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">5876</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CAMBODIA</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">0484</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">3407</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">OREGON12</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">9864</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">8224</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">BULLSEYE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">0427</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">0481</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">SYDNEY</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">2247</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">5914</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CHINA</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">5198</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">5095</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">JEPANG</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">5933</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">2492</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">SINGAPORE</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">8531</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">8770</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">MAGNUM4D</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">7683</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">0815</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">PCSO</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">2338</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">0364</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">TAIWAN</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">3949</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">4110</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">NEVADA</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">2969</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">0810</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">HONGKONG</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">9422</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">3804</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CAROLINADAY</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">9244</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">6070</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">POIPET22</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">0441</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">5955</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">POIPET19</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">8671</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">8632</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">POIPET15</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">1907</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">7032</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">POIPET12</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">2471</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">7718</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">BRUNEI 14</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">6837</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">6371</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">BRUNEI 21</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">9331</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">1984</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">BRUNEI 02</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">2139</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">2933</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CHELSEA 11</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">7209</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">7103</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">CHELSEA 15</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">7171</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">2962</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CHELSEA 19</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">9650</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">0897</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">CHELSEA 21</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">0300</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">1903</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">HUAHIN 0100</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">8078</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">4622</div>
                 </div>
                 </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">HUAHIN 1630</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">1555</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">7181</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">HUAHIN 2100</div>
-                  <div class="pool-date">2022-10-22</div>
-                  <div class="pool-result">8844</div>
+                  <div class="pool-date">2022-10-26</div>
+                  <div class="pool-result">6251</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">BANGKOK 0930</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">0579</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">6973</div>
                 </div>
                 
                 <div class="results">
                   <div class="pool-name">BANGKOK 0130</div>
-                  <div class="pool-date">2022-10-23</div>
-                  <div class="pool-result">2888</div>
+                  <div class="pool-date">2022-10-27</div>
+                  <div class="pool-result">8004</div>
                 </div>
-                </div><div class="slider">
-        <div class="results">
-        <div class="pool-name">24Dspin</div>
-        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/maria_togel/mobile/15.png') }}' width='22px'></div></div>
-        <div class="results">
-        <div class="pool-name">Dice 6</div>
-        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/maria_togel/mobile/dice5.png') }}' style="height:26px;width:25px;"></div></div>
-        <div class="results">
-        <div class="pool-name">Toto Macau</div>
-        <div class="pool-date"></div><div class="pool-result">3014</div></div>
-        <div class="results">
-        <div class="pool-name">24D</div>
-        <div class="pool-date"></div><div class="pool-result">19</div></div></div><div class="slider">
-        <div class="results">
-        <div class="pool-name">Roulette</div>
-        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/maria_togel/mobile/35.png') }}' width='22px'></div></div>
-        <div class="results">
-        <div class="pool-name">Sicbo[Dice]</div>
-        <div class="pool-date"></div><div class="pool-result"><img style='width:20px;margin: 6px 1px;' src='{{ asset('situs/assets/maria_togel/mobile/dice3.png') }}'><img style='width:20px;margin: 6px 1px;' src='{{ asset('situs/assets/maria_togel/mobile/dice3.png') }}'><img style='width:20px;margin: 6px 1px;' src='{{ asset('situs/assets/maria_togel/mobile/dice4.png') }}'></div></div>    </div>
-</div>
-<div>
-    
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/bca.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/bni.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/bri.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/cimb.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/danamon.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/nofound.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/maybank.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/ovo.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/gopay.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/dana.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/linkaja.webp') }}" />
-  </div>
-  <div class="bank">
-    <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/maria_togel/mobile/bsi.webp') }}" />
-  </div>     </div>
+                <div class="slider">
+                  <div class="results">
+                      <div class="pool-name">24Dspin</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result"><img
+                              src="{{ asset('situs/assets/maria_togel/mobile/13.png') }}"
+                              width="22px"></div>
+                  </div>
+                  <div class="results">
+                      <div class="pool-name">Dice 6</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result"><img
+                              src="{{ asset('situs/assets/maria_togel/mobile/dice1.png') }}"
+                              style="height:26px;width:25px;"></div>
+                  </div>
+                  <div class="results">
+                      <div class="pool-name">Toto Macau</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result">9039</div>
+                  </div>
+                  <div class="results">
+                      <div class="pool-name">24D</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result">06</div>
+                  </div>
+              </div>
+              <div class="slider">
+                  <div class="results">
+                      <div class="pool-name">Roulette</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result"><img
+                              src="{{ asset('situs/assets/maria_togel/mobile/03.png') }}"
+                              width="22px"></div>
+                  </div>
+                  <div class="results">
+                      <div class="pool-name">Sicbo[Dice]</div>
+                      <div class="pool-date"></div>
+                      <div class="pool-result"><img style="margin: 6px 1px;"
+                              src="{{ asset('situs/assets/maria_togel/mobile/dice3.png') }}"><img
+                              style="margin: 6px 1px;"
+                              src="{{ asset('situs/assets/maria_togel/mobile/dice5.png') }}"><img
+                              style="margin: 6px 1px;"
+                              src="{{ asset('situs/assets/maria_togel/mobile/dice6.png') }}"></div>
+                  </div>
+              </div>
+          </div>
+          <div>
+
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/red-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/bca.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/bni.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/bri.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/bsi.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/cimb.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/dana.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/danamon.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/gopay.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/linkaja.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/nofound.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/maybank.webp') }}">
+              </div>
+              <div class="bank">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/ovo.webp') }}">
+              </div>
+                 </div>
     </div>
   </div>
 </div>
 <script language="JavaScript" type="text/javascript">
     $(document).ready(function(){$('.slideshow').cycle({fx:'fade'});});
 </script>    <div class="row" style="display: flex;">
-      <div class="col-6 col-sm-6">
-        <img src="a{{ asset('situs/assets/maria_togel/mobile/idnplay_w.png') }}" style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
-      </div>
-      <div class="col-6 col-sm-6">
-        <img src="{{ asset('situs/assets/maria_togel/mobile/pagcorlogo2.png') }}" style="overflow: inherit !important;width: 100%;padding: 10px;">
-      </div>
+  <div class="col-6 col-sm-6">
+    <img src="{{ asset('situs/assets/line_togel/mobile/idnplay_w.png') }}" style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+  </div>
+  <div class="col-6 col-sm-6">
+    <img src="{{ asset('situs/assets/line_togel/mobile/pagcorlogo2.png') }}" style="overflow: inherit !important;width: 100%;padding: 10px;">
+  </div>
     </div>
     <div class="footer">
       <div class="wrapper">
@@ -723,10 +695,11 @@ function checkData() {
   </div>
 </div></body>
 
-<!-- Mirrored from mariatogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Oct 2022 13:18:27 GMT -->
+<!-- Mirrored from mariatogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 07:41:07 GMT -->
 </html>
-<script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/_footer.js') }}"></script>
-<script src="{{ asset('situs/assets/maria_togel/mobile/moment.min.js') }}" type='text/javascript'></script> 
+<script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/_footer.js.download') }}"></script>
+<script src="{{ asset('situs/assets/maria_togel/mobile/moment.min.js.download') }}" type="text/javascript"></script>
 <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/mobile/_footer.css') }}">
 <!-- START SMART BANNER -->
-	<script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/sw.js') }}"></script>
+<script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/sw.js.download') }}"></script>
+

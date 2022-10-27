@@ -214,6 +214,8 @@
                             } else return true;
                         }
                     </script>
+                    <link rel="stylesheet" href="{{ asset('situs/css/luna_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/luna_togel.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/luna_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">

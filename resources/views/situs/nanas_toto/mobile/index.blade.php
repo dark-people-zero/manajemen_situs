@@ -231,6 +231,8 @@
                             } else return true;
                         }
                     </script>
+                    <link rel="stylesheet" href="{{ asset('situs/css/nanas_toto.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/nanas_toto.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/nanas_toto/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
@@ -622,9 +624,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/nanas_toto/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('xn--nnastoto-8ya.com', 'kcoaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

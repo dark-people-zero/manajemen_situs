@@ -13,35 +13,102 @@
 	        <link rel="icon" type="image/png" href="{{ asset('situs/assets/indra_togel/mobile/favicon.png') }}" />
 			<link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/indra_togel/mobile/favicon.png') }}" />
 	
-	<link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/tingle.min.css') }}">
-<link href="{{ asset('situs/assets/indra_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
-<style type="text/css"> 
-	.footer {
-		z-index: 1;
-	}
-</style>
-<link href="{{ asset('situs/assets/indra_togel/mobile/framework.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/indra_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/jquery.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/jqueryui.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/jquery.swipebox.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/jquery.colorbox.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/snap.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/contact.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/custom.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/framework.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/framework.launcher.js') }}"></script>
-<script language="JavaScript" type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/jquery-cycle-all-pack.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/clipboard.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/clipboard.js') }}"></script>
-<script src="{{ asset('situs/assets/indra_togel/mobile/notif-widget.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/sw.js') }}"></script>	
+      <link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/tingle.min.css') }}">
+      <link href="{{ asset('situs/assets/indra_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ asset('situs/assets/indra_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
+      <style type="text/css"> 
+        .footer {
+          z-index: 1;
+        }
+      </style>
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/framework.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/owl.theme.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/swipebox.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/colorbox.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <link
+      href="{{ asset('situs/assets/indra_togel/mobile/li-scroller.css') }}"
+      rel="stylesheet"
+      type="text/css"
+      />
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/jquery.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/jqueryui.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/owl.carousel.min.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/jquery.swipebox.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/jquery.colorbox.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/snap.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/contact.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/custom.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/framework.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/framework.launcher.js.download') }}"
+      ></script>
+      <script
+      language="JavaScript"
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/jquery-cycle-all-pack.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/clipboard.min.js.download') }}"
+      ></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/clipboard.js.download') }}"
+      ></script>
+      <script src="{{ asset('situs/assets/indra_togel/mobile/notif-widget.js.download') }}"></script>
+      <script
+      type="text/javascript"
+      src="{{ asset('situs/assets/indra_togel/mobile/sw.js.download') }}"
+      ></script>
 	
 </head>  
 <style type="text/css">
@@ -100,7 +167,7 @@
               <!-- banner kecil -->
                             <div class="note center">Silahkan login untuk mulai bermain</div>
               <div>
-                <script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/vbulletin_md5.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/vbulletin_md5.js.download') }}"></script>
                 <form action="https://indratogel176.com/m/index.php" METHOD="post" onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
                   <div class="form-group">
@@ -280,7 +347,7 @@
 
 
 
-<script src='{{ asset('situs/assets/indra_togel/mobile/jquery.min.js') }}' type='text/javascript'>
+<script src='{{ asset('situs/assets/indra_togel/mobile/jquery.min.js.download') }}' type='text/javascript'>
 </script>
 <script type='text/javascript'>
 function checkData() {
@@ -305,6 +372,8 @@ function checkData() {
     else return true;
 }
 </script>
+<link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/indra_togel.js') }}" type="text/javascript"></script>
 <link href="{{ asset('situs/assets/indra_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">
@@ -558,7 +627,7 @@ function checkData() {
                 </div><div class="slider">
         <div class="results">
         <div class="pool-name">24Dspin</div>
-        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/indra_togel/mobile/15.png') }}' width='22px'></div></div>
+        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/indra_togel/mobile/13.png') }}' width='22px'></div></div>
         <div class="results">
         <div class="pool-name">Dice 6</div>
         <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/indra_togel/mobile/dice5.png') }}' style="height:26px;width:25px;"></div></div>
@@ -570,10 +639,10 @@ function checkData() {
         <div class="pool-date"></div><div class="pool-result">16</div></div></div><div class="slider">
         <div class="results">
         <div class="pool-name">Roulette</div>
-        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/indra_togel/mobile/35.png') }}' width='22px'></div></div>
+        <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/indra_togel/mobile/13.png') }}' width='22px'></div></div>
         <div class="results">
         <div class="pool-name">Sicbo[Dice]</div>
-        <div class="pool-date"></div><div class="pool-result"><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice4.png') }}'></div></div>    </div>
+        <div class="pool-date"></div><div class="pool-result"><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/indra_togel/mobile/dice3.png') }}'></div></div>    </div>
 </div>
 <div>
     
@@ -648,9 +717,9 @@ function checkData() {
 
 <!-- Mirrored from indratogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 07:14:19 GMT -->
 </html>
-<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/_footer.js') }}"></script>
-<script src="{{ asset('situs/assets/indra_togel/mobile/moment.min.js') }}" type='text/javascript'></script> 
+<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/_footer.js.download') }}"></script>
+<script src="{{ asset('situs/assets/indra_togel/mobile/moment.min.js.download') }}" type='text/javascript'></script> 
 <link rel="stylesheet" href="{{ asset('situs/assets/indra_togel/mobile/_footer.css') }}">
 <!-- START SMART BANNER -->
-	<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/sw.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('situs/assets/indra_togel/mobile/sw.js.download') }}"></script>
 {{-- <script> protocol('indratogel176.com','vhwaa','mobile') </script> --}}

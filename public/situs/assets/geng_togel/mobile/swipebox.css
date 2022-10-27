@@ -80,7 +80,7 @@ and (width : 798px){
 
 
 #swipebox-slider .slide {
-  background: url("../../img/ui/loader.html") no-repeat center center;
+  background: url("../../img/ui/loader.gif") no-repeat center center;
   height: 100%;
   width: 100%;
   line-height: 1px;
@@ -140,7 +140,7 @@ and (width : 798px){
 
 #swipebox-action #swipebox-prev, #swipebox-action #swipebox-next,
 #swipebox-action #swipebox-close {
-  background-image: url("../../img/ui/icon3.html");
+  background-image: url("../../img/ui/icon3.png");
   background-repeat: no-repeat;
   border: none!important;
   text-decoration: none!important;

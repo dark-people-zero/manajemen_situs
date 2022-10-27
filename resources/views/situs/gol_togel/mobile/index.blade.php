@@ -322,6 +322,8 @@ function checkData() {
     else return true;
 }
 </script>
+<link rel="stylesheet" href="{{ asset('situs/css/gol_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/gol_togel.js') }}" type="text/javascript"></script>
 <link href="{{ asset('situs/assets/gol_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">
