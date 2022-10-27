@@ -8,7 +8,7 @@
     <meta name="description"
         content="PATIHTOTO adalah agen togel online terbesar terpercaya yang memberikan permainan togel online dengan pasaran terbesar seperti togel hongkong, singapura, sydney, dan masih banyak lagi. Patihtoto juga menyajikan permainan live casino online terpopuler seperti roulette, baccarat, sicbo, dan masih banyak lagi. Sistem deposit &amp; withdraw tercepat dengan sistem keamanan yang canggih serta di dukung dengan customer service yang siap melayani anda 7x24 jam nonstop./&gt;
 &lt;meta name="
-        keywords"="">
+        keywords="">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -216,6 +216,11 @@
                             } else return true;
                         }
                     </script>
+
+                    {{-- tanda  --}}
+                    <link rel="stylesheet" href="{{ asset('situs/css/patih_toto.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/patih_toto.js') }}" type="text/javascript"></script>
+
                     <link href="{{ asset('situs/assets/patih_toto/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">

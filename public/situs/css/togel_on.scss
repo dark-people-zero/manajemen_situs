@@ -1,0 +1,1056 @@
+body {
+    padding-right: 0 !important;
+}
+
+body.smbitClass-mobile {
+    // Untuk header atas
+    .page-content {
+        .smartb1 #smart_banner {
+            display: none;
+        }
+
+        &.apk-download {
+            .smartb1 {
+                height: 135px !important;
+                .smartb2 {
+                    top: 65px !important;
+                }
+                .smartb3 {
+                    top: 80px;
+                }
+
+                #smart_banner {
+                    position: fixed; width: 100%;
+                    padding: 10px;
+                    font-family: Verdana, arial, sans-serif;
+                    color: #05b6fc;
+                    background: #00111f;
+                    height: inherit;
+                    transition: all 0.5s cubic-bezier(0, 1, 0.5, 1) 0s;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    max-height: 63px;
+
+                    #close_button {
+                        color:#fff;
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 60px;
+                        cursor: pointer;
+                    }
+
+                    .header-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .banner-info {
+                            display: flex;
+                            align-items: center;
+                            .app_icon {
+                                width: 43px;
+                                margin-left: 10px;
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+
+                            .app_info {
+                                display: flex;
+                                flex-direction: column;
+                                margin-left: 10px;
+                                .app_title {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    color: #05b6fc;
+                                    text-transform: uppercase;
+                                }
+
+                                .app_slogan {
+                                    font-size: 11px;
+                                    color: #05b6fc;
+                                    letter-spacing: 0px;
+                                }
+                            }
+                        }
+
+                        .download_button {
+
+                            width: 100px;
+                            overflow: visible;
+                              a {
+
+                                font-size: 12px;
+                                padding: 8px;
+                                border: 1px solid;
+                                color: #05b6fc;
+                                background: linear-gradient(to bottom, #403f3f 50%, #080707 50%);
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .smartb4 {
+                margin-top: 65px !important;
+            }
+
+        }
+
+        .content {
+            .container {
+                .owl-carousel {
+                    img {
+                        padding-top: 0px;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .bank {
+                    padding-left: 5px !important;
+                }
+            }
+
+            .icon-sosmed {
+                .deskripsi {
+                    margin-top: 5px;
+                    text-align: center;
+                    margin-bottom: 18px;
+                    color: white;
+                    text-shadow: 0px 0px 10px #777777, 0px 0px 20px #777777; font-size: 15px;
+                }
+
+                .icon {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .promosi {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    padding-top: 10px;
+                }
+            }
+
+            .beforeFooter {
+                .tittle {
+                    font-size: larger;
+                    padding-top: 20px;
+                    color: #ffcc00;
+                    text-align: center;
+                }
+
+                .deskripsi {
+                    font-size: 100%;
+                    color: #d7d7d7;
+                    border-image-width: 100px;
+                    padding-top: 5px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    border-bottom-style: groove;
+                    // text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+
+    #smb-mobile-popup {
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+
+        .modal-mobile {
+            background-color: rgba(0, 0, 0, 0.4); /* Transparent dimmed overlay */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+
+            .modal-container-mobile {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                width: 200px;
+            }
+
+            .body {
+                display: inline-block;
+                padding: 10px;
+
+                .popup-img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .modal-header {
+                border-bottom: none;
+
+                .btn-close {
+                    font-weight: bold;
+                    font-size: 25px;
+                    opacity: 1;
+                    color: #fff;
+                    --webkit-appearance: none;
+                    padding: 0;
+                    cursor: pointer;
+                    background: 0 0;
+                    border: 0;
+                }
+            }
+            .deskripsi {
+                color: white;
+                background-color: rgb(188, 156, 8);
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .linkalte-container {
+        position: fixed;
+        top: 110px;
+        right: 0;
+        z-index: 9999;
+        max-width: 216px;
+        display: block;
+        overflow: hidden;
+        -webkit-transition: height 0.5s;
+        transition: height .10s;
+
+        .linkalte-btn {
+            height: 43px;
+        }
+
+        .linkalte-body {
+            background: #fff;
+            list-style-type: none;
+            padding: 0;
+            display: none;
+            -webkit-transition: height 0.5s;
+            transition: height 0.10s;
+
+            li{
+                width: 100%;
+                list-style: none;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #adadad;
+                }
+            }
+            .linkalte-item {
+                display: flex;
+                padding: 8px;
+                color: #777777;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    background: #837f77;
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            .linkalte-body{
+                display: block;
+            }
+        }
+
+    }
+
+    .btnqris {
+        display: flex;
+        justify-content: center;
+    }
+
+    .listNewBank {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+
+        &.show {
+            display: block;
+
+            .modal-dialog {
+                -webkit-transform: translate3d(0,0,0);
+                -o-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+            }
+
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
+        }
+
+        &.fade {
+            .modal-dialog {
+                -webkit-transition: -webkit-transform .3s ease-out;
+                -o-transition: -o-transform .3s ease-out;
+                transition: transform .3s ease-out;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            outline: 0;
+            background: rgba(0,0,0,0);
+            box-shadow: none;
+            border: none;
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 15px;
+
+            .imgads {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .fade {
+            opacity: 0;
+            -webkit-transition: opacity .15s linear;
+            -o-transition: opacity .15s linear;
+            transition: opacity .15s linear;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+
+            .modal-header {
+                border: none;
+                .close {
+                    opacity: 1;
+                    font-size: 25px;
+                    color: #fff;
+                }
+            }
+
+            .modal-body {
+                .deskripsi {
+                    color: white;
+                    background-color: rgb(188, 156, 8);
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .modal-dialog-centered {
+        display: flex;
+        align-items: center;
+        min-height: calc(100% - 1rem);
+        justify-content: center;
+    }
+}
+
+.modal-backdrop {
+    opacity: .9;
+}
+
+body.smbitClass-desktop {
+    background-image: url('/situs/assets/zia_togel/desktop/images/ziatogel_background_default.jpg');
+    background-attachment: fixed;
+
+    .section {
+        .container {
+            .blog-posts {
+                .promosi {
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .linkalte-container {
+        position: fixed;
+        top: 110px;
+        right: 0;
+        z-index: 9999;
+        max-width: 216px;
+        display: block;
+        overflow: hidden;
+        -webkit-transition: height 0.5s;
+        transition: height .10s;
+
+        .linkalte-btn {
+            height: 43px;
+        }
+
+        .linkalte-body {
+            background: #fff;
+            list-style-type: none;
+            padding: 0;
+            display: none;
+            -webkit-transition: height 0.5s;
+            transition: height 0.10s;
+
+            li{
+                width: 100%;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #adadad;
+                }
+            }
+            .linkalte-item {
+                display: flex;
+                padding: 8px;
+                color: #777777;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    background: #837f77;
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            .linkalte-body{
+                display: block;
+            }
+        }
+
+    }
+
+    .bankscroll {
+        .owl-wrapper {
+            .owl-item {
+                .bank {
+                    text-align: center;
+                    width: 154px !important;
+                    height: 64px !important;
+                    padding: 0px !important;
+                    background-color: rgba(0,0,0,0) !important;
+                    border: none !important;
+                    -webkit-border-radius: 0px !important;
+                    -moz-border-radius: 0px !important;
+                    -ms-border-radius: 0px !important;
+                    -o-border-radius: 0px !important;
+                    border-radius: 0px !important;
+                    margin-left: 0px;
+
+                    img {
+                        width: 154px;
+                        height: 64px;
+
+                    }
+
+                    .bca {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/trouble.gif');
+                            }
+                        }
+                    }
+
+                    .bni {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/trouble.gif');
+                            }
+                        }
+                    }
+                    .bri {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/trouble.gif');
+                            }
+                        }
+                    }
+                    .bsi {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/trouble.gif');
+                            }
+                        }
+                    }
+                    .cimb,
+                    .cimb-2 {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/trouble.gif');
+                            }
+                        }
+                    }
+                    .dana,
+                    .dana-2 {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/trouble.gif');
+                            }
+                        }
+                    }
+                    .danamon {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/trouble.gif');
+                            }
+                        }
+                    }
+                    .gopay {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/trouble.gif');
+                            }
+                        }
+                    }
+                    .linkaja {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/trouble.gif');
+                            }
+                        }
+                    }
+                    .mandiri {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/trouble.gif');
+                            }
+                        }
+                    }
+                    .maybank {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/trouble.gif');
+                            }
+                        }
+                    }
+                    .ovo {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/online.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/offline.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/trouble.gif');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // list image gameicon
+    $listImage: 'ziatogel_singapore.jpg', 'ziatogel_hongkong.jpg', 'ziatogel_sydney.jpg', 'ziatogel_nevada.jpg', 'ziatogel_cambodia.jpg', 'ziatogel_bullseye.jpg', 'ziatogel_carolinaday.jpg', 'ziatogel_totomacau.jpg', 'ziatogel_china.jpg', 'ziatogel_california.jpg', 'ziatogel_florida.jpg', 'ziatogel_newyork.jpg', 'ziatogel_oregon.jpg', 'ziatogel_taiwan.jpg', 'ziatogel_sicboball.jpg', 'ziatogel_sicbodice.jpg', 'ziatogel_12d.jpg', 'ziatogel_dice6.jpg', 'ziatogel_24d.jpg', 'ziatogel_roullete.jpg', 'ziatogel_baccarat.jpg', 'ziatogel_pokerdice.jpg', 'ziatogel_suwit.jpg', 'ziatogel_dragontiger.jpg', 'ziatogel_oglok.jpg', 'ziatogel_idn4stand.jpg', 'ziatogel_roullete2.jpg', 'ziatogel_headandtail.jpg', 'ziatogel_monopoly.jpg', 'ziatogel_5dball.jpg', 'ziatogel_gongball.jpg', 'ziatogel_billiard.jpg', 'ziatogel_3dshio.jpg', 'ziatogel_raceball.jpg', 'ziatogel_fantan.jpg', 'ziatogel_niuniu.jpg', 'ziatogel_pgsoft.png', 'ziatogel_pragmaticplay.png', 'ziatogel_idnslot.png', 'ziatogel_microgaming.png', 'ziatogel_toptrend.png', 'ziatogel_habanero.png', 'ziatogel_comingsoon.jpg', 'ziatogel_comingsoon.jpg';
+
+    .gameicon {
+        .owl-item {
+            @each $img in $listImage {
+                $i: index($listImage, $img);
+                &:nth-child(#{$i}) {
+                    .item {
+                        img {
+                            content: url('/situs/assets/zia_togel/desktop/images/icongames/'+#{$img});
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .headerApk {
+        padding: 10px;
+        background: #302e2e;
+        display: flex;
+        align-items: center;
+
+        .btn-close {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+
+            .banner-info {
+                display: flex;
+                align-items: center;
+
+                .app_icon {
+                    margin-right: 10px;
+
+                    img {
+                        max-width: 43px;
+                    }
+                }
+
+                .app_info {
+                    .app_title {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #ffee27;
+                        text-transform: uppercase;
+                    }
+
+                    .app_slogan {
+                        font-size: 11px;
+                        color: #FFF;
+                        letter-spacing: 0px;
+                    }
+                }
+            }
+
+            .download_button {
+                .btn {
+                    font-size: 12px;
+                    padding: 8px 8px;
+                    border: 1px solid;
+                    color: #ffee27;
+                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    .sidebar-button {
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 5px;
+
+        .btn {
+            width: 100%;
+        }
+
+        .btn-custom {
+            background: #fffcdd;
+            background-image: -webkit-linear-gradient(top, #fffcdd 0%, #fff250 100%);
+            background-image: linear-gradient(to bottom, #fffcdd 0%, #fff250 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#fff250', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            color: #160958;
+            border: 1px solid #f49000;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+            font-weight: 600;
+            padding: 8px 12px;
+            letter-spacing: 2px;
+            font-weight: bolder;
+
+            &:hover {
+                color: #ffffff;
+                background-color: #063a70;
+                background: -webkit-linear-gradient(#063a70, #063a70);
+            }
+
+            &.btn-primary {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #38cab3 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #38cab3 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#38cab3', GradientType=0);
+                border-color: #38cab3;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-secondary {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f74f75 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #f74f75 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f74f75', GradientType=0);
+                border-color: #f5567b;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-success {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #016a59 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #016a59 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#016a59', GradientType=0);
+                border-color: #289986;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-info {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #4ec2f0 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #4ec2f0 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#4ec2f0', GradientType=0);
+                border-color: #6cc1e2;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-warning {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #ffbd5a 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #ffbd5a 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#ffbd5a', GradientType=0);
+                border-color: #f6c06f;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-danger {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f34343 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #f34343 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f34343', GradientType=0);
+                border-color: #f35959;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+
+            &.btn-light {
+                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f9f9fb 100%);
+                background-image: linear-gradient(to bottom, #fffcdd 0%, #f9f9fb 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f9f9fb', GradientType=0);
+                border-color: #e9e9ff82;
+                color: #323251;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #063a70;
+                    background: -webkit-linear-gradient(#063a70, #063a70);
+                }
+            }
+        }
+    }
+
+    .icon-sosmed {
+        margin-top: 10px;
+        text-align: center;
+
+        .icon-container {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+
+            .icon-item {
+                a {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .promosi {
+        margin-top: 5px;
+        a {
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: 120px;
+            }
+        }
+    }
+
+    footer {
+        &#footer {
+            border-top: 0;
+
+            .before-footer {
+                h2 {
+                    margin: 20px 0;
+                    text-shadow: 0px 0px 5px #00ffff;
+                    text-align: center;
+                }
+            }
+
+            .footer-protection {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .modal {
+        .modal-body {
+            .imgads {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.btn-primary {
+    background-color: #38cab3;
+    border-color: #38cab3;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #f74f75;
+    border-color: #f5567b;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #016a59;
+    border-color: #289986;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: #4ec2f0;
+    border-color: #6cc1e2;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #ffbd5a;
+    border-color: #f6c06f;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #f34343;
+    border-color: #f35959;
+    color: #fff!important;
+}
+
+.btn-light {
+    background-color: #f9f9fb;
+    border-color: #e9e9ff82;
+    color: #323251;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 290px) {
+    body.smbitClass-mobile {
+        .page-content {
+            .content {
+                .container {
+                    .bank {
+                        display: inline-flex;
+                        align-items: center;
+                        img:first-child {
+                            width: 10px !important;
+                            margin: 0;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog-centered {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: auto auto;
+    }
+}

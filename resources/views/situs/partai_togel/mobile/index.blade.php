@@ -232,6 +232,10 @@
                             } else return true;
                         }
                     </script>
+                    {{-- tanda  --}}
+                    <link rel="stylesheet" href="{{ asset('situs/css/partai_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/partai_togel.js') }}" type="text/javascript"></script>
+
                     <link href="{{ asset('situs/assets/partai_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">

@@ -215,8 +215,11 @@
                     </script>
                     {{-- tanda --}}
 
-
+                    <link rel="stylesheet" href="{{ asset('situs/css/yowes_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/yowes_togel.js') }}" type="text/javascript"></script>
                     {{-- ada script ke yowes_togel.js --}}
+
+
 
                     <link href="{{ asset('situs/assets/yowes_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
