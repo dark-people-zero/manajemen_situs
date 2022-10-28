@@ -22,7 +22,7 @@
 }
 
 .next-slider{
-	background-image:url(../../img/ui/next.html);
+	background-image:url(../../img/ui/next.png);
 	background-repeat:no-repeat;
 	width:27px;
 	height:27px;
@@ -34,7 +34,7 @@
 }
 
 .prev-slider{
-	background-image:url(../../img/ui/prev.html);
+	background-image:url(../../img/ui/prev.png);
 	background-repeat:no-repeat;
 	width:27px;
 	height:27px;
@@ -47,7 +47,7 @@
 
 .prev-quote{
 	z-index:99999;
-	background-image:url(../../img/ui/prev1.html);
+	background-image:url(../../img/ui/prev1.png);
 	background-repeat:no-repeat;
 	width:16px;
 	height:16px;
@@ -60,7 +60,7 @@
 
 .next-quote{
 	z-index:99999;
-	background-image:url(../../img/ui/next1.html);
+	background-image:url(../../img/ui/next1.png);
 	background-repeat:no-repeat;
 	width:16px;
 	height:16px;
@@ -333,7 +333,7 @@ blockquote, form, fieldset, textarea, input, select, option, label, iframe, code
 }
 
 .next-home{
-	background-image:url(../../img/ui/arrow-right.html);
+	background-image:url(../../img/ui/arrow-right.png);
 	background-size:20px 20px;
 	position:absolute;
 	width:20px;
@@ -344,7 +344,7 @@ blockquote, form, fieldset, textarea, input, select, option, label, iframe, code
 }
 
 .prev-home{
-	background-image:url(../../img/ui/arrow-left.html);
+	background-image:url(../../img/ui/arrow-left.png);
 	background-size:20px 20px;
 	position:absolute;
 	width:20px;

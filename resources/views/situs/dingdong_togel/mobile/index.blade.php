@@ -187,11 +187,8 @@
                             }
                         }
                     </script>
-                    {{-- <script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-spa.js"></script> --}}
-
-                    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-                    {{-- </SCRIPT> --}}
+                    <link rel="stylesheet" href="{{ asset('situs/css/dingdong_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/dingdong_togel.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/dingdong_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">

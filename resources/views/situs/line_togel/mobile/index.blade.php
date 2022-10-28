@@ -408,7 +408,7 @@ body {
 </style>
 
 {{-- <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script> --}}
-<SCRIPT LANGUAGE="JavaScript">
+<script type="text/javascript">
 function checkData() {
     var f1 = document.forms[0];
     var wm = "\n\r\n";
@@ -430,7 +430,9 @@ function checkData() {
     }
     else return true;
 }
-</SCRIPT>
+</script>
+<link rel="stylesheet" href="{{ asset('situs/css/line_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/line_togel.js') }}" type="text/javascript"></script>
 <link href="{{ asset('situs/assets/line_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">

@@ -211,6 +211,8 @@
                             } else return true;
                         }
                     </script>
+                    <link rel="stylesheet" href="{{ asset('situs/css/pro_togel.css') }}" type="text/css">
+                    <script src="{{ asset('situs/js/pro_togel.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/pro_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
@@ -610,9 +612,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/pro_togel/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('protgl.com', 'vpiaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

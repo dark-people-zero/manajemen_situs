@@ -32,37 +32,105 @@ form h1, h2, h3, h4, h5, h6 {
 	<meta http-equiv="msthemecompatible" content="no">
   <link rel="icon" type="image/png" href="{{ asset('situs/assets/geng_togel/mobile/favicon.png') }}" />
   <link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/geng_togel/mobile/favicon.png') }}" />
-		
-	
-	<link rel="stylesheet" href="{{ asset('situs/assets/geng_togel/mobile/tingle.min.css') }}">
+
+
+<!-- <a href='' target="event"></a> -->
+<link rel="stylesheet" href="{{ asset('situs/assets/geng_togel/mobile/tingle.min.css') }}">
 <link href="{{ asset('situs/assets/geng_togel/mobile/style.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('situs/assets/geng_togel/mobile/style(1).css') }}" rel="stylesheet" type="text/css">
 <style type="text/css"> 
-	.footer {
-		z-index: 1;
-	}
+.footer {
+z-index: 1;
+}
 </style>
-<link href="{{ asset('situs/assets/geng_togel/mobile/framework.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/geng_togel/mobile/owl.carousel.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/geng_togel/mobile/owl.theme.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/geng_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/geng_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
-<link href="{{ asset('situs/assets/geng_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/jquery.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/jqueryui.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/jquery.swipebox.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/jquery.colorbox.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/snap.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/contact.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/custom.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/framework.js') }}"></script>
-{{-- <script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/framework.launcher.js') }}"></script> --}}
-<script language="JavaScript" type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/jquery-cycle-all-pack.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/clipboard.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/clipboard.js') }}"></script>
-<script src="{{ asset('situs/assets/geng_togel/mobile/notif-widget.js') }}"></script>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/sw.js') }}"></script>	
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/framework.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/owl.carousel.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/owl.theme.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/swipebox.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/colorbox.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<link
+href="{{ asset('situs/assets/geng_togel/mobile/li-scroller.css') }}"
+rel="stylesheet"
+type="text/css"
+/>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/jquery.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/jqueryui.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/owl.carousel.min.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/jquery.swipebox.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/jquery.colorbox.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/snap.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/contact.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/custom.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/framework.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/framework.launcher.js.download') }}"
+></script>
+<script
+language="JavaScript"
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/jquery-cycle-all-pack.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/clipboard.min.js.download') }}"
+></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/clipboard.js.download') }}"
+></script>
+<script src="{{ asset('situs/assets/geng_togel/mobile/notif-widget.js.download') }}"></script>
+<script
+type="text/javascript"
+src="{{ asset('situs/assets/geng_togel/mobile/sw.js.download') }}"
+></script>
 	
 </head>
   <style type="text/css">
@@ -286,7 +354,7 @@ color: #ffcc00;
 <script src='{{ asset('situs/assets/geng_togel/mobile/jquery.min.js') }}' type='text/javascript'>
 </script>
 {{-- <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script> --}}
-<SCRIPT LANGUAGE="JavaScript">
+<script type='text/javascript'>
 function checkData() {
     var f1 = document.forms[0];
     var wm = "\n\r\n";
@@ -308,7 +376,10 @@ function checkData() {
     }
     else return true;
 }
-</SCRIPT>
+</script>
+
+<link rel="stylesheet" href="{{ asset('situs/css/geng_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/geng_togel.js') }}" type="text/javascript"></script>
 <link href="{{ asset('situs/assets/geng_togel/mobile/login.css') }}" rel="stylesheet">
 <div class="inner-wrap">
     <div class="panel-blue">
