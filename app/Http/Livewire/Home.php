@@ -279,11 +279,11 @@ class Home extends Component
 
             if ($this->file_headerapk_desktop) {
                 if (gettype($this->file_headerapk_desktop) != "string") {
-                    $validate["file_headerapk_desktop"] = 'image|max:3072'; // 3MB max
+                    $validate["file_headerapk_desktop"] = 'image|max:10240'; // 3MB max
                     $file = $this->file_headerapk_desktop;
                     $orgName = $file->getClientOriginalName();
                     $message["file_headerapk_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
-                    $message["file_headerapk_desktop.max"] = str_replace(":max", "3072", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
+                    $message["file_headerapk_desktop.max"] = str_replace(":max", "10240", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
@@ -300,11 +300,11 @@ class Home extends Component
 
             if ($this->file_headerapk_mobile) {
                 if (gettype($this->file_headerapk_mobile) != "string") {
-                    $validate["file_headerapk_mobile"] = 'image|max:3072'; // 3MB max
+                    $validate["file_headerapk_mobile"] = 'image|max:10240'; // 3MB max
                     $file = $this->file_headerapk_mobile;
                     $orgName = $file->getClientOriginalName();
                     $message["file_headerapk_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
-                    $message["file_headerapk_mobile.max"] = str_replace(":max", "3072", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
+                    $message["file_headerapk_mobile.max"] = str_replace(":max", "10240", str_replace(":attribute", "file $orgName", trans("validation.max.file")));
                 }
             }
         }
