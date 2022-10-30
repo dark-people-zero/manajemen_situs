@@ -46,7 +46,7 @@
     <link href="{{ asset('situs/assets/dana_toto/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/dana_toto/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/dana_toto/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/owl.carousel.min.js.download') }}">
@@ -627,9 +627,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('xn--danatot-r0a.com', 'vzqaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
