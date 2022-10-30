@@ -125,6 +125,10 @@
     <noscript><a href="https://www.livechatinc.com/chat-with/13378884/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
+    {{-- taruh script disini --}}
+
+    <link rel="stylesheet" href="{{ asset('situs/css/pwvip4d.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/pwvip4d.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MD4BKQ90N4"></script>
@@ -713,8 +717,8 @@
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online dana"></div>
-                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/dana.png') }}" alt="DANA"
-                                width="89px" height="25px">
+                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/dana.png') }}"
+                                alt="DANA" width="89px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online danamon"></div>
@@ -769,23 +773,25 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row" style="display: flex;">
-                        <div class="col-3 col-sm-3"></div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/idnplay_w.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+        <div class="footer-main">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="row" style="display: flex;">
+                            <div class="col-3 col-sm-3"></div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/idnplay_w.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+                            </div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/pagcorlogo2.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/pagcorlogo2.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;">
+                        <div class="col-md-12 copyright">
+                            &copy; Copyright 2014 - 2022 <a href="#">pwvip4d176.com</a>. All Rights Reserved.
                         </div>
-                        <div class="col-3 col-sm-3"></div>
-                    </div>
-                    <div class="col-md-12 copyright">
-                        &copy; Copyright 2014 - 2022 <a href="#">pwvip4d176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -799,7 +805,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(assets/fonts/Muli.ttf);
+            src: url(/situs/assets/pwvip4d/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
@@ -875,7 +881,8 @@
     </script>
     <script src="{{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <!-- <script src="{{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-          <script src=" {{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
+                      <script src="
+        {{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
   <script src="{{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
   <script src="{{ asset('situs/assets/pwvip4d/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}"></script>

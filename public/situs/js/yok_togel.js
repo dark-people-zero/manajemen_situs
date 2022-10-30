@@ -201,13 +201,15 @@ const func = {
         beforeFooter: (data) => {
             var template = $(`
                 <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                <center><h2 class="tittle">${data.title}</h2></center>
+                <p class="deskripsi">${data.deskripsi}</p>
                 </div>
             `);
 
             $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
+            console.log("footer pro", data);
             var template = $(`
                 <div class="container footer-protection">
                     <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">

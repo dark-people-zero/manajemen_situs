@@ -140,6 +140,9 @@
     </script>
 
     <!-- disni masukin script kita -->
+    <link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/fia_togel.js') }}" type="text/javascript"></script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
@@ -873,7 +876,8 @@
     </script>
     <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <!-- <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-      <script src=" {{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
+                                  <script src="
+        {{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
   <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
   <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
