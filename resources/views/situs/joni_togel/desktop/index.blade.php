@@ -137,10 +137,10 @@
     <noscript><a href="https://www.livechat.com/chat-with/13377198/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
-<!-- disini masukkin scrip kita -->
+    <!-- disini masukkin scrip kita -->
 
-<link rel="stylesheet" href="{{ asset('situs/css/joni_togel.css') }}" type="text/css">
-<script src="{{ asset('situs/js/joni_togel.js') }}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset('situs/css/joni_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/joni_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588216-1"></script>
@@ -715,23 +715,25 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row" style="display: flex;">
-                        <div class="col-3 col-sm-3"></div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/joni_togel/desktop/assets/img/idnplay_w.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+        <div class="footer-main">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="row" style="display: flex;">
+                            <div class="col-3 col-sm-3"></div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/joni_togel/desktop/assets/img/idnplay_w.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+                            </div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/joni_togel/desktop/assets/img/pagcorlogo2.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/joni_togel/desktop/assets/img/pagcorlogo2.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;">
+                        <div class="col-md-12 copyright">
+                            &copy; Copyright 2014 - 2022 <a href="#">jonitogel176.com</a>. All Rights Reserved.
                         </div>
-                        <div class="col-3 col-sm-3"></div>
-                    </div>
-                    <div class="col-md-12 copyright">
-                        &copy; Copyright 2014 - 2022 <a href="#">jonitogel176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -745,7 +747,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/joni_togel/desktop/assets/img/feedback2.pngassets/fonts/Muli.ttf);
+            src: url(/situs/assets/joni_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
@@ -874,7 +876,8 @@
     </script>
     <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
     </script> -->
-    <script type="text/javascript" src="{{ asset('situs/assets/joni_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/joni_togel/desktop/tgsecure/vbulletin_md5.js') }}">
+    </script>
     <script type="text/javascript" src="{{ asset('situs/assets/joni_togel/desktop/assets/idn/idn-togel-frame.js') }}">
     </script>
     <script type="text/javascript" src="{{ asset('situs/assets/joni_togel/desktop/assets/idn/idn-togel-spa.js') }}">

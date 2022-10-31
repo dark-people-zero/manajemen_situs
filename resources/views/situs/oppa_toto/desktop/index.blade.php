@@ -140,7 +140,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/oppa_toto/desktop/assets/tracking.js", t.head.appendChild(
+                        "/situs/assets/oppa_toto/desktop/assets/tracking.js", t.head.appendChild(
                             n)
                 }
             };
@@ -150,6 +150,10 @@
     <noscript><a href="https://www.livechat.com/chat-with/14617200/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
+    <!-- disini masukkin scrip kita -->
+
+    <link rel="stylesheet" href="{{ asset('situs/css/oppa_toto.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/oppa_toto.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLGMTV2JEJ"></script>
@@ -717,23 +721,25 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row" style="display: flex;">
-                        <div class="col-3 col-sm-3"></div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/oppa_toto/desktop/assets/img/idnplay_w.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+        <div class="footer-main">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="row" style="display: flex;">
+                            <div class="col-3 col-sm-3"></div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/oppa_toto/desktop/assets/img/idnplay_w.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+                            </div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/oppa_toto/desktop/assets/img/pagcorlogo2.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/oppa_toto/desktop/assets/img/pagcorlogo2.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;">
+                        <div class="col-md-12 copyright">
+                            &copy; Copyright 2014 - 2022 <a href="#">oppatoto176.com</a>. All Rights Reserved.
                         </div>
-                        <div class="col-3 col-sm-3"></div>
-                    </div>
-                    <div class="col-md-12 copyright">
-                        &copy; Copyright 2014 - 2022 <a href="#">oppatoto176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -747,7 +753,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/oppa_toto/desktop/assets/fonts/Muli.ttf);
+            src: url(/situs/assets/oppa_toto/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
