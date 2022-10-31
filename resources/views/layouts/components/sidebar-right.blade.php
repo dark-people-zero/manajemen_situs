@@ -57,7 +57,7 @@
                                         {{-- untuk popup modal --}}
                                         @if ($itemFitur->id_fitur == 1)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Popup Modal
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-popupmodal" role="button" aria-expanded="false" aria-controls="coll-popupmodal">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="popupmodal" onchange="changeCheckbox(this)" {{$toogle_popupmodal_desktop ? 'checked' : ''}}>
@@ -116,7 +116,7 @@
                                         {{-- untuk header apk --}}
                                         @if ($itemFitur->id_fitur == 2)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     header apk
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-headerapk" role="button" aria-expanded="false" aria-controls="coll-headerapk">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="headerapk" onchange="changeCheckbox(this)" {{$toogle_headerapk_desktop ? 'checked' : ''}}>
@@ -201,7 +201,7 @@
                                         {{-- untuk Header Corousel --}}
                                         @if ($itemFitur->id_fitur == 3)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Header Corousel
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-headercorousel" role="button" aria-expanded="false" aria-controls="coll-headercorousel">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="headercorousel" onchange="changeCheckbox(this)" {{$toogle_headercorousel_desktop ? 'checked' : ''}}>
@@ -267,7 +267,7 @@
                                         {{-- untuk Button Action --}}
                                         @if ($itemFitur->id_fitur == 4)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Button Action
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-buttonaction" role="button" aria-expanded="false" aria-controls="coll-buttonaction">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="buttonaction" onchange="changeCheckbox(this)" {{$toogle_buttonaction_desktop ? 'checked' : ''}}>
@@ -306,7 +306,7 @@
                                         {{-- untuk Icon Sosmed --}}
                                         @if ($itemFitur->id_fitur == 5)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Icon Sosmed
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-iconsosmed" role="button" aria-expanded="false" aria-controls="coll-iconsosmed">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="iconsosmed" onchange="changeCheckbox(this)" {{$toogle_iconsosmed_desktop ? 'checked' : ''}}>
@@ -347,7 +347,7 @@
                                         {{-- untuk Promosi --}}
                                         @if ($itemFitur->id_fitur == 6)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Promosi
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-promosi" role="button" aria-expanded="false" aria-controls="coll-promosi">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="promosi" onchange="changeCheckbox(this)" {{$toogle_promosi_desktop ? 'checked' : ''}}>
@@ -418,7 +418,7 @@
                                         {{-- untuk Before Footer --}}
                                         @if ($itemFitur->id_fitur == 7)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     before footer
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-beforefooter" role="button" aria-expanded="false" aria-controls="coll-beforefooter">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="beforefooter" onchange="changeCheckbox(this)" {{$toogle_beforefooter_desktop ? 'checked' : ''}}>
@@ -460,7 +460,7 @@
                                         {{-- untuk Footer Protection --}}
                                         @if ($itemFitur->id_fitur == 8)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     footer protection
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-footerprotection" role="button" aria-expanded="false" aria-controls="coll-footerprotection">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="footerprotection" onchange="changeCheckbox(this)" {{$toogle_footerprotection_desktop ? 'checked' : ''}}>
@@ -531,7 +531,7 @@
                                         {{-- untuk Link Alternatif --}}
                                         @if ($itemFitur->id_fitur == 9)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Link Alternatif
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-linkAlternatif" role="button" aria-expanded="false" aria-controls="coll-linkAlternatif">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="linkAlternatif" onchange="changeCheckbox(this)" {{$toogle_linkAlternatif_desktop ? 'checked' : ''}}>
@@ -593,7 +593,7 @@
                                         {{-- untuk Barcode QRIS --}}
                                         @if ($itemFitur->id_fitur == 10)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Barcode QRIS
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-barcodeqris" role="button" aria-expanded="false" aria-controls="coll-barcodeqris">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="barcodeqris" onchange="changeCheckbox(this)" {{$toogle_barcodeqris_desktop ? 'checked' : ''}}>
@@ -683,7 +683,7 @@
                                         {{-- untuk Sort List Bank --}}
                                         @if ($itemFitur->id_fitur == 11)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Sort List Bank
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-sortlistbank-desktop" role="button" aria-expanded="false" aria-controls="coll-sortlistbank-desktop">
                                                         <input type="checkbox" class="custom-switch-input" data-type="desktop" data-target="sortlistbank" onchange="changeCheckbox(this)" {{$toogle_sortlistbank_desktop ? 'checked' : ''}}>
@@ -723,7 +723,7 @@
                                         {{-- untuk popup modal --}}
                                         @if ($itemFitur->id_fitur == 1)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Popup Modal
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-popupmodal-mobile" role="button" aria-expanded="false" aria-controls="coll-popupmodal-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="popupmodal" onchange="changeCheckbox(this)" {{$toogle_popupmodal_mobile ? 'checked' : ''}}>
@@ -782,7 +782,7 @@
                                         {{-- untuk header apk --}}
                                         @if ($itemFitur->id_fitur == 2)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     header apk
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-headerapk-mobile" role="button" aria-expanded="false" aria-controls="coll-headerapk-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="headerapk" onchange="changeCheckbox(this)" {{$toogle_headerapk_mobile ? 'checked' : ''}}>
@@ -867,7 +867,7 @@
                                         {{-- untuk Header Corousel --}}
                                         @if ($itemFitur->id_fitur == 3)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Header Corousel
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-headercorousel-mobile" role="button" aria-expanded="false" aria-controls="coll-headercorousel-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="headercorousel" onchange="changeCheckbox(this)" {{$toogle_headercorousel_mobile ? 'checked' : ''}}>
@@ -933,7 +933,7 @@
                                         {{-- untuk Button Action --}}
                                         @if ($itemFitur->id_fitur == 4)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Button Action
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-buttonaction-mobile" role="button" aria-expanded="false" aria-controls="coll-buttonaction-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="buttonaction" onchange="changeCheckbox(this)" {{$toogle_buttonaction_mobile ? 'checked' : ''}}>
@@ -969,7 +969,7 @@
                                         {{-- untuk Icon Sosmed --}}
                                         @if ($itemFitur->id_fitur == 5)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Icon Sosmed
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-iconsosmed-mobile" role="button" aria-expanded="false" aria-controls="coll-iconsosmed-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="iconsosmed" onchange="changeCheckbox(this)" {{$toogle_iconsosmed_mobile ? 'checked' : ''}}>
@@ -1011,7 +1011,7 @@
                                         {{-- untuk Promosi --}}
                                         @if ($itemFitur->id_fitur == 6)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Promosi
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-promosi-mobile" role="button" aria-expanded="false" aria-controls="coll-promosi-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="promosi" onchange="changeCheckbox(this)" {{$toogle_promosi_mobile ? 'checked' : ''}}>
@@ -1082,7 +1082,7 @@
                                         {{-- untuk Before Footer --}}
                                         @if ($itemFitur->id_fitur == 7)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     before footer
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-beforefooter-mobile" role="button" aria-expanded="false" aria-controls="coll-beforefooter-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="beforefooter" onchange="changeCheckbox(this)" {{$toogle_beforefooter_mobile ? 'checked' : ''}}>
@@ -1124,7 +1124,7 @@
                                         {{-- untuk Footer Protection --}}
                                         @if ($itemFitur->id_fitur == 8)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     footer protection
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-footerprotection-mobile" role="button" aria-expanded="false" aria-controls="coll-footerprotection-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="footerprotection" onchange="changeCheckbox(this)" {{$toogle_footerprotection_mobile ? 'checked' : ''}}>
@@ -1195,7 +1195,7 @@
                                         {{-- untuk Link Alternatif --}}
                                         @if ($itemFitur->id_fitur == 9)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Link Alternatif
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-linkAlternatif-mobile" role="button" aria-expanded="false" aria-controls="coll-linkAlternatif-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="linkAlternatif" onchange="changeCheckbox(this)" {{$toogle_linkAlternatif_mobile ? 'checked' : ''}}>
@@ -1257,7 +1257,7 @@
                                         {{-- untuk Barcode QRIS --}}
                                         @if ($itemFitur->id_fitur == 10)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Barcode QRIS
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-barcodeqris-mobile" role="button" aria-expanded="false" aria-controls="coll-barcodeqris-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="barcodeqris" onchange="changeCheckbox(this)" {{$toogle_barcodeqris_mobile ? 'checked' : ''}}>
@@ -1347,7 +1347,7 @@
                                         {{-- untuk Sort List Bank --}}
                                         @if ($itemFitur->id_fitur == 11)
                                             <div class="swichermainleft text-center">
-                                                <h4 class="d-flex justify-content-between" wire:ignore>
+                                                <h4 class="d-flex justify-content-between">
                                                     Sort List Bank
                                                     <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" href="#coll-sortlistbank-mobile" role="button" aria-expanded="false" aria-controls="coll-sortlistbank-mobile">
                                                         <input type="checkbox" class="custom-switch-input" data-type="mobile" data-target="sortlistbank" onchange="changeCheckbox(this)" {{$toogle_sortlistbank_mobile ? 'checked' : ''}}>
@@ -1392,7 +1392,7 @@
             @endif
         </div>
 
-        <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="saveData"></div>
+        <div class="lds-dual-ring position-absolute w-100 h-100 justify-content-center align-items-center" style="background: #97939314; display: none" wire:loading.flex wire:target="saveData,changeSelectSitus"></div>
     </div>
 </div>
 <!--/Sidebar-right-->
