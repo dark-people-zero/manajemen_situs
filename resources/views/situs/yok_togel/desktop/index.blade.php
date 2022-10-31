@@ -31,8 +31,7 @@
 <link rel="icon" type="image/ico"
     href="{{ asset('situs/assets/yok_togel/desktop/assets/img/akw/favicon7c4b.png?v=1666375341') }}" />
 
-<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
-    rel="stylesheet">
+<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/animate/animate.css') }}">
 

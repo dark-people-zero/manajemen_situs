@@ -125,6 +125,11 @@
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
 
+
+    <!-- disini script kita -->
+    <link rel="stylesheet" href="{{ asset('situs/css/luna_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/luna_togel.js') }}" type="text/javascript"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3X456WRM7B"></script>
 

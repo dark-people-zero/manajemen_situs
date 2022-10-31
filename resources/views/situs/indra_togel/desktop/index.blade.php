@@ -145,6 +145,8 @@
     </script>
 
     <!-- disini script kita -->
+    <link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/indra_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-14"></script>
@@ -648,14 +650,7 @@
                                 <img
                                     src="{{ asset('situs/assets/indra_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
                             </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/indra_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/indra_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

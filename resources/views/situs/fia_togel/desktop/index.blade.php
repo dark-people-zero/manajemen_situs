@@ -140,6 +140,8 @@
     </script>
 
     <!-- disni masukin script kita -->
+    <link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/fia_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
@@ -620,39 +622,7 @@
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img
-                                    src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
-                            </div>
+                            </div>                                         
                         </div>
                     </div>
                 </div>
