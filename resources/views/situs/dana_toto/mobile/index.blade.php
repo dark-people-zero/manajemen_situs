@@ -583,7 +583,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/dana_toto/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/dana_toto/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/dana_toto/mobile/mandiri.png') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/dana_toto/mobile/green-dot.GIF') }}">

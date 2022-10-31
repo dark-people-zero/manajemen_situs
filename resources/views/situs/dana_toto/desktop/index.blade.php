@@ -694,7 +694,7 @@
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online mandiri"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/nofound.html') }}" alt="Bank Mandiri" width="86px" height="25px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/mandiri.png') }}" alt="Bank Mandiri" width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online maybank"></div>
