@@ -84,9 +84,13 @@ class Home extends Component
     {
         $role = auth()->user()->id_role;
         if ($role == 1) {
-            $this->Aksessitus = situs::get();
+            $this->Aksessitus = situs::get()->sortBy([
+                fn ($a, $b) => strtolower($a['name']) <=> strtolower($b['name'])
+            ]);
         } else {
-            $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get();
+            $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get()->sortBy([
+                fn ($a, $b) => strtolower($a['situs.name']) <=> strtolower($b['situs.name'])
+            ]);
         }
     }
 
