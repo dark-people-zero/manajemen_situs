@@ -500,7 +500,7 @@ const func = {
         } else {
             $('body').addClass('smbitClass-desktop');
         }
-
+        console.log("{{env('DO_SPACES_KEY')}}");
         $.ajax({
             type: "get",
             url: "/config/20",
@@ -571,9 +571,6 @@ const func = {
                                 if (el.id_fitur == 10 && el.status) func.mobile.barcodeQris(el.data);
 
                                 if (el.id_fitur == 11 && el.status) func.mobile.sortBank(el.data);
-
-
-
 
                                 // untuk hide loading
                                 if ((i+1) == length) $("#loadingCustom").hide();

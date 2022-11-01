@@ -484,222 +484,34 @@ body.smbitClass-desktop {
                         height: 64px;
                     }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bca/yoktogel_online_bca.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bca/yoktogel_offline_bca.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bca/yoktogel_trouble_bca.gif');
-                            }
-                        }
-                    }
+                    $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bni/yoktogel_online_bni.gif');
-                            }
+                    @each $img in $listBank {
+                        $i: index($listBank, $img);
+                        $imgName: $img;
+                        @if $img == "cimb-2" {
+                            $imgName: "cimb";
                         }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bni/yoktogel_offline_bni.gif');
-                            }
+
+                        @if $img == "dana-2" {
+                            $imgName: "dana";
                         }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bni/yoktogel_trouble_bni.gif');
+                        .#{$img} {
+                            display: none;
+                            &.online {
+                                &+img {
+                                    content: url('/situs/assets/yok_togel/desktop/images/banks/'+#{$imgName}+'/online.gif');
+                                }
                             }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bri/yoktogel_online_bri.gif');
+                            &.offline {
+                                &+img {
+                                    content: url('/situs/assets/yok_togel/desktop/images/banks/'+#{$imgName}+'/offline.gif');
+                                }
                             }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bri/yoktogel_offline_bri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bri/yoktogel_trouble_bri.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bsi/yoktogel_online_bsi.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bsi/yoktogel_offline_bsi.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/bsi/yoktogel_trouble_bsi.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/cimb/yoktogel_online_cimb.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/cimb/yoktogel_offline_cimb.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/cimb/yoktogel_trouble_cimb.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/dana/yoktogel_online_dana.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/dana/yoktogel_offline_dana.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/dana/yoktogel_trouble_dana.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/danamon/yoktogel_online_danamon.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/danamon/yoktogel_offline_danamon.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/danamon/yoktogel_trouble_danamon.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/gopay/yoktogel_online_gopay.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/gopay/yoktogel_offline_gopay.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/gopay/yoktogel_trouble_gopay.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/linkaja/yoktogel_online_linkaja.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/linkaja/yoktogel_offline_linkaja.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/linkaja/yoktogel_trouble_linkaja.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/mandiri/yoktogel_online_mandiri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/mandiri/yoktogel_offline_mandiri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/mandiri/yoktogel_trouble_mandiri.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/maybank/yoktogel_online_maybank.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/maybank/yoktogel_offline_maybank.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/maybank/yoktogel_trouble_maybank.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/ovo/yoktogel_online_ovo.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/ovo/yoktogel_offline_ovo.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/yok_togel/desktop/images/banks/ovo/yoktogel_trouble_ovo.gif');
+                            &.trouble {
+                                &+img {
+                                    content: url('/situs/assets/yok_togel/desktop/images/banks/'+#{$imgName}+'/trouble.gif');
+                                }
                             }
                         }
                     }

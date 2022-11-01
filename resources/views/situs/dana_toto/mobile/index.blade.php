@@ -228,7 +228,7 @@
                             } else return true;
                         }
                     </script>
-                    {{-- tanda --}}
+                    {{-- tanda disini --}}
                     <link rel="stylesheet" href="{{ asset('situs/css/dana_toto.css') }}" type="text/css">
                     <script src="{{ asset('situs/js/dana_toto.js') }}" type="text/javascript"></script>
 
@@ -583,7 +583,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/dana_toto/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/dana_toto/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/dana_toto/mobile/mandiri.png') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/dana_toto/mobile/green-dot.GIF') }}">

@@ -84,9 +84,13 @@ class Home extends Component
     {
         $role = auth()->user()->id_role;
         if ($role == 1) {
-            $this->Aksessitus = situs::get();
+            $this->Aksessitus = situs::get()->sortBy([
+                fn ($a, $b) => strtolower($a['name']) <=> strtolower($b['name'])
+            ]);
         } else {
-            $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get();
+            $this->Aksessitus = aksesSitus::with(['situs', 'aksesFitur'])->where('id_user', auth()->user()->id)->get()->sortBy([
+                fn ($a, $b) => strtolower($a['situs.name']) <=> strtolower($b['situs.name'])
+            ]);
         }
     }
 
@@ -148,6 +152,87 @@ class Home extends Component
     {
         $stat = env("APP_STAT");
         $role = auth()->user()->id_role;
+        $this->reset([
+            "statPengaturan",
+            "dataFiturDesktop",
+            "dataFiturMobile",
+            "toogle_popupmodal_desktop",
+            "toogle_headerapk_desktop",
+            "toogle_headercorousel_desktop",
+            "toogle_buttonaction_desktop",
+            "toogle_iconsosmed_desktop",
+            "toogle_promosi_desktop",
+            "toogle_beforefooter_desktop",
+            "toogle_footerprotection_desktop",
+            "toogle_linkAlternatif_desktop",
+            "toogle_barcodeqris_desktop",
+            "toogle_sortlistbank_desktop",
+            "toogle_popupmodal_mobile",
+            "toogle_headerapk_mobile",
+            "toogle_headercorousel_mobile",
+            "toogle_buttonaction_mobile",
+            "toogle_iconsosmed_mobile",
+            "toogle_promosi_mobile",
+            "toogle_beforefooter_mobile",
+            "toogle_footerprotection_mobile",
+            "toogle_linkAlternatif_mobile",
+            "toogle_barcodeqris_mobile",
+            "toogle_sortlistbank_mobile",
+            "file_popupmodal_desktop",
+            "deskripsi_popupmodal_desktop",
+            "file_popupmodal_mobile",
+            "deskripsi_popupmodal_mobile",
+            "file_headerapk_desktop",
+            "title_headerapk_desktop",
+            "slogan_headerapk_desktop",
+            "url_headerapk_desktop",
+            "file_headerapk_mobile",
+            "title_headerapk_mobile",
+            "slogan_headerapk_mobile",
+            "url_headerapk_mobile",
+            "file_headercorousel_desktop",
+            "file_headercorousel_mobile",
+            "file_temp_headercorousel_desktop",
+            "file_temp_headercorousel_mobile",
+            "data_buttonaction_desktop",
+            "data_buttonaction_mobile",
+            "data_iconsosmed_desktop",
+            "ket_iconsosmed_desktop",
+            "data_iconsosmed_mobile",
+            "ket_iconsosmed_mobile",
+            "name_promosi_desktop",
+            "link_promosi_desktop",
+            "image_promosi_desktop",
+            "name_promosi_mobile",
+            "link_promosi_mobile",
+            "image_promosi_mobile",
+            "title_beforeFooter_desktop",
+            "deskripsi_beforeFooter_desktop",
+            "title_beforeFooter_mobile",
+            "deskripsi_beforeFooter_mobile",
+            "name_footerProtection_desktop",
+            "link_footerProtection_desktop",
+            "image_footerProtection_desktop",
+            "name_footerProtection_mobile",
+            "link_footerProtection_mobile",
+            "image_footerProtection_mobile",
+            "image_linkAlternatif_desktop",
+            "listLink_linkAlternatif_desktop",
+            "image_linkAlternatif_mobile",
+            "listLink_linkAlternatif_mobile",
+            "name_barcodeqris_desktop",
+            "bg_barcodeqris_desktop",
+            "color_barcodeqris_desktop",
+            "shadow_barcodeqris_desktop",
+            "image_barcodeqris_desktop",
+            "name_barcodeqris_mobile",
+            "bg_barcodeqris_mobile",
+            "color_barcodeqris_mobile",
+            "shadow_barcodeqris_mobile",
+            "image_barcodeqris_mobile",
+            "list_sortlistbank_desktop",
+            "list_sortlistbank_mobile",
+        ]);
         if ($role == 1) {
             $situs = $this->Aksessitus->where("id", $id)->first();
 
