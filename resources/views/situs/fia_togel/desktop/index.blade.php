@@ -843,7 +843,8 @@
     </script>
     <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <!-- <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-      <script src=" {{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
+                                  <script src="
+        {{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
   <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
   <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">

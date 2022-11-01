@@ -137,6 +137,10 @@
     <noscript><a href="https://www.livechat.com/chat-with/13377198/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
+<!-- disini masukkin scrip kita -->
+
+<link rel="stylesheet" href="{{ asset('situs/css/joni_togel.css') }}" type="text/css">
+<script src="{{ asset('situs/js/joni_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588216-1"></script>
