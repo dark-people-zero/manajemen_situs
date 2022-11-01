@@ -76,7 +76,7 @@
     </script>
 </head>
 
-<body>
+<body class="smbitClass-desktop">
     <!-- Start of LiveChat (www.livechat.com) code -->
     <script>
         window.__lc = window.__lc || {};
@@ -107,7 +107,8 @@
                 },
                 init: function() {
                     var n = t.createElement("script");
-                    n.async = !0, n.type = "text/javascript", n.src = "/situs/assets/dana_toto/desktop/tracking.js", t
+                    n.async = !0, n.type = "text/javascript", n.src =
+                        "/situs/assets/dana_toto/desktop/tracking.js", t
                         .head.appendChild(n)
                 }
             };
@@ -121,6 +122,8 @@
     <!-- End of LiveChat code -->
 
     {{-- disini script masukkin --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/dana_toto.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/dana_toto.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T"></script>
@@ -428,7 +431,8 @@
                                 <a href="latest_news49d0.html?id=4683">
                                     <marquee behavior="alternate">
                                         <strong>
-                                            <font style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
+                                            <font
+                                                style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
                                                 ***🏆 HASIL RESULT TOGEL 🏆***
                                             </font>
                                         </strong>
@@ -441,7 +445,8 @@
                                 <a href="latest_news1915.html?id=4684">
                                     <marquee behavior="alternate">
                                         <strong>
-                                            <font style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
+                                            <font
+                                                style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
                                                 *⏰*⚠️* JADWAL BANK OFFLINE & MAINTENANCE *⏰*⚠️*
                                             </font>
                                         </strong>
@@ -454,7 +459,8 @@
                                 <a href="latest_news3fc0.html?id=4685">
                                     <marquee behavior="alternate">
                                         <strong>
-                                            <font style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
+                                            <font
+                                                style="text-shadow: 0px 0px 5px rgb(255 191 0);color: #ffffff; font-size: 15px ">
                                                 * 📢 JADWAL PASARAN TOGEL 📢 *
                                             </font>
                                         </strong>
@@ -490,143 +496,197 @@
 
                         <div class="owl-carousel owl-theme gameicon">
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}' width='210px' height='210px'>
+                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
+                                    width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}'>
+                            </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}'>
+                            </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}'>
+                            </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}'>
+                            </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}'>
+                            </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                                <img src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}'></div>
+                                <img
+                                    src='{{ asset('situs/assets/dana_toto/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}'>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -658,51 +718,63 @@
                     <div class="owl-carousel owl-theme bankscroll">
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online bca"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bca.png') }}" alt="Bank Central Asia" width="78px" height="24px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bca.png') }}"
+                                alt="Bank Central Asia" width="78px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online bni"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bni.png') }}" alt="Bank BNI" width="80px" height="24px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bni.png') }}"
+                                alt="Bank BNI" width="80px" height="24px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online bri"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bri.png') }}" alt="Bank BRI" width="85px" height="21px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/bri.png') }}"
+                                alt="Bank BRI" width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/BSI.png') }}" alt="BSI" width=86px height=22px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/BSI.png') }}"
+                                alt="BSI" width=86px height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online cimb"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/cimb-2.png') }}" alt="Bank CIMB NIAGA" width=86px height=25px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/cimb-2.png') }}"
+                                alt="Bank CIMB NIAGA" width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online dana"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/dana.png') }}" alt="DANA" width="89px" height="25px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/dana.png') }}"
+                                alt="DANA" width="89px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online danamon"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/danamon.png') }}" alt="Bank DANAMON" width="85px" height="21px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/danamon.png') }}"
+                                alt="Bank DANAMON" width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/GoPay.png') }}" alt="GOPAY" width=86px height=22px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/GoPay.png') }}"
+                                alt="GOPAY" width=86px height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/linkaja.png') }}" alt="LINKAJA" width=86px height=22px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/linkaja.png') }}"
+                                alt="LINKAJA" width=86px height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online mandiri"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/mandiri.png') }}" alt="Bank Mandiri" width="86px" height="25px">
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/mandiri.png') }}"
+                                alt="Bank Mandiri" width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online maybank"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/maybank.png') }}" alt="Maybank Indonesia" width=86px height=25px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/maybank.png') }}"
+                                alt="Maybank Indonesia" width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online"></div>
-                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/ovo.png') }}" alt="OVO" width=86px height=22px>
+                            <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/ovo.png') }}"
+                                alt="OVO" width=86px height=22px>
                         </div>
                     </div>
                     <div>
@@ -746,6 +818,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
     <div class="scroll-top">
         <a href="#">
@@ -819,18 +892,24 @@
             margin: 0 10px 0 0;
         }
     </style>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/skrollr/skrollr.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}"></script>
+    <script
+        src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}"></script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.cycle2.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.fixedheadertable.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/stylec619.js?v=1.0') }}"></script>

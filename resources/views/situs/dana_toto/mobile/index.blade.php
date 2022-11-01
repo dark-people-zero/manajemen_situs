@@ -228,7 +228,7 @@
                             } else return true;
                         }
                     </script>
-                    {{-- tanda --}}
+                    {{-- tanda disini --}}
                     <link rel="stylesheet" href="{{ asset('situs/css/dana_toto.css') }}" type="text/css">
                     <script src="{{ asset('situs/js/dana_toto.js') }}" type="text/javascript"></script>
 
