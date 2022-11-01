@@ -368,7 +368,7 @@ body.smbitClass-mobile {
             .modal-body {
                 .deskripsi {
                     color: white;
-                    background-color: rgb(76, 204, 229);
+                    background-color: #ff0800;
                     margin-left: 0px;
                     margin-right: 0px;
                     margin-top: 10px;
@@ -426,18 +426,22 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+            background: rgba(0, 40, 65, 0.5);
+            }
+
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
@@ -447,8 +451,8 @@ body.smbitClass-desktop {
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+                    // background: rgba(0, 40, 65, 0.5);
+                    color: #55e3ff;
                 }
             }
         }
@@ -702,13 +706,32 @@ body.smbitClass-desktop {
                             }
                         }
                     }
+
+                    .panin {
+                        display: none;
+                        &.online {
+                            &+img {
+                                content: url('/situs/assets/luna_togel/desktop/images/banks/lunatogel_online_panin.gif');
+                            }
+                        }
+                        &.offline {
+                            &+img {
+                                content: url('/situs/assets/luna_togel/desktop/images/banks/lunatogel_offline_panin.gif');
+                            }
+                        }
+                        &.trouble {
+                            &+img {
+                                content: url('/situs/assets/luna_togel/desktop/images/banks/lunatogel_trouble_panin.gif');
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 
     // list image gameicon
-    $listImage: 'lunatogel_singapore.jpg', 'lunatogel_hongkong.jpg', 'lunatogel_sydney.jpg', 'lunatogel_nevada.jpg', 'lunatogel_cambodia.jpg', 'lunatogel_bullseye.jpg', 'lunatogel_carolinaday.jpg', 'lunatogel_totomacau.jpg', 'lunatogel_china.jpg', 'lunatogel_california.jpg', 'lunatogel_florida.jpg', 'lunatogel_newyork.jpg', 'lunatogel_oregon.jpg', 'lunatogel_taiwan.jpg', 'lunatogel_sicboball.jpg', 'lunatogel_sicbodice.jpg', 'lunatogel_12d.jpg', 'lunatogel_dice6.jpg', 'lunatogel_24d.jpg', 'lunatogel_roullete.jpg', 'lunatogel_baccarat.jpg', 'lunatogel_pokerdice.jpg', 'lunatogel_suwit.jpg', 'lunatogel_dragontiger.jpg', 'lunatogel_oglok.jpg', 'lunatogel_idn4stand.jpg', 'lunatogel_roullete2.jpg', 'lunatogel_headandtail.jpg', 'lunatogel_monopoly.jpg', 'lunatogel_5dball.jpg', 'lunatogel_gongball.jpg', 'lunatogel_billiard.jpg', 'lunatogel_3dshio.jpg', 'lunatogel_raceball.jpg', 'lunatogel_fantan.jpg', 'lunatogel_niuniu.jpg', 'lunatogel_pgsoft.png', 'lunatogel_pragmaticplay.png', 'lunatogel_idnslot.png', 'lunatogel_microgaming.png', 'lunatogel_toptrend.png', 'lunatogel_habanero.png', 'lunatogel_comingsoon.jpg', 'lunatogel_comingsoon.jpg';
+    $listImage: 'lunatogel_singapore.png', 'lunatogel_hongkong.png', 'lunatogel_sydney.png', 'lunatogel_nevada.png', 'lunatogel_cambodia.png', 'lunatogel_bullseye.png', 'lunatogel_carolina.png', 'lunatogel_totomacau.png', 'lunatogel_china.png', 'lunatogel_california.png', 'lunatogel_florida.png', 'lunatogel_newyork.png', 'lunatogel_oregon.png', 'lunatogel_taiwan.png', 'lunatogel_sicboball.png', 'lunatogel_sicbodice.png', 'lunatogel_12d.png', 'lunatogel_dice6.png', 'lunatogel_24d.png', 'lunatogel_roullete.png', 'lunatogel_baccarat.png', 'lunatogel_pokerdice.png', 'lunatogel_suwit.png', 'lunatogel_dragontiger.png', 'lunatogel_oglok.png', 'lunatogel_idn4stand.png', 'lunatogel_headandtail.png', 'lunatogel_monopoly.png', 'lunatogel_5dball.png', 'lunatogel_gongball.png', 'lunatogel_billiard.png', 'lunatogel_3dshio.png', 'lunatogel_raceball.png', 'lunatogel_fantan.png', 'lunatogel_niuniu.png', 'lunatogel_pgsoft.png', 'lunatogel_pragmatic.png', 'lunatogel_idnslot.png', 'lunatogel_microgaming.png', 'lunatogel_toptrend.png', 'lunatogel_habanero.png', 'lunatogel_comingsoon.png', 'lunatogel_comingsoon.png';
 
     .gameicon {
         .owl-item {

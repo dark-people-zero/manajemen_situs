@@ -127,6 +127,10 @@
     <noscript><a href="https://www.livechatinc.com/chat-with/13378833/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
+    {{-- disini code kita --}}
+
+    <link rel="stylesheet" href="{{ asset('situs/css/home_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/home_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-6"></script>
@@ -569,12 +573,7 @@
                                     src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}'></div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}'></div>
+                            
                         </div>
                     </div>
                 </div>

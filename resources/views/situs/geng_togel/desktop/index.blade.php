@@ -110,6 +110,9 @@
 
   <!-- disini script kita -->
 
+  <link rel="stylesheet" href="{{ asset('situs/css/geng_togel.css') }}" type="text/css">
+  <script src="{{ asset('situs/js/geng_togel.js') }}" type="text/javascript"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <div class="mask">
     <div id="loader"></div>
@@ -545,12 +548,6 @@
               </div>
               <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                 <img src="{{ asset('situs/assets/geng_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
-              </div>
-              <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                <img src="{{ asset('situs/assets/geng_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
-              </div>
-              <div class="item slides" data-animation="fadeIn" style='text-align:center'>
-                <img src="{{ asset('situs/assets/geng_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
               </div>
             </div>
           </div>

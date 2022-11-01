@@ -432,6 +432,10 @@ body.smbitClass-desktop {
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+            background: rgba(0, 40, 65, 0.5);
+            }
+
             li{
                 width: 100%;
                 // &:not(:last-child) {
@@ -446,7 +450,7 @@ body.smbitClass-desktop {
                 text-decoration: none;
 
                 &:hover {
-                    background: rgba(0, 40, 65, 0.5);
+                    // background: rgba(0, 40, 65, 0.5);
                     color: #55e3ff;
                 }
             }
