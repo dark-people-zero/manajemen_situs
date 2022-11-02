@@ -396,7 +396,7 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/zia_togel/desktop/images/ziatogel_background_default.jpg');
+    background-image: url('/situs/assets/yowes_togel/desktop/images/yowestogel_background_default.jpg');
     background-attachment: fixed;
 
     .section {
@@ -491,222 +491,34 @@ body.smbitClass-desktop {
 
                     }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bca/trouble.gif');
-                            }
-                        }
-                    }
+                    $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/online.gif');
-                            }
+                    @each $img in $listBank {
+                        $i: index($listBank, $img);
+                        $imgName: $img;
+                        @if $img == "cimb-2" {
+                            $imgName: "cimb";
                         }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/offline.gif');
-                            }
+
+                        @if $img == "dana-2" {
+                            $imgName: "dana";
                         }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bni/trouble.gif');
+                        .#{$img} {
+                            display: none;
+                            &.online {
+                                &+img {
+                                    content: url('/situs/assets/yowes_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
+                                }
                             }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/online.gif');
+                            &.offline {
+                                &+img {
+                                    content: url('/situs/assets/yowes_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
+                                }
                             }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bri/trouble.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/bsi/trouble.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/cimb/trouble.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/dana/trouble.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/danamon/trouble.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/gopay/trouble.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/linkaja/trouble.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/mandiri/trouble.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/maybank/trouble.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/online.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/offline.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/zia_togel/desktop/images/bank/ovo/trouble.gif');
+                            &.trouble {
+                                &+img {
+                                    content: url('/situs/assets/yowes_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
+                                }
                             }
                         }
                     }
@@ -716,7 +528,7 @@ body.smbitClass-desktop {
     }
 
     // list image gameicon
-    $listImage: 'ziatogel_singapore.jpg', 'ziatogel_hongkong.jpg', 'ziatogel_sydney.jpg', 'ziatogel_nevada.jpg', 'ziatogel_cambodia.jpg', 'ziatogel_bullseye.jpg', 'ziatogel_carolinaday.jpg', 'ziatogel_totomacau.jpg', 'ziatogel_china.jpg', 'ziatogel_california.jpg', 'ziatogel_florida.jpg', 'ziatogel_newyork.jpg', 'ziatogel_oregon.jpg', 'ziatogel_taiwan.jpg', 'ziatogel_sicboball.jpg', 'ziatogel_sicbodice.jpg', 'ziatogel_12d.jpg', 'ziatogel_dice6.jpg', 'ziatogel_24d.jpg', 'ziatogel_roullete.jpg', 'ziatogel_baccarat.jpg', 'ziatogel_pokerdice.jpg', 'ziatogel_suwit.jpg', 'ziatogel_dragontiger.jpg', 'ziatogel_oglok.jpg', 'ziatogel_idn4stand.jpg', 'ziatogel_roullete2.jpg', 'ziatogel_headandtail.jpg', 'ziatogel_monopoly.jpg', 'ziatogel_5dball.jpg', 'ziatogel_gongball.jpg', 'ziatogel_billiard.jpg', 'ziatogel_3dshio.jpg', 'ziatogel_raceball.jpg', 'ziatogel_fantan.jpg', 'ziatogel_niuniu.jpg', 'ziatogel_pgsoft.png', 'ziatogel_pragmaticplay.png', 'ziatogel_idnslot.png', 'ziatogel_microgaming.png', 'ziatogel_toptrend.png', 'ziatogel_habanero.png', 'ziatogel_comingsoon.jpg', 'ziatogel_comingsoon.jpg';
+    $listImage: 'yowestogel_singapore.png', 'yowestogel_hongkong.png', 'yowestogel_sydney.png', 'yowestogel_nevada.png', 'yowestogel_cambodia.png', 'yowestogel_bullseye.png', 'yowestogel_carolina.png', 'yowestogel_totomacau.png', 'yowestogel_china.png', 'yowestogel_california.png', 'yowestogel_florida.png', 'yowestogel_newyork.png', 'yowestogel_oregon.png', 'yowestogel_taiwan.png', 'yowestogel_sicboball.png', 'yowestogel_sicbodice.png', 'yowestogel_12d.png', 'yowestogel_dice6.png', 'yowestogel_24d.png', 'yowestogel_roullete.png', 'yowestogel_baccarat.png', 'yowestogel_pokerdice.png', 'yowestogel_suwit.png', 'yowestogel_dragontiger.png', 'yowestogel_oglok.png', 'yowestogel_idn4stand.png', 'yowestogel_roullete2.png', 'yowestogel_headandtail.png', 'yowestogel_monopoly.png', 'yowestogel_5dball.png', 'yowestogel_gongball.png', 'yowestogel_billiard.png', 'yowestogel_3dshio.png', 'yowestogel_raceball.png', 'yowestogel_fantan.png', 'yowestogel_niuniu.png', 'yowestogel_pgsoft.png', 'yowestogel_pragmatic.png', 'yowestogel_idnslot.png', 'yowestogel_microgaming.png', 'yowestogel_toptrend.png', 'yowestogel_habanero.png', 'yowestogel_comingsoon.png', 'yowestogel_comingsoon.png';
 
     .gameicon {
         .owl-item {
@@ -725,7 +537,7 @@ body.smbitClass-desktop {
                 &:nth-child(#{$i}) {
                     .item {
                         img {
-                            content: url('/situs/assets/zia_togel/desktop/images/icongames/'+#{$img});
+                            content: url('/situs/assets/yowes_togel/desktop/images/icongames/'+#{$img});
                         }
                     }
                 }
@@ -735,7 +547,8 @@ body.smbitClass-desktop {
 
     .headerApk {
         padding: 10px;
-        background: #302e2e;
+        color: #ffd267;
+        background: #5e0807;
         display: flex;
         align-items: center;
 
@@ -766,13 +579,13 @@ body.smbitClass-desktop {
                     .app_title {
                         font-size: 15px;
                         font-weight: bold;
-                        color: #ffee27;
+                        color: #ffd267;
                         text-transform: uppercase;
                     }
 
                     .app_slogan {
                         font-size: 11px;
-                        color: #FFF;
+                        color: #ffd267;
                         letter-spacing: 0px;
                     }
                 }
@@ -783,8 +596,8 @@ body.smbitClass-desktop {
                     font-size: 12px;
                     padding: 8px 8px;
                     border: 1px solid;
-                    color: #ffee27;
-                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    color: #ffd267;
+                    background: linear-gradient(to bottom, #ff0000 50%, #910707 50%);
                     border-radius: 20px;
                 }
             }
@@ -839,54 +652,58 @@ body.smbitClass-desktop {
             }
 
             &.btn-secondary {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f74f75 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #f74f75 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f74f75', GradientType=0);
+                color: #ffffff;
+                background-image: -webkit-linear-gradient(top, #f74f75 0%, #f74f75 100%);
+                background-image: linear-gradient(to bottom, #f74f75 0%, #f74f75 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f74f75', endColorstr='#f74f75', GradientType=0);
                 border-color: #f5567b;
 
                 &:hover {
                     color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    background-color: #fc6588;
+                    background: -webkit-linear-gradient(#fc6588, #fc6588);
                 }
             }
 
             &.btn-success {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #016a59 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #016a59 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#016a59', GradientType=0);
+                color: #ffffff;
+                background-image: -webkit-linear-gradient(top, #016a59 0%, #016a59 100%);
+                background-image: linear-gradient(to bottom, #016a59 50%, #016a59 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#016a59', endColorstr='#016a59', GradientType=0);
                 border-color: #289986;
 
                 &:hover {
                     color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    background-color: #02816c;
+                    background: -webkit-linear-gradient(#02816c, #02816c);
                 }
             }
 
             &.btn-info {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #4ec2f0 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #4ec2f0 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#4ec2f0', GradientType=0);
+                color: #ffffff;
+                background-image: -webkit-linear-gradient(top, #4ec2f0 0%, #4ec2f0 100%);
+                background-image: linear-gradient(to bottom, #4ec2f0 0%, #4ec2f0 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ec2f0', endColorstr='#4ec2f0', GradientType=0);
                 border-color: #6cc1e2;
 
                 &:hover {
                     color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    // background-color: #70cdf1;
+                    background: -webkit-linear-gradient(#70cdf1, #70cdf1);
                 }
             }
 
             &.btn-warning {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #ffbd5a 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #ffbd5a 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#ffbd5a', GradientType=0);
+                color: #ffffff;
+                background-image: -webkit-linear-gradient(top, #ffbd5a 0%, #ffbd5a 100%);
+                background-image: linear-gradient(to bottom, #ffbd5a 0%, #ffbd5a 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd5a', endColorstr='#ffbd5a', GradientType=0);
                 border-color: #f6c06f;
 
                 &:hover {
                     color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    background-color: #fdc878;
+                    background: -webkit-linear-gradient(#fdc878, #fdc878);
                 }
             }
 
@@ -959,7 +776,12 @@ body.smbitClass-desktop {
             .before-footer {
                 h2 {
                     margin: 20px 0;
-                    text-shadow: 0px 0px 5px #00ffff;
+                   color: #ef504d;
+                    text-align: center;
+                }
+                p.deskripsi {
+                    font-size: large;
+                    color: #dee1de !important;
                     text-align: center;
                 }
             }
