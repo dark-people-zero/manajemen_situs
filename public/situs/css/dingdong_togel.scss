@@ -140,7 +140,7 @@ body.smbitClass-mobile {
 
             .beforeFooter {
                 .tittle {
-                    font-size: xx-large;
+                    font-size: 100%;
                     padding-top: 20px;
                     color: #55e3ff;
                     text-align: center;
@@ -345,6 +345,11 @@ body.smbitClass-mobile {
                 opacity: 1;
             }
         }
+    }
+
+    .header-logo2 {
+        width: 170px !important;
+        height: 44px !important;
     }
 }
 

@@ -194,12 +194,12 @@ const func = {
         },
         beforeFooter: (data) => {
             var template = $(`
-                <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                <div class="footer-info">
+                    <h2 class="footer-info-title">${data.title}</h2>
+                    <p class="footer-info-deskripsi">${data.deskripsi}</p>
                 </div>
             `);
-
-            // $("#footer").prepend(template);
+            $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
             var template = $(`
@@ -292,10 +292,6 @@ const func = {
             main.addClass("container");
 
             var link = $(`
-                <div class="footer-info">
-                    <h2 class="footer-info-title">Situs Resmi Bandar Togel Online Terpercaya</h2>
-                    <p class="footer-info-deskripsi"><a href="http://159.89.198.222/">DINGDONGTOGEL</a> adalah situs bandar togel & live casino online Indonesia terpercaya yang menyediakan permainan togel dan live games paling inovatif dan terpopuler saat ini. Kami hadir dengan sistem terbaru yang canggih dan sangat mudah diakses dari komputer, laptop, tablet dan smartphone kesayangan anda (Android/IOS). Tampilan elegan yang menjamin kenyamanan dalam bertransaksi dan staff profesional yang melayani transaksi deposit dan withdraw anda dengan cepat. Ayo segera bergabung di DINGDONGTOGEL dan nikmati semua permainan hanya dengan 1 Username.</p>
-                </div>
                 <div class="footer-link">
                     <div class="footer-link-default">
                         <a class="bottomnv_active" href="/index.php">Home</a>
@@ -912,7 +908,7 @@ const func = {
                                 "data": {
                                     "link": "https://ziatogel176.com/register.php",
                                     "name": "Promo",
-                                    "image": "http://127.0.0.1:8000/storage/images/zia togel/promosi/20221020-161519-mobile.gif"
+                                    "image": "https://static.hokibagus.club/dingdongtogel/images/banner/dingdongtogel_banner_bonus.gif"
                                 },
                                 "created_at": "2022-10-18T18:53:46.000000Z",
                                 "updated_at": "2022-10-24T23:47:38.000000Z"
@@ -1004,12 +1000,11 @@ const func = {
                         ]
                     }
                 }
-
+                func.desktop.defaultFooter();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
-                            func.desktop.defaultFooter();
                             response.fitur_situs.desktop.forEach((el, i) => {
                                 if (el.id_fitur == 1) {
                                     if (el.status) {
