@@ -395,8 +395,122 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/dingdong_togel/desktop/images/dingdongtogel_background_default.jpg');
     background-attachment: fixed;
 
+    // start header atas
+    .navbar-fixed-top {
+        max-width: 1170px;
+        margin: auto;
+        background-color: #001d23;
+        display: flex;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            .navbar-header {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-left: 10px;
+                .navbar-brand {
+                    margin: 0 !important;
+
+                    &.skrollable-after {
+                        margin-top: 18px !important;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+                display: flex !important;
+                align-items: center;
+                margin-right: 10px;
+                .row {
+                    margin: 0;
+                    .col-sm-7 {
+                        margin-left: 0 !important;
+                        text-align: unset !important;
+                        width: 100% !important;
+                        padding: 0;
+                        float: none;
+
+                        form {
+                            display: flex;
+                            column-gap: 20px;
+                            .form-group {
+                                width: auto;
+                                padding: 0;
+                                margin: 0 !important;
+
+                                .form-control {
+                                    width: auto !important;
+                                    margin: 0 !important;
+                                    border-radius: 15px;
+                                }
+                            }
+
+                            .login {
+                                margin: 0 !important;
+                                background-image: linear-gradient( to bottom, #c5f9f5 0%, #a1f0ff 100% );
+                                padding: 8px 19px;
+                                border-radius: 2px 20px 20px 2px;
+                                border-bottom: 1px #125d5d solid;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    // end header atas
+
+    // start header info
+    .breadcrumbs {
+        padding-top: 20px;
+        ~div {
+            .container {
+                background-color: #010506;
+                .row {
+                    .news-head {
+                        border-bottom-left-radius: 50px;
+                        background-color: #4ccce5;
+                    }
+
+                    .news-body {
+                        background-image: none;
+                        background-color: #4ccce5;
+                        border-bottom-right-radius: 50px;
+
+                        .masking {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // end header info
+
+
     .section {
         .container {
+            background-color: #010506;
+            .blog-sidebar{
+                .nav{
+                    &.menu {
+                        li {
+                            a {
+                                &:hover,
+                                &:active {
+                                    border-radius: 2px 2px 50px 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .blog-posts {
                 .promosi {
                     img {
@@ -464,244 +578,288 @@ body.smbitClass-desktop {
 
     }
 
-    .bankscroll {
-        .owl-wrapper {
-            .owl-item {
-                .bank {
-                    text-align: center;
-                    width: 168px !important;
-                    height: 100px !important;
-                    padding: 0px !important;
-                    background-color: rgba(0,0,0,0) !important;
-                    border: none !important;
-                    -webkit-border-radius: 0px !important;
-                    -moz-border-radius: 0px !important;
-                    -ms-border-radius: 0px !important;
-                    -o-border-radius: 0px !important;
-                    border-radius: 0px !important;
-                    margin-left: 0px;
+    #bank{
+        &.section {
+            .container {
+                background-color: #010506;
+                .col-md-3 {
+                    .btn-group {
+                        display: none;
+                    }
+                }
+                .bankscroll {
+                    .owl-wrapper {
+                        .owl-item {
+                            .bank {
+                                text-align: center;
+                                width: 168px !important;
+                                height: 100px !important;
+                                padding: 0px !important;
+                                background-color: rgba(0,0,0,0) !important;
+                                border: none !important;
+                                -webkit-border-radius: 0px !important;
+                                -moz-border-radius: 0px !important;
+                                -ms-border-radius: 0px !important;
+                                -o-border-radius: 0px !important;
+                                border-radius: 0px !important;
+                                margin-left: 0px;
 
-                    img {
-                        width: 168px;
-                        height: 100px;
-                    }
+                                img {
+                                    width: 168px;
+                                    height: 100px;
+                                }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bca.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bca.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bca.gif');
-                            }
-                        }
-                    }
+                                $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bni.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bni.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bni.gif');
-                            }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bri.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bsi.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bsi.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bsi.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_cimb.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_cimb.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_cimb.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_dana.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_dana.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_dana.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_danamon.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_danamon.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_danamon.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_gopay.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_gopay.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_gopay.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_linkaja.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_linkaja.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_linkaja.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_mandiri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_mandiri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_mandiri.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_maybank.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_maybank.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_maybank.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_ovo.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_ovo.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_ovo.gif');
+                                @each $img in $listBank {
+                                    $i: index($listBank, $img);
+                                    $imgName: $img;
+                                    @if $img == "cimb-2" {
+                                        $imgName: "cimb";
+                                    }
+
+                                    @if $img == "dana-2" {
+                                        $imgName: "dana";
+                                    }
+                                    .#{$img} {
+                                        display: none;
+                                        &.online {
+                                            &+img {
+                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
+                                            }
+                                        }
+                                        &.offline {
+                                            &+img {
+                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
+                                            }
+                                        }
+                                        &.trouble {
+                                            &+img {
+                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // .bca {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bca.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bca.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bca.gif');
+                                //         }
+                                //     }
+                                // }
+
+                                // .bni {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bni.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bni.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bni.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .bri {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bri.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bri.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bri.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .bsi {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bsi.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bsi.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bsi.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .cimb,
+                                // .cimb-2 {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_cimb.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_cimb.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_cimb.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .dana,
+                                // .dana-2 {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_dana.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_dana.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_dana.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .danamon {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_danamon.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_danamon.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_danamon.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .gopay {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_gopay.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_gopay.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_gopay.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .linkaja {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_linkaja.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_linkaja.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_linkaja.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .mandiri {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_mandiri.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_mandiri.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_mandiri.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .maybank {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_maybank.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_maybank.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_maybank.gif');
+                                //         }
+                                //     }
+                                // }
+                                // .ovo {
+                                //     display: none;
+                                //     &.online {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_ovo.gif');
+                                //         }
+                                //     }
+                                //     &.offline {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_ovo.gif');
+                                //         }
+                                //     }
+                                //     &.trouble {
+                                //         &+img {
+                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_ovo.gif');
+                                //         }
+                                //     }
+                                // }
                             }
                         }
                     }
@@ -710,7 +868,8 @@ body.smbitClass-desktop {
         }
     }
 
-    // list image gameicon 
+
+    // list image gameicon
     $listImage: 'dingdongtogel_singapore.jpg', 'dingdongtogel_hongkong.jpg', 'dingdongtogel_sydney.jpg', 'dingdongtogel_nevada.jpg', 'dingdongtogel_magnum4d.jpg', 'dingdongtogel_cambodia.jpg', 'dingdongtogel_bullseye.jpg', 'dingdongtogel_carolinaday.jpg', 'dingdongtogel_pcso.jpg', 'dingdongtogel_totomacau.jpg', 'dingdongtogel_china.jpg', 'dingdongtogel_california.jpg', 'dingdongtogel_florida.jpg', 'dingdongtogel_newyork.jpg', 'dingdongtogel_oregon.jpg', 'dingdongtogel_taiwan.jpg', 'dingdongtogel_sicboball.jpg', 'dingdongtogel_sicbodice.jpg', 'dingdongtogel_12d.jpg', 'dingdongtogel_dice6.jpg', 'dingdongtogel_24d.jpg', 'dingdongtogel_24dspin.jpg', 'dingdongtogel_roullete.jpg',  'dingdongtogel_pokerdice.jpg', 'dingdongtogel_suwit.jpg','dingdongtogel_redandwhite.jpg','dingdongtogel_dragontiger.jpg', 'dingdongtogel_oglok.jpg', 'dingdongtogel_idn4stand.jpg', 'dingdongtogel_roullete2.jpg', 'dingdongtogel_headandtail.jpg', 'dingdongtogel_monopoly.jpg', 'dingdongtogel_5dball.jpg', 'dingdongtogel_gongball.jpg', 'dingdongtogel_billiard.jpg', 'dingdongtogel_3dshio.jpg', 'dingdongtogel_raceball.jpg', 'dingdongtogel_fantan.jpg', 'dingdongtogel_niuniu.jpg','dingdongtogel_baccarat.jpg', 'dingdongtogel_pgsoft.jpg', 'dingdongtogel_pragmatic.jpg', 'dingdongtogel_idnslot.jpg', 'dingdongtogel_microgaming.jpg', 'dingdongtogel_toptrend.jpg', 'dingdongtogel_habanero.jpg', 'dingdongtogel_48D.png', 'dingdongtogel_bingosicbo.png', 'dingdongtogel_comingsoon.jpg';
 
     .gameicon {
@@ -791,10 +950,22 @@ body.smbitClass-desktop {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        row-gap: 5px;
+        row-gap: 10px;
 
         .btn {
             width: 100%;
+            background-image: linear-gradient( to bottom, #c5f9f5 0%, #a1f0ff 100% );
+            padding: 8px 19px;
+            border-radius: 2px 20px 20px 2px;
+            border-bottom: 1px #125d5d solid;
+            font-weight: 600;
+            border-width: 0;
+
+            &:hover {
+                color: #001f1a;
+                background-color: #00e6d4;
+                background: -webkit-linear-gradient(#00c7b8, #1d869a);
+            }
         }
 
         .btn-custom {
