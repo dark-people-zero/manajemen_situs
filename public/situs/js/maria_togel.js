@@ -505,9 +505,10 @@ const func = {
             type: "get",
             url: "/config/8",
             dataType: "json",
-            success: function (response) {
+            success: function (response) {               
                 if (response) {
                     if (response.status_desktop && !isMobile) {
+
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {
@@ -547,7 +548,6 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);

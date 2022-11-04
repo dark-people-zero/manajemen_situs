@@ -201,7 +201,8 @@ const func = {
         beforeFooter: (data) => {
             var template = $(`
                 <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                    <center><h4 class="tittle">${data.title}</h4></center>
+                    <p class="deskripsi">${data.deskripsi}</p>
                 </div>
             `);
 
@@ -503,7 +504,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/21",
+            url: "/config/23",
             dataType: "json",
             success: function (response) {
                 if (response) {

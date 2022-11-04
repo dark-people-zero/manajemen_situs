@@ -108,9 +108,7 @@
                 },
                 init: function() {
                     var n = t.createElement("script");
-                    n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/maria_togel/desktop/assets/tracking.js", t.head.appendChild(
-                            n)
+                    n.async = !0, n.type = "text/javascript", n.src ="/situs/assets/maria_togel/desktop/assets/tracking.js", t.head.appendChild(n)
                 }
             };
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e

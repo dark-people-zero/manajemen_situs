@@ -372,7 +372,7 @@ body.smbitClass-mobile {
             .modal-body {
                 .deskripsi {
                     color: white;
-                    background-color: rgb(188, 156, 8);
+                    background-color: #1b2632;
                     margin-left: 0px;
                     margin-right: 0px;
                     margin-top: 10px;
@@ -430,18 +430,22 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+            background: rgba(0, 40, 65, 0.5);
+            }
+
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
@@ -451,8 +455,8 @@ body.smbitClass-desktop {
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+                    // background: rgba(0, 40, 65, 0.5);
+                    color: #55e3ff;
                 }
             }
         }
@@ -470,8 +474,8 @@ body.smbitClass-desktop {
             .owl-item {
                 .bank {
                     text-align: center;
-                    width: 154px !important;
-                    height: 64px !important;
+                    width: 145px !important;
+                    height: 82px !important;
                     padding: 0px !important;
                     background-color: rgba(0,0,0,0) !important;
                     border: none !important;
@@ -483,8 +487,8 @@ body.smbitClass-desktop {
                     margin-left: 0px;
 
                     img {
-                        width: 154px;
-                        height: 64px;
+                        width: 145px;
+                        height: 82px;
 
                     }
 
