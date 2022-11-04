@@ -593,7 +593,7 @@ body.smbitClass-desktop {
                             .bank {
                                 text-align: center;
                                 width: 168px !important;
-                                height: 100px !important;
+                                height: 80px !important;
                                 padding: 0px !important;
                                 background-color: rgba(0,0,0,0) !important;
                                 border: none !important;
@@ -605,8 +605,7 @@ body.smbitClass-desktop {
                                 margin-left: 0px;
 
                                 img {
-                                    width: 168px;
-                                    height: 100px;
+                                    display: none;
                                 }
 
                                 $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
@@ -622,244 +621,34 @@ body.smbitClass-desktop {
                                         $imgName: "dana";
                                     }
                                     .#{$img} {
-                                        display: none;
+                                        width: 168px;
+                                        height: 100px;
                                         &.online {
-                                            &+img {
-                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
-                                            }
+                                            // &+img {
+                                            //     content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
+                                            // }
+                                            background-image:  url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
+                                            background-position: 0;
+                                            background-repeat: no-repeat;
                                         }
                                         &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
-                                            }
+                                            // &+img {
+                                            //     content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
+                                            // }
+                                            background-image:  url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
+                                            background-position: 0;
+                                            background-repeat: no-repeat;
                                         }
                                         &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
-                                            }
+                                            // &+img {
+                                            //     content: url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
+                                            // }
+                                            background-image:  url('/situs/assets/dingdong_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
+                                            background-position: 0;
+                                            background-repeat: no-repeat;
                                         }
                                     }
                                 }
-
-                                // .bca {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bca.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bca.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bca.gif');
-                                //         }
-                                //     }
-                                // }
-
-                                // .bni {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bni.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bni.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bni.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .bri {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bri.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bri.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bri.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .bsi {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_bsi.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_bsi.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_bsi.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .cimb,
-                                // .cimb-2 {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_cimb.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_cimb.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_cimb.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .dana,
-                                // .dana-2 {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_dana.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_dana.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_dana.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .danamon {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_danamon.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_danamon.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_danamon.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .gopay {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_gopay.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_gopay.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_gopay.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .linkaja {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_linkaja.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_linkaja.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_linkaja.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .mandiri {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_mandiri.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_mandiri.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_mandiri.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .maybank {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_maybank.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_maybank.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_maybank.gif');
-                                //         }
-                                //     }
-                                // }
-                                // .ovo {
-                                //     display: none;
-                                //     &.online {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_online_ovo.gif');
-                                //         }
-                                //     }
-                                //     &.offline {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_offline_ovo.gif');
-                                //         }
-                                //     }
-                                //     &.trouble {
-                                //         &+img {
-                                //             content: url('/situs/assets/dingdong_togel/desktop/images/banks/dingdongtogel_trouble_ovo.gif');
-                                //         }
-                                //     }
-                                // }
                             }
                         }
                     }
@@ -889,7 +678,7 @@ body.smbitClass-desktop {
 
     .headerApk {
         padding: 10px;
-        background: #302e2e;
+        background: #001d23;
         display: flex;
         align-items: center;
 
@@ -937,8 +726,8 @@ body.smbitClass-desktop {
                     font-size: 12px;
                     padding: 8px 8px;
                     border: 1px solid;
-                    color: #ffee27;
-                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    color: #112d33;
+                    background: linear-gradient(to bottom, #c5f9f5 0%, #a1f0ff 100%);;
                     border-radius: 20px;
                 }
             }
@@ -969,117 +758,89 @@ body.smbitClass-desktop {
         }
 
         .btn-custom {
-            background: #fffcdd;
-            background-image: -webkit-linear-gradient(top, #fffcdd 0%, #fff250 100%);
-            background-image: linear-gradient(to bottom, #fffcdd 0%, #fff250 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#fff250', GradientType=0);
-            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-            background-repeat: repeat-x;
-            color: #160958;
-            border: 1px solid #f49000;
-            -webkit-transition: all 0.2s ease-out;
-            -moz-transition: all 0.2s ease-out;
-            transition: all 0.2s ease-out;
-            font-weight: 600;
-            padding: 8px 12px;
-            letter-spacing: 2px;
-            font-weight: bolder;
-
-            &:hover {
-                color: #ffffff;
-                background-color: #063a70;
-                background: -webkit-linear-gradient(#063a70, #063a70);
-            }
-
+            color: #112d33;
             &.btn-primary {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #38cab3 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #38cab3 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#38cab3', GradientType=0);
-                border-color: #38cab3;
-
+                background-image: -webkit-linear-gradient(top, #1ff387 0%, #00a953 100%);
+                background-image: linear-gradient(to bottom, #1ff387 0%, #00a953 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1ff387', endColorstr='#00a953', GradientType=0);
+                border-color: #00a953;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-secondary {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f74f75 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #f74f75 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f74f75', GradientType=0);
-                border-color: #f5567b;
-
+                background-image: -webkit-linear-gradient(top, #f74f75 0%, #f12b57 100%);
+                background-image: linear-gradient(to bottom, #f74f75 0%, #f12b57 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f74f75', endColorstr='#f12b57', GradientType=0);
+                border-color: #f12b57;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-success {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #016a59 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #016a59 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#016a59', GradientType=0);
-                border-color: #289986;
-
+                background-image: -webkit-linear-gradient(top, #4effe2 0%, #00816c 100%);
+                background-image: linear-gradient(to bottom, #4effe2 0%, #00816c 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4effe2', endColorstr='#00816c', GradientType=0);
+                border-color: #00816c;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-info {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #4ec2f0 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #4ec2f0 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#4ec2f0', GradientType=0);
-                border-color: #6cc1e2;
-
+                background-image: -webkit-linear-gradient(top, #4ec2f0 0%, #26b3eb 100%);
+                background-image: linear-gradient(to bottom, #4ec2f0 0%, #26b3eb 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ec2f0', endColorstr='#26b3eb', GradientType=0);
+                border-color: #26b3eb;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-warning {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #ffbd5a 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #ffbd5a 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#ffbd5a', GradientType=0);
-                border-color: #f6c06f;
-
+                background-image: -webkit-linear-gradient(top, #f9bd63 0%, #f9a930 100%);
+                background-image: linear-gradient(to bottom, #f9bd63 0%, #f9a930 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9bd63', endColorstr='#f9a930', GradientType=0);
+                border-color: #f9a930;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-danger {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f34343 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #f34343 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f34343', GradientType=0);
-                border-color: #f35959;
-
+                background-image: -webkit-linear-gradient(top, #f34343 0%, #e71e1e 100%);
+                background-image: linear-gradient(to bottom, #f34343 0%, #e71e1e 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f34343', endColorstr='#e71e1e', GradientType=0);
+                border-color: #e71e1e;
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
 
             &.btn-light {
-                background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f9f9fb 100%);
-                background-image: linear-gradient(to bottom, #fffcdd 0%, #f9f9fb 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f9f9fb', GradientType=0);
-                border-color: #e9e9ff82;
+                background-image: -webkit-linear-gradient(top, #f9f9fb 0%, #aeaeb1 100%);
+                background-image: linear-gradient(to bottom, #f9f9fb 0%, #aeaeb1 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9fb', endColorstr='#aeaeb1', GradientType=0);
+                border-color: #aeaeb1;
                 color: #323251;
-
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #001f1a;
+                    background-color: #00e6d4;
+                    background: -webkit-linear-gradient(#00c7b8, #1d869a);
                 }
             }
         }
@@ -1121,18 +882,131 @@ body.smbitClass-desktop {
     footer {
         &#footer {
             border-top: 0;
+            background-color: transparent;
+            .footer-bottom {
+                background-color: transparent;
+                padding: 0;
+                .container {
+                    padding: 0;
+                    .row {
+                        margin: 0;
+                        .row {
+                            margin: 0;
+                            background: #002c2a;
+                            div {
+                                padding: 0;
+                            }
+                        }
+                    }
 
-            .before-footer {
-                h2 {
-                    margin: 20px 0;
-                    text-shadow: 0px 0px 5px #00ffff;
-                    text-align: center;
+                    .copyright {
+                        border-top: 1px solid #000000;
+                        background: #24303f;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
                 }
             }
 
-            .footer-protection {
-                text-align: center;
-                margin-top: 20px;
+            .footer-main {
+                background-color: #001d22;
+                padding: 5px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .footer-info {
+                    text-align: center;
+                    border-image-width: 100px;
+                    border-bottom: 3px solid #24303f;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    border-bottom-style: groove;
+
+                    .footer-info-title {
+                        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                        color: #55e3ff;
+                        margin-top: 10px;
+                    }
+
+                    .footer-info-deskripsi {
+                        color: #ffffff;
+                        font-size: 12px;
+
+                        a {
+                            font-weight: bold;
+                            color: #55e3ff;
+                        }
+                    }
+                }
+
+                .footer-link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    margin: 10px 0;
+                    row-gap: 15px;
+                    .footer-sosmed {
+                        display: flex;
+                        .item {
+                            position: relative;
+                            max-width: 180px;
+                            img {
+                                transform: scale(.9);
+                            }
+                            span {
+                                position: absolute;
+                                z-index: 2;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                left: 0;
+                                display: flex;
+                                top: -1px;
+                                height: 100%;
+                                width: 100%;
+                                justify-content: center;
+                                margin-left: 27px;
+                                align-items: center;
+                            }
+
+                            &:hover {
+                                span {
+                                    text-shadow: 0px 0px 5px #00e6d4cc;
+                                    color: #55e3ff;
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-link-default {
+                        display: flex;
+                        column-gap: 5px;
+                        a {
+                            line-height: 11px;
+                            display: block;
+                            background: #161e28;
+                            border-radius: 10px;
+                            color: #fff;
+                            padding: 4px 16px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            border: 1px solid #fff;
+                            border-width: 1px 0;
+
+                            &.active,
+                            &:hover {
+                                border-color: #55e3ff;
+                                color: #55e3ff;
+                            }
+
+                            &:hover {
+                                box-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

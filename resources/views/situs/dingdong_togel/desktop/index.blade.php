@@ -477,12 +477,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="promosi">
-                        <a href="https://ziatogel176.com/register.php" target="_blank" title="prpmo ziatogel">
-                            <img src="https://static.hokibagus.club/dingdongtogel/images/banner/dingdongtogel_banner_bonus.gif" alt="prpmo ziatogel">
-                        </a>
-                    </div>
                     <!-- LATEST RESULTS -->
                     <div id="latest-results" class="margin-top-15">
 
@@ -819,6 +813,11 @@
             <i class="fa fa-angle-up"></i>
         </a>
     </div>
+
+
+
+
+
     <style type="text/css">
         @font-face {
             font-family: Muli;
@@ -886,18 +885,27 @@
             margin: 0 10px 0 0;
         }
     </style>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/jquery.js') }}"></script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/skrollr/skrollr.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}"></script>
+    <script
+        src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}"></script>
-    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}"></script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
+    </script>
+    <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}">
+    </script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/jquery.cycle2.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/jquery.fixedheadertable.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dingdong_togel/desktop/assets/js/stylec619.js?v=1.0') }}"></script>
@@ -941,7 +949,8 @@
             return false;
         }
     </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/dingdong_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/dingdong_togel/desktop/tgsecure/vbulletin_md5.js') }}">
+    </script>
 </body>
 
 </html>
