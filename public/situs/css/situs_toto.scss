@@ -623,7 +623,7 @@ body.smbitClass-desktop {
             filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
             background-repeat: repeat-x;
             color: #160958;
-            border: 1px solid #f49000;
+
             -webkit-transition: all 0.2s ease-out;
             -moz-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;
@@ -642,10 +642,11 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #38cab3 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #38cab3 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#38cab3', GradientType=0);
-                border-color: #38cab3;
+
 
                 &:hover {
                     color: #ffffff;
+                    border-color: #033b4a;
                     background-color: #063a70;
                     background: -webkit-linear-gradient(#063a70, #063a70);
                 }
@@ -655,10 +656,11 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f74f75 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #f74f75 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f74f75', GradientType=0);
-                border-color: #f5567b;
+
 
                 &:hover {
                     color: #ffe34a ;
+                    border-color: #033b4a;
                     background-color: #033b4a;
                     background: -webkit-linear-gradient(#033b4a, #033b4a);
                 }
@@ -668,11 +670,12 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #016a59 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #016a59 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#016a59', GradientType=0);
-                border-color: #289986;
+
 
                 &:hover {
                     color: #ffe34a ;
                     background-color: #033b4a;
+                    border-color: #033b4a;
                     background: -webkit-linear-gradient(#033b4a, #033b4a);
                 }
             }
@@ -681,11 +684,12 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #4ec2f0 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #4ec2f0 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#4ec2f0', GradientType=0);
-                border-color: #6cc1e2;
+
 
                 &:hover {
                     color: #ffe34a ;
                     background-color: #033b4a;
+                    border-color: #033b4a;
                     background: -webkit-linear-gradient(#033b4a, #033b4a);
                 }
             }
@@ -694,10 +698,11 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #ffbd5a 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #ffbd5a 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#ffbd5a', GradientType=0);
-                border-color: #f6c06f;
+
 
                 &:hover {
                     color: #ffe34a ;
+                    border-color: #033b4a;
                     background-color: #033b4a;
                     background: -webkit-linear-gradient(#033b4a, #033b4a);
                 }
@@ -707,11 +712,12 @@ body.smbitClass-desktop {
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f34343 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #f34343 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcdd', endColorstr='#f34343', GradientType=0);
-                border-color: #f35959;
+
 
                 &:hover {
                     color: #ffe34a ;
                     background-color: #033b4a;
+                    border-color: #033b4a;
                     background: -webkit-linear-gradient(#033b4a, #033b4a);
                 }
             }
