@@ -15,18 +15,9 @@
 
     <meta name="google-site-verification" content="SQtK2LFUxhkcA08I2tFBe6CvkEmovn_kzwXqxE79A04" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    {{-- disini penempatan untuk style --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-PNDV8CWY5Q');
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
         href="{{ asset('situs/assets/fia_togel/desktop/assets/img/ajk/faviconaf0b.png?v=1666351410') }}" />
@@ -125,26 +116,42 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/fia_togel/desktop/assets/tracking.js", t.head.appendChild(n)
+                        "/situs/assets/fia_togel/desktop/assets/tracking.js", t.head.appendChild(n)
                 }
             };
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
         }(window, document, [].slice))
     </script>
-    <noscript><a href="https://www.livechatinc.com/chat-with/13378854/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-    <script src="{{ asset('situs/assets/fia_togel/desktop/assets/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js') }}">
+    <noscript>
+        <a href="https://www.livechatinc.com/chat-with/13378854/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+    </noscript>
+
+    {{-- disini penempatan untuk script --}}
+    <script>
+        var body = document.querySelector("body");
+
+        var frame = document.createElement("script");
+        frame.type = "text/javascript";
+        frame.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js";
+
+        var spa = document.createElement("script");
+        spa.type = "text/javascript";
+        spa.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js";
+
+        var fiaJs = document.createElement("script");
+        fiaJs.type = "text/javascript";
+        fiaJs.src = "/situs/js/fia_togel.js";
+
+        var gtag = document.createElement("script");
+        gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q";
+        gtag.async = true;
+
+        body.appendChild(frame);
+        body.appendChild(spa);
+        body.appendChild(gtag);
+        body.appendChild(fiaJs);
     </script>
 
-    <!-- disni masukin script kita -->
-    <link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/fia_togel.js') }}" type="text/javascript"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q"></script>
     <div class="mask">
         <div id="loader"></div>
     </div>
@@ -622,7 +629,7 @@
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'>
                                 <img src="{{ asset('situs/assets/fia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'>
-                            </div>                                         
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -766,7 +773,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/fia_togel/desktop/assets/fonts/Muli.ttf);
+            src: url(/situs/assets/fia_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
@@ -897,8 +904,7 @@
   <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
   </script> -->
     <script type="text/javascript" src="{{ asset('situs/assets/fia_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-</body>
 
-<!-- Mirrored from fiatogel176.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Oct 2022 11:24:34 GMT -->
+</body>
 
 </html>

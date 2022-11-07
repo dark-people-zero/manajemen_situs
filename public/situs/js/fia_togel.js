@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-XRK7N3620T");
+    gtag("config", "G-PNDV8CWY5Q");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -200,11 +200,11 @@ const func = {
         },
         beforeFooter: (data) => {
             var template = $(`
-                <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                <div class="footer-info">
+                    <h2 class="footer-info-title">${data.title}</h2>
+                    <p class="footer-info-deskripsi">${data.deskripsi}</p>
                 </div>
             `);
-
             $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
@@ -216,7 +216,7 @@ const func = {
                 </div>
             `);
 
-            $("#footer .footer-main .footer-bottom").append(template);
+            $("#footer .footer-bottom").append(template);
         },
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
@@ -288,6 +288,16 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        defaultFooter: () => {
+            var target = $("#footer");
+            var main = target.find(".footer-main");
+            if (main.length == 0) {
+                main = $("<div class='footer-main'></div>");
+                target.prepend(main);
+            }
+
+            main.addClass("container");
         }
     },
     mobile: {
@@ -506,8 +516,479 @@ const func = {
             url: "/config/2",
             dataType: "json",
             success: function (response) {
+                response = {
+                    "id": 19,
+                    "name": "Zia Togel",
+                    "status_desktop": 1,
+                    "status_mobile": 1,
+                    "url_desktop_dev": "/situs/zia_togel/desktop",
+                    "url_desktop_prod": "https://ziatogel176.com/",
+                    "url_mobile_dev": "/situs/zia_togel/m",
+                    "url_mobile_prod": "https://ziatogel176.com/m",
+                    "created_at": "2022-10-11T15:24:48.000000Z",
+                    "updated_at": "2022-10-25T01:13:01.000000Z",
+                    "fitur_situs": {
+                        "desktop": [
+                            {
+                                "id": 1,
+                                "id_situs": 19,
+                                "id_fitur": 1,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/danatoto/images/etc/danatoto_logo_app.png",
+                                    "deskripsi": "Klik di mana saja untuk menutup"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 2,
+                                "id_situs": 19,
+                                "id_fitur": 2,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "url": "https://bit.ly/ApkZia",
+                                    "file": "https://static.hokibagus.club/situs/zia togel/desktop/header apk/ziatogel_profile.jpg",
+                                    "title": "aplikasi ziatogel",
+                                    "slogan": "Kini telah tersedia Aplikasi Android"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 3,
+                                "id_situs": 19,
+                                "id_fitur": 3,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/zia togel/desktop/header corousel/ziatogel_slidermobile_prosesdeposit.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/desktop/header corousel/ziatogel_slidermobile_tipebet.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/desktop/header corousel/ziatogel_slidermobile_allbonus.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/desktop/header corousel/ziatogel_popup_bri.png"
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 4,
+                                "id_situs": 19,
+                                "id_fitur": 4,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://rtpslotzia.com/",
+                                        "name": "RTP Slot",
+                                        "class": "btn-secondary",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://togelzia176.com/m/promotion.php",
+                                        "name": "Promo",
+                                        "class": "btn-warning",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://ziatogel.laporkeluhan.net/",
+                                        "name": "Keluhan ",
+                                        "class": "btn-info",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://linklist.bio/ziatogel88",
+                                        "name": "Lain-Lai",
+                                        "class": "btn-success",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    }
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 5,
+                                "id_situs": 19,
+                                "id_fitur": 5,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "ket": "Klik icon sosmed di bawah ini untuk hubungi operator :",
+                                    "data": [
+                                        {
+                                            "link": "https://api.whatsapp.com/send/?phone=6281376779265&text=Halo+bossku+saya+butuh+bantuan.",
+                                            "name": "Whatsapp",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/desktop/icon sosmed/ziatogel_contact_wa.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/ziatogel88/",
+                                            "name": "Instagram",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/desktop/icon sosmed/ziatogel_contact_instagram.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.facebook.com/ziatogel889",
+                                            "name": "Facebook",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/desktop/icon sosmed/ziatogel_contact_fb.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCp3gfAsZlwBrTXGUSFlsIWA",
+                                            "name": "Youtube",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/desktop/icon sosmed/ziatogel_contact_yt.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 6,
+                                "id_situs": 19,
+                                "id_fitur": 6,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://ziatogel176.com/register.php",
+                                    "name": "prpmo ziatogel",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/desktop/promosi/ziatogel_promo_bonus (1).gif"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 7,
+                                "id_situs": 19,
+                                "id_fitur": 7,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "title": "FIA TOGEL | Bandar Togel Online Indonesia Terbaik",
+                                    "deskripsi": '<a href="/" title="Bandar Togel Online Indonesia Terbaik">FIA TOGEL</a> adalah bandar togel online indonesia terbaik yang menyediakan permainan togel online paling bersaing seperti singapura, hongkong, sydney, dan permainan livegames seperti roulette, sicbo, baccarat dan masih banyak lagi. Bagi anda para pecinta permainan togel online terbaik maka kami adalah pilihan terbaik untuk anda. Customer service online 24 jam nonstop dengan pelayanan terbaik.'
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 8,
+                                "id_situs": 19,
+                                "id_fitur": 8,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018",
+                                    "name": "DMCA.com Protection Status",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/desktop/footer protection/_dmca_premi_badge_5.png"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 9,
+                                "id_situs": 19,
+                                "id_fitur": 9,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "image": "https://cdn.areabermain.club/slider/fiatogel/linkfia.png",
+                                    "listLink": [
+                                        "https://linkr.bio/ziatogel",
+                                        "https://rebrand.ly/ziatogel",
+                                        "https://ziatogel176.com"
+                                    ]
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 10,
+                                "id_situs": 19,
+                                "id_fitur": 10,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "name": "barcode qris",
+                                    "color": "#ffffff",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/desktop/barcode qris/2840676.jpg",
+                                    "shadow": "#196a7d",
+                                    "background": "#2abf32"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 11,
+                                "id_situs": 19,
+                                "id_fitur": 11,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    "BCA",
+                                    "DANAMON",
+                                    "BRI",
+                                    "BNI",
+                                    "MANDIRI",
+                                    "CIMB",
+                                    "OVO",
+                                    "GOPAY",
+                                    "DANA",
+                                    "LINKAJA",
+                                    "BSI",
+                                    "MAYBANK"
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            }
+                        ],
+                        "mobile": [
+                            {
+                                "id": 12,
+                                "id_situs": 19,
+                                "id_fitur": 1,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/situs/zia togel/mobile/popup modal/ziatogel_popup_bri.png",
+                                    "deskripsi": "Klik di mana saja untuk menutup"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 13,
+                                "id_situs": 19,
+                                "id_fitur": 2,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "url": "https://bit.ly/ApkZia",
+                                    "file": "https://static.hokibagus.club/situs/zia togel/mobile/header apk/ziatogel_profile.jpg",
+                                    "title": "aplikasi ziatogel",
+                                    "slogan": "Kini telah tersedia Aplikasi Android"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 14,
+                                "id_situs": 19,
+                                "id_fitur": 3,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/zia togel/mobile/header corousel/ziatogel_slidermobile_prosesdeposit.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/mobile/header corousel/ziatogel_slidermobile_tipebet.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/mobile/header corousel/ziatogel_slidermobile_allbonus.jpg",
+                                    "https://static.hokibagus.club/situs/zia togel/mobile/header corousel/ziatogel_popup_bri.png"
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 15,
+                                "id_situs": 19,
+                                "id_fitur": 4,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://rtpslotzia.com/",
+                                        "name": "RTP Slot",
+                                        "class": "btn-secondary",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://togelzia176.com/m/promotion.php",
+                                        "name": "Promo",
+                                        "class": "btn-warning",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://togelzia176.com/m/promotion.php",
+                                        "name": "Keluhan Member",
+                                        "class": "btn-info",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://linklist.bio/ziatogel88",
+                                        "name": "Lain-Lain",
+                                        "class": "btn-success",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    }
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 16,
+                                "id_situs": 19,
+                                "id_fitur": 5,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "ket": "Klik icon sosmed di bawah ini untuk hubungi operator :",
+                                    "data": [
+                                        {
+                                            "link": "https://api.whatsapp.com/send/?phone=6281376779265&text=Halo+bossku+saya+butuh+bantuan.",
+                                            "name": "Whatsapp",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/mobile/icon sosmed/ziatogel_contact_wa.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/ziatogel88/",
+                                            "name": "Instagram",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/mobile/icon sosmed/ziatogel_contact_instagram.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.facebook.com/ziatogel889",
+                                            "name": "Facebook",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/mobile/icon sosmed/ziatogel_contact_fb.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCp3gfAsZlwBrTXGUSFlsIWA",
+                                            "name": "Youtube",
+                                            "image": "https://static.hokibagus.club/situs/zia togel/mobile/icon sosmed/ziatogel_contact_yt.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 17,
+                                "id_situs": 19,
+                                "id_fitur": 6,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://ziatogel176.com/register.php",
+                                    "name": "Promo",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/desktop/promosi/ziatogel_promo_bonus (1).gif"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 18,
+                                "id_situs": 19,
+                                "id_fitur": 7,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "title": "Situs Bandar Togel Online Resmi Terpercaya",
+                                    "deskripsi": "ZIATOGEL MERUPAKAN SITUS TOGEL TERPERCAYA DENGAN PASARAN TOGEL TERLENGKAP, LIVE GAMES TERPOPULER & PERMAINAN SLOT TERBAIK."
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 19,
+                                "id_situs": 19,
+                                "id_fitur": 8,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018",
+                                    "name": "DMCA.com Protection Status",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/mobile/footer protection/_dmca_premi_badge_5.png"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 20,
+                                "id_situs": 19,
+                                "id_fitur": 9,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "image": "https://static.hokibagus.club/situs/zia togel/mobile/link alternatif/ziatogel_linkalternatif.png",
+                                    "listLink": [
+                                        "https://linkr.bio/ziatogel",
+                                        "https://rebrand.ly/ziatogel",
+                                        "https://ziatogel176.com",
+                                        "https://ziatogel176.com"
+                                    ]
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 21,
+                                "id_situs": 19,
+                                "id_fitur": 10,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "name": "barcode qris",
+                                    "color": "#ffffff",
+                                    "image": "https://static.hokibagus.club/situs/zia togel/mobile/barcode qris/2840676.jpg",
+                                    "shadow": "#196a7d",
+                                    "background": "#d52121"
+                                },
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            },
+                            {
+                                "id": 22,
+                                "id_situs": 19,
+                                "id_fitur": 11,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    "BCA",
+                                    "DANAMON",
+                                    "BRI",
+                                    "BNI",
+                                    "MANDIRI",
+                                    "CIMB",
+                                    "OVO",
+                                    "GOPAY",
+                                    "DANA",
+                                    "LINKAJA",
+                                    "BSI",
+                                    "MAYBANK"
+                                ],
+                                "created_at": "2022-10-18T18:53:46.000000Z",
+                                "updated_at": "2022-10-24T23:47:38.000000Z"
+                            }
+                        ]
+                    }
+                }
+
                 if (response) {
                     if (response.status_desktop && !isMobile) {
+                        func.desktop.defaultFooter();
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {

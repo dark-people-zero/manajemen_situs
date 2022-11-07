@@ -166,6 +166,10 @@ body.smbitClass-mobile {
 
     }
 
+    .page-header-clear {
+        display: none;
+    }
+
     #smb-mobile-popup {
         position: absolute;
         top: 0;
@@ -400,6 +404,15 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/fia_togel/desktop/images/fiatogel_background_default.jpg');
     background-attachment: fixed;
 
+    ul {
+        &.newsticker {
+            display: flex;
+            align-items: center;
+            height: calc(100%);
+            padding-bottom: 4px;
+        }
+    }
+
     .section {
         .container {
             .blog-posts {
@@ -430,7 +443,7 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: linear-gradient(to bottom, #00000000 30%, #ff4242 100%);
+            background: linear-gradient(to bottom, #cc0707 20%, #ff0405 80%);
             border-radius: 0px 0px 15px 15px;
             list-style-type: none;
             padding: 0;
@@ -438,13 +451,19 @@ body.smbitClass-desktop {
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
             border-bottom: 1px solid #eaf844;
-            &:hover {
-                background: linear-gradient(to bottom, #cc0707 20%, #ff0405 80%);
-            }
+            margin: -5px 10px 0 30px;
             li{
                 width: 100%;
                 &:not(:last-child) {
                     border-bottom: 1px solid #adadad;
+                }
+
+                &:last-child {
+                    .linkalte-item {
+                        &:hover {
+                            border-radius: 0 0 15px 15px;
+                        }
+                    }
                 }
             }
             .linkalte-item {
@@ -454,10 +473,10 @@ body.smbitClass-desktop {
                 font-weight: 600;
                 text-decoration: none;
 
-                // &:hover {
-                //     background: #837f77;
-                //     color: #fff;
-                // }
+                &:hover {
+                    background: #fff;
+                    color: #837f77;
+                }
             }
         }
 
@@ -474,16 +493,16 @@ body.smbitClass-desktop {
             .owl-item {
                 .bank {
                     text-align: center;
-                    width: 154px !important;
-                    height: 64px !important;
-                    padding: 0px !important;
-                    background-color: rgba(0,0,0,0) !important;
-                    border: none !important;
-                    -webkit-border-radius: 0px !important;
-                    -moz-border-radius: 0px !important;
-                    -ms-border-radius: 0px !important;
-                    -o-border-radius: 0px !important;
-                    border-radius: 0px !important;
+                    width: 154px;
+                    height: 64px;
+                    padding: 0px;
+                    background-color: rgba(0,0,0,0);
+                    border: none;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    border-radius: 0px;
                     margin-left: 0px;
 
                     img {
@@ -491,225 +510,257 @@ body.smbitClass-desktop {
                         height: 64px;
                     }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bca.gif');
-                            }
+                    $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
+
+                    @each $img in $listBank {
+                        $i: index($listBank, $img);
+                        $imgName: $img;
+                        @if $img == "cimb-2" {
+                            $imgName: "cimb";
                         }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bca.gif');
-                            }
+
+                        @if $img == "dana-2" {
+                            $imgName: "dana";
                         }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bca.gif');
+                        .#{$img} {
+                            display: none;
+                            &.online {
+                                &+img {
+                                    content: url('/situs/assets/fia_togel/desktop/images/bank/'+#{$imgName}+'/online.gif');
+                                }
+                            }
+                            &.offline {
+                                &+img {
+                                    content: url('/situs/assets/fia_togel/desktop/images/bank/'+#{$imgName}+'/offline.gif');
+                                }
+                            }
+                            &.trouble {
+                                &+img {
+                                    content: url('/situs/assets/fia_togel/desktop/images/bank/'+#{$imgName}+'/trouble.gif');
+                                }
                             }
                         }
                     }
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bni.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bni.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bni.gif');
-                            }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bri.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bsi.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bsi.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bsi.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_cimb.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_cimb.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_cimb.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_dana.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_dana.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_dana.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_danamon.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_danamon.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_danamon.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_gopay.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_gopay.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_gopay.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_linkaja.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_linkaja.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_linkaja.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_mandiri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_mandiri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_mandiri.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_maybank.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_maybank.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_maybank.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_ovo.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_ovo.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_ovo.gif');
-                            }
-                        }
-                    }
+                    // .bca {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bca.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bca.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bca.gif');
+                    //         }
+                    //     }
+                    // }
+
+                    // .bni {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bni.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bni.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bni.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .bri {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bri.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bri.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bri.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .bsi {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_bsi.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_bsi.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_bsi.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .cimb,
+                    // .cimb-2 {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_cimb.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_cimb.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_cimb.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .dana,
+                    // .dana-2 {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_dana.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_dana.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_dana.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .danamon {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_danamon.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_danamon.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_danamon.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .gopay {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_gopay.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_gopay.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_gopay.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .linkaja {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_linkaja.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_linkaja.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_linkaja.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .mandiri {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_mandiri.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_mandiri.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_mandiri.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .maybank {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_maybank.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_maybank.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_maybank.gif');
+                    //         }
+                    //     }
+                    // }
+                    // .ovo {
+                    //     display: none;
+                    //     &.online {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_online_ovo.gif');
+                    //         }
+                    //     }
+                    //     &.offline {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_offline_ovo.gif');
+                    //         }
+                    //     }
+                    //     &.trouble {
+                    //         &+img {
+                    //             content: url('/situs/assets/fia_togel/desktop/images/banks/fiatogel_trouble_ovo.gif');
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
@@ -735,7 +786,7 @@ body.smbitClass-desktop {
 
     .headerApk {
         padding: 10px;
-        background: #302e2e;
+        background: linear-gradient(to right, #3d0715 0%, #7f205c 50%, #3d0715 100%);
         display: flex;
         align-items: center;
 
@@ -967,6 +1018,33 @@ body.smbitClass-desktop {
             .footer-protection {
                 text-align: center;
                 margin-top: 20px;
+            }
+
+            .footer-main {
+                padding: 5px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .footer-info {
+                    text-align: center;
+
+                    .footer-info-title {
+                        color: #e4302f;
+                        margin-top: 10px;
+                        font-size: 25px;
+                    }
+
+                    .footer-info-deskripsi {
+                        color: #ffffff;
+                        font-size: medium;
+
+                        a {
+                            font-weight: bold;
+                            color: #e4302f;
+                        }
+                    }
+                }
             }
         }
     }
