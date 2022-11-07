@@ -10,6 +10,38 @@
     <title>Situs Bandar Togel Online Resmi Terpercaya</title>
     <meta name="description"
         content="DANATOTO merupakan Situs Bandar Online terpercaya yang menyediakan Pasaran Togel Terlengkap, berbagai LiveGames Terpopuler & Permainan Slot terbaik.Hanya dengan minimal deposit sebesar  Rp.10.000,- *GABUNG SEKARANG JUGA DAN NIKMATI SENSASI PERMAINANNYA." />
+
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/dana_toto.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "/situs/assets/dana_toto/desktop/idn/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "/situs/assets/dana_toto/desktop/idn/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/dana_toto.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
     <meta name="google-site-verification" content="yuKfc6xCJz144iNRfZlWawqEDos2p8bYLjV6oP5dj3M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
@@ -121,12 +153,6 @@
     </noscript>
     <!-- End of LiveChat code -->
 
-    {{-- disini script masukkin --}}
-    <link rel="stylesheet" href="{{ asset('situs/css/dana_toto.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/dana_toto.js') }}" type="text/javascript"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T"></script>
     <div class="mask">
         <div id="loader"></div>
     </div>
@@ -954,8 +980,6 @@
         }
     </script>
     <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/desktop/idn/idn-togel-frame.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/desktop/idn/idn-togel-spa.js') }}"></script>
 </body>
 
 </html>

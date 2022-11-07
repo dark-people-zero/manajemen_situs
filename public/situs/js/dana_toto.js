@@ -500,7 +500,6 @@ const func = {
         } else {
             $('body').addClass('smbitClass-desktop');
         }
-        console.log("{{env('DO_SPACES_KEY')}}");
         $.ajax({
             type: "get",
             url: "/config/20",
@@ -547,7 +546,6 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
