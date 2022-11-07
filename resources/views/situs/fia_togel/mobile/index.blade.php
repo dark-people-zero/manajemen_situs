@@ -209,7 +209,7 @@
                                         onfocus="if (this.value == 'Username') {this.value=''}" required />
                                 </div>
                                 <div class="form-group">
-                                    <span class="showp" onclick="showpassword()"><img src="assets/img/eye.png">
+                                    <span class="showp" onclick="showpassword()"><img src="{{ asset('situs/assets/fia_togel/mobile/eye.png') }}">
                                         <p id="hideshow" style="font-size: 18px;">&nbsp Show</p>
                                     </span>
                                     <input type="hidden" id="showhide" value="show">
@@ -271,7 +271,7 @@
                             }
                         }
                     </script>
-                    
+
 
                     <script>
                         window.dataLayer = window.dataLayer || [];
@@ -396,7 +396,7 @@
                         }
                     </style>
 
-        
+
                     <script type="text/javascript">
                         function checkData() {
                             var f1 = document.forms[0];
@@ -781,7 +781,7 @@
                                 </div>
                                 <div class="bank">
                                   <img src="{{ asset('situs/assets/fia_togel/mobile/green-dot.gif') }}" />
-                                  <img src="{{ asset('situs/assets/fia_togel/mobile/nofound.webp') }}" />
+                                  <img src="{{ asset('situs/assets/fia_togel/mobile/mandiri.webp') }}" />
                                 </div>
                                 <div class="bank">
                                   <img src="{{ asset('situs/assets/fia_togel/mobile/green-dot.gif') }}" />
