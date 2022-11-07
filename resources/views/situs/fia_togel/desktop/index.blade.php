@@ -15,8 +15,37 @@
 
     <meta name="google-site-verification" content="SQtK2LFUxhkcA08I2tFBe6CvkEmovn_kzwXqxE79A04" />
 
-    {{-- disini penempatan untuk style --}}
+    {{-- disini penempatan --}}
     <link rel="stylesheet" href="{{ asset('situs/css/fia_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/fia_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
@@ -125,32 +154,6 @@
     <noscript>
         <a href="https://www.livechatinc.com/chat-with/13378854/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
     </noscript>
-
-    {{-- disini penempatan untuk script --}}
-    <script>
-        var body = document.querySelector("body");
-
-        var frame = document.createElement("script");
-        frame.type = "text/javascript";
-        frame.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js";
-
-        var spa = document.createElement("script");
-        spa.type = "text/javascript";
-        spa.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js";
-
-        var fiaJs = document.createElement("script");
-        fiaJs.type = "text/javascript";
-        fiaJs.src = "/situs/js/fia_togel.js";
-
-        var gtag = document.createElement("script");
-        gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-PNDV8CWY5Q";
-        gtag.async = true;
-
-        body.appendChild(frame);
-        body.appendChild(spa);
-        body.appendChild(gtag);
-        body.appendChild(fiaJs);
-    </script>
 
     <div class="mask">
         <div id="loader"></div>
