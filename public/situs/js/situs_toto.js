@@ -201,7 +201,7 @@ const func = {
         beforeFooter: (data) => {
             var template = $(`
                 <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                <center><h2 class="tittle">${data.title}</h2></center>
                 </div>
             `);
 
@@ -239,7 +239,7 @@ const func = {
         },
         barcodeQris: (data) => {
 
-            var btn = $(`<a class="btn btn-custom btn-success text-uppercase" href="javascript:void(0);">${data.name}</a>`);
+            var btn = $(`<a class="btn btn-custom btn-success" href="javascript:void(0);">${data.name}</a>`);
             if (data.background) btn.css("background", data.bbackground);
             if (data.color) btn.css("color", data.bcolor);
 
