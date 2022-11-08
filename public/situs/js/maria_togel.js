@@ -82,7 +82,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Mariatogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -503,9 +503,9 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/8",
+            url: "/config/23",
             dataType: "json",
-            success: function (response) {               
+            success: function (response) {
                 if (response) {
                     if (response.status_desktop && !isMobile) {
 

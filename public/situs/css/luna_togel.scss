@@ -749,8 +749,10 @@ body.smbitClass-desktop {
     }
 
     .headerApk {
+
+        margin-top: 15px;
         padding: 10px;
-        background: #302e2e;
+        background: linear-gradient(to right, #4b0000 0%, #9c0f00 50%, #4b0000 100%);
         display: flex;
         align-items: center;
 
@@ -781,7 +783,7 @@ body.smbitClass-desktop {
                     .app_title {
                         font-size: 15px;
                         font-weight: bold;
-                        color: #ffee27;
+                        color: #bfbfbf;
                         text-transform: uppercase;
                     }
 
@@ -798,8 +800,8 @@ body.smbitClass-desktop {
                     font-size: 12px;
                     padding: 8px 8px;
                     border: 1px solid;
-                    color: #ffee27;
-                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    color: #ffffff;
+                    background: linear-gradient(to bottom, #ff3000 50%, #a41e00 50%);
                     border-radius: 20px;
                 }
             }
@@ -860,9 +862,10 @@ body.smbitClass-desktop {
                 border-color: #f5567b;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
 
@@ -873,9 +876,10 @@ body.smbitClass-desktop {
                 border-color: #289986;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
 
@@ -886,9 +890,10 @@ body.smbitClass-desktop {
                 border-color: #6cc1e2;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
 
@@ -899,9 +904,10 @@ body.smbitClass-desktop {
                 border-color: #f6c06f;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
 
@@ -912,9 +918,10 @@ body.smbitClass-desktop {
                 border-color: #f35959;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
 
@@ -926,9 +933,10 @@ body.smbitClass-desktop {
                 color: #323251;
 
                 &:hover {
-                    color: #ffffff;
-                    background-color: #063a70;
-                    background: -webkit-linear-gradient(#063a70, #063a70);
+                    color: #ffeda5;
+                    background-color: #575757;
+                    background: -webkit-linear-gradient(#575757, #575757);
+                    border: 1px solid #ffeda5 !important;
                 }
             }
         }
@@ -974,8 +982,13 @@ body.smbitClass-desktop {
             .before-footer {
                 h2 {
                     margin: 20px 0;
-                    text-shadow: 0px 0px 5px #00ffff;
+                    color: #e2c97c;
                     text-align: center;
+                }
+                p.deskripsi {
+                    font-size: 4;
+                    color: #fff;
+                    text-align: -webkit-center;
                 }
             }
 

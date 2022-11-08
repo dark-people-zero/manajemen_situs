@@ -124,7 +124,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/indra_togel/desktop/assets/tracking.js", t.head.appendChild(
+                        "/situs/assets/indra_togel/desktop/assets/tracking.js", t.head.appendChild(
                             n)
                 }
             };
@@ -650,7 +650,7 @@
                                 <img
                                     src="{{ asset('situs/assets/indra_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -764,23 +764,25 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row" style="display: flex;">
-                        <div class="col-3 col-sm-3"></div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/indra_togel/desktop/assets/img/idnplay_w.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+        <div class="footer-main">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="row" style="display: flex;">
+                            <div class="col-3 col-sm-3"></div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/indra_togel/desktop/assets/img/idnplay_w.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
+                            </div>
+                            <div class="col-3 col-sm-3">
+                                <img src="{{ asset('situs/assets/indra_togel/desktop/assets/img/pagcorlogo2.png') }}"
+                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <img src="{{ asset('situs/assets/indra_togel/desktop/assets/img/pagcorlogo2.png') }}"
-                                style="overflow: inherit !important;width: 100%;padding: 10px;">
+                        <div class="col-md-12 copyright">
+                            &copy; Copyright 2014 - 2022 <a href="#">indratogel176.com</a>. All Rights Reserved.
                         </div>
-                        <div class="col-3 col-sm-3"></div>
-                    </div>
-                    <div class="col-md-12 copyright">
-                        &copy; Copyright 2014 - 2022 <a href="#">indratogel176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -794,7 +796,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(situs/assets/indra_togel/desktop/assets/fonts/Muli.ttf);
+            src: url(/situs/assets/indra_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
