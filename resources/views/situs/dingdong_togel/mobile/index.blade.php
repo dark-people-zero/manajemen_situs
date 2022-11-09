@@ -218,8 +218,6 @@
                             }
                         }
                     </script>
-                    <link rel="stylesheet" href="{{ asset('situs/css/dingdong_togel.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/dingdong_togel.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/dingdong_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
@@ -611,17 +609,9 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="{{ asset('situs/assets/dingdong_togel/mobile/_footer.js') }}"></script>
+        <script src="{{ asset('situs/assets/dingdong_togel/mobile/moment.min.js') }}" type='text/javascript'></script>
+        <link rel="stylesheet" href="{{ asset('situs/assets/dingdong_togel/mobile/_footer.css') }}">
 </body>
 
-<!-- Mirrored from dingdongtogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Oct 2022 13:17:43 GMT -->
-
 </html>
-<script type="text/javascript" src="{{ asset('situs/assets/dingdong_togel/mobile/_footer.js') }}"></script>
-<script src="{{ asset('situs/assets/dingdong_togel/mobile/moment.min.js') }}" type='text/javascript'></script>
-<link rel="stylesheet" href="{{ asset('situs/assets/dingdong_togel/mobile/_footer.css') }}">
-<!-- START SMART BANNER -->
-<script type="text/javascript" src="{{ asset('situs/assets/dingdong_togel/mobile/sw.js') }}"></script>
-
-<script>
-    protocol('dingdongtogel176.com', 'wuraa', 'mobile')
-</script>
