@@ -13,11 +13,10 @@
     <meta name="google-site-verification" content="ox5Fb4KqLqKKJk97QJeQsYMXtZ3zj3zWH3obs9TLx9Q" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
-        href="{{ asset('situs/assets/maria_togel/desktop/assets/img/aun/favicon9847.png?v=1666377903') }}" />
+        href="{{ asset('situs/assets/maria_togel/desktop/assets/img/ald/faviconaf7b.png?v=1666377901') }}" />
 
-    <link href="{{ asset('situs/assets/maria_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
-        rel="stylesheet">
-    <link href="{{ asset('situs/assets/maria_togel/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/font-awesome.min.css') }}" >
     <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/vendor/animate/animate.css') }}">
 
     <link rel="stylesheet"
@@ -44,10 +43,11 @@
     <!-- ADDITIONAL CSS -->
     <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('situs/assets/maria_togel/desktop/assets/css/game_compressed_ic9847.css?v=1666377903') }}">
+        href="{{ asset('situs/assets/maria_togel/desktop/assets/css/game_compressed_icaf7b.css?v=1666377901') }}">
     <!-- CUSTOM STYLE -->
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/maria_togel/desktop/assets/css/aun/aun29847.css?v=1666377903') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/ald/ald2af7b.css?v=1666377901') }}"> --}}
+
+    <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/aun/aun2.css') }}">
 
     <style type="text/css">
         .imgads {
@@ -108,7 +108,8 @@
                 },
                 init: function() {
                     var n = t.createElement("script");
-                    n.async = !0, n.type = "text/javascript", n.src ="/situs/assets/maria_togel/desktop/assets/tracking.js", t.head.appendChild(n)
+                    n.async = !0, n.type = "text/javascript", n.src =
+                        "/situs/assets/maria_togel/desktop/assets/tracking.js", t.head.appendChild(n)
                 }
             };
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
