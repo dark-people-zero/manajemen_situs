@@ -1242,8 +1242,8 @@ class Home extends Component
                             if ($store['status']) $img = $store['url'];
                         }
                         $data = collect([
-                            "name" => $this->name_footerProtection_mobile,
-                            "link" => $this->link_footerProtection_mobile,
+                            "name" => $this->name_footerProtection_desktop,
+                            "link" => $this->link_footerProtection_desktop,
                             "image" => $img
                         ])->toJson();
                         fiturSitus::find($val->id)->update([
