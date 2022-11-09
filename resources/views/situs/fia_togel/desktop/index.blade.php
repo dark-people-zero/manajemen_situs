@@ -24,11 +24,11 @@
                 clearInterval(intv);
                 var frame = document.createElement("script");
                 frame.type = "text/javascript";
-                frame.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-frame.js";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
 
                 var spa = document.createElement("script");
                 spa.type = "text/javascript";
-                spa.src = "/situs/assets/fia_togel/desktop/assets/idn/idn-togel-spa.js";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
 
                 var fiaJs = document.createElement("script");
                 fiaJs.type = "text/javascript";

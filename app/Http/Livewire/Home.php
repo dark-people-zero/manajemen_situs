@@ -364,7 +364,7 @@ class Home extends Component
 
             if ($this->file_headerapk_desktop) {
                 if (gettype($this->file_headerapk_desktop) != "string") {
-                    $validate["file_headerapk_desktop"] = 'image|max:10240'; // 3MB max
+                    $validate["file_headerapk_desktop"] = 'image|max:10240'; // 10MB max
                     $file = $this->file_headerapk_desktop;
                     $orgName = $file->getClientOriginalName();
                     $message["file_headerapk_desktop.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));
@@ -385,7 +385,7 @@ class Home extends Component
 
             if ($this->file_headerapk_mobile) {
                 if (gettype($this->file_headerapk_mobile) != "string") {
-                    $validate["file_headerapk_mobile"] = 'image|max:10240'; // 3MB max
+                    $validate["file_headerapk_mobile"] = 'image|max:10240'; // 10MB max
                     $file = $this->file_headerapk_mobile;
                     $orgName = $file->getClientOriginalName();
                     $message["file_headerapk_mobile.image"] = str_replace(":attribute", "file $orgName", trans("validation.image"));

@@ -14,22 +14,42 @@
     <meta name="description"
         content="DINGDONGTOGEL adalah situs bandar togel & live casino online Indonesia terpercaya yang menyediakan permainan togel dan live games paling inovatif dan terpopuler saat ini. Kami hadir dengan sistem terbaru yang canggih dan sangat mudah diakses dari komputer, laptop, tablet dan smartphone kesayangan anda (Android/IOS). Tampilan elegan yang menjamin kenyamanan dalam bertransaksi dan staff profesional yang melayani transaksi deposit dan withdraw anda dengan cepat. Ayo segera bergabung di DINGDONGTOGEL dan nikmati semua permainan hanya dengan 1 Username." />
 
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/dingdong_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/dingdong_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-112804824-13";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
+
     <meta name="google-site-verification" content="P1q-98_WLxedZ8Mp3-gF4MMwcutcnbn-p4FNuHmJe44" />
 
     <link rel="icon" type="image/png"
         href="{{ asset('situs/assets/dingdong_togel/desktop/assets/img/lr/favicon.png') }}" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-112804824-13');
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="assets/img/lr/favicond4f8.png?v=1666351409" />
 
@@ -140,11 +160,6 @@
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
 
-    <!-- ini manggil script dari cloud disini -->
-    <link rel="stylesheet" href="{{ asset('situs/css/dingdong_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/dingdong_togel.js') }}" type="text/javascript"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-13"></script>
     <div class="mask">
         <div id="loader"></div>
     </div>

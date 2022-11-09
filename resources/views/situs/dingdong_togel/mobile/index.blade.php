@@ -10,6 +10,37 @@
     <meta name="description"
         content="DINGDONGTOGEL adalah situs bandar togel & live casino online Indonesia terpercaya yang menyediakan permainan togel dan live games paling inovatif dan terpopuler saat ini. Kami hadir dengan sistem terbaru yang canggih dan sangat mudah diakses dari komputer, laptop, tablet dan smartphone kesayangan anda (Android/IOS). Tampilan elegan yang menjamin kenyamanan dalam bertransaksi dan staff profesional yang melayani transaksi deposit dan withdraw anda dengan cepat. Ayo segera bergabung di DINGDONGTOGEL dan nikmati semua permainan hanya dengan 1 Username." />
 
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/dingdong_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/dingdong_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-112804824-13";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
