@@ -518,3 +518,15 @@ select.form-control.SumoUnder[multiple] {
     cursor: pointer;
     text-transform: uppercase;
 }
+
+
+.input-group .clr-field ~ .input-group-append {
+    display: none;
+}
+
+
+.input-group-append .input-group-color {
+    width: 30px;
+    cursor: pointer;
+    background-color: var(--bg-coris);
+}

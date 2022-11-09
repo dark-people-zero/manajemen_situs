@@ -36,7 +36,7 @@
     <!--Internal  Select2 js -->
     <script src="{{asset('assets/plugins/select2/js/select2.min.js')}}"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="{{ asset('assets/plugins/coloris/coloris.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/coloris/coloris.js') }}"></script>
 
     <script src="{{ asset('assets/js-pages/page-home.js') }}"></script>
 
