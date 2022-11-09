@@ -506,9 +506,8 @@ const func = {
             url: "/config/23",
             dataType: "json",
             success: function (response) {
-                if (response) {
+                if (response) {                   
                     if (response.status_desktop && !isMobile) {
-
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {

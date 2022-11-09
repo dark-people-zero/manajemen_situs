@@ -42,8 +42,6 @@
         type="text/css" />
     <!-- ADDITIONAL CSS -->
     <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('situs/assets/maria_togel/desktop/assets/css/game_compressed_icaf7b.css?v=1666377901') }}">
     <!-- CUSTOM STYLE -->
     {{-- <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/ald/ald2af7b.css?v=1666377901') }}"> --}}
 
@@ -745,7 +743,7 @@
     <style type="text/css">
         @font-face {
             font-family: Muli;
-            src: url(assets/fonts/Muli.ttf);
+            src: url(/situs/assets/maria_togel/desktop/assets/fonts/Muli.ttf);
         }
 
         h1,
