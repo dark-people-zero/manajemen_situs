@@ -80,8 +80,8 @@ class Situs extends Component
             $this->d_status = $data->status_desktop;
             $this->m_status = $data->status_mobile;
             $this->url_d_desktop = $data->url_desktop_dev;
-            $this->url_d_mobile = $data->url_desktop_prod;
-            $this->url_p_desktop = $data->url_mobile_dev;
+            $this->url_d_mobile = $data->url_mobile_dev;
+            $this->url_p_desktop = $data->url_desktop_prod;
             $this->url_p_mobile = $data->url_mobile_prod;
 
             $this->fiturDesktop = $data->fiturSitus->where('type','desktop')->pluck('id_fitur');
@@ -105,8 +105,8 @@ class Situs extends Component
                 'status_desktop' => $this->d_status,
                 'status_mobile' => $this->m_status,
                 'url_desktop_dev' => $this->url_d_desktop,
-                'url_desktop_prod' => $this->url_p_desktop,
                 'url_mobile_dev' => $this->url_d_mobile,
+                'url_desktop_prod' => $this->url_p_desktop,
                 'url_mobile_prod' => $this->url_p_mobile
             ];
             $type = 'success';
