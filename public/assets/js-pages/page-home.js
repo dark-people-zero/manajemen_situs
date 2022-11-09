@@ -91,6 +91,7 @@ document.addEventListener('livewire:update', function (e) {
 
     Coloris.setInstance('.coloris-barcode', { parent: '.sidebar' });
     Coloris.setInstance('.shadowColor', { parent: '.modalActionBtn' });
+    Coloris.setInstance('.shadowColorMobile', { parent: '.modalActionBtnMobile' });
 
     for (let i = 0; i < $(".resize").length; i++) resize($(".resize")[i]);
 })

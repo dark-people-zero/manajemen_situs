@@ -121,7 +121,7 @@
     </div>
 </div>
 
-<div id="formAddbtnActionMobile" class="modal fade" wire:ignore.self data-bs-backdrop="static" data-bs-keyboard="false">
+<div id="formAddbtnActionMobile" class="modal fade modalActionBtnMobile" wire:ignore.self data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -171,7 +171,7 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control coloris shadowColor" placeholder="Shadow Color Button" wire:model.lazy="data_buttonaction_mobile.{{$i}}.shadow" value="{{$item['shadow']}}">
+                                    <input type="text" class="form-control coloris shadowColorMobile" placeholder="Shadow Color Button" wire:model.lazy="data_buttonaction_mobile.{{$i}}.shadow" value="{{$item['shadow']}}">
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" wire:model="data_buttonaction_mobile.{{$i}}.class">
