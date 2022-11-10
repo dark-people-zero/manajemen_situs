@@ -137,7 +137,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/togel_on/desktop/assets/tracking.js", t.head.appendChild(
+                        "/situs/assets/togel_on/desktop/assets/tracking.js", t.head.appendChild(
                             n)
                 }
             };
@@ -596,8 +596,6 @@
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src="{{ asset('situs/assets/togel_on/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
                                     width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='assets/img/icon/icon-24DSPINc619.jpg?v=1.0'></div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src="{{ asset('situs/assets/togel_on/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}">
                             </div>

@@ -45,8 +45,8 @@
 
     <link rel="stylesheet"
         href="{{ asset('/situs/assets/partai_togel/desktop/assets/js/vendor/nivo-lightbox/css/nivo-lightbox.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('/situs/assets/partai_togel/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css" type="text/css') }}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('/situs/assets/partai_togel/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css') }}" />
     <!-- ADDITIONAL CSS -->
     <link rel="stylesheet"
         href="{{ asset('/situs/assets/partai_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">

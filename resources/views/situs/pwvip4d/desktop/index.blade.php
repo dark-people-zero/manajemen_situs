@@ -116,7 +116,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/pwvip4d/desktop/assets/tracking.js", t.head.appendChild(n)
+                        "/situs/assets/pwvip4d/desktop/assets/tracking.js", t.head.appendChild(n)
                 }
             };
             !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e

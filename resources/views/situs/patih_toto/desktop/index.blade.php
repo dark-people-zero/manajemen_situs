@@ -124,7 +124,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/patih_toto/desktop/assets/tracking.js", t.head.appendChild(
+                        "/situs/assets/patih_toto/desktop/assets/tracking.js", t.head.appendChild(
                             n)
                 }
             };

@@ -153,7 +153,7 @@
                 },
                 init: function() {
                     var n = t.createElement("script");
-                    n.async = !0, n.type = "text/javascript", n.src = "../cdn.livechatinc.com/tracking.js", t
+                    n.async = !0, n.type = "text/javascript", n.src = "/situs/assets/gol_toto/desktop/tracking.js", t
                         .head.appendChild(n)
                 }
             };

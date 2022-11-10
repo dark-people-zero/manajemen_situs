@@ -43,8 +43,6 @@
     <!-- ADDITIONAL CSS -->
     <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/additionalffaf.css?v=1.4') }}">
     <!-- CUSTOM STYLE -->
-    {{-- <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/ald/ald2af7b.css?v=1666377901') }}"> --}}
-
     <link rel="stylesheet" href="{{ asset('situs/assets/maria_togel/desktop/assets/css/aun/aun2.css') }}">
 
     <style type="text/css">

@@ -139,10 +139,10 @@
         protocol('www.indratogel88.com', 'vhwaa', 'mobile')
     </script> -->
     <script src="{{ asset('situs/assets/indra_togel/desktop/assets/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/indra_togel/desktop/assets/idn/idn-togel-frame.js') }}">
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/indra_togel/desktop/assets/idn/idn-togel-frame.js') }}">
     </script>
     <script type="text/javascript" src="{{ asset('situs/assets/indra_togel/desktop/assets/idn/idn-togel-spa.js') }}">
-    </script>
+    </script> --}}
 
     <!-- disini script kita -->
     <link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
