@@ -130,6 +130,12 @@ body.smbitClass-mobile {
                     align-items: center;
                     gap: 5px;
                     margin-bottom: 10px;
+                    a {
+                        width: calc(100% / 2 - 20px);
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
 
