@@ -42,6 +42,33 @@
 })();
 
 const func = {
+    getParams(script_name) {
+        // Find all script tags
+
+        var scripts = document.getElementsByTagName("script");
+
+        // Look through them trying to find ourselves
+
+        for(var i=0; i<scripts.length; i++) {
+          if(scripts[i].src.indexOf("/" + script_name) > -1) {
+            // Get an array of key=value strings of params
+            var pa = scripts[i].src.split("?").pop().split("&");
+
+            // Split each key=value into array, the construct js object
+
+            var p = {};
+            for(var j=0; j<pa.length; j++) {
+              var kv = pa[j].split("=");
+              p[kv[0]] = kv[1];
+            }
+            return p;
+          }
+        }
+
+        // No scripts match
+
+        return {};
+    },
     desktop: {
         modal: (data) => {
             var template = $(`
@@ -500,9 +527,12 @@ const func = {
         } else {
             $('body').addClass('smbitClass-desktop');
         }
+
+        var paramscript = func.getParams("dana_toto.js");
+        var url = paramscript.base ? paramscript.base : "";
         $.ajax({
             type: "get",
-            url: "https://smbit-dev.hokibagus.club/data-situs/config/20",
+            url: url+"/config/20",
             dataType: "json",
             success: function (response) {
                 if (response) {
