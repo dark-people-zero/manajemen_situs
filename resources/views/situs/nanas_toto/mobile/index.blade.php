@@ -9,6 +9,38 @@
     <meta name="description"
         content="NANASTOTO merupakan Situs Bandar Online terpercaya yang menyediakan Pasaran Togel Terlengkap, berbagai LiveGames Terpopuler &amp; Permainan Slot terbaik.Hanya dengan minimal deposit sebesar  Rp.10.000,- *GABUNG SEKARANG JUGA DAN NIKMATI SENSASI PERMAINANNYA.">
 
+        {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/nanas_toto.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/nanas_toto.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
+
     <style>
         body {
             color: #fffeb3 !important;
@@ -47,7 +79,7 @@
     <link href="{{ asset('situs/assets/nanas_toto/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/nanas_toto/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/nanas_toto/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/nanas_toto/mobile/owl.carousel.min.js.download') }}">
@@ -231,8 +263,6 @@
                             } else return true;
                         }
                     </script>
-                    <link rel="stylesheet" href="{{ asset('situs/css/nanas_toto.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/nanas_toto.js') }}" type="text/javascript"></script>
                     <link href="{{ asset('situs/assets/nanas_toto/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">
                         <div class="panel-blue">
@@ -584,7 +614,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/nanas_toto/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/nanas_toto/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/nanas_toto/mobile/green-dot.GIF') }}">
