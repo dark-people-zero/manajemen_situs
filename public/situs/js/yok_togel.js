@@ -209,7 +209,6 @@ const func = {
             $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
-            console.log("footer pro", data);
             var template = $(`
                 <div class="container footer-protection">
                     <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">

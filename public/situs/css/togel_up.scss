@@ -401,6 +401,7 @@ body.smbitClass-desktop {
 
     .section {
         .container {
+            background-color: #060b16;
             .blog-posts {
                 .promosi {
                     img {
@@ -411,7 +412,9 @@ body.smbitClass-desktop {
                 }
             }
         }
+
     }
+
 
     .linkalte-container {
         position: fixed;
@@ -429,29 +432,35 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+                background: rgba(0, 40, 65, 0.5);
+                }
+
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
-                color: #777777;
+                color: #fff;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+                    // background: #837f77;
+                    // color: #fff;
+                    color: #b8b5b0;
                 }
             }
         }
@@ -462,6 +471,11 @@ body.smbitClass-desktop {
             }
         }
 
+    }
+
+    #bank.section .container {
+        background:#060b16;
+        border-bottom: 2px solid #c2dc5c;
     }
 
     .bankscroll {
@@ -960,6 +974,7 @@ body.smbitClass-desktop {
     footer {
         &#footer {
             border-top: 0;
+            background-color: #060b16;
 
             .before-footer {
                 h2 {
@@ -972,6 +987,11 @@ body.smbitClass-desktop {
                     text-align: -webkit-center;
                 }
             }
+            .footer-bottom .copyright {
+                border-top: 1px solid #c2dc5c !important;
+                background: #01232e !important;
+            }
+
 
             .footer-protection {
                 text-align: center;
@@ -979,6 +999,7 @@ body.smbitClass-desktop {
             }
         }
     }
+
 
     .modal {
         .modal-body {

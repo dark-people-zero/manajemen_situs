@@ -31,7 +31,8 @@
 <link rel="icon" type="image/ico"
     href="{{ asset('situs/assets/yok_togel/desktop/assets/img/akw/favicon7c4b.png?v=1666375341') }}" />
 
-<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
+    rel="stylesheet">
 <link href="{{ asset('situs/assets/yok_togel/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('situs/assets/yok_togel/desktop/assets/css/vendor/animate/animate.css') }}">
 
@@ -122,7 +123,7 @@
                 init: function() {
                     var n = t.createElement("script");
                     n.async = !0, n.type = "text/javascript", n.src =
-                        "situs/assets/yok_togel/desktop/assets/tracking.js", t
+                        "/situs/assets/yok_togel/desktop/assets/tracking.js", t
                         .head.appendChild(n)
                 }
             };
@@ -133,10 +134,7 @@
             href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
     <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-frame.js') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-spa.js') }}">
-    </script>
+
 
     <!-- disini masukkin scrip kita -->
 
@@ -902,8 +900,7 @@
     <script
         src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
     </script>
-    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}">
-    </script>
+    <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
     </script>
     <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
@@ -960,6 +957,10 @@
     <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
     </script> -->
     <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-frame.js') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-spa.js') }}">
+    </script>
 </body>
 
 <!-- Mirrored from yoktogel176.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Oct 2022 18:02:44 GMT -->
