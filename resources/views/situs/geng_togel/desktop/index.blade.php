@@ -13,6 +13,38 @@
     <meta name="description"
         content="Gengtoto adalah Situs Agen Togel Online Resmi, Terbaik Dan Terpercaya. Bandar togel online yang menyediakan pasaran togel singapura, hongkong, sydney, taiwan, dan cambodia." />
 
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/geng_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/geng_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-112804824-15";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+
+    </script>
+
     <link rel="icon" type="image/png"
         href="{{ asset('situs/assets/geng_togel/desktop/assets/img/gw/favicon.png') }}" />
     <link rel="icon" href="https://cdn.areabermain.club/slider/gengtoto/favicon.ico" type="image/x-icon" />
@@ -36,18 +68,7 @@
     <meta name="DC.Contributor" content="gengtoto" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-15"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-112804824-15');
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
         href="{{ asset('situs/assets/geng_togel/desktop/assets/img/gw/faviconaf0b.png?v=1666351410') }}" />
@@ -156,12 +177,6 @@
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
     <script src="{{ asset('situs/assets/geng_togel/desktop/assets/js/jquery.js') }}"></script>
-
-
-    <!-- disini script kita -->
-
-    <link rel="stylesheet" href="{{ asset('situs/css/geng_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/geng_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <div class="mask">
@@ -937,10 +952,6 @@
       }
   </script>
   <script type="text/javascript" src="{{ asset('situs/assets/geng_togel/desktop/tgsecure/vbulletin_md5.js') }}">
-  </script>
-  <script type="text/javascript" src="{{ asset('situs/assets/geng_togel/desktop/assets/idn/idn-togel-frame.js') }}">
-  </script>
-  <script type="text/javascript" src="{{ asset('situs/assets/geng_togel/desktop/assets/idn/idn-togel-spa.js') }}">
   </script>
 </body>
 
