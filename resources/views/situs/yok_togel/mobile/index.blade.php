@@ -118,7 +118,7 @@
                         <!-- banner kecil -->
                         <div class="note center">Silahkan login untuk mulai bermain</div>
                         <div>
-                            <script type="text/javascript" src="tgsecure/vbulletin_md5.js"></script>
+                            <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/mobile/vbulletin_md5.js') }}"></script>
                             <form action="https://yoktogel176.net/m/index.php" METHOD="post"
                                 onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
