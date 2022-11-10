@@ -448,6 +448,7 @@ body.smbitClass-desktop {
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
                 color: #777777;
                 font-weight: 600;
@@ -771,7 +772,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {
@@ -780,7 +781,7 @@ body.smbitClass-desktop {
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: large;
+                    font-size: 3;
                     color: #dee1de !important;
                     text-align: center;
                 }

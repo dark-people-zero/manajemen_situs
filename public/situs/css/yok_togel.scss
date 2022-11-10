@@ -427,29 +427,35 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+                background: rgba(0, 40, 65, 0.5);
+                }
+
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
                 color: #777777;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+                    // background: #837f77;
+                    // color: #fff;
+                    color: #55e3ff;
                 }
             }
         }
@@ -521,7 +527,7 @@ body.smbitClass-desktop {
     }
 
     // list image gameicon
-    $listImage: 'yoktogel_singapore.png', 'yoktogel_hongkong.png', 'yoktogel_sydney.png', 'yoktogel_nevada.png', 'yoktogel_cambodia.png', 'yoktogel_bullseye.png', 'yoktogel_carolina.png', 'yoktogel_totomacau.png', 'yoktogel_china.png', 'yoktogel_california.png', 'yoktogel_florida.png', 'yoktogel_newyork.png', 'yoktogel_oregon.png', 'yoktogel_taiwan.png', 'yoktogel_sicboball.png', 'yoktogel_sicbodice.png', 'yoktogel_12d.png', 'yoktogel_dice6.png', 'yoktogel_24d.png', 'yoktogel_roullete.png', 'yoktogel_baccarat.png', 'yoktogel_pokerdice.png', 'yoktogel_suwit.png', 'yoktogel_dragontiger.png', 'yoktogel_oglok.png', 'yoktogel_idn4stand.png', 'yoktogel_roullete2.png', 'yoktogel_headandtail.png', 'yoktogel_monopoly.png', 'yoktogel_5dball.png', 'yoktogel_gongball.png', 'yoktogel_billiard.png', 'yoktogel_3dshio.png', 'yoktogel_raceball.png', 'yoktogel_fantan.png', 'yoktogel_niuniu.png', 'yoktogel_pgsoft.png', 'yoktogel_pragmaticplay.png', 'yoktogel_idnslot.png', 'yoktogel_microgaming.png', 'yoktogel_toptrend.png', 'yoktogel_habanero.png', 'yoktogel_comingsoon.png', 'yoktogel_comingsoon.png';
+    $listImage: 'yoktogel_singapore.png', 'yoktogel_hongkong.png', 'yoktogel_sydney.png', 'yoktogel_nevada.png', 'yoktogel_cambodia.png', 'yoktogel_bullseye.png', 'yoktogel_carolina.png', 'yoktogel_totomacau.png', 'yoktogel_china.png', 'yoktogel_california.png', 'yoktogel_florida.png', 'yoktogel_newyork.png', 'yoktogel_oregon.png', 'yoktogel_taiwan.png', 'yoktogel_sicboball.png', 'yoktogel_sicbodice.png', 'yoktogel_12d.png', 'yoktogel_dice6.png', 'yoktogel_24d.png', 'yoktogel_roullete.png', 'yoktogel_baccarat.png', 'yoktogel_pokerdice.png', 'yoktogel_suwit.png', 'yoktogel_dragontiger.png', 'yoktogel_oglok.png', 'yoktogel_idn4stand.png', 'yoktogel_roullete2.png', 'yoktogel_headandtail.png', 'yoktogel_monopoly.png', 'yoktogel_5dball.png', 'yoktogel_gongball.png', 'yoktogel_billiard.png', 'yoktogel_3dshio.png', 'yoktogel_raceball.png', 'yoktogel_fantan.png', 'yoktogel_niuniu.png', 'yoktogel_pgsoft.png', 'yoktogel_pragmatic.png', 'yoktogel_idnslot.png', 'yoktogel_toptrend.png', 'yoktogel_habanero.png', 'yoktogel_comingsoon.png', 'yoktogel_comingsoon.png';
 
     .gameicon {
         .owl-item {
@@ -764,7 +770,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {

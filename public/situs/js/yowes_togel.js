@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-XRK7N3620T");
+    gtag("config", "G-680Q5ERBTB");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -82,7 +82,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Yowestogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -548,7 +548,6 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
