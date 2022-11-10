@@ -502,7 +502,7 @@ const func = {
         }
         $.ajax({
             type: "get",
-            url: "/config/20",
+            url: "https://smbit-dev.hokibagus.club/data-situs/config/20",
             dataType: "json",
             success: function (response) {
                 if (response) {
