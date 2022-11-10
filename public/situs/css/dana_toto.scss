@@ -131,9 +131,14 @@ body.smbitClass-mobile {
                     gap: 5px;
                     margin-bottom: 10px;
                     a {
-                        width: calc(100% / 2 - 20px);
                         img {
                             width: 100%;
+                        }
+                    }
+
+                    @media (max-width: 390px) {
+                        a {
+                            width: calc(100% / 2 - 20px);
                         }
                     }
                 }
