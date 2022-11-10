@@ -741,7 +741,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="row" style="display: flex;">
-                            <div class="col-3 col-sm-3"></div>
+                            {{-- <div class="col-3 col-sm-3"></div>
                             <div class="col-3 col-sm-3">
                                 <img src="{{ asset('situs/assets/yowes_togel/desktop/assets/img/idnplay_w.png') }}"
                                     style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
@@ -751,14 +751,15 @@
                                     style="overflow: inherit !important;width: 100%;padding: 10px;">
                             </div>
                             <div class="col-3 col-sm-3"></div>
-                        </div>
-                        <div class="col-md-12 copyright">
-                            &copy; Copyright 2014 - 2022 <a href="#">yowestogel176.com</a>. All Rights Reserved.
+                        </div> --}}
+                            <div class="col-md-12 copyright">
+                                &copy; Copyright 2014 - 2022 <a href="#">yowestogel176.com</a>. All Rights
+                                Reserved.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
     <div class="scroll-top">
         <a href="#">
@@ -845,8 +846,9 @@
     <script src="{{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
     </script>
     <script src="{{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
-    <!-- <script src="{{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js"></') }}script> -->
-                                                                                                            <script src="
+    <!-- <script
+        src="{{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js"></') }}script> -->
+                                                                                                                <script src="
         {{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
     <script src="{{ asset('/situs/assets/yowes_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
