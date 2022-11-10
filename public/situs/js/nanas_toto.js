@@ -532,7 +532,7 @@ const func = {
         var url = paramscript.base ? paramscript.base : "";
         $.ajax({
             type: "get",
-            url: url+"/config/23",
+            url: url+"/config/21",
             dataType: "json",
             success: function (response) {
                 if (response) {
