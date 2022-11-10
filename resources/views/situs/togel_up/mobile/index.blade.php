@@ -555,7 +555,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/togel_up/mobile/green-dot.GIF') }}" />
-                                    <img src="{{ asset('situs/assets/togel_up/mobile/nofound.webp') }}" />
+                                    <img src="{{ asset('situs/assets/togel_up/mobile/mandiri.webp') }}" />
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/togel_up/mobile/green-dot.GIF') }}" />

@@ -32,7 +32,7 @@
     <link href="{{ asset('situs/assets/togel_on/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/togel_on/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/togel_on/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/owl.carousel.min.js.download') }}"></script>
@@ -559,7 +559,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/togel_on/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/togel_on/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/togel_on/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/togel_on/mobile/green-dot.GIF') }}">
@@ -615,9 +615,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/togel_on/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/togel_on/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('tglon.com', 'vozaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

@@ -31,7 +31,7 @@
     <link href="{{ asset('situs/assets/yowes_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/yowes_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/yowes_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/owl.carousel.min.js.download') }}">
@@ -572,7 +572,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/yowes_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/yowes_togel/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/yowes_togel/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/yowes_togel/mobile/green-dot.GIF') }}">
@@ -610,9 +610,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/yowes_togel/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/yowes_togel/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('togelyowes.com', 'vpaaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

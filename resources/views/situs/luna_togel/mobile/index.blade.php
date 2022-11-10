@@ -567,7 +567,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/luna_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/luna_togel/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/luna_togel/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/luna_togel/mobile/red-dot.GIF') }}">
@@ -605,9 +605,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/luna_togel/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/luna_togel/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('lunatogel88.com', 'vpfaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

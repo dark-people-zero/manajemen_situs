@@ -32,7 +32,7 @@
     <link href="{{ asset('situs/assets/pwvip4d/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/pwvip4d/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/pwvip4d/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/owl.carousel.min.js.download') }}"></script>
@@ -558,7 +558,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/pwvip4d/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/pwvip4d/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/pwvip4d/mobile/green-dot.GIF') }}">
@@ -606,9 +606,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/pwvip4d/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/pwvip4d/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('pwvip4d176.com', 'vpgaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

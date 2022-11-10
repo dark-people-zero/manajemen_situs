@@ -764,7 +764,7 @@
                   </div>
                   <div class="bank">
                     <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />
-                    <img src="{{ asset('situs/assets/zia_togel/mobile/nofound.webp') }}" />
+                    <img src="{{ asset('situs/assets/zia_togel/mobile/mandiri.png') }}" />
                   </div>
                   <div class="bank">
                     <img src="{{ asset('situs/assets/zia_togel/mobile/green-dot.gif') }}" />

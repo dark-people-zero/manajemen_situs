@@ -618,7 +618,7 @@ function checkData() {
   </div>
   <div class="bank">
     <img src="{{ asset('situs/assets/gol_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/gol_togel/mobile/nofound.webp') }}" />
+    <img src="{{ asset('situs/assets/gol_togel/mobile/mandiri.webp') }}" />
   </div>
   <div class="bank">
     <img src="{{ asset('situs/assets/gol_togel/mobile/green-dot.GIF') }}" />

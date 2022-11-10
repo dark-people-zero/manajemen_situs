@@ -32,7 +32,7 @@
     <link href="{{ asset('situs/assets/pro_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/pro_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/pro_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/pro_togel/mobile/owl.carousel.min.js.download') }}">
@@ -564,7 +564,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/pro_togel/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/pro_togel/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/pro_togel/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/pro_togel/mobile/green-dot.GIF') }}">

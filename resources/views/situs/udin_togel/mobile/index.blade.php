@@ -31,7 +31,7 @@
     <link href="{{ asset('situs/assets/udin_togel/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/udin_togel/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/udin_togel/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/owl.carousel.min.js.download') }}">
@@ -554,7 +554,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/udin_togel/mobile/green-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/udin_togel/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/udin_togel/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/udin_togel/mobile/red-dot.GIF') }}">
@@ -614,9 +614,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/udin_togel/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/udin_togel/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('udintogel176.com', 'vemaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

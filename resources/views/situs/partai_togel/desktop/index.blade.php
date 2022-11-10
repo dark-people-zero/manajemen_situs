@@ -689,7 +689,7 @@
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online mandiri"></div>
-                            <img src="{{ asset('/situs/assets/partai_togel/desktop/assets/img/nofound.html') }}"
+                            <img src="{{ asset('/situs/assets/partai_togel/desktop/assets/img/mandiri.html') }}"
                                 alt="Bank Mandiri" width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">

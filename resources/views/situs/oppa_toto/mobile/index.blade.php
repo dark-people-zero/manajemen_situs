@@ -32,7 +32,7 @@
     <link href="{{ asset('situs/assets/oppa_toto/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/oppa_toto/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/oppa_toto/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/oppa_toto/mobile/owl.carousel.min.js.download') }}">
@@ -567,7 +567,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/oppa_toto/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/oppa_toto/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/oppa_toto/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/oppa_toto/mobile/green-dot.GIF') }}">

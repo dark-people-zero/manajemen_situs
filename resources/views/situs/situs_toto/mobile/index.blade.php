@@ -47,7 +47,7 @@
     <link href="{{ asset('situs/assets/situs_toto/mobile/swipebox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/situs_toto/mobile/colorbox.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('situs/assets/situs_toto/mobile/li-scroller.css') }}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/socket.io.min.js.download') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/socket.io.min.js.download') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/jquery.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/jqueryui.js.download') }}"></script>
     <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/owl.carousel.min.js.download') }}">
@@ -585,7 +585,7 @@
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/situs_toto/mobile/red-dot.GIF') }}">
-                                    <img src="{{ asset('situs/assets/situs_toto/mobile/nofound.webp') }}">
+                                    <img src="{{ asset('situs/assets/situs_toto/mobile/mandiri.webp') }}">
                                 </div>
                                 <div class="bank">
                                     <img src="{{ asset('situs/assets/situs_toto/mobile/green-dot.GIF') }}">
@@ -629,9 +629,9 @@
         <link rel="stylesheet" href="{{ asset('situs/assets/situs_toto/mobile/_footer.css') }}">
         <!-- START SMART BANNER -->
         <script type="text/javascript" src="{{ asset('situs/assets/situs_toto/mobile/sw.js.download') }}"></script>
-        <script>
+        {{-- <script>
             protocol('xn--sitstoto-q5a.com', 'kapaa', 'mobile')
-        </script>
+        </script> --}}
     </div>
     <div id="cboxOverlay" style="display: none;"></div>
     <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">

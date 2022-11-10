@@ -732,7 +732,7 @@
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="offline mandiri"></div>
-                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/nofound.html') }}"
+                            <img src="{{ asset('situs/assets/pwvip4d/desktop/assets/img/mandiri.html') }}"
                                 alt="Bank Mandiri" width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">

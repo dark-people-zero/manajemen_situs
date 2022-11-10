@@ -695,7 +695,7 @@
                         </div>
                         <div class="item bank" data-animation="fadeIn">
                             <div class="online mandiri"></div><img
-                                src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/nofound.html') }}"
+                                src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/mandiri.png') }}"
                                 alt="Bank Mandiri" width="86px" height="25px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">

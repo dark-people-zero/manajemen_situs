@@ -350,9 +350,9 @@ color: #ffcc00;
 }
 .popup-img{width: 100%;height: auto;}
 </style>
-
-<script src='{{ asset('situs/assets/geng_togel/mobile/jquery.min.js') }}' type='text/javascript'>
-</script>
+{{-- 
+<script src='{{ asset('situs/assets/geng_togel/mobile/jquery.min.js.download') }}' type='text/javascript'> --}}
+{{-- </script> --}}
 {{-- <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script> --}}
 <script type='text/javascript'>
 function checkData() {
@@ -633,7 +633,7 @@ function checkData() {
               </div><div class="slider">
                 <div class="results">
                   <div class="pool-name">24Dspin</div>
-                  <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/geng_togel/mobile/15.png') }}' width='22px'></div></div>
+                  <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/geng_togel/mobile/03.png') }}' width='22px'></div></div>
                   <div class="results">
                   <div class="pool-name">Dice 6</div>
                   <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/geng_togel/mobile/dice5.png') }}' style="height:26px;width:25px;"></div></div>
@@ -645,10 +645,10 @@ function checkData() {
                   <div class="pool-date"></div><div class="pool-result">16</div></div></div><div class="slider">
                   <div class="results">
                   <div class="pool-name">Roulette</div>
-                  <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/geng_togel/mobile/35.png') }}' width='22px'></div></div>
+                  <div class="pool-date"></div><div class="pool-result"><img src='{{ asset('situs/assets/geng_togel/mobile/13.png') }}' width='22px'></div></div>
                   <div class="results">
                   <div class="pool-name">Sicbo[Dice]</div>
-                  <div class="pool-date"></div><div class="pool-result"><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice4.png') }}'></div></div>    </div>
+                  <div class="pool-date"></div><div class="pool-result"><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice3.png') }}'><img style='margin: 6px 1px;' src='{{ asset('situs/assets/geng_togel/mobile/dice3.png') }}'></div></div>    </div>
           </div>
 <div>
     
@@ -674,7 +674,7 @@ function checkData() {
   </div>
   <div class="bank">
     <img src="{{ asset('situs/assets/geng_togel/mobile/green-dot.GIF') }}" />
-    <img src="{{ asset('situs/assets/geng_togel/mobile/nofound.webp') }}" />
+    <img src="{{ asset('situs/assets/geng_togel/mobile/mandiri.webp') }}" />
   </div>
   <div class="bank">
     <img src="{{ asset('situs/assets/geng_togel/mobile/green-dot.GIF') }}" />
@@ -724,9 +724,9 @@ function checkData() {
 
 <!-- Mirrored from gengtogel176.com/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Oct 2022 10:42:01 GMT -->
 </html>
-<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/_footer.js') }}"></script>
-<script src="{{ asset('situs/assets/geng_togel/mobile/moment.min.js') }}" type='text/javascript'></script> 
+<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/_footer.js.download') }}"></script>
+<script src="{{ asset('situs/assets/geng_togel/mobile/moment.min.js.download') }}" type='text/javascript'></script> 
 <link rel="stylesheet" href="{{ asset('situs/assets/geng_togel/mobile/_footer.css') }}">
 <!-- START SMART BANNER -->
-	<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/sw.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('situs/assets/geng_togel/mobile/sw.js.download') }}"></script>
 

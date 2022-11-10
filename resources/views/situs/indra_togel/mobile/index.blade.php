@@ -347,8 +347,8 @@
 
 
 
-<script src='{{ asset('situs/assets/indra_togel/mobile/jquery.min.js.download') }}' type='text/javascript'>
-</script>
+{{-- <script src='{{ asset('situs/assets/indra_togel/mobile/jquery.min.js.download') }}' type='text/javascript'>
+</script> --}}
 <script type='text/javascript'>
 function checkData() {
     var f1 = document.forms[0];
@@ -668,7 +668,7 @@ function checkData() {
             </div>
             <div class="bank">
               <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />
-              <img src="{{ asset('situs/assets/indra_togel/mobile/nofound.webp') }}" />
+              <img src="{{ asset('situs/assets/indra_togel/mobile/mandiri.webp') }}" />
             </div>
             <div class="bank">
               <img src="{{ asset('situs/assets/indra_togel/mobile/green-dot.GIF') }}" />

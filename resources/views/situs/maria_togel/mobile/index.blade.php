@@ -118,7 +118,7 @@ body {
               <!-- banner kecil -->
                             <div class="note center">Silahkan login untuk mulai bermain</div>
               <div>
-                <script type="text/javascript" src="{ asset('situs/assets/maria_togel/mobile/vbulletin_md5.js.download') }}"></script>
+                <script type="text/javascript" src="{{ asset('situs/assets/maria_togel/mobile/vbulletin_md5.js.download') }}"></script>
                 <form action="https://mariatogel176.com/m/index.php" METHOD="post" onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
 
                   <div class="form-group">
@@ -626,7 +626,7 @@ function checkData() {
           <div>
 
               <div class="bank">
-                  <img src="{{ asset('situs/assets/maria_togel/mobile/red-dot.GIF') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
                   <img src="{{ asset('situs/assets/maria_togel/mobile/bca.webp') }}">
               </div>
               <div class="bank">
@@ -663,7 +663,7 @@ function checkData() {
               </div>
               <div class="bank">
                   <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
-                  <img src="{{ asset('situs/assets/maria_togel/mobile/nofound.webp') }}">
+                  <img src="{{ asset('situs/assets/maria_togel/mobile/mandiri.webp') }}">
               </div>
               <div class="bank">
                   <img src="{{ asset('situs/assets/maria_togel/mobile/green-dot.GIF') }}">
