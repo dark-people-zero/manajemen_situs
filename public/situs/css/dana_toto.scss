@@ -406,9 +406,6 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/dana_toto/desktop/images/danatoto_background_default.jpg');
-    background-attachment: fixed;
-
     .section {
         .container {
             .blog-posts {
@@ -878,5 +875,10 @@ body.smbitClass-desktop {
         align-items: center;
         min-height: 100vh;
         margin: auto auto;
+    }
+
+    body {
+        background-image: url('/situs/assets/dana_toto/desktop/images/danatoto_background_default.jpg') !important;
+        background-attachment: fixed !important;
     }
 }
