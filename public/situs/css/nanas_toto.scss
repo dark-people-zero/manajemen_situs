@@ -880,7 +880,7 @@ body.smbitClass-desktop {
     }
 
     body {
-        background-image: url('/situs/assets/nanas_toto/desktop/images/nanastoto_background_default.jpg');
-        background-attachment: fixed;
+        background-image: url('/situs/assets/nanas_toto/desktop/images/nanastoto_background_default.jpg') !important;
+        background-attachment: fixed !important;
     }
 }
