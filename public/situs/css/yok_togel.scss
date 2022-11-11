@@ -546,7 +546,7 @@ body.smbitClass-desktop {
 
     .headerApk {
         padding: 10px;
-        background: #302e2e;
+        background: #060303;
         display: flex;
         align-items: center;
 
@@ -577,13 +577,13 @@ body.smbitClass-desktop {
                     .app_title {
                         font-size: 15px;
                         font-weight: bold;
-                        color: #ffee27;
+                        color: #ffcd03;
                         text-transform: uppercase;
                     }
 
                     .app_slogan {
                         font-size: 11px;
-                        color: #FFF;
+                        color: #fffc36;
                         letter-spacing: 0px;
                     }
                 }
@@ -594,8 +594,8 @@ body.smbitClass-desktop {
                     font-size: 12px;
                     padding: 8px 8px;
                     border: 1px solid;
-                    color: #ffee27;
-                    background: linear-gradient(to bottom, #383636 50%, #272626 50%);
+                    color: #f7ea24;
+                    background: linear-gradient(to bottom, #5d0808 50%, #6e0000 50%);
                     border-radius: 20px;
                 }
             }
@@ -621,7 +621,7 @@ body.smbitClass-desktop {
             filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
             background-repeat: repeat-x;
             color: #160958;
-
+            border: 0;
             -webkit-transition: all 0.2s ease-out;
             -moz-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;

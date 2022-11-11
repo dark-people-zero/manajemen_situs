@@ -1,9 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-<!-- Mirrored from yoktogel176.net/m/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Oct 2022 16:11:26 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <title>Agen Togel Online Indonesia Resmi</title>
@@ -18,6 +16,37 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="yoktogel176 Mobile">
     <meta http-equiv="msthemecompatible" content="no">
+
+    <link rel="stylesheet" href="{{ asset('situs/css/yok_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/yok_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+    </script>
+
     <link rel="icon" type="image/png" href="{{ asset('situs/assets/yok_togel/mobile/favicon.png') }}" />
     <link rel="shortcut icon" type="image/png" href="{{ asset('situs/assets/yok_togel/mobile/favicon.png') }}" />
 
@@ -193,13 +222,8 @@
                             }
                         }
                     </script>
-                    {{-- <script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-frame.js"></script>
-<script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-spa.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2"></script> --}}
-                    <link rel="stylesheet" href="{{ asset('situs/css/yok_togel.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/yok_togel.js') }}" type="text/javascript"></script>
+
 
                     <link href="{{ asset('situs/assets/yok_togel/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">

@@ -15,6 +15,38 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="togelyowes Mobile">
     <meta http-equiv="msthemecompatible" content="no">
+
+    <link rel="stylesheet" href="{{ asset('situs/css/yowes_togel.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/yowes_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-680Q5ERBTB";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+    </script>
+
+
     <link rel="icon" type="image/png" href="https://togelyowes.com/assets/img/akz/favicon.png">
     <link rel="shortcut icon" type="image/png" href="https://togelyowes.com/assets/img/akz/favicon.png">
     <link rel="stylesheet" href="{{ asset('situs/assets/yowes_togel/mobile/tingle.min.css') }}">
@@ -213,10 +245,7 @@
                             } else return true;
                         }
                     </script>
-                    {{-- tanda --}}
-
-                    <link rel="stylesheet" href="{{ asset('situs/css/yowes_togel.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/yowes_togel.js') }}" type="text/javascript"></script>
+                    
                     {{-- ada script ke yowes_togel.js --}}
 
 

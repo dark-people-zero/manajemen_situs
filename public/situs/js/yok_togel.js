@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-XRK7N3620T");
+    gtag("config", "G-THHEVP3BL2");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -82,7 +82,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Yoktogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -337,7 +337,7 @@ const func = {
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk Ziatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.url}" target="_blank" title="Download Apk Yoktogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>

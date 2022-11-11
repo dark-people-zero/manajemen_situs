@@ -15,17 +15,37 @@
 <meta name="google-site-verification" content="391MhZ0_nnhfG0DLItkWodt_KZzdQmGEMcqO3SdZrGk" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2"></script>
+
+<link rel="stylesheet" href="{{ asset('situs/css/yok_togel.css') }}" type="text/css">
 <script>
-    window.dataLayer = window.dataLayer || [];
+    var intv = setInterval(() => {
+        var body = document.querySelector("body");
+        if (body) {
+            clearInterval(intv);
+            var frame = document.createElement("script");
+            frame.type = "text/javascript";
+            frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+            var spa = document.createElement("script");
+            spa.type = "text/javascript";
+            spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
 
-    gtag('config', 'G-THHEVP3BL2');
+            var fiaJs = document.createElement("script");
+            fiaJs.type = "text/javascript";
+            fiaJs.src = "/situs/js/yok_togel.js";
+
+            var gtag = document.createElement("script");
+            gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2";
+            gtag.async = true;
+
+            body.appendChild(frame);
+            body.appendChild(spa);
+            body.appendChild(gtag);
+            body.appendChild(fiaJs);
+        }
+    }, 1);
 </script>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/ico"
@@ -136,13 +156,9 @@
     <script src="{{ asset('situs/assets/yok_togel/desktop/assets/js/jquery.js') }}"></script>
 
 
-    <!-- disini masukkin scrip kita -->
-
-    <link rel="stylesheet" href="{{ asset('situs/css/yok_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/yok_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THHEVP3BL2"></script>
+
     <div class="mask">
         <div id="loader"></div>
     </div>
@@ -957,10 +973,7 @@
     <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
     </script> -->
     <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-frame.js') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/yok_togel/desktop/assets/idn/idn-togel-spa.js') }}">
-    </script>
+
 </body>
 
 <!-- Mirrored from yoktogel176.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Oct 2022 18:02:44 GMT -->
