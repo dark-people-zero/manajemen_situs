@@ -212,7 +212,7 @@ body.smbitClass-mobile {
             }
             .deskripsi {
                 color: white;
-                background-color: rgb(188, 156, 8);
+                background-color: #132541;
                 margin-left: 0px;
                 margin-right: 0px;
                 margin-top: 10px;
@@ -429,29 +429,34 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
+            &:hover {
+                background: rgba(0, 40, 65, 0.5);
+                }
+
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
                 color: #777777;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+
+                    color: #75a6d1;
                 }
             }
         }
@@ -973,13 +978,23 @@ body.smbitClass-desktop {
                 p.deskripsi {
                     font-size: large;
                     text-align: -webkit-center;
+
+                    a {
+                        color: red !important;
+                        cursor: pointer;
+                    }
                 }
+
             }
 
             .footer-protection {
-                border-top:1px #0084dc solid ;
+
                 text-align: center;
                 margin-top: 20px;
+            }
+            .copyright {
+                background-color: #0c1322 !important;
+                border-top:1px #0084dc solid ;
             }
         }
     }

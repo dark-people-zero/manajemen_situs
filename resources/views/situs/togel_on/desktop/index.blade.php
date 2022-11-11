@@ -13,7 +13,36 @@
     <meta name="description"
         content="TOGELON.COM adalah Bandar Togel Online Terbaik Indonesia yang menyediakan permainan togel online paling bersaing meliputi togel Singapura, Hongkong, Sydney, Cambodia dan permainan livegames seperti Roulette, Sicbo, Baccarat dan masih banyak lagi. Bagi anda penggemar permainan togel dan casino online segera bergabung dengan Togelon.com. Sistem deposit dan withdraw tercepat dan dilengkapi dengan sistem keamanan yang canggih membuat anda nyaman bermain." />
     <meta name="google-site-verification" content="6hUG3VhldQ7qAh0bf4QGF_19zCVaHLEeIjS4PvRVRdg" />
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/togel_on.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
 
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/togel_on.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-GXHX8BNXN6";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXHX8BNXN6"></script>
     <script>
@@ -147,14 +176,11 @@
     <noscript><a href="https://www.livechatinc.com/chat-with/13379157/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
-    {{-- taruh script disini --}}
 
-    <link rel="stylesheet" href="{{ asset('situs/css/togel_on.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/togel_on.js') }}" type="text/javascript"></script>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLGMTV2JEJ"></script>
+
     <div class="mask">
         <div id="loader"></div>
     </div>
@@ -837,7 +863,7 @@
     </script>
     <script src="{{ asset('situs/assets/togel_on/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <!-- <script src="{{ asset('situs/assets/togel_on/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-                                              <script src="
+                                                  <script src="
         {{ asset('situs/assets/togel_on/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
   <script src="{{ asset('situs/assets/togel_on/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
@@ -890,11 +916,6 @@
   <!-- 29-01-2018 <script language='JavaScript1.1' src='//pixel.mathtag.com/event/js?mt_id=995355&mt_adid=161820&v1=&v2=&v3=&s1=&s2=&s3='>
   </script> -->
     <script type="text/javascript" src="{{ asset('situs/assets/togel_on/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-
-    <script type="text/javascript" src="{{ asset('situs/assets/togel_on/desktop/assets/idn/idn-togel-frame.js') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/togel_on/desktop/assets/idn/idn-togel-spa.js') }}">
-    </script>
 </body>
 
 </html>

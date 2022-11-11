@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
+
 <html lang="en">
 
 <head>
@@ -15,6 +15,36 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="tglon Mobile">
     <meta http-equiv="msthemecompatible" content="no">
+    {{-- disini penempatan --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/togel_on.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/togel_on.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-GXHX8BNXN6";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+    </script>
     <link rel="icon" type="image/png" href="https://tglon.com/assets/img/aky/favicon.png">
     <link rel="shortcut icon" type="image/png" href="https://tglon.com/assets/img/aky/favicon.png">
 
@@ -130,9 +160,9 @@
                                         <p id="hideshow" style="font-size: 18px;">&nbsp; Show</p>
                                     </span>
                                     <input type="hidden" id="showhide" value="show">
-                                    <input id="navbar_password" type="password" tabindex="2" name="entered_password"
-                                        class="contactField requiredField center" value=""
-                                        placeholder="Password"
+                                    <input id="navbar_password" type="password" tabindex="2"
+                                        name="entered_password" class="contactField requiredField center"
+                                        value="" placeholder="Password"
                                         onblur="if(this.value == '';) { this.value='Password';}"
                                         onfocus="if (this.value == 'Password';) {this.value='';}" required="">
                                 </div>
@@ -211,9 +241,7 @@
                             } else return true;
                         }
                     </script>
-                    {{-- tanda  --}}
-                    <link rel="stylesheet" href="{{ asset('situs/css/togel_on.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/togel_on.js') }}" type="text/javascript"></script>
+
 
                     <link href="{{ asset('situs/assets/togel_on/mobile/login.css') }}" rel="stylesheet">
                     <div class="inner-wrap">

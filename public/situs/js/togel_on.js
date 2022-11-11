@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-XRK7N3620T");
+    gtag("config", "G-GXHX8BNXN6");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -55,7 +55,7 @@ const func = {
                             </div>
                             <div class="modal-body">
                                 <img src="${data.file}" width="600" height="350" class="imgads">
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+
                             </div>
                         </div>
                     </div>
@@ -548,7 +548,7 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
+
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
