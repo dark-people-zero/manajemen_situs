@@ -2,6 +2,7 @@ body {
     padding-right: 0 !important;
 }
 
+
 body.smbitClass-mobile {
     // Untuk header atas
     .page-content {
@@ -404,9 +405,6 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/nanas_toto/desktop/images/nanastoto_background_default.jpg');
-    background-attachment: fixed;
-
     .section {
         .container {
             .blog-posts {
@@ -879,5 +877,10 @@ body.smbitClass-desktop {
         align-items: center;
         min-height: 100vh;
         margin: auto auto;
+    }
+
+    body {
+        background-image: url('/situs/assets/nanas_toto/desktop/images/nanastoto_background_default.jpg');
+        background-attachment: fixed;
     }
 }
