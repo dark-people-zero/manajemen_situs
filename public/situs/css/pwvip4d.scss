@@ -429,30 +429,34 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: linear-gradient(to bottom, #bf7107 30%, #ffff8c 100%);
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
 
-            li{
-                width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+            &:hover {
+                background: linear-gradient(to bottom, #e6bf07 20%, #fffff0 80%);
+                color: #323521;
+
             }
+
+            // li{
+            //     width: 100%;
+            //     &:not(:last-child) {
+            //         border-bottom: 1px solid #adadad;
+            //     }
+            // }
             .linkalte-item {
                 display: flex;
                 padding: 8px;
-                color: #777777;
+                color: #32352d;
                 font-weight: 600;
                 text-decoration: none;
 
-                &:hover {
-                    background: #837f77;
-                    color: #fff;
-                }
             }
         }
 
