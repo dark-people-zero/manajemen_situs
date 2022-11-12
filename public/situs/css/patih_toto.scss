@@ -428,29 +428,36 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: #fff;
+            background: linear-gradient(to bottom, #00000000 50%, #000000 100%);
+            border-bottom: 1px solid #f0e981;
+            border-radius: 0px 0px 28px 28px;
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
+            &:hover {
+                background: linear-gradient(to bottom, #000000 80%, #000000 20%);
+                text-decoration: none;
+                }
 
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
-                color: #777777;
+                color: #e5d194;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
-                    background: #837f77;
-                    color: #fff;
+
+                    color: #ebcf7b;
                 }
             }
         }
