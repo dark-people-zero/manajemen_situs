@@ -371,7 +371,7 @@ body.smbitClass-mobile {
             .modal-body {
                 .deskripsi {
                     color: white;
-                    background-color: rgb(188, 156, 8);
+                    background-color: rgb(167, 157, 122);
                     margin-left: 0px;
                     margin-right: 0px;
                     margin-top: 10px;
@@ -452,6 +452,7 @@ body.smbitClass-desktop {
             // }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
                 color: #32352d;
                 font-weight: 600;

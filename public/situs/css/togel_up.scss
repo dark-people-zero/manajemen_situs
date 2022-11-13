@@ -212,7 +212,7 @@ body.smbitClass-mobile {
             }
             .deskripsi {
                 color: white;
-                background-color: rgb(188, 156, 8);
+                background-color:#03b7c0;
                 margin-left: 0px;
                 margin-right: 0px;
                 margin-top: 10px;
@@ -398,6 +398,25 @@ body.smbitClass-mobile {
 body.smbitClass-desktop {
     background-image: url('/situs/assets/togel_up/desktop/images/togelup_background_default.jpg');
     background-attachment: fixed;
+
+    .news-head {
+        background-image: -webkit-linear-gradient(top, #03b7c0 0%, #026c87 100%) !important;
+    }
+    .news-body {
+        background: #060b16 !important;
+
+    }
+    .masking {
+        .run-text-depan {
+        color: white !important;
+      }
+    }
+    .navbar-fixed-top {
+        max-width: 1170px;
+        margin: auto;
+        background-color: #0b0d0b;
+        display: flex;
+    }
 
     .section {
         .container {
@@ -812,6 +831,29 @@ body.smbitClass-desktop {
         .btn {
             width: 100%;
         }
+        .btn-theme{
+
+            background: #ffffff;
+            background-image: -webkit-linear-gradient(top, #03b7c0 0%, #026c87 100%);
+            box-shadow: inset 0px 0px 0px 1px rgb(185 216 94 / 21%), inset 0px 2px 0px 0px rgb(49 180 198 / 0%), inset 0px 0px 0px 2px rgb(49 139 143 / 1%), 1px 1px 3px 2px rgb(0 0 0 / 16%);
+            border: 1px solid #0b324f !important;
+            background-repeat: repeat-x !important;
+            color: #e6e6e6 !important;
+            border-width: 0 !important;
+            border-radius: 10px 50px 10px 10px !important;
+            letter-spacing: 2px !important;
+            font-weight: bolder !important;
+            text-shadow: 0px 1px 9px rgb(0 0 0 / 50%);
+
+        }
+        .btn-theme:hover {
+            border-color: #b9d85e;
+            background-color: #b9d85e;
+            background: -webkit-linear-gradient(#b9d85e, #b9d85e);
+        }
+
+
+
 
         .btn-custom {
             background: #fffcdd;
@@ -850,6 +892,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-secondary {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #ff9eb4 0%, #f74f75 100%);
                 background-image: linear-gradient(to bottom, #ff9eb4 0%, #f74f75 100%);
@@ -865,6 +908,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-success {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #05ecc6 0%, #016a59 100%);
                 background-image: linear-gradient(to bottom, #05ecc6 0%, #016a59 100%);
@@ -879,6 +923,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-info {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #afe7fd 0%, #4ec2f0 100%);
                 background-image: linear-gradient(to bottom, #afe7fd 0%, #4ec2f0 100%);
@@ -894,6 +939,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-warning {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #fadcaf 0%, #ffbd5a 100%);
                 background-image: linear-gradient(to bottom, #fadcaf 0%, #ffbd5a 100%);
@@ -908,6 +954,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-danger {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f34343 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #f34343 100%);
@@ -922,6 +969,7 @@ body.smbitClass-desktop {
             }
 
             &.btn-light {
+                color: #ffffff;
                 border-radius: 10px 50px 10px 10px !important;
                 background-image: -webkit-linear-gradient(top, #fffcdd 0%, #f9f9fb 100%);
                 background-image: linear-gradient(to bottom, #fffcdd 0%, #f9f9fb 100%);
@@ -974,28 +1022,129 @@ body.smbitClass-desktop {
     footer {
         &#footer {
             border-top: 0;
-            background-color: #060b16;
+            background-color: transparent;
+            .footer-bottom {
+                background-color: transparent;
+                padding: 0;
+                .container {
+                    padding: 0;
+                    .row {
+                        margin: 0;
+                        .row {
+                            margin: 0;
+                            background: #0b0d0b;
+                            div {
+                                padding: 0;
+                            }
+                        }
+                    }
 
-            .before-footer {
-                h2 {
-                    margin: 20px 0;
-                    color: #63a3ab;
+                    .copyright {
+                        border-top: 1px solid #c2dc5c !important;
+                        background: #01232e !important;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+
+            .footer-main {
+                background-color: #060b16;
+                padding: 5px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .footer-info {
                     text-align: center;
-                }
-                p.deskripsi {
-                    font-size: large;
-                    text-align: -webkit-center;
-                }
-            }
-            .footer-bottom .copyright {
-                border-top: 1px solid #c2dc5c !important;
-                background: #01232e !important;
-            }
+                    border-image-width: 100px;
+                    padding-bottom: 10px;
+                    text-align: center;
 
+                    .footer-info-title {
+                        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                        color: #55e3ff;
+                        margin-top: 10px;
+                    }
 
-            .footer-protection {
-                text-align: center;
-                margin-top: 20px;
+                    .footer-info-deskripsi {
+                        color: #ffffff;
+                        font-size: 12px;
+
+                        a {
+                            font-weight: bold;
+                            color: #55e3ff;
+                        }
+                    }
+                }
+
+                .footer-link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    margin: 10px 0;
+                    row-gap: 15px;
+                    .footer-sosmed {
+                        display: flex;
+                        .item {
+                            position: relative;
+                            max-width: 180px;
+                            img {
+                                transform: scale(.9);
+                            }
+                            span {
+                                position: absolute;
+                                z-index: 2;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                left: 0;
+                                display: flex;
+                                top: -1px;
+                                height: 100%;
+                                width: 100%;
+                                justify-content: center;
+                                margin-left: 27px;
+                                align-items: center;
+                            }
+
+                            &:hover {
+                                span {
+                                    text-shadow: 0px 0px 5px #00e6d4cc;
+                                    color: #55e3ff;
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-link-default {
+                        display: flex;
+                        column-gap: 5px;
+                        a {
+                            line-height: 11px;
+                            display: block;
+                            background: #161e28;
+                            border-radius: 10px;
+                            color: #fff;
+                            padding: 4px 16px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            border: 1px solid #fff;
+                            border-width: 1px 0;
+
+                            &.active,
+                            &:hover {
+                                border-color: #55e3ff;
+                                color: #55e3ff;
+                            }
+
+                            &:hover {
+                                box-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

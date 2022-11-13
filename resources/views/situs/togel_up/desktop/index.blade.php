@@ -719,28 +719,28 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-main">
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="row" style="display: flex;">
-                            <div class="col-3 col-sm-3"></div>
-                            <div class="col-3 col-sm-3">
-                                <img src="{{ asset('situs/assets/togel_up/desktop/assets/img/idnplay_w.png') }}"
-                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
-                            </div>
-                            <div class="col-3 col-sm-3">
-                                <img src="{{ asset('situs/assets/togel_up/desktop/assets/img/pagcorlogo2.png') }}"
-                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
-                            </div>
-                            <div class="col-3 col-sm-3"></div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="row" style="display: flex;">
+                        <div class="col-3 col-sm-3"></div>
+                        <div class="col-3 col-sm-3">
+                            <img src="{{ asset('situs/assets/togel_up/desktop/assets/img/idnplay_w.png') }}"
+                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                         </div>
-                        <div class="col-md-12 copyright">
-                            &copy; Copyright 2014 - 2022 <a href="#">togelup176.com</a>. All Rights Reserved.
+                        <div class="col-3 col-sm-3">
+                            <img src="{{ asset('situs/assets/togel_up/desktop/assets/img/pagcorlogo2.png') }}"
+                                style="overflow: inherit !important;width: 100%;padding: 10px;">
                         </div>
+                        <div class="col-3 col-sm-3"></div>
+                    </div>
+                    <div class="col-md-12 copyright">
+                        &copy; Copyright 2014 - 2022 <a href="#">togelup176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
+
         </div>
     </footer>
     <div class="scroll-top">
