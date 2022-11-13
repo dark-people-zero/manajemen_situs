@@ -473,6 +473,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="promo">
+                        <div class="promosi2">
+                            <a href="/" target="_blank">
+                                <img src="{{ asset('situs/assets/togel_up/desktop/images/promo2.jpg') }}"
+                                    alt="${data.name}">
+                            </a>
+                        </div>
+                    </div>
 
                     <!-- LATEST RESULTS -->
                     <div id="latest-results" class="margin-top-15">
