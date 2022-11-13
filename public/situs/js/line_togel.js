@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-XRK7N3620T");
+    gtag("config", "UA-116786350-1");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -55,7 +55,7 @@ const func = {
                             </div>
                             <div class="modal-body">
                                 <img src="${data.file}" width="600" height="350" class="imgads">
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+
                             </div>
                         </div>
                     </div>
@@ -172,52 +172,44 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-                    <div class="icon-item">
-                        <a href="${e.link}" target="_blank">
-                            <img src="${e.image}" alt="${e.name}">
-                        </a>
-                    </div>
+                    <a href="${e.link}" target="_blank" class="item">
+                        <img src="${e.image}">
+                        <span>${e.name}</span>
+                    </a>
                 `;
             }).join("");
 
-            var template = $(`
-                <div class="icon-sosmed">
-                    <div class="icon-info">${data.ket}</div>
-                    <div class="icon-container">${icon}</div>
-                </div>
-            `);
+            var template = $(`<div class="footer-sosmed">${icon}</div>`);
 
-            $(".blog-posts").append(template);
+            $("#footer .footer-main .footer-link").prepend(template);
         },
         promosi: (data) => {
-            $(`
+            var template =  $(`
                 <div class="promosi">
                     <a href="${data.link}" target="_blank" title="${data.name}">
                         <img src="${data.image}" alt="${data.name}">
                     </a>
                 </div>
-            `).insertBefore($("#latest-results"));
+            `);
+            $(".promo").prepend(template);
         },
         beforeFooter: (data) => {
             var template = $(`
-                <div class="before-footer container">
-                <center><h2 class="tittle">${data.title}</h2></center>
-                <p class="deskripsi">${data.deskripsi}</p>
+                <div class="footer-info">
+                    <h2 class="footer-info-title">${data.title}</h2>
+                    <p class="footer-info-deskripsi">${data.deskripsi}</p>
                 </div>
             `);
-
             $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
             var template = $(`
-                <div class="container footer-protection">
-                    <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
-                        <img alt="${data.name}" src="${data.image}">
-                    </a>
-                </div>
+                <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
+                    <img alt="${data.name}" src="${data.image}">
+                </a>
             `);
 
-            $("#footer .footer-main .footer-bottom").append(template);
+            $("#footer .footer-bottom .copyright").append(template);
         },
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
@@ -289,6 +281,48 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        defaultFooter: () => {
+            var target = $("#footer");
+            var main = target.find(".footer-main");
+            if (main.length == 0) {
+                main = $("<div class='footer-main'></div>");
+                target.prepend(main);
+            }
+
+            main.addClass("container");
+
+            var pathName = document.location.pathname.replaceAll("/","");
+
+            var active = {
+                home: pathName.search("index.php") >= 0 ? true : false,
+                cara: pathName.search("how-to-play.php") >= 0 ? true : false,
+                histori: pathName.search("hasil_lengkap.php") >= 0 ? true : false,
+                buku: pathName.search("bukumimpi.php") >= 0 ? true : false,
+                bantuan: pathName.search("support2.php") >= 0 ? true : false,
+                ref: pathName.search("inforeferral.php") >= 0 ? true : false,
+                promosi: pathName.search("promotion.php") >= 0 ? true : false,
+                daftar: pathName.search("register.php") >= 0 ? true : false,
+
+            }
+
+
+            var link = $(`
+                <div class="footer-link">
+                    <div class="footer-link-default">
+                    <a class="${active.home ? 'active' : ''}" href="/index.php">Home</a>
+                    <a class="${active.cara ? 'active' : ''}" href="/how-to-play.php">Cara Bermain</a>
+                    <a class="${active.histori ? 'active' : ''}" href="/hasil_lengkap.php">histori nomor</a>
+                    <a class="${active.buku ? 'active' : ''}" href="/bukumimpi.php">buku mimpi</a>
+                    <a class="${active.bantuan ? 'active' : ''}" href="/support2.php">bantuan</a>
+                    <a class="${active.ref ? 'active' : ''}" href="/inforeferral.php">refferal</a>
+                    <a class="${active.promosi ? 'active' : ''}" href="/promotion.php">promosi</a>
+                    <a class="${active.daftar ? 'active' : ''}" href="register.php">daftar</a>
+                    </div>
+                </div>
+            `);
+
+            main.append(link);
         }
     },
     mobile: {
@@ -504,9 +538,10 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/23",
+            url: "/config/15",
             dataType: "json",
             success: function (response) {
+                func.desktop.defaultFooter();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
@@ -548,7 +583,6 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);

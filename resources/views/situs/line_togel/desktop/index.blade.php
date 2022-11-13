@@ -18,17 +18,36 @@
     <link rel="icon" type="image/png"
         href="{{ asset('/situs/assets/line_togel/desktop/assets/img/ei/favicon.png') }}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116786350-1"></script>
+    <link rel="stylesheet" href="{{ asset('situs/css/line_togel.css') }}" type="text/css">
     <script>
-        window.dataLayer = window.dataLayer || [];
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
 
-        gtag('config', 'UA-116786350-1');
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/line_togel.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-116786350-1";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
     </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
         href="{{ asset('/situs/assets/line_togel/desktop/assets/img/ei/favicon50fb.png?v=1667755064') }}" />
@@ -130,14 +149,11 @@
 
 
 
-    <!-- disini masukkin scrip kita -->
 
-    <link rel="stylesheet" href="{{ asset('situs/css/line_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/line_togel.js') }}" type="text/javascript"></script>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116786350-1"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -735,28 +751,28 @@
     </section>
     <!-- END BANK -->
     <footer id="footer">
-        <div class="footer-main">
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="row" style="display: flex;">
-                            <div class="col-3 col-sm-3"></div>
-                            <div class="col-3 col-sm-3">
-                                <img src="{{ asset('/situs/assets/line_togel/desktop/assets/img/idnplay_w.png') }}"
-                                    style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
-                            </div>
-                            <div class="col-3 col-sm-3">
-                                <img src="{{ asset('/situs/assets/line_togel/desktop/assets/img/pagcorlogo2.png') }}"
-                                    style="overflow: inherit !important;width: 100%;padding: 10px;">
-                            </div>
-                            <div class="col-3 col-sm-3"></div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="row" style="display: flex;">
+                        <div class="col-3 col-sm-3"></div>
+                        <div class="col-3 col-sm-3">
+                            <img src="{{ asset('/situs/assets/line_togel/desktop/assets/img/idnplay_w.png') }}"
+                                style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                         </div>
-                        <div class="col-md-12 copyright">
-                            &copy; Copyright 2014 - 2022 <a href="#">linetogel176.com</a>. All Rights Reserved.
+                        <div class="col-3 col-sm-3">
+                            <img src="{{ asset('/situs/assets/line_togel/desktop/assets/img/pagcorlogo2.png') }}"
+                                style="overflow: inherit !important;width: 100%;padding: 10px;">
                         </div>
+                        <div class="col-3 col-sm-3"></div>
+                    </div>
+                    <div class="col-md-12 copyright">
+                        &copy; Copyright 2014 - 2022 <a href="#">linetogel176.com</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
+
         </div>
     </footer>
     <div class="scroll-top">
@@ -845,7 +861,7 @@
     </script>
     <script src="{{ asset('/situs/assets/line_togel/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <!-- <script src="{{ asset('/situs/assets/line_togel/desktop/assets/js/vendor/vticker/jquery.vticker.min.js" ></') }}script> -->
-                          <script src="
+                                                                          <script src="
         {{ asset('/situs/assets/line_togel/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}">
     </script>
   <script src="{{ asset('/situs/assets/line_togel/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
