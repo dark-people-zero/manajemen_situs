@@ -538,7 +538,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/15",
+            url: "/config/21",
             dataType: "json",
             success: function (response) {
                 func.desktop.defaultFooter();
