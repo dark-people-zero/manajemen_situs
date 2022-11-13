@@ -503,7 +503,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/23",
+            url: "/config/8",
             dataType: "json",
             success: function (response) {
                 if (response) {                   
