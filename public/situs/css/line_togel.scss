@@ -396,6 +396,152 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/line_togel/desktop/images/linetogel_background_default.jpg');
     background-attachment: fixed;
 
+    // start header atas
+    .navbar-fixed-top {
+        max-width: 1170px;
+        margin: auto;
+        background-color: #001d23;
+        display: flex;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            .navbar-header {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-left: 10px;
+                .navbar-brand {
+                    margin: 0 !important;
+
+                    &.skrollable-after {
+                        margin-top: 18px !important;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+                display: flex !important;
+                align-items: center;
+                margin-right: 10px;
+                .row {
+                    margin: 0;
+                    .col-sm-7 {
+                        margin-left: 0 !important;
+                        text-align: unset !important;
+                        width: 100% !important;
+                        padding: 0;
+                        float: none;
+
+                        form {
+                            display: flex;
+                            column-gap: 20px;
+                            .form-group {
+                                width: auto;
+                                padding: 0;
+                                margin: 0 !important;
+
+                                .form-control {
+                                    background: #11111de6 !important;
+                                    border: 0.5px solid #0f1320 !important;
+                                    margin: 0 !important;
+                                }
+                                .form-control:focus{
+                                    border-color: #4ec3d6 !important;
+                                }
+                            }
+
+                            .login {
+                                margin-right: 20px !important;
+                                padding: 8px 19px;
+                                border-width: 0 !important;
+                                -webkit-transition: all 0.2s ease-out !important;
+                                -moz-transition: all 0.2s ease-out !important;
+                                transition: all 0.2s ease-out !important;
+                                font-weight: 600 !important;
+                                letter-spacing: 2px !important;
+                                color: #ffffff !important;
+                                padding: 7px 9px !important;
+                                border-radius: 10px !important;
+                                border: 1px solid #64d0e7 !important;
+                                background: linear-gradient( to bottom, #3799ae 0%, #262643 50%, #3799ae 100% ) !important;
+                                text-shadow: -1px -1px 1px rgb(0 0 0 / 50%) !important;
+                            }
+
+                            .login:hover {
+                                color: #ffffff;
+                                background-color: #0b0d0b !important;
+                                background: -webkit-linear-gradient(#0b0d0b , #0b0d0b ) !important;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    // end header atas
+
+    // start header info
+    .breadcrumbs {
+        padding-top: 20px;
+        ~div {
+            .container {
+                margin-top: 20px !important;
+
+                .row {
+                    .news-head {
+                        border-bottom-left-radius: 50px;
+                        border-bottom: 1px solid #4ccce5;
+                        background: #0d102f !important;
+                        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                         color: #55e3ff;
+
+                    }
+
+                    .news-body {
+                        background-image: none;
+                        background: #0d102f !important;
+                        border-bottom: 1px solid #4ccce5;
+                        border-bottom-right-radius: 50px;
+
+                        .masking {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // end header info
+
+
+
+    .news-head {
+        background: #111a2dc2 !important;
+        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+        color: #55e3ff;
+    }
+    .news-body {
+        background: #060b16 !important;
+
+    }
+    .masking {
+        .run-text-depan {
+            text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+            color: #55e3ff;
+
+      }
+    }
+    .navbar-fixed-top {
+        max-width: 1170px;
+        margin: auto;
+        background: #111a2dc2 !important;
+        display: flex;
+    }
     .section {
         .container  {
             background-color: #00000075;
@@ -410,6 +556,36 @@ body.smbitClass-desktop {
             }
         }
     }
+
+    .results {
+        background: rgba(44, 76, 102, 0.35) !important;
+        border-bottom: 1px #0080d8 solid !important;
+    }
+
+    .blog-sidebar{
+    .nav.menu {
+        li {
+            a {
+                border-bottom: 1px solid #323436 !important;
+                border-bottom-width: 1px !important;
+                border-bottom-style: solid !important;
+                border-bottom-color: rgb(0, 132, 220) !important;
+
+
+                &:hover {
+                    color: #fff !important;
+                    background: #316d857a !important;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+
 
     .linkalte-container {
 
@@ -439,9 +615,9 @@ body.smbitClass-desktop {
 
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    // border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
@@ -530,7 +706,7 @@ body.smbitClass-desktop {
     }
 
     // list image gameicon
-    $listImage: 'linetogel_singapore.png', 'linetogel_hongkong.png', 'linetogel_sydney.png', 'linetogel_nevada.png', 'linetogel_cambodia.png', 'linetogel_bullseye.png', 'linetogel_carolinaday.png', 'linetogel_totomacau.png', 'linetogel_china.png', 'linetogel_california.png', 'linetogel_florida.png', 'linetogel_newyork.png', 'linetogel_oregon.png', 'linetogel_taiwan.png', 'linetogel_sicboball.png', 'linetogel_sicbodice.png', 'linetogel_12d.png', 'linetogel_dice6.png', 'linetogel_24d.png', 'linetogel_roullete.png', 'linetogel_baccarat.png', 'linetogel_pokerdice.png', 'linetogel_suwit.png', 'linetogel_dragontiger.png', 'linetogel_oglok.png', 'linetogel_idn4stand.png', 'linetogel_roullete2.png', 'linetogel_headandtail.png', 'linetogel_monopoly.png', 'linetogel_5dball.png', 'linetogel_gongball.png', 'linetogel_billiard.png', 'linetogel_3dshio.png', 'linetogel_raceball.png', 'linetogel_fantan.png', 'linetogel_niuniu.png', 'linetogel_pgsoft.png', 'linetogel_pragmaticplay.png', 'linetogel_idnslot.png', 'linetogel_microgaming.png', 'linetogel_toptrend.png', 'linetogel_habanero.png', 'linetogel_comingsoon.png';
+    $listImage: 'linetogel_singapore.png', 'linetogel_hongkong.png', 'linetogel_sydney.png', 'linetogel_nevada.png', 'linetogel_cambodia.png', 'linetogel_bullseye.png', 'linetogel_carolinaday.png', 'linetogel_totomacau.png', 'linetogel_china.png', 'linetogel_california.png', 'linetogel_florida.png', 'linetogel_newyork.png', 'linetogel_oregon.png', 'linetogel_taiwan.png', 'linetogel_sicboball.png', 'linetogel_sicbodice.png', 'linetogel_12d.png', 'linetogel_dice6.png', 'linetogel_24d.png', 'linetogel_roullete.png', 'linetogel_baccarat.png', 'linetogel_pokerdice.png', 'linetogel_suwit.png', 'linetogel_dragontiger.png', 'linetogel_oglok.png', 'linetogel_idn4stand.png', 'linetogel_roullete2.png', 'linetogel_headandtail.png', 'linetogel_monopoly.png', 'linetogel_5dball.png', 'linetogel_gongball.png', 'linetogel_billiard.png', 'linetogel_3dshio.png', 'linetogel_raceball.png', 'linetogel_fantan.png', 'linetogel_niuniu.png', 'linetogel_pgsoft.png', 'linetogel_pragmaticplay.png', 'linetogel_idnslot.png', 'linetogel_microgaming.png', 'linetogel_toptrend.png', 'linetogel_habanero.png';
 
     .gameicon {
         .owl-item {
@@ -548,6 +724,7 @@ body.smbitClass-desktop {
     }
 
     .headerApk {
+        margin-top: 20px !important;
         padding: 10px;
         color: #ffee27;
          background: linear-gradient(to right, #1b1b1b 0%, #383636 50%, #272626 100%);
@@ -616,6 +793,32 @@ body.smbitClass-desktop {
         .btn {
             width: 100%;
         }
+
+        .btn-theme {
+            border-width: 0 !important;
+            -webkit-transition: all 0.2s ease-out !important;
+            -moz-transition: all 0.2s ease-out !important;
+            transition: all 0.2s ease-out !important;
+            font-weight: 600 !important;
+            letter-spacing: 2px !important;
+            color: #ffffff !important;
+            padding: 7px 9px !important;
+            border-radius: 10px !important;
+            border: 1px solid #64d0e7 !important;
+            background: linear-gradient( to bottom, #3799ae 0%, #262643 50%, #3799ae 100% ) !important;
+            text-shadow: -1px -1px 1px rgb(0 0 0 / 50%) !important;
+        }
+
+        .btn-theme:hover {
+            color: #ffffff;
+            background-color: #0b0d0b !important;
+            background: -webkit-linear-gradient(#0b0d0b , #0b0d0b ) !important;
+        }
+
+        .btn.btn-theme.login {
+            background-color: red !important;
+        }
+
 
         .btn-custom {
             background: #fffcdd;
@@ -780,33 +983,127 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 1px #0084dc solid !important;
-            background: #111a2dc2 !important;
-
+            border-top: 0;
+            background-color: transparent;
             .footer-bottom {
+                background-color: transparent;
+                padding: 0;
+                .container {
+                    padding: 0;
+                    .row {
+                        margin: 0;
+                        .row {
+                            margin: 0;
+                            background: transparent;
+                            div {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    .copyright {
+                        border-top: 1px #0084dc solid !important;
+                        background: #08071fb8 !important;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+
+            .footer-main {
+                border-top: 1px #0084dc solid !important;
                 background: #111a2dc2 !important;
+                padding: 5px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-            }
-
-            .before-footer {
-                border-bottom: 1px #0084dc solid !important;
-                h2 {
-                    margin: 20px 0;
-                    text-shadow: 0px 0px 5px #00ffff;
+                .footer-info {
                     text-align: center;
+                    border-image-width: 100px;
+                    padding-bottom: 10px;
+                    text-align: center;
+
+                    .footer-info-title {
+                        text-shadow: 0px 0px 5px rgb(0 255 255);
+                         color: #ffffff;
+                        margin-top: 10px;
+                    }
+
+                    .footer-info-deskripsi {
+                        color: #ffffff;
+                        font-size: 3;
+
+                        a {
+                            font-weight: bold;
+                            color: #55e3ff;
+                        }
+                    }
                 }
-                p.deskripsi {
-                    font-size: 4;
-                    color: #fff;
-                    text-align: -webkit-center;
 
+                .footer-link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    margin: 10px 0;
+                    row-gap: 15px;
+                    .footer-sosmed {
+                        display: flex;
+                        .item {
+                            position: relative;
+                            max-width: 180px;
+                            img {
+                                transform: scale(.9);
+                            }
+                            span {
+                                position: absolute;
+                                z-index: 2;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                left: 0;
+                                display: flex;
+                                top: -1px;
+                                height: 100%;
+                                width: 100%;
+                                justify-content: center;
+                                margin-left: 27px;
+                                align-items: center;
+                            }
+
+
+                        }
+                    }
+
+                    .footer-link-default {
+                        display: flex;
+                        column-gap: 5px;
+                        a {
+                            line-height: 11px;
+                            display: block;
+                            background: rgb(21, 21, 41) !important;
+                            border-radius: 10px;
+                            color: #9c8860;
+                            padding: 4px 16px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            border: 1px solid #feb60a;
+                            border-width: 1px 0;
+                            padding: 8px;
+
+                            &.active,
+                            &:hover {
+                                border-color: #fff;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                box-shadow: 0px 0px 5px #fff;
+                            }
+                        }
+                    }
                 }
-            }
-
-            .footer-protection {
-
-                text-align: center;
-                margin-top: 20px;
             }
         }
     }

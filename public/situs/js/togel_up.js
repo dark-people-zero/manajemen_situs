@@ -184,13 +184,14 @@ const func = {
             $("#footer .footer-main .footer-link").prepend(template);
         },
         promosi: (data) => {
-            $(`
+            var template =  $(`
                 <div class="promosi">
                     <a href="${data.link}" target="_blank" title="${data.name}">
                         <img src="${data.image}" alt="${data.name}">
                     </a>
                 </div>
-            `).insertBefore($("#latest-results"));
+            `);
+            $(".promo").prepend(template);
         },
         beforeFooter: (data) => {
             var template = $(`
