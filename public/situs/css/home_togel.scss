@@ -396,6 +396,41 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/home_togel/desktop/images/hometogel_background_default.jpg');
     background-attachment: fixed;
 
+    .navbar-fixed-top {
+        background: #0b0d0b url('https://cdn.areabermain.club/slider/hometogel/headerlogo.jpg') top center !important;
+        max-width: 1170px;
+        margin: auto !important;
+    }
+
+    .breadcrumbs {
+        padding: 30px 0;
+    }
+
+    .btn.btn-theme.login {
+        margin-right: -26px;
+        box-shadow: inset 0px 0px 0px 1px rgb(255 191 0), inset 0px 2px 0px 0px rgb(255 170 0), inset 0px 0px 0px 2px rgb(255 189 0), 3px 3px 3px 1px rgb(0 0 0 / 20%);
+    border: 1px solid #c08716 !important;
+    background-repeat: repeat-x !important;
+    color: #1b2632 !important;
+    border-width: 0 !important;
+    border-radius: 15px 2px 15px 5px !important;
+    letter-spacing: 2px !important;
+    font-weight: bolder !important;
+    text-shadow: 0px 1px 9px rgb(0 0 0 / 50%);
+    }
+
+    button.btn-theme, .btn.btn-theme {
+        border-radius: 15px 2px 15px 5px !important;
+    }
+    
+    img.btn-img {
+        position: relative;
+        border-radius: 5px 15px 5px 15px;
+        box-shadow: 0px 3px rgb(255 133 0 / 70%);
+        top: 5px;
+        transition: .2s;
+    }
+
     .section {
         .container {
             .blog-posts {
@@ -408,6 +443,14 @@ body.smbitClass-desktop {
                 }
             }
         }
+    }
+
+    .tickercontainer .masking{
+        margin-top: 5px;
+    }
+    element.style {
+        margin-top: 5px;
+        padding-bottom: 5px;
     }
 
     .linkalte-container {

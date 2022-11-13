@@ -268,6 +268,10 @@
                     <div class="sidebar-button" align="center">
                         <a class="btn btn-theme" href="javascript:void(0);">Daftar</a>
                     </div>
+                    <div style="margin-top:5px;padding-bottom: 5px;">
+                        <a title="Live Draw Hongkong" href="https://68.183.185.124/" target="_blank" rel="nofollow"><img class="btn-img" src="https://cdn.areabermain.club/slider/hometogel/livedraw.png"></a>
+                    </div>
+
                     <!-- END NAV -->
                     <div class="results">
                         <h4><i class="fa fa-calendar"></i>Hasil Terakhir</h4>
@@ -454,184 +458,13 @@
                     <div id="latest-results" class="margin-top-15">
 
                         <div class="owl-carousel owl-theme gameicon">
+                            @for( $i = 0; $i < 42; $i++)
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}'
                                     width='210px' height='210px'>
                             </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}'
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('situs/assets/home_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}'>
-                            </div>
-
+                            @endfor
+                            
                         </div>
                     </div>
                 </div>

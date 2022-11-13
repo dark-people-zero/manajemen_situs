@@ -114,10 +114,11 @@
     <noscript><a href="https://www.livechatinc.com/chat-with/13772577/" rel="nofollow">Chat with us</a>, powered by <a
             href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
+    {{-- <script src="{{ asset('situs/assets/indra_togel/desktop/assets/js/jquery.js') }}"></script> --}}
 
     <!-- disini script kita -->
-    <link rel="stylesheet" href="{{ asset('situs/css/maria_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/maria_togel.js') }}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/indra_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G91HRC62B7"></script>
@@ -433,7 +434,7 @@
                 </div> <!-- BEGIN SLIDER -->
                 <div class="col-sm-9 blog-posts">
                     <div id="slider" class="slider">
-
+                        
                         <div class="owl-carousel owl-theme">
 
                             <div class="item">
@@ -454,150 +455,14 @@
                     <div id="latest-results" class="margin-top-15">
 
                         <div class="owl-carousel owl-theme gameicon">
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-BULLSEYEf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-SYDNEYf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-CHINAf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-SINGAPOREf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-MAGNUM4Df9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-hongkongf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}"
-                                    width='210px' height='210px'></div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}>
+                            @for ($i = 0; $i < 42; $i++)
+
+                            <div class="item slides" data-animation="fadeIn" style='text-align:center'>
+                                <img src="{{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1') }}" width='210px' height='210px'>
                             </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src={{ asset('situs/assets/maria_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}>
-                            </div>
+
+                            @endfor
+                            
                         </div>
                     </div>
                 </div>
