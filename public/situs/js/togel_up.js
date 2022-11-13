@@ -6,7 +6,7 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "UA-112804824-13");
+    gtag("config", "UA-112804824-5");
 
     // untuk hapus modal default
     var clrModal = setInterval(() => {
@@ -55,7 +55,7 @@ const func = {
                             </div>
                             <div class="modal-body">
                                 <img src="${data.file}" width="600" height="350" class="imgads">
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+
                             </div>
                         </div>
                     </div>
@@ -522,7 +522,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/23",
+            url: "/config/15",
             dataType: "json",
             success: function (response) {
                 func.desktop.defaultFooter();

@@ -10,6 +10,36 @@
     <meta name="description"
         content="TOGELUP berdiri sebagai situs bandar judi togel online terbesar dan terpercaya yang menyediakan berbagai macam permainan live casino, slot online dan togel online dengan diskon terbesar di indonesia. Kami menjamin kemudahan  bertransaksi deposit dan withdraw melalui bank BCA, MANDIRI, BNI, BRI dan DANAMON. TOGELUP didirikan dengan prinsip fairplay dan kejujuran karena kenyamanan dan keamanan member adalah prioritas utama kami. Segera daftar dan dapatkan pengalaman bermain terbaik hanya di TOGELUP." />
 
+    <link rel="stylesheet" href="{{ asset('situs/css/togel_up.css') }}" type="text/css">
+    <script>
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
+
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
+
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/togel_up.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-112804824-5";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
+    </script>
+
     <style>
         body {
             color: #28c1d2 !important;
@@ -141,9 +171,10 @@
                                         <p id="hideshow" style="font-size: 18px;">&nbsp Show</p>
                                     </span>
                                     <input type="hidden" id="showhide" value="show">
-                                    <input id="navbar_password" type="password" tabindex="2" name="entered_password"
-                                        class="contactField requiredField center" value=""
-                                        placeholder="Password" onblur="if(this.value == '') { this.value='Password'}"
+                                    <input id="navbar_password" type="password" tabindex="2"
+                                        name="entered_password" class="contactField requiredField center"
+                                        value="" placeholder="Password"
+                                        onblur="if(this.value == '') { this.value='Password'}"
                                         onfocus="if (this.value == 'Password') {this.value=''}" required />
                                 </div>
                                 <div>
@@ -198,26 +229,9 @@
                             }
                         }
                     </script>
-                    {{-- <script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-frame.js"></script>
-<script type="text/javascript" src="../../static.augipt.com/assets/snippets/scripts/idn-togel-spa.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-5"></script> --}}
-                    <script>
-                        window.dataLayer = window.dataLayer || [];
 
-                        function gtag() {
-                            dataLayer.push(arguments);
-                        }
-                        gtag('js', new Date());
 
-                        gtag('config', 'UA-112804824-5');
-                    </script>
-
-                    {{-- tanda --}}
-
-                    <link rel="stylesheet" href="{{ asset('situs/css/togel_up.css') }}" type="text/css">
-                    <script src="{{ asset('situs/js/togel_up.js') }}" type="text/javascript"></script>
 
 
                     <link href="{{ asset('situs/assets/togel_up/mobile/login.css') }}" rel="stylesheet">

@@ -20,18 +20,38 @@
     <link rel="shortcut icon" href="../cdn.areabermain.club/slider/togelup/favicon.png">
     <meta name="google-site-verification" content="vOzAEoidHwZ1DBH5qZZ-C8DIcYQ7XEim4JSlkcFOLIM" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-5"></script>
+    {{-- taruh script disini --}}
+    <link rel="stylesheet" href="{{ asset('situs/css/togel_up.css') }}" type="text/css">
     <script>
-        window.dataLayer = window.dataLayer || [];
+        var intv = setInterval(() => {
+            var body = document.querySelector("body");
+            if (body) {
+                clearInterval(intv);
+                var frame = document.createElement("script");
+                frame.type = "text/javascript";
+                frame.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-frame.js";
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+                var spa = document.createElement("script");
+                spa.type = "text/javascript";
+                spa.src = "https://static.augipt.com/assets/snippets/scripts/idn-togel-spa.js";
 
-        gtag('config', 'UA-112804824-5');
+                var fiaJs = document.createElement("script");
+                fiaJs.type = "text/javascript";
+                fiaJs.src = "/situs/js/togel_up.js";
+
+                var gtag = document.createElement("script");
+                gtag.src = "https://www.googletagmanager.com/gtag/js?id=UA-112804824-5";
+                gtag.async = true;
+
+                body.appendChild(frame);
+                body.appendChild(spa);
+                body.appendChild(gtag);
+                body.appendChild(fiaJs);
+            }
+        }, 1);
     </script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico"
         href="{{ asset('situs/assets/togel_up/desktop/assets/img/lq/favicon802b.png?v=1666377906') }}" />
@@ -139,12 +159,8 @@
     <!-- End of LiveChat code -->
 
 
-    {{-- taruh script disini --}}
-    <link rel="stylesheet" href="{{ asset('situs/css/togel_up.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/togel_up.js') }}" type="text/javascript"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112804824-5"></script>
+
     <div class="mask">
         <div id="loader"></div>
     </div>
@@ -876,10 +892,7 @@
         }
     </script>
     <script type="text/javascript" src="{{ asset('situs/assets/togel_up/desktop/tgsecure/vbulletin_md5.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('situs/assets/togel_up/desktop/assets/idn/idn-togel-frame.js') }}">
-    </script>
-    <script type="text/javascript" src="{{ asset('situs/assets/togel_up/desktop/assets/idn/idn-togel-spa.js') }}">
-    </script>
+
 </body>
 
 </html>
