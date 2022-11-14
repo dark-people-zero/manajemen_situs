@@ -203,6 +203,8 @@ const func = {
                 <div class="before-footer container">
                 <center><h2 class="tittle">${data.title}</h2></center>
                 <p class="deskripsi">${data.deskripsi}</p>
+                <br>
+                <center><img src="https://cdn.areabermain.club/images/ft_banner.png"></<center>
                 </div>
             `);
 
@@ -548,7 +550,6 @@ const func = {
                         }
                     }else if(response.status_mobile && isMobile){
                         if (response.fitur_situs.mobile) {
-                            console.log(response.fitur_situs.mobile)
                             var length = response.fitur_situs.mobile.length;
                             response.fitur_situs.mobile.forEach((el, i) => {
                                 if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);

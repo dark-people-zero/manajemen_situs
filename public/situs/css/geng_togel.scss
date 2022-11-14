@@ -395,6 +395,40 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/geng_togel/desktop/images/gengtoto_background_default.jpg');
     background-attachment: fixed;
 
+    .navbar-fixed-top {
+        max-width: 100%;
+        margin: auto;
+        background-color: #1b1b1b;
+        display: flex;
+
+    }
+
+    // start header info
+    .breadcrumbs {
+        padding-top: 20px;
+        ~div {
+            .container {
+                background-color: #010506;
+                .row {
+                    .news-head {
+                        background: linear-gradient( to bottom, #383636 0%, #272626 51%, #404040 100% );
+
+                    }
+
+                    .news-body {
+                        background: linear-gradient( to bottom, #383636 0%, #272626 51%, #404040 100% );
+
+                        .masking {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // end header info
+
     .section {
         .container {
             .blog-posts {
@@ -434,6 +468,11 @@ body.smbitClass-desktop {
             transition: height 0.10s;
             border-bottom: 1px solid #540ce1;
 
+            &:hover {
+
+                background: rgba(102, 102, 102, 0.5);
+                }
+
 
             li{
                 width: 100%;
@@ -445,13 +484,14 @@ body.smbitClass-desktop {
                 display: flex;
                 justify-content: center;
                 padding: 8px;
-                color: #777777;
+                color: #fff;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
                     // background: rgba(0, 40, 65, 0.5);
-                    color: #55e3ff;
+
+                    color: #337ab7;
                 }
             }
         }
@@ -786,6 +826,42 @@ body.smbitClass-desktop {
         }
     }
 
+    .btn-theme {
+        border-radius: 9px;
+        background-image: linear-gradient( to bottom, #ffffff 0%, #989898 100% ) !important;
+        background: linear-gradient( to right, #1b1b1b 0%, #1d1d1d 50%, #090909 100% ) !important;
+        box-shadow: inset 0px 0px 0px 1px rgb(148 157 157), inset 0px 2px 0px 0px rgb(163 155 155 / 50%), inset 0px 0px 0px 2px #1163a7, 3px 3px 3px 1px rgb(0 0 0 / 15%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#989898', GradientType=0) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
+        background-repeat: repeat-x !important;
+        border: 1px solid #000000 !important;
+        color: #e5e5e5 !important;
+        border-width: 0 !important;
+        -webkit-transition: all 0.2s ease-out !important;
+        -moz-transition: all 0.2s ease-out !important;
+        transition: all 0.2s ease-out !important;
+        padding: 8px 12px !important;
+        letter-spacing: 2px !important;
+        font-weight: bolder !important;
+
+            &:hover {
+                color: #2076c5 !important;
+            }
+
+    }
+
+    .results {
+        background: #b5b5b5 !important;
+        background-image: -webkit-linear-gradient( top, #000000 0%, #171616 100% ) !important;
+        color: #62add2 !important;
+            h4 {
+                color : #fff;
+            }
+            .results-detail {
+                background: rgb(24, 26, 27) !important;
+            }
+    }
+
     .sidebar-button {
         padding: 0 15px;
         display: flex;
@@ -982,8 +1058,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
-
+            border-top: 8px solid #4a4a4a;
             .before-footer {
                 h2 {
                     color: #b4b4b4 !important;
@@ -995,6 +1070,11 @@ body.smbitClass-desktop {
                     font-size: 4;
                     color: #fff;
                     text-align: -webkit-center;
+                    a {
+                        font-weight: bold;
+                        color: #62add2;
+                    }
+
                 }
 
             }
