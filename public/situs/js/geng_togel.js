@@ -203,8 +203,6 @@ const func = {
                 <div class="before-footer container">
                 <center><h2 class="tittle">${data.title}</h2></center>
                 <p class="deskripsi">${data.deskripsi}</p>
-                <br>
-                <center><img src="https://cdn.areabermain.club/images/ft_banner.png"></<center>
                 </div>
             `);
 

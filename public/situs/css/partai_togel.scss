@@ -449,6 +449,7 @@ body.smbitClass-desktop {
             }
             .linkalte-item {
                 display: flex;
+                justify-content: center;
                 padding: 8px;
                 color: #777777;
                 font-weight: 600;
@@ -456,7 +457,7 @@ body.smbitClass-desktop {
 
                 &:hover {
                     // background: rgba(0, 40, 65, 0.5);
-                    color: #55e3ff;
+                    color: #428bca;
                 }
             }
         }
@@ -774,7 +775,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {

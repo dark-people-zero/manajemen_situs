@@ -965,7 +965,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #b18517;
 
             .before-footer {
                 h2 {
@@ -977,6 +977,12 @@ body.smbitClass-desktop {
                 p.deskripsi {
                     font-size: large;
                     text-align: -webkit-center;
+                }
+                a {
+                    color : #e4302f;
+                    &:hover {
+                        color: #428bca;
+                    }
                 }
             }
 

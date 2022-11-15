@@ -55,7 +55,7 @@ const func = {
                             </div>
                             <div class="modal-body">
                                 <img src="${data.file}" width="600" height="350" class="imgads">
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+
                             </div>
                         </div>
                     </div>
@@ -504,7 +504,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/5", 
+            url: "/config/5",
             dataType: "json",
             success: function (response) {
                 if (response) {
