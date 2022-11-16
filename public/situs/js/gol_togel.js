@@ -289,6 +289,27 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        defaultItem: () => {
+            let template = `
+            <div id="mySidenav" class="sidenav" style="width: 198px;">
+                <button type="button" class="closebtn" ></button>
+                <div class="sidewa1">+6281212245415</div> 
+                <div class="sidewa2">+6281228073293</div>    
+            </div>
+            <div>
+                <div class="contact-button" style="cursor:pointer"><img src="https://cdn.areabermain.club/slider/goltogel/open.jpg"></div>
+            </div>`
+       
+
+            $(template).append('body');
+
+            $( ".closebtn" ).click(function() {
+                $( "#mySidenav" ).animate({width: '0px'})
+            });
+            $( ".contact-button" ).click(function() {
+                $( "#mySidenav" ).animate({width: '198px'})
+            });
         }
     },
     mobile: {
