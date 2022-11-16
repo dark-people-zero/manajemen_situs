@@ -217,7 +217,7 @@ const func = {
 
             `);
 
-            $(template).insertAfter("copyright");
+            $(template).insertAfter(".copyright");
         },
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
