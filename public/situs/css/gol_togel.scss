@@ -536,6 +536,10 @@ body.smbitClass-desktop {
     }
 
     .bankscroll {
+
+        center {
+            display: none;
+        }
         .owl-wrapper {
             .owl-item {
                 .bank {
@@ -822,6 +826,10 @@ body.smbitClass-desktop {
                 max-height: 120px;
             }
         }
+    }
+
+    .btn-group.with-heading {
+        display: none;
     }
 
     footer {
