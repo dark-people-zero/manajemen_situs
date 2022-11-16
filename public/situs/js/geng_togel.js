@@ -289,6 +289,27 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        defaultItem: () => {
+            let template = `
+            <div id="mySidenav" class="sidenav" style="width: 0px;">
+                <button type="button" class="closebtn" ></button>
+                <div class="sidewa1">+6282137753501</div> 
+                <div class="sidewa2">+6281292936069</div>    
+            </div>
+            <div>
+                <div class="contact-button" style="cursor:pointer"><img src="https://cdn.areabermain.club/slider/gengtoto/open.jpg"></div>
+            </div>`
+       
+
+            $(template).insertBefore('#bank');
+
+            $( ".closebtn" ).click(function() {
+                $( "#mySidenav" ).animate({width: '0px'})
+            });
+            $( ".contact-button" ).click(function() {
+                $( "#mySidenav" ).animate({width: '198px'})
+            });
         }
     },
     mobile: {
@@ -507,6 +528,7 @@ const func = {
             url: "/config/3",
             dataType: "json",
             success: function (response) {
+                func.desktop.defaultItem();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {

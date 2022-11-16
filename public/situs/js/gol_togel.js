@@ -292,7 +292,7 @@ const func = {
         },
         defaultItem: () => {
             let template = `
-            <div id="mySidenav" class="sidenav" style="width: 198px;">
+            <div id="mySidenav" class="sidenav" style="width: 0px;">
                 <button type="button" class="closebtn" ></button>
                 <div class="sidewa1">+6281212245415</div> 
                 <div class="sidewa2">+6281228073293</div>    
@@ -302,7 +302,7 @@ const func = {
             </div>`
        
 
-            $(template).append('body');
+            $(template).insertBefore('#bank');
 
             $( ".closebtn" ).click(function() {
                 $( "#mySidenav" ).animate({width: '0px'})
@@ -528,10 +528,10 @@ const func = {
             url: "/config/24",
             dataType: "json",
             success: function (response) {
+                func.desktop.defaultItem();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
-                            func.desktop.defaultItem();
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {
                                 if (el.id_fitur == 1) {

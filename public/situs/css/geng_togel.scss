@@ -403,6 +403,57 @@ body.smbitClass-desktop {
 
     }
 
+    .sidenav {
+        background: rgba(0, 0, 0, 0) url('https://cdn.areabermain.club/gengtoto/images/contacts/contactus_gengtoto.png') no-repeat scroll 0 0;
+        height: 372px;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        position: fixed;
+        top: 110px;
+        transition: all 0.5s ease 0s;
+        width: 0;
+        z-index: 9998;
+
+        .closebtn {
+            background: rgba(0, 0, 0, 0) url('https://cdn.areabermain.club/slider/gengtoto/close.jpg') no-repeat scroll 0 0;
+            font-size: 36px;
+            margin-left: 50px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            
+        }
+
+        .sidewa1 {
+            font-weight: bold;
+            position: absolute;
+            left: 41px;
+            width: 83px;
+            height: 16px;
+            top: 50px;
+        }
+
+        .sidewa2 {
+            font-weight: bold;
+            position: absolute;
+            left: 41px;
+            width: 83px;
+            height: 16px;
+            top: 85px;
+        }
+    }
+    .contact-button {
+        height: 83px;
+        left: -1px;
+        position: fixed;
+        top: 110px;
+        width: 36px;
+    }
+
     // start header info
     .breadcrumbs {
         padding-top: 20px;
