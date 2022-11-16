@@ -829,7 +829,7 @@ body.smbitClass-desktop {
             border-top: 10px solid #252525;
 
             .before-footer {
-                text-align: center;
+  
                 h4.tittle {
                        font-size: 38px !important;
                         font-weight: 600 !important;
@@ -839,6 +839,7 @@ body.smbitClass-desktop {
                         text-shadow: 0px 1px 2px #aa8966 !important;
                 }
                 h4 {
+                    text-align: center;
                     color: #fdc21c;
                     font-size: 15px;
                     text-transform: uppercase;
@@ -850,7 +851,8 @@ body.smbitClass-desktop {
                     text-align: center;
                 }
                 p {
-                    font-size: 15px;
+                    text-align: center;
+                    font-size: 15px !important;
                 }
                 a {
                     color: #fdc21c;
