@@ -469,8 +469,8 @@ body.smbitClass-desktop {
             .owl-item {
                 .bank {
                     text-align: center;
-                    width: 168px !important;
-                    height: 82px !important;
+                    width: 145px !important;
+                    height: 74px !important;
                     padding: 0px !important;
                     background-color: rgba(0,0,0,0) !important;
                     border: none !important;
@@ -482,8 +482,8 @@ body.smbitClass-desktop {
                     margin-left: 0px;
 
                     img {
-                        width: 168px;
-                        height: 82px;
+                        width: 145px;
+                        height: 74px;
                     }
 
                     $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
@@ -755,12 +755,14 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #252525;
 
             .before-footer {
                 h2 {
                     margin: 20px 0;
-                    color: #fdc21c;
+                    color: #c7a46f !important;
+                    text-transform: uppercase !important;
+                    text-shadow: 0px 1px 2px #aa8966 !important;
                     text-align: center;
                 }
                 h4 {
@@ -772,6 +774,9 @@ body.smbitClass-desktop {
                     font-size: 4;
                     color: #dee1de !important;
                     text-align: center;
+                }
+                a {
+                    color: #fdc21c;
                 }
             }
 
