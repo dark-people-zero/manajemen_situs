@@ -210,14 +210,16 @@ const func = {
         },
         footerProtection: (data) => {
             var template = $(`
-
+    
                     <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
                         <img alt="${data.name}" src="${data.image}">
                     </a>
 
+
+
             `);
 
-            $(template).insertAfter(".copyright");
+            $(".copyright").append(template);
         },
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
