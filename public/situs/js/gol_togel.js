@@ -172,10 +172,12 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-                    <div class="icon-item">
-                        <a href="${e.link}" target="_blank">
-                            <img src="${e.image}" alt="${e.name}">
-                        </a>
+                    <div class="col-xs-10 col-lg-10 col-sm-10 col-md-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="margin-bottom: 10px; width: 800px;">
+                        <div class="contactusbg" style="margin-left: -85px; text-align: center; float: left">
+                            <a href="${e.link}" target="_blank">
+                                <img src="${e.image}" width="23" alt="${e.name}">${e.name}
+                            </a>
+                        </div>
                     </div>
                 `;
             }).join("");
@@ -187,7 +189,7 @@ const func = {
                 </div>
             `);
 
-            $(".blog-posts").append(template);
+            $(icon).insertBefore('.bankscroll');
         },
         promosi: (data) => {
             $(`
