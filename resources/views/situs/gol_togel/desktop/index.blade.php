@@ -23,6 +23,8 @@
     <link rel="icon" href="https://cdn.areabermain.club/slider/gologel/favicon.ico" type="image/x-icon" />
     <link href="../cdn.areabermain.club/slider/gologel/favicon.png" rel="shortcut icon"
         type="image/vnd.microsoft.icon" />
+        <link href="https://fonts.cdnfonts.com/css/gotham-extra-light" rel="stylesheet">
+                
     <link rel="shortcut icon" href="../cdn.areabermain.club/slider/gologel/favicon.png">
     <meta content="https://www.google.com/q=gologel/page=1" name="page google.com" />
     <meta content="https://www.google.co.id/q=gologel/page=1" name="page google.co.id" />
