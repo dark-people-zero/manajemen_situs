@@ -577,9 +577,7 @@
         </div>
     </section>
     <!-- END BANK -->
-    <style>
-  
-    </style>
+
     <footer id="footer">
         <div class="footer-main">
             <div class="container">
