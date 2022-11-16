@@ -172,22 +172,21 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-                    <div class="icon-item">
-                        <a href="${e.link}" target="_blank">
-                            <img src="${e.image}" alt="${e.name}">
-                        </a>
+  
+                    <div class="listnavcontact">
+                        <a href="${e.link}" target="_blank" style="text-decoration: none;background: url(${e.image});">${e.name}</a>
                     </div>
                 `;
             }).join("");
 
             var template = $(`
-                <div class="icon-sosmed">
-                    <div class="icon-info">${data.ket}</div>
-                    <div class="icon-container">${icon}</div>
+                <div class="contactlistnav">
+                    ${icon}
                 </div>
             `);
 
-            $(".blog-posts").append(template);
+            // $("#footer .footer-main").append(template);
+            $(template).insertBefore('.footer-bottom');
         },
         promosi: (data) => {
             $(`
@@ -289,6 +288,23 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        defaultFooter: () => {
+           let template = `<div>
+            <ul class="btmnv" >
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" >Cara Bermain</a></li>
+                <li><a href="#">History Nomor</a></li>
+                <li><a href="#">Buku Mimpi</a></li>
+                <li><a href="#">Bantuan</a></li>
+                <li><a href="#">Refferal</a></li>
+                <li><a href="#">Promosi</a></li>
+                <li><a href="#">Daftar</a></li>
+
+            </ul>
+        </div>`
+
+        $(template).insertBefore('.footer-bottom');
         }
     },
     mobile: {
@@ -588,6 +604,7 @@ const func = {
                 }else{
                     $("#loadingCustom").hide();
                 }
+                func.desktop.defaultFooter();
 
             }
         });

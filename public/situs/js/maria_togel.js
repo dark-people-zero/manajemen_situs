@@ -492,7 +492,10 @@ const func = {
 
     },
     load: () => {
-        var loc = document.location.href;
+        var loc = document.location.pathname;   
+        var loc2 = loc.split('/');
+        loc2 = loc2[loc2.length-1];
+        loc = loc2;
         var isMobile = /\/m\//g.test(loc) ? true : (/\/m/g.test(loc) ? true : (!$("html").hasClass("skrollr-desktop") ? true : false));
         if (isMobile) {
             $('body').addClass('smbitClass-mobile');

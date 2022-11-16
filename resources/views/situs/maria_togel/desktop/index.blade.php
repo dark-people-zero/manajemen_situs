@@ -117,8 +117,8 @@
     {{-- <script src="{{ asset('situs/assets/indra_togel/desktop/assets/js/jquery.js') }}"></script> --}}
 
     <!-- disini script kita -->
-    <link rel="stylesheet" href="{{ asset('situs/css/indra_togel.css') }}" type="text/css">
-    <script src="{{ asset('situs/js/indra_togel.js') }}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset('situs/css/maria_togel.css') }}" type="text/css">
+    <script src="{{ asset('situs/js/maria_togel.js') }}" type="text/javascript"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G91HRC62B7"></script>
@@ -509,7 +509,7 @@
                                 alt="Bank BRI" width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
+                            <div class="online bsi"></div>
                             <img src="{{ asset('situs/assets/maria_togel/desktop/assets/img/BSI.png') }}"
                                 alt="BSI" width=86px height=22px>
                         </div>
@@ -529,12 +529,12 @@
                                 alt="Bank DANAMON" width="85px" height="21px">
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
+                            <div class="online gopay"></div>
                             <img src="{{ asset('situs/assets/maria_togel/desktop/assets/img/GoPay.png') }}"
                                 alt="GOPAY" width=86px height=22px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
+                            <div class="online  linkaja"></div>
                             <img src="{{ asset('situs/assets/maria_togel/desktop/assets/img/linkaja.png') }}"
                                 alt="LINKAJA" width=86px height=22px>
                         </div>
@@ -549,7 +549,7 @@
                                 alt="Maybank Indonesia" width=86px height=25px>
                         </div>
                         <div class="item bank" data-animation="fadeIn">
-                            <div class="online"></div>
+                            <div class="online ovo"></div>
                             <img src="{{ asset('situs/assets/maria_togel/desktop/assets/img/ovo.png') }}"
                                 alt="OVO" width=86px height=22px>
                         </div>
