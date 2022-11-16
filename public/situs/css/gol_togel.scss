@@ -396,7 +396,7 @@ body.smbitClass-desktop {
     background-attachment: fixed;
 
     .contactusbg {
-        background: url(https://cdn.areabermain.club/slider/goltogel/socmed-bg.jpg) no-repeat;
+        background: url('https://cdn.areabermain.club/slider/goltogel/socmed-bg.jpg') no-repeat;
         width: 21.8%;
         height: 45px;
         background-size: 100%;
@@ -409,6 +409,10 @@ body.smbitClass-desktop {
             position: relative;
             top: 7px;
             text-decoration: none;
+
+            &:hover {
+                color: #ffbb1d;
+            }
         }
     }
 
