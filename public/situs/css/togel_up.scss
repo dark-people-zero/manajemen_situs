@@ -399,6 +399,27 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/togel_up/desktop/images/togelup_background_default.jpg');
     background-attachment: fixed;
 
+    .btn-theme{
+
+        background: #ffffff;
+        background-image: -webkit-linear-gradient(top, #03b7c0 0%, #026c87 100%);
+        box-shadow: inset 0px 0px 0px 1px rgb(185 216 94 / 21%), inset 0px 2px 0px 0px rgb(49 180 198 / 0%), inset 0px 0px 0px 2px rgb(49 139 143 / 1%), 1px 1px 3px 2px rgb(0 0 0 / 16%);
+        border: 1px solid #0b324f !important;
+        background-repeat: repeat-x !important;
+        color: #e6e6e6 !important;
+        border-width: 0 !important;
+        border-radius: 10px 50px 10px 10px !important;
+        letter-spacing: 2px !important;
+        font-weight: bolder !important;
+        text-shadow: 0px 1px 9px rgb(0 0 0 / 50%);
+
+    }
+    .btn-theme:hover {
+        border-color: #b9d85e;
+        background-color: #b9d85e;
+        background: -webkit-linear-gradient(#b9d85e, #b9d85e);
+    }
+
     .news-head {
         background-image: -webkit-linear-gradient(top, #03b7c0 0%, #026c87 100%) !important;
     }
@@ -831,26 +852,7 @@ body.smbitClass-desktop {
         .btn {
             width: 100%;
         }
-        .btn-theme{
 
-            background: #ffffff;
-            background-image: -webkit-linear-gradient(top, #03b7c0 0%, #026c87 100%);
-            box-shadow: inset 0px 0px 0px 1px rgb(185 216 94 / 21%), inset 0px 2px 0px 0px rgb(49 180 198 / 0%), inset 0px 0px 0px 2px rgb(49 139 143 / 1%), 1px 1px 3px 2px rgb(0 0 0 / 16%);
-            border: 1px solid #0b324f !important;
-            background-repeat: repeat-x !important;
-            color: #e6e6e6 !important;
-            border-width: 0 !important;
-            border-radius: 10px 50px 10px 10px !important;
-            letter-spacing: 2px !important;
-            font-weight: bolder !important;
-            text-shadow: 0px 1px 9px rgb(0 0 0 / 50%);
-
-        }
-        .btn-theme:hover {
-            border-color: #b9d85e;
-            background-color: #b9d85e;
-            background: -webkit-linear-gradient(#b9d85e, #b9d85e);
-        }
 
 
 
@@ -1008,13 +1010,9 @@ body.smbitClass-desktop {
         }
     }
 
-    .promo {
-        margin: 10px 0;
-        display: flex;
-        justify-content: space-between;
 
         .promosi {
-            margin-top: -10px;
+            margin-top: 5px;
             a {
                 img {
                     width: 100%;
@@ -1023,18 +1021,6 @@ body.smbitClass-desktop {
                 }
             }
         }
-
-        .promosi2 {
-
-            a {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-height: 120px;
-                }
-            }
-        }
-    }
 
 
     footer {

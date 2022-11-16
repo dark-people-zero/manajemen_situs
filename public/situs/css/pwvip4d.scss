@@ -212,7 +212,7 @@ body.smbitClass-mobile {
             }
             .deskripsi {
                 color: white;
-                background-color: rgb(188, 156, 8);
+                background-color: #a79d7a;
                 margin-left: 0px;
                 margin-right: 0px;
                 margin-top: 10px;
@@ -987,6 +987,9 @@ body.smbitClass-desktop {
                 p.deskripsi {
                     font-size: large;
                     text-align: -webkit-center;
+                }
+                a {
+                    color : #fffacf;
                 }
             }
 
