@@ -531,6 +531,7 @@ const func = {
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
+                            func.desktop.defaultItem();
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {
                                 if (el.id_fitur == 1) {
