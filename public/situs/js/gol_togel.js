@@ -187,7 +187,7 @@ const func = {
                 </div>
             `);
 
-            $(template).insertBefore('.bankscroll');
+            $(template).insertAfter('#latest-results');
         },
         promosi: (data) => {
             $(`
