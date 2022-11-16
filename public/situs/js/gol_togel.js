@@ -182,12 +182,12 @@ const func = {
                 `;
             }).join("");
 
-            var template = $(`
-                <div class="icon-sosmed">
-                    <div class="icon-info">${data.ket}</div>
-                    <div class="icon-container">${icon}</div>
-                </div>
-            `);
+            // var template = $(`
+            //     <div class="icon-sosmed">
+            //         <div class="icon-info">${data.ket}</div>
+            //         <div class="icon-container">${icon}</div>
+            //     </div>
+            // `);
 
             $(icon).insertBefore('.bankscroll');
         },
