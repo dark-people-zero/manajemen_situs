@@ -401,6 +401,9 @@ body.smbitClass-desktop {
         height: 45px;
         background-size: 100%;
 
+        &:nth-child(1) {
+            margin-left: -85px;
+        }
         a {
             color: #c5a887;
             position: relative;

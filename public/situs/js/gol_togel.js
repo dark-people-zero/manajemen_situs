@@ -172,7 +172,7 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-                        <div class="contactusbg" style="margin-left: -85px; text-align: center; float: left">
+                        <div class="contactusbg" style=" text-align: center; float: left">
                             <a href="${e.link}" target="_blank">
                                 <img src="${e.image}" width="23" alt="${e.name}">${e.name}
                             </a>
