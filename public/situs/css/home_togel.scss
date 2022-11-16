@@ -1098,6 +1098,18 @@ body.smbitClass-desktop {
             border-top: 0;
             background-color: transparent;
 
+            .footer-main {
+                .container {
+                
+                    &:nth-child(2) {
+                        // padding: 0px !important;
+                        padding-left: 5px !important;
+                        padding-right: 0px  !important;
+
+                    }
+                }
+            }
+
             .before-footer {
                 border-bottom: 3px solid #24303f;
                 margin-bottom: 20px;
@@ -1119,7 +1131,8 @@ body.smbitClass-desktop {
 
             }
             .footer-bottom{
-                background-color: #0c2e4a;
+                background: #0b0d0b url('https://cdn.areabermain.club/slider/hometogel/headerlogo.jpg') top center !important;
+                padding: 0px !important;
                 
                 .copyright {
                     border-top: 1px solid #000000 !important;
