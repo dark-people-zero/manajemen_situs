@@ -496,6 +496,7 @@ body.smbitClass-desktop {
                     border-bottom-color: #323436;
                     .fa {
                         background-image: -webkit-linear-gradient(#d8bb18, #bcb890);
+                        padding-right: 20px;
                     }
                 }
             }
@@ -526,57 +527,107 @@ body.smbitClass-desktop {
         max-width: 216px;
         display: block;
         overflow: hidden;
+        right: 5px;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        max-width: 190px;
+        height: 45px;
 
         .linkalte-btn {
-            height: 43px;
+            height: 45px;
+            width: 190px;
         }
 
         .linkalte-body {
-
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            border-bottom: 1px solid #540ce1;
-
-            &:hover {
-
-                background: rgba(102, 102, 102, 0.5);
-                }
-
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            margin-top: -20px;
+            padding: 20px 5px 5px;
+            background: #3b80cd;
+            box-shadow: 0px 1px 6px -1px rgb(0 0 0) inset;
+            -webkit-box-shadow: 0px 1px 6px -1px rgb(0 0 0) inset;
+            -moz-box-shadow: 0px 1px 6px -1px rgb(0 0 0) inset;
+            opacity: 0;
+            margin-right: 1px;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #fff;
-                font-weight: 600;
-                text-decoration: none;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: 5px;
 
-                &:hover {
-                    // background: rgba(0, 40, 65, 0.5);
-
-                    color: #337ab7;
+                a {
+                    color: #ffffff;
                 }
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
+    }
+
+    .contact-us {
+        position: fixed;
+        top: 110px;
+        z-index: 9999;
+        display: flex;
+
+        .contact-btnOn {
+            cursor: pointer;
+            transition: margin .5s;
+            transition-delay: .3s;
+        }
+
+        .contact-UsArea {
+            display: flex;
+            margin-left: -250px;
+            transition: margin 0.5s;
+
+            .area {
+                position: relative;
+
+                .contact-number {
+                    position: absolute;
+                    width: calc(100% - 3px);
+                    height: 100%;
+                    top: 0;
+                    padding-top: 45px;
+                    padding-bottom: 50px;
+
+                    .contact-number-item {
+                        height: 33px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 40px;
+                        padding-right: 10px;
+                        font-weight: bold;
+                        font-size: 13px;
+
+                        &.wa2 {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+
+            .contact-btnOf {
+                margin-left: -5px;
+                cursor: pointer;
+            }
+        }
+
+        &.on {
+            .contact-btnOn {
+                margin-left: -45px;
+            }
+
+            .contact-UsArea {
+                margin: 0;
+            }
+        }
     }
 
     .bankscroll {

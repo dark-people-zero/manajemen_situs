@@ -222,16 +222,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item">
+                        <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 
@@ -291,25 +291,35 @@ const func = {
             }
         },
         defaultItem: () => {
-            let template = `
-            <div id="mySidenav" class="sidenav" style="width: 0px;">
-                <button type="button" class="closebtn" ></button>
-                <div class="sidewa1">+6282137753501</div>
-                <div class="sidewa2">+6281292936069</div>
-            </div>
-            <div>
-                <div class="contact-button" style="cursor:pointer"><img src="https://cdn.areabermain.club/slider/gengtoto/open.jpg"></div>
-            </div>`
+            let template = $(`
+                <div class="contact-us on">
+                    <div class="contact-btnOn">
+                        <img src="https://cdn.areabermain.club/slider/gengtoto/open.jpg">
+                    </div>
+                    <div class="contact-UsArea">
+                        <div class="area">
+                            <img src="https://cdn.areabermain.club/gengtoto/images/contacts/contactus_gengtoto.png">
+                            <div class="contact-number">
+                                <div class="contact-number-item">+6282137753501</div>
+                                <div class="contact-number-item wa2">+6281292936069</div>
+                            </div>
+                        </div>
+                        <div class="contact-btnOf">
+                            <img src="https://cdn.areabermain.club/slider/gengtoto/close.jpg">
+                        </div>
+                    </div>
+                </div>
+            `);
 
-
-            $(template).insertBefore('#bank');
-
-            $( ".closebtn" ).click(function() {
-                $( "#mySidenav" ).animate({width: '0px'})
+            template.find(".contact-btnOn").click(function() {
+                $(this).closest(".contact-us").toggleClass("on");
             });
-            $( ".contact-button" ).click(function() {
-                $( "#mySidenav" ).animate({width: '198px'})
+
+            template.find(".contact-btnOf").click(function() {
+                $(this).closest(".contact-us").toggleClass("on");
             });
+
+            $("body").append(template);
         }
     },
     mobile: {
@@ -528,7 +538,6 @@ const func = {
             url: "/config/3",
             dataType: "json",
             success: function (response) {
-                func.desktop.defaultItem();
                 response = {
                     "id": 3,
                     "name": "Geng Togel",
@@ -553,7 +562,7 @@ const func = {
                                     "deskripsi": "Klik di mana saja untuk menutup"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 399,
@@ -568,7 +577,7 @@ const func = {
                                     "slogan": null
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 400,
@@ -601,7 +610,7 @@ const func = {
                                     "data": []
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 403,
@@ -615,7 +624,7 @@ const func = {
                                     "image": "https://static.hokibagus.club/situs/geng togel/desktop/promosi/gengtoto_banner_bonus.gif"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 404,
@@ -628,7 +637,7 @@ const func = {
                                     "deskripsi": "<div class=\"title-2\">BANDAR ONLINE TERPERCAYA</div>\n<p><a href=\"https://togelgeng176.com/\" >Gengtoto.com</a> adalah bandar online terpercaya yang menyediakan permainan tebak angka/togel dengan pasaran terbesar yaitu togel cambodia, togel sydney, togel singapura, togel taiwan, dan togel hongkong dengan diskon serta hadiah terbesar. Selain penyedia permainan togel <b>Gengtoto.com</b> juga menyediakan beragam jenis live game terpopuler.</p>\n<hr>\n<p><a href=\"https://togelgeng176.com/\" >Gengtoto.com</a> berkomitmen untuk menjaga data yang didaftarkan oleh seluruh member sebagai data yang bersifat sangat rahasia. Pilihan bank yang tersedia untuk bertransaksi juga sangat bervariasi: Bank BCA, Bank Mandiri, Bank BNI, Bank BRI , Bank CIMB , Bank Maybank , Bank BSI dan Bank Danamon. Customer service yang aktif 7x24 jam, dengan pelayanan terbaik, cepat dan tepat ! Daftar dan jadilah member dari situs togel online terbaik saat ini !</p>\n<img src=\"https://cdn.areabermain.club/images/ft_banner.png\">"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 405,
@@ -642,7 +651,7 @@ const func = {
                                     "image": ""
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 406,
@@ -659,7 +668,7 @@ const func = {
                                     ]
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 407,
@@ -675,7 +684,7 @@ const func = {
                                     "background": "#c0392b"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 408,
@@ -702,7 +711,7 @@ const func = {
                                     "deskripsi": "Klik di mana saja untuk menutup"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 410,
@@ -717,7 +726,7 @@ const func = {
                                     "slogan": "Silahkan diklik pada tombol Download"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 411,
@@ -731,7 +740,7 @@ const func = {
                                     "https://static.hokibagus.club/situs/geng togel/mobile/header corousel/gengtoto_slidermobile_allbonus.jpg"
                                 ],
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 412,
@@ -778,7 +787,7 @@ const func = {
                                     }
                                 ],
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 413,
@@ -816,7 +825,7 @@ const func = {
                                     ]
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 414,
@@ -830,7 +839,7 @@ const func = {
                                     "image": "https://static.hokibagus.club/situs/geng togel/mobile/promosi/gengtoto_banner_bonus.gif"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 415,
@@ -843,7 +852,7 @@ const func = {
                                     "deskripsi": "Gengtoto.com adalah bandar online terpercaya yang menyediakan permainan tebak angka/togel dengan pasaran terbesar yaitu togel cambodia, togel sydney, togel singapura, togel taiwan, dan togel hongkong dengan diskon serta hadiah terbesar. Selain penyedia permainan togel gengtoto.com juga menyediakan beragam jenis live game terpopuler."
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 416,
@@ -857,7 +866,7 @@ const func = {
                                     "image": "https://static.hokibagus.club/situs/geng togel/mobile/footer protection/_dmca_premi_badge_5.png"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 417,
@@ -872,7 +881,7 @@ const func = {
                                     ]
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 418,
@@ -888,7 +897,7 @@ const func = {
                                     "background": "#c0392b"
                                 },
                                 "created_at": "2022-11-12T17:18:43.000000Z",
-                                "updated_at": "2022-11-17T10:29:48.000000Z"
+                                "updated_at": "2022-11-17T10:33:40.000000Z"
                             },
                             {
                                 "id": 419,
@@ -907,6 +916,7 @@ const func = {
                 }
                 if (response) {
                     if (response.status_desktop && !isMobile) {
+                        func.desktop.defaultItem();
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;
                             response.fitur_situs.desktop.forEach((el, i) => {
