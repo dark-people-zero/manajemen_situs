@@ -264,12 +264,10 @@
                         <li><a href="javascript:void(0);"><i class="fa fa-comments-o"></i>Hubungi Kami</a></li>
                         <li><a href="javascript:void(0);"><i class="fa fa-calendar"></i>Lupa Password</a></li>
                         <li><a href="javascript:void(0);"><i class="fa fa-window-restore"></i>Promosi</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-wpforms"></i> Keluhan Member</a></li>
                     </ul>
                     <div class="sidebar-button" align="center">
                         <a class="btn btn-theme" href="javascript:void(0);">Daftar</a>
-                    </div>
-                    <div class="sidebar-button" style="margin-top: -10px">
-                        <a title="Live Draw Hongkong" href="https://68.183.185.124/" target="_blank" rel="nofollow"><img class="btn-img" src="https://cdn.areabermain.club/slider/hometogel/livedraw.png"></a>
                     </div>
 
                     <!-- END NAV -->
@@ -464,7 +462,7 @@
                                     width='210px' height='210px'>
                             </div>
                             @endfor
-                            
+
                         </div>
                     </div>
                 </div>
@@ -579,26 +577,22 @@
     <!-- END BANK -->
 
     <footer id="footer">
-        <div class="footer-main">
-            <div class="container">
-
-                <div class="footer-bottom">
-                            <div class="row" >
-                                <div class="col-3 col-sm-3"></div>
-                                <div class="col-3 col-sm-3">
-                                    <img src="{{ asset('situs/assets/home_togel/desktop/assets/img/idnplay_w.png') }}"
-                                        style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
-                                </div>
-                                <div class="col-3 col-sm-3">
-                                    <img src="{{ asset('situs/assets/home_togel/desktop/assets/img/pagcorlogo2.png') }}"
-                                        style="overflow: inherit !important;width: 100%;padding: 10px;">
-                                </div>
-                                <div class="col-3 col-sm-3"></div>
-                            </div>
-                            <div class="col-md-12 copyright">
-                                &copy; Copyright 2014 - 2022 <a href="#">hometogel176.com</a>. All Rights Reserved.
-                            </div>
+        <div class="footer-main"></div>
+        <div class="footer-bottom">
+            <div class="row" >
+                <div class="col-3 col-sm-3"></div>
+                <div class="col-3 col-sm-3">
+                    <img src="{{ asset('situs/assets/home_togel/desktop/assets/img/idnplay_w.png') }}"
+                        style="overflow: inherit !important;width: 100%;padding: 10px;margin-top: 7px;">
                 </div>
+                <div class="col-3 col-sm-3">
+                    <img src="{{ asset('situs/assets/home_togel/desktop/assets/img/pagcorlogo2.png') }}"
+                        style="overflow: inherit !important;width: 100%;padding: 10px;">
+                </div>
+                <div class="col-3 col-sm-3"></div>
+            </div>
+            <div class="col-md-12 copyright">
+                &copy; Copyright 2014 - 2022 <a href="#">hometogel176.com</a>. All Rights Reserved.
             </div>
         </div>
     </footer>

@@ -172,21 +172,16 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-  
-                    <div class="listnavcontact">
-                        <a href="${e.link}" target="_blank" style="text-decoration: none;background: url(${e.image});">${e.name}</a>
-                    </div>
+                    <a href="${e.link}" target="_blank" class="item">
+                        <img src="${e.image}">
+                        <span>${e.name}</span>
+                    </a>
                 `;
             }).join("");
 
-            var template = $(`
-                <div class="contactlistnav">
-                    ${icon}
-                </div>
-            `);
+            var template = $(`<div class="footer-sosmed">${icon}</div>`);
 
-            // $("#footer .footer-main").append(template);
-            $(template).insertBefore('.footer-bottom');
+            $("#footer .footer-main .footer-link").prepend(template);
         },
         promosi: (data) => {
             $(`
@@ -199,9 +194,9 @@ const func = {
         },
         beforeFooter: (data) => {
             var template = $(`
-                <div class="before-footer container">
-                <center><h2 class="tittle">${data.title}</h2></center>
-                <p class="deskripsi">${data.deskripsi}</p>
+                <div class="footer-info">
+                    <h2 class="footer-info-title">${data.title}</h2>
+                    <p class="footer-info-deskripsi">${data.deskripsi}</p>
                 </div>
             `);
 
@@ -290,21 +285,24 @@ const func = {
             }
         },
         defaultFooter: () => {
-           let template = `<div>
-            <ul class="btmnv" >
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#" >Cara Bermain</a></li>
-                <li><a href="#">History Nomor</a></li>
-                <li><a href="#">Buku Mimpi</a></li>
-                <li><a href="#">Bantuan</a></li>
-                <li><a href="#">Refferal</a></li>
-                <li><a href="#">Promosi</a></li>
-                <li><a href="#">Daftar</a></li>
+           let template = $(`
+                <div class="footer-main container">
+                    <div class="footer-link">
+                        <div class="footer-link-default">
+                            <a href="#" class="active">Home</a>
+                            <a href="#" >Cara Bermain</a>
+                            <a href="#">History Nomor</a>
+                            <a href="#">Buku Mimpi</a>
+                            <a href="#">Bantuan</a>
+                            <a href="#">Refferal</a>
+                            <a href="#">Promosi</a>
+                            <a href="#">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+           `)
 
-            </ul>
-        </div>`
-
-        $(template).insertBefore('.footer-bottom');
+            $("#footer").prepend(template);
         }
     },
     mobile: {
@@ -523,6 +521,422 @@ const func = {
             url: "/config/4",
             dataType: "json",
             success: function (response) {
+                func.desktop.defaultFooter();
+                response = {
+                    "id": 4,
+                    "name": "Home Togel",
+                    "status_desktop": 1,
+                    "status_mobile": 1,
+                    "url_desktop_dev": "/situs/home_togel/desktop",
+                    "url_desktop_prod": "https://hometogel176.com/",
+                    "url_mobile_dev": "/situs/home_togel/mobile",
+                    "url_mobile_prod": "https://hometogel176.com/m",
+                    "created_at": "2022-10-11T15:24:48.000000Z",
+                    "updated_at": "2022-11-12T17:12:37.000000Z",
+                    "fitur_situs": {
+                        "desktop": [
+                            {
+                                "id": 376,
+                                "id_situs": 4,
+                                "id_fitur": 1,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/situs/home togel/desktop/popup modal/hometogel_popup_promoslot.png",
+                                    "deskripsi": "Klik di mana saja untuk menutup"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 377,
+                                "id_situs": 4,
+                                "id_fitur": 2,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "url": null,
+                                    "file": "",
+                                    "title": null,
+                                    "slogan": null
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 378,
+                                "id_situs": 4,
+                                "id_fitur": 3,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/home togel/desktop/header corousel/hometogel_sliderweb_cashbackslot.jpg",
+                                    "https://static.hokibagus.club/situs/home togel/desktop/header corousel/hometogel_sliderweb_allbonus4.jpg",
+                                    "https://static.hokibagus.club/situs/home togel/desktop/header corousel/hometogel_sliderweb_hadiahtogel2.jpg"
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 379,
+                                "id_situs": 4,
+                                "id_fitur": 4,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://68.183.185.124/",
+                                        "name": "Live Draw Resmi",
+                                        "class": "btn-default",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    }
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 380,
+                                "id_situs": 4,
+                                "id_fitur": 5,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "ket": "as",
+                                    "data": [
+                                        {
+                                            "link": "https://www.facebook.com/Hometogel88-1817319281694534/",
+                                            "name": "HOMETOGEL88",
+                                            "image": "https://static.hokibagus.club/situs/home togel/desktop/icon sosmed/fb.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://twitter.com/hometogel88",
+                                            "name": "HOMETOGEL88",
+                                            "image": "https://static.hokibagus.club/situs/home togel/desktop/icon sosmed/twitter.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/hometogel8",
+                                            "name": "HOMETOGEL8",
+                                            "image": "https://static.hokibagus.club/situs/home togel/desktop/icon sosmed/ig.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCWkDbhuZssIMXc51hydJS1A",
+                                            "name": "HOMETOGEL",
+                                            "image": "https://static.hokibagus.club/situs/home togel/desktop/icon sosmed/yt.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 381,
+                                "id_situs": 4,
+                                "id_fitur": 6,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://hometogel176.com/register.php",
+                                    "name": "Agen Togel Online Aman Terpercaya",
+                                    "image": "https://static.hokibagus.club/situs/home togel/desktop/promosi/hometogel_benner_slotlivegames.gif"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 382,
+                                "id_situs": 4,
+                                "id_fitur": 7,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "title": "Situs Resmi Bandar Togel Online Terpercaya",
+                                    "deskripsi": "<a href=\"hometogel176.com\">HOMETOGEL</a> adalah situs resmi bandar togel online terpercaya di Indonesia yang menyediakan pasaran togel terbaik seperti togel sydney, togel singapura dan togel hongkong. Hanya dengan minimal deposit Rp 10.000,- anda dapat memainkan berbagai macam jenis permainan togel di situs resmi bandar togel online HOMETOGEL.COM seperti colok bebas, colok jitu, colok bebas 2D, colok naga, shio, dasar, 50-50, kombinasi, dan masih banyak lagi. HOMETOGEL adalah pilihan terbaik untuk anda dengan sistem enkripsi tingkat tinggi yang menjamin keamanan dan kerahasian data member."
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 383,
+                                "id_situs": 4,
+                                "id_fitur": 8,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "link": null,
+                                    "name": null,
+                                    "image": ""
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 384,
+                                "id_situs": 4,
+                                "id_fitur": 9,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "image": "https://static.hokibagus.club/situs/home togel/desktop/link alternatif/linkalternatifhome.png",
+                                    "listLink": [
+                                        "https://linkr.bio/hometogel88",
+                                        "https://rebrand.ly/hometogel888",
+                                        "https://togelhome176.com/"
+                                    ]
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 385,
+                                "id_situs": 4,
+                                "id_fitur": 10,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "",
+                                    "shadow": "#196a7d",
+                                    "background": "#c0392b"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 386,
+                                "id_situs": 4,
+                                "id_fitur": 11,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-12T17:13:52.000000Z"
+                            }
+                        ],
+                        "mobile": [
+                            {
+                                "id": 387,
+                                "id_situs": 4,
+                                "id_fitur": 1,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/situs/home togel/mobile/popup modal/hometogel_popup_promoslot.png",
+                                    "deskripsi": "Klik di mana saja untuk menutup"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 388,
+                                "id_situs": 4,
+                                "id_fitur": 2,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "url": "https://bit.ly/homeaplikasi",
+                                    "file": "https://static.hokibagus.club/situs/home togel/mobile/header apk/Hometogelicon.png",
+                                    "title": "APLIKASI HOMETOGEL",
+                                    "slogan": "Silahkan diklik tombol Download"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 389,
+                                "id_situs": 4,
+                                "id_fitur": 3,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/home togel/mobile/header corousel/hometogel_slidermobile_allbonus4.jpg",
+                                    "https://static.hokibagus.club/situs/home togel/mobile/header corousel/hometogel_sliderweb_hadiahtogel2.jpg",
+                                    "https://static.hokibagus.club/situs/home togel/mobile/header corousel/hometogel_sliderweb_cashbackslot.jpg"
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 390,
+                                "id_situs": 4,
+                                "id_fitur": 4,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://rtpslothome.com/",
+                                        "name": "RTP Slot",
+                                        "class": "btn-light",
+                                        "style": "background-color: #e67e22;",
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://togelhome176.com/m/promotion.php",
+                                        "name": "Promo",
+                                        "class": "btn-light",
+                                        "style": "background-color: #f1c40f;",
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://hometogel.laporkeluhan.net/",
+                                        "name": "Keluhan Member",
+                                        "class": "btn-light",
+                                        "style": "background-color: #2980b9;",
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://linklist.bio/hometgl",
+                                        "name": "Lain-Lain",
+                                        "class": "btn-light",
+                                        "style": "background-color: #c0392b;",
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": null
+                                    }
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 391,
+                                "id_situs": 4,
+                                "id_fitur": 5,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "ket": "HOMETOGEL adalah situs resmi bandar togel online terpercaya di Indonesia yang menyediakan pasaran togel terbaik seperti togel sydney, togel singapura dan togel hongkong.  Dengan Pelayanan Customer Service Professional & Aktif 7x24 Jam",
+                                    "data": [
+                                        {
+                                            "link": "https://bit.ly/kendalagame",
+                                            "name": "WA hometogel",
+                                            "image": "https://static.hokibagus.club/situs/home togel/mobile/icon sosmed/hometogel_contact_wa.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/hometogel8/",
+                                            "name": "IG hometogel",
+                                            "image": "https://static.hokibagus.club/situs/home togel/mobile/icon sosmed/hometogel_contact_ig.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.facebook.com/hometogel.net",
+                                            "name": "Facebook HOMETOGEL",
+                                            "image": "https://static.hokibagus.club/situs/home togel/mobile/icon sosmed/homefb.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCWkDbhuZssIMXc51hydJS1A",
+                                            "name": "Youtube HOMETOGEL",
+                                            "image": "https://static.hokibagus.club/situs/home togel/mobile/icon sosmed/homeyt.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 392,
+                                "id_situs": 4,
+                                "id_fitur": 6,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "link": null,
+                                    "name": null,
+                                    "image": ""
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 393,
+                                "id_situs": 4,
+                                "id_fitur": 7,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "title": "Situs Resmi Bandar Togel Online Terpercaya",
+                                    "deskripsi": "Hanya dengan minimal deposit Rp 10.000,- anda dapat memainkan berbagai macam jenis permainan togel di situs resmi bandar togel online HOMETOGEL.COM seperti colok bebas, colok jitu, colok bebas 2D, colok naga, shio, dasar, 50-50, kombinasi, dan masih banyak lagi. HOMETOGEL adalah pilihan terbaik untuk anda dengan sistem enkripsi tingkat tinggi yang menjamin keamanan dan kerahasian data member."
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 394,
+                                "id_situs": 4,
+                                "id_fitur": 8,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018&refurl=https://hometogel176.com/m/",
+                                    "name": "DMCA.com Protection Status",
+                                    "image": "https://static.hokibagus.club/situs/home togel/mobile/footer protection/_dmca_premi_badge_5.png"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 395,
+                                "id_situs": 4,
+                                "id_fitur": 9,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "image": "",
+                                    "listLink": [
+                                        ""
+                                    ]
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 396,
+                                "id_situs": 4,
+                                "id_fitur": 10,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "",
+                                    "shadow": "#196a7d",
+                                    "background": "#c0392b"
+                                },
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-18T21:37:59.000000Z"
+                            },
+                            {
+                                "id": 397,
+                                "id_situs": 4,
+                                "id_fitur": 11,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-12T17:12:37.000000Z",
+                                "updated_at": "2022-11-12T17:13:52.000000Z"
+                            }
+                        ]
+                    }
+                }
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
@@ -604,7 +1018,7 @@ const func = {
                 }else{
                     $("#loadingCustom").hide();
                 }
-                func.desktop.defaultFooter();
+
 
             }
         });
