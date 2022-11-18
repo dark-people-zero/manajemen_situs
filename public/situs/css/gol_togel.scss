@@ -464,6 +464,12 @@ body.smbitClass-desktop {
         }
     }
 
+    ul {
+        &.newsticker {
+            top: 6px;
+        }
+    }
+
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -472,49 +478,111 @@ body.smbitClass-desktop {
         max-width: 216px;
         display: block;
         overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 2s;
+        transition: height 2s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            color: #fff;
-            // background:rgba(224, 224, 224, 0);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-
-            li{
-                width: 100%;
-
-            }
+            margin-top: -20px;
+            margin-left: 35px;
+            padding: 20px 5px 10px 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: linear-gradient(0deg, rgb(157 63 30) 20%, rgba(244,121,29,1) 100%);
+            max-width: 173px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #777777;
-                font-weight: 600;
-                text-decoration: none;
-
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: bold;
+                padding: 5px;
+                color: #000;
                 &:hover {
-
-                    color: #2a6496;
+                    color: #ffffff;
+                    a {
+                        color: #ffffff;
+                    }
                 }
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                // background:rgba(113, 113, 113, 0.5);
-                display: block;
-                color: #fff;
+                opacity: 1;
             }
         }
 
+    }
+
+    .contact-us {
+        position: fixed;
+        top: 110px;
+        z-index: 9999;
+        display: flex;
+
+        .contact-btnOn {
+            cursor: pointer;
+            transition: margin .5s;
+            transition-delay: .3s;
+        }
+
+        .contact-UsArea {
+            display: flex;
+            margin-left: -250px;
+            transition: margin 0.5s;
+
+            .area {
+                position: relative;
+
+                .contact-number {
+                    position: absolute;
+                    width: calc(100% - 3px);
+                    height: 100%;
+                    top: 0;
+                    padding-top: 45px;
+                    padding-bottom: 50px;
+
+                    .contact-number-item {
+                        height: 33px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 40px;
+                        padding-right: 10px;
+                        font-weight: bold;
+                        font-size: 13px;
+
+                        &.wa1 {
+                            padding-bottom: 5px;
+                        }
+
+                        &.wa2 {
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+
+            .contact-btnOf {
+                margin-left: -6px;
+                margin-top: -1px;
+                cursor: pointer;
+            }
+        }
+
+        &.on {
+            .contact-btnOn {
+                margin-left: -45px;
+            }
+
+            .contact-UsArea {
+                margin: 0;
+            }
+        }
     }
 
     .bankscroll {
