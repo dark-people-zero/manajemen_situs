@@ -93,6 +93,7 @@
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" wire:model="data_buttonaction_desktop.{{$i}}.class">
+                                        <option value="btn-default" {{$item['class'] == 'btn-default' ? 'selected' : ''}}>btn-default</option>
                                         <option value="btn-primary" {{$item['class'] == 'btn-primary' ? 'selected' : ''}}>btn-primary</option>
                                         <option value="btn-secondary" {{$item['class'] == 'btn-secondary' ? 'selected' : ''}}>btn-secondary</option>
                                         <option value="btn-success" {{$item['class'] == 'btn-success' ? 'selected' : ''}}>btn-success</option>

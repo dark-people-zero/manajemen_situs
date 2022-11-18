@@ -172,18 +172,18 @@ const func = {
         iconSosmed: (data) => {
             var icon = data.data.filter(e => e.status).map(e => {
                 return `
-                        <div class="contactusbg" style=" text-align: center; float: left">
-                            <a href="${e.link}" target="_blank">
-                                <img src="${e.image}" width="23" alt="${e.name}">${e.name}
-                            </a>
-                        </div>
-                    
+                    <div class="icon-item">
+                        <a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                            ${e.name}
+                        </a>
+                    </div>
                 `;
             }).join("");
 
             var template = $(`
-                <div class="col-xs-10 col-lg-10 col-sm-10 col-md-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="margin-bottom: 10px; width: 800px;">
-                    ${icon}
+                <div class="icon-sosmed">
+                    <div class="icon-container">${icon}</div>
                 </div>
             `);
 
@@ -201,8 +201,8 @@ const func = {
         beforeFooter: (data) => {
             var template = $(`
                 <div class="before-footer container">
-                    <center><h4 class="tittle">${data.title}</h4></center>
-                    <p class="deskripsi">${data.deskripsi}</p>
+                    <div class="tittle">${data.title}</div>
+                    <div class="deskripsi">${data.deskripsi}</div>
                 </div>
             `);
 
@@ -210,7 +210,7 @@ const func = {
         },
         footerProtection: (data) => {
             var template = $(`
-    
+
                     <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
                         <img alt="${data.name}" src="${data.image}">
                     </a>
@@ -296,13 +296,13 @@ const func = {
             let template = `
             <div id="mySidenav" class="sidenav" style="width: 0px;">
                 <button type="button" class="closebtn" ></button>
-                <div class="sidewa1">+6281212245415</div> 
-                <div class="sidewa2">+6281228073293</div>    
+                <div class="sidewa1">+6281212245415</div>
+                <div class="sidewa2">+6281228073293</div>
             </div>
             <div>
                 <div class="contact-button" style="cursor:pointer"><img src="https://cdn.areabermain.club/slider/goltogel/open.jpg"></div>
             </div>`
-       
+
 
             $(template).insertBefore('#bank');
 
@@ -531,6 +531,427 @@ const func = {
             dataType: "json",
             success: function (response) {
                 func.desktop.defaultItem();
+                response = {
+                    "id": 24,
+                    "name": "gol_togel",
+                    "status_desktop": 1,
+                    "status_mobile": 1,
+                    "url_desktop_dev": "/situs/gol_togel/desktop",
+                    "url_desktop_prod": "https://goltogel176.com/",
+                    "url_mobile_dev": "/situs/gol_togel/m",
+                    "url_mobile_prod": "https://goltogel176.com/m",
+                    "created_at": "2022-11-16T11:55:42.000000Z",
+                    "updated_at": "2022-11-16T11:55:42.000000Z",
+                    "fitur_situs": {
+                        "desktop": [
+                            {
+                                "id": 464,
+                                "id_situs": 24,
+                                "id_fitur": 1,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "file": "",
+                                    "deskripsi": null
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 465,
+                                "id_situs": 24,
+                                "id_fitur": 2,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "url": null,
+                                    "file": "",
+                                    "title": null,
+                                    "slogan": null
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 466,
+                                "id_situs": 24,
+                                "id_fitur": 3,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/gol_togel/desktop/header corousel/goltogel_sliderweb_allbonus3.jpg",
+                                    "https://static.hokibagus.club/situs/gol_togel/desktop/header corousel/goltogel_sliderweb_bonusslot.jpg",
+                                    "https://static.hokibagus.club/situs/gol_togel/desktop/header corousel/goltogel_sliderweb_tipebet2.jpg"
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 467,
+                                "id_situs": 24,
+                                "id_fitur": 4,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://68.183.185.124/",
+                                        "name": "Live Draw Resmi",
+                                        "class": "btn-primary",
+                                        "style": null,
+                                        "shadow": "#1b693c",
+                                        "status": true,
+                                        "target": true
+                                    }
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 468,
+                                "id_situs": 24,
+                                "id_fitur": 5,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "ket": "ada",
+                                    "data": [
+                                        {
+                                            "link": "https://www.facebook.com/goltogel88",
+                                            "name": "Goltogel.com",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/desktop/icon sosmed/facebook.jpg",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://twitter.com/goltogel",
+                                            "name": "Goltogel",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/desktop/icon sosmed/twitter.jpg",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/togelgol88/",
+                                            "name": "Goltogel",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/desktop/icon sosmed/instagram.jpg",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCUsrhFqOyXS3ZhjmaDt-PaA",
+                                            "name": "Goltogel",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/desktop/icon sosmed/favicon_48-vflVjB_Qk.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://128.199.81.205",
+                                            "name": "Goltogel Info",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/desktop/icon sosmed/wordpress.jpg",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 469,
+                                "id_situs": 24,
+                                "id_fitur": 6,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://goltogel176.com/register.php",
+                                    "name": "promo",
+                                    "image": "https://static.hokibagus.club/situs/gol_togel/desktop/promosi/goltogel_promo_bonus2.gif"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 470,
+                                "id_situs": 24,
+                                "id_fitur": 7,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "title": "WELCOME TO GOLTOGEL.COM",
+                                    "deskripsi": "<div class=\"title\">GOLTOGEL.COM - BERAPAPUN KEMENANGAN ANDA AKAN KAMI BAYAR - THE GENERATION OF ONLINE LOTTERY</div>\nHadir sebagai situs Togel dan Live Dingdong dengan tampilan yang simpel dan menawan. GOLTOGEL.COM berkomitmen memberikan pelayanan 24 jam secara maksimal serta menjamin semua transaksi member akan diproses dengan cepat. Segala bentuk data privasi member akan dirahasiakan dan di jaga oleh sistem keamanan paling canggih saat ini."
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 471,
+                                "id_situs": 24,
+                                "id_fitur": 8,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018&refurl=https://goltogel176.com/",
+                                    "name": "DMCA",
+                                    "image": "https://static.hokibagus.club/situs/gol_togel/desktop/footer protection/_dmca_premi_badge_5.png"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 472,
+                                "id_situs": 24,
+                                "id_fitur": 9,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "image": "https://static.hokibagus.club/situs/gol_togel/desktop/link alternatif/linkalt.jpg",
+                                    "listLink": [
+                                        "linkr.bio/Goltogel",
+                                        "\nrebrand.ly/togelgol176",
+                                        "\ngoltogel176.com"
+                                    ]
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 473,
+                                "id_situs": 24,
+                                "id_fitur": 10,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "",
+                                    "shadow": "#196a7d",
+                                    "background": "#c0392b"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 474,
+                                "id_situs": 24,
+                                "id_fitur": 11,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-16T12:48:33.000000Z"
+                            }
+                        ],
+                        "mobile": [
+                            {
+                                "id": 475,
+                                "id_situs": 24,
+                                "id_fitur": 1,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "file": "",
+                                    "deskripsi": null
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 476,
+                                "id_situs": 24,
+                                "id_fitur": 2,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "url": "https://bit.ly/apkgoltogelnew",
+                                    "file": "https://static.hokibagus.club/situs/gol_togel/mobile/header apk/Goltogelicon.png",
+                                    "title": " APLIKASI GOLTOGEL",
+                                    "slogan": "Silahkan diklik pada tombol Download"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 477,
+                                "id_situs": 24,
+                                "id_fitur": 3,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/gol_togel/mobile/header corousel/goltogel_sliderweb_allbonus3.jpg",
+                                    "https://static.hokibagus.club/situs/gol_togel/mobile/header corousel/goltogel_sliderweb_bonusslot.jpg",
+                                    "https://static.hokibagus.club/situs/gol_togel/mobile/header corousel/goltogel_sliderweb_tipebet2.jpg"
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 478,
+                                "id_situs": 24,
+                                "id_fitur": 4,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://rtpslotgol.com/",
+                                        "name": "RTP Slot",
+                                        "class": "btn-warning",
+                                        "style": "background-color: #e67e22;",
+                                        "shadow": "#b9651b",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://togelgol176.com/m/promotion.php",
+                                        "name": "Promo",
+                                        "class": "btn-warning",
+                                        "style": "background-color: #f1c40f;",
+                                        "shadow": "#bf9c0d",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://goltogel.laporkeluhan.net/",
+                                        "name": "Keluhan Member",
+                                        "class": "btn-info",
+                                        "style": "background-color: #2980b9;",
+                                        "shadow": "#196a7d",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://linklist.bio/GOL.TOGEL",
+                                        "name": "Lain-Lain",
+                                        "class": "btn-secondary",
+                                        "style": "background-color: #c0392b;",
+                                        "shadow": "#8e2920",
+                                        "status": true,
+                                        "target": null
+                                    }
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 479,
+                                "id_situs": 24,
+                                "id_fitur": 5,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "ket": "Klik icon sosmed di bawah ini untuk hubungi operator :",
+                                    "data": [
+                                        {
+                                            "link": "https://api.whatsapp.com/send?phone=6281248717088",
+                                            "name": "Whatsapp",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/mobile/icon sosmed/goltogel_contact_wa.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://api.whatsapp.com/send?phone=6281228073293",
+                                            "name": "Whatsapp2",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/mobile/icon sosmed/wa2.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.facebook.com/goltogel88",
+                                            "name": "Facebook",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/mobile/icon sosmed/golfb.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCUsrhFqOyXS3ZhjmaDt-PaA",
+                                            "name": "Youtube",
+                                            "image": "https://static.hokibagus.club/situs/gol_togel/mobile/icon sosmed/golyt.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 480,
+                                "id_situs": 24,
+                                "id_fitur": 6,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "link": null,
+                                    "name": null,
+                                    "image": ""
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 481,
+                                "id_situs": 24,
+                                "id_fitur": 7,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "title": null,
+                                    "deskripsi": null
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 482,
+                                "id_situs": 24,
+                                "id_fitur": 8,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "link": "http://www.dmca.com/Protection/Status.aspx?ID=b7e1ad05-2187-4abf-8078-8ed9c1a6c018&refurl=http://goltogel176.com/m/",
+                                    "name": "DM",
+                                    "image": "https://static.hokibagus.club/situs/gol_togel/mobile/footer protection/_dmca_premi_badge_5.png"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 483,
+                                "id_situs": 24,
+                                "id_fitur": 9,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "image": "",
+                                    "listLink": [
+                                        ""
+                                    ]
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 484,
+                                "id_situs": 24,
+                                "id_fitur": 10,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "",
+                                    "shadow": "#196a7d",
+                                    "background": "#c0392b"
+                                },
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-18T00:13:01.000000Z"
+                            },
+                            {
+                                "id": 485,
+                                "id_situs": 24,
+                                "id_fitur": 11,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-16T11:55:42.000000Z",
+                                "updated_at": "2022-11-16T12:48:33.000000Z"
+                            }
+                        ]
+                    }
+                }
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {

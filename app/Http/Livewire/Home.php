@@ -1029,23 +1029,23 @@ class Home extends Component
 
     public function addFormBtnAction($desktop)
     {
-        if ($desktop) {
+        if ($desktop && count($this->data_buttonaction_desktop) == 0) {
             array_push($this->data_buttonaction_desktop, [
                 "status" => false,
                 "name" => "",
                 "link" => "https://",
-                "class" => "btn-light",
+                "class" => "btn-default",
                 "style" => null,
                 "target" => null,
                 "shadow" => "#1b693c"
             ]);
         }
-        if (!$desktop) {
+        if (!$desktop && count($this->data_buttonaction_mobile) == 0) {
             array_push($this->data_buttonaction_mobile, [
                 "status" => false,
                 "name" => "",
                 "link" => "https://",
-                "class" => "btn-light",
+                "class" => "btn-default",
                 "style" => null,
                 "target" => null,
                 "shadow" => "#1b693c"
