@@ -200,7 +200,7 @@ const func = {
                 </div>
             `);
 
-            $("#footer .footer-main").prepend(template);
+            $("#footer .footer-main .container").prepend(template);
         },
         footerProtection: (data) => {
             var template = $(`
@@ -216,16 +216,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item">
+                        <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 
@@ -285,24 +285,30 @@ const func = {
             }
         },
         defaultFooter: () => {
-           let template = $(`
-                <div class="footer-main container">
-                    <div class="footer-link">
-                        <div class="footer-link-default">
-                            <a href="#" class="active">Home</a>
-                            <a href="#" >Cara Bermain</a>
-                            <a href="#">History Nomor</a>
-                            <a href="#">Buku Mimpi</a>
-                            <a href="#">Bantuan</a>
-                            <a href="#">Refferal</a>
-                            <a href="#">Promosi</a>
-                            <a href="#">Daftar</a>
+            let template = $(`
+                    <div class="container">
+                        <div class="footer-link">
+                            <div class="footer-link-default">
+                                <a href="#" class="active">Home</a>
+                                <a href="#" >Cara Bermain</a>
+                                <a href="#">History Nomor</a>
+                                <a href="#">Buku Mimpi</a>
+                                <a href="#">Bantuan</a>
+                                <a href="#">Refferal</a>
+                                <a href="#">Promosi</a>
+                                <a href="#">Daftar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-           `)
+            `)
 
-            $("#footer").prepend(template);
+            var cari = $("#footer").find(".footer-main");
+            if (cari.length > 0) {
+                $("#footer .footer-main").prepend(template);
+            }else{
+                var div = $(`<div clas="footer-main">${template}</div>`);
+                $("#footer").prepend(div);
+            }
         }
     },
     mobile: {

@@ -460,122 +460,8 @@ body.smbitClass-desktop {
         box-shadow: inset 0px 0px 0px 1px #ffbf00, inset 0px 2px 0px 0px #fa0, inset 0px 0px 0px 2px #ffbd00, 3px 3px 3px 1px #00000033;
     }
 
-    // .contactlistnav {
-    //     display:flex;
-    //     justify-content:center;
-    //     align-items:center;
-    //     width:100%;
-    //     margin-bottom: 5px;
-
-    //     .listnavcontact {
-    //         background-position: center;
-    //         width: 200px;
-    //         height: 48px;
-    //         position: relative;
-    //         border-radius: 10px;
-
-    //         &:nth-child(1) {
-    //             background: url(https://cdn.areabermain.club/assets/imgs/fb.png) no-repeat;
-    //         }
-
-    //         &:nth-child(2) {
-    //             background: url(https://cdn.areabermain.club/assets/imgs/twitter.png) no-repeat;
-
-    //         }
-
-    //         &:nth-child(3) {
-    //             background: url(https://cdn.areabermain.club/assets/imgs/ig.png) no-repeat;
-
-    //         }
-
-    //         &:nth-child(4) {
-    //             background: url(https://cdn.areabermain.club/assets/imgs/yt.png) no-repeat;
-
-    //         }
-
-    //     a {
-    //         color: white;
-    //         position: absolute;
-    //         top: 14px;
-    //         left: 60px;
-    //         text-transform: uppercase;
-    //         font-weight: bold;
-    //     }
-
-
-    //     }
-
-    // }
-
-    // .btmnv {
-    //     display: flex;
-    //     margin:auto;
-    //     justify-content: center;
-    //     list-style: none;
-    //     width: 100%;
-    //     padding-bottom: 10px;
-
-
-    //     li{
-    //         color: #fff;
-    //         line-height: 20px;
-    //         font-weight: 300;
-    //         margin: 2px;
-
-
-    //         a {
-    //             padding:14px 16px;
-    //             line-height: 10px;
-    //             display: block;
-    //             background: rgb(22, 30, 40) !important;
-    //             border-radius: 10px 10px 10px 10px;
-    //             color: #fff;
-    //             text-transform: uppercase;
-    //             text-decoration: none;
-    //             border-bottom: 1px solid #fff;
-    //             border-top: 1px solid #fff;
-
-    //             &.active {
-    //                 color: #ffcc00;
-    //                 border-bottom: 1px solid #ffcc00;
-    //                 border-top: 1px solid #ffcc00;
-    //             }
-
-    //             &:hover {
-    //                 color: #ffcc00;
-    //                 border-bottom: 1px solid #ffcc00;
-    //                 border-top: 1px solid #ffcc00;
-    //             }
-
-    //         }
-
-    //     }
-
-
-
-    // }
-
-    .section {
-        .container {
-            background: #161e28 !important;
-            .blog-posts {
-                .promosi {
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        padding-top: 10px;
-                    }
-                }
-            }
-        }
-    }
-
-    .tickercontainer .masking{
-        margin-top: 5px;
-    }
-    element.style {
-        margin-top: 5px;
-        padding-bottom: 5px;
+    #liscroll {
+        top: 6px;
     }
 
     .linkalte-container {
@@ -587,318 +473,165 @@ body.smbitClass-desktop {
         display: block;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
+            background: #0c314e;
+            margin-top: -5px;
+            border: 1px solid #04172a;
+            max-width: 182px;
+            padding: 5px 10px 5px 5px;
+            border-bottom-left-radius: 10px;
+            border-right-width: 6px;
+            border-right-color: #fd9801;
+            overflow: hidden;
+            opacity: 0;
 
-            &:hover {
-            background: rgba(0, 40, 65, 0.5);
-            }
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #777777;
-                font-weight: 600;
-                text-decoration: none;
+                padding: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #fff;
+                a {
+                    color: #fff;
+                }
 
                 &:hover {
-                    // background: rgba(0, 40, 65, 0.5);
-                    color: #ffcc00 ;
+                    font-weight: bold;
                 }
             }
+
+            // li{
+            //     width: 100%;
+            //     // &:not(:last-child) {
+            //     //     border-bottom: 1px solid #adadad;
+            //     // }
+            // }
+            // .linkalte-item {
+            //     display: flex;
+            //     justify-content: center;
+            //     padding: 8px;
+            //     color: #777777;
+            //     font-weight: 600;
+            //     text-decoration: none;
+
+            //     &:hover {
+            //         // background: rgba(0, 40, 65, 0.5);
+            //         color: #ffcc00 ;
+            //     }
+            // }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
     }
 
-    #bank {
-        margin-top: -100px;
-        .container {
-            .row {
-                .col-md-3 {
-                    .btn-group {
-                        display: none;
+    .section {
+        &.margin-top {
+            .container {
+                background: #161e28;
+
+                .blog-posts {
+                    .promosi {
+                        margin-top: 15px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
+            }
+        }
+        &#bank {
+            margin-top: -100px;
+            .container {
+                background: #161e28;
+                .row {
+                    .col-md-3 {
+                        .btn-group {
+                            display: none;
+                        }
+                    }
 
-                .col-md-9 {
-                    .bankscroll {
-                        .owl-wrapper {
-                            .owl-item {
-                                .bank {
-                                    text-align: center;
-                                    width: 145px !important;
-                                    height: 80px !important;
-                                    padding: 0px !important;
-                                    background-color: rgba(0,0,0,0) !important;
-                                    border: none !important;
-                                    -webkit-border-radius: 0px !important;
-                                    -moz-border-radius: 0px !important;
-                                    -ms-border-radius: 0px !important;
-                                    -o-border-radius: 0px !important;
-                                    border-radius: 0px !important;
-                                    margin-left: 0px;
+                    .col-md-9 {
+                        .bankscroll {
+                            .owl-wrapper {
+                                .owl-item {
+                                    .bank {
+                                        text-align: center;
+                                        width: 145px !important;
+                                        height: 80px !important;
+                                        padding: 0px !important;
+                                        background-color: rgba(0,0,0,0) !important;
+                                        border: none !important;
+                                        -webkit-border-radius: 0px !important;
+                                        -moz-border-radius: 0px !important;
+                                        -ms-border-radius: 0px !important;
+                                        -o-border-radius: 0px !important;
+                                        border-radius: 0px !important;
+                                        margin-left: 0px;
 
-                                    img {
-                                        width: 145px;
-                                        height: 80px;
-                                    }
+                                        img {
+                                            width: 145px;
+                                            height: 80px;
+                                        }
 
-                                    .bca {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_bca.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_bca.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_bca.gif');
-                                            }
-                                        }
-                                    }
+                                        $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                                    .bni {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_bni.gif');
+                                        @each $img in $listBank {
+                                            $i: index($listBank, $img);
+                                            $imgName: $img;
+                                            @if $img == "cimb-2" {
+                                                $imgName: "cimb";
                                             }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_bni.gif');
+
+                                            @if $img == "dana-2" {
+                                                $imgName: "dana";
                                             }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_bni.gif');
-                                            }
-                                        }
-                                    }
-                                    .bri {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_bri.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_bri.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_bri.gif');
-                                            }
-                                        }
-                                    }
-                                    .bsi {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_bsi.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_bsi.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_bsi.gif');
-                                            }
-                                        }
-                                    }
-                                    .cimb,
-                                    .cimb-2 {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_cimb.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_cimb.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_cimb.gif');
-                                            }
-                                        }
-                                    }
-                                    .dana,
-                                    .dana-2 {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_dana.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_dana.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_dana.gif');
-                                            }
-                                        }
-                                    }
-                                    .danamon {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_danamon.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_danamon.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_danamon.gif');
-                                            }
-                                        }
-                                    }
-                                    .gopay {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_gopay.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_gopay.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_gopay.gif');
-                                            }
-                                        }
-                                    }
-                                    .linkaja {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_linkaja.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_linkaja.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_linkaja.gif');
-                                            }
-                                        }
-                                    }
-                                    .mandiri {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_mandiri.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_mandiri.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_mandiri.gif');
-                                            }
-                                        }
-                                    }
-                                    .maybank {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_maybank.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_maybank.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_maybank.gif');
-                                            }
-                                        }
-                                    }
-                                    .ovo {
-                                        display: none;
-                                        &.online {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_online_ovo.gif');
-                                            }
-                                        }
-                                        &.offline {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_offline_ovo.gif');
-                                            }
-                                        }
-                                        &.trouble {
-                                            &+img {
-                                                content: url('/situs/assets/home_togel/desktop/images/banks/hometogel_trouble_ovo.gif');
+                                            .#{$img} {
+                                                display: none;
+                                                &.online {
+                                                    &+img {
+                                                        content: url('/situs/assets/home_togel/desktop/images/banks/'+#{$imgName}+'/online.gif');
+                                                    }
+                                                }
+                                                &.offline {
+                                                    &+img {
+                                                        content: url('/situs/assets/home_togel/desktop/images/banks/'+#{$imgName}+'/offline.gif');
+                                                    }
+                                                }
+                                                &.trouble {
+                                                    &+img {
+                                                        content: url('/situs/assets/home_togel/desktop/images/banks/'+#{$imgName}+'/trouble.gif');
+                                                    }
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    center {
-                        display: none;
+                        center {
+                            display: none;
+                        }
                     }
                 }
             }
         }
-    }
 
+
+    }
 
     // list image gameicon
     $listImage: 'hometogel_singapore.jpg', 'hometogel_hongkong.jpg', 'hometogel_sydney.jpg', 'hometogel_nevada.jpg', 'hometogel_cambodia.jpg', 'hometogel_bullseye.jpg', 'hometogel_magnum4d.jpg', 'hometogel_pcso.jpg', 'hometogel_carolinaday.jpg', 'hometogel_totomacau.jpg', 'hometogel_china.jpg', 'hometogel_california.jpg', 'hometogel_florida.jpg', 'hometogel_newyork.jpg', 'hometogel_oregon.jpg', 'hometogel_taiwan.jpg', 'hometogel_sicboball.jpg', 'hometogel_sicbodice.jpg', 'hometogel_12d.jpg', 'hometogel_dice6.jpg', 'hometogel_24d.jpg', 'hometogel_roullete.jpg', 'hometogel_baccarat.jpg', 'hometogel_pokerdice.jpg', 'hometogel_suwit.jpg', 'hometogel_dragontiger.jpg', 'hometogel_oglok.jpg', 'hometogel_idn4stand.jpg', 'hometogel_roullete2.jpg', 'hometogel_redandwhite.jpg', 'hometogel_headandtail.jpg', 'hometogel_monopoly.jpg', 'hometogel_5dball.jpg', 'hometogel_gongball.jpg', 'hometogel_billiard.jpg', 'hometogel_3dshio.jpg', 'hometogel_raceball.jpg', 'hometogel_fantan.jpg', 'hometogel_niuniu.jpg', 'hometogel_pgsoft.png', 'hometogel_pragmatic.png', 'hometogel_idnslot.png', 'hometogel_microgaming.png', 'hometogel_toptrend.png', 'hometogel_habanero.png', 'hometogel_comingsoon.jpg', 'hometogel_comingsoon.jpg';
@@ -1141,84 +874,144 @@ body.smbitClass-desktop {
         }
     }
 
-
-    .icon-sosmed {
-        margin-top: 10px;
-        text-align: center;
-
-        .icon-container {
-            margin-top: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-
-            .icon-item {
-                a {
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    .promosi {
-        margin-top: 5px;
-        a {
-            img {
-                width: 100%;
-                height: 100%;
-                max-height: 120px;
-            }
-        }
-    }
-
     footer {
         &#footer {
             border-top: 0;
             background-color: transparent;
-
             .footer-main {
-                width: 1170px;
-                margin: auto;
-                background: #0b1420;
+                .container {
+                    background: #0b1420;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-                .before-footer {
-                    margin-bottom: 20px;
+                    .footer-info {
+                        text-align: center;
+                        margin-bottom: 1.5rem;
+                        border-bottom: 3px solid #24303f;
+                        border-bottom-style: groove;
 
-                    // h2 {
-                    //     margin: 20px 0;
-                    //     color: #ffcc00;
-                    //     text-shadow: 0px 0px 5px rgb(255 204 0 / 80%);
-                    //     text-align: center;
-                    // }
-                    // p.deskripsi {
-                    //     font-size: 12px;
-                    //     color: #fff;
-                    //     text-align: -webkit-center;
+                        .footer-info-title {
+                            margin: 20px 0;
+                            color: #ffcc00;
+                            text-shadow: 0px 0px 5px rgb(255 204 0 / 80%);
+                            text-align: center;
+                        }
 
-                    //     a {
-                    //         color: #ffcc00;
-                    //     }
-                    // }
+                        .footer-info-deskripsi {
+                            font-size: 12px;
+                            color: #ffffff;
+                            text-align: center;
 
-                }
-                .footer-bottom{
-                    background: #0b0d0b url('https://cdn.areabermain.club/slider/hometogel/headerlogo.jpg') top center !important;
-                    padding: 0px !important;
+                            a {
+                                color: #ffcc00;
+                            }
+                        }
+                    }
 
-                    .copyright {
-                        border-top: 1px solid #000000 !important;
-                        background: #24303f !important;
-                        padding-top: 12px !important;
-                        padding-bottom: 12px !important;
+                    .footer-link {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+                        margin-bottom: 1.5rem;
 
+                        .footer-sosmed {
+                            display: flex;
+                            justify-content: center;
+                            column-gap: 15px;
+
+                            .item {
+                                position: relative;
+
+                                span {
+                                    position: absolute;
+                                    color: white;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    width: 100%;
+                                    height: 100%;
+                                    left: 0;
+                                    top: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding-left: 15px;
+                                }
+
+                                &:hover {
+                                    span {
+                                        text-shadow: 0px 0px 5px rgb(255 204 0 / 80%);
+                                        color: #ffcc00;
+                                    }
+                                }
+                            }
+                        }
+
+                        .footer-link-default {
+                            display: flex;
+                            justify-content: center;
+                            gap: 5px;
+
+                            a {
+                                line-height: 10px;
+                                display: block;
+                                background: rgb(22, 30, 40);
+                                border-radius: 10px;
+                                color: #fff;
+                                padding: 14px 16px;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                border-bottom: 1px solid #fff;
+                                border-top: 1px solid #fff;
+
+                                &.active {
+                                    color: #ffcc00;
+                                    border-color: #ffcc00;
+                                    border-width: 1px 0;
+                                }
+
+                                &:hover {
+                                    text-shadow: 0px 0px 5px rgb(255 204 0 / 80%);
+                                    color: #ffcc00;
+                                    border-color: #ffcc00;
+                                    border-width: 1px 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
 
+            .footer-bottom{
+                background: linear-gradient(90deg, #111d3d 0%, #0c344f 50%, #0c344f 100%);
+                max-width: 1170px;
+                margin: auto;
+                padding: 0;
+
+                .row {
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    div {
+                        max-width: 25%;
+                        width: auto;
+
+                        img {
+                            margin: 0 !important;
+                        }
+                    }
+                }
+
+                .copyright {
+                    border-top: 1px solid #000000 ;
+                    background: #24303f ;
+                    padding-top: 12px ;
+                    padding-bottom: 12px ;
+                }
+            }
 
 
             .footer-protection {
