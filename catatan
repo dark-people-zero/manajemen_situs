@@ -1,0 +1,8 @@
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer doo_v1_c46dde8bd619fcc382e70d6d43be6eebb140fa2452e8f7fa882433377898ebf2" "https://api.digitalocean.com/v2/cdn/endpoints"
+
+DO004RLRAQQXH33LB7Q4
+SdupVahek07uq7ecT4M1Kisov1fLcOrNDO6c67S2gYM
+
+doo_v1_c46dde8bd619fcc382e70d6d43be6eebb140fa2452e8f7fa882433377898ebf2
+
+curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer doo_v1_c46dde8bd619fcc382e70d6d43be6eebb140fa2452e8f7fa882433377898ebf2" -d '{"files": ["*"]}' "https://api.digitalocean.com/v2/cdn/endpoints/c0cd6d62-2e89-4ea0-967f-6e574ead2a42/cache"

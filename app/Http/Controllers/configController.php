@@ -54,4 +54,12 @@ class configController extends Controller
             return view("pages.error404");
         }
     }
+
+    public function testing()
+    {
+        $directories = Storage::disk('spaces')->directories("situs");
+        // spaces
+        return DO_purge("situs");
+        return $directories;
+    }
 }
