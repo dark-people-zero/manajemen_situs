@@ -410,6 +410,14 @@ body.smbitClass-desktop {
             }
         }
     }
+    .news-body {
+        background: #131313;
+        .masking {
+            display: flex;
+            align-items: center;
+
+        }
+    }
 
     .linkalte-container {
         position: fixed;
@@ -418,52 +426,51 @@ body.smbitClass-desktop {
         z-index: 9999;
         max-width: 216px;
         display: block;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 0.6s;
+        transition: height 0.6s;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-
-            &:hover {
-                background: rgba(0, 40, 65, 0.5);
-                }
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            background: rgb(127,0,0);
+            background: linear-gradient(0deg, rgba(127,0,0,1) 21%, rgba(209,104,26,1) 84%);
+            transition: height .1s;
+            border-bottom-right-radius: 45px;
+            border-bottom-left-radius: 30px;
+            padding: 20px 0 10px 10px;
+            margin: -18px 2px 0 0;
+            max-width: 182px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #777777;
-                font-weight: 600;
-                text-decoration: none;
-
-                &:hover {
-                    // background: #837f77;
-                    // color: #fff;
-                    color: #55e3ff;
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color :#d4a50b;
+                a {
+                    color :#d4a50b;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    &:hover {
+                        font-weight: 600;
+                    }
                 }
             }
+
+
         }
 
         &:hover {
-            .linkalte-body{
-                display: block;
+            height: auto;
+            -webkit-transition: height 0.6s;
+            transition: height 0.6s;
+
+            .linkalte-body {
+                opacity: 1;
             }
+
+
         }
 
     }
@@ -774,14 +781,18 @@ body.smbitClass-desktop {
 
             .before-footer {
                 h2 {
+                    font-size: 25px;
                     margin: 20px 0;
                     color: #ff3a18;
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: 4;
+                    font-size: medium;
                     color: #ff3a18;
                     text-align: -webkit-center;
+                }
+                a {
+                    color : #ff3a18;
                 }
             }
 

@@ -397,6 +397,14 @@ body.smbitClass-mobile {
 body.smbitClass-desktop {
     background-image: url('/situs/assets/patih_toto/desktop/images/patihtoto_background_default.jpg');
     background-attachment: fixed;
+    .breadcrumbs {
+        margin-top: 20px;
+    }
+    .masking {
+        display: flex;
+        align-items: center;
+    }
+
 
     .section {
         .container {
@@ -419,53 +427,53 @@ body.smbitClass-desktop {
         z-index: 9999;
         max-width: 216px;
         display: block;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 0.6s;
+        transition: height 0.6s;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: linear-gradient(to bottom, #00000000 50%, #000000 100%);
-            border-bottom: 1px solid #f0e981;
-            border-radius: 0px 0px 28px 28px;
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            &:hover {
-                background: linear-gradient(to bottom, #000000 80%, #000000 20%);
-                text-decoration: none;
-                }
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            background: rgb(59,59,59);
+            background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(0,0,0,1) 89%);
+            border: 2px solid #f6efc1;
+            transition: height .1s;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px 0;
+            margin: -20px 35px 0 36px;
+            max-width: 148px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #e5d194;
-                font-weight: 600;
-                text-decoration: none;
-
-                &:hover {
-
-                    color: #ebcf7b;
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color : #f0e6b4;
+                a {
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color : #f0e6b4;
+                    &:hover {
+                        font-weight: 700;
+                    }
                 }
             }
+
+
         }
 
         &:hover {
-            .linkalte-body{
-                display: block;
+            height: auto;
+            -webkit-transition: height 0.6s;
+            transition: height 0.6s;
+
+            .linkalte-body {
+                opacity: 1;
             }
+
+
         }
 
     }
@@ -964,11 +972,14 @@ body.smbitClass-desktop {
     }
 
     footer {
+        width: 1170px;
+        margin: auto;
         &#footer {
             border-top: 10px solid #b18517;
 
             .before-footer {
                 h2 {
+                    font-size: 25px;
                     margin: 20px 0;
                     color :#e4302f;
                     // text-shadow: 0px 0px 5px red;
@@ -976,6 +987,9 @@ body.smbitClass-desktop {
                 }
                 p.deskripsi {
                     font-size: large;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: 300;
+                    line-height: 1.5;
                     text-align: -webkit-center;
                 }
                 a {
