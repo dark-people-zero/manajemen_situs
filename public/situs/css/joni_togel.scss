@@ -393,7 +393,7 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/joni_togel/desktop/images/jonitogel_background_default.jpg');
+    background-image: url('/situs/assets/joni_togel/desktop/images/jonitogel_background_new.jpg');
     background-attachment: fixed;
 
     .section {
@@ -416,16 +416,20 @@ body.smbitClass-desktop {
         }
     }
 
+    .breadcrumbs {
+        padding-top: 10px;
+    }
+
     .linkalte-container {
         position: fixed;
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
-        display: block;
+        max-width: 182px;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
@@ -435,41 +439,27 @@ body.smbitClass-desktop {
             margin-top: -17px;
             background: linear-gradient(180deg, rgba(181,101,27,1) 35%, rgba(247,230,61,1) 58%, rgba(255,255,246,1) 100%);
             border-radius: 0px 0px 30px 30px;
-            list-style-type: none;
             padding: 10px 0 10px 5px;
-            display: none;
             -webkit-transition: height 0.5s;
-            transition: height 0.10s;
+            transition: height 0.5s;
+            opacity: 0;
 
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
             .linkalte-item {
                 overflow: hidden;
                 text-overflow: ellipsis;
-                display: flex;
-                padding: 8px;
-                
-                text-decoration: none;
-
-                a{
+                padding: 5px;
+                color: #32352d;
+                a {
                     color: #32352d;
                     font-weight: 600;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                    color: #fff;
                 }
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
@@ -717,6 +707,12 @@ body.smbitClass-desktop {
                         }
                     }
                 }
+            }
+        }
+
+        ~ div {
+            center {
+                display: none;
             }
         }
     }
@@ -976,7 +972,7 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 10px solid #2b2b2b;
+            border-top: 0;
 
             .before-footer {
                 h2 {
