@@ -46,3 +46,5 @@ Route::get('/permision', function () {
         "data" => $active
     ]);
 });
+
+Route::get('/testing', [configController::class, 'testing']);

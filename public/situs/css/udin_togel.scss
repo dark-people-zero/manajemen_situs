@@ -399,6 +399,11 @@ body.smbitClass-desktop {
     background-image: url('/situs/assets/udin_togel/desktop/images/udintogel_background_default.jpg');
     background-attachment: fixed;
 
+    .masking {
+        display: flex;
+        align-items: center;
+    }
+
     .section {
         .container {
             .blog-posts {
@@ -420,47 +425,52 @@ body.smbitClass-desktop {
         z-index: 9999;
         max-width: 216px;
         display: block;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 0.6s;
+        transition: height 0.6s;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            background: rgb(46,46,46);
+            background: linear-gradient(0deg, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 65%);
+            transition: height 1s;
+            padding: 10px 0 5px 0;
+            margin: -10px 20px 0 9px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            max-width: 164px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #fff55b;
-                font-weight: 600;
-                text-decoration: none;
-
-                &:hover {
-                    // background: rgba(0, 40, 65, 0.5);
-                    color: #ffffff;
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color : #e3aa16;
+                a {
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color : #e3aa16 ;
+                    &:hover {
+                        font-weight: 700;
+                    }
                 }
             }
+
+
         }
 
         &:hover {
-            .linkalte-body{
-                display: block;
+            height: auto;
+            -webkit-transition: height 0.6s;
+            transition: height 0.6s;
+
+            .linkalte-body {
+                opacity: 1;
             }
+
+
         }
 
     }
@@ -769,18 +779,28 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
+            width: 1170px;
+            margin: auto;
             border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {
+                    font-size: 25px;
                     margin: 20px 0;
                     color: #e4302f;
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: large;
-                    color: #dee1de !important;
+                    font-size: medium;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: 300;
                     text-align: center;
+                }
+                a {
+                    color : #e4302f;
+                    &:hover{
+                    color :#428bca;
+                    }
                 }
             }
 

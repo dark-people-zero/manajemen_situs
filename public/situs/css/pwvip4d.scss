@@ -398,6 +398,9 @@ body.smbitClass-mobile {
 body.smbitClass-desktop {
     background-image: url('/situs/assets/pwvip4d/desktop/images/pwvip4d_background_default.jpg');
     background-attachment: fixed;
+    .breadcrumbs {
+        margin-top: 20px;
+    }
 
     .section {
         .container {
@@ -420,51 +423,52 @@ body.smbitClass-desktop {
         z-index: 9999;
         max-width: 216px;
         display: block;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 0.6s;
+        transition: height 0.6s;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: linear-gradient(to bottom, #bf7107 30%, #ffff8c 100%);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-
-            &:hover {
-                background: linear-gradient(to bottom, #e6bf07 20%, #fffff0 80%);
-                color: #323521;
-
-            }
-
-            // li{
-            //     width: 100%;
-            //     &:not(:last-child) {
-            //         border-bottom: 1px solid #adadad;
-            //     }
-            // }
+            background: #3f3d3b;
+            border: 2px solid #272624;
+            transition: height .1s;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 5px 0 10px 0;
+            margin: -10px 23px 0 40px;
+            max-width: 148px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #32352d;
-                font-weight: 600;
-                text-decoration: none;
-
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color : #ffefb4;
+                a {
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color : #ffefb4;
+                    &:hover {
+                        font-weight: 700;
+                    }
+                }
             }
+
+
         }
 
         &:hover {
-            .linkalte-body{
-                display: block;
+            height: auto;
+            -webkit-transition: height 0.6s;
+            transition: height 0.6s;
+
+            .linkalte-body {
+                opacity: 1;
             }
+
+
         }
 
     }
@@ -717,7 +721,7 @@ body.smbitClass-desktop {
     }
 
     // list image gameicon
-    $listImage: 'pwvip4d_singapore.png', 'pwvip4d_hongkong.png', 'pwvip4d_sydney.png', 'pwvip4d_nevada.png', 'pwvip4d_cambodia.png', 'pwvip4d_bullseye.png', 'pwvip4d_carolina.png', 'pwvip4d_totomacau.png', 'pwvip4d_china.png', 'pwvip4d_california.png', 'pwvip4d_florida.png', 'pwvip4d_newyork.png', 'pwvip4d_oregon.png', 'pwvip4d_taiwan.png', 'pwvip4d_sicboball.png', 'pwvip4d_sicbodice.png', 'pwvip4d_12d.png', 'pwvip4d_dice6.png', 'pwvip4d_24d.png', 'pwvip4d_roullete.png', 'pwvip4d_baccarat.png', 'pwvip4d_pokerdice.png', 'pwvip4d_suwit.png', 'pwvip4d_dragontiger.png', 'pwvip4d_oglok.png', 'pwvip4d_idn4stand.png', 'pwvip4d_roullete2.png', 'pwvip4d_headandtail.png', 'pwvip4d_monopoly.png', 'pwvip4d_5dball.png', 'pwvip4d_gongball.png', 'pwvip4d_billiard.png', 'pwvip4d_3dshio.png', 'pwvip4d_raceball.png', 'pwvip4d_fantan.png', 'pwvip4d_niuniu.png';
+    $listImage: 'pwvip4d_singapore.png', 'pwvip4d_hongkong.png', 'pwvip4d_sydney.png', 'pwvip4d_nevada.png', 'pwvip4d_cambodia.png', 'pwvip4d_bullseye.png','pwvip4d_magnum4d.png', 'pwvip4d_carolina.png', 'pwvip4d_totomacau.png','pwvip4d_pcso.png', 'pwvip4d_china.png', 'pwvip4d_california.png', 'pwvip4d_florida.png', 'pwvip4d_newyork.png', 'pwvip4d_oregon.png', 'pwvip4d_taiwan.png','pwvip4d_roullete2.png', 'pwvip4d_sicbodice.png', 'pwvip4d_12d.png', 'pwvip4d_dice6.png', 'pwvip4d_24d.png', 'pwvip4d_roullete.png', 'pwvip4d_baccarat.png', 'pwvip4d_pokerdice.png', 'pwvip4d_suwit.png', 'pwvip4d_red_white.png', 'pwvip4d_dragontiger.png', 'pwvip4d_oglok.png', 'pwvip4d_idn4stand.png','pwvip4d_sicboball.png',  'pwvip4d_headandtail.png', 'pwvip4d_monopoly.png', 'pwvip4d_5dball.png', 'pwvip4d_gongball.png', 'pwvip4d_billiard.png', 'pwvip4d_3dshio.png', 'pwvip4d_raceball.png', 'pwvip4d_fantan.png', 'pwvip4d_niuniu.png','pwvip4d_kentucky.png', 'pwvip4d_brunei.png', 'pwvip4d_japanpools.png', 'pwvip4d_poipet.png', 'pwvip4d_huahin.png', 'pwvip4d_bangkok.png', 'pwvip4d_totomacau5d.png', 'pwvip4d_europeroulette1.png', 'pwvip4d_grandprix.png', 'pwvip4d_dueldice.png', 'pwvip4d_dragontigerwild.png', 'pwvip4d_ShioFights.png', 'pwvip4d_europebaccarat.png', 'pwvip4d_xocdia.png', 'pwvip4d_gongballjitu.png', 'pwvip4d_48d.png', 'pwvip4d_bingosicbo.png', 'pwvip4d_habanero.png', 'pwvip4d_idnslot.png', 'pwvip4d_microgaming.png', 'pwvip4d_pgsoft.png', 'pwvip4d_pragmatic.png', 'pwvip4d_toptrend.png','pwvip4d_singapore.png', 'pwvip4d_hongkong.png', 'pwvip4d_sydney.png', 'pwvip4d_nevada.png', 'pwvip4d_cambodia.png', 'pwvip4d_bullseye.png','pwvip4d_magnum4d.png', 'pwvip4d_carolina.png', 'pwvip4d_totomacau.png','pwvip4d_pcso.png' ;
 
     .gameicon {
         .owl-item {
@@ -739,7 +743,7 @@ body.smbitClass-desktop {
         // background: #302e2e;
         display: flex;
         align-items: center;
-        margin-top: 15px;
+        
         color: #ffc02c;
         background: linear-gradient(to right, #0e0d0d 0%, #505050 50%, #0a0909 100%);
 
@@ -976,16 +980,19 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {
+                    font-size: 25px;
                     margin: 20px 0;
                     color: #fffacf;
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: large;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: 300;
+                    font-size: medium;
                     text-align: -webkit-center;
                 }
                 a {

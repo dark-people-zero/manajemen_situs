@@ -412,7 +412,7 @@ body.smbitClass-desktop {
             }
         }
     }
-
+    
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -420,49 +420,52 @@ body.smbitClass-desktop {
         z-index: 9999;
         max-width: 216px;
         display: block;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height .10s;
+        -webkit-transition: height 0.6s;
+        transition: height 0.6s;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            &:hover {
-                background: rgba(0, 40, 65, 0.5);
-                }
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            background: #101010;
+            border: 1px solid #111111;
+            transition: height .1s;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px 0;
+            margin: -10px 23px 0 28px;
+            max-width: 148px;
+            opacity: 0;
             .linkalte-item {
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                color: #777777;
-                font-weight: 600;
-                text-decoration: none;
-
-                &:hover {
-                    color: #75a6d1;
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color : #ffff;
+                a {
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color : #ffff ;
+                    &:hover {
+                        font-weight: 700;
+                    }
                 }
             }
+
+
         }
 
         &:hover {
-            .linkalte-body{
-                display: block;
+            height: auto;
+            -webkit-transition: height 0.6s;
+            transition: height 0.6s;
+
+            .linkalte-body {
+                opacity: 1;
             }
+
+
         }
 
     }
@@ -959,17 +962,22 @@ body.smbitClass-desktop {
     }
 
     footer {
+        width: 1170px;
+        margin: auto;
         &#footer {
-            border-top: 0;
+            border-top: 10px solid #2b2b2b;
 
             .before-footer {
                 h2 {
+                    font-size: 25px;
                     margin: 20px 0;
                    color: #e5c46d;
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: large;
+                    font-size: medium;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: 300;
                     text-align: -webkit-center;
                 }
                 a {
