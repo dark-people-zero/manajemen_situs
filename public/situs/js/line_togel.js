@@ -281,6 +281,37 @@ const func = {
                 targetReplace.remove();
             }
         },
+        contackUs: () => {
+            let template = $(`
+                <div class="contact-us on">
+                    <div class="contact-btnOn">
+                        <img src="https://cdn.areabermain.club/slider/linetogel/open.jpg">
+                    </div>
+                    <div class="contact-UsArea">
+                        <div class="area">
+                            <img src="https://cdn.areabermain.club/linetogel/images/contacts/contactus_linetogel.png">
+                            <div class="contact-number">
+                                <div class="contact-number-item">+6281380378048</div>
+                                <div class="contact-number-item wa2"></div>
+                            </div>
+                        </div>
+                        <div class="contact-btnOf">
+                            <img src="https://cdn.areabermain.club/slider/linetogel/close.jpg">
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            template.find(".contact-btnOn").click(function() {
+                $(this).closest(".contact-us").toggleClass("on");
+            });
+
+            template.find(".contact-btnOf").click(function() {
+                $(this).closest(".contact-us").toggleClass("on");
+            });
+
+            $("body").append(template);
+        },
         defaultFooter: () => {
             var target = $("#footer");
             var main = target.find(".footer-main");
@@ -322,6 +353,8 @@ const func = {
             `);
 
             main.append(link);
+
+            func.desktop.contackUs();
         }
     },
     mobile: {
@@ -540,7 +573,351 @@ const func = {
             url: "/config/22",
             dataType: "json",
             success: function (response) {
-               
+               response = {
+                "id": 22,
+                "name": "line_togel",
+                "status_desktop": 1,
+                "status_mobile": 1,
+                "url_desktop_dev": "/situs/line_togel/desktop",
+                "url_desktop_prod": "https://linetogel176.com/",
+                "url_mobile_dev": "/situs/line_togel/m",
+                "url_mobile_prod": "https://linetogel176.com/m",
+                "created_at": "2022-11-13T15:42:11.000000Z",
+                "updated_at": "2022-11-13T15:42:11.000000Z",
+                "fitur_situs": {
+                    "desktop": [
+                        {
+                            "id": 420,
+                            "id_situs": 22,
+                            "id_fitur": 1,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": {
+                                "file": "https://static.hokibagus.club/situs/line_togel/desktop/popup modal/linetogel_popup_cashback.png",
+                                "deskripsi": "Klik cimana saja untuk keluar."
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 421,
+                            "id_situs": 22,
+                            "id_fitur": 2,
+                            "type": "desktop",
+                            "status": 0,
+                            "data": {
+                                "url": null,
+                                "file": "",
+                                "title": null,
+                                "slogan": null
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 422,
+                            "id_situs": 22,
+                            "id_fitur": 3,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": [
+                                "https://static.hokibagus.club/situs/line_togel/desktop/header corousel/linetogel_sliderweb_allbonus3.jpg",
+                                "https://static.hokibagus.club/situs/line_togel/desktop/header corousel/linetogel_sliderweb_tipebet2.jpg",
+                                "https://static.hokibagus.club/situs/line_togel/desktop/header corousel/linetogel_sliderweb_tipebet4.jpg"
+                            ],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 423,
+                            "id_situs": 22,
+                            "id_fitur": 4,
+                            "type": "desktop",
+                            "status": 0,
+                            "data": [],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-13T15:47:49.000000Z"
+                        },
+                        {
+                            "id": 424,
+                            "id_situs": 22,
+                            "id_fitur": 5,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": {
+                                "ket": "-",
+                                "data": [
+                                    {
+                                        "link": "https://www.facebook.com/LineTogell/",
+                                        "name": "Facebook",
+                                        "image": "https://static.hokibagus.club/situs/line_togel/desktop/icon sosmed/fb.png",
+                                        "status": true
+                                    },
+                                    {
+                                        "link": "https://twitter.com/TogelLine",
+                                        "name": "Twitter",
+                                        "image": "https://static.hokibagus.club/situs/line_togel/desktop/icon sosmed/twitter.png",
+                                        "status": true
+                                    },
+                                    {
+                                        "link": "https://www.instagram.com/linetogel66/",
+                                        "name": "Instagram",
+                                        "image": "https://static.hokibagus.club/situs/line_togel/desktop/icon sosmed/ig.png",
+                                        "status": true
+                                    },
+                                    {
+                                        "link": "https://68.183.235.241/category/bukti-bayar/",
+                                        "name": "Bukti Pembayaran",
+                                        "image": "https://static.hokibagus.club/situs/line_togel/desktop/icon sosmed/wp.png",
+                                        "status": true
+                                    },
+                                    {
+                                        "link": "https://www.youtube.com/channel/UCkakzB06pG7VNVduDnl0xzw",
+                                        "name": "Youtu",
+                                        "image": "https://static.hokibagus.club/situs/line_togel/desktop/icon sosmed/yt.png",
+                                        "status": true
+                                    }
+                                ]
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 425,
+                            "id_situs": 22,
+                            "id_fitur": 6,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": {
+                                "link": "https://linetogel176.com/",
+                                "name": "line",
+                                "image": "https://static.hokibagus.club/situs/line_togel/desktop/promosi/linetogel_banner.gif"
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 426,
+                            "id_situs": 22,
+                            "id_fitur": 7,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": {
+                                "title": "Situs Resmi Bandar Online Terpercaya",
+                                "deskripsi": "<a href=\"/\">Linetogel</a> adalah bandar judi togel online indonesia terpercaya yang menyediakan pasaran togel online terlengkap dan live games terbaik, jika anda adalah seorang togeller maka diwajibkan coba di sini dengan fasilitas operator yang online 24jam. Pasang Angka? Kode Alam, Angka Mimpi semuanya dapat anda pasang di linetogel.com dengan pasaran terlengkap."
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 427,
+                            "id_situs": 22,
+                            "id_fitur": 8,
+                            "type": "desktop",
+                            "status": 0,
+                            "data": {
+                                "link": null,
+                                "name": null,
+                                "image": ""
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 428,
+                            "id_situs": 22,
+                            "id_fitur": 9,
+                            "type": "desktop",
+                            "status": 1,
+                            "data": {
+                                "image": "https://static.hokibagus.club/situs/line_togel/desktop/link alternatif/linkalternatif.png",
+                                "listLink": [
+                                    "linkr.bio/linetogel888",
+                                    "rebrand.ly/linetogel88",
+                                    "\nlinetogel176.com"
+                                ]
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 429,
+                            "id_situs": 22,
+                            "id_fitur": 10,
+                            "type": "desktop",
+                            "status": 0,
+                            "data": {
+                                "name": "barocde qris",
+                                "color": "#FFFFFF",
+                                "image": "",
+                                "shadow": "#196a7d",
+                                "background": "#c0392b"
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 430,
+                            "id_situs": 22,
+                            "id_fitur": 11,
+                            "type": "desktop",
+                            "status": 0,
+                            "data": [
+                                ""
+                            ],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-13T15:47:49.000000Z"
+                        }
+                    ],
+                    "mobile": [
+                        {
+                            "id": 431,
+                            "id_situs": 22,
+                            "id_fitur": 1,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "file": "",
+                                "deskripsi": null
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 432,
+                            "id_situs": 22,
+                            "id_fitur": 2,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "url": null,
+                                "file": "",
+                                "title": null,
+                                "slogan": null
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 433,
+                            "id_situs": 22,
+                            "id_fitur": 3,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": [],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-13T15:47:49.000000Z"
+                        },
+                        {
+                            "id": 434,
+                            "id_situs": 22,
+                            "id_fitur": 4,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": [],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-13T15:47:49.000000Z"
+                        },
+                        {
+                            "id": 435,
+                            "id_situs": 22,
+                            "id_fitur": 5,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "ket": null,
+                                "data": []
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 436,
+                            "id_situs": 22,
+                            "id_fitur": 6,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "link": null,
+                                "name": null,
+                                "image": ""
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 437,
+                            "id_situs": 22,
+                            "id_fitur": 7,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "title": null,
+                                "deskripsi": null
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 438,
+                            "id_situs": 22,
+                            "id_fitur": 8,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "link": null,
+                                "name": null,
+                                "image": ""
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 439,
+                            "id_situs": 22,
+                            "id_fitur": 9,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "image": "",
+                                "listLink": [
+                                    ""
+                                ]
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 440,
+                            "id_situs": 22,
+                            "id_fitur": 10,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": {
+                                "name": "barocde qris",
+                                "color": "#FFFFFF",
+                                "image": "",
+                                "shadow": "#196a7d",
+                                "background": "#c0392b"
+                            },
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-25T06:48:42.000000Z"
+                        },
+                        {
+                            "id": 441,
+                            "id_situs": 22,
+                            "id_fitur": 11,
+                            "type": "mobile",
+                            "status": 0,
+                            "data": [
+                                ""
+                            ],
+                            "created_at": "2022-11-13T15:42:11.000000Z",
+                            "updated_at": "2022-11-13T15:47:49.000000Z"
+                        }
+                    ]
+                }
+            }
                 func.desktop.defaultFooter();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
