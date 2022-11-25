@@ -424,51 +424,45 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
-        display: block;
+        max-width: 190px;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        overflow: hidden;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
-            list-style-type: none;
-            padding: 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
+            margin-top: -20px;
+            padding-top: 20px;
+            background: linear-gradient(0deg, rgb(209 193 8) 0%, rgb(219 173 20) 35%, rgb(209 195 20) 100%);
+            margin-left: 6px;
+            margin-right: 1px;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
 
-            &:hover {
-            background: rgba(0, 40, 65, 0.5);
-            }
-
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
             .linkalte-item {
-                display: flex;
-                padding: 8px;
-                color: #777777;
+                padding: 5px 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #2e2d2d;
                 font-weight: 600;
-                text-decoration: none;
 
-                &:hover {
-                    // background: rgba(0, 40, 65, 0.5);
-                    color: #55e3ff;
+                a {
+                    color: #2e2d2d;
+                    font-weight: 600;
                 }
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
