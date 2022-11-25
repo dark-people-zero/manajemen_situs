@@ -425,7 +425,8 @@ body.smbitClass-desktop {
         display: block;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
@@ -434,31 +435,17 @@ body.smbitClass-desktop {
         .linkalte-body {
             overflow: hidden;
             text-overflow: ellipsis;
-            background: linear-gradient(180deg, rgba(22,0,87,1) 0%, rgba(38,33,144,1) 70%, rgba(22,0,87,1) 100%);
+            background: linear-gradient(180deg, rgb(22, 0, 87) 0%, rgb(38, 33, 144) 70%, rgb(22, 0, 87) 100%);
             border-radius: 10px 0px 15px 15px;
-            list-style-type: none;
-            max-width: 190px;
-            padding: 0 0 10px 0;
-            display: none;
-            -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            margin-top: -10px;
-            padding-top: 10px;
-            &:hover {
-                background: linear-gradient(180deg, rgba(22,0,87,1) 0%, rgba(38,33,144,1) 70%, rgba(22,0,87,1) 100%);
-            }
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
+            transition: height .1s;
+            padding: 10px 0;
+            margin: -10px 2px 0 2px;
+            opacity: 0;
+
             .linkalte-item {
                 display: flex;
-                
                 justify-content: start;
                 padding: 8px;
-                text-decoration: none;
                 a {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -473,8 +460,9 @@ body.smbitClass-desktop {
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
@@ -983,7 +971,7 @@ body.smbitClass-desktop {
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: 4;
+                    font-size: 16px;
                     color: #fff;
                     text-align: -webkit-center;
                 }
