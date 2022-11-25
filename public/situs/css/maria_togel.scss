@@ -421,9 +421,10 @@ body.smbitClass-desktop {
         right: 0;
         z-index: 9999;
         max-width: 190px;
-        -webkit-transition: height 2s;
-        transition: height 2s;
+        -webkit-transition: height 0.5s;
+        transition: height 0.5s;
         height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
@@ -436,9 +437,9 @@ body.smbitClass-desktop {
             max-width: 190px;
             border-radius: 15px 10px 10px 10px;
             margin-left: 4px;
+            -webkit-transition: height 0.5s;
+            transition: height 0.5s;
             opacity: 0;
-            -webkit-transition: height 2s;
-            transition: height 2s;
 
             .linkalte-item {
                 padding: 8px;
@@ -454,7 +455,10 @@ body.smbitClass-desktop {
         }
 
         &:hover {
+            -webkit-transition: height 0.5s;
+            transition: height 0.5s;
             height: 100%;
+
             .linkalte-body {
                 opacity: 1;
             }
