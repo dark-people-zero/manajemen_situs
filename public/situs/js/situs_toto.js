@@ -221,16 +221,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item">
+                        <a href="${e}"  target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 
@@ -503,7 +503,7 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/22",
+            url: "/config/25",
             dataType: "json",
             success: function (response) {
                 if (response) {

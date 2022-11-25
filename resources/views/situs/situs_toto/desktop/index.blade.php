@@ -257,6 +257,8 @@
                         <!--<li><a href="index.php"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>-->
                         <li><a href="javascript:void(0);"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Cara
                                 Bermain</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;History Nomor</a>
+                            </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Buku Mimpi</a>
                         </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-users"></i>&nbsp;&nbsp;Referral</a></li>

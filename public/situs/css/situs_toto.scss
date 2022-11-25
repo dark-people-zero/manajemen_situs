@@ -414,6 +414,12 @@ body.smbitClass-desktop {
         }
     }
 
+    .tickercontainer {
+        .masking {
+            margin-top: 5px;
+        }
+
+    }
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -430,15 +436,20 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
+            max-width: 184px;
+            margin-top: -20px;
+            margin-left: 6px;
+            background: linear-gradient(180deg, rgba(49,170,236,1) 0%, rgba(49,170,236,1) 53%, rgba(31,89,193,1) 100%);
             list-style-type: none;
-            padding: 0;
+            padding: 20px 0 10px 5px;
+            border-radius: 0 0 10px 10px;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
             &:hover {
-            background: rgba(0, 40, 65, 0.5);
+                background: linear-gradient(180deg, rgba(49,170,236,1) 0%, rgba(49,170,236,1) 53%, rgba(31,89,193,1) 100%);
+
             }
 
             li{
@@ -450,9 +461,14 @@ body.smbitClass-desktop {
             .linkalte-item {
                 display: flex;
                 padding: 8px;
-                color: #777777;
-                font-weight: 600;
                 text-decoration: none;
+
+                a {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: #fff;
+                    font-weight: 600;
+                }
 
                 &:hover {
                     // background: rgba(0, 40, 65, 0.5);
