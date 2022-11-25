@@ -257,6 +257,8 @@
                         <!--<li><a href="index.php"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>-->
                         <li><a href="javascript:void(0);"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Cara
                                 Bermain</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;History Nomor</a>
+                            </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Buku Mimpi</a>
                         </li>
                         <li><a href="javascript:void(0);"><i class="fa fa-users"></i>&nbsp;&nbsp;Referral</a></li>
@@ -602,52 +604,7 @@
                                     src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
                                     width='210px' height='210px'>
                             </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="/situs/assets/situs_toto/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1"
-                                    width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src='{{ asset('/situs/assets/situs_toto/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}'>
-                            </div>
+
                         </div>
                     </div>
                 </div>

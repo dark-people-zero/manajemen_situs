@@ -609,15 +609,7 @@
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/icon/icon-TMc619.jpg?v=1.0') }}">
                             </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/icon/icon-24dc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/icon/icon-RLc619.jpg?v=1.0') }}">
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('/situs/assets/yowes_togel/desktop/assets/img/icon/icon-SDc619.jpg?v=1.0') }}">
-                            </div>
+
                         </div>
                     </div>
                 </div>

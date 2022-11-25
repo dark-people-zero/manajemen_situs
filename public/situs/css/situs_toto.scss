@@ -414,6 +414,12 @@ body.smbitClass-desktop {
         }
     }
 
+    .tickercontainer {
+        .masking {
+            margin-top: 5px;
+        }
+
+    }
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -430,15 +436,20 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
+            max-width: 184px;
+            margin-top: -20px;
+            margin-left: 6px;
+            background: linear-gradient(180deg, rgba(49,170,236,1) 0%, rgba(49,170,236,1) 53%, rgba(31,89,193,1) 100%);
             list-style-type: none;
-            padding: 0;
+            padding: 20px 0 10px 5px;
+            border-radius: 0 0 10px 10px;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
             &:hover {
-            background: rgba(0, 40, 65, 0.5);
+                background: linear-gradient(180deg, rgba(49,170,236,1) 0%, rgba(49,170,236,1) 53%, rgba(31,89,193,1) 100%);
+
             }
 
             li{
@@ -450,9 +461,14 @@ body.smbitClass-desktop {
             .linkalte-item {
                 display: flex;
                 padding: 8px;
-                color: #777777;
-                font-weight: 600;
                 text-decoration: none;
+
+                a {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: #fff;
+                    font-weight: 600;
+                }
 
                 &:hover {
                     // background: rgba(0, 40, 65, 0.5);
@@ -529,7 +545,7 @@ body.smbitClass-desktop {
     }
 
     // list image gameicon
-    $listImage: 'situstoto_singapore.png', 'situstoto_hongkong.png', 'situstoto_sydney.png', 'situstoto_nevada.png', 'situstoto_cambodia.png', 'situstoto_bullseye.png', 'situstoto_carolina.png', 'situstoto_totomacau.png', 'situstoto_china.png', 'situstoto_california.png', 'situstoto_florida.png', 'situstoto_newyork.png', 'situstoto_oregon.png', 'situstoto_taiwan.png', 'situstoto_sicboball.png', 'situstoto_sicbodice.png', 'situstoto_12d.png', 'situstoto_dice6.png', 'situstoto_24d.png', 'situstoto_roullete.png', 'situstoto_baccarat.png', 'situstoto_pokerdice.png', 'situstoto_suwit.png', 'situstoto_dragontiger.png', 'situstoto_oglok.png', 'situstoto_idn4stand.png', 'situstoto_roullete2.png', 'situstoto_headandtail.png', 'situstoto_monopoly.png', 'situstoto_5dball.png', 'situstoto_gongball.png', 'situstoto_billiard.png', 'situstoto_3dshio.png', 'situstoto_raceball.png', 'situstoto_fantan.png', 'situstoto_niuniu.png', 'situstoto_pgsoft.png', 'situstoto_pragmatic.png', 'situstoto_idnslot.png', 'situstoto_microgaming.png', 'situstoto_toptrend.png', 'situstoto_habanero.png', 'situstoto_comingsoon.png', 'situstoto_comingsoon.png';
+    $listImage: 'situstoto_singapore.png', 'situstoto_hongkong.png', 'situstoto_sydney.png', 'situstoto_nevada.png', 'situstoto_cambodia.png', 'situstoto_bullseye.png', 'situstoto_carolina.png', 'situstoto_totomacau.png', 'situstoto_china.png', 'situstoto_california.png', 'situstoto_florida.png', 'situstoto_newyork.png', 'situstoto_oregon.png', 'situstoto_taiwan.png', 'situstoto_sicboball.png', 'situstoto_sicbodice.png', 'situstoto_12d.png', 'situstoto_dice6.png', 'situstoto_24d.png', 'situstoto_baccarat.png', 'situstoto_pokerdice.png', 'situstoto_suwit.png', 'situstoto_dragontiger.png', 'situstoto_oglok.png', 'situstoto_idn4stand.png', 'situstoto_headandtail.png', 'situstoto_monopoly.png',  'situstoto_gongball.png', 'situstoto_billiard.png', 'situstoto_3dshio.png', 'situstoto_raceball.png', 'situstoto_fantan.png', 'situstoto_niuniu.png', 'situstoto_pgsoft.png';
 
     .gameicon {
         .owl-item {

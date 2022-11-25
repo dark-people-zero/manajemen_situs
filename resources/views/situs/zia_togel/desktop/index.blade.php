@@ -574,21 +574,6 @@
                                     src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
                             </div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
-                                    src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-poolsf9e3.jpg?v=1.1')}}" width='210px' height='210px'>
-                            </div>
-                            <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-24DSPINc619.jpg?v=1.0')}}"></div>
                             <div class="item slides" data-animation="fadeIn" style='text-align:center'><img
                                     src="{{ asset('situs/assets/zia_togel/desktop/assets/img/icon/icon-D6c619.jpg?v=1.0')}}"></div>
