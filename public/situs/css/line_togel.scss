@@ -402,7 +402,6 @@ body.smbitClass-desktop {
         margin: auto;
         background-color: #001d23;
         display: flex;
-
         .container {
             display: flex;
             justify-content: space-between;
@@ -417,7 +416,7 @@ body.smbitClass-desktop {
                     margin: 0 !important;
 
                     &.skrollable-after {
-                        margin-top: 18px !important;
+                        margin-top: -8px !important;
                     }
                 }
             }
@@ -489,23 +488,29 @@ body.smbitClass-desktop {
         padding-top: 20px;
         ~div {
             .container {
+                max-width: 1160px;
                 margin-top: 20px !important;
 
                 .row {
                     .news-head {
-                        border-bottom-left-radius: 50px;
-                        border-bottom: 1px solid #4ccce5;
+                        border-bottom-left-radius: 10px;
+                        border-bottom: 1px solid #0084dc;
                         background: #0d102f !important;
-                        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+                        // text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
                          color: #55e3ff;
+
+                        h5 {
+                            text-transform: uppercase;
+                            color: #8dfbff;
+                        }
 
                     }
 
                     .news-body {
                         background-image: none;
                         background: #0d102f !important;
-                        border-bottom: 1px solid #4ccce5;
-                        border-bottom-right-radius: 50px;
+                        border-bottom: 1px solid #0084dc;
+                        border-bottom-right-radius: 10px;
 
                         .masking {
                             display: flex;
@@ -531,13 +536,13 @@ body.smbitClass-desktop {
     }
     .masking {
         .run-text-depan {
-            text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
+            // text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
             color: #55e3ff;
 
       }
     }
     .navbar-fixed-top {
-        max-width: 1170px;
+        max-width: 1160px;
         margin: auto;
         background: #111a2dc2 !important;
         display: flex;
@@ -545,6 +550,12 @@ body.smbitClass-desktop {
     .section {
         .container  {
             background-color: #00000075;
+            max-width: 1160px;
+            .blog-sidebar {
+                .sidebar-nav {
+                    i {color: #e3c45d};
+                }
+            }
             .blog-posts {
                 .promosi {
                     img {
@@ -604,14 +615,15 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background-color: #01243db2 ;
-
+            background-color: #12263f ;
             text-decoration: none;
             list-style-type: none;
             padding: 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
+            border-right: 40px solid #e9ad2c;
+            max-width: 195px;
 
             li{
                 width: 100%;
@@ -622,14 +634,22 @@ body.smbitClass-desktop {
             .linkalte-item {
                 display: flex;
                 padding: 8px;
-                color: #fff;
-                font-weight: 600;
                 text-decoration: none;
 
-                &:hover {
+                a {
+                    color: #fff;
+                    font-weight: 600;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
 
-                    color: #428bca;
+                    &:hover {
+
+                        color: #e9ad2c;
+                    }
+
                 }
+
+                
             }
         }
 
@@ -648,9 +668,10 @@ body.smbitClass-desktop {
         .owl-wrapper {
             .owl-item {
                 margin-right: 15px;
+                width: auto !important;
                 .bank {
                     text-align: center;
-                    width: 168px !important;
+                    width: 145px !important;
                     height: 94px !important;
                     padding: 0px !important;
                     background-color: rgba(0,0,0,0) !important;
@@ -664,7 +685,7 @@ body.smbitClass-desktop {
 
 
                     img {
-                        width: 168px;
+                        width: 145px;
                         height: 94px;
 
                     }
@@ -989,6 +1010,7 @@ body.smbitClass-desktop {
                 background-color: transparent;
                 padding: 0;
                 .container {
+                    max-width: 1160px;
                     padding: 0;
                     .row {
                         margin: 0;
@@ -1011,6 +1033,7 @@ body.smbitClass-desktop {
             }
 
             .footer-main {
+                max-width: 1160px;
                 border-top: 1px #0084dc solid !important;
                 background: #111a2dc2 !important;
                 padding: 5px 15px;
@@ -1032,7 +1055,7 @@ body.smbitClass-desktop {
 
                     .footer-info-deskripsi {
                         color: #ffffff;
-                        font-size: 3;
+                        font-size: medium;
 
                         a {
                         text-shadow: 0px 0px 5px rgb(0 255 255);

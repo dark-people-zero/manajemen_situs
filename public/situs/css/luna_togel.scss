@@ -256,6 +256,8 @@ body.smbitClass-mobile {
                 font-weight: 600;
                 text-decoration: none;
 
+                
+
                 &:hover {
                     background: #837f77;
                     color: #fff;
@@ -410,6 +412,14 @@ body.smbitClass-desktop {
         }
     }
 
+    .breadcrumbs {
+        padding: 30px 0;
+    }
+
+    .results {
+        font-weight: 700;
+    }
+
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -426,22 +436,26 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: rgba(0, 0, 0, 0.7);
+           
+            margin-top: -40px;
+            border-radius: 25px 15px 15px 25px ;
+            background-color: #f6132b;
             list-style-type: none;
-            padding: 0;
+            padding-top: 40px;
+            padding-bottom: 5px;
+            max-width: 190px;
+            padding-left: 10px;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
+            border: 1x solid blue;
 
             &:hover {
-            background: rgba(0, 40, 65, 0.5);
+                background-color: #ea111f;
             }
 
             li{
                 width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
             }
             .linkalte-item {
                 display: flex;
@@ -450,8 +464,13 @@ body.smbitClass-desktop {
                 font-weight: 600;
                 text-decoration: none;
 
+                a {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: #ffffff;
+                }
+
                 &:hover {
-                    // background: rgba(0, 40, 65, 0.5);
                     color: #55e3ff;
                 }
             }
@@ -982,11 +1001,12 @@ body.smbitClass-desktop {
             .before-footer {
                 h2 {
                     margin: 20px 0;
+                    font-size: 25px;
                     color: #e2c97c;
                     text-align: center;
                 }
                 p.deskripsi {
-                    font-size: 4;
+                    font-size: medium;
                     color: #fff;
                     text-align: -webkit-center;
                 }

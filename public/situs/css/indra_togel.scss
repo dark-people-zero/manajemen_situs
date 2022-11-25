@@ -410,12 +410,18 @@ body.smbitClass-desktop {
         }
     }
 
+    .tickercontainer {
+        .masking {
+            margin-top: 6px;
+        }
+    }
+
     .linkalte-container {
         position: fixed;
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 190px;
         display: block;
         overflow: hidden;
         -webkit-transition: height 0.5s;
@@ -426,35 +432,43 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: linear-gradient(to bottom, #00000000 30%, #ff4242 100%);
-            border-radius: 0px 0px 15px 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: linear-gradient(180deg, rgba(22,0,87,1) 0%, rgba(38,33,144,1) 70%, rgba(22,0,87,1) 100%);
+            border-radius: 10px 0px 15px 15px;
             list-style-type: none;
-            padding: 0;
+            max-width: 190px;
+            padding: 0 0 10px 0;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
-            border-bottom: 1px solid #eaf844;
+            margin-top: -10px;
+            padding-top: 10px;
             &:hover {
-                background: linear-gradient(to bottom, #cc0707 20%, #ff0405 80%);
+                background: linear-gradient(180deg, rgba(22,0,87,1) 0%, rgba(38,33,144,1) 70%, rgba(22,0,87,1) 100%);
             }
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
                 display: flex;
-                justify-content: center;
+                
+                justify-content: start;
                 padding: 8px;
-                color: #fff;
-                font-weight: 600;
                 text-decoration: none;
+                a {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #fff;
+                    font-weight: 600;
+                }
 
-                // &:hover {
-                //     background: #837f77;
-                //     color: #fff;
-                // }
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -958,12 +972,14 @@ body.smbitClass-desktop {
 
     footer {
         &#footer {
+            font-family: 'Muli';
             border-top: 0;
 
             .before-footer {
                 h2 {
                     margin: 20px 0;
-                    color: #ff3a18;
+                    font-size: 25px;
+                    color: #e4302f;
                     text-align: center;
                 }
                 p.deskripsi {

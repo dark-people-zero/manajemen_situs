@@ -410,6 +410,12 @@ body.smbitClass-desktop {
         }
     }
 
+    .tickercontainer {
+        .masking {
+            margin-top: 6px;
+        }
+    }
+
     .linkalte-container {
         position: fixed;
         top: 110px;
@@ -426,32 +432,36 @@ body.smbitClass-desktop {
         }
 
         .linkalte-body {
-            background: linear-gradient(to bottom, #bf7107 30%, #ffff8c 100%);
-        border-radius: 0px 0px 30px 30px;
+            margin-top: -17px;
+            background: linear-gradient(180deg, rgba(181,101,27,1) 35%, rgba(247,230,61,1) 58%, rgba(255,255,246,1) 100%);
+            border-radius: 0px 0px 30px 30px;
             list-style-type: none;
-            padding: 0;
+            padding: 10px 0 10px 5px;
             display: none;
             -webkit-transition: height 0.5s;
             transition: height 0.10s;
 
             li{
                 width: 100%;
-                &:not(:last-child) {
-                    border-bottom: 1px solid #adadad;
-                }
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #adadad;
+                // }
             }
             .linkalte-item {
+                overflow: hidden;
+                text-overflow: ellipsis;
                 display: flex;
-
-                    align-items: center;
-                    justify-content: center;
                 padding: 8px;
-                color: #000;
-                font-weight: 600;
+                
                 text-decoration: none;
 
-                &:hover {
+                a{
+                    color: #32352d;
+                    font-weight: 600;
+                }
 
+                &:hover {
+                    text-decoration: underline;
                     color: #fff;
                 }
             }
@@ -973,14 +983,15 @@ body.smbitClass-desktop {
                     margin: 20px 0;
                    color: #e4302f;
                     text-align: center;
+                    font-size: 25px;
                 }
                 p.deskripsi {
-                    font-size: large;
+                    font-size: medium;
                     color: #fff;
                     text-align: -webkit-center;
                 }
                 a:hover {
-                    color: #428bca;
+                    color: #7db0db;
                     text-decoration: underline;
                 }
             }

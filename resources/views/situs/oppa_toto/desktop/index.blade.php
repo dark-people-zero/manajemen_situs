@@ -230,7 +230,11 @@
                 <div class="col-sm-9 news-body">
                     <ul id="liscroll" style="margin:0px;">
                         <li><a href="javascript:void(0);" style="margin:0px;">
-                                <qwe class="run-text-depan"></qwe>
+                                <qwe class="run-text-depan">
+                                    <b>
+                                        SELAMAT DATANG DAN SELAMAT BERGABUNG DI OPPATOTO.. BANDAR TOGEL ONLINE TERBESAR DAN TERPERCAYA...
+                                    </b>
+                                </qwe>
                             </a></li>
                     </ul>
                 </div>

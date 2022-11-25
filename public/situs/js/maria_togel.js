@@ -201,7 +201,9 @@ const func = {
         beforeFooter: (data) => {
             var template = $(`
                 <div class="before-footer container">
-                    <h2>${data.deskripsi}</h2>
+                <center><h2 class="tittle">${data.title}</h2></center>
+                <p class="deskripsi">${data.deskripsi}</p>
+
                 </div>
             `);
 
@@ -221,16 +223,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item" >
+                        <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 

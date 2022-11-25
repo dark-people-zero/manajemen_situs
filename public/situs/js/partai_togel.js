@@ -55,7 +55,7 @@ const func = {
                             </div>
                             <div class="modal-body">
                                 <img src="${data.file}" width="600" height="350" class="imgads">
-
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
                             </div>
                         </div>
                     </div>
@@ -221,16 +221,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item">
+                        <a href="${e}"  target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 
@@ -503,9 +503,10 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/23",
+            url: "/config/24",
             dataType: "json",
             success: function (response) {
+                
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {

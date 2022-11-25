@@ -184,14 +184,13 @@ const func = {
             $("#footer .footer-main .footer-link").prepend(template);
         },
         promosi: (data) => {
-            var template =  $(`
+            $(`
                 <div class="promosi">
                     <a href="${data.link}" target="_blank" title="${data.name}">
                         <img src="${data.image}" alt="${data.name}">
                     </a>
                 </div>
-            `);
-            $(".promo").prepend(template);
+            `).insertBefore('#latest-results');
         },
         beforeFooter: (data) => {
             var template = $(`
@@ -214,16 +213,16 @@ const func = {
         linkAlter: (data) => {
             var listLink = data.listLink.map(e => {
                 return `
-                    <li>
-                        <a href="${e}" class="linkalte-item" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
-                    </li>
+                    <div class="linkalte-item">
+                        <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
+                    </div>
                 `;
             }).join("")
 
             var template = $(`
                 <div class="linkalte-container">
                     <img src="${data.image}" class="linkalte-btn">
-                    <ul class="linkalte-body">${listLink}</ul>
+                    <div class="linkalte-body">${listLink}</div>
                 </div>
             `);
 
@@ -295,7 +294,7 @@ const func = {
             var pathName = document.location.pathname.replaceAll("/","");
 
             var active = {
-                home: pathName.search("index.php") >= 0 ? true : false,
+                home: pathName.search(['', '/', 'index.php']) >= 0 ? true : false,
                 cara: pathName.search("how-to-play.php") >= 0 ? true : false,
                 histori: pathName.search("hasil_lengkap.php") >= 0 ? true : false,
                 buku: pathName.search("bukumimpi.php") >= 0 ? true : false,
@@ -541,6 +540,7 @@ const func = {
             url: "/config/22",
             dataType: "json",
             success: function (response) {
+               
                 func.desktop.defaultFooter();
                 if (response) {
                     if (response.status_desktop && !isMobile) {
