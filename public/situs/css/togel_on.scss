@@ -418,26 +418,27 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 182px;
         display: block;
-        -webkit-transition: height 0.6s;
-        transition: height 0.6s;
+        -webkit-transition: height 0.5s;
+        transition: height 0.5s;
+        height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgb(120,10,213);
-            background: linear-gradient(0deg, rgba(120,10,213,1) 0%, rgba(32,0,62,1) 89%);
+            background: linear-gradient(0deg, rgb(120, 10, 213) 0%, rgb(32, 0, 62) 89%);
             border: 1px solid #6994cf;
-            transition: height .1s;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            padding: 10px 0;
-            margin: -10px 23px 0 28px;
-            max-width: 148px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin: -20px 6px 0 23px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -458,9 +459,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
-            -webkit-transition: height 0.6s;
-            transition: height 0.6s;
+            height: 100%;
 
             .linkalte-body {
                 opacity: 1;
@@ -476,16 +475,16 @@ body.smbitClass-desktop {
             .owl-item {
                 .bank {
                     text-align: center;
-                    width: 145px !important;
-                    height: 94px !important;
-                    padding: 0px !important;
-                    background-color: rgba(0,0,0,0) !important;
-                    border: none !important;
-                    -webkit-border-radius: 0px !important;
-                    -moz-border-radius: 0px !important;
-                    -ms-border-radius: 0px !important;
-                    -o-border-radius: 0px !important;
-                    border-radius: 0px !important;
+                    width: 145px;
+                    height: 94px;
+                    padding: 0px;
+                    background-color: rgba(0,0,0,0);
+                    border: none;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    border-radius: 0px;
                     margin-left: 0px;
 
                     img {
@@ -494,222 +493,34 @@ body.smbitClass-desktop {
 
                     }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bca/togelon_online_bca.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bca/togelon_offline_bca.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bca/togelon_trouble_bca.gif');
-                            }
-                        }
-                    }
+                    $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bni/togelon_online_bni.gif');
-                            }
+                    @each $img in $listBank {
+                        $i: index($listBank, $img);
+                        $imgName: $img;
+                        @if $img == "cimb-2" {
+                            $imgName: "cimb";
                         }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bni/togelon_offline_bni.gif');
-                            }
+
+                        @if $img == "dana-2" {
+                            $imgName: "dana";
                         }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bni/togelon_trouble_bni.gif');
+                        .#{$img} {
+                            display: none;
+                            &.online {
+                                &+img {
+                                    content: url('/situs/assets/togel_on/desktop/images/banks/'+#{$imgName}+'/online.gif');
+                                }
                             }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bri/togelon_online_bri.gif');
+                            &.offline {
+                                &+img {
+                                    content: url('/situs/assets/togel_on/desktop/images/banks/'+#{$imgName}+'/offline.gif');
+                                }
                             }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bri/togelon_offline_bri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bri/togelon_trouble_bri.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bsi/togelon_online_bsi.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bsi/togelon_offline_bsi.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/bsi/togelon_trouble_bsi.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/cimb/togelon_online_cimb.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/cimb/togelon_offline_cimb.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/cimb/togelon_trouble_cimb.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/dana/togelon_online_dana.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/dana/togelon_offline_dana.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/dana/togelon_trouble_dana.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/danamon/togelon_online_danamon.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/danamon/togelon_offline_danamon.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/danamon/togelon_trouble_danamon.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/gopay/togelon_online_gopay.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/gopay/togelon_offline_gopay.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/gopay/togelon_trouble_gopay.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/linkaja/togelon_online_linkaja.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/linkaja/togelon_offline_linkaja.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/linkaja/togelon_trouble_linkaja.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/mandiri/togelon_online_mandiri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/mandiri/togelon_offline_mandiri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/mandiri/togelon_trouble_mandiri.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/maybank/togelon_online_maybank.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/maybank/togelon_offline_maybank.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/maybank/togelon_trouble_maybank.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/ovo/togelon_online_ovo.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/ovo/togelon_offline_ovo.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/togel_on/desktop/images/banks/ovo/togelon_trouble_ovo.gif');
+                            &.trouble {
+                                &+img {
+                                    content: url('/situs/assets/togel_on/desktop/images/banks/'+#{$imgName}+'/trouble.gif');
+                                }
                             }
                         }
                     }
