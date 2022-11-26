@@ -1029,7 +1029,7 @@ class Home extends Component
 
     public function addFormBtnAction($desktop)
     {
-        if ($desktop && count($this->data_buttonaction_desktop) == 0) {
+        if ($desktop) {
             array_push($this->data_buttonaction_desktop, [
                 "status" => false,
                 "name" => "",
@@ -1040,7 +1040,7 @@ class Home extends Component
                 "shadow" => "#1b693c"
             ]);
         }
-        if (!$desktop && count($this->data_buttonaction_mobile) == 0) {
+        if (!$desktop) {
             array_push($this->data_buttonaction_mobile, [
                 "status" => false,
                 "name" => "",
