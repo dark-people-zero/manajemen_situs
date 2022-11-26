@@ -424,25 +424,27 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 182px;
         display: block;
-        -webkit-transition: height 0.6s;
-        transition: height 0.6s;
+        -webkit-transition: height 0.5s;
+        transition: height 0.5s;
+        height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgb(127,0,0);
-            background: linear-gradient(0deg, rgba(127,0,0,1) 21%, rgba(209,104,26,1) 84%);
+            background: linear-gradient(0deg, rgb(127, 0, 0) 21%, rgb(209, 104, 26) 84%);
             transition: height .1s;
-            border-bottom-right-radius: 45px;
-            border-bottom-left-radius: 30px;
-            padding: 20px 0 10px 10px;
-            margin: -18px 2px 0 0;
-            max-width: 182px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            margin-top: -20px;
+            padding-top: 20px;
+            padding-bottom: 10px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -462,9 +464,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
-            -webkit-transition: height 0.6s;
-            transition: height 0.6s;
+            height: 100%;
 
             .linkalte-body {
                 opacity: 1;
