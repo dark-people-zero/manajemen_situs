@@ -507,6 +507,386 @@ const func = {
             url: "/config/14",
             dataType: "json",
             success: function (response) {
+                response = {
+                    "id": 14,
+                    "name": "Togel On",
+                    "status_desktop": 1,
+                    "status_mobile": 1,
+                    "url_desktop_dev": "/situs/togel_on/desktop",
+                    "url_desktop_prod": "https://togelon176.com/",
+                    "url_mobile_dev": "/situs/togel_on/m",
+                    "url_mobile_prod": "https://togelon176.com/m",
+                    "created_at": "2022-10-11T15:24:48.000000Z",
+                    "updated_at": "2022-11-11T15:55:35.000000Z",
+                    "fitur_situs": {
+                        "desktop": [
+                            {
+                                "id": 200,
+                                "id_situs": 14,
+                                "id_fitur": 1,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/situs/togel on/desktop/popup modal/togelon_popup_slotgamebonus.png",
+                                    "deskripsi": "Klik dimana saja untuk meutup"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 201,
+                                "id_situs": 14,
+                                "id_fitur": 2,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "url": null,
+                                    "file": "",
+                                    "title": null,
+                                    "slogan": null
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 202,
+                                "id_situs": 14,
+                                "id_fitur": 3,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_extrabonusturnover.jpg",
+                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_cashbackkekalahan (2).jpg",
+                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_allbonus3.jpg"
+                                ],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 203,
+                                "id_situs": 14,
+                                "id_fitur": 4,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": [],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-11T15:58:37.000000Z"
+                            },
+                            {
+                                "id": 204,
+                                "id_situs": 14,
+                                "id_fitur": 5,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "ket": null,
+                                    "data": []
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 205,
+                                "id_situs": 14,
+                                "id_fitur": 6,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://togelon176.com/register.php",
+                                    "name": "Promo",
+                                    "image": "https://static.hokibagus.club/situs/togel on/desktop/promosi/togelon_banner_daftar.gif"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 206,
+                                "id_situs": 14,
+                                "id_fitur": 7,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "title": "TOGELON.COM | Bandar Togel Online Terbaik Indonesia",
+                                    "deskripsi": "<a href=\"/\">TOGELON.COM</a> adalah Bandar Togel Online Terbaik Indonesia yang menyediakan permainan togel online paling bersaing meliputi togel Singapura, Hongkong, Sydney, Cambodia dan permainan livegames seperti Roulette, Sicbo, Baccarat dan masih banyak lagi. Bagi anda penggemar permainan togel dan casino online segera bergabung dengan Togelon.com. Sistem deposit dan withdraw tercepat dan dilengkapi dengan sistem keamanan yang canggih membuat anda nyaman bermain."
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 207,
+                                "id_situs": 14,
+                                "id_fitur": 8,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "link": null,
+                                    "name": null,
+                                    "image": ""
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 208,
+                                "id_situs": 14,
+                                "id_fitur": 9,
+                                "type": "desktop",
+                                "status": 1,
+                                "data": {
+                                    "image": "https://static.hokibagus.club/situs/togel on/desktop/link alternatif/togelon_linkalternatif.png",
+                                    "listLink": [
+                                        "https://linkr.bio/ontogel",
+                                        "\nhttps://rebrand.ly/togelon88",
+                                        "\nontogel176.com"
+                                    ]
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 209,
+                                "id_situs": 14,
+                                "id_fitur": 10,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "",
+                                    "shadow": "#196a7d",
+                                    "background": "#c0392b"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 210,
+                                "id_situs": 14,
+                                "id_fitur": 11,
+                                "type": "desktop",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-11T15:58:37.000000Z"
+                            }
+                        ],
+                        "mobile": [
+                            {
+                                "id": 211,
+                                "id_situs": 14,
+                                "id_fitur": 1,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "file": "https://static.hokibagus.club/situs/togel on/mobile/popup modal/togelon_popup_slotgamebonus.png",
+                                    "deskripsi": "Klik dimana saja untuk menutu"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 212,
+                                "id_situs": 14,
+                                "id_fitur": 2,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "url": "https://bit.ly/Apktogelon",
+                                    "file": "https://static.hokibagus.club/situs/togel on/mobile/header apk/togelon_icon.png",
+                                    "title": "APLIKASI TOGEL ON",
+                                    "slogan": "Ayo segera download dan mainkan sekarang juga"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 213,
+                                "id_situs": 14,
+                                "id_fitur": 3,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_extrabonusturnover.jpg",
+                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_cashbackkekalahan (2).jpg",
+                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_allbonus3.jpg"
+                                ],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 214,
+                                "id_situs": 14,
+                                "id_fitur": 4,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": [
+                                    {
+                                        "link": "https://rtpsloton.com/",
+                                        "name": "Rtp Slot",
+                                        "class": "btn-warning",
+                                        "style": "background-color: #e67e22;",
+                                        "shadow": "#b9651b",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://ontogel176.com/m/promotion.php",
+                                        "name": "Promo",
+                                        "class": "btn-warning",
+                                        "style": "background-color: #f1c40f;",
+                                        "shadow": "#bf9c0d",
+                                        "status": true,
+                                        "target": null
+                                    },
+                                    {
+                                        "link": "https://togelon.laporkeluhan.net/",
+                                        "name": "Keluhan Member",
+                                        "class": "btn-info",
+                                        "style": "background-color: #2980b9;",
+                                        "shadow": "#196a7d",
+                                        "status": true,
+                                        "target": true
+                                    },
+                                    {
+                                        "link": "https://linklist.bio/togelon",
+                                        "name": "Lain-Lain",
+                                        "class": "btn-secondary",
+                                        "style": "background-color: #c0392b;",
+                                        "shadow": "#8e2920",
+                                        "status": true,
+                                        "target": null
+                                    }
+                                ],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 215,
+                                "id_situs": 14,
+                                "id_fitur": 5,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "ket": "Anda bisa mendapatkan info terkini hanya dengan menekan tombol Media Sosial berikut ini :",
+                                    "data": [
+                                        {
+                                            "link": "https://api.whatsapp.com/send?phone=6281380376285",
+                                            "name": "Whatsapp",
+                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_wa.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.instagram.com/accounts/login/?next=%2Ftogelon88%2F&source=omni_redirect",
+                                            "name": "Instagram",
+                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_instagram.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ftogelon8%2F",
+                                            "name": "Facebook",
+                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_facebook.png",
+                                            "status": true
+                                        },
+                                        {
+                                            "link": "https://www.youtube.com/channel/UCIsNvBFWmpragrbUtqlJpNA",
+                                            "name": "Youtube",
+                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_youtube.png",
+                                            "status": true
+                                        }
+                                    ]
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 216,
+                                "id_situs": 14,
+                                "id_fitur": 6,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "link": "https://togelon176.com/register.php",
+                                    "name": "pro",
+                                    "image": "https://static.hokibagus.club/situs/togel on/mobile/promosi/togelon_banner_daftar.gif"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 217,
+                                "id_situs": 14,
+                                "id_fitur": 7,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "title": "Agen Togel Online Aman Terpercaya",
+                                    "deskripsi": "<b>TOGELON.COM</b> adalah Agen Togel Online Aman Terpercaya yang dilengkapi dengan permainan togel online terbesar seperti togel Hongkong, Singapura, Sydney, Totomacau, Nevada dan masih banyak lagi. Togelon jugamenyajikan permainan live casino online terpopuler seperti Roulette, Baccarat, Sicbo, dan masih banyak lagi. Sistem keamanan yang canggih, proses Deposit dan Withdraw yang mudah serta didukung oleh customer service yang siap melayani anda 7x24 jam Nonstop."
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 218,
+                                "id_situs": 14,
+                                "id_fitur": 8,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "link": null,
+                                    "name": null,
+                                    "image": ""
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 219,
+                                "id_situs": 14,
+                                "id_fitur": 9,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": {
+                                    "image": "",
+                                    "listLink": [
+                                        ""
+                                    ]
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 220,
+                                "id_situs": 14,
+                                "id_fitur": 10,
+                                "type": "mobile",
+                                "status": 1,
+                                "data": {
+                                    "name": "barocde qris",
+                                    "color": "#FFFFFF",
+                                    "image": "https://static.hokibagus.club/situs/togel on/mobile/barcode qris/96bdae50-4d79-40e5-aac9-75798be05a50.webp",
+                                    "shadow": "#196a7d",
+                                    "background": "#2980b9"
+                                },
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-26T21:19:44.000000Z"
+                            },
+                            {
+                                "id": 221,
+                                "id_situs": 14,
+                                "id_fitur": 11,
+                                "type": "mobile",
+                                "status": 0,
+                                "data": [
+                                    ""
+                                ],
+                                "created_at": "2022-11-11T15:55:35.000000Z",
+                                "updated_at": "2022-11-11T15:58:37.000000Z"
+                            }
+                        ]
+                    }
+                }
                 if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {

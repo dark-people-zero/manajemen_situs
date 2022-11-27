@@ -418,10 +418,12 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 190px;
         display: block;
-        -webkit-transition: height 0.6s;
-        transition: height 0.6s;
+        -webkit-transition: height 0.5s;
+        transition: height 0.5s;
+        height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
@@ -429,13 +431,12 @@ body.smbitClass-desktop {
 
         .linkalte-body {
             background: #ffb803;
-            transition: height .1s;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             padding: 10px 0;
             margin: -10px 2px 0 40px;
-            max-width: 148px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -455,9 +456,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
-            -webkit-transition: height 0.6s;
-            transition: height 0.6s;
+            height: 100%;
 
             .linkalte-body {
                 opacity: 1;
@@ -473,16 +472,16 @@ body.smbitClass-desktop {
             .owl-item {
                 .bank {
                     text-align: center;
-                    width: 154px !important;
-                    height: 64px !important;
-                    padding: 0px !important;
-                    background-color: rgba(0,0,0,0) !important;
-                    border: none !important;
-                    -webkit-border-radius: 0px !important;
-                    -moz-border-radius: 0px !important;
-                    -ms-border-radius: 0px !important;
-                    -o-border-radius: 0px !important;
-                    border-radius: 0px !important;
+                    width: 154px;
+                    height: 64px;
+                    padding: 0px;
+                    background-color: rgba(0,0,0,0);
+                    border: none;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    border-radius: 0px;
                     margin-left: 0px;
 
                     img {

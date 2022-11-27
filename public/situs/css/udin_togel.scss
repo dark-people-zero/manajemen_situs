@@ -396,8 +396,18 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/udin_togel/desktop/images/udintogel_background_default.jpg');
+    background-image: url('/situs/assets/udin_togel/desktop/images/udintogel_background.jpg');
     background-attachment: fixed;
+
+    .navbar {
+        &.navbar-fixed-top {
+            background: transparent;
+
+            .container {
+                background: #000000a3;
+            }
+        }
+    }
 
     .masking {
         display: flex;
@@ -423,25 +433,26 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 182px;
         display: block;
-        -webkit-transition: height 0.6s;
-        transition: height 0.6s;
+        -webkit-transition: height 0.5s;
+        transition: height 0.5s;
+        height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgb(46,46,46);
-            background: linear-gradient(0deg, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 65%);
-            transition: height 1s;
-            padding: 10px 0 5px 0;
-            margin: -10px 20px 0 9px;
+            background: linear-gradient(0deg, rgb(46, 46, 46) 0%, rgb(0, 0, 0) 65%);
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
-            max-width: 164px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-top: -20px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -462,9 +473,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
-            -webkit-transition: height 0.6s;
-            transition: height 0.6s;
+            height: 100%;
 
             .linkalte-body {
                 opacity: 1;

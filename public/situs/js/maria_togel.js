@@ -199,10 +199,11 @@ const func = {
             `).insertBefore($("#latest-results"));
         },
         beforeFooter: (data) => {
+            // <p class="deskripsi">${data.deskripsi}</p>
             var template = $(`
                 <div class="before-footer container">
                 <center><h2 class="tittle">${data.title}</h2></center>
-                <p class="deskripsi">${data.deskripsi}</p>
+
 
                 </div>
             `);
@@ -494,7 +495,7 @@ const func = {
 
     },
     load: () => {
-        var loc = document.location.pathname;   
+        var loc = document.location.pathname;
         var loc2 = loc.split('/');
         loc2 = loc2[loc2.length-1];
         loc = loc2;
@@ -511,7 +512,7 @@ const func = {
             url: "/config/8",
             dataType: "json",
             success: function (response) {
-                if (response) {                   
+                if (response) {
                     if (response.status_desktop && !isMobile) {
                         if (response.fitur_situs.desktop) {
                             var length = response.fitur_situs.desktop.length;

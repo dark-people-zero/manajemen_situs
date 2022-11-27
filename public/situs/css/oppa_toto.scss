@@ -414,11 +414,11 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
-        display: block;
+        max-width: 182px;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
@@ -426,47 +426,33 @@ body.smbitClass-desktop {
 
         .linkalte-body {
             margin-top: -20px;
-            padding: 20px 0 0 12px ;
+            padding-top: 20px;
+            padding-bottom: 10px;
             background: #144377;
-            list-style-type: none;
             max-width: 182px;
-            display: none;
             -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            &:hover {
-                background: #144377;
-                }
+            transition: height 0.5s;
+            opacity: 0;
 
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
-            }
             .linkalte-item {
                 display: flex;
                 justify-content: start;
                 padding: 8px;
-                color: #e5d194;
+                color: #ffd25b;
                 font-weight: 600;
-                text-decoration: none;
 
                 a {
-                    text-overflow: ellipsis;
+                    color: #ffd25b;
                     overflow: hidden;
-                    color: #fccb35;
-                }
-
-                &:hover {
-
-                    color: #e7c96d;
+                    text-overflow: ellipsis;
                 }
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
@@ -983,11 +969,13 @@ body.smbitClass-desktop {
                     margin: 20px 0;
                     color: #1d67ec;
                     text-align: center;
+                    font-size: x-large;
                 }
                 p.deskripsi {
                     font-size: large;
                     color: #fff;
                     text-align: -webkit-center;
+                    font-size: 16px;
 
                     a {
                         color : #1d67ec;
@@ -1004,7 +992,7 @@ body.smbitClass-desktop {
         .copyright {
             border-top: 1px #0084dc solid !important;
             background: #111a2dc2 !important;
-            padding: 20px 0;
+            padding: 20px 0 !important;
         }
     }
 

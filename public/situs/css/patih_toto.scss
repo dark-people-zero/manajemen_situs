@@ -425,26 +425,27 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
-        display: block;
+        max-width: 182px;
         -webkit-transition: height 0.6s;
         transition: height 0.6s;
+        margin-right: 5px;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: rgb(59,59,59);
             background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(0,0,0,1) 89%);
             border: 2px solid #f6efc1;
-            transition: height .1s;
+            transition: height 0.6s;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             padding: 10px 0;
-            margin: -20px 35px 0 36px;
+            margin: -20px 0 0 36px;
             max-width: 148px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -455,6 +456,7 @@ body.smbitClass-desktop {
                     white-space: nowrap;
                     overflow: hidden;
                     color : #f0e6b4;
+
                     &:hover {
                         font-weight: 700;
                     }
@@ -465,7 +467,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
+            height: 100%;
             -webkit-transition: height 0.6s;
             transition: height 0.6s;
 

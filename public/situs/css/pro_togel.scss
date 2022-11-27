@@ -396,7 +396,7 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/pro_togel/desktop/images/protogel_background_default.jpg');
+    background-image: url('/situs/assets/pro_togel/desktop/images/protogel_background_defultnew.jpg');
     background-attachment: fixed;
 
     .section {
@@ -418,25 +418,29 @@ body.smbitClass-desktop {
         top: 110px;
         right: 0;
         z-index: 9999;
-        max-width: 216px;
+        max-width: 190px;
         display: block;
         -webkit-transition: height 0.6s;
         transition: height 0.6s;
+        height: 43px;
+        overflow: hidden;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background: #101010;
-            border: 1px solid #111111;
-            transition: height .1s;
+            background: #141414;
+            border: 1px solid #111;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            padding: 10px 0;
-            margin: -10px 23px 0 28px;
-            max-width: 148px;
+            margin-top: -20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-top: 20px;
+            padding-bottom: 10px;
             opacity: 0;
+
             .linkalte-item {
                 padding: 5px 10px;
                 overflow: hidden;
@@ -457,7 +461,7 @@ body.smbitClass-desktop {
         }
 
         &:hover {
-            height: auto;
+            height: 100%;
             -webkit-transition: height 0.6s;
             transition: height 0.6s;
 
@@ -492,222 +496,34 @@ body.smbitClass-desktop {
                         height: 88px;
                     }
 
-                    .bca {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bca/protogel_online_bca.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bca/protogel_offline_bca.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bca/protogel_trouble_bca.gif');
-                            }
-                        }
-                    }
+                    $listBank: "bca", "bni", "bri", "bsi", "cimb", "cimb-2", "dana", "dana-2", "danamon", "gopay", "linkaja", "mandiri", "maybank", "ovo", "panin";
 
-                    .bni {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bni/protogel_online_bni.gif');
-                            }
+                    @each $img in $listBank {
+                        $i: index($listBank, $img);
+                        $imgName: $img;
+                        @if $img == "cimb-2" {
+                            $imgName: "cimb";
                         }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bni/protogel_offline_bni.gif');
-                            }
+
+                        @if $img == "dana-2" {
+                            $imgName: "dana";
                         }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bni/protogel_trouble_bni.gif');
+                        .#{$img} {
+                            display: none;
+                            &.online {
+                                &+img {
+                                    content: url('/situs/assets/pro_togel/desktop/images/banks/'+#{$imgName}+'/online.gif');
+                                }
                             }
-                        }
-                    }
-                    .bri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bri/protogel_online_bri.gif');
+                            &.offline {
+                                &+img {
+                                    content: url('/situs/assets/pro_togel/desktop/images/banks/'+#{$imgName}+'/offline.gif');
+                                }
                             }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bri/protogel_offline_bri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bri/protogel_trouble_bri.gif');
-                            }
-                        }
-                    }
-                    .bsi {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bsi/protogel_online_bsi.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bsi/protogel_offline_bsi.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/bsi/protogel_trouble_bsi.gif');
-                            }
-                        }
-                    }
-                    .cimb,
-                    .cimb-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/cimb/protogel_online_cimb.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/cimb/protogel_offline_cimb.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/cimb/protogel_trouble_cimb.gif');
-                            }
-                        }
-                    }
-                    .dana,
-                    .dana-2 {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/dana/protogel_online_dana.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/dana/protogel_offline_dana.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/dana/protogel_trouble_dana.gif');
-                            }
-                        }
-                    }
-                    .danamon {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/danamon/protogel_online_danamon.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/danamon/protogel_offline_danamon.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/danamon/protogel_trouble_danamon.gif');
-                            }
-                        }
-                    }
-                    .gopay {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/gopay/protogel_online_gopay.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/gopay/protogel_offline_gopay.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/gopay/protogel_trouble_gopay.gif');
-                            }
-                        }
-                    }
-                    .linkaja {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/linkaja/protogel_online_linkaja.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/linkaja/protogel_offline_linkaja.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/linkaja/protogel_trouble_linkaja.gif');
-                            }
-                        }
-                    }
-                    .mandiri {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/mandiri/protogel_online_mandiri.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/mandiri/protogel_offline_mandiri.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/mandiri/protogel_trouble_mandiri.gif');
-                            }
-                        }
-                    }
-                    .maybank {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/maybank/protogel_online_maybank.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/maybank/protogel_offline_maybank.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/maybank/protogel_trouble_maybank.gif');
-                            }
-                        }
-                    }
-                    .ovo {
-                        display: none;
-                        &.online {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/ovo/protogel_online_ovo.gif');
-                            }
-                        }
-                        &.offline {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/ovo/protogel_offline_ovo.gif');
-                            }
-                        }
-                        &.trouble {
-                            &+img {
-                                content: url('/situs/assets/pro_togel/desktop/images/banks/ovo/protogel_trouble_ovo.gif');
+                            &.trouble {
+                                &+img {
+                                    content: url('/situs/assets/pro_togel/desktop/images/banks/'+#{$imgName}+'/trouble.gif');
+                                }
                             }
                         }
                     }

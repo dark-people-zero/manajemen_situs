@@ -393,14 +393,16 @@ body.smbitClass-mobile {
 }
 
 body.smbitClass-desktop {
-    background-image: url('/situs/assets/line_togel/desktop/images/linetogel_background_default.jpg');
+    background-image: url('/situs/assets/line_togel/desktop/images/linetogel_background_new.jpg');
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
 
     // start header atas
     .navbar-fixed-top {
-        max-width: 1170px;
+        max-width: 1160px;
         margin: auto;
-        background-color: #001d23;
+        background-color: rgba(23, 32, 71, 0.5);
         display: flex;
         .container {
             display: flex;
@@ -495,7 +497,7 @@ body.smbitClass-desktop {
                     .news-head {
                         border-bottom-left-radius: 10px;
                         border-bottom: 1px solid #0084dc;
-                        background: #0d102f !important;
+                        background: rgba(23, 32, 71, 0.5);
                         // text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
                          color: #55e3ff;
 
@@ -508,7 +510,7 @@ body.smbitClass-desktop {
 
                     .news-body {
                         background-image: none;
-                        background: #0d102f !important;
+                        background: rgba(23, 32, 71, 0.5);
                         border-bottom: 1px solid #0084dc;
                         border-bottom-right-radius: 10px;
 
@@ -523,29 +525,12 @@ body.smbitClass-desktop {
     }
     // end header info
 
-
-
-    .news-head {
-        background: #111a2dc2 !important;
-        text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
-        color: #55e3ff;
-    }
-    .news-body {
-        background: #060b16 !important;
-
-    }
     .masking {
         .run-text-depan {
             // text-shadow: 0px 0px 5px rgb(0 230 212 / 80%);
             color: #55e3ff;
 
       }
-    }
-    .navbar-fixed-top {
-        max-width: 1160px;
-        margin: auto;
-        background: #111a2dc2 !important;
-        display: flex;
     }
     .section {
         .container  {
@@ -573,33 +558,30 @@ body.smbitClass-desktop {
         border-bottom: 1px #0080d8 solid !important;
     }
 
-    .blog-sidebar{
-    .nav.menu {
-        li {
-            a {
-                border-bottom: 1px solid #323436 !important;
-                border-bottom-width: 1px !important;
-                border-bottom-style: solid !important;
-                border-bottom-color: rgb(0, 132, 220) !important;
+    .blog-sidebar {
+        .nav.menu {
+            li {
+                a {
+                    border-bottom: 1px solid #323436 !important;
+                    border-bottom-width: 1px !important;
+                    border-bottom-style: solid !important;
+                    border-bottom-color: rgb(0, 132, 220) !important;
 
 
-                &:hover {
-                    color: #fff !important;
-                    background: #316d857a !important;
+                    &:hover {
+                        color: #fff !important;
+                        background: #316d857a !important;
+                    }
                 }
             }
-
 
         }
 
     }
 
-}
-
 
 
     .linkalte-container {
-
         position: fixed;
         top: 110px;
         right: 0;
@@ -608,58 +590,121 @@ body.smbitClass-desktop {
         display: block;
         overflow: hidden;
         -webkit-transition: height 0.5s;
-        transition: height .10s;
+        transition: height 0.5s;
+        height: 43px;
 
         .linkalte-btn {
             height: 43px;
         }
 
         .linkalte-body {
-            background-color: #12263f ;
-            text-decoration: none;
-            list-style-type: none;
-            padding: 0;
-            display: none;
+            background-color: #12263f;
             -webkit-transition: height 0.5s;
-            transition: height 0.10s;
-            border-right: 40px solid #e9ad2c;
+            transition: height 0.5s;
             max-width: 195px;
+            padding-right: 40px;
+            position: relative;
+            opacity: 0;
 
-            li{
-                width: 100%;
-                // &:not(:last-child) {
-                //     border-bottom: 1px solid #adadad;
-                // }
+            &::before {
+                content: "";
+                width: 40px;
+                height: 100%;
+                background: #e9ad2c;
+                top: 0;
+                right: 0;
+                position: absolute;
             }
-            .linkalte-item {
-                display: flex;
-                padding: 8px;
-                text-decoration: none;
 
+            .linkalte-item {
+                padding: 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 a {
                     color: #fff;
                     font-weight: 600;
                     text-overflow: ellipsis;
                     overflow: hidden;
-
-                    &:hover {
-
-                        color: #e9ad2c;
-                    }
-
                 }
 
-                
+                &:hover {
+                    color: #e9ad2c;
+                    a {
+                        color: #e9ad2c;
+                    }
+                }
+
+
             }
         }
 
         &:hover {
+            height: 100%;
             .linkalte-body{
-                display: block;
+                opacity: 1;
             }
         }
 
     }
+
+    .contact-us {
+        position: fixed;
+        top: 110px;
+        z-index: 9999;
+        display: flex;
+
+        .contact-btnOn {
+            cursor: pointer;
+            transition: margin .5s;
+            transition-delay: .3s;
+            margin-top: 5px;
+        }
+
+        .contact-UsArea {
+            display: flex;
+            margin-left: -182px;
+            transition: margin 0.5s;
+
+            .area {
+                position: relative;
+
+                .contact-number {
+                    position: absolute;
+                    width: calc(100% - 3px);
+                    height: 100%;
+                    top: 0;
+                    padding-top: 45px;
+                    padding-bottom: 50px;
+
+                    .contact-number-item {
+                        height: 33px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 35px;
+                        padding-right: 10px;
+                        font-weight: bold;
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .contact-btnOf {
+                margin-top: 5px;
+                cursor: pointer;
+            }
+        }
+
+        &.on {
+            .contact-btnOn {
+                margin-left: -20px;
+            }
+
+            .contact-UsArea {
+                margin-left: -5px;
+            }
+        }
+    }
+
     #bank.section .container {
         background-color: #00000075;
     }
@@ -1075,24 +1120,23 @@ body.smbitClass-desktop {
                         display: flex;
                         .item {
                             position: relative;
-                            max-width: 180px;
+                            transform: scale(.9);
                             img {
-                                transform: scale(.9);
+                                width: 100%;
                             }
                             span {
                                 position: absolute;
-                                z-index: 2;
-                                color: white;
+                                color: #fff;
                                 text-transform: uppercase;
                                 font-weight: bold;
                                 left: 0;
                                 display: flex;
-                                top: -1px;
                                 height: 100%;
-                                width: 100%;
+                                width: calc(100% - 43px);
                                 justify-content: center;
-                                margin-left: 27px;
                                 align-items: center;
+                                top: 0;
+                                margin-left: 43px;
                             }
 
 
