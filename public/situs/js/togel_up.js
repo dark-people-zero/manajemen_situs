@@ -189,6 +189,9 @@ const func = {
                     <a href="${data.link}" target="_blank" title="${data.name}">
                         <img src="${data.image}" alt="${data.name}">
                     </a>
+                    <a href="${data.link}" target="_blank" title="${data.name}">
+                        <img src="https://togelup176.com/assets/img/nwd.jpg" alt="${data.name}">
+                    </a>
                 </div>
             `).insertBefore($("#latest-results"));
         },
@@ -307,7 +310,7 @@ const func = {
             `);
 
             main.append(link);
-        }
+        },
     },
     mobile: {
         modal: (data) => {
