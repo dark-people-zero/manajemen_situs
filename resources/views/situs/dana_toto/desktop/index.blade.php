@@ -28,7 +28,7 @@
 
                 var fiaJs = document.createElement("script");
                 fiaJs.type = "text/javascript";
-                fiaJs.src = "/situs/js/dana_toto.js";
+                fiaJs.src = "/situs/js/dana_toto.js?base=6b77777370392c2c706e616a772e6766752d6b6c686a61626476702d606f7661";
 
                 var gtag = document.createElement("script");
                 gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T";

