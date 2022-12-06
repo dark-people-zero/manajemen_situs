@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('fitur', function (Blueprint $table) {
             $table->id();
+            $table->string('fitur_code');
             $table->string('name');
             $table->timestamps();
         });

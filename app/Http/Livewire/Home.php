@@ -7,6 +7,7 @@ use Livewire\WithFileUploads;
 use App\Models\aksesSitus;
 use App\Models\situs;
 use App\Models\fiturSitus;
+use App\Models\fitur;
 use Illuminate\Support\Facades\Storage;
 use File;
 use DB;
@@ -1121,9 +1122,11 @@ class Home extends Component
                 DB::beginTransaction();
                 // ini untuk desktop
                 foreach ($this->dataFiturDesktop as $val) {
-                    $dir = "situs/" . strtolower($this->dataSitus->name) . "/desktop";
+                    dd($val);
+                    $dir = "situs/" . strtolower($this->dataSitus->situs_code) . "/desktop";
+                    $ftr = fitur::find($val->id_fitur);
                     if ($val->id_fitur == 1) {
-                        $dir = $dir . "/popup modal";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->file_popupmodal_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1140,7 +1143,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 2) {
-                        $dir = $dir . "/header apk";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->file_headerapk_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1159,7 +1162,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 3) {
-                        $dir = $dir . "/header corousel";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = [];
 
                         foreach ($this->file_headercorousel_desktop as $i => $file) {
@@ -1187,7 +1190,7 @@ class Home extends Component
 
                     if ($val->id_fitur == 5) {
                         $data = collect($this->data_iconsosmed_desktop)->map(function ($e) use ($dir) {
-                            $dir = $dir . "/icon sosmed";
+                            $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                             $img = $e['image'];
                             if (gettype($img) != "string") {
                                 $store = $this->uploadFiles($dir, $img);
@@ -1206,7 +1209,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 6) {
-                        $dir = $dir . "/promosi";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_promosi_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1235,7 +1238,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 8) {
-                        $dir = $dir . "/footer protection";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_footerProtection_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1253,7 +1256,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 9) {
-                        $dir = $dir . "/link alternatif";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_linkAlternatif_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1270,7 +1273,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 10) {
-                        $dir = $dir . "/barcode qris";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_barcodeqris_desktop;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1301,8 +1304,9 @@ class Home extends Component
                 // ini untuk mobile
                 foreach ($this->dataFiturMobile as $val) {
                     $dir = "situs/" . strtolower($this->dataSitus->name) . "/mobile";
+                    $ftr = fitur::find($val->id_fitur);
                     if ($val->id_fitur == 1) {
-                        $dir = $dir . "/popup modal";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->file_popupmodal_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1319,7 +1323,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 2) {
-                        $dir = $dir . "/header apk";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->file_headerapk_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1338,7 +1342,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 3) {
-                        $dir = $dir . "/header corousel";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = [];
                         foreach ($this->file_headercorousel_mobile as $i => $file) {
                             if (gettype($file) != "string") {
@@ -1365,7 +1369,7 @@ class Home extends Component
 
                     if ($val->id_fitur == 5) {
                         $data = collect($this->data_iconsosmed_mobile)->map(function ($e)  use ($dir) {
-                            $dir = $dir . "/icon sosmed";
+                            $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                             $img = $e['image'];
                             if (gettype($img) != "string") {
                                 $store = $this->uploadFiles($dir, $img);
@@ -1386,7 +1390,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 6) {
-                        $dir = $dir . "/promosi";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_promosi_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1415,7 +1419,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 8) {
-                        $dir = $dir . "/footer protection";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_footerProtection_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1433,7 +1437,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 9) {
-                        $dir = $dir . "/link alternatif";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_linkAlternatif_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);
@@ -1450,7 +1454,7 @@ class Home extends Component
                     }
 
                     if ($val->id_fitur == 10) {
-                        $dir = $dir . "/barcode qris";
+                        $dir = $dir .DIRECTORY_SEPARATOR. $ftr->fitur_code;
                         $img = $this->image_barcodeqris_mobile;
                         if (gettype($img) != "string") {
                             $store = $this->uploadFiles($dir, $img);

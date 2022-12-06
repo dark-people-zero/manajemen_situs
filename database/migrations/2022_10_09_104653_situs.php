@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('situs', function (Blueprint $table) {
             $table->id();
+            $table->string('situs_code');
             $table->string('name');
             $table->boolean('status_desktop')->default(false);
             $table->boolean('status_mobile')->default(false);
