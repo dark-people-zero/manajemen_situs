@@ -17,12 +17,14 @@ class ipSeeder extends Seeder
     {
         ipModel::insert([
             [
+                'user_id' => 1,
                 'username' => 'superAdmin',
                 'ip' => '127.0.0.1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
+                'user_id' => 2,
                 'username' => 'admin',
                 'ip' => '127.0.0.1',
                 'created_at' => now(),

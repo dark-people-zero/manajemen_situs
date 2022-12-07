@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\ipModel;
+use App\Models\log;
 
 class UserRole
 {
@@ -30,22 +31,40 @@ class UserRole
         $mnSiteData = $menu->where('name', 'Site Data')->first();
 
         $site = ['/','user','data-situs', 'gitpull'];
+        $location = \Location::get($ip);
+        $dataLog = [
+            'class' => "middleware->UserRole",
+            'name_activity' => "permision",
+            'data_ip' => $ip,
+            'data_location' => json_encode($location),
+            'data_user' => $user->toJson(),
+            'keterangan' => "Mencoba meng akses url '".$request->path()."'. Tetapi dikembalikan karena ip tidak terdaftar",
+        ];
 
         if ($checkIp > 0) {
             if ($role->role_id != 4) {
                 if ($active) {
                     if (in_array($request->path(), $site)) {
+                        $dataLog["keterangan"] = "Berhasil meng akses url '".$request->path()."'";
+                        log::create($dataLog);
+
                         return $next($request);
                     }else{
+                        log::create($dataLog);
                         return redirect('/permision');
                     }
                 }else{
+                    log::create($dataLog);
                     return redirect('/permision');
                 }
             }else{
+                $dataLog["keterangan"] = "Berhasil meng akses url '".$request->path()."'";
+                log::create($dataLog);
                 return $next($request);
             }
         }else{
+            log::create($dataLog);
+
             Auth::logout();
 
             $request->session()->invalidate();

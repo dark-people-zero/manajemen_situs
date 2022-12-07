@@ -57,6 +57,10 @@ class configController extends Controller
 
     public function testing()
     {
+        // $ip = '54.255.131.89';
+        // $data = \Location::get($ip);
+        // return auth()->user()->toJson();
+        dd(request()->getClientIps());
         $directories = Storage::disk('spaces')->directories("situs");
         // spaces
         return DO_purge("situs");

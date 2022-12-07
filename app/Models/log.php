@@ -10,11 +10,13 @@ class log extends Model
     protected $table = 'log';
 
     protected $fillable = [
-        'model',
-        'before',
-        'after',
-        'updated_id',
-        'updated_name',
-        'updated_ip',
+        'class',
+        'name_activity',
+        'data_ip',
+        'data_location',
+        'data_user',
+        'data_before',
+        'data_after',
+        'keterangan',
     ];
 }

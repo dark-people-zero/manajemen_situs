@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('log', function (Blueprint $table) {
             $table->id();
-            $table->string('model');
-            $table->json('before');
-            $table->json('after');
-            $table->integer('updated_id');
-            $table->string('updated_name');
-            $table->string('updated_ip');
+            $table->string('class');
+            $table->string("name_activity");
+            $table->string('data_ip');
+            $table->json('data_location')->default(null);
+            $table->json('data_user')->nullable();
+            $table->json('data_before')->nullable();
+            $table->json('data_after')->nullable();
+            $table->string('keterangan');
             $table->timestamps();
         });
     }

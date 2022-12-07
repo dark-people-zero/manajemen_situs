@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\log;
 
 class LoginController extends Controller
 {
@@ -52,6 +53,19 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
+        $ip = $request->ip();
+        $location = \Location::get($ip);
+
+        $dataLog = [
+            'class' => "LoginController->login",
+            'name_activity' => "Authentication",
+            'data_ip' => $ip,
+            'data_location' => json_encode($location),
+            'keterangan' => "Mencoba login dengan username '".$request->username."'",
+        ];
+
+        log::create($dataLog);
+
         if (Auth::attempt($credentials)) {
             $user = auth()->user();
             $role = $user->role;
@@ -62,19 +76,32 @@ class LoginController extends Controller
                     if (strtolower($active->name) == 'user') $url = '/user';
                     if (strtolower($active->name) == 'site') $url = '/';
                     if (strtolower($active->name) == 'site data') $url = '/data-situs';
+                    $dataLog['data_user'] = $user->toJson();
+                    $dataLog['keterangan'] = "Berhasil login dengan username '".$request->username."'";
+                    log::create($dataLog);
                     $request->session()->regenerate();
                     return redirect($url);
                 }else{
-                    // return redirect('/permision');
+                    $dataLog['data_user'] = $user->toJson();
+                    $dataLog['keterangan'] = "Mencoba login dengan username '".$request->username."'. Tetapi dikembalikan karena user tidak mempunyai akses ke manu manapun.";
+                    log::create($dataLog);
+
                     return back()->withErrors([
                         "error" => "Your account has not got any menu access, please contact SMB Spv to get menu access"
                     ]);
                 }
             }else{
+                $dataLog['data_user'] = $user->toJson();
+                $dataLog['keterangan'] = "Berhasil login dengan username '".$request->username."'";
+                log::create($dataLog);
                 $request->session()->regenerate();
                 return redirect('/user');
             }
         }
+
+        // jika login gagal
+        $dataLog['keterangan'] = "Mencoba login dengan username '".$request->username."'. Tetapi gagal karena username dan password salah.";
+        log::create($dataLog);
 
         return back()->withErrors([
             "error" => "The provided credentials do not match our records."
