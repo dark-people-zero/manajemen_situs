@@ -53,20 +53,25 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            $role = auth()->user()->id_role;
-            if ($role != 1) {
-                $active = auth()->user()->aksesMenu->where('status', true)->first();
+            $user = auth()->user();
+            $role = $user->role;
+            if ($role->role_id != 4) {
+                $active = $user->aksesMenu->where('status', true)->first();
                 if ($active) {
                     $url = '/';
                     if (strtolower($active->name) == 'user') $url = '/user';
                     if (strtolower($active->name) == 'site') $url = '/';
                     if (strtolower($active->name) == 'site data') $url = '/data-situs';
+                    $request->session()->regenerate();
                     return redirect($url);
                 }else{
-                    return redirect('/permision');
+                    // return redirect('/permision');
+                    return back()->withErrors([
+                        "error" => "Your account has not got any menu access, please contact SMB Spv to get menu access"
+                    ]);
                 }
             }else{
+                $request->session()->regenerate();
                 return redirect('/user');
             }
         }

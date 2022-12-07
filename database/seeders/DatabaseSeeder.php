@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             roleSeeder::class,
             fiturSeeder::class,
             situsSeeder::class,
+            ipSeeder::class
         ]);
     }
 }

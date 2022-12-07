@@ -9,13 +9,16 @@ use App\Models\situs;
 use App\Models\fiturSitus;
 use App\Models\fitur;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use File;
 use DB;
+use Auth;
 
 class Home extends Component
 {
     use WithFileUploads;
 
+    public $ip;
     public $Aksessitus;
     public $idSitus, $prevActive, $urlActive, $dataSitus;
     public $statPengaturan = false;
@@ -83,6 +86,7 @@ class Home extends Component
 
     public function mount()
     {
+        $this->ip = request()->ip();
         $role = auth()->user()->id_role;
         if ($role == 1) {
             $this->Aksessitus = situs::get()->sortBy([
@@ -1120,9 +1124,11 @@ class Home extends Component
         if (count($errors) == 0) {
             try {
                 DB::beginTransaction();
+
+                $user = Auth::user();
+
                 // ini untuk desktop
                 foreach ($this->dataFiturDesktop as $val) {
-                    dd($val);
                     $dir = "situs/" . strtolower($this->dataSitus->situs_code) . "/desktop";
                     $ftr = fitur::find($val->id_fitur);
                     if ($val->id_fitur == 1) {
@@ -1498,7 +1504,9 @@ class Home extends Component
         try {
             if ($file && gettype($file) != "string") {
                 // $ext = $file->getClientOriginalExtension();
-                $name = $file->getClientOriginalName();
+                $name = $this->uuid();
+                $ext = $file->getClientOriginalExtension();
+                $name = "$name.$ext";
                 $filePath = Storage::disk('spaces')->putFileAs($path, $file, $name, 'public');
                 return [
                     "status" => true,
@@ -1518,5 +1526,10 @@ class Home extends Component
                 "message" => $exception->getMessage()
             ];
         }
+    }
+
+    public function uuid()
+    {
+        return (string) Str::uuid();
     }
 }

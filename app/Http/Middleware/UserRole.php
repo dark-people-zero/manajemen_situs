@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Auth;
+use App\Models\ipModel;
 
 class UserRole
 {
@@ -16,8 +18,11 @@ class UserRole
      */
     public function handle(Request $request, Closure $next)
     {
-        $role = auth()->user()->id_role;
-        $menu = auth()->user()->aksesMenu;
+        $user = auth()->user();
+        $ip = $request->ip();
+        $checkIp = ipModel::where("username", $user->username)->where("ip", $ip)->get()->count();
+        $role = $user->role;
+        $menu = $user->aksesMenu;
         $active = $menu->where('status', true)->first();
 
         $mnUser = $menu->where('name', 'User')->first();
@@ -26,18 +31,31 @@ class UserRole
 
         $site = ['/','user','data-situs', 'gitpull'];
 
-        if ($role != 1) {
-            if ($active) {
-                if (in_array($request->path(), $site)) {
-                    return $next($request);
+        if ($checkIp > 0) {
+            if ($role->role_id != 4) {
+                if ($active) {
+                    if (in_array($request->path(), $site)) {
+                        return $next($request);
+                    }else{
+                        return redirect('/permision');
+                    }
                 }else{
                     return redirect('/permision');
                 }
             }else{
-                return redirect('/permision');
+                return $next($request);
             }
         }else{
-            return $next($request);
+            Auth::logout();
+
+            $request->session()->invalidate();
+
+            $request->session()->regenerateToken();
+
+            return redirect('/login')->withErrors([
+                "error" => "Your IP Address is not allowed login with your account, please contact SMB Spv. to add your IP $ip"
+            ]);
         }
+
     }
 }

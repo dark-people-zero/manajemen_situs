@@ -19,7 +19,7 @@
                                         <h6 class="font-weight-semibold mb-4">Please sign in to continue.</h6>
                                         @error('error')
                                             <div class="alert alert-danger mg-b-0 alert-dismissible fade show mb-3" role="alert">
-                                                <span style="margin-right: 10px">{{ $message }}</span>
+                                                <span style="margin-right: 10px">{!! $message !!}</span>
                                                 <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
                                                     <span aria-hidden="true">×</span>
                                                 </button>

@@ -32,9 +32,9 @@
                         <span class="side-menu__label">Site</span>
                     </a>
                 </li>
-                @if (in_array(Auth::user()->id_role, [1,2]))
+                @if (in_array(Auth::user()->role->role_id, [4,5,6,7,8,9,10]))
                     <li class="side-item side-item-category">Settings</li>
-                    @if (Auth::user()->id_role == 1 || $mnUser->status)
+                    @if (Auth::user()->role->role_id == 4 || $mnUser->status)
                         <li class="slide">
                             <a class="side-menu__item" href="/user">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="side-menu__icon" viewBox="0 0 16 16">
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                     @endif
-                    @if (Auth::user()->id_role == 1 || $mnSiteData->status)
+                    @if (Auth::user()->role->role_id == 4 || $mnSiteData->status)
                         <li class="slide">
                             <a class="side-menu__item" href="/data-situs">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="side-menu__icon" viewBox="0 0 16 16">

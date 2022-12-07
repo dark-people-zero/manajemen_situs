@@ -35,7 +35,7 @@ class User extends Authenticatable
 
     public function role()
     {
-        return $this->hasOne(role::class, 'id', 'id_role');
+        return $this->hasOne(role::class, 'role_id', 'id_role');
     }
 
     public function aksesMenu()
