@@ -34,9 +34,16 @@
                                                 </button>
                                             </div>
                                         @endif
-                                        {{-- {{$info ? $info : ''}} --}}
+                                        <div id="errorlocation" class="d-none">
+                                            <div class="alert alert-danger mg-b-0 alert-dismissible fade show mb-3" role="alert">
+                                                <span style="margin-right: 10px">Silahkan aktifkan layanan lokasi, untuk melanjutkan</span>
+                                                <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                         <div class="panel panel-primary">
-                                            <form method="POST" action="{{ route('login') }}">
+                                            <form method="POST" action="{{ route('login') }}" id="formLogin">
                                                 @csrf
                                                 <div class="form-group">
                                                     <label>Username</label>
@@ -75,5 +82,36 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section("scripts")
+    <script>
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function success(pos) {
+            $("#errorlocation").addClass("d-none");
+            var expTime = new Date();
+            expTime.setHours(expTime.getHours()+5);
+            const crd = pos.coords;
+            // document.cookie = `latitude=${crd.latitude}; longitude=${crd.longitude}; accuracy=${crd.accuracy}`;
+            document.cookie = "latitude="+crd.latitude+"; expires="+expTime+"; path=/";
+        }
+
+        function error(err) {
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+            $("#errorlocation").removeClass("d-none");
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+        $("#formLogin").submit(function(e) {
+            // e.preventDefault();
+            console.log("masuk");
+        })
+    </script>
 @endsection
 

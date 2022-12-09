@@ -48,6 +48,15 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $cookies = [];
+        $cookiesReq = explode(";", $request->server("HTTP_COOKIE"));
+
+        foreach ($cookiesReq as $val) {
+            $x = explode("=", $val);
+            $key = str_replace(" ", "", $x[0]);
+            $cookies[$key] = $x[1];
+        }
+        return $cookies;
         $credentials = $request->validate([
             'username' => ['required'],
             'password' => ['required'],
