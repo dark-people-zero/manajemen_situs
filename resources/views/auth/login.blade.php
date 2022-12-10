@@ -34,14 +34,7 @@
                                                 </button>
                                             </div>
                                         @endif
-                                        <div id="errorlocation" class="d-none">
-                                            <div class="alert alert-danger mg-b-0 alert-dismissible fade show mb-3" role="alert">
-                                                <span style="margin-right: 10px">Silahkan aktifkan layanan lokasi, untuk melanjutkan</span>
-                                                <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
-                                                    <span aria-hidden="true">×</span>
-                                                </button>
-                                            </div>
-                                        </div>
+                                        <div id="errorlocation" class="d-none"></div>
                                         <div class="panel panel-primary">
                                             <form method="POST" action="{{ route('login') }}" id="formLogin">
                                                 @csrf
@@ -86,32 +79,99 @@
 
 @section("scripts")
     <script>
-        const options = {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0
-        };
 
-        function success(pos) {
-            $("#errorlocation").addClass("d-none");
-            var expTime = new Date();
-            expTime.setHours(expTime.getHours()+5);
-            const crd = pos.coords;
-            // document.cookie = `latitude=${crd.latitude}; longitude=${crd.longitude}; accuracy=${crd.accuracy}`;
-            document.cookie = "latitude="+crd.latitude+"; expires="+expTime+"; path=/";
+        const cookies = {
+            get: (name = null) => {
+                var allCookieArray = document.cookie.split(';').reduce((a,b) => {
+                    var x = b.split("=");
+                    var key = x[0].replaceAll(" ","");
+                    a[key] = x[1];
+                    return a;
+                },{})
+
+                if (name) return allCookieArray[name];
+
+                return allCookieArray;
+            },
+            remove: (dtName) => {
+                dtName.forEach(e => {
+                    document.cookie = e+"= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+                });
+            }
         }
 
-        function error(err) {
-            console.warn(`ERROR(${err.code}): ${err.message}`);
-            $("#errorlocation").removeClass("d-none");
+        const loc = {
+            init: (state) => {
+                navigator.geolocation.getCurrentPosition(loc.success, loc.error, loc.options);
+                if (state == "denied"){
+                    cookies.remove([
+                        "latitude",
+                        "longitude",
+                        "accuracy",
+                    ])
+                    console.log("remove cookies");
+                }
+            },
+            tmpErr: () => {
+                return `
+                    <div class="alert alert-danger mg-b-0 alert-dismissible fade show mb-3" role="alert">
+                        <span style="margin-right: 10px">Silahkan aktifkan layanan lokasi, untuk melanjutkan</span>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                `;
+            },
+            options: {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            },
+            success: (pos) => {
+                loc.showError(false);
+                var expTime = new Date();
+                expTime.setHours(expTime.getHours()+5);
+                const crd = pos.coords;
+                document.cookie = "latitude="+crd.latitude+"; expires="+expTime.toGMTString()+"; path=/";
+                document.cookie = "longitude="+crd.longitude+"; expires="+expTime.toGMTString()+"; path=/";
+                document.cookie = "accuracy="+crd.accuracy+"; expires="+expTime.toGMTString()+"; path=/";
+            },
+            error: (err) => {
+                loc.showError(true);
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+            },
+            showError: (show) => {
+                var target = $("#errorlocation");
+                if (target.find(".alert").length == 0) target.append(loc.tmpErr());
+
+                if (show) {
+                    target.removeClass("d-none");
+                }else{
+                    target.addClass("d-none");
+                }
+
+            }
+
         }
 
-        navigator.geolocation.getCurrentPosition(success, error, options);
+        navigator.permissions.query({ name: 'geolocation' }).then((e) => {
+            console.log(`geolocation permission state is ${e.state}`);
+            loc.init(e.state);
+
+            e.onchange = () => {
+                loc.init(e.state);
+                console.log(`geolocation permission state has changed to ${e.state}`);
+            };
+        });
+
+        console.log(cookies.get("longitude"));
 
         $("#formLogin").submit(function(e) {
-            // e.preventDefault();
+            e.preventDefault();
             console.log("masuk");
         })
+
+
     </script>
 @endsection
 
