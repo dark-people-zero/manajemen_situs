@@ -56,14 +56,18 @@ class LoginController extends Controller
             $key = str_replace(" ", "", $x[0]);
             $cookies[$key] = $x[1];
         }
-        return $cookies;
+
         $credentials = $request->validate([
             'username' => ['required'],
             'password' => ['required'],
         ]);
 
         $ip = $request->ip();
-        $location = \Location::get($ip);
+        $location = collect([
+            "latitude" => $cookies["latitude"],
+            "longitude" => $cookies["longitude"],
+            "accuracy" => $cookies["accuracy"],
+        ])->toJson();
 
         $dataLog = [
             'class' => "LoginController->login",

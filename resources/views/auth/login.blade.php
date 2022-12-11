@@ -109,7 +109,6 @@
                         "longitude",
                         "accuracy",
                     ])
-                    console.log("remove cookies");
                 }
             },
             tmpErr: () => {
@@ -155,20 +154,22 @@
         }
 
         navigator.permissions.query({ name: 'geolocation' }).then((e) => {
-            console.log(`geolocation permission state is ${e.state}`);
             loc.init(e.state);
-
-            e.onchange = () => {
-                loc.init(e.state);
-                console.log(`geolocation permission state has changed to ${e.state}`);
-            };
+            e.onchange = () => loc.init(e.state);
         });
 
-        console.log(cookies.get("longitude"));
-
         $("#formLogin").submit(function(e) {
-            e.preventDefault();
-            console.log("masuk");
+            var lati = cookies.get("latitude");
+            var long = cookies.get("longitude");
+            var accu = cookies.get("accuracy");
+
+            if (lati == undefined && long == undefined && accu == undefined) {
+                e.preventDefault();
+                loc.showError(true);
+            }else{
+                loc.showError(false);
+            }
+
         })
 
 
