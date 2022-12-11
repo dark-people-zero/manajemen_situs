@@ -344,13 +344,13 @@ class User extends Component
 
         $this->name = $user->name;
         $this->username = $user->username;
-        $this->role = $user->id_role;
+        $this->role = $user->role->role_id;
         $this->dispatchBrowserEvent("sumo:role", [
             "type" => "set",
-            "val" => $user->id_role
+            "val" => $user->role->role_id
         ]);
 
-        if ($user->id_role != 1) {
+        if (in_array($user->role->role_id, [4])) {
             foreach ($user->aksesMenu as $item) {
                 if (strtolower($item->name) == "user" && $item->status) $this->userSelect = $item->status;
                 if (strtolower($item->name) == "site" && $item->status) $this->siteSelect = $item->status;

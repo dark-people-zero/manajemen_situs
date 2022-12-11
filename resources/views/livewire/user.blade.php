@@ -38,7 +38,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->username}}</td>
                                     <td>
-                                        @if ($item->id_role == 1)
+                                        @if (in_array($item->role->role_id, [4]))
                                             <span class="badge badge-primary">All Access</span>
                                         @else
                                             @foreach ($item->aksesSitus as $val)
@@ -115,7 +115,7 @@
                             <div wire:ignore>
                                 <select class="form-control @error('role') is-invalid @enderror" id="role" placeholder="Please select one role">
                                     @foreach ($roleAll as $item)
-                                        @if (!in_array($item->id, [1,2]) && Auth::user()->id_role == 2 || Auth::user()->id_role == 1)
+                                        @if (!in_array($item->id, [1,2]) && in_array(Auth::user()->role->role_id, [4]))
                                             <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endif
                                     @endforeach
@@ -128,7 +128,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div id="aksesMenuAndSite" style="display: {{in_array($role, [2,3]) ? 'block' : 'none'}}">
+                        <div id="aksesMenuAndSite" style="display: {{$role != 4 ? 'block' : 'none'}}">
                             <div class="form-group">
                                 <label>
                                     Menu Access

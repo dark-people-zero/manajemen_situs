@@ -260,11 +260,6 @@ body.dark-theme .iframe-preview--mobile {
     border-top: 0 !important;
 }
 
-#modalFormUser {
-    max-height: calc(100vh - 185px);
-    overflow: hidden;
-}
-
 select#role:invalid {
     color: #99a6b7;
     opacity: .5;

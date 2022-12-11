@@ -84,7 +84,8 @@ class LoginController extends Controller
             $role = $user->role;
             if ($role->role_id != 4) {
                 $active = $user->aksesMenu->where('status', true)->first();
-                if ($active) {
+
+                if ($active != null) {
                     $url = '/';
                     if (strtolower($active->name) == 'user') $url = '/user';
                     if (strtolower($active->name) == 'site') $url = '/';
@@ -95,11 +96,15 @@ class LoginController extends Controller
                     $request->session()->regenerate();
                     return redirect($url);
                 }else{
+
                     $dataLog['data_user'] = $user->toJson();
                     $dataLog['keterangan'] = "Mencoba login dengan username '".$request->username."'. Tetapi dikembalikan karena user tidak mempunyai akses ke manu manapun.";
                     log::create($dataLog);
 
-                    return back()->withErrors([
+                    Auth::logout();
+                    $request->session()->invalidate();
+                    $request->session()->regenerateToken();
+                    return redirect('/login')->withErrors([
                         "error" => "Your account has not got any menu access, please contact SMB Spv to get menu access"
                     ]);
                 }
