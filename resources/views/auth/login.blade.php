@@ -8,9 +8,9 @@
                     <div class="card-sigin mt-5 mt-md-0">
                         <div class="main-card-signin d-md-flex">
                             <div class="wd-100p">
-                                <div class="d-flex mb-4">
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/brand/favicon.png') }}" class="sign-favicon ht-40" alt="logo">
+                                <div class="d-flex mb-4 align-items-center">
+                                    <a href="#" class="me-2">
+                                        <img src="{{ asset('assets/img/brand/logo-white2.png') }}" class="sign-favicon" alt="logo">
                                     </a>
                                 </div>
                                 <div class="">

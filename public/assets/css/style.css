@@ -27412,11 +27412,25 @@ a.option-dots {
     padding-right: 0.75rem;
     width: 100%;
 }
-.main-sidebar-header .header-logo .desktop-dark,
-.main-sidebar-header .header-logo .mobile-dark,
-.main-sidebar-header .header-logo .mobile-logo {
-    display: none;
+
+
+.main-sidebar-header .header-logo .main-logo,
+.dark-theme.sidenav-toggled .main-sidebar-header .header-logo .desktop-dark,
+.dark-theme.sidenav-toggled.sidenav-toggled-open .main-sidebar-header .header-logo .mobile-dark,
+body:not(.dark-theme).sidenav-toggled .main-sidebar-header .header-logo .desktop-logo,
+body:not(.dark-theme).sidenav-toggled.sidenav-toggled-open .main-sidebar-header .header-logo .mobile-logo {
+    display: none !important;
 }
+
+.dark-theme .main-sidebar-header .header-logo .desktop-dark,
+.dark-theme.sidenav-toggled .main-sidebar-header .header-logo .mobile-dark,
+.dark-theme.sidenav-toggled.sidenav-toggled-open .main-sidebar-header .header-logo .desktop-dark,
+body:not(.dark-theme) .main-sidebar-header .header-logo .desktop-logo,
+body:not(.dark-theme).sidenav-toggled .main-sidebar-header .header-logo .mobile-logo,
+body:not(.dark-theme).sidenav-toggled.sidenav-toggled-open .main-sidebar-header .header-logo .desktop-logo {
+    display: block !important;
+}
+
 @media (min-width: 768px) {
     .app-content {
         margin-left: 240px;
