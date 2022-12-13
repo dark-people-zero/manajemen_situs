@@ -60,7 +60,7 @@ class UserRole
         ];
 
         if ($checkIp > 0 && !$errLoc) {
-            if ($role->role_id != 4) {
+            if ($role->role_id != 1) {
                 if ($active) {
                     if (in_array($request->path(), $site)) {
                         $dataLog["keterangan"] = "Berhasil meng akses url '".$request->path()."'";

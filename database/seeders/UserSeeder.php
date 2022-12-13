@@ -20,14 +20,14 @@ class UserSeeder extends Seeder
             'name' => 'Super Admin',
             'username' => 'superAdmin',
             'password' => Hash::make('admin'),
-            'id_role' => 4
+            'id_role' => 1
         ]);
 
         User::create([
             'name' => 'Admin',
             'username' => 'admin',
             'password' => Hash::make('admin'),
-            'id_role' => 6
+            'id_role' => 2
         ]);
     }
 }

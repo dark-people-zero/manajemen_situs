@@ -32,9 +32,9 @@
                         <span class="side-menu__label">Site</span>
                     </a>
                 </li>
-                @if (in_array(Auth::user()->role->role_id, [4,5,6,7,8,9,10]))
+                @if (Auth::user()->role->role_id != 3)
                     <li class="side-item side-item-category">Settings</li>
-                    @if (Auth::user()->role->role_id == 4 || $mnUser->status)
+                    @if (in_array(Auth::user()->role->role_id, [1,4]) || $mnUser->status)
                         <li class="slide">
                             <a class="side-menu__item" href="/user">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="side-menu__icon" viewBox="0 0 16 16">
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                     @endif
-                    @if (Auth::user()->role->role_id == 4 || $mnSiteData->status)
+                    @if (in_array(Auth::user()->role->role_id, [1,4]) || $mnSiteData->status)
                         <li class="slide">
                             <a class="side-menu__item" href="/data-situs">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="side-menu__icon" viewBox="0 0 16 16">
@@ -57,7 +57,7 @@
                         </li>
                     @endif
 
-                    @if (env('AUTO_PULL_ACTIVE'))
+                    @if (env('AUTO_PULL_ACTIVE') && Auth::user()->role->role_id == 1)
                         <li class="slide">
                             <a href="/gitpull" class="side-menu__item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="side-menu__icon">

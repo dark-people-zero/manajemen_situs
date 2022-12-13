@@ -82,7 +82,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $user = auth()->user();
             $role = $user->role;
-            if ($role->role_id != 4) {
+            if ($role->role_id != 1) {
                 $active = $user->aksesMenu->where('status', true)->first();
 
                 if ($active != null) {

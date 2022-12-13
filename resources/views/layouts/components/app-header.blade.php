@@ -77,7 +77,7 @@
                                 </a>
                             @endif
                         @else
-                            @if ($user->id_role == 1)
+                            @if ($user->role->role_id == 1)
                                 <a class="dropdown-item" href="/user">
                                     <i class="fa fa-users"></i>Users
                                 </a>
@@ -91,7 +91,7 @@
                                 </a>
                             @endif
                         @else
-                            @if ($user->id_role == 1)
+                            @if ($user->role->role_id == 1)
                                 <a class="dropdown-item" href="/data-situs">
                                     <i class="fab fa-chrome"></i>Site Data
                                 </a>

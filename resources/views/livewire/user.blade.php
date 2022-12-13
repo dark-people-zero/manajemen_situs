@@ -38,7 +38,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->username}}</td>
                                     <td>
-                                        @if (in_array($item->role->role_id, [4]))
+                                        @if (in_array($item->role->role_id, [1,4]))
                                             <span class="badge badge-primary">All Access</span>
                                         @else
                                             @foreach ($item->aksesSitus as $val)
