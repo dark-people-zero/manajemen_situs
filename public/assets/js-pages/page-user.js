@@ -1,9 +1,9 @@
 const lvUser = $('#content-user').attr("wire:id");
 
-var ps = new PerfectScrollbar('#modalFormUser', {
-    useBothWheelAxes:true,
-    suppressScrollX:true,
-});
+// var ps = new PerfectScrollbar('#modalFormUser', {
+//     useBothWheelAxes:true,
+//     suppressScrollX:true,
+// });
 
 runScriptAccessSite();
 
@@ -116,7 +116,7 @@ document.addEventListener("collapse:fitur", e => {
 });
 
 function runScriptAccessSite() {
-    ps.update();
+    // ps.update();
     for (let i = 0; i < $(".SlectBox").length; i++) {
         const element = $($(".SlectBox")[i]);
         if (!element.hasClass('SumoUnder')) {
@@ -215,4 +215,8 @@ document.addEventListener("sumo:site", e => {
         var target = $(`select[data-index="${el}"]`);
         target[0].sumo.selectItem(site.toString());
     });
+})
+
+document.addEventListener("logout", e => {
+    $('#formLogout').submit();
 })

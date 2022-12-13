@@ -115,7 +115,9 @@
                             <div wire:ignore>
                                 <select class="form-control @error('role') is-invalid @enderror" id="role" placeholder="Please select one role">
                                     @foreach ($roleAll as $item)
-                                        @if (!in_array($item->id, [1,2]) && in_array(Auth::user()->role->role_id, [4]))
+                                        @if ($item->id == 1 && Auth::user()->role->role_id == 1)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @else
                                             <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endif
                                     @endforeach
@@ -128,63 +130,55 @@
                                 </span>
                             @enderror
                         </div>
-                        <div id="aksesMenuAndSite" style="display: {{$role != 4 ? 'block' : 'none'}}">
-                            <div class="form-group">
-                                <label>
-                                    Menu Access
-                                </label>
-                                @error('aksesMenu')
-                                    <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                <div class="d-flex">
-                                    <div class="checkbox me-2" style="display: {{$role == 2 ? 'block' : 'none'}}">
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="userSelect" wire:model="userSelect" {{$userSelect ? 'checked' : ''}}>
-                                            <label for="userSelect" class="custom-control-label">User</label>
-                                        </div>
-                                    </div>
-                                    <div class="checkbox me-2">
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="siteSelect" wire:model="siteSelect" {{$siteSelect ? 'checked' : ''}}>
-                                            <label for="siteSelect" class="custom-control-label">Site</label>
-                                        </div>
-                                    </div>
-                                    <div class="checkbox me-2" style="display: {{$role == 2 ? 'block' : 'none'}}">
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="siteDataSelect" wire:model="siteDataSelect" {{$siteDataSelect ? 'checked' : ''}}>
-                                            <label for="siteDataSelect" class="custom-control-label">Site Data</label>
-                                        </div>
+                        @if (count($menuAccessDefault) > 0)
+                            <div id="aksesMenuAndSite">
+                                <div class="form-group">
+                                    <label>
+                                        Menu Access
+                                    </label>
+                                    @error('aksesMenu')
+                                        <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    <div class="d-flex">
+                                        @foreach ($menuAccessDefault as $i => $item)
+                                            <div class="checkbox me-2">
+                                                <div class="custom-checkbox custom-control cursor-pointer cursor-pointer">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input menuAccess" id="menuAccess{{$i}}" wire:change="ChangeMenuAccess({{$i}})" {{$item['status'] ? 'checked' : ''}}>
+                                                    <label for="menuAccess{{$i}}" class="custom-control-label cursor-pointer">{{$item['name']}}</label>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="d-flex align-items-center">
-                                    <span class="me-2">Site Access</span>
-                                    <span class="badge badge-primary cursor-pointer" wire:click="addAccessSite">
-                                        <i class="fa fa-plus"></i>
-                                    </span>
-                                </label>
-                                @error('aksesSite')
-                                    <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            @foreach ($dataAccessSite as $i => $item)
-                                @livewire('access-site', [
-                                    'index' => $item,
-                                    'data' => isset($accessSite[$item]) ? $accessSite[$item] : null
-                                ], key($i))
+                                <div class="form-group">
+                                    <label class="d-flex align-items-center">
+                                        <span class="me-2">Site Access</span>
+                                        <span class="badge badge-primary cursor-pointer" wire:click="addAccessSite">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                    </label>
+                                    @error('aksesSite')
+                                        <span class="invalid-feedback d-block mt-0 mb-2" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                @foreach ($dataAccessSite as $i => $item)
+                                    @livewire('access-site', [
+                                        'index' => $item,
+                                        'data' => isset($accessSite[$item]) ? $accessSite[$item] : null
+                                    ], key($i))
 
-                                @error($item)
-                                    <span class="invalid-feedback d-block mt-0 my-2" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            @endforeach
-                        </div>
+                                    @error($item)
+                                        <span class="invalid-feedback d-block mt-0 my-2" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                @endforeach
+                            </div>
+                        @endif
                     </form>
                 </div>
                 <div class="modal-header border-top">

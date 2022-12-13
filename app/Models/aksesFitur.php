@@ -21,7 +21,7 @@ class aksesFitur extends Model
         return $this->hasOne(fitur::class, 'id', 'id_fitur');
     }
 
-    public function fiturSitus(Type $var = null)
+    public function fiturSitus()
     {
         # code...
         return $this->hasOne(fiturSitus::class, 'id', 'id_fitur');

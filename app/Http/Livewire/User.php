@@ -13,6 +13,7 @@ use App\Models\aksesMenu as MaksesMenu;
 use App\Models\aksesSitus as MaksesSitus;
 use App\Models\aksesFitur as MaksesFitur;
 use App\Models\fitur;
+use App\Models\log;
 use DB;
 
 class User extends Component
@@ -22,8 +23,11 @@ class User extends Component
     public $search = '';
     protected $listeners = ['removeAccessSite', 'deleteData'];
     public $name, $username, $role, $idUser, $methodUpdate = false;
+    public $ip, $location;
 
     public $userSelect = false, $siteSelect = false, $siteDataSelect = false;
+
+    public $menuAccessDefault = [];
 
     public $accessSite = [];
 
@@ -31,27 +35,91 @@ class User extends Component
 
     public $fitur;
 
+    public function updateLocation()
+    {
+        $cookies = [];
+        $cookiesReq = explode(";", request()->server("HTTP_COOKIE"));
+
+        foreach ($cookiesReq as $val) {
+            $x = explode("=", $val);
+            $key = str_replace(" ", "", $x[0]);
+            $cookies[$key] = $x[1];
+        }
+
+        $ip = request()->ip();
+        $latitude = $cookies["latitude"] ?? null;
+        $longitude = $cookies["longitude"] ?? null;
+        $accuracy = $cookies["accuracy"] ?? null;
+
+        $this->ip = request()->ip();
+        $this->location = collect([
+            "latitude" => $latitude,
+            "longitude" => $longitude,
+            "accuracy" => $accuracy,
+        ])->toJson();
+
+        if ($latitude == null && $longitude == null && $accuracy == null) $this->dispatchBrowserEvent("logout");
+
+    }
+
     public function render()
     {
+        $this->updateLocation();
         $this->fitur = fitur::get()->toArray();
         $search = $this->search;
-        $role = auth()->user()->id_role;
+        $role = auth()->user()->role->role_id;
         $data = Muser::when($search, function($e) use($search){
             $e->where('name', 'like', '%'.$search.'%')
               ->orWhere('username', 'like', '%'.$search.'%');
         })->when($role, function($e) use($role) {
-            if ($role == 2) $e->whereNotIn("id_role", [1,2])->orWhere("id", auth()->user()->id);
+            if ($role == 2) $e->where("id_role", 3)->orWhere("id", auth()->user()->id);
         })->paginate(10);
+        $roleAll = Mrole::when($role, function($e) use($role) {
+            if ($role == 2) $e->where("role_id", 3);
+            if ($role == 4) $e->where("role_id", "!=", 1);
+        })->get();
 
         return view('livewire.user',[
             "data" => $data,
             "situs" => Msitus::get(),
-            "roleAll" => Mrole::get()
+            "roleAll" => $roleAll
         ])->extends('layouts.app2');
     }
 
     public function updated($propertyName)
     {
+        $this->updateLocation();
+        if ($propertyName == "role") {
+            if (in_array($this->role, [2,3])) {
+                if (count($this->menuAccessDefault) == 0){
+                    $this->menuAccessDefault = [
+                        [
+                            "id_user" => null,
+                            "name" => "User",
+                            "status" => false,
+                        ],
+                        [
+                            "id_user" => null,
+                            "name" => "Site",
+                            "status" => false,
+                        ],
+                        [
+                            "id_user" => null,
+                            "name" => "Site Data",
+                            "status" => false,
+                        ],
+                    ];
+                }
+            }else{
+                $this->reset([
+                    "dataAccessSite",
+                    "menuAccessDefault"
+                ]);
+                $this->addAccessSite();
+            }
+            $this->dispatchBrowserEvent("access:site");
+        }
+
         if (in_array($propertyName,['name','username','role'])) {
             $this->validate([
                 'name' => 'required',
@@ -67,6 +135,11 @@ class User extends Component
             unset($this->dataAccessSite[$key]);
             unset($this->accessSite[$index]);
         }
+    }
+
+    public function ChangeMenuAccess($index)
+    {
+        $this->menuAccessDefault[$index]["status"] = !$this->menuAccessDefault[$index]["status"];
     }
 
     public function addAccessSite()
@@ -114,25 +187,30 @@ class User extends Component
 
         $error = false;
 
-        if ($this->role != 1) {
-            $error = $this->filedValidate();
-        }
+        if (in_array($this->role, [2,3])) $error = $this->filedValidate();
 
         if (!$error) {
+            $dataLog = [
+                'class' => "Livewire->users->saveData",
+                'name_activity' => "create",
+                'data_ip' => $this->ip,
+                'data_location' => $this->location,
+                'data_user' => auth()->user()->toJson(),
+                'data_before' => null,
+                'data_after' => null,
+                'keterangan' => null,
+            ];
             DB::beginTransaction();
             try {
                 $msg = "Data added successfully. Password default <u>smbit001122</u>";
                 $type = "success";
 
                 if ($this->methodUpdate) {
-                    $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
-                        $e->with([
-                            'situs',
-                            'aksesFitur' => function($e) {
-                                $e->with('fitur');
-                            }
-                        ]);
-                    }])->where("id", $this->idUser)->first();
+                    $user = Muser::with(['role','aksesMenu', 'aksesSitus' => function($e) {
+                        $e->with(['situs','aksesFitur.fitur']);
+                    }])->find($this->idUser);
+
+                    $dataLog['data_before'] = $user->toJson();
 
                     $user->name = $this->name;
                     $user->username = $this->username;
@@ -184,6 +262,12 @@ class User extends Component
                     $msg = "Data update successfully.";
                     $type = "info";
 
+                    $dataLog['data_after'] = Muser::with(["role","aksesMenu","aksesSitus" => function($e) {
+                        $e->with(["situs", "aksesFitur.fitur"]);
+                    }])->find($user->id)->toJson();
+
+                    $dataLog['keterangan'] = "Berhasil mengubah data user";
+
                 }else{
                     $user = new Muser;
                     $user->name = $this->name;
@@ -192,38 +276,13 @@ class User extends Component
                     $user->id_role = $this->role;
                     $user->save();
 
-                    if ($this->role != 1) {
-
-                        $menu = [
-                            [
-                                'id_user' => $user->id,
-                                'name' => 'User',
-                                'status' => $this->userSelect,
-                                'created_at' => now(),
-                                'updated_at' => now(),
-                            ],[
-                                'id_user' => $user->id,
-                                'name' => 'Site',
-                                'status' => $this->siteSelect,
-                                'created_at' => now(),
-                                'updated_at' => now(),
-                            ],[
-                                'id_user' => $user->id,
-                                'name' => 'Site Data',
-                                'status' => $this->siteDataSelect,
-                                'created_at' => now(),
-                                'updated_at' => now(),
-                            ]
-                        ];
-                        if ($this->role == 3) $menu = [
-                            [
-                                'id_user' => $user->id,
-                                'name' => 'Site',
-                                'status' => $this->siteSelect,
-                                'created_at' => now(),
-                                'updated_at' => now(),
-                            ]
-                        ];
+                    if (in_array($this->role, [2,3])) {
+                        $menu = collect($this->menuAccessDefault)->map(function($e) use($user) {
+                            $e["id_user"] = $user->id;
+                            $e['created_at'] = now();
+                            $e['updated_at'] = now();
+                            return $e;
+                        })->toArray();
                         MaksesMenu::insert($menu);
 
                         foreach ($this->accessSite as $i => $v) {
@@ -243,8 +302,14 @@ class User extends Component
                         }
                     }
 
-                }
+                    $dataLog['data_after'] = Muser::with(["role","aksesMenu","aksesSitus" => function($e) {
+                        $e->with(["situs", "aksesFitur.fitur"]);
+                    }])->find($user->id)->toJson();
 
+                    $dataLog['keterangan'] = "Berhasil menambahkan data user";
+
+                }
+                log::create($dataLog);
 
                 DB::commit();
                 $this->resetForm();
@@ -259,6 +324,8 @@ class User extends Component
                 $this->dispatchBrowserEvent("toast:error", [
                     "message" => $th->getMessage()
                 ]);
+                $dataLog['keterangan'] = "Gagal menambah atau mengubah data user karena => ".$th->getMessage();
+                log::create($dataLog);
 
             }
         }
@@ -267,7 +334,10 @@ class User extends Component
     public function filedValidate()
     {
         $error = false;
-        if (!$this->userSelect && !$this->siteSelect && !$this->siteDataSelect) {
+        $accessMenu = collect($this->menuAccessDefault)->filter(function($e) {
+            return $e["status"];
+        });
+        if (count($accessMenu) == 0) {
             $this->addError('aksesMenu', 'Please provide at least one menu access.');
             $error = true;
         }
@@ -315,11 +385,9 @@ class User extends Component
             'role',
             'methodUpdate',
             "idUser",
-            'userSelect',
-            'siteSelect',
-            'siteDataSelect',
             'accessSite',
             'dataAccessSite',
+            "menuAccessDefault",
         ]);
 
         $this->dispatchBrowserEvent("sumo:role", [
