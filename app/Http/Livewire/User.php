@@ -210,6 +210,7 @@ class User extends Component
                         $e->with(['situs','aksesFitur.fitur']);
                     }])->find($this->idUser);
 
+                    $dataLog["name_activity"] = "update";
                     $dataLog['data_before'] = $user->toJson();
 
                     $user->name = $this->name;
@@ -217,18 +218,12 @@ class User extends Component
                     $user->id_role = $this->role;
                     $user->save();
 
-                    if ($this->role != 1) {
-                        foreach ($user->aksesMenu as $val) {
-                            if (strtolower($val->name) == "user") MaksesMenu::where("id", $val->id)->update([
-                                'status' => $this->userSelect,
-                            ]);
-
-                            if (strtolower($val->name) == "site") MaksesMenu::where("id", $val->id)->update([
-                                'status' => $this->siteSelect,
-                            ]);
-
-                            if (strtolower($val->name) == "site data") MaksesMenu::where("id", $val->id)->update([
-                                'status' => $this->siteDataSelect,
+                    // jika role yang di pilih adalah
+                    // Admin atau Operator
+                    if (in_array($this->role, [2,3])) {
+                        foreach ($this->menuAccessDefault as $val) {
+                            MaksesMenu::where("id", $val['id'])->update([
+                                'status' => $val['status'],
                             ]);
                         }
 
@@ -418,12 +413,8 @@ class User extends Component
             "val" => $user->role->role_id
         ]);
 
-        if (in_array($user->role->role_id, [4])) {
-            foreach ($user->aksesMenu as $item) {
-                if (strtolower($item->name) == "user" && $item->status) $this->userSelect = $item->status;
-                if (strtolower($item->name) == "site" && $item->status) $this->siteSelect = $item->status;
-                if (strtolower($item->name) == "site data" && $item->status) $this->siteDataSelect = $item->status;
-            }
+        if (in_array($user->role->role_id, [2,3])) {
+            $this->menuAccessDefault = $user->aksesMenu->toArray();
 
             // untuk akses situs
             if ($user->aksesSitus->count() > 0) $this->dataAccessSite = [];
@@ -442,7 +433,6 @@ class User extends Component
                 }
 
                 $this->addAccessSite();
-
             }
 
             $this->dispatchBrowserEvent("sumo:site", [
@@ -461,28 +451,53 @@ class User extends Component
 
     public function deleteData($id)
     {
-        $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
-            $e->with([
-                'situs',
-                'aksesFitur' => function($e) {
-                    $e->with('fitur');
-                }
+        $dataLog = [
+            'class' => "Livewire->users->deleteData",
+            'name_activity' => "delete",
+            'data_ip' => $this->ip,
+            'data_location' => $this->location,
+            'data_user' => auth()->user()->toJson(),
+            'data_before' => null,
+            'data_after' => null,
+            'keterangan' => "Berhasil menghapus data user",
+        ];
+
+        DB::beginTransaction();
+        try {
+            $user = Muser::with(['aksesMenu', 'aksesSitus' => function($e) {
+                $e->with([
+                    'situs',
+                    'aksesFitur' => function($e) {
+                        $e->with('fitur');
+                    }
+                ]);
+            }])->where("id", $id)->first();
+
+            $dataLog["data_before"] = $user;
+
+            $menuAkses = $user->aksesMenu->pluck("id");
+            $aksesSitus = $user->aksesSitus->pluck("id");
+            $aksesFitur = $user->aksesSitus->map(function($e) {
+                return $e->aksesFitur->pluck("id");
+            })->collapse();
+            MaksesMenu::destroy($menuAkses);
+            MaksesSitus::destroy($aksesSitus);
+            MaksesFitur::destroy($aksesFitur);
+
+            $user->delete();
+            log::create($dataLog);
+            $this->dispatchBrowserEvent("toast:info", [
+                "message" => "Data deleted successfully"
             ]);
-        }])->where("id", $id)->first();
-
-        $menuAkses = $user->aksesMenu->pluck("id");
-        $aksesSitus = $user->aksesSitus->pluck("id");
-        $aksesFitur = $user->aksesSitus->map(function($e) {
-            return $e->aksesFitur->pluck("id");
-        })->collapse();
-        MaksesMenu::destroy($menuAkses);
-        MaksesSitus::destroy($aksesSitus);
-        MaksesFitur::destroy($aksesFitur);
-
-        $user->delete();
-        $this->dispatchBrowserEvent("toast:info", [
-            "message" => "Data deleted successfully"
-        ]);
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollback();
+            $this->dispatchBrowserEvent("toast:error", [
+                "message" => $th->getMessage()
+            ]);
+            $dataLog['keterangan'] = "Gagal menghapus data user karena => ".$th->getMessage();
+            log::create($dataLog);
+        }
 
     }
 
