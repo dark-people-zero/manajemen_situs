@@ -222,9 +222,14 @@ class User extends Component
                     // Admin atau Operator
                     if (in_array($this->role, [2,3])) {
                         foreach ($this->menuAccessDefault as $val) {
-                            MaksesMenu::where("id", $val['id'])->update([
-                                'status' => $val['status'],
-                            ]);
+                            if (isset($val["id"])) {
+                                MaksesMenu::where("id", $val['id'])->update([
+                                    'status' => $val['status'],
+                                ]);
+                            }else{
+                                $val["id_user"] = $user->id;
+                                MaksesMenu::create($val);
+                            }
                         }
 
                         // remove data lama
@@ -316,6 +321,7 @@ class User extends Component
                 ]);
             } catch (\Throwable $th) {
                 DB::rollback();
+                dd($th);
                 $this->dispatchBrowserEvent("toast:error", [
                     "message" => $th->getMessage()
                 ]);
