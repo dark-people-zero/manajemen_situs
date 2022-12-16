@@ -8,6 +8,7 @@ use App\Http\Controllers\GitPullController;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Situs;
+use App\Http\Livewire\Site;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/user', User::class);
     Route::get('/data-situs', Situs::class);
     Route::get('/gitpull', [configController::class, 'git']);
+    Route::get('/site', Site::class);
 });
 
 Route::get('/config/{id}', [configController::class, 'index']);
