@@ -10,6 +10,7 @@ class situs extends Model
     protected $table = 'situs';
 
     protected $fillable = [
+        'situs_code',
         'name',
         'status_desktop',
         'status_mobile',

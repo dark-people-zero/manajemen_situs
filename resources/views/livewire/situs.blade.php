@@ -16,7 +16,13 @@
                 <div>
                     <input class="form-control form-control-sm" placeholder="Search..." type="search" wire:model="search" >
                 </div>
-                @if (auth()->user()->id_role == 1)
+                @php
+                    $statusAdd = false;
+                    $user = auth()->user();
+                    $role = $user->role->role_id;
+                    $menuAdd = $user->aksesMenu->where("name", "Site Data")->first();
+                @endphp
+                @if (in_array($role, [1,4]) || $menuAdd->status)
                     <div>
                         <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formSiteData" wire:click="shodModal(true)">Add Data</a>
                     </div>
@@ -106,6 +112,15 @@
                             <label for="name">Site Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter Site Name" wire:model="name" autofocus required value="{{$name}}">
                             @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Site Code</label>
+                            <input type="text" class="form-control @error('situs_code') is-invalid @enderror" id="situs_code" placeholder="Enter Site Code" wire:model="situs_code" autofocus required value="{{$situs_code}}">
+                            @error('situs_code')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

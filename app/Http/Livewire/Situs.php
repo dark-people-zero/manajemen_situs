@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use App\Models\situs as Msitus;
 use App\Models\fitur as Mfitur;
 use App\Models\fiturSitus;
+use App\Models\log;
 use DB;
 
 class Situs extends Component
@@ -15,16 +16,45 @@ class Situs extends Component
 
     protected $listeners = ['deleteData'];
 
+    public $ip, $location;
     public $search = '';
     public $closeModal = false;
     public $idUpdate = null;
 
-    public $name, $d_status = false, $m_status = false, $url_d_desktop, $url_d_mobile, $url_p_desktop, $url_p_mobile;
+    public $name, $situs_code, $d_status = false, $m_status = false, $url_d_desktop, $url_d_mobile, $url_p_desktop, $url_p_mobile;
 
     public $fiturDesktop = [], $fiturMobile = [];
 
+    public function updateLocation()
+    {
+        $cookies = [];
+        $cookiesReq = explode(";", request()->server("HTTP_COOKIE"));
+
+        foreach ($cookiesReq as $val) {
+            $x = explode("=", $val);
+            $key = str_replace(" ", "", $x[0]);
+            $cookies[$key] = $x[1];
+        }
+
+        $ip = request()->ip();
+        $latitude = $cookies["latitude"] ?? null;
+        $longitude = $cookies["longitude"] ?? null;
+        $accuracy = $cookies["accuracy"] ?? null;
+
+        $this->ip = request()->ip();
+        $this->location = collect([
+            "latitude" => $latitude,
+            "longitude" => $longitude,
+            "accuracy" => $accuracy,
+        ])->toJson();
+
+        if ($latitude == null && $longitude == null && $accuracy == null) $this->dispatchBrowserEvent("logout");
+
+    }
+
     public function render()
     {
+        $this->updateLocation();
         $search = $this->search;
         $data = Msitus::when($search, function($e) use($search){
             $e->where('name', 'like', '%'.$search.'%')
@@ -64,6 +94,7 @@ class Situs extends Component
 
     public function updated($propertyName)
     {
+        $this->updateLocation();
         $this->validateOnly($propertyName, $this->filedValidate());
     }
 
@@ -76,6 +107,7 @@ class Situs extends Component
             $this->idUpdate = $id;
             $data = Msitus::with(['fiturSitus'])->find($id);
 
+            $this->situs_code = $data->situs_code;
             $this->name = $data->name;
             $this->d_status = $data->status_desktop;
             $this->m_status = $data->status_mobile;
@@ -98,9 +130,20 @@ class Situs extends Component
     {
         $this->validate($this->filedValidate());
 
+        $dataLog = [
+            'class' => "Livewire->situs->saveData",
+            'name_activity' => "create",
+            'data_ip' => $this->ip,
+            'data_location' => $this->location,
+            'data_user' => auth()->user()->toJson(),
+            'data_before' => null,
+            'data_after' => null,
+            'keterangan' => null,
+        ];
         DB::beginTransaction();
         try {
             $filed = [
+                'situs_code' => $this->situs_code,
                 'name' => $this->name,
                 'status_desktop' => $this->d_status,
                 'status_mobile' => $this->m_status,
@@ -109,11 +152,14 @@ class Situs extends Component
                 'url_desktop_prod' => $this->url_p_desktop,
                 'url_mobile_prod' => $this->url_p_mobile
             ];
+
             $type = 'success';
             $msg = "Data added successfully.";
 
             if ($this->idUpdate != null) {
-                $dataSitus = Msitus::with(['fiturSitus'])->where('id', $this->idUpdate)->first();
+                $dataSitus = Msitus::with(['fiturSitus.fitur'])->where('id', $this->idUpdate)->first();
+                $dataLog['data_before'] = $dataSitus->toJson();
+                $dataLog['name_activity'] = "update";
                 $dataSitus->update($filed);
 
 
@@ -167,6 +213,10 @@ class Situs extends Component
 
                 $msg = "Data changed successfully.";
                 $type = 'info';
+
+                $dataLog['data_after'] = Msitus::with(["fiturSitus.fitur"])->find($dataSitus->id)->toJson();
+
+                $dataLog['keterangan'] = "Berhasil mengubah data situs";
             }else{
                 $situs = Msitus::create($filed);
                 $fiturDesktop = collect($this->fiturDesktop)->map(function($e) use($situs) {
@@ -190,7 +240,13 @@ class Situs extends Component
 
                 fiturSitus::insert($fiturDesktop);
                 fiturSitus::insert($fiturMobile);
+
+                $dataLog['data_after'] = Msitus::with(["fiturSitus.fitur"])->find($situs->id)->toJson();
+
+                $dataLog['keterangan'] = "Berhasil menambahkan data situs";
             }
+
+            log::create($dataLog);
             DB::commit();
 
             $this->closeModal = true;
@@ -204,6 +260,9 @@ class Situs extends Component
             $this->dispatchBrowserEvent("toast:error", [
                 "message" => $th->getMessage()
             ]);
+
+            $dataLog['keterangan'] = "Gagal menambah atau mengubah data situs karena => ".$th->getMessage();
+            log::create($dataLog);
         }
     }
 
@@ -232,7 +291,21 @@ class Situs extends Component
 
     public function deleteData($id)
     {
-        Msitus::find($id)->delete();
+        $dataLog = [
+            'class' => "Livewire->situs->deleteData",
+            'name_activity' => "delete",
+            'data_ip' => $this->ip,
+            'data_location' => $this->location,
+            'data_user' => auth()->user()->toJson(),
+            'data_before' => null,
+            'data_after' => null,
+            'keterangan' => "Berhasil menghapus data situs",
+        ];
+
+        $situs = Msitus::find($id);
+        $dataLog["data_before"] = $situs->toJson();
+        log::create($dataLog);
+        $situs->delete();
 
         $this->dispatchBrowserEvent("toast:info", [
             "message" => "Data deleted successfully"

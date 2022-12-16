@@ -22,7 +22,7 @@ return new class extends Migration
             $table->json('data_user')->nullable();
             $table->json('data_before')->nullable();
             $table->json('data_after')->nullable();
-            $table->string('keterangan');
+            $table->text('keterangan');
             $table->timestamps();
         });
     }
