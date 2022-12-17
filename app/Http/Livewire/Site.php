@@ -19,7 +19,7 @@ class Site extends Component
     use WithFileUploads;
 
     public $ip, $location;
-    public $dataSitus, $idSitus, $typeSite, $dataFitur;
+    public $dataSitus, $idSitus, $typeSite, $dataFitur = [];
 
     public function updateLocation()
     {
@@ -79,10 +79,22 @@ class Site extends Component
         $this->typeSite = $type;
 
         if ($type != null) {
-            $fiturSitus = fiturSitus::with(["fitur"])->where("id_situs", $this->idSitus)->where("type", $type)->get()->pluck("fitur");
-            dd($fiturSitus->toArray());
+            $this->dataFitur = fiturSitus::with(["fitur"])->where("id_situs", $this->idSitus)->where("type", $type)->get()->pluck("fitur");
         }else{
             $this->reset("dataFitur");
         }
+    }
+
+    public function getFiled($idFitur)
+    {
+        $filed = [
+            [
+                "id" => 1,
+                "isMultiple" => false,
+                "isImage" => false,
+                "isMultipleImage" => false,
+                "filed" => ["name", "deskripsi", "image", "status", "link", "btnImage", "btnText", "background", "color", "style"]
+            ]
+        ];
     }
 }

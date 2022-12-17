@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "isMultiple": false,
+        "isFile": false,
+        "isMultipleFile": false,
+        "filed": [
+            {
+                "name": "name",
+                "title": "Name"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            },
+            {
+                "name": "deskripsi",
+                "title": "Deskripsi"
+            }
+        ]
+    }
+]
