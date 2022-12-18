@@ -525,3 +525,13 @@ select.form-control.SumoUnder[multiple] {
     cursor: pointer;
     background-color: var(--bg-coris);
 }
+
+
+.dark-theme .side-menu-icon {
+    color: #bfc8de;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+}
