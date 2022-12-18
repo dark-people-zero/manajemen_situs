@@ -80,33 +80,17 @@
                     <div class="main-mail-menu h-100" style="max-height: calc(100% - 70px - 2rem);">
                         @if (count($dataFitur) > 0)
                             <nav class="nav main-nav-column">
-                                {{-- @foreach ($dataFitur as $i => $item)
+                                @foreach ($dataFitur as $i => $item)
                                     <a class="nav-link thumb {{$i == 0 ? 'active' : ''}}" href="javascript:void(0);">
                                         <i class="fe fe-disc"></i>
                                         {{$item->name}}
                                     </a>
-                                @endforeach --}}
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-music"></i> Music</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-video"></i> Videos</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-smartphone"></i> APKS</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-download"></i>
-                                    Downloads</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-heart"></i> Favourites</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-eye"></i> Hidden FIles</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-share"></i> Transfer files
-                                </a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-database"></i> Google
-                                    Drive</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-airplay"></i> FTP</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-lock"></i> Private
-                                    FIles</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-wind"></i> Deep Clean</a>
-                                <a class="nav-link thumb" href="javascript:void(0);"><i class="fe fe-grid "></i> More</a>
+                                @endforeach
                             </nav>
                         @else
                             <div class="nullFitur d-flex align-items-center justify-content-center h-100">
                                 @if ($idSitus)
-                                    <span class="text-muted text-center">Tidak tersedia fitur apapun pada situs <b>{{$dt->name}}</b> dengan mode <b>{{$typeSite}}</b>. Silahkan coba pada mode <b>{{$typeSite == "desktop" ? "mobile" : "desktop"}}</b>, jika masih tidak tersedia, silahkan menghubungi bagian IT, untuk di tambahkan fitur pada situs <b>{{$dt->name}}</b>.</span>
+                                    <span class="text-muted text-center">Tidak tersedia fitur apapun pada situs <b>{{$dt->name}}</b> dengan mode <b>{{$typeSite}}</b>. Silahkan coba pada mode <span><b>{{$typeSite == "desktop" ? "mobile" : "desktop"}}</b></span>, jika masih tidak tersedia, silahkan menghubungi bagian IT, untuk di tambahkan fitur pada situs <b>{{$dt->name}}</b>.</span>
                                 @else
                                     <span class="text-muted text-center">Silahkan pilih situs untuk memunculkan daftar fitur. Jika daftar situs tidak muncul silahkan menghubungi bagian IT, untuk di tambahkan daftar situs untuk user anda.</span>
                                 @endif
@@ -118,7 +102,7 @@
         </div>
         <div class="col-lg-8 col-xl-9">
             <div id="notSelected" class="d-flex justify-content-center align-items-center h-100">
-                <span class="text-muted">Silahkan pilih fitur untuk memunculkan form.</span>
+                <span class="text-muted">Silahkan pilih fitur untuk memunculkan form. {{$typeSite}}</span>
             </div>
         </div>
     </div>

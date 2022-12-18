@@ -81,7 +81,7 @@ class Site extends Component
         if ($type != null) {
             $this->dataFitur = fiturSitus::with(["fitur"])->where("id_situs", $this->idSitus)->where("type", $type)->get()->pluck("fitur");
         }else{
-            $this->reset("dataFitur");
+            $this->dataFitur = [];
         }
     }
 

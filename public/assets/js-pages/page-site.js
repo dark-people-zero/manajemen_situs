@@ -26,7 +26,7 @@ selecSitus.select2({
     }else{
         window.livewire.find(idLivewire)["typeSite"] = null;
         window.livewire.find(idLivewire)["idSitus"] = null;
-        window.livewire.find(idLivewire)["dataFitur"] = null;
+        window.livewire.find(idLivewire)["dataFitur"] = [];
     }
 
 });
