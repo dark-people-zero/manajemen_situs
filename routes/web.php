@@ -10,6 +10,8 @@ use App\Http\Livewire\User;
 use App\Http\Livewire\Situs;
 use App\Http\Livewire\Site;
 use App\Http\Livewire\FormElement;
+use App\Http\Livewire\FormFitur;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,7 @@ Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/gitpull', [configController::class, 'git']);
     Route::get('/site', Site::class);
     Route::get('/form-element', FormElement::class);
+    Route::get('/form-fitur', FormFitur::class);
 });
 
 Route::get('/config/{id}', [configController::class, 'index']);

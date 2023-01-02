@@ -51,7 +51,7 @@
 
                     @if (env('AUTO_PULL_ACTIVE') && Auth::user()->role->role_id == 1)
                         <li class="slide">
-                            <a href="#" class="side-menu__item">
+                            <a href="/form-fitur" class="side-menu__item">
                                 <i class="fe fe-clipboard side-menu-icon"></i>
                                 <span class="side-menu__label">Form Fitur</span>
                             </a>
