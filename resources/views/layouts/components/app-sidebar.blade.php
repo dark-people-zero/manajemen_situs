@@ -25,7 +25,7 @@
             <ul class="side-menu">
                 <li class="side-item side-item-category">App</li>
                 <li class="slide">
-                    <a class="side-menu__item" href="/">
+                    <a class="side-menu__item" href="/site">
                         <i class="fe fe-layout side-menu-icon"></i>
                         <span class="side-menu__label">Site Manager</span>
                     </a>
@@ -65,7 +65,7 @@
                         </li>
 
                         <li class="slide">
-                            <a href="#" class="side-menu__item">
+                            <a href="/form-element" class="side-menu__item">
                                 <i class="fe fe-sidebar side-menu-icon"></i>
                                 <span class="side-menu__label">Form Element</span>
                             </a>

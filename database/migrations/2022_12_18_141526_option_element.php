@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('option_element', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_form_element');
             $table->string('code');
             $table->string('name');
             $table->timestamps();

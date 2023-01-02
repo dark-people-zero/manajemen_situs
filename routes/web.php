@@ -9,6 +9,7 @@ use App\Http\Livewire\Home;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Situs;
 use App\Http\Livewire\Site;
+use App\Http\Livewire\FormElement;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/data-situs', Situs::class);
     Route::get('/gitpull', [configController::class, 'git']);
     Route::get('/site', Site::class);
+    Route::get('/form-element', FormElement::class);
 });
 
 Route::get('/config/{id}', [configController::class, 'index']);

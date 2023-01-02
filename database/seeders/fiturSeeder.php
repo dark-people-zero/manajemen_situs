@@ -17,8 +17,8 @@ class fiturSeeder extends Seeder
     {
         fitur::insert([
             [
-                'fitur_code' => 'popup-model',
-                'name' => 'Popup APK',
+                'fitur_code' => 'popup-modal',
+                'name' => 'Popup Modal',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

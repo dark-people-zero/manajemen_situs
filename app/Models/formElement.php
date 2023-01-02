@@ -13,9 +13,18 @@ class formElement extends Model
         'name',
         'id_type_element',
         'placeholder',
-        'option',
         'switch_on',
         'switch_off',
         'is_multiple',
     ];
+
+    public function typeElemen()
+    {
+        return $this->hasOne(typeElement::class, 'id', 'id_type_element');
+    }
+
+    public function optionElemen()
+    {
+        return $this->hasMany(optionElement::class, 'id_form_element', 'id');
+    }
 }

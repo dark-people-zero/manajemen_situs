@@ -18,10 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->integer('id_type_element');
             $table->string('placeholder')->default(null);
-            $table->string('option')->default(null);
-            $table->string('switch_on')->default(null);
-            $table->string('switch_off')->default(null);
-            $table->string('is_multiple')->default(null);
+            $table->string('switch_on')->nullable();
+            $table->string('switch_off')->nullable();
+            $table->string('is_multiple')->default(false);
             $table->timestamps();
         });
     }
