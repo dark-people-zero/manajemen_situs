@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('form_fiturs', function (Blueprint $table) {
+        Schema::create('form_fitur', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger("id_fitur");
+            $table->bigInteger("id_form_element");
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_fiturs');
+        Schema::dropIfExists('form_fitur');
     }
 };

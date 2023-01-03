@@ -16,12 +16,12 @@ class formFitur extends Model
 
     public function typeElemen()
     {
-        return $this->hasOne(typeElement::class, 'id', 'id_form_element');
+        return $this->hasOne(formElement::class, 'id', 'id_form_element');
     }
 
-    // public function typeFitur()
-    // {
-    //     return $this->hasOne(typeElement::class, 'id', 'id_type_element');
-    // }
+    public function typeFitur()
+    {
+        return $this->hasOne(fitur::class, 'id', 'id_type_element');
+    }
 
 }

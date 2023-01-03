@@ -17,7 +17,7 @@
                     <input class="form-control form-control-sm" placeholder="Search..." type="search" wire:model="search" >
                 </div>
                 <div>
-                    <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formElement" wire:click="showForm(true)">Add Data</a>
+                    <a href="javascript:void(0);" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formFitur" wire:click="showForm(true)">Add Data</a>
                 </div>
             </div>
             <div class="mt-4 position-relative">
@@ -51,7 +51,7 @@
                                         </span>
                                     </td>
                                     <td class="text-center">
-                                        <a href="javascript:void(0);" class="text-info me-2" wire:click="showForm(false,{{$item->id}})" data-bs-toggle="modal" data-bs-target="#formElement">
+                                        <a href="javascript:void(0);" class="text-info me-2" wire:click="showForm(false,{{$item->id}})" data-bs-toggle="modal" data-bs-target="#formFitur">
                                             <i class="fe fe-edit"></i>
                                         </a>
                                         <a href="javascript:void(0);" class="text-danger" wire:click="deleteConfirm({{$item->id}})">
@@ -72,8 +72,8 @@
         </div>
     </div>
 
-    <!-- Form User Modal -->
-    <div class="modal fade" id="formElement" tabindex="-1" role="dialog"  aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" wire:ignore.self>
+    <!-- Form User Modalx-->
+    <div class="modal fade" id="formFitur" tabindex="-1" role="dialog"  aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" wire:ignore.self>
         <div class="modal-dialog modal-dialog-right" role="document">
             <div class="modal-content chat border-0">
                 <div class="modal-header border-bottom">
