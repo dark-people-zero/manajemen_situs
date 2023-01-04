@@ -67,10 +67,10 @@ class FormFitur extends Component
             ->orWhereHas('typeElemen', function($e) {
                 $e->where("name", 'like', '%'.$search.'%');
             })
-            ->orWhereHas('optionElemen', function($e) {
+            ->orWhereHas('typeFitur', function($e) {
                 $e->where("name", 'like', '%'.$search.'%');
             });
-        })->with(['typeElemen', 'optionElemen'])->paginate(10);
+        })->with(['typeElemen', 'typeFitur'])->paginate(10);
 
         return view('livewire.form-fitur', [
             "data" => $data

@@ -33,6 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php dd($data); ?> 
                         @if ($data->count() > 0)
                             @foreach ($data as $item)
                                 <tr>
