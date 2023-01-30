@@ -43,7 +43,7 @@
                                 {{-- @foreach($item as $value) --}}
                                     <tr>
                                         <td>{{$key}}</td>
-                                        <td>{{$item->pluck('typeElemen.name')->join(", ")}}</td>
+                                        <td>{{$item->pluck('formElemen.name')->join(", ")}}</td>
 
                                         <td class="text-center">
                                             <a href="javascript:void(0);" class="text-info me-2" wire:click="showForm(false,{{$item[0]->id_fitur}})" data-bs-toggle="modal" data-bs-target="#formFitur">
@@ -98,15 +98,16 @@
                                 </span>
                             @enderror
                         </div>
-
                         <div class="form-group">
                             <label for="type">Type Element</label>
                             <div wire:ignore>
                                 <select class="form-control @error('type') is-invalid @enderror" id="type" placeholder="Please select one type" multiple>
                                     @foreach ($formElement as $item)
+                                   
                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                     @endforeach
                                     <option selected disabled="disabled"></option>
+                 
                                 </select>
                             </div>
                             @error('type')
@@ -115,9 +116,6 @@
                                 </span>
                             @enderror
                         </div>
-
-                        
-
                     </form>
                 </div>
                 <div class="modal-header border-top">

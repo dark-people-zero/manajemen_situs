@@ -4,6 +4,14 @@
     <link href="{{asset('assets/switcher/css/switcher.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/plugins/coloris/coloris.min.css') }}">
     <style>
+        .previewImg {
+            position: relative;
+        }
+        .removePreviewImage {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
         .select2-container--default .select2-selection--single .select2-selection__clear {
             position: absolute;
             right: 30px;
@@ -76,9 +84,10 @@
                         @if (count($dataFitur) > 0)
                             <nav class="nav main-nav-column">
                                 @foreach ($dataFitur as $i => $item)
-                                    <a class="nav-link thumb {{$i == 0 ? 'active' : ''}}" href="javascript:void(0);">
+
+                                    <a class="nav-link thumb {{$i == 0 ? 'active' : ''}}" href="javascript:void(0);" wire:click="getFileds({{ $item['id'] }})">
                                         <i class="fe fe-disc"></i>
-                                        {{$item->name}}
+                                        {{$item['name']}}
                                     </a>
                                 @endforeach
                             </nav>
@@ -96,8 +105,134 @@
             </div>
         </div>
         <div class="col-lg-8 col-xl-9">
-            <div id="notSelected" class="d-flex justify-content-center align-items-center h-100">
-                <span class="text-muted">Silahkan pilih fitur untuk memunculkan form. {{$typeSite}}</span>
+            <div id="notSelected" class="d-flex justify-content-center  h-100">
+                @if($filed ) 
+                    <form>
+                        @foreach ($filed as $i => $fill)
+                        {{-- {{ dd($fill->toJson()) }} --}}
+                        {{-- {{ $fill->formElemen }} --}}
+                        
+
+
+                                @switch($fill->formElemen->typeElemen->name)
+                                    @case("input")
+                                    <div class="mb-3">
+                                        <div>
+                                            <label for="{{$fill->formElemen->name}}" class="form-label">{{$fill->formElemen->name}}</label>
+                                            <input type="text" class="form-control" id="{{$fill->formElemen->name}}" wire:model="name" placeholder="{{ $fill->formElemen->placeholder }}">
+                                        </div>
+                                    </div>
+                                    @break
+
+                                    @case("images")
+                                    <div class="mb-3">
+                                        <div >
+                                            <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
+                                            @if($fill->formElemen->is_multiple) 
+                                                <input class="form-control" type="file" accept="image/*" multiple wire:model="image" >
+
+                                            @else 
+                                                <input class="form-control" type="file" accept="image/*" wire:model="image">
+
+                                            @endif
+                                            @if($image)
+                                                @if(gettype($image) == "array")
+                                                    <div class="multiple-preview  d-flex">
+                                                        @foreach($image as $i => $img)
+                                                            <div class="previewImg">
+                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" />
+
+                                                                <div class="removePreviewImage" wire:click="removeImage({{$i}})">
+                                                                    <i class="fe fe-x"></i>
+                                                                </div>
+
+                                                            </div>
+                                                            
+                                                        @endforeach
+                                                    </div>
+                                                @else 
+                                                    <img class="mt-1"  src="{{ $image->temporaryUrl() }}" />
+                                                @endif
+                                            @endif
+                                        
+                                        </div>
+                                    </div>
+                                    @break
+
+                                    @case("textarea")
+                                    <div class="mb-3">
+                                        <div >
+                                            <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
+                                            <textarea class="form-control resize" rows="5" placeholder="{{ $fill->formElemen->placeholder }}" wire:model="textarea"  style="height: 44px;"></textarea>
+                                        </div>
+                                    </div>
+                                    @break
+
+                                    @case("select")
+                                    @if($fill->formElemen->optionElemen)
+                                        <div class="mb-3" >
+                                            <select class="form-control form-select " wire:model="selectOption">
+                                                <option value=""  selected hidden>Select your option</option>
+                                                @foreach ($fill->formElemen->optionElemen as $item)
+                                                    <option value="{{ $item->code }}">{{ $item->name }}</option>
+                                                @endforeach
+                                                
+                                            </select>
+                                        </div>
+                                    @endif
+                                    @break
+
+                                    @case("checkbox")
+                                    <div class="checkbox">
+                                        <div class="custom-checkbox custom-control">
+                                            <input type="checkbox" class="form-check-input" wire:model="checkbox">
+                                            <label>{{ $fill->formElemen->placeholder }}</label>
+                                        </div>
+                                    </div>
+                                    @break
+
+                                    @case("switch")
+                                    <div class="mb-3">
+                                    <h4 class="d-flex justify-content-between">
+                                        {{$fill->formElemen->name}}
+                                        <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" role="button" >
+                                            <input type="checkbox" class="custom-switch-input"  checked="" wire:model="switch">
+                                            <span class="custom-switch-indicator custom-switch-indicator"></span>
+                                        </label>
+                                    </h4>
+                                    </div>
+                                    @break
+
+                                    @case("color")
+                                    <div class="mb-3">
+                                    <div class="">
+                                        <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
+                                        <div class="clr-field" style="color:#fff;" >
+                                            <button type="button" aria-labelledby="clr-open-label"></button>
+                                            <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" type="text" wire:model="color" value="{{ $color }}" readonly="" data-coloris></div>
+                                    </div>
+                                    </div>
+                                    @break
+                                    
+                                    @default
+                                        
+                                @endswitch
+
+                              {{-- <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div> --}}
+                        @endforeach
+                        <div class="py-4 border-top">
+                            <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
+                        </div>
+    
+                            
+                    </form>
+                
+                @endif
+                
+
             </div>
         </div>
     </div>
@@ -105,6 +240,17 @@
 
 @section('scripts')
     <!--Internal  Select2 js -->
+    <script>
+        document.addEventListener('coloris:pick', e => {
+            setTimeout(() => {
+                document.querySelector('.clr-field').style.color = e.detail.color;
+                
+            }, 1000);
+
+        });
+
+
+    </script>
     <script src="{{asset('assets/plugins/select2/js/select2.min.js')}}"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="{{ asset('assets/plugins/coloris/coloris.js') }}"></script>

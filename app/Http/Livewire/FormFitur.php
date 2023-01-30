@@ -66,9 +66,9 @@ class FormFitur extends Component
     public function render()
     {
         $search = $this->search;
-        $data = MformFitur::with(['typeElemen', "typeFitur" ])
+        $data = MformFitur::with(['formElemen', "typeFitur" ])
         ->when($search, function($e) use($search) {
-            $e->orWhereHas('typeElemen', function($e) use($search) {
+            $e->orWhereHas('formElemen', function($e) use($search) {
                 $e->where("name", 'like', '%'.$search.'%');
             })->orWhereHas('typeFitur', function($e) use($search) {
                 $e->where("name", 'like', '%'.$search.'%');
@@ -180,6 +180,7 @@ class FormFitur extends Component
                 $name = $this->name;
                 if(!MformFitur::where("id_fitur", $name)->first()) {
                     $dataInsert = collect($this->type)->map(function($e) use($name) {
+                        
                         return [
                             "id_fitur" => $name,
                             "id_form_element" => $e,
@@ -239,7 +240,7 @@ class FormFitur extends Component
 
         DB::beginTransaction();
         try {
-            $formFitur = MformFitur::with(['typeElemen', 'typeFitur'])->where("id_fitur", $id)->first();
+            $formFitur = MformFitur::with(['formElemen', 'typeFitur'])->where("id_fitur", $id)->first();
             $dataLog["data_before"] = $formFitur;
 
 

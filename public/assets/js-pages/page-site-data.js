@@ -37,3 +37,5 @@ document.addEventListener('sumo:select', event => {
         $("#fiturMobile")[0].sumo.selectItem(`${e}`);
     });
 });
+
+

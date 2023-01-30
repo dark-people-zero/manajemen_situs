@@ -14,7 +14,7 @@ class formFitur extends Model
         'id_form_element',
     ];
 
-    public function typeElemen()
+    public function formElemen()
     {
         return $this->hasOne(formElement::class, 'id', 'id_form_element');
     }

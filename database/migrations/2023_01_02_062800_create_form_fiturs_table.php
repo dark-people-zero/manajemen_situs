@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger("id_fitur");
             $table->bigInteger("id_form_element");
+            // $table->bigInteger("id_type_element");
             $table->timestamps();
         });
     }

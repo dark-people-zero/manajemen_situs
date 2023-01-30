@@ -30,7 +30,6 @@ $("#name").on('sumo:closed', function(sumo) {
 });
 
 document.addEventListener("sumo:name", e => {
-    console.log(e.detail.val)
     if (e.detail.type == "set") {
         $("#name")[0].sumo.selectItem(e.detail.val.toString());
     }
@@ -47,6 +46,7 @@ document.addEventListener("sumo:name", e => {
 });
 
 document.addEventListener("sumo:type", e => {
+
     if (e.detail.type == "set") {
         e.detail.val.forEach(val => {
             $("#type")[0].sumo.selectItem(val.toString());
