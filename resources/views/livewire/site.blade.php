@@ -30,6 +30,8 @@
         .w-49 {
             width: 49%;
         }
+
+
     </style>
 @endsection
 
@@ -82,13 +84,13 @@
 
                     <div class="main-mail-menu h-100" style="max-height: calc(100% - 70px - 2rem);">
                         @if (count($dataFitur) > 0)
-                            <nav class="nav main-nav-column">
+                            <nav class="nav main-nav-column ">
                                 @foreach ($dataFitur as $i => $item)
-
-                                    <a class="nav-link thumb {{$i == 0 ? 'active' : ''}}" href="javascript:void(0);" wire:click="getFileds({{ $item['id'] }})">
+                                    <a class="btnActives nav-link thumb {{ $i + 1 == $active  ? "active" : "" }}" href="javascript:void(0);" wire:click="getFileds({{ $item['id'] }})">
                                         <i class="fe fe-disc"></i>
-                                        {{$item['name']}}
+                                        {{ $item['name'] }}
                                     </a>
+
                                 @endforeach
                             </nav>
                         @else
@@ -107,21 +109,28 @@
         <div class="col-lg-8 col-xl-9">
             <div id="notSelected" class="d-flex justify-content-center  h-100">
                 @if($filed ) 
+                    @php
+                    $dataLamaFormFitur = json_decode($formFitur);
+                    $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
+                    @endphp
                     <form>
+
+
                         @foreach ($filed as $i => $fill)
-                        {{-- {{ dd($fill->toJson()) }} --}}
-                        {{-- {{ $fill->formElemen }} --}}
-                        
-
-
                                 @switch($fill->formElemen->typeElemen->name)
                                     @case("input")
-                                    <div class="mb-3">
-                                        <div>
-                                            <label for="{{$fill->formElemen->name}}" class="form-label">{{$fill->formElemen->name}}</label>
-                                            <input type="text" class="form-control" id="{{$fill->formElemen->name}}" wire:model="name" placeholder="{{ $fill->formElemen->placeholder }}">
+                                        <div class="mb-3">
+                                            <div>
+                                                <label for="{{$fill->formElemen->name . strval($i)}}" class="form-label">{{$fill->formElemen->name}}</label>
+                                                <input type="text" class="form-control @error('name') is-invalid @enderror" value="name.{{ $fill->formElemen->name }}"  id="input{{ $fill->formElemen->name }}"  wire:model="name.{{ $fill->formElemen->name }}" placeholder="{{ $fill->formElemen->placeholder }}" required >
+                                                @error('name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
                                         </div>
-                                    </div>
+                                    
                                     @break
 
                                     @case("images")
@@ -129,32 +138,52 @@
                                         <div >
                                             <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
                                             @if($fill->formElemen->is_multiple) 
-                                                <input class="form-control" type="file" accept="image/*" multiple wire:model="image" >
+                                                <input class="form-control" type="file" accept="image/*" multiple wire:model="images" >
+                                                @if($images)
+                                                    @if(gettype($images) == "string")
+                                                    <div class="multiple-preview  d-flex">
+                                                        @foreach(explode(",", $images) as $i => $img)
+                                                            {{-- <div>{{ $img }}</div><br> --}}
+                                                            <div class="previewImg">
+                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $img }}" />
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                        {{-- <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" /> --}}
+                                                    @endif
+
+                                                    @if(gettype($images) == "array")
+                                                    {{-- {{ dd($images) }} --}}
+                                                        <div class="multiple-preview  d-flex">
+                                                            @foreach($images as $i => $img)
+                                                                <div class="previewImg">
+                                                                    @if(empty($img->url))
+                                                                        <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" />
+                                                                        {{-- @if(count($img) > 0 || $img->temporaryUrl() ) --}}
+                                                                            <div class="removePreviewImage" wire:click="removeImage({{$i}})">
+                                                                                <i class="fe fe-x"></i>
+                                                                            </div>
+                                                                        {{-- @endif --}}
+                                                                    @endif
+                                                                </div>                                                                
+                                                            @endforeach
+                                                        </div>
+                                                    {{-- @else  --}}
+                                                        {{-- <img class="mt-1"  src="{{ $images->temporaryUrl() }}" /> --}}
+                                                    @endif
+                                                @endif
 
                                             @else 
                                                 <input class="form-control" type="file" accept="image/*" wire:model="image">
+                                                @if($image)
+                                                    @if(gettype($image) == "string") 
+                                                        <img class="mt-1"  src="{{ $image }}" />
 
-                                            @endif
-                                            @if($image)
-                                                @if(gettype($image) == "array")
-                                                    <div class="multiple-preview  d-flex">
-                                                        @foreach($image as $i => $img)
-                                                            <div class="previewImg">
-                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" />
-
-                                                                <div class="removePreviewImage" wire:click="removeImage({{$i}})">
-                                                                    <i class="fe fe-x"></i>
-                                                                </div>
-
-                                                            </div>
-                                                            
-                                                        @endforeach
-                                                    </div>
-                                                @else 
-                                                    <img class="mt-1"  src="{{ $image->temporaryUrl() }}" />
+                                                    @else 
+                                                        <img class="mt-1"  src="{{ $image->temporaryUrl() }}" />
+                                                    @endif
                                                 @endif
                                             @endif
-                                        
                                         </div>
                                     </div>
                                     @break
@@ -163,7 +192,7 @@
                                     <div class="mb-3">
                                         <div >
                                             <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
-                                            <textarea class="form-control resize" rows="5" placeholder="{{ $fill->formElemen->placeholder }}" wire:model="textarea"  style="height: 44px;"></textarea>
+                                            <textarea class="form-control resize" rows="5" placeholder="{{ $fill->formElemen->placeholder }}"  wire:model="textarea"  style="height: 120px;">{{ $textarea }}</textarea>
                                         </div>
                                     </div>
                                     @break
@@ -171,7 +200,7 @@
                                     @case("select")
                                     @if($fill->formElemen->optionElemen)
                                         <div class="mb-3" >
-                                            <select class="form-control form-select " wire:model="selectOption">
+                                            <select class="form-control form-select " value={{ $selectOption }} wire:model="selectOption">
                                                 <option value=""  selected hidden>Select your option</option>
                                                 @foreach ($fill->formElemen->optionElemen as $item)
                                                     <option value="{{ $item->code }}">{{ $item->name }}</option>
@@ -185,7 +214,7 @@
                                     @case("checkbox")
                                     <div class="checkbox">
                                         <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" class="form-check-input" wire:model="checkbox">
+                                            <input type="checkbox" class="form-check-input" value="{{ $checkbox }}" wire:model="checkbox">
                                             <label>{{ $fill->formElemen->placeholder }}</label>
                                         </div>
                                     </div>
@@ -205,23 +234,20 @@
 
                                     @case("color")
                                     <div class="mb-3">
-                                    <div class="">
+                                        <div class="">
+
                                         <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
-                                        <div class="clr-field" style="color:#fff;" >
+                                        <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] }};" >
                                             <button type="button" aria-labelledby="clr-open-label"></button>
-                                            <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" type="text" wire:model="color" value="{{ $color }}" readonly="" data-coloris></div>
-                                    </div>
+                                            <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris></div>
+                                        </div>
                                     </div>
                                     @break
-                                    
+                                     {{-- " --}}
+                                    {{-- " --}}
                                     @default
                                         
                                 @endswitch
-
-                              {{-- <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                              </div> --}}
                         @endforeach
                         <div class="py-4 border-top">
                             <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
@@ -237,20 +263,66 @@
         </div>
     </div>
 </div>
-
 @section('scripts')
-    <!--Internal  Select2 js -->
-    <script>
-        document.addEventListener('coloris:pick', e => {
-            setTimeout(() => {
-                document.querySelector('.clr-field').style.color = e.detail.color;
-                
-            }, 1000);
+     <!--Internal  scriptku js -->
 
+    <script>
+        
+        function waitForElm(selector) {
+            return new Promise(resolve => {
+                if (document.querySelector(selector)) {
+                    return resolve(document.querySelector(selector));
+                }
+
+                const observer = new MutationObserver(mutations => {
+                    if (document.querySelector(selector)) {
+                        resolve(document.querySelector(selector));
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            });
+        }
+
+        waitForElm('.nav.main-nav-column').then((elm) => {
+            $(".btnActives").click(function(e) {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+            
+            
         });
 
+        waitForElm("#notSelected form").then((elm) => {
+            // let dataLama = JSON.parse($("#datalama").text());
+            // $(".clr-field").css("color", dataLama["color"]);
+            // let color = $("#color").val(dataLama["color"]);
 
+            // $(".btnActives").click(function(e) {
+            //     dataLama = JSON.parse($("#datalama").text());
+            //     color = $("#color").val(dataLama["color"])
+            // })
+
+        })
+
+    
+
+        // document.addEventListener('coloris:pick', e => {
+        //     setTimeout(() => {
+        //         document.querySelector('.clr-field').style.color = e.detail.color;
+                
+        //     }, 1000);
+    
+        // });
+    
+    
     </script>
+    
+    
+    
     <script src="{{asset('assets/plugins/select2/js/select2.min.js')}}"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="{{ asset('assets/plugins/coloris/coloris.js') }}"></script>

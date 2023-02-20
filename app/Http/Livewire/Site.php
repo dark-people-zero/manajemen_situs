@@ -10,6 +10,7 @@ use App\Models\fiturSitus;
 use App\Models\formFitur;
 use App\Models\fitur;
 use App\Models\typeElement;
+use App\Models\log;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -22,9 +23,9 @@ class Site extends Component
     use WithFileUploads;
 
     public $ip, $location;
-    public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $filed = [], $dataFitur = [];
+    public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $namaFitur, $filed = [], $dataFitur = [], $formFitur;
 
-    public $name, $image, $textarea, $selectOption, $checkbox, $switch, $color ;
+    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama  ;
 
     public function updateLocation()
     {
@@ -65,6 +66,11 @@ class Site extends Component
         }
 
         $this->dataSitus = $situs;
+
+      
+
+        
+       
     }
 
     public function render()
@@ -76,6 +82,11 @@ class Site extends Component
 
     public function updated($propertyName)
     {
+
+
+        if($propertyName == 'test' ) {
+            dd($propertyName);
+        }
         $this->updateLocation();
         // $this->validateOnly($propertyName, $this->filedValidate());
     }
@@ -89,74 +100,199 @@ class Site extends Component
         }else{
             $this->dataFitur = [];
         }
-        // dd($this->dataFitur);
+    }
+    public function resetForm()
+    {
+        $this->resetValidation();
+        $this->reset([
+            'name',
+            'image',
+            'images',
+            'textarea',
+            'selectOption',
+            "checkbox",
+            "switch",
+            "color",
+        ]);
+
+        $this->dispatchBrowserEvent("sumo:type", [
+            "type" => "reset",
+            "name" => "reset"
+        ]);
     }
 
     public function getFileds($id)
     {
+
+        // dd($this->color);
         
         $this->filed =  formFitur::with(["formElemen.typeElemen" ,"formElemen.optionElemen", "typeFitur"])->where("id_fitur", $id)->get();
         $this->idFitur = $id;
+        $this->active = $id;
+        $this->name = null; $this->image= null; $this->images = null; $this->textarea = null; $this->selectOption = null; $this->checkbox = null; $this->switch = null; $this->color = null;
 
-        // $test = typeElement::where("id", $this->filed)->get()->toArray()
-        // dd($this->test);
-        // dd($this->filed[0]["type_elemen"]["id_type_element"]);
-// function($e) {
-        // $this->filed = [
-        //     [
-        //         "id" => $idFitur,
-        //         "isMultiple" => false,
-        //         "isImage" => false,
-        //         "isMultipleImage" => false,
-        //         "filed" => ["name", "deskripsi", "image", "status", "link", "btnImage", "btnText", "background", "color", "style"]
-        //     ]
-        // ];
-        // dd($idFitur);
+        $this->formFitur = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite)->get()->toJson();
+        $dataLamaFormFitur = json_decode($this->formFitur);
+        $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
 
-        // $this->app->bind(User::class, function () {
-        //     $user_id = request('user') ?: request()->route('user');
-        //     return User::findOrFail($user_id);
-        // });
 
-    }
-    
-    public function saveData() {
-        // $dataLog = [
-        //     'class' => "Livewire->formElement->saveData",
-        //     'name_activity' => $this->methodUpdate ? "update" : "create",
-        //     'data_ip' => $this->ip,
-        //     'data_location' => $this->location,
-        //     'data_user' => auth()->user()->toJson(),
-        //     'data_before' => null,
-        //     'data_after' => null,
-        //     'keterangan' => "Berhasil menambahkan data form element",
-        // ];
 
-        // dd([$this->name, $this->image, $this->textarea, $this->selectOption, $this->checkbox, $this->switch, $this->color]);
-        $formFitur = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite);
-        $images = [];
-        if(gettype($this->image) == "array"){
-            foreach($this->image as $img) {
-                $images = [];
-            } 
+        // data lama input
+        if(!empty($dataLamaFormFiturJson->name)) {
+            if(count(get_object_vars($dataLamaFormFiturJson->name)) > 0) {
+                foreach($dataLamaFormFiturJson->name as $key => $data) {
+                    $this->name[$key] = $data;
+                }
+            }
+        }
+
+        if(!empty($dataLamaFormFiturJson->color)) {
+            if(count(get_object_vars($dataLamaFormFiturJson->color)) > 0) {
+                foreach($dataLamaFormFiturJson->color as $key => $data) {
+                    $this->color[$key] = $data;
+                }
+            }
+        }
+
+
+        // data lama image
+        if(!empty($dataLamaFormFiturJson->image)) {
+            $this->image = $dataLamaFormFiturJson->image->url;
         }
         
-        // if($this->name) {
-        //     $name = $this->name
+        if($dataLamaFormFiturJson->images) {
+
+        }
+        // data lama images
+        if(!empty($dataLamaFormFiturJson->images)) {
+            // dd(gettype($dataLamaFormFiturJson->images));
+            $datala = $dataLamaFormFiturJson->images;
+            // dd($dataLamaFormFiturJson->images);
+            // if($this->images) {
+            //     $this->images = array_push($datala, $this->images);
+
+            // }
+
+        
+            $output = array_map(function ($datala) { return $datala->url; }, $datala);
+            
+            $this->images = implode(', ', $output);
+        }
+
+        // data lama color
+        // if(!empty($dataLamaFormFiturJson->color)) {
+        //     $this->color =  $dataLamaFormFiturJson->color;
         // }
-        $data = collect([
-                "name" => $this->name,
-                "image" => $this->image,
-                "textarea" => $this->textarea,
-                "selectOption" => $this->selectOption,
-                "checkbox" => $this->checkbox,
-                "switch" => $this->switch,
-                "color" => $this->color,
-        ]);
-        // json_decode($data);
-        // dd($this->image);
-        // dd(gettype($formFitur));
-        $formFitur->update(["data" =>  $data]);
+
+        
+
+        // data lama textarea
+        if(!empty($dataLamaFormFiturJson->textarea)) {
+            $this->textarea = $dataLamaFormFiturJson->textarea;
+        }
+
+        // data lama selectOption
+        if(!empty($dataLamaFormFiturJson->selectOption)) {
+            $this->selectOption = $dataLamaFormFiturJson->selectOption;
+        }
+
+        // data lama checkbox
+        if(!empty($dataLamaFormFiturJson->checkbox)) {
+            $this->checkbox = $dataLamaFormFiturJson->checkbox;
+        }
+
+        // data lama switch
+        if(!empty($dataLamaFormFiturJson->switch)) {
+            $this->switch = $dataLamaFormFiturJson->switch;
+        }
+
+
+
+
+    }
+
+    
+    public function saveData() {
+        // $this->validate([
+        //     "name" => 'required',
+        //     "image" =>'required',
+        //     "images" => 'required',
+        //     "textarea" => 'required',
+        //     "selectOption" => 'required',
+        //     "checkbox" => 'required',
+        //     "switch" => 'required',
+        //     "color" => 'required',
+        // ]);
+        // $this->validate($dataValidate);.
+
+
+
+        $dataLog = [
+            'class' => "Livewire->formElement->saveData",
+            'name_activity' => true ? "update" : "create",
+            'data_ip' => $this->ip,
+            'data_location' => $this->location,
+            'data_user' => auth()->user()->toJson(),
+            'data_before' => null,
+            'data_after' => null,
+            'keterangan' => "Berhasil menambahkan data form element",
+        ];
+
+        $formFiturs = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite);
+        $situsName = $this->dataSitus->where("id", $this->idSitus)->first();
+        // $this->test = $this->formFitur->get("data");
+        // dd();
+        DB::beginTransaction();
+        try {
+            $msg = "Data added successfully";
+            $type = "success";
+
+            $dir = "situs/". strtolower(trim($situsName->name)) . "/" . $this->typeSite . "/" . $this->filed[0]->typeFitur->name;
+            $imgs = array();
+            if($this->images) {
+                foreach ($this->images as $img) {
+                    $imgs[] = $this->uploadFiles($dir, $img);
+                }
+            }
+    
+            // dd($imgs);
+    
+            $data = collect([
+                    "name" => $this->name,
+                    "image" =>$this->uploadFiles($dir, $this->image),
+                    "images" => $imgs,
+                    "textarea" => $this->textarea,
+                    "selectOption" => $this->selectOption, 
+                    "checkbox" => $this->checkbox,
+                    "switch" => $this->switch,
+                    "color" => $this->color,
+            ]);
+    
+            $formFiturs->update(["data" =>  $data]);
+
+            log::create($dataLog);
+    
+            DB::commit();
+            // $this->resetForm();
+
+            $this->dispatchBrowserEvent("modalClose");
+
+            $this->dispatchBrowserEvent("toast:$type", [
+                "message" => $msg
+            ]);
+            
+        }catch (\Throwable $th) {
+            DB::rollback();
+            dd($th);
+            $this->dispatchBrowserEvent("toast:error", [
+                "message" => $th->getMessage()
+            ]);
+            $dataLog['keterangan'] = "Gagal menambah atau mengubah data form element karena => ".$th->getMessage();
+            log::create($dataLog);
+        }
+
+      
+       
         
 
 
@@ -175,7 +311,42 @@ class Site extends Component
     
     public function removeImage($id) {
         // dd($this->image);
-        unset($this->image[$id]);
+        unset($this->images[$id]);
+    }
+    
+
+    public function uploadFiles($path, $file)
+    {
+        try {
+            if ($file && gettype($file) != "string") {
+                // $ext = $file->getClientOriginalExtension();
+                $name = $this->uuid();
+                $ext = $file->getClientOriginalExtension();
+                $name = "$name.$ext";
+                $filePath = Storage::disk('spaces')->putFileAs($path, $file, $name, 'public');
+                return [
+                    "status" => true,
+                    "url" => env('DO_SPACES_PUBLIC') . $filePath
+                ];
+            } else {
+                return [
+                    "status" => true,
+                    "url" => ""
+                ];
+            }
+        } catch (Exception $exception) {
+            // return response()->json(['message' => $exception->getMessage()], 409);
+
+            return [
+                "status" => false,
+                "message" => $exception->getMessage()
+            ];
+        }
+    }
+
+    public function uuid()
+    {
+        return (string) Str::uuid();
     }
 }
 
