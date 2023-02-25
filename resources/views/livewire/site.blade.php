@@ -117,6 +117,8 @@
 
 
                         @foreach ($filed as $i => $fill)
+                        {{-- {{ dd($fill->typeFitur->name) }} --}}
+                        {{-- {{ dd($fill->toJson()) }} --}}
                                 @switch($fill->formElemen->typeElemen->name)
                                     @case("input")
                                         <div class="mb-3">
@@ -140,39 +142,22 @@
                                             @if($fill->formElemen->is_multiple) 
                                                 <input class="form-control" type="file" accept="image/*" multiple wire:model="images" >
                                                 @if($images)
-                                                    @if(gettype($images) == "string")
                                                     <div class="multiple-preview  d-flex">
-                                                        @foreach(explode(",", $images) as $i => $img)
-                                                            {{-- <div>{{ $img }}</div><br> --}}
+                                                            @foreach( $images as $i => $img)
                                                             <div class="previewImg">
-                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $img }}" />
+                                                                @if (gettype($img) == "string")
+                                                                    <img class="me-2 mt-1" style="height: 200px;" src="{{ $img }}">
+                                                                @else
+                                                                    <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}">
+                                                                @endif
+                                                                <div class="removePreviewImage" wire:click="removeImage({{$i}})">
+                                                                    <i class="fe fe-x"></i>
+                                                                </div>
+                                                                {{-- <img class="me-2 mt-1" style="height: 200px;" src="{{ $img }}" /> --}}
                                                             </div>
-                                                        @endforeach
-                                                    </div>
-                                                        {{-- <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" /> --}}
-                                                    @endif
-
-                                                    @if(gettype($images) == "array")
-                                                    {{-- {{ dd($images) }} --}}
-                                                        <div class="multiple-preview  d-flex">
-                                                            @foreach($images as $i => $img)
-                                                                <div class="previewImg">
-                                                                    @if(empty($img->url))
-                                                                        <img class="me-2 mt-1" style="height: 200px;" src="{{ $img->temporaryUrl() }}" />
-                                                                        {{-- @if(count($img) > 0 || $img->temporaryUrl() ) --}}
-                                                                            <div class="removePreviewImage" wire:click="removeImage({{$i}})">
-                                                                                <i class="fe fe-x"></i>
-                                                                            </div>
-                                                                        {{-- @endif --}}
-                                                                    @endif
-                                                                </div>                                                                
                                                             @endforeach
-                                                        </div>
-                                                    {{-- @else  --}}
-                                                        {{-- <img class="mt-1"  src="{{ $images->temporaryUrl() }}" /> --}}
-                                                    @endif
+                                                    </div>
                                                 @endif
-
                                             @else 
                                                 <input class="form-control" type="file" accept="image/*" wire:model="image">
                                                 @if($image)
@@ -248,7 +233,74 @@
                                     @default
                                         
                                 @endswitch
+                                
+                                
                         @endforeach
+
+                        @if(!empty($fill->typeFitur->name == "Icon Sosmed"))
+                        <div class="container d-flex flex-col flex-wrap">
+                            
+                            
+                            {{-- <div>{{ dd($data_iconsosmed_desktop) }}</div> --}}
+                            @foreach($data_iconsosmed as $key => $data)
+                                <div class="card mx-2 p-3" style="width: 18rem;">
+                                    <div class="form-sosmed-container-item">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="checkbox">
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-0" wire:model="data_iconsosmed_desktop.0.status" checked="{{ $data["status"] }}" />
+                                                    <label for="checkbox-0" class="custom-control-label">Status icon</label>
+                                                </div>
+                                            </div>
+                                            <i class="far fa-times-circle fs-5 text-danger cursor-pointer" wire:click="removeFormIconSosmed({{ $key }})"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Name Icon</label>
+                                            <input type="text" class="form-control" placeholder="Name icon" wire:model="name.{{ $key }}.nameIcon" value="{{ $data["name"] }} " />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Link icon</label>
+                                            <input type="text" class="form-control" placeholder="Link icon" wire:model="name.{{ $key }}.linkIcon" value="{{ $data["link"] }}" />
+                                        </div>
+                                        <div>
+                                            <div
+                                                x-data="{ isUploading: false, progress: 0 }"
+                                                x-on:livewire-upload-start="isUploading = true"
+                                                x-on:livewire-upload-finish="isUploading = false"
+                                                x-on:livewire-upload-error="isUploading = false"
+                                                x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                            >
+                                                <div class="form-group m-0">
+                                                    <label class="form-label mt-0 text-start">Image icon</label>
+                                                    <input class="form-control" type="file" accept="image/*" wire:model="image" />
+                                                </div>
+                                                <div class="progress mg-b-10" x-show="isUploading" style="display: none;">
+                                                    <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`" style="width: 0%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 previewImg">
+                                                <img src="https://static.hokibagus.club/situs/dingdong togel/desktop/icon sosmed/facebook.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="btn btn-primary" wire:click="addFormIconSosmed" >
+                                    <i class="fa fa-plus-circle fs-5 text-white "></i>
+
+                                </a>
+                            </div>
+                        </div>
+                            
+
+                        @endif
+
+                        @if(!empty($fill->typeFitur->name == "Button Action"))
+                            <div>kontol</div>
+                        @endif
+
+                        
                         <div class="py-4 border-top">
                             <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
                         </div>

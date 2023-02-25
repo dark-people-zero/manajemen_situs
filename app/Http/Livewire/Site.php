@@ -25,7 +25,7 @@ class Site extends Component
     public $ip, $location;
     public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $namaFitur, $filed = [], $dataFitur = [], $formFitur;
 
-    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama  ;
+    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama, $imagesLama, $data_iconsosmed = []  ;
 
     public function updateLocation()
     {
@@ -83,9 +83,19 @@ class Site extends Component
     public function updated($propertyName)
     {
 
+    $this->data_iconsosmed = [[
+        "status" => false,
+        "name" => "",
+        "link" => "",
+        "image" => null
+    ]];
+    
+        if($propertyName == 'images' ) {
+            if(!empty($this->imagesLama)) {
+                $this->images = array_merge($this->imagesLama, $this->images);
 
-        if($propertyName == 'test' ) {
-            dd($propertyName);
+            }
+            // dd($this->images);
         }
         $this->updateLocation();
         // $this->validateOnly($propertyName, $this->filedValidate());
@@ -160,9 +170,7 @@ class Site extends Component
             $this->image = $dataLamaFormFiturJson->image->url;
         }
         
-        if($dataLamaFormFiturJson->images) {
 
-        }
         // data lama images
         if(!empty($dataLamaFormFiturJson->images)) {
             // dd(gettype($dataLamaFormFiturJson->images));
@@ -174,17 +182,15 @@ class Site extends Component
             // }
 
         
-            $output = array_map(function ($datala) { return $datala->url; }, $datala);
+            $this->imagesLama = array_map(function ($datala) { return $datala; }, $datala);
+            $this->images = $this->imagesLama;
+            // if(empty($this->images)) {
+            //     $this->images = implode(', ', $this->imagesLama);
+                
+            // }
             
-            $this->images = implode(', ', $output);
         }
 
-        // data lama color
-        // if(!empty($dataLamaFormFiturJson->color)) {
-        //     $this->color =  $dataLamaFormFiturJson->color;
-        // }
-
-        
 
         // data lama textarea
         if(!empty($dataLamaFormFiturJson->textarea)) {
@@ -248,10 +254,19 @@ class Site extends Component
             $type = "success";
 
             $dir = "situs/". strtolower(trim($situsName->name)) . "/" . $this->typeSite . "/" . $this->filed[0]->typeFitur->name;
-            $imgs = array();
+            $imgs = [];
             if($this->images) {
                 foreach ($this->images as $img) {
-                    $imgs[] = $this->uploadFiles($dir, $img);
+                    // $imgs[] = $this->uploadFiles($dir, $img);
+                    if (gettype($img) != "string") {
+                        $store = $this->uploadFiles($dir, $img);
+                        // dd($store);
+                        if ($store['status']) array_push($imgs, $store['url']);
+                        // if ($store['status']) array_push($img, $store['url']);
+                    } else {
+                        array_push($imgs, $img);
+                        // $this->uploadFiles($dir, $img);
+                    }
                 }
             }
     
@@ -312,6 +327,23 @@ class Site extends Component
     public function removeImage($id) {
         // dd($this->image);
         unset($this->images[$id]);
+
+    }
+    public function addFormIconSosmed() {
+
+        array_push($this->data_iconsosmed, [
+            "status" => false,
+            "name" => "",
+            "link" => "",
+            "image" => null
+        ]);
+        $this->resetErrorBag();
+
+        // dd($this->data_iconsosmed_desktop);
+    }
+    public function removeFormIconSosmed($id) {
+        unset($this->data_iconsosmed[$id]);
+
     }
     
 
