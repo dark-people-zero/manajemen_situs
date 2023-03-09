@@ -221,10 +221,11 @@
                                     <div class="mb-3">
                                         <div class="">
 
-                                        <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
-                                        <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] }};" >
-                                            <button type="button" aria-labelledby="clr-open-label"></button>
-                                            <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris></div>
+                                            <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
+                                            <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] }};" >
+                                                <button type="button" aria-labelledby="clr-open-label"></button>
+                                                <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris>
+                                            </div>
                                         </div>
                                     </div>
                                     @break
@@ -238,77 +239,155 @@
                         @endforeach
 
                         @if(!empty($fill->typeFitur->name == "Icon Sosmed"))
+                        
                         <div class="container d-flex flex-col flex-wrap">
-                            
-                            
-                            {{-- <div>{{ dd($data_iconsosmed_desktop) }}</div> --}}
-                            @foreach($data_iconsosmed as $key => $data)
-                                <div class="card mx-2 p-3" style="width: 18rem;">
-                                    <div class="form-sosmed-container-item">
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <div class="checkbox">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-0" wire:model="data_iconsosmed_desktop.0.status" checked="{{ $data["status"] }}" />
-                                                    <label for="checkbox-0" class="custom-control-label">Status icon</label>
+                            {{-- {{ dd($data_iconsosmed) }} --}}
+                            @if(count($data_iconsosmed) > 0)
+                                @foreach($data_iconsosmed as $key => $data)
+                                {{-- {{ dd($data) }} --}}
+                                    <div class="card mx-2 p-3" style="width: 18rem;">
+                                        <div class="form-sosmed-container-item">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <div class="checkbox">
+                                                    <div class="custom-checkbox custom-control">
+                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-{{ $key }}" {{ $data["status"] ? 'checked': ''}} data-key="{{ $key }}" onChange="checkboxOnChange(this)" />
+                                                        
+                                                        <label for="checkbox-{{ $key }}" class="custom-control-label">Status icon</label>
+                                                    </div>
                                                 </div>
+                                                <i class="far fa-times-circle fs-5 text-danger cursor-pointer" wire:click="removeFormIconSosmed({{ $key }})"></i>
                                             </div>
-                                            <i class="far fa-times-circle fs-5 text-danger cursor-pointer" wire:click="removeFormIconSosmed({{ $key }})"></i>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Name Icon</label>
-                                            <input type="text" class="form-control" placeholder="Name icon" wire:model="name.{{ $key }}.nameIcon" value="{{ $data["name"] }} " />
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Link icon</label>
-                                            <input type="text" class="form-control" placeholder="Link icon" wire:model="name.{{ $key }}.linkIcon" value="{{ $data["link"] }}" />
-                                        </div>
-                                        <div>
-                                            <div
-                                                x-data="{ isUploading: false, progress: 0 }"
-                                                x-on:livewire-upload-start="isUploading = true"
-                                                x-on:livewire-upload-finish="isUploading = false"
-                                                x-on:livewire-upload-error="isUploading = false"
-                                                x-on:livewire-upload-progress="progress = $event.detail.progress"
-                                            >
-                                                <div class="form-group m-0">
-                                                    <label class="form-label mt-0 text-start">Image icon</label>
-                                                    <input class="form-control" type="file" accept="image/*" wire:model="image" />
-                                                </div>
-                                                <div class="progress mg-b-10" x-show="isUploading" style="display: none;">
-                                                    <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`" style="width: 0%;"></div>
-                                                </div>
+                                            <div class="form-group">
+                                                <label>Name Icon</label>
+                                                <input type="text" class="form-control" placeholder="Name icon" wire:model="data_iconsosmed.{{ $key }}.icon" value="data_iconsosmed.{{ $key }}.icon" />      
                                             </div>
-                                            <div class="mt-3 previewImg">
-                                                <img src="https://static.hokibagus.club/situs/dingdong togel/desktop/icon sosmed/facebook.png" />
+                                            <div class="form-group">
+                                                <label>Link icon</label>
+                                                <input type="text" class="form-control" placeholder="Link icon" wire:model="data_iconsosmed.{{ $key }}.link" value="data_iconsosmed.{{ $key }}.link" />
+                                            </div>
+                                            <div>
+                                                <div
+                                                    x-data="{ isUploading: false, progress: 0 }"
+                                                    x-on:livewire-upload-start="isUploading = true"
+                                                    x-on:livewire-upload-finish="isUploading = false"
+                                                    x-on:livewire-upload-error="isUploading = false"
+                                                    x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                                >
+                                                    <div class="form-group m-0">
+                                                        <label class="form-label mt-0 text-start">Image icon</label>
+                                                        <input class="form-control" type="file" accept="image/*" wire:model="data_iconsosmed.{{ $key }}.image" />
+                                                    </div>
+                                                    <div class="progress mg-b-10" x-show="isUploading" style="display: none;">
+                                                        <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`" style="width: 0%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3 previewImg">
+                                                    @if($data["image"])
+                                                        @if (gettype($data["image"] ) == "string")
+                                                            <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"] }}">
+                                                        @else
+                                                            <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"]->temporaryUrl() }}">
+                                                        @endif
+
+                                                    @endif
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            @endif
                             <div class="d-flex align-items-center">
                                 <a href="#" class="btn btn-primary" wire:click="addFormIconSosmed" >
                                     <i class="fa fa-plus-circle fs-5 text-white "></i>
-
                                 </a>
                             </div>
                         </div>
                             
-
                         @endif
 
                         @if(!empty($fill->typeFitur->name == "Button Action"))
-                            <div>kontol</div>
+                            <div class="container d-flex flex-col flex-wrap">
+                                @if(count($data_buttonaction) > 0)
+                                    @foreach($data_buttonaction as $key => $data)
+                                        <div class="card mx-2 p-3" style="width: 18rem;">
+                                            <div class="form-sosmed-container-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div class="checkbox">
+                                                        <div class="custom-checkbox custom-control">
+                                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-btnActionStatus-{{ $key }}" wire:model="data_buttonaction.{{ $key }}.status">
+                                                            <label for="checkbox-btnActionStatus-{{ $key }}" class="custom-control-label">Status Button</label>
+                                                        </div>
+                                                    </div>
+                                                    <i class="far fa-times-circle fs-5 text-danger cursor-pointer" wire:click="removeButtonAction({{ $key }})"></i>
+                                                </div>
+                
+                                                <div class="checkbox mb-3">
+                                                    <div class="custom-checkbox custom-control">
+                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-btnActionBlank-{{ $key }}" wire:model="data_buttonaction.{{ $key }}.target">
+                                                        <label for="checkbox-btnActionBlank-{{ $key }}" class="custom-control-label">Target Is Blank</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Name Button" wire:model="data_buttonaction.{{ $key }}.name" value="">
+                                                                                    </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Link Button" wire:model="data_buttonaction.{{ $key }}.link" value="" style="font-size: 10px">
+                                                                                    </div>
+                                                <div class="form-group">
+                                                    <div class="clr-field" style="color: {{ $data["color"] }};">
+                                                        <button type="button" aria-labelledby="clr-open-label"></button>
+                                                        <input type="text" class="form-control coloris shadowColor" placeholder="Shadow Color Button" wire:model.lazy="data_buttonaction.{{ $key }}.color" value="#1b693c" readonly="" data-coloris>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <select class="form-control" wire:model="data_buttonaction.{{ $key }}.class">
+                                                        <option value="btn-default" selected="">btn-default</option>
+                                                        <option value="btn-primary">btn-primary</option>
+                                                        <option value="btn-secondary">btn-secondary</option>
+                                                        <option value="btn-success">btn-success</option>
+                                                        <option value="btn-info">btn-info</option>
+                                                        <option value="btn-warning">btn-warning</option>
+                                                        <option value="btn-light">btn-light</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    {{-- <textarea class="form-control resize" placeholder="Style Button" wire:model="data_buttonaction_desktop.0.style" style="font-size: 10px; height: 0px;" rows="5"></textarea> --}}
+                                                    <textarea class="form-control resize" placeholder="Style Button" wire:model="data_buttonaction.{{ $key }}.style" style="font-size: 10px; height: 0px;" rows="5"></textarea>
+
+                                                </div>
+                                                <div href="https://" target="" class="btn w-100 btn-sm {{ $data["class"] ? $data["class"] : ""}} btn-sample" style="box-shadow: inset 0 -4px 0 {{ $data["color"] ? $data["color"]. ';' : ""  }} {{$data['style']}}" onclick="sampleButton(this)">Sample</div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-primary" wire:click="addFormButtonAction" >
+                                        <i class="fa fa-plus-circle fs-5 text-white "></i>
+                                    </a>
+                                </div>
+                                
+                                
+                            </div>
                         @endif
 
                         
                         <div class="py-4 border-top">
                             <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
+                            {{-- @foreach($test as $t)
+                                <span>{{ $t }}</span>
+                            @endforeach --}}
+                            {{-- @php
+                                var_dump();
+                            @endphp --}}
                         </div>
+                        
     
                             
                     </form>
                 
                 @endif
+                
                 
 
             </div>
@@ -348,29 +427,13 @@
             
         });
 
-        waitForElm("#notSelected form").then((elm) => {
-            // let dataLama = JSON.parse($("#datalama").text());
-            // $(".clr-field").css("color", dataLama["color"]);
-            // let color = $("#color").val(dataLama["color"]);
-
-            // $(".btnActives").click(function(e) {
-            //     dataLama = JSON.parse($("#datalama").text());
-            //     color = $("#color").val(dataLama["color"])
-            // })
-
-        })
+        
 
     
 
-        // document.addEventListener('coloris:pick', e => {
-        //     setTimeout(() => {
-        //         document.querySelector('.clr-field').style.color = e.detail.color;
-                
-        //     }, 1000);
-    
-        // });
-    
-    
+     
+
+       
     </script>
     
     

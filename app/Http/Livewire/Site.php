@@ -25,7 +25,7 @@ class Site extends Component
     public $ip, $location;
     public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $namaFitur, $filed = [], $dataFitur = [], $formFitur;
 
-    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama, $imagesLama, $data_iconsosmed = []  ;
+    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama, $imagesLama, $data_iconsosmed = [], $data_buttonaction = [],  $data_iconsosmed_data;
 
     public function updateLocation()
     {
@@ -66,10 +66,6 @@ class Site extends Component
         }
 
         $this->dataSitus = $situs;
-
-      
-
-        
        
     }
 
@@ -82,23 +78,14 @@ class Site extends Component
 
     public function updated($propertyName)
     {
-
-    $this->data_iconsosmed = [[
-        "status" => false,
-        "name" => "",
-        "link" => "",
-        "image" => null
-    ]];
-    
+          
         if($propertyName == 'images' ) {
             if(!empty($this->imagesLama)) {
                 $this->images = array_merge($this->imagesLama, $this->images);
 
             }
-            // dd($this->images);
         }
         $this->updateLocation();
-        // $this->validateOnly($propertyName, $this->filedValidate());
     }
 
     public function getFitur($type)
@@ -134,8 +121,6 @@ class Site extends Component
     public function getFileds($id)
     {
 
-        // dd($this->color);
-        
         $this->filed =  formFitur::with(["formElemen.typeElemen" ,"formElemen.optionElemen", "typeFitur"])->where("id_fitur", $id)->get();
         $this->idFitur = $id;
         $this->active = $id;
@@ -144,10 +129,23 @@ class Site extends Component
         $this->formFitur = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite)->get()->toJson();
         $dataLamaFormFitur = json_decode($this->formFitur);
         $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
+  
+        if($dataLamaFormFitur[0]->id == 5){
+            if(!empty($dataLamaFormFiturJson->data_iconsosmed)) {
+                foreach($dataLamaFormFiturJson->data_iconsosmed as $key => $data) {
+                    $this->data_iconsosmed[$key] = collect($data)->toArray();
+                }
+            }
+        }
 
+        if($dataLamaFormFitur[0]->id == 4){
+            if(!empty($dataLamaFormFiturJson->data_buttonaction)) {
+                foreach($dataLamaFormFiturJson->data_buttonaction as $key => $data) {
+                    $this->data_buttonaction[$key] = collect($data)->toArray();
+                }
+            }
+        }
 
-
-        // data lama input
         if(!empty($dataLamaFormFiturJson->name)) {
             if(count(get_object_vars($dataLamaFormFiturJson->name)) > 0) {
                 foreach($dataLamaFormFiturJson->name as $key => $data) {
@@ -156,6 +154,7 @@ class Site extends Component
             }
         }
 
+        // data lama input
         if(!empty($dataLamaFormFiturJson->color)) {
             if(count(get_object_vars($dataLamaFormFiturJson->color)) > 0) {
                 foreach($dataLamaFormFiturJson->color as $key => $data) {
@@ -164,33 +163,18 @@ class Site extends Component
             }
         }
 
-
         // data lama image
         if(!empty($dataLamaFormFiturJson->image)) {
             $this->image = $dataLamaFormFiturJson->image->url;
         }
-        
 
         // data lama images
         if(!empty($dataLamaFormFiturJson->images)) {
-            // dd(gettype($dataLamaFormFiturJson->images));
-            $datala = $dataLamaFormFiturJson->images;
-            // dd($dataLamaFormFiturJson->images);
-            // if($this->images) {
-            //     $this->images = array_push($datala, $this->images);
 
-            // }
-
-        
-            $this->imagesLama = array_map(function ($datala) { return $datala; }, $datala);
+            $dataImages = $dataLamaFormFiturJson->images;
+            $this->imagesLama = array_map(function ($datala) { return $datala; }, $dataImages);
             $this->images = $this->imagesLama;
-            // if(empty($this->images)) {
-            //     $this->images = implode(', ', $this->imagesLama);
-                
-            // }
-            
         }
-
 
         // data lama textarea
         if(!empty($dataLamaFormFiturJson->textarea)) {
@@ -212,27 +196,12 @@ class Site extends Component
             $this->switch = $dataLamaFormFiturJson->switch;
         }
 
-
-
-
+    }
+    public function checkboxOnChange($key, $status) {
+        $this->data_iconsosmed[$key]["status"] = $status;
     }
 
-    
     public function saveData() {
-        // $this->validate([
-        //     "name" => 'required',
-        //     "image" =>'required',
-        //     "images" => 'required',
-        //     "textarea" => 'required',
-        //     "selectOption" => 'required',
-        //     "checkbox" => 'required',
-        //     "switch" => 'required',
-        //     "color" => 'required',
-        // ]);
-        // $this->validate($dataValidate);.
-
-
-
         $dataLog = [
             'class' => "Livewire->formElement->saveData",
             'name_activity' => true ? "update" : "create",
@@ -246,10 +215,9 @@ class Site extends Component
 
         $formFiturs = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite);
         $situsName = $this->dataSitus->where("id", $this->idSitus)->first();
-        // $this->test = $this->formFitur->get("data");
-        // dd();
         DB::beginTransaction();
         try {
+
             $msg = "Data added successfully";
             $type = "success";
 
@@ -257,20 +225,30 @@ class Site extends Component
             $imgs = [];
             if($this->images) {
                 foreach ($this->images as $img) {
-                    // $imgs[] = $this->uploadFiles($dir, $img);
                     if (gettype($img) != "string") {
                         $store = $this->uploadFiles($dir, $img);
-                        // dd($store);
                         if ($store['status']) array_push($imgs, $store['url']);
-                        // if ($store['status']) array_push($img, $store['url']);
                     } else {
                         array_push($imgs, $img);
-                        // $this->uploadFiles($dir, $img);
                     }
                 }
             }
-    
-            // dd($imgs);
+
+            if($this->data_iconsosmed > 0) {
+                $data_iconsosmed_data = collect($this->data_iconsosmed)->map(function ($e)  use ($dir) {
+                    $img = $e['image'];
+                    if (gettype($img) != "string") {
+                        $store = $this->uploadFiles($dir, $img);
+                        if ($store['status']) $e['image'] = $store['url'];
+                    }
+                    return $e;
+                })->values();
+            }else {
+                $data_iconsosmed_data = $this->data_iconsosmed;
+            }
+
+           
+
     
             $data = collect([
                     "name" => $this->name,
@@ -281,6 +259,8 @@ class Site extends Component
                     "checkbox" => $this->checkbox,
                     "switch" => $this->switch,
                     "color" => $this->color,
+                    "data_iconsosmed" => $data_iconsosmed_data,
+                    "data_buttonaction" => $this->data_buttonaction
             ]);
     
             $formFiturs->update(["data" =>  $data]);
@@ -288,8 +268,6 @@ class Site extends Component
             log::create($dataLog);
     
             DB::commit();
-            // $this->resetForm();
-
             $this->dispatchBrowserEvent("modalClose");
 
             $this->dispatchBrowserEvent("toast:$type", [
@@ -305,29 +283,10 @@ class Site extends Component
             $dataLog['keterangan'] = "Gagal menambah atau mengubah data form element karena => ".$th->getMessage();
             log::create($dataLog);
         }
-
-      
-       
-        
-
-
-        // $dataInsert = collect($this->type)->map(function($e) use($name) {
-        //     return [
-        //         "id_fitur" => $name,
-        //         "id_form_element" => $e,
-        //     ];
-        // })->toArray();
-
-        // $msg = "Data update successfully.";
-        // $type = "info";
-
-        // fiturSitus::insert($dataInsert);
     }
     
     public function removeImage($id) {
-        // dd($this->image);
         unset($this->images[$id]);
-
     }
     public function addFormIconSosmed() {
 
@@ -338,20 +297,32 @@ class Site extends Component
             "image" => null
         ]);
         $this->resetErrorBag();
-
-        // dd($this->data_iconsosmed_desktop);
     }
     public function removeFormIconSosmed($id) {
         unset($this->data_iconsosmed[$id]);
+    }
 
+    public function addFormButtonAction() {
+
+        array_push($this->data_buttonaction, [
+            "status" => false,
+            "target" => false,
+            "name" => "",
+            "link" => "",
+            "class" => "",
+            "color" => null,
+            "style" => ""
+        ]);
+        $this->resetErrorBag();
+    }
+    public function removeButtonAction($id) {
+        unset($this->data_buttonaction[$id]);
     }
     
-
     public function uploadFiles($path, $file)
     {
         try {
             if ($file && gettype($file) != "string") {
-                // $ext = $file->getClientOriginalExtension();
                 $name = $this->uuid();
                 $ext = $file->getClientOriginalExtension();
                 $name = "$name.$ext";
@@ -367,8 +338,6 @@ class Site extends Component
                 ];
             }
         } catch (Exception $exception) {
-            // return response()->json(['message' => $exception->getMessage()], 409);
-
             return [
                 "status" => false,
                 "message" => $exception->getMessage()

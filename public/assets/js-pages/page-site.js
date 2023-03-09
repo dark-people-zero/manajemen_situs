@@ -32,3 +32,12 @@ selecSitus.select2({
 });
 
 
+function checkboxOnChange(self) {
+    var key = $(self).data('key');
+    console.log(key);
+    // target = $(self).data('target');
+    window.livewire.find(idLivewire).checkboxOnChange(key,$(self).prop("checked"));
+    // var x = window.livewire.find(idLivewire)["data_iconsosmed"][key]
+    // console.log(x);
+
+}
