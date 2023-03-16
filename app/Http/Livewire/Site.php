@@ -127,6 +127,7 @@ class Site extends Component
         $this->name = null; $this->image= null; $this->images = null; $this->textarea = null; $this->selectOption = null; $this->checkbox = null; $this->switch = null; $this->color = null;
 
         $this->formFitur = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite)->get()->toJson();
+
         $dataLamaFormFitur = json_decode($this->formFitur);
         $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
   
@@ -210,7 +211,7 @@ class Site extends Component
             'data_user' => auth()->user()->toJson(),
             'data_before' => null,
             'data_after' => null,
-            'keterangan' => "Berhasil menambahkan data form element",
+            'keterangan' => "Berhasil menambahkan update Site Management",
         ];
 
         $formFiturs = fiturSitus::where("id_situs", $this->idSitus)->where("id_fitur", $this->idFitur)->where("type", $this->typeSite);
@@ -222,6 +223,7 @@ class Site extends Component
             $type = "success";
 
             $dir = "situs/". strtolower(trim($situsName->name)) . "/" . $this->typeSite . "/" . $this->filed[0]->typeFitur->name;
+            
             $imgs = [];
             if($this->images) {
                 foreach ($this->images as $img) {
@@ -247,9 +249,13 @@ class Site extends Component
                 $data_iconsosmed_data = $this->data_iconsosmed;
             }
 
-           
+            // if($this->image) {
+            //     $imageUpload = ;
+            // }else {
+            //     $imageUpload = $this->image;
+            // }   
+            
 
-    
             $data = collect([
                     "name" => $this->name,
                     "image" =>$this->uploadFiles($dir, $this->image),
@@ -257,11 +263,30 @@ class Site extends Component
                     "textarea" => $this->textarea,
                     "selectOption" => $this->selectOption, 
                     "checkbox" => $this->checkbox,
-                    "switch" => $this->switch,
+                    "status" => $this->switch,
                     "color" => $this->color,
                     "data_iconsosmed" => $data_iconsosmed_data,
                     "data_buttonaction" => $this->data_buttonaction
             ]);
+
+            $dataJson = fiturSitus::where("id_situs", $this->idSitus)->get();
+           
+        //    asala
+            $test = Storage::disk('public')->put(strtolower(trim($situsName->name)). ".json", json_encode($dataJson, JSON_PRETTY_PRINT));
+            // dd($test);
+            // $files = File::files(public_path());
+            // echo 
+            // dd(asset('storage/app/public/dingdongtogel.json'));
+
+            
+            // $pathnya = "situs/". strtolower(trim($situsName->name)) . "/json";
+            // $namafilenya = strtolower(trim($situsName->name)). ".json";
+            // $gatau =  json_encode($dataJson, JSON_PRETTY_PRINT);
+            // $gata2 = strtolower(trim($situsName->name)). ".json";
+            // $filePath = Storage::disk('spaces')->putFileAs( $pathnya, $test, $namafilenya , 'public');
+            // dd($filePath);
+
+            // end asala
     
             $formFiturs->update(["data" =>  $data]);
 

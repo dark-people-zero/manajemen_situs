@@ -114,12 +114,21 @@
                     $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
                     @endphp
                     <form>
-
-
                         @foreach ($filed as $i => $fill)
-                        {{-- {{ dd($fill->typeFitur->name) }} --}}
-                        {{-- {{ dd($fill->toJson()) }} --}}
+
                                 @switch($fill->formElemen->typeElemen->name)
+                                    @case("switch")
+                                    <div class="mb-3">
+                                    <h4 class="d-flex justify-content-between">
+                                        {{$fill->formElemen->name}}
+                                        <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" role="button" >
+                                            <input type="checkbox" class="custom-switch-input" value="{{ $switch }}"  {{ $switch ? 'checked': ''}} wire:model="switch">
+                                            <span class="custom-switch-indicator custom-switch-indicator"></span>
+                                        </label>
+                                    </h4>
+                                    </div>
+                                    @break
+
                                     @case("input")
                                         <div class="mb-3">
                                             <div>
@@ -205,24 +214,12 @@
                                     </div>
                                     @break
 
-                                    @case("switch")
-                                    <div class="mb-3">
-                                    <h4 class="d-flex justify-content-between">
-                                        {{$fill->formElemen->name}}
-                                        <label class="custom-switch form-switch mb-0  p-0 cursor-pointer" data-bs-toggle="collapse" role="button" >
-                                            <input type="checkbox" class="custom-switch-input"  checked="" wire:model="switch">
-                                            <span class="custom-switch-indicator custom-switch-indicator"></span>
-                                        </label>
-                                    </h4>
-                                    </div>
-                                    @break
-
                                     @case("color")
                                     <div class="mb-3">
                                         <div class="">
 
                                             <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
-                                            <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] }};" >
+                                            <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] ? $color[$fill->formElemen->name ] : '' }};" >
                                                 <button type="button" aria-labelledby="clr-open-label"></button>
                                                 <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris>
                                             </div>

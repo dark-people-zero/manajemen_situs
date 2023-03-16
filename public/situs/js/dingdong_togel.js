@@ -44,6 +44,7 @@
 const func = {
     desktop: {
         modal: (data) => {
+            console.log(data)
             var template = $(`
                 <div class="modal fade" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
@@ -54,8 +55,8 @@ const func = {
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="${data.file}" width="600" height="350" class="imgads">
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+                                <img src="${data.image.url}" width="600" height="350" class="imgads">
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.name.Deskripsi}</p>
                             </div>
                         </div>
                     </div>
@@ -97,14 +98,14 @@ const func = {
             var target = $("#slider");
             target.children().remove();
 
-            data = data.map(e => {
+            var dataimage = data.images.map(e => {
                 return `
                     <div class="item">
                         <img src="${e}" width="840px" height="482" />
                     </div>
                 `;
             }).join("");
-            var template = $(`<div class="owl-carousel owl-theme">${data}</div>`);
+            var template = $(`<div class="owl-carousel owl-theme">${dataimage}</div>`);
 
             template.owlCarousel({
                 singleItem: true,
@@ -184,10 +185,9 @@ const func = {
             $("#footer .footer-main .footer-link").prepend(template);
         },
         promosi: (data) => {
-            $(`
-                <div class="promosi">
-                    <a href="${data.link}" target="_blank" title="${data.name}">
-                        <img src="${data.image}" alt="${data.name}">
+            $(`<div class="promosi">
+                    <a href="${data.name.Link}" target="_blank" title="${data.name.Name}">
+                        <img src="${data.image.url}" alt="${data.name.Name}">
                     </a>
                 </div>
             `).insertBefore($("#latest-results"));
@@ -536,42 +536,44 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/1",
+            url: "https://static.hokibagus.club/situs/dingdongtogel/json/dingdongtogel.json",
             dataType: "json",
             success: function (response) {
                 func.desktop.defaultFooter();
                 if (response) {
-                    if (response.status_desktop && !isMobile) {
-                        if (response.fitur_situs.desktop) {
-                            var length = response.fitur_situs.desktop.length;
-                            response.fitur_situs.desktop.forEach((el, i) => {
+                    if (response.type = "desktop" && !isMobile) {
+                        if (response.type = "desktop") {
+                            var length = response.type = "desktop".length;
+                            response.forEach((el, i) => {
+                                var isActive = isActive;
+                                var data = el.data;
                                 if (el.id_fitur == 1) {
-                                    if (el.status) {
-                                        func.desktop.modal(el.data);
+                                    if (isActive) {
+                                        func.desktop.modal(data);
                                     }else{
                                         $("#myModal").modal("show");
                                     }
                                 }
 
-                                if (el.id_fitur == 2 && el.status) func.desktop.headerApk(el.data);
+                                if (el.id_fitur == 2 && isActive) func.desktop.headerApk(data);
 
-                                if (el.id_fitur == 3 && el.status) func.desktop.headerCorousel(el.data);
+                                if (el.id_fitur == 3 && isActive) func.desktop.headerCorousel(data);
 
-                                if (el.id_fitur == 4 && el.status) func.desktop.btnAction(el.data);
+                                if (el.id_fitur == 4 && isActive) func.desktop.btnAction(data);
 
-                                if (el.id_fitur == 5 && el.status) func.desktop.iconSosmed(el.data);
+                                if (el.id_fitur == 5 && isActive) func.desktop.iconSosmed(data);
 
-                                if (el.id_fitur == 6 && el.status) func.desktop.promosi(el.data);
+                                if (el.id_fitur == 6 && isActive) func.desktop.promosi(data);
 
-                                if (el.id_fitur == 7 && el.status) func.desktop.beforeFooter(el.data);
+                                if (el.id_fitur == 7 && isActive) func.desktop.beforeFooter(data);
 
-                                if (el.id_fitur == 8 && el.status) func.desktop.footerProtection(el.data);
+                                if (el.id_fitur == 8 && isActive) func.desktop.footerProtection(data);
 
-                                if (el.id_fitur == 9 && el.status) func.desktop.linkAlter(el.data);
+                                if (el.id_fitur == 9 && isActive) func.desktop.linkAlter(data);
 
-                                if (el.id_fitur == 10 && el.status) func.desktop.barcodeQris(el.data);
+                                if (el.id_fitur == 10 && isActive) func.desktop.barcodeQris(data);
 
-                                if (el.id_fitur == 11 && el.status) func.desktop.sortBank(el.data);
+                                if (el.id_fitur == 11 && isActive) func.desktop.sortBank(data);
 
                                 // untuk hide loading
                                 if ((i+1) == length) $("#loadingCustom").hide();
@@ -604,9 +606,6 @@ const func = {
                                 if (el.id_fitur == 10 && el.status) func.mobile.barcodeQris(el.data);
 
                                 if (el.id_fitur == 11 && el.status) func.mobile.sortBank(el.data);
-
-
-
 
                                 // untuk hide loading
                                 if ((i+1) == length) $("#loadingCustom").hide();
