@@ -11,10 +11,11 @@ use App\Models\formFitur;
 use App\Models\fitur;
 use App\Models\typeElement;
 use App\Models\log;
+use Illuminate\Http\File;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use File;
+// use File;
 use DB;
 use Auth;
 
@@ -23,9 +24,9 @@ class Site extends Component
     use WithFileUploads;
 
     public $ip, $location;
-    public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $namaFitur, $filed = [], $dataFitur = [], $formFitur;
+    public $dataSitus, $idSitus, $idFitur, $typeInput, $typeSite, $namaFitur, $filed = [], $dataFitur = [], $formFitur, $fileLama;
 
-    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama, $imagesLama, $data_iconsosmed = [], $data_buttonaction = [],  $data_iconsosmed_data;
+    public $name, $image, $images, $textarea, $selectOption, $checkbox, $switch, $color, $active, $dataLama, $imagesLama, $data_iconsosmed = [], $data_buttonaction = [], $data_listbanner = [],  $data_iconsosmed_data;
 
     public function updateLocation()
     {
@@ -64,9 +65,7 @@ class Site extends Component
             $aksesSitus = aksesSitus::where("id_user", $user->id)->get()->pluck("id_situs");
             $situs = situs::whereIn("id", $aksesSitus)->get();
         }
-
         $this->dataSitus = $situs;
-       
     }
 
     public function render()
@@ -130,8 +129,9 @@ class Site extends Component
 
         $dataLamaFormFitur = json_decode($this->formFitur);
         $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
-  
-        if($dataLamaFormFitur[0]->id == 5){
+        $this->fileLama = [$dataLamaFormFiturJson];
+        
+        if($dataLamaFormFitur[0]->id_fitur == 5){
             if(!empty($dataLamaFormFiturJson->data_iconsosmed)) {
                 foreach($dataLamaFormFiturJson->data_iconsosmed as $key => $data) {
                     $this->data_iconsosmed[$key] = collect($data)->toArray();
@@ -139,7 +139,7 @@ class Site extends Component
             }
         }
 
-        if($dataLamaFormFitur[0]->id == 4){
+        if($dataLamaFormFitur[0]->id_fitur == 4){
             if(!empty($dataLamaFormFiturJson->data_buttonaction)) {
                 foreach($dataLamaFormFiturJson->data_buttonaction as $key => $data) {
                     $this->data_buttonaction[$key] = collect($data)->toArray();
@@ -147,6 +147,15 @@ class Site extends Component
             }
         }
 
+        if($dataLamaFormFitur[0]->id_fitur == 12){
+            if(!empty($dataLamaFormFiturJson->data_listbanner)) {
+                foreach($dataLamaFormFiturJson->data_listbanner as $key => $data) {
+                    $this->data_listbanner[$key] = collect($data)->toArray();
+                }
+            }
+        }
+
+        // data lama name
         if(!empty($dataLamaFormFiturJson->name)) {
             if(count(get_object_vars($dataLamaFormFiturJson->name)) > 0) {
                 foreach($dataLamaFormFiturJson->name as $key => $data) {
@@ -171,7 +180,6 @@ class Site extends Component
 
         // data lama images
         if(!empty($dataLamaFormFiturJson->images)) {
-
             $dataImages = $dataLamaFormFiturJson->images;
             $this->imagesLama = array_map(function ($datala) { return $datala; }, $dataImages);
             $this->images = $this->imagesLama;
@@ -196,11 +204,23 @@ class Site extends Component
         if(!empty($dataLamaFormFiturJson->switch)) {
             $this->switch = $dataLamaFormFiturJson->switch;
         }
-
     }
     public function checkboxOnChange($key, $status) {
         $this->data_iconsosmed[$key]["status"] = $status;
     }
+
+    public function imageUpload($dir, $image) {
+
+        if(gettype($image) == "object") {
+            return $this->uploadFiles($dir, $image);
+            
+        }else {
+            return [
+                "status" => true,
+                "url" => $this->fileLama[0]["image"]["url"]
+            ];
+        }
+    } 
 
     public function saveData() {
         $dataLog = [
@@ -221,7 +241,6 @@ class Site extends Component
 
             $msg = "Data added successfully";
             $type = "success";
-
             $dir = "situs/". strtolower(trim($situsName->name)) . "/" . $this->typeSite . "/" . $this->filed[0]->typeFitur->name;
             
             $imgs = [];
@@ -249,46 +268,42 @@ class Site extends Component
                 $data_iconsosmed_data = $this->data_iconsosmed;
             }
 
-            // if($this->image) {
-            //     $imageUpload = ;
-            // }else {
-            //     $imageUpload = $this->image;
-            // }   
-            
+            if($this->data_listbanner > 0) {
+                $data_listbanner_data = collect($this->data_listbanner)->map(function ($e)  use ($dir) {
+                    $img = $e['image'];
+                    if (gettype($img) != "string") {
+                        $store = $this->uploadFiles($dir, $img);
+                        if ($store['status']) $e['image'] = $store['url'];
+                    }
+                    return $e;
+                })->values();
+            }else {
+                $data_listbanner_data = $this->data_listbanner;
+            }
 
             $data = collect([
                     "name" => $this->name,
-                    "image" =>$this->uploadFiles($dir, $this->image),
+                    "image" =>$this->imageUpload($dir, $this->image),
                     "images" => $imgs,
                     "textarea" => $this->textarea,
                     "selectOption" => $this->selectOption, 
                     "checkbox" => $this->checkbox,
-                    "status" => $this->switch,
+                    "switch" => $this->switch,
                     "color" => $this->color,
                     "data_iconsosmed" => $data_iconsosmed_data,
+                    "data_listbanner" => $data_listbanner_data,
                     "data_buttonaction" => $this->data_buttonaction
             ]);
 
-            $dataJson = fiturSitus::where("id_situs", $this->idSitus)->get();
-           
-        //    asala
-            $test = Storage::disk('public')->put(strtolower(trim($situsName->name)). ".json", json_encode($dataJson, JSON_PRETTY_PRINT));
-            // dd($test);
-            // $files = File::files(public_path());
-            // echo 
-            // dd(asset('storage/app/public/dingdongtogel.json'));
+            $dataLog["data_before"] = $formFiturs->first()->toJson();
 
-            
-            // $pathnya = "situs/". strtolower(trim($situsName->name)) . "/json";
-            // $namafilenya = strtolower(trim($situsName->name)). ".json";
-            // $gatau =  json_encode($dataJson, JSON_PRETTY_PRINT);
-            // $gata2 = strtolower(trim($situsName->name)). ".json";
-            // $filePath = Storage::disk('spaces')->putFileAs( $pathnya, $test, $namafilenya , 'public');
-            // dd($filePath);
-
-            // end asala
-    
             $formFiturs->update(["data" =>  $data]);
+
+            $dataLog["data_after"] = $formFiturs->first()->toJson();
+            
+            $dataJson = fiturSitus::where("id_situs", $this->idSitus)->get();
+
+            $this->uploadJson($dataJson, strtolower(trim($situsName->name)));
 
             log::create($dataLog);
     
@@ -301,7 +316,6 @@ class Site extends Component
             
         }catch (\Throwable $th) {
             DB::rollback();
-            dd($th);
             $this->dispatchBrowserEvent("toast:error", [
                 "message" => $th->getMessage()
             ]);
@@ -309,12 +323,23 @@ class Site extends Component
             log::create($dataLog);
         }
     }
+
+    public function uploadJson($dataJson, $namaSitus) {
+        $dirDO ="situs/". $namaSitus . "/json";
+        $namaSitus = $namaSitus . ".json";
+        $dirJson = storage_path("app/public/" . $namaSitus);
+        $fileJson =  new File($dirJson);
+        Storage::disk('public')->put($namaSitus, json_encode($dataJson, JSON_PRETTY_PRINT));
+        $uploadJson = Storage::disk('spaces')->putFileAs($dirDO, $fileJson, $namaSitus, 'public');
+        $pathPurge = env('DO_SPACES_PUBLIC'). $uploadJson;
+        DO_purge($pathPurge);       
+    }
+
     
     public function removeImage($id) {
         unset($this->images[$id]);
     }
     public function addFormIconSosmed() {
-
         array_push($this->data_iconsosmed, [
             "status" => false,
             "name" => "",
@@ -328,7 +353,6 @@ class Site extends Component
     }
 
     public function addFormButtonAction() {
-
         array_push($this->data_buttonaction, [
             "status" => false,
             "target" => false,
@@ -342,6 +366,21 @@ class Site extends Component
     }
     public function removeButtonAction($id) {
         unset($this->data_buttonaction[$id]);
+    }
+
+    public function addBannerMenu() {
+
+        array_push($this->data_listbanner, [
+            "status" => false,
+            "name" => "",
+            "link" => "",
+            "image" => null
+        ]);
+        $this->resetErrorBag();
+    }
+
+    public function removeBannerMenu($id) {
+        unset($this->data_listbanner[$id]);
     }
     
     public function uploadFiles($path, $file)

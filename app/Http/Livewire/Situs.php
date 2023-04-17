@@ -162,7 +162,6 @@ class Situs extends Component
                 $dataLog['name_activity'] = "update";
                 $dataSitus->update($filed);
 
-
                 // ini setting untuk desktop
                 $idFiturDesktop = $dataSitus->fiturSitus->where("type", "desktop")->pluck("id_fitur");
                 $idDel = $idFiturDesktop->filter(function($e) {

@@ -82,6 +82,12 @@ class fiturSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'fitur_code' => 'list-banner',
+                'name' => 'List Banner',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

@@ -110,12 +110,11 @@
             <div id="notSelected" class="d-flex justify-content-center  h-100">
                 @if($filed ) 
                     @php
-                    $dataLamaFormFitur = json_decode($formFitur);
-                    $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
+                        $dataLamaFormFitur = json_decode($formFitur);
+                        $dataLamaFormFiturJson = json_decode($dataLamaFormFitur[0]->data);
                     @endphp
                     <form>
                         @foreach ($filed as $i => $fill)
-
                                 @switch($fill->formElemen->typeElemen->name)
                                     @case("switch")
                                     <div class="mb-3">
@@ -128,6 +127,7 @@
                                     </h4>
                                     </div>
                                     @break
+                                    <span>{{ $switch }}</span>
 
                                     @case("input")
                                         <div class="mb-3">
@@ -162,17 +162,16 @@
                                                                 <div class="removePreviewImage" wire:click="removeImage({{$i}})">
                                                                     <i class="fe fe-x"></i>
                                                                 </div>
-                                                                {{-- <img class="me-2 mt-1" style="height: 200px;" src="{{ $img }}" /> --}}
                                                             </div>
                                                             @endforeach
                                                     </div>
                                                 @endif
                                             @else 
-                                                <input class="form-control" type="file" accept="image/*" wire:model="image">
+                                            {{-- {{ !empty($zakfl->fiopolnoe) ? $zakfl->fiopolnoe:'' }} --}}
+                                                <input class="form-control" type="file" accept="image/*" wire:model="image" value="{{ !empty($image) ? $image : $image }}">
                                                 @if($image)
                                                     @if(gettype($image) == "string") 
                                                         <img class="mt-1"  src="{{ $image }}" />
-
                                                     @else 
                                                         <img class="mt-1"  src="{{ $image->temporaryUrl() }}" />
                                                     @endif
@@ -215,19 +214,28 @@
                                     @break
 
                                     @case("color")
+                                    @if($color)
                                     <div class="mb-3">
                                         <div class="">
-
                                             <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
-                                            <div class="clr-field" style="color: {{ $color[$fill->formElemen->name ] ? $color[$fill->formElemen->name ] : '' }};" >
+                                                <div class="clr-field" style="color: {{ array_key_exists($fill->formElemen->name, $color)  ? $color[$fill->formElemen->name ] : null}};" >
                                                 <button type="button" aria-labelledby="clr-open-label"></button>
                                                 <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris>
                                             </div>
                                         </div>
                                     </div>
+                                    @else
+                                    <div class="mb-3">
+                                        <div class="">
+                                            <label class="form-label mt-0 text-start">{{$fill->formElemen->name}}</label>
+                                            <div class="clr-field" style="color: transparent }};" >
+                                                <button type="button" aria-labelledby="clr-open-label"></button>
+                                                <input class="form-control coloris coloris-barcode" placeholder="Masukan Color" id="color" type="text" value="color.{{$fill->formElemen->name}}" wire:model="color.{{$fill->formElemen->name}}"    readonly="" data-coloris>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
                                     @break
-                                     {{-- " --}}
-                                    {{-- " --}}
                                     @default
                                         
                                 @endswitch
@@ -238,10 +246,8 @@
                         @if(!empty($fill->typeFitur->name == "Icon Sosmed"))
                         
                         <div class="container d-flex flex-col flex-wrap">
-                            {{-- {{ dd($data_iconsosmed) }} --}}
                             @if(count($data_iconsosmed) > 0)
                                 @foreach($data_iconsosmed as $key => $data)
-                                {{-- {{ dd($data) }} --}}
                                     <div class="card mx-2 p-3" style="width: 18rem;">
                                         <div class="form-sosmed-container-item">
                                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -336,7 +342,6 @@
                                                         <input type="text" class="form-control coloris shadowColor" placeholder="Shadow Color Button" wire:model.lazy="data_buttonaction.{{ $key }}.color" value="#1b693c" readonly="" data-coloris>
                                                     </div>
                                                 </div>
-    
                                                 <div class="form-group">
                                                     <select class="form-control" wire:model="data_buttonaction.{{ $key }}.class">
                                                         <option value="btn-default" selected="">btn-default</option>
@@ -349,7 +354,6 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    {{-- <textarea class="form-control resize" placeholder="Style Button" wire:model="data_buttonaction_desktop.0.style" style="font-size: 10px; height: 0px;" rows="5"></textarea> --}}
                                                     <textarea class="form-control resize" placeholder="Style Button" wire:model="data_buttonaction.{{ $key }}.style" style="font-size: 10px; height: 0px;" rows="5"></textarea>
 
                                                 </div>
@@ -362,21 +366,75 @@
                                     <a href="#" class="btn btn-primary" wire:click="addFormButtonAction" >
                                         <i class="fa fa-plus-circle fs-5 text-white "></i>
                                     </a>
-                                </div>
-                                
-                                
+                                </div>                               
                             </div>
                         @endif
 
-                        
+                        @if(!empty($fill->typeFitur->name == "List Banner"))
+                            <div class="container d-flex flex-col flex-wrap">
+                                {{-- @if(count($data_listbanner) > 0) --}}
+                                    @foreach($data_listbanner as $key => $data)
+                                        <div class="card mx-2 p-3" style="width: 18rem;">
+                                            <div class="form-sosmed-container-item">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div class="checkbox">
+                                                        <div class="custom-checkbox custom-control">
+                                                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-bannerStatus-{{ $key }}" wire:model="data_listbanner.{{ $key }}.status">
+                                                            <label for="checkbox-bannerStatus-{{ $key }}" class="custom-control-label">Status Banner</label>
+                                                        </div>
+                                                    </div>
+                                                    <i class="far fa-times-circle fs-5 text-danger cursor-pointer" wire:click="removeBannerMenu({{ $key }})"></i>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Name Banner" wire:model="data_listbanner.{{ $key }}.name" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Link Banner" wire:model="data_listbanner.{{ $key }}.link" value="" style="font-size: 10px">
+                                                </div>
+
+                                                <div>
+                                                    <div
+                                                        x-data="{ isUploading: false, progress: 0 }"
+                                                        x-on:livewire-upload-start="isUploading = true"
+                                                        x-on:livewire-upload-finish="isUploading = false"
+                                                        x-on:livewire-upload-error="isUploading = false"
+                                                        x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                                    >
+                                                        <div class="form-group m-0">
+                                                            <label class="form-label mt-0 text-start">Image icon</label>
+                                                            <input class="form-control" type="file" accept="image/*" wire:model="data_listbanner.{{ $key }}.image" />
+                                                        </div>
+                                                        <div class="progress mg-b-10" x-show="isUploading" style="display: none;">
+                                                            <div class="progress-bar ht-2" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" x-bind:style="`width:${progress}%`" style="width: 0%;"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-3 previewImg">
+                                                        @if($data["image"])
+                                                            @if (gettype($data["image"] ) == "string")
+                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"] }}">
+                                                            @else
+                                                                <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"]->temporaryUrl() }}">
+                                                            @endif
+    
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                {{-- @endif --}}
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-primary" wire:click="addBannerMenu" >
+                                        <i class="fa fa-plus-circle fs-5 text-white "></i>
+                                    </a>
+                                </div>                               
+                            </div>
+                        @endif
+          
+          
                         <div class="py-4 border-top">
                             <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
-                            {{-- @foreach($test as $t)
-                                <span>{{ $t }}</span>
-                            @endforeach --}}
-                            {{-- @php
-                                var_dump();
-                            @endphp --}}
                         </div>
                         
     
@@ -393,9 +451,7 @@
 </div>
 @section('scripts')
      <!--Internal  scriptku js -->
-
     <script>
-        
         function waitForElm(selector) {
             return new Promise(resolve => {
                 if (document.querySelector(selector)) {
@@ -423,14 +479,6 @@
             
             
         });
-
-        
-
-    
-
-     
-
-       
     </script>
     
     

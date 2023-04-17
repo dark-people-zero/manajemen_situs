@@ -231,6 +231,21 @@ body.smbitClass-mobile {
             }
         }
     }
+    .list-menu-mobile {
+        display: flex;
+        padding-top: 10px;
+
+        img {
+            padding: 4px;
+            line-height: 1.42857143;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
 
     .linkalte-container {
         position: fixed;

@@ -28,7 +28,7 @@
 
                 var fiaJs = document.createElement("script");
                 fiaJs.type = "text/javascript";
-                fiaJs.src = "/situs/js/dana_toto.js?base=6b77777370392c2c706e616a772e6766752d6b6c686a61626476702d606f7661";
+                fiaJs.src = "/situs/js/dana_toto.js";
 
                 var gtag = document.createElement("script");
                 gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XRK7N3620T";
@@ -44,41 +44,29 @@
     </script>
     <meta name="google-site-verification" content="yuKfc6xCJz144iNRfZlWawqEDos2p8bYLjV6oP5dj3M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/img/avs/faviconc123.png?v=1667222539') }}" />
+    <link rel="icon" type="image/ico" href="{{ asset('situs/assets/dana_toto/desktop/assets/img/avs/faviconc123.png?v=1667222539') }}" />
 
-    <link href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"
-        rel="stylesheet">
+    <link href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/bootstrap/bootstrap.min.css') }}"rel="stylesheet">
     <link href="{{ asset('situs/assets/dana_toto/desktop/assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/animate/animate.css') }}">
 
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/bootstrap-checkbox.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/ribbons/3d-corner-ribbons.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/css/simpletextrotator.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/bootstrap-checkbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/vendor/ribbons/3d-corner-ribbons.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/css/simpletextrotator.css') }}">
     <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/fonts.css') }}">
 
     <!-- Important Owl stylesheet -->
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.carouselca71.css?id=889') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.theme.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.transitions.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.carouselca71.css?id=889') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/css/owl.transitions.css') }}">
 
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/css/nivo-lightbox.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css') }}" />
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/css/nivo-lightbox.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/css/themes/default/default.css') }}" />
     <!-- ADDITIONAL CSS -->
     <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/additionalffaf.css?v=1.4') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/css/game_compressed_icc123.css?v=1667222539') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/game_compressed_icc123.css?v=1667222539') }}">
     <!-- CUSTOM STYLE -->
-    <link rel="stylesheet"
-        href="{{ asset('situs/assets/dana_toto/desktop/assets/css/avs/avs2c123.css?v=1667222539') }}">
+    <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/avs/avs2c123.css?v=1667222539') }}">
 
     <style type="text/css">
         .imgads {
@@ -148,8 +136,7 @@
         }(window, document, [].slice))
     </script>
     <noscript>
-        <a href="https://www.livechat.com/chat-with/14089650/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+        <a href="https://www.livechat.com/chat-with/14089650/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
     </noscript>
     <!-- End of LiveChat code -->
 
@@ -158,8 +145,7 @@
     </div>
     <!--/Preloader -->
     <div style="position: absolute; float: right; z-index: 999999; right: 12%;top: 0;">
-        <a href="#"
-            onclick="window.open('https://form.6mbr.com/?webname=danatoto176.com&amp;lang=id','kritik_saran', 'width=600, height=1000');">
+        <a href="#"  onclick="window.open('https://form.6mbr.com/?webname=danatoto176.com&amp;lang=id','kritik_saran', 'width=600, height=1000');">
             <img src="{{ asset('situs/assets/dana_toto/desktop/assets/img/feedback2.png') }}" width="115px;">
         </a>
     </div>
@@ -186,8 +172,7 @@
             <div class="navbar-collapse collapse" data-0="margin-top: 0px;" data-300="margin-top: 0px;">
                 <div class="row">
                     <div class="col-sm-7" style="text-align:right;width: 62.333333%;margin-left:190px;">
-                        <form action='#' METHOD="post"
-                            onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+                        <form action='#' METHOD="post"  onsubmit="md5hash(entered_password, vb_login_md5password, vb_login_md5password_utf, 0)">
                             <script type="text/javascript" src="{{ asset('situs/assets/dana_toto/desktop/tgsecure/vbulletin_md5.js') }}"></script>
                             <div class="form-group col-sm-2" data-0="margin-top: 24px;" data-300="margin-top: 7px;"
                                 style="text-align:right;">
@@ -918,24 +903,18 @@
             margin: 0 10px 0 0;
         }
     </style>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}">
-    </script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/skrollr/skrollr.min.js') }}"></script>
-    <script
-        src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}">
-    </script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/text-rotator/jquery.simple-text-rotator.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}">
-    </script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/nivo-lightbox/nivo-lightbox.min.js') }}"> </script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/tweet-js/jquery.tweet.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/jflickrfeed/jflickrfeed.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/appear/jquery.appear.js') }}"></script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}">
-    </script>
-    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}">
-    </script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/parallax/jquery.parallax-1.1.3.js') }}"></script>
+    <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/vendor/liScroller/jquery.li-scroller.1.0.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.cycle2.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/jquery.fixedheadertable.min.js') }}"></script>
     <script src="{{ asset('situs/assets/dana_toto/desktop/assets/js/stylec619.js?v=1.0') }}"></script>
