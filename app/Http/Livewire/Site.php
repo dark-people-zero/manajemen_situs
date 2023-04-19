@@ -215,6 +215,7 @@ class Site extends Component
             return $this->uploadFiles($dir, $image);
             
         }else {
+            // dd($this->fileLama[0]["image"]["url"]);
             return [
                 "status" => true,
                 "url" => $this->fileLama[0]["image"]["url"]
