@@ -9,6 +9,7 @@ use App\Http\Livewire\Home;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Situs;
 use App\Http\Livewire\Site;
+use App\Http\Livewire\Log;
 use App\Http\Livewire\FormElement;
 use App\Http\Livewire\FormFitur;
 
@@ -34,6 +35,8 @@ Route::middleware(['auth', 'user-role'])->group(function () {
     Route::get('/site', Site::class);
     Route::get('/form-element', FormElement::class);
     Route::get('/form-fitur', FormFitur::class);
+    Route::get('/log', Log::class);
+
 });
 
 Route::get('/config/{id}', [configController::class, 'index']);
@@ -54,4 +57,6 @@ Route::get('/permision', function () {
     ]);
 });
 
+// Route::get('/testing', dd(auth()->user()->aksesMenu->where('status', true)->first()));
 Route::get('/testing', [configController::class, 'testing']);
+

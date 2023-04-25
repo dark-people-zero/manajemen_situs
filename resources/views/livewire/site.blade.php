@@ -31,6 +31,26 @@
             width: 49%;
         }
 
+        .loading-savedata {
+            font-size: 40px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100000050;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .loading-savedata i {
+            display: flex;
+            align-items: center;
+            min-height: calc(100% - 1rem);
+            justify-content: center;
+            color: #38cab3;
+
+
+        }
+
 
     </style>
 @endsection
@@ -434,7 +454,11 @@
           
           
                         <div class="py-4 border-top">
-                            <a href="#" class="btn btn-primary" wire:click="saveData">Simpan</a>
+                            <a href="#" class="btn btn-primary"  wire:click="saveData">Simpan</a>
+                        </div>
+                        {{-- <i class="fas "></i> --}}
+                        <div wire:loading wire:target="saveData">
+                            <div class="loading-savedata"><i class="fas fa-spinner fa-spin"></i></div>
                         </div>
                         
     

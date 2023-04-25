@@ -341,7 +341,6 @@ const func = {
     },
     mobile: {
         modal: (data) => {
-
             if (data) {
                 var mdl = $(`
                     <div id="smb-mobile-popup">
@@ -395,7 +394,6 @@ const func = {
             banner.find("#close_button").click(() => {
                 $("#content").removeClass("apk-download");
             })
-            // $('.app-container').append(banner);
             $("#content .page-header").prepend(banner);
             $("#content .page-header .app-container").remove();
         },
@@ -426,7 +424,6 @@ const func = {
                             <img src="${e.image}" alt="${e.name}">
                         </a>`;
             })
-
             var sos = $(`
                 <div class="icon-sosmed">
                     <p class="deskripsi">${data.name.Keterangan}</p>
@@ -547,17 +544,13 @@ const func = {
                             <img src="${e.image}" alt="${e.name}">
                         </a>`;
             })
-
             var sos = $(`
                 <div class="list-menu-mobile">
                     ${banner.join('')}
                 </div>
             `)
-
             sos.insertBefore($('.wrapper2'));
-
         }
-
 
     },
     load: () => {
@@ -581,7 +574,6 @@ const func = {
                 if (response) {
                     if (!isMobile) {
                         if (response) {
-                            // var length = response.fitur_situs.desktop.length;
                             response.forEach((el, i) => {
                                 if(el.type == "desktop" && !isMobile) {
                                     var data = JSON.parse(el.data); 
@@ -614,7 +606,6 @@ const func = {
                                     if (el.id_fitur == 11 && data.switch) func.desktop.sortBank(data);
 
                                     if (el.id_fitur == 12 && data.switch) func.desktop.listMenu(data);
-
     
                                     // untuk hide loading
                                     if ((i+1) == length) $("#loadingCustom").hide();

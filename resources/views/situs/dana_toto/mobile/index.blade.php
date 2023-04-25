@@ -40,6 +40,7 @@
         }, 1);
 
     </script>
+
     <style>
         body {
             color: #fffeb3 !important;

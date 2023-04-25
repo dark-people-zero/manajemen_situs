@@ -44,7 +44,6 @@
 const func = {
     desktop: {
         modal: (data) => {
-            console.log(data)
             var template = $(`
                 <div class="modal fade" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
@@ -75,7 +74,7 @@ const func = {
                     <div class="header-container">
                         <div class="banner-info">
                             <div class="app_icon">
-                                <img src="${data.file}" alt="App Icon">
+                                <img src="${data.image.url}" alt="App Icon">
                             </div>
                             <div class="app_info">
                                 <div class="app_title">${data.title}</div>
@@ -94,18 +93,19 @@ const func = {
             template.insertAfter("#breadcrumbs");
         },
         headerCorousel: (data) => {
+
             var isPause, tick, percentTime, time = 7;
             var target = $("#slider");
             target.children().remove();
 
-            var dataimage = data.images.map(e => {
+            data = data.images.map(e => {
                 return `
                     <div class="item">
                         <img src="${e}" width="840px" height="482" />
                     </div>
                 `;
             }).join("");
-            var template = $(`<div class="owl-carousel owl-theme">${dataimage}</div>`);
+            var template = $(`<div class="owl-carousel owl-theme">${data}</div>`);
 
             template.owlCarousel({
                 singleItem: true,
@@ -164,54 +164,66 @@ const func = {
 
         },
         btnAction: (data) => {
-            data = data.filter(e => e.status).map(e => {
+            data = data.data_buttonaction.filter(e => e.status).map(e => {
                 return `<a class="btn btn-custom ${e.class}" href="${e.link}" style="${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
             }).join("");
 
             $(".sidebar-button").append($(data));
         },
         iconSosmed: (data) => {
-            var icon = data.data.filter(e => e.status).map(e => {
+            var icon = data.data_iconsosmed.filter(e => e.status).map(e => {
                 return `
-                    <a href="${e.link}" target="_blank" class="item">
-                        <img src="${e.image}">
-                        <span>${e.name}</span>
-                    </a>
+                    <div class="icon-item">
+                        <a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>
+                    </div>
                 `;
             }).join("");
 
-            var template = $(`<div class="footer-sosmed">${icon}</div>`);
+            var template = $(`
+                <div class="icon-sosmed">
+                    <div class="icon-info">${data.name.Keterangan}</div>
+                    <div class="icon-container">${icon}</div>
+                </div>
+            `);
 
-            $("#footer .footer-main .footer-link").prepend(template);
+            $(".blog-posts").append(template);
         },
         promosi: (data) => {
-            $(`<div class="promosi">
-                    <a href="${data.name.Link}" target="_blank" title="${data.name.Name}">
-                        <img src="${data.image.url}" alt="${data.name.Name}">
+
+            $(`
+                <div class="promosi">
+                    <a href="${data.name.Link}" target="_blank" title="${data.name.Promo}">
+                        <img src="${data.image.url}" alt="${data.name.Promo}">
                     </a>
                 </div>
             `).insertBefore($("#latest-results"));
         },
         beforeFooter: (data) => {
+
             var template = $(`
-                <div class="footer-info">
-                    <h2 class="footer-info-title">${data.title}</h2>
-                    <p class="footer-info-deskripsi">${data.deskripsi}</p>
+                <div class="before-footer container">
+                    <h2>${data.textarea}</h2>
                 </div>
             `);
+
             $("#footer .footer-main").prepend(template);
         },
         footerProtection: (data) => {
             var template = $(`
-                <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
-                    <img alt="${data.name}" src="${data.image}">
-                </a>
+                <div class="container footer-protection">
+                    <a title="${data.name}" class="dmca-badge" href="${data.link}" target="_blank">
+                        <img alt="${data.name}" src="${data.image}">
+                    </a>
+                </div>
             `);
 
-            $("#footer .footer-bottom .copyright").append(template);
+            $("#footer .footer-main .footer-bottom").append(template);
         },
         linkAlter: (data) => {
-            var listLink = data.listLink.map(e => {
+
+            var listLink = data.textarea.split("--").map(e => {
                 return `
                     <div class="linkalte-item">
                         <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
@@ -221,8 +233,10 @@ const func = {
 
             var template = $(`
                 <div class="linkalte-container">
-                    <img src="${data.image}" class="linkalte-btn">
-                    <div class="linkalte-body">${listLink}</div>
+                    <img src="${data.image.url}" class="linkalte-btn">
+                    <div class="linkalte-body">
+                        <div class="linkalte-list">${listLink}</div>
+                    </div>
                 </div>
             `);
 
@@ -281,6 +295,22 @@ const func = {
                 targetReplace.remove();
             }
         },
+        listMenu: (data) => {
+            var banner = data.data_listbanner.filter((e) => e.status).map((e) => {
+                return `<a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>`;
+            })
+
+            var sos = $(`
+                <div class="list-menu-mobile">
+                    ${banner.join('')}
+                </div>
+            `)
+
+            sos.insertBefore($('.wrapper2'));
+            
+        },
         defaultFooter: () => {
             var target = $("#footer");
             var main = target.find(".footer-main");
@@ -337,9 +367,9 @@ const func = {
                                     </button>
                                 </div>
                                 <a href="" target="event">
-                                    <img src="${data.file}" class="popup-img">
+                                    <img src="${data.image.url}" class="popup-img">
                                 </a>
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.name.Deskripsi}</p>
                             </div>
                         </div>
                         </div>
@@ -354,6 +384,7 @@ const func = {
             }
         },
         headerApk: (data) => {
+
             $("#content").addClass("apk-download");
             var banner = $(`
                 <div id="smart_banner">
@@ -361,15 +392,15 @@ const func = {
                     <div class="header-container">
                         <div class="banner-info">
                             <div class="app_icon">
-                                <img src="${data.file}" alt="App Icon">
+                                <img src="${data.image.url}" alt="App Icon">
                             </div>
                             <div class="app_info">
-                                <div class="app_title">${data.title}</div>
-                                <div class="app_slogan">${data.slogan}</div>
+                                <div class="app_title">${data.name.Title}</div>
+                                <div class="app_slogan">${data.name.Slogan}</div>
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk fiatogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.name.URLDownload}" target="_blank" title="Download Apk Yowestogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -377,12 +408,12 @@ const func = {
             banner.find("#close_button").click(() => {
                 $("#content").removeClass("apk-download");
             })
-            // $('.app-container').append(banner);
             $("#content .page-header").prepend(banner);
             $("#content .page-header .app-container").remove();
         },
         headerCorousel: (data) => {
-            data = data.map((e) => {
+
+            data = data.images.map((e) => {
                 return `<div> <img src="${e}"></div>`;
             })
             var owl = $(`<div class="owl-carousel owl-theme">${data.join('')}</div>`);
@@ -395,22 +426,21 @@ const func = {
             $('#content .container').prepend(owl);
         },
         btnAction: (data) => {
-            data = data.filter((e) => e.status).map((e) => {
+            data = data.data_buttonaction.filter((e) => e.status).map((e) => {
                 var shadow = e.shadow ? 'inset 0 -4px 0 '+e.shadow+';' : '';
-                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" style="${shadow}${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
+                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" ${e.style ? `style=${shadow}${e.style}` : ""} ${e.target ? `target=_blank` : ''}>${e.name}</a>`;
             }).join('');
             $(data).insertAfter(".button-green");
         },
         iconSosmed: (data) => {
-            var icon = data.data.filter((e) => e.status).map((e) => {
+            var icon = data.data_iconsosmed.filter((e) => e.status).map((e) => {
                 return `<a href="${e.link}" target="_blank">
                             <img src="${e.image}" alt="${e.name}">
                         </a>`;
             })
-
             var sos = $(`
                 <div class="icon-sosmed">
-                    <p class="deskripsi">${data.ket}</p>
+                    <p class="deskripsi">${data.name.Keterangan}</p>
                     <div class="icon">${icon.join('')}</div>
                 </div>
             `)
@@ -419,17 +449,18 @@ const func = {
         },
         promosi: (data) => {
             var pro = $(`
-                <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
-                    <img src="${data.image}">
+                <a href="${data.name.Link}" target="_blank" title="${data.name.Promo}" class="promosi">
+                    <img src="${data.image.url}">
                 </a>
             `);
             pro.insertBefore($('.inner-wrap'))
         },
         beforeFooter: (data) => {
+
             var before = $(`
                 <div class="beforeFooter">
-                    <center><h2 class="tittle">${data.title}</h2></center>
-                    <p class="deskripsi">${data.deskripsi}</p>
+                    <center><h2 class="tittle">${data.name.Title}</h2></center>
+                    <p class="deskripsi">${data.textarea}</p>
                 </div>
             `)
 
@@ -520,6 +551,19 @@ const func = {
                 newItem.insertAfter(targetReplace);
                 listImg.parent().remove();
             }
+        },
+        listMenu: (data) => {
+            var banner = data.data_listbanner.filter((e) => e.status).map((e) => {
+                return `<a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>`;
+            })
+            var sos = $(`
+                <div class="list-menu-mobile">
+                    ${banner.join('')}
+                </div>
+            `)
+            sos.insertBefore($('.wrapper2'));
         }
 
 
@@ -539,76 +583,87 @@ const func = {
             url: "https://static.hokibagus.club/situs/dingdongtogel/json/dingdongtogel.json",
             dataType: "json",
             success: function (response) {
-                func.desktop.defaultFooter();
                 if (response) {
-                    if (response.type = "desktop" && !isMobile) {
-                        if (response.type = "desktop") {
-                            var length = response.type = "desktop".length;
+                    if (!isMobile) {
+                    func.desktop.defaultFooter();
+
+                        if (response) {
                             response.forEach((el, i) => {
-                                var isActive = isActive;
-                                var data = el.data;
-                                if (el.id_fitur == 1) {
-                                    if (isActive) {
-                                        func.desktop.modal(data);
-                                    }else{
-                                        $("#myModal").modal("show");
+                                if(el.type == "desktop" && !isMobile) {
+                                    var data = JSON.parse(el.data); 
+                                    if (el.id_fitur == 1) {
+                                        if (data.switch) {
+                                            func.desktop.modal(data);
+                                        }else{
+                                            $("#myModal").modal("show");
+                                        }
                                     }
+    
+                                    if (el.id_fitur == 2 && data.switch) func.desktop.headerApk(data);
+    
+                                    if (el.id_fitur == 3 && data.switch) func.desktop.headerCorousel(data);
+    
+                                    if (el.id_fitur == 4 && data.switch) func.desktop.btnAction(data);
+    
+                                    if (el.id_fitur == 5 && data.switch) func.desktop.iconSosmed(data);
+    
+                                    if (el.id_fitur == 6 && data.switch) func.desktop.promosi(data);
+    
+                                    if (el.id_fitur == 7 && data.switch) func.desktop.beforeFooter(data);
+    
+                                    if (el.id_fitur == 8 && data.switch) func.desktop.footerProtection(data);
+    
+                                    if (el.id_fitur == 9 && data.switch) func.desktop.linkAlter(data);
+    
+                                    if (el.id_fitur == 10 && data.switch) func.desktop.barcodeQris(data);
+    
+                                    if (el.id_fitur == 11 && data.switch) func.desktop.sortBank(data);
+
+                                    if (el.id_fitur == 12 && data.switch) func.desktop.listMenu(data);
+    
+                                    // untuk hide loading
+                                    if ((i+1) == length) $("#loadingCustom").hide();
                                 }
-
-                                if (el.id_fitur == 2 && isActive) func.desktop.headerApk(data);
-
-                                if (el.id_fitur == 3 && isActive) func.desktop.headerCorousel(data);
-
-                                if (el.id_fitur == 4 && isActive) func.desktop.btnAction(data);
-
-                                if (el.id_fitur == 5 && isActive) func.desktop.iconSosmed(data);
-
-                                if (el.id_fitur == 6 && isActive) func.desktop.promosi(data);
-
-                                if (el.id_fitur == 7 && isActive) func.desktop.beforeFooter(data);
-
-                                if (el.id_fitur == 8 && isActive) func.desktop.footerProtection(data);
-
-                                if (el.id_fitur == 9 && isActive) func.desktop.linkAlter(data);
-
-                                if (el.id_fitur == 10 && isActive) func.desktop.barcodeQris(data);
-
-                                if (el.id_fitur == 11 && isActive) func.desktop.sortBank(data);
-
-                                // untuk hide loading
-                                if ((i+1) == length) $("#loadingCustom").hide();
+                                
                             });
                         }else{
                             $("#loadingCustom").hide();
                         }
-                    }else if(response.status_mobile && isMobile){
-                        if (response.fitur_situs.mobile) {
-                            var length = response.fitur_situs.mobile.length;
-                            response.fitur_situs.mobile.forEach((el, i) => {
-                                if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
+                    }else if(response && isMobile){
+                        if (response) {
+                            // var length = response.fitur_situs.mobile.length;
+                            response.forEach((el, i) => {
+                                if(el.type == "mobile" && isMobile) {
+                                    var data = JSON.parse(el.data); 
 
-                                if (el.id_fitur == 2 && el.status) func.mobile.headerApk(el.data);
+                                    if (el.id_fitur == 1 && data.switch) func.mobile.modal(data);
+    
+                                    if (el.id_fitur == 2 && data.switch) func.mobile.headerApk(data);
+    
+                                    if (el.id_fitur == 3 && data.switch) func.mobile.headerCorousel(data);
+    
+                                    if (el.id_fitur == 4 && data.switch) func.mobile.btnAction(data);
+    
+                                    if (el.id_fitur == 5 && data.switch) func.mobile.iconSosmed(data);
+    
+                                    if (el.id_fitur == 6 && data.switch) func.mobile.promosi(data);
+    
+                                    if (el.id_fitur == 7 && data.switch) func.mobile.beforeFooter(data);
+    
+                                    if (el.id_fitur == 8 && data.switch) func.mobile.footerProtection(data);
+    
+                                    if (el.id_fitur == 9 && data.switch) func.mobile.linkAlter(data);
+    
+                                    if (el.id_fitur == 10 && data.switch) func.mobile.barcodeQris(data);
+    
+                                    if (el.id_fitur == 11 && data.switch) func.mobile.sortBank(data);
 
-                                if (el.id_fitur == 3 && el.status) func.mobile.headerCorousel(el.data);
-
-                                if (el.id_fitur == 4 && el.status) func.mobile.btnAction(el.data);
-
-                                if (el.id_fitur == 5 && el.status) func.mobile.iconSosmed(el.data);
-
-                                if (el.id_fitur == 6 && el.status) func.mobile.promosi(el.data);
-
-                                if (el.id_fitur == 7 && el.status) func.mobile.beforeFooter(el.data);
-
-                                if (el.id_fitur == 8 && el.status) func.mobile.footerProtection(el.data);
-
-                                if (el.id_fitur == 9 && el.status) func.mobile.linkAlter(el.data);
-
-                                if (el.id_fitur == 10 && el.status) func.mobile.barcodeQris(el.data);
-
-                                if (el.id_fitur == 11 && el.status) func.mobile.sortBank(el.data);
-
-                                // untuk hide loading
-                                if ((i+1) == length) $("#loadingCustom").hide();
+                                    if (el.id_fitur == 12 && data.switch) func.desktop.listMenu(data);
+    
+                                    // untuk hide loading
+                                    if ((i+1) == length) $("#loadingCustom").hide();
+                                }
+                                
                             });
                         }else{
                             $("#loadingCustom").hide();

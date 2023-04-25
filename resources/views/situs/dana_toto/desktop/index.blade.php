@@ -68,6 +68,7 @@
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="{{ asset('situs/assets/dana_toto/desktop/assets/css/avs/avs2c123.css?v=1667222539') }}">
 
+
     <style type="text/css">
         .imgads {
             width: 100%;

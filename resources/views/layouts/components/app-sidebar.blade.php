@@ -70,6 +70,13 @@
                                 <span class="side-menu__label">Form Element</span>
                             </a>
                         </li>
+
+                        <li class="slide">
+                            <a href="/log" class="side-menu__item">
+                                <i class="fe fe-file-text side-menu-icon"></i>
+                                <span class="side-menu__label">Log</span>
+                            </a>
+                        </li>
                     @endif
                 @endif
 
