@@ -191,7 +191,7 @@
                                                 <input class="form-control" type="file" accept="image/*" wire:model="image" value="{{ !empty($image) ? $image : $image }}">
                                                 @if($image)
                                                     @if(gettype($image) == "string") 
-                                                        <img class="mt-1"  src="{{ $image }}" />
+                                                        <img class="mt-1"  src="{{ $image }}" style={{ $fill->typeFitur->name == "Header APK" ? "max-width:200px;" : "max-width:500px;" }} />
                                                     @else 
                                                         <img class="mt-1"  src="{{ $image->temporaryUrl() }}" />
                                                     @endif
@@ -307,9 +307,9 @@
                                                 <div class="mt-3 previewImg">
                                                     @if($data["image"])
                                                         @if (gettype($data["image"] ) == "string")
-                                                            <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"] }}">
+                                                            <img class="me-2 mt-1" style="max-height: 200px;" src="{{ $data["image"] }}">
                                                         @else
-                                                            <img class="me-2 mt-1" style="height: 200px;" src="{{ $data["image"]->temporaryUrl() }}">
+                                                            <img class="me-2 mt-1" style="max-height: 200px;" src="{{ $data["image"]->temporaryUrl() }}">
                                                         @endif
 
                                                     @endif

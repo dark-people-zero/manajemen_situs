@@ -54,8 +54,8 @@ const func = {
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="${data.file}" width="600" height="350" class="imgads">
-
+                                <img src="${data.image.url}" width="600" height="350" class="imgads">
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.name.Deskripsi}</p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ const func = {
                     <div class="header-container">
                         <div class="banner-info">
                             <div class="app_icon">
-                                <img src="${data.file}" alt="App Icon">
+                                <img src="${data.image.url}" alt="App Icon">
                             </div>
                             <div class="app_info">
                                 <div class="app_title">${data.title}</div>
@@ -93,11 +93,12 @@ const func = {
             template.insertAfter("#breadcrumbs");
         },
         headerCorousel: (data) => {
+
             var isPause, tick, percentTime, time = 7;
             var target = $("#slider");
             target.children().remove();
 
-            data = data.map(e => {
+            data = data.images.map(e => {
                 return `
                     <div class="item">
                         <img src="${e}" width="840px" height="482" />
@@ -163,14 +164,14 @@ const func = {
 
         },
         btnAction: (data) => {
-            data = data.filter(e => e.status).map(e => {
+            data = data.data_buttonaction.filter(e => e.status).map(e => {
                 return `<a class="btn btn-custom ${e.class}" href="${e.link}" style="${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
             }).join("");
 
             $(".sidebar-button").append($(data));
         },
         iconSosmed: (data) => {
-            var icon = data.data.filter(e => e.status).map(e => {
+            var icon = data.data_iconsosmed.filter(e => e.status).map(e => {
                 return `
                     <div class="icon-item">
                         <a href="${e.link}" target="_blank">
@@ -182,7 +183,7 @@ const func = {
 
             var template = $(`
                 <div class="icon-sosmed">
-                    <div class="icon-info">${data.ket}</div>
+                    <div class="icon-info">${data.name.Keterangan}</div>
                     <div class="icon-container">${icon}</div>
                 </div>
             `);
@@ -190,19 +191,20 @@ const func = {
             $(".blog-posts").append(template);
         },
         promosi: (data) => {
+
             $(`
                 <div class="promosi">
-                    <a href="${data.link}" target="_blank" title="${data.name}">
-                        <img src="${data.image}" alt="${data.name}">
+                    <a href="${data.name.Link}" target="_blank" title="${data.name.Promo}">
+                        <img src="${data.image.url}" alt="${data.name.Promo}">
                     </a>
                 </div>
             `).insertBefore($("#latest-results"));
         },
         beforeFooter: (data) => {
+
             var template = $(`
                 <div class="before-footer container">
-                <center><h2 class="tittle">${data.title}</h2></center>
-                <p class="deskripsi">${data.deskripsi}</p>
+                    <h2>${data.textarea}</h2>
                 </div>
             `);
 
@@ -220,9 +222,10 @@ const func = {
             $("#footer .footer-main .footer-bottom").append(template);
         },
         linkAlter: (data) => {
-            var listLink = data.listLink.map(e => {
+
+            var listLink = data.textarea.split("--").map(e => {
                 return `
-                    <div class="linkalte-item" >
+                    <div class="linkalte-item">
                         <a href="${e}" target="_blank" title="Bandar Casino Online">${e.replace('https://','')}</a>
                     </div>
                 `;
@@ -230,8 +233,10 @@ const func = {
 
             var template = $(`
                 <div class="linkalte-container">
-                    <img src="${data.image}" class="linkalte-btn">
-                    <div class="linkalte-body">${listLink}</div>
+                    <img src="${data.image.url}" class="linkalte-btn">
+                    <div class="linkalte-body">
+                        <div class="linkalte-list">${listLink}</div>
+                    </div>
                 </div>
             `);
 
@@ -289,6 +294,22 @@ const func = {
                 newItem.insertBefore(targetReplace);
                 targetReplace.remove();
             }
+        },
+        listMenu: (data) => {
+            var banner = data.data_listbanner.filter((e) => e.status).map((e) => {
+                return `<a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>`;
+            })
+
+            var sos = $(`
+                <div class="list-menu-mobile">
+                    ${banner.join('')}
+                </div>
+            `)
+
+            sos.insertBefore($('.wrapper2'));
+            
         }
     },
     mobile: {
@@ -305,9 +326,9 @@ const func = {
                                     </button>
                                 </div>
                                 <a href="" target="event">
-                                    <img src="${data.file}" class="popup-img">
+                                    <img src="${data.image.url}" class="popup-img">
                                 </a>
-                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.deskripsi}</p>
+                                <p aria-label="Close" aria-hidden="true" class="deskripsi">${data.name.Deskripsi}</p>
                             </div>
                         </div>
                         </div>
@@ -322,6 +343,7 @@ const func = {
             }
         },
         headerApk: (data) => {
+
             $("#content").addClass("apk-download");
             var banner = $(`
                 <div id="smart_banner">
@@ -329,15 +351,15 @@ const func = {
                     <div class="header-container">
                         <div class="banner-info">
                             <div class="app_icon">
-                                <img src="${data.file}" alt="App Icon">
+                                <img src="${data.image.url}" alt="App Icon">
                             </div>
                             <div class="app_info">
-                                <div class="app_title">${data.title}</div>
-                                <div class="app_slogan">${data.slogan}</div>
+                                <div class="app_title">${data.name.Title}</div>
+                                <div class="app_slogan">${data.name.Slogan}</div>
                             </div>
                         </div>
                         <div class="download_button">
-                            <a href="${data.url}" target="_blank" title="Download Apk Yowestogel" class="btn btn-green">DOWNLOAD</a>
+                            <a href="${data.name.URLDownload}" target="_blank" title="Download Apk Yowestogel" class="btn btn-green">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -345,12 +367,12 @@ const func = {
             banner.find("#close_button").click(() => {
                 $("#content").removeClass("apk-download");
             })
-            // $('.app-container').append(banner);
             $("#content .page-header").prepend(banner);
             $("#content .page-header .app-container").remove();
         },
         headerCorousel: (data) => {
-            data = data.map((e) => {
+
+            data = data.images.map((e) => {
                 return `<div> <img src="${e}"></div>`;
             })
             var owl = $(`<div class="owl-carousel owl-theme">${data.join('')}</div>`);
@@ -363,22 +385,21 @@ const func = {
             $('#content .container').prepend(owl);
         },
         btnAction: (data) => {
-            data = data.filter((e) => e.status).map((e) => {
+            data = data.data_buttonaction.filter((e) => e.status).map((e) => {
                 var shadow = e.shadow ? 'inset 0 -4px 0 '+e.shadow+';' : '';
-                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" style="${shadow}${e.style}" target="${e.target ? '_blank' : ''}">${e.name}</a>`;
+                return `<a title="${e.name}" href="${e.link}" class="buttonWrap buttong contactSubmitButton ${e.class}" ${e.style ? `style=${shadow}${e.style}` : ""} ${e.target ? `target=_blank` : ''}>${e.name}</a>`;
             }).join('');
             $(data).insertAfter(".button-green");
         },
         iconSosmed: (data) => {
-            var icon = data.data.filter((e) => e.status).map((e) => {
+            var icon = data.data_iconsosmed.filter((e) => e.status).map((e) => {
                 return `<a href="${e.link}" target="_blank">
                             <img src="${e.image}" alt="${e.name}">
                         </a>`;
             })
-
             var sos = $(`
                 <div class="icon-sosmed">
-                    <p class="deskripsi">${data.ket}</p>
+                    <p class="deskripsi">${data.name.Keterangan}</p>
                     <div class="icon">${icon.join('')}</div>
                 </div>
             `)
@@ -387,17 +408,18 @@ const func = {
         },
         promosi: (data) => {
             var pro = $(`
-                <a href="${data.link}" target="_blank" title="${data.name}" class="promosi">
-                    <img src="${data.image}">
+                <a href="${data.name.Link}" target="_blank" title="${data.name.Promo}" class="promosi">
+                    <img src="${data.image.url}">
                 </a>
             `);
             pro.insertBefore($('.inner-wrap'))
         },
         beforeFooter: (data) => {
+
             var before = $(`
                 <div class="beforeFooter">
-                    <center><h2 class="tittle">${data.title}</h2></center>
-                    <p class="deskripsi">${data.deskripsi}</p>
+                    <center><h2 class="tittle">${data.name.Title}</h2></center>
+                    <p class="deskripsi">${data.textarea}</p>
                 </div>
             `)
 
@@ -488,8 +510,20 @@ const func = {
                 newItem.insertAfter(targetReplace);
                 listImg.parent().remove();
             }
+        },
+        listMenu: (data) => {
+            var banner = data.data_listbanner.filter((e) => e.status).map((e) => {
+                return `<a href="${e.link}" target="_blank">
+                            <img src="${e.image}" alt="${e.name}">
+                        </a>`;
+            })
+            var sos = $(`
+                <div class="list-menu-mobile">
+                    ${banner.join('')}
+                </div>
+            `)
+            sos.insertBefore($('.wrapper2'));
         }
-
 
     },
     load: () => {
@@ -504,460 +538,89 @@ const func = {
 
         $.ajax({
             type: "get",
-            url: "/config/14",
+            url: "https://static.hokibagus.club/situs/togelon/json/togelon.json",
             dataType: "json",
             success: function (response) {
-                response = {
-                    "id": 14,
-                    "name": "Togel On",
-                    "status_desktop": 1,
-                    "status_mobile": 1,
-                    "url_desktop_dev": "/situs/togel_on/desktop",
-                    "url_desktop_prod": "https://togelon176.com/",
-                    "url_mobile_dev": "/situs/togel_on/m",
-                    "url_mobile_prod": "https://togelon176.com/m",
-                    "created_at": "2022-10-11T15:24:48.000000Z",
-                    "updated_at": "2022-11-11T15:55:35.000000Z",
-                    "fitur_situs": {
-                        "desktop": [
-                            {
-                                "id": 200,
-                                "id_situs": 14,
-                                "id_fitur": 1,
-                                "type": "desktop",
-                                "status": 1,
-                                "data": {
-                                    "file": "https://static.hokibagus.club/situs/togel on/desktop/popup modal/togelon_popup_slotgamebonus.png",
-                                    "deskripsi": "Klik dimana saja untuk meutup"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 201,
-                                "id_situs": 14,
-                                "id_fitur": 2,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": {
-                                    "url": null,
-                                    "file": "",
-                                    "title": null,
-                                    "slogan": null
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 202,
-                                "id_situs": 14,
-                                "id_fitur": 3,
-                                "type": "desktop",
-                                "status": 1,
-                                "data": [
-                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_extrabonusturnover.jpg",
-                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_cashbackkekalahan (2).jpg",
-                                    "https://static.hokibagus.club/situs/togel on/desktop/header corousel/togelon_sliderweb_allbonus3.jpg"
-                                ],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 203,
-                                "id_situs": 14,
-                                "id_fitur": 4,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": [],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-11T15:58:37.000000Z"
-                            },
-                            {
-                                "id": 204,
-                                "id_situs": 14,
-                                "id_fitur": 5,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": {
-                                    "ket": null,
-                                    "data": []
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 205,
-                                "id_situs": 14,
-                                "id_fitur": 6,
-                                "type": "desktop",
-                                "status": 1,
-                                "data": {
-                                    "link": "https://togelon176.com/register.php",
-                                    "name": "Promo",
-                                    "image": "https://static.hokibagus.club/situs/togel on/desktop/promosi/togelon_banner_daftar.gif"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 206,
-                                "id_situs": 14,
-                                "id_fitur": 7,
-                                "type": "desktop",
-                                "status": 1,
-                                "data": {
-                                    "title": "TOGELON.COM | Bandar Togel Online Terbaik Indonesia",
-                                    "deskripsi": "<a href=\"/\">TOGELON.COM</a> adalah Bandar Togel Online Terbaik Indonesia yang menyediakan permainan togel online paling bersaing meliputi togel Singapura, Hongkong, Sydney, Cambodia dan permainan livegames seperti Roulette, Sicbo, Baccarat dan masih banyak lagi. Bagi anda penggemar permainan togel dan casino online segera bergabung dengan Togelon.com. Sistem deposit dan withdraw tercepat dan dilengkapi dengan sistem keamanan yang canggih membuat anda nyaman bermain."
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 207,
-                                "id_situs": 14,
-                                "id_fitur": 8,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": {
-                                    "link": null,
-                                    "name": null,
-                                    "image": ""
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 208,
-                                "id_situs": 14,
-                                "id_fitur": 9,
-                                "type": "desktop",
-                                "status": 1,
-                                "data": {
-                                    "image": "https://static.hokibagus.club/situs/togel on/desktop/link alternatif/togelon_linkalternatif.png",
-                                    "listLink": [
-                                        "https://linkr.bio/ontogel",
-                                        "\nhttps://rebrand.ly/togelon88",
-                                        "\nontogel176.com"
-                                    ]
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 209,
-                                "id_situs": 14,
-                                "id_fitur": 10,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": {
-                                    "name": "barocde qris",
-                                    "color": "#FFFFFF",
-                                    "image": "",
-                                    "shadow": "#196a7d",
-                                    "background": "#c0392b"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 210,
-                                "id_situs": 14,
-                                "id_fitur": 11,
-                                "type": "desktop",
-                                "status": 0,
-                                "data": [
-                                    ""
-                                ],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-11T15:58:37.000000Z"
-                            }
-                        ],
-                        "mobile": [
-                            {
-                                "id": 211,
-                                "id_situs": 14,
-                                "id_fitur": 1,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "file": "https://static.hokibagus.club/situs/togel on/mobile/popup modal/togelon_popup_slotgamebonus.png",
-                                    "deskripsi": "Klik dimana saja untuk menutu"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 212,
-                                "id_situs": 14,
-                                "id_fitur": 2,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "url": "https://bit.ly/Apktogelon",
-                                    "file": "https://static.hokibagus.club/situs/togel on/mobile/header apk/togelon_icon.png",
-                                    "title": "APLIKASI TOGEL ON",
-                                    "slogan": "Ayo segera download dan mainkan sekarang juga"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 213,
-                                "id_situs": 14,
-                                "id_fitur": 3,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": [
-                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_extrabonusturnover.jpg",
-                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_cashbackkekalahan (2).jpg",
-                                    "https://static.hokibagus.club/situs/togel on/mobile/header corousel/togelon_sliderweb_allbonus3.jpg"
-                                ],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 214,
-                                "id_situs": 14,
-                                "id_fitur": 4,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": [
-                                    {
-                                        "link": "https://rtpsloton.com/",
-                                        "name": "Rtp Slot",
-                                        "class": "btn-warning",
-                                        "style": "background-color: #e67e22;",
-                                        "shadow": "#b9651b",
-                                        "status": true,
-                                        "target": null
-                                    },
-                                    {
-                                        "link": "https://ontogel176.com/m/promotion.php",
-                                        "name": "Promo",
-                                        "class": "btn-warning",
-                                        "style": "background-color: #f1c40f;",
-                                        "shadow": "#bf9c0d",
-                                        "status": true,
-                                        "target": null
-                                    },
-                                    {
-                                        "link": "https://togelon.laporkeluhan.net/",
-                                        "name": "Keluhan Member",
-                                        "class": "btn-info",
-                                        "style": "background-color: #2980b9;",
-                                        "shadow": "#196a7d",
-                                        "status": true,
-                                        "target": true
-                                    },
-                                    {
-                                        "link": "https://linklist.bio/togelon",
-                                        "name": "Lain-Lain",
-                                        "class": "btn-secondary",
-                                        "style": "background-color: #c0392b;",
-                                        "shadow": "#8e2920",
-                                        "status": true,
-                                        "target": null
-                                    }
-                                ],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 215,
-                                "id_situs": 14,
-                                "id_fitur": 5,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "ket": "Anda bisa mendapatkan info terkini hanya dengan menekan tombol Media Sosial berikut ini :",
-                                    "data": [
-                                        {
-                                            "link": "https://api.whatsapp.com/send?phone=6281380376285",
-                                            "name": "Whatsapp",
-                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_wa.png",
-                                            "status": true
-                                        },
-                                        {
-                                            "link": "https://www.instagram.com/accounts/login/?next=%2Ftogelon88%2F&source=omni_redirect",
-                                            "name": "Instagram",
-                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_instagram.png",
-                                            "status": true
-                                        },
-                                        {
-                                            "link": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ftogelon8%2F",
-                                            "name": "Facebook",
-                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_facebook.png",
-                                            "status": true
-                                        },
-                                        {
-                                            "link": "https://www.youtube.com/channel/UCIsNvBFWmpragrbUtqlJpNA",
-                                            "name": "Youtube",
-                                            "image": "https://static.hokibagus.club/situs/togel on/mobile/icon sosmed/togelon_contact_youtube.png",
-                                            "status": true
-                                        }
-                                    ]
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 216,
-                                "id_situs": 14,
-                                "id_fitur": 6,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "link": "https://togelon176.com/register.php",
-                                    "name": "pro",
-                                    "image": "https://static.hokibagus.club/situs/togel on/mobile/promosi/togelon_banner_daftar.gif"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 217,
-                                "id_situs": 14,
-                                "id_fitur": 7,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "title": "Agen Togel Online Aman Terpercaya",
-                                    "deskripsi": "<b>TOGELON.COM</b> adalah Agen Togel Online Aman Terpercaya yang dilengkapi dengan permainan togel online terbesar seperti togel Hongkong, Singapura, Sydney, Totomacau, Nevada dan masih banyak lagi. Togelon jugamenyajikan permainan live casino online terpopuler seperti Roulette, Baccarat, Sicbo, dan masih banyak lagi. Sistem keamanan yang canggih, proses Deposit dan Withdraw yang mudah serta didukung oleh customer service yang siap melayani anda 7x24 jam Nonstop."
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 218,
-                                "id_situs": 14,
-                                "id_fitur": 8,
-                                "type": "mobile",
-                                "status": 0,
-                                "data": {
-                                    "link": null,
-                                    "name": null,
-                                    "image": ""
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 219,
-                                "id_situs": 14,
-                                "id_fitur": 9,
-                                "type": "mobile",
-                                "status": 0,
-                                "data": {
-                                    "image": "",
-                                    "listLink": [
-                                        ""
-                                    ]
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 220,
-                                "id_situs": 14,
-                                "id_fitur": 10,
-                                "type": "mobile",
-                                "status": 1,
-                                "data": {
-                                    "name": "barocde qris",
-                                    "color": "#FFFFFF",
-                                    "image": "https://static.hokibagus.club/situs/togel on/mobile/barcode qris/96bdae50-4d79-40e5-aac9-75798be05a50.webp",
-                                    "shadow": "#196a7d",
-                                    "background": "#2980b9"
-                                },
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-26T21:19:44.000000Z"
-                            },
-                            {
-                                "id": 221,
-                                "id_situs": 14,
-                                "id_fitur": 11,
-                                "type": "mobile",
-                                "status": 0,
-                                "data": [
-                                    ""
-                                ],
-                                "created_at": "2022-11-11T15:55:35.000000Z",
-                                "updated_at": "2022-11-11T15:58:37.000000Z"
-                            }
-                        ]
-                    }
-                }
                 if (response) {
-                    if (response.status_desktop && !isMobile) {
-                        if (response.fitur_situs.desktop) {
-                            var length = response.fitur_situs.desktop.length;
-                            response.fitur_situs.desktop.forEach((el, i) => {
-                                if (el.id_fitur == 1) {
-                                    if (el.status) {
-                                        func.desktop.modal(el.data);
-                                    }else{
-                                        $("#myModal").modal("show");
+                    if (!isMobile) {
+                        if (response) {
+                            response.forEach((el, i) => {
+                                if(el.type == "desktop" && !isMobile) {
+                                    var data = JSON.parse(el.data); 
+                                    console.log(data);
+                                    if (el.id_fitur == 1 && data) {
+                                        if (data.switch) {
+                                            func.desktop.modal(data);
+                                        }else{
+                                            $("#myModal").modal("show");
+                                        }
                                     }
+    
+                                    if (el.id_fitur == 2 && data){if(data.switch) func.desktop.headerApk(data)};
+    
+                                    if (el.id_fitur == 3 && data){if(data.switch) func.desktop.headerCorousel(data)};
+    
+                                    if (el.id_fitur == 4 && data){if(data.switch)  func.desktop.btnAction(data)};
+    
+                                    if (el.id_fitur == 5 && data){if(data.switch) func.desktop.iconSosmed(data)};
+    
+                                    if (el.id_fitur == 6 && data){if(data.switch)  func.desktop.promosi(data)};
+    
+                                    if (el.id_fitur == 7 && data){if(data.switch)  func.desktop.beforeFooter(data)};
+    
+                                    if (el.id_fitur == 8 && data){if(data.switch)  func.desktop.footerProtection(data)};
+    
+                                    if (el.id_fitur == 9 && data){if(data.switch)  func.desktop.linkAlter(data)};
+    
+                                    if (el.id_fitur == 10 && data){if(data.switch)  func.desktop.barcodeQris(data)};
+    
+                                    if (el.id_fitur == 11 && data){if(data.switch)  func.desktop.sortBank(data)};
+
+                                    if (el.id_fitur == 12 && data){if(data.switch)  func.desktop.listMenu(data)};
+    
+                                    // untuk hide loading
+                                    // if ((i+1) == length) $("#loadingCustom").hide();
                                 }
-
-                                if (el.id_fitur == 2 && el.status) func.desktop.headerApk(el.data);
-
-                                if (el.id_fitur == 3 && el.status) func.desktop.headerCorousel(el.data);
-
-                                if (el.id_fitur == 4 && el.status) func.desktop.btnAction(el.data);
-
-                                if (el.id_fitur == 5 && el.status) func.desktop.iconSosmed(el.data);
-
-                                if (el.id_fitur == 6 && el.status) func.desktop.promosi(el.data);
-
-                                if (el.id_fitur == 7 && el.status) func.desktop.beforeFooter(el.data);
-
-                                if (el.id_fitur == 8 && el.status) func.desktop.footerProtection(el.data);
-
-                                if (el.id_fitur == 9 && el.status) func.desktop.linkAlter(el.data);
-
-                                if (el.id_fitur == 10 && el.status) func.desktop.barcodeQris(el.data);
-
-                                if (el.id_fitur == 11 && el.status) func.desktop.sortBank(el.data);
-
-                                // untuk hide loading
-                                if ((i+1) == length) $("#loadingCustom").hide();
+                                
                             });
                         }else{
                             $("#loadingCustom").hide();
                         }
-                    }else if(response.status_mobile && isMobile){
-                        if (response.fitur_situs.mobile) {
+                    }else if(response && isMobile){
+                        if (response) {
+                            // var length = response.fitur_situs.mobile.length;
+                            response.forEach((el, i) => {
+                                if(el.type == "mobile" && isMobile) {
+                                    var data = JSON.parse(el.data); 
 
-                            var length = response.fitur_situs.mobile.length;
-                            response.fitur_situs.mobile.forEach((el, i) => {
-                                if (el.id_fitur == 1 && el.status) func.mobile.modal(el.data);
+                                    if (el.id_fitur == 1 && data){if(data.switch) func.mobile.modal(data)};
+    
+                                    if (el.id_fitur == 2 && data){if(data.switch) func.mobile.headerApk(data)};
+    
+                                    if (el.id_fitur == 3 && data){if(data.switch) func.mobile.headerCorousel(data)};
 
-                                if (el.id_fitur == 2 && el.status) func.mobile.headerApk(el.data);
+                                    if (el.id_fitur == 4 && data){if(data.switch)  func.mobile.btnAction(data)};
 
-                                if (el.id_fitur == 3 && el.status) func.mobile.headerCorousel(el.data);
+                                    if (el.id_fitur == 5 && data){if(data.switch) func.mobile.iconSosmed(data)};
 
-                                if (el.id_fitur == 4 && el.status) func.mobile.btnAction(el.data);
+                                    if (el.id_fitur == 6 && data){if(data.switch)  func.mobile.promosi(data)};
 
-                                if (el.id_fitur == 5 && el.status) func.mobile.iconSosmed(el.data);
+                                    if (el.id_fitur == 7 && data){if(data.switch)  func.mobile.beforeFooter(data)};
 
-                                if (el.id_fitur == 6 && el.status) func.mobile.promosi(el.data);
+                                    if (el.id_fitur == 8 && data){if(data.switch)  func.mobile.footerProtection(data)};
 
-                                if (el.id_fitur == 7 && el.status) func.mobile.beforeFooter(el.data);
+                                    if (el.id_fitur == 9 && data){if(data.switch)  func.mobile.linkAlter(data)};
 
-                                if (el.id_fitur == 8 && el.status) func.mobile.footerProtection(el.data);
+                                    if (el.id_fitur == 10 && data){if(data.switch)  func.mobile.barcodeQris(data)};
 
-                                if (el.id_fitur == 9 && el.status) func.mobile.linkAlter(el.data);
+                                    if (el.id_fitur == 11 && data){if(data.switch)  func.mobile.sortBank(data)};
 
-                                if (el.id_fitur == 10 && el.status) func.mobile.barcodeQris(el.data);
-
-                                if (el.id_fitur == 11 && el.status) func.mobile.sortBank(el.data);
-
-
-
-
-                                // untuk hide loading
-                                if ((i+1) == length) $("#loadingCustom").hide();
+                                    if (el.id_fitur == 12 && data){if(data.switch)  func.mobile.listMenu(data)};
+    
+                                    // untuk hide loading
+                                    // if ((i+1) == length) $("#loadingCustom").hide();
+                                }
+                                
                             });
                         }else{
                             $("#loadingCustom").hide();

@@ -281,6 +281,8 @@ class Site extends Component
             }else {
                 $data_listbanner_data = $this->data_listbanner;
             }
+            
+        // dd($this->switch);
 
             $data = collect([
                     "name" => $this->name,
@@ -289,7 +291,7 @@ class Site extends Component
                     "textarea" => $this->textarea,
                     "selectOption" => $this->selectOption, 
                     "checkbox" => $this->checkbox,
-                    "switch" => $this->switch,
+                    "switch" => !is_null($this->switch),
                     "color" => $this->color,
                     "data_iconsosmed" => $data_iconsosmed_data,
                     "data_listbanner" => $data_listbanner_data,

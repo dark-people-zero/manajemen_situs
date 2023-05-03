@@ -455,18 +455,17 @@ body.smbitClass-desktop {
             transition: height 0.6s;
 
             .linkalte-body {
-                margin-top: -20px;
+                max-width: 190px;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
-                background: linear-gradient(90deg, #00b1ea 35%, rgb(0 75 102) 100%);
+                background-color: #4e92cd;
                 padding: 4px;
 
                 .linkalte-list {
-                    background: linear-gradient(90deg, #4c58b5 35%, #de00f7 100%);
-                    padding-top: 20px;
+                    background-color: #5a1686;
                     border-bottom-left-radius: 10px;
                     border-bottom-right-radius: 10px;
-                    max-width: 173px;
+
 
                     .linkalte-item {
                         padding: 5px;

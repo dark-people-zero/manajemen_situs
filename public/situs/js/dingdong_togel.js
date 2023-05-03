@@ -585,13 +585,13 @@ const func = {
             success: function (response) {
                 if (response) {
                     if (!isMobile) {
-                    func.desktop.defaultFooter();
-
+                        func.desktop.defaultFooter();
                         if (response) {
                             response.forEach((el, i) => {
                                 if(el.type == "desktop" && !isMobile) {
                                     var data = JSON.parse(el.data); 
-                                    if (el.id_fitur == 1) {
+                                    console.log(data);
+                                    if (el.id_fitur == 1 && data) {
                                         if (data.switch) {
                                             func.desktop.modal(data);
                                         }else{
@@ -599,30 +599,30 @@ const func = {
                                         }
                                     }
     
-                                    if (el.id_fitur == 2 && data.switch) func.desktop.headerApk(data);
+                                    if (el.id_fitur == 2 && data){if(data.switch) func.desktop.headerApk(data)};
     
-                                    if (el.id_fitur == 3 && data.switch) func.desktop.headerCorousel(data);
+                                    if (el.id_fitur == 3 && data){if(data.switch) func.desktop.headerCorousel(data)};
     
-                                    if (el.id_fitur == 4 && data.switch) func.desktop.btnAction(data);
+                                    if (el.id_fitur == 4 && data){if(data.switch)  func.desktop.btnAction(data)};
     
-                                    if (el.id_fitur == 5 && data.switch) func.desktop.iconSosmed(data);
+                                    if (el.id_fitur == 5 && data){if(data.switch) func.desktop.iconSosmed(data)};
     
-                                    if (el.id_fitur == 6 && data.switch) func.desktop.promosi(data);
+                                    if (el.id_fitur == 6 && data){if(data.switch)  func.desktop.promosi(data)};
     
-                                    if (el.id_fitur == 7 && data.switch) func.desktop.beforeFooter(data);
+                                    if (el.id_fitur == 7 && data){if(data.switch)  func.desktop.beforeFooter(data)};
     
-                                    if (el.id_fitur == 8 && data.switch) func.desktop.footerProtection(data);
+                                    if (el.id_fitur == 8 && data){if(data.switch)  func.desktop.footerProtection(data)};
     
-                                    if (el.id_fitur == 9 && data.switch) func.desktop.linkAlter(data);
+                                    if (el.id_fitur == 9 && data){if(data.switch)  func.desktop.linkAlter(data)};
     
-                                    if (el.id_fitur == 10 && data.switch) func.desktop.barcodeQris(data);
+                                    if (el.id_fitur == 10 && data){if(data.switch)  func.desktop.barcodeQris(data)};
     
-                                    if (el.id_fitur == 11 && data.switch) func.desktop.sortBank(data);
+                                    if (el.id_fitur == 11 && data){if(data.switch)  func.desktop.sortBank(data)};
 
-                                    if (el.id_fitur == 12 && data.switch) func.desktop.listMenu(data);
+                                    if (el.id_fitur == 12 && data){if(data.switch)  func.desktop.listMenu(data)};
     
                                     // untuk hide loading
-                                    if ((i+1) == length) $("#loadingCustom").hide();
+                                    // if ((i+1) == length) $("#loadingCustom").hide();
                                 }
                                 
                             });
@@ -636,32 +636,32 @@ const func = {
                                 if(el.type == "mobile" && isMobile) {
                                     var data = JSON.parse(el.data); 
 
-                                    if (el.id_fitur == 1 && data.switch) func.mobile.modal(data);
+                                    if (el.id_fitur == 1 && data){if(data.switch) func.mobile.modal(data)};
     
-                                    if (el.id_fitur == 2 && data.switch) func.mobile.headerApk(data);
+                                    if (el.id_fitur == 2 && data){if(data.switch) func.mobile.headerApk(data)};
     
-                                    if (el.id_fitur == 3 && data.switch) func.mobile.headerCorousel(data);
-    
-                                    if (el.id_fitur == 4 && data.switch) func.mobile.btnAction(data);
-    
-                                    if (el.id_fitur == 5 && data.switch) func.mobile.iconSosmed(data);
-    
-                                    if (el.id_fitur == 6 && data.switch) func.mobile.promosi(data);
-    
-                                    if (el.id_fitur == 7 && data.switch) func.mobile.beforeFooter(data);
-    
-                                    if (el.id_fitur == 8 && data.switch) func.mobile.footerProtection(data);
-    
-                                    if (el.id_fitur == 9 && data.switch) func.mobile.linkAlter(data);
-    
-                                    if (el.id_fitur == 10 && data.switch) func.mobile.barcodeQris(data);
-    
-                                    if (el.id_fitur == 11 && data.switch) func.mobile.sortBank(data);
+                                    if (el.id_fitur == 3 && data){if(data.switch) func.mobile.headerCorousel(data)};
 
-                                    if (el.id_fitur == 12 && data.switch) func.desktop.listMenu(data);
+                                    if (el.id_fitur == 4 && data){if(data.switch)  func.mobile.btnAction(data)};
+
+                                    if (el.id_fitur == 5 && data){if(data.switch) func.mobile.iconSosmed(data)};
+
+                                    if (el.id_fitur == 6 && data){if(data.switch)  func.mobile.promosi(data)};
+
+                                    if (el.id_fitur == 7 && data){if(data.switch)  func.mobile.beforeFooter(data)};
+
+                                    if (el.id_fitur == 8 && data){if(data.switch)  func.mobile.footerProtection(data)};
+
+                                    if (el.id_fitur == 9 && data){if(data.switch)  func.mobile.linkAlter(data)};
+
+                                    if (el.id_fitur == 10 && data){if(data.switch)  func.mobile.barcodeQris(data)};
+
+                                    if (el.id_fitur == 11 && data){if(data.switch)  func.mobile.sortBank(data)};
+
+                                    if (el.id_fitur == 12 && data){if(data.switch)  func.mobile.listMenu(data)};
     
                                     // untuk hide loading
-                                    if ((i+1) == length) $("#loadingCustom").hide();
+                                    // if ((i+1) == length) $("#loadingCustom").hide();
                                 }
                                 
                             });
